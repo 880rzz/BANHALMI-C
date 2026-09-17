@@ -9,14 +9,14 @@
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.href = href;
-    link.setAttribute('data-fluid-4k-rhythm', '');
+    link.setAttribute('data-fluid-4k-rhythm','');
     document.head.appendChild(link);
   }
 
   /* Dedicated menu geometry is an explicit design-authority stylesheet, not
      an inline/runtime patch. Loading it after the canonical rhythm gives the
      approved menu composition deterministic precedence on every page. */
-  var menuHref = '/assets/css/mega-menu-harmony-v30.css?v=20260917-menu-harmony-v30';
+  var menuHref = '/assets/css/mega-menu-harmony-v31.css?v=20260917-menu-harmony-v31';
   var menuLink = document.querySelector('link[data-mega-menu-harmony]');
   if (menuLink) {
     if (menuLink.getAttribute('href') !== menuHref) menuLink.setAttribute('href', menuHref);
@@ -24,7 +24,7 @@
     menuLink = document.createElement('link');
     menuLink.rel = 'stylesheet';
     menuLink.href = menuHref;
-    menuLink.setAttribute('data-mega-menu-harmony', '');
+    menuLink.setAttribute('data-mega-menu-harmony','');
     document.head.appendChild(menuLink);
   }
 
