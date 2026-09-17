@@ -7,7 +7,7 @@ const restore=fs.readFileSync('tools/restore-production-design-authority.mjs','u
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
 const menuLoader=fs.readFileSync('assets/js/mega-menu.js','utf8');
 const menuCore=fs.readFileSync(fs.existsSync('assets/js/mega-menu-v65-base.js')?'assets/js/mega-menu-v65-base.js':'assets/js/mega-menu.js','utf8');
-const menuHarmony=fs.readFileSync('assets/css/mega-menu-harmony-v30.css','utf8');
+const menuHarmony=fs.readFileSync('assets/css/mega-menu-harmony-v31.css','utf8');
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
 must(Number(authority.pageMaxPx)===1280,'BANHALMI canonical standard canvas must remain 1280px');
@@ -29,11 +29,14 @@ must(Number(authority.layout?.footer?.tabletGapPx)===14,'BANHALMI tablet footer 
 must(authority.navigation?.activeState==='text-only','BANHALMI active navigation must remain text-only');
 must(authority.navigation?.activeFill==='none'&&authority.navigation?.activeBorder==='none'&&authority.navigation?.activeBoxShadow==='none','BANHALMI active navigation may not regain box styling');
 const mega=authority.navigation?.megaMenu||{};
-must(mega.contractVersion==='v30','BANHALMI mega-menu authority must remain v30');
-must(Number(mega.panelMaxPx)===1360,'BANHALMI v30 menu canvas must remain 1360px');
-must(mega.desktopOverlayBelowHeader===true,'BANHALMI desktop menu must stay below the real header');
+must(mega.contractVersion==='v31','BANHALMI mega-menu authority must remain v31');
+must(Number(mega.panelMaxPx)===1240,'BANHALMI v31 menu canvas must remain 1240px');
+must(mega.desktopOverlayBelowHeader===true&&mega.mobileStartsBelowHeader===true,'BANHALMI menu must stay below the real header');
 must(mega.duplicateBrandIntroHidden===true&&mega.duplicateTailHidden===true,'BANHALMI duplicate menu branding/tail must remain suppressed');
 must(mega.desktopDescriptionsHidden===true&&mega.mobileDescriptionsHidden===true,'BANHALMI menu descriptions must remain density-controlled');
+must(mega.visualTile===false&&mega.sloganTile===false,'BANHALMI menu must remain free of hero/slogan tiles');
+must(mega.decorativeSectionArrows===false,'BANHALMI menu must not reintroduce decorative section arrows');
+must(mega.mobileTextOnly===true,'BANHALMI mobile menu must remain text-first');
 must(mega.focusStyle==='underline-only','BANHALMI mega-menu focus must remain underline-only');
 must(mega.pointerAutofocus===false,'BANHALMI pointer-open menu may not auto-focus the first service link');
 must(authority.principles?.historicalScreenshotRegressionsAreReleaseBlocking===true,'historical screenshot regressions must stay release-blocking');
@@ -54,10 +57,14 @@ const footerV29=fluid.split('FOOTER-TWO-ROW-V29-20260917')[1]||'';
 must(footerV29.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track geometry');
 must(footerV29.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row geometry');
 must(footerV29.includes('word-break:normal!important')&&footerV29.includes('overflow-wrap:normal!important')&&footerV29.includes('hyphens:none!important'),'canonical footer lost no-mid-word-break protection');
-must(menuLoader.includes('mega-menu-v65-base.js?v=20260917-menu-harmony-v30'),'v30 mega-menu loader lost canonical core handoff');
-must(menuLoader.includes('mega-menu-harmony-v30.css?v=20260917-menu-harmony-v30'),'v30 mega-menu loader lost harmony stylesheet handoff');
-must(menuHarmony.includes('MEGA-MENU-HARMONY-V30-20260917'),'v30 menu harmony marker missing');
+must(menuLoader.includes('mega-menu-v65-base.js?v=20260917-menu-harmony-v31'),'v31 mega-menu loader lost canonical core handoff');
+must(menuLoader.includes('mega-menu-harmony-v31.css?v=20260917-menu-harmony-v31'),'v31 mega-menu loader lost harmony stylesheet handoff');
+must(menuHarmony.includes('MEGA-MENU-HARMONY-V31-20260917'),'v31 menu harmony marker missing');
 must(menuHarmony.includes('inset:var(--header-h,72px) 0 auto 0!important'),'desktop mega menu returned to full-screen coverage');
+must(menuHarmony.includes('.bn-mega-grid::after{content:none!important;display:none!important;}'),'menu visual tile suppression missing');
+must(menuHarmony.includes('.bn-mega-section-head::after{content:none!important;display:none!important;}'),'menu arrow suppression missing');
+must(!menuHarmony.includes('hero-signature-'),'menu hero media returned');
+must(!menuHarmony.includes('PHOTOGRAPHY FOR CLEAR COMMUNICATION'),'menu slogan returned');
 must(menuHarmony.includes('.bn-mega-intro:not(.bn-mega-tail)')&&menuHarmony.includes('.bn-mega-tail'),'duplicate menu BANHALMI/tail suppression missing');
 must(menuCore.includes("open(!document.body.classList.contains('bn-mega-open'),e.detail===0)"),'mega-menu pointer/keyboard modality guard missing');
 must(menuCore.includes('if(v&&keyboard)requestAnimationFrame'),'mega-menu keyboard-only autofocus guard missing');
@@ -65,4 +72,4 @@ must(!audit.includes('pageMaxPx=1200'),'stale 1200px canvas may not return to ex
 must(!audit.includes('pageMaxPx=1500'),'stale 1500px canvas may not return to exhaustive audit');
 
 if(failures.length){console.error(`BANHALMI historical design regression guard failed (${failures.length}):`);for(const f of failures)console.error(`- ${f}`);process.exit(1)}
-console.log('BANHALMI historical design regression guard passed: canonical canvases, two-row desktop footer authority, compact v30 menu geometry, 1440/1920/2560/4K pixel gates and overflow protections are locked.');
+console.log('BANHALMI historical design regression guard passed: canonical canvases, two-row desktop footer authority, text-first v31 menu geometry, 1440/1920/2560/4K pixel gates and overflow protections are locked.');
