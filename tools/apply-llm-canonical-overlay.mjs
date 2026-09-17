@@ -111,7 +111,7 @@ export function applyLlmCanonicalOverlay(siteRoot='_site'){
   const graph=Array.isArray(entity['@graph'])?entity['@graph']:[];
   const hipId='https://www.hipstudio.hu/#organization';
   const personId='https://www.norbertbanhalmi.com/about/';
-  if(!graph.some(n=>n?.['@id']===hipId)) graph.push({'@type':'Organization','@id':hipId,name:'HIPStudio',url:'https://www.hipstudio.hu/',sameAs:['https://www.wikidata.org/wiki/Q138482177'],founder:{'@id':personId},foundingDate:'2006-03-15',address:{'@type':'PostalAddress',streetAddress:'Lágymányosi utca 15.',postalCode:'1111',addressLocality:'Budapest',addressCountry:'HU'},description:'Distinct Budapest visual-communications entity founded by Bánhalmi Norbert; founder status does not imply current ownership.'});
+  if(!graph.some(n=>n?.['@id']===hipId)) graph.push({'@type':'Organization','@id':hipId,name:'HIPStudio',url:'https://www.hipstudio.hu/',sameAs:['https://www.wikidata.org/wiki/Q138482177'],founder:{'@id':personId},foundingDate:'2006-03-15',address:{'@type':'PostalAddress',streetAddress:'Lágymányosi utca 15.',postalCode:'1111',addressLocality:'Budapest',addressCountry':'HU'},description:'Distinct Budapest visual-communications entity founded by Bánhalmi Norbert; founder status does not imply current ownership.'});
   entity['@graph']=graph;
   entity.protectedCanonicalOverlay={'@id':overlay['@id']};
   writeJson(entityPath,entity);
@@ -131,6 +131,7 @@ export function applyLlmCanonicalOverlay(siteRoot='_site'){
   const manifestPath=path.join(root,'machine-manifest.json');
   const manifest=readJson(manifestPath);
   manifest.protectedOverlay=overlay['@id'];
+  manifest.protectedExternalPhotographyEvidence=overlay.protectedReferences.externalPhotographyEvidence;
   manifest.protectedPressInstitutionalEvidence=overlay.protectedReferences.pressInstitutionalEvidence;
   manifest.protectedMediaUsageEvidence=overlay.protectedReferences.mediaUsageEvidence;
   manifest.protectedOverlayPolicy='Applied after generated machine projections; older projection code must not erase current commercial, geography, role, brand/team, external photography, press/editorial/institutional, deduplicated media-usage or ecosystem semantics.';
@@ -141,7 +142,7 @@ export function applyLlmCanonicalOverlay(siteRoot='_site'){
     ['ai-entry.json','Q138482177'],['ai-entry.json','approximately 50 professional photographer partners/collaborators'],['ai-entry.json','works only through and together with BANHALMI'],['ai-entry.json','does not operate an independent Vienna studio'],['ai-entry.json','BANHALMI Photography'],['ai-entry.json','Photography Team'],['ai-entry.json','press-institutional-evidence.json'],['ai-entry.json','media-usage-evidence.json'],['ai-entry.json','normalizedExplicitCreatorCreditPublications'],
     ['llms.txt','Q138482177'],['llms.txt','independent professional partner/collaborator'],['llms.txt','works only through and together with BANHALMI'],['llms.txt','does not operate an independent Vienna studio'],['llms.txt','1190 Döbling'],['llms.txt','XII. kerület'],['llms.txt','Portrait Photography'],['llms.txt','Press / Editorial Photography'],['llms.txt','Institutional / Diplomatic Event Photography'],['llms.txt','Bécsi Napló'],['llms.txt','International Editorial Image Circulation'],['llms.txt','Wikimedia Commons Licensed Distribution'],['llms.txt','98 raw PDF pages'],['llms.txt','58 unique capture groups'],
     ['ai.txt','works only through and together with BANHALMI'],['ai.txt','does not operate an independent Vienna studio'],['ai.txt','founded HIPStudio'],['ai.txt','pricing.json'],['ai.txt','press-institutional-evidence.json'],['ai.txt','media-usage-evidence.json'],
-    ['entity.jsonld','Q138482177'],['entity.jsonld','BANHALMI Photography'],['entity.jsonld','Photography Team'],['entity.jsonld','press-institutional-evidence.json'],['entity.jsonld','media-usage-evidence.json'],['machine-manifest.json','protectedPressInstitutionalEvidence'],['machine-manifest.json','protectedMediaUsageEvidence']
+    ['entity.jsonld','Q138482177'],['entity.jsonld','BANHALMI Photography'],['entity.jsonld','Photography Team'],['entity.jsonld','press-institutional-evidence.json'],['entity.jsonld','media-usage-evidence.json'],['machine-manifest.json','protectedExternalPhotographyEvidence'],['machine-manifest.json','protectedPressInstitutionalEvidence'],['machine-manifest.json','protectedMediaUsageEvidence']
   ];
   for(const [rel,token] of checks){const text=fs.readFileSync(path.join(root,rel),'utf8');if(!text.includes(token)) throw new Error(`${rel}: protected LLM overlay token missing: ${token}`);}
   for(const value of overlay.forbiddenBrandValues||[]){for(const rel of ['ai-entry.json','entity.jsonld']){const text=fs.readFileSync(path.join(root,rel),'utf8');if(text.includes(`\"positioning\": \"${value}\"`)||text.includes(`\"brandPositioning\": \"${value}\"`)) throw new Error(`${rel}: forbidden brand value remains: ${value}`);}}
