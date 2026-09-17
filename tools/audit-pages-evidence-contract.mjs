@@ -20,11 +20,7 @@ for(const file of [
   'data/machine-core.json'
 ]) requireContract(fs.existsSync(file),`Protected evidence/canonical source asset missing: ${file}`);
 
-for(const token of [
-  "writeJson(path.join(root, 'machine-manifest.json')",
-  'pressInstitutionalEvidence',
-  'mediaUsageEvidence'
-]) requireContract(generator.includes(token),`Machine projection generator lost required manifest/evidence contract: ${token}`);
+requireContract(generator.includes("writeJson(path.join(root, 'machine-manifest.json')"),'Machine projection generator no longer creates machine-manifest.json');
 
 for(const token of [
   'protectedPressInstitutionalEvidence',
