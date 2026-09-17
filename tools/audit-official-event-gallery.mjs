@@ -3,8 +3,7 @@ import assert from 'node:assert/strict';
 
 const gallery = JSON.parse(fs.readFileSync('official-event-gallery.json', 'utf8'));
 const registry = JSON.parse(fs.readFileSync('audit-registry.json', 'utf8'));
-const integrityWorkflow = fs.readFileSync('.github/workflows/official-event-gallery-integrity.yml', 'utf8');
-const pagesWorkflow = fs.readFileSync('.github/workflows/pages.yml', 'utf8');
+const vercel = JSON.parse(fs.readFileSync('vercel.json', 'utf8'));
 
 assert.equal(gallery.name, 'BANHALMI Photography × VIPACH Official Event Gallery');
 assert.equal(gallery.url, 'https://www.flickr.com/people/vipach/');
@@ -36,27 +35,11 @@ assert.ok(audit, 'Official event gallery audit is not registered');
 assert.equal(audit.requiredForRelease, true, 'Official event gallery audit must block release');
 assert.equal(audit.source, 'official-event-gallery.json');
 
-// Drift protection: Pages starts from an immutable git archive of HEAD, so root-level
-// evidence contracts are carried into _site unless a later build step explicitly removes them.
-assert.ok(
-  pagesWorkflow.includes('git archive --format=tar HEAD'),
-  'Pages build no longer starts from the immutable repository archive.'
-);
-assert.ok(
-  !pagesWorkflow.includes('rm -f _site/official-event-gallery.json'),
-  'Pages build explicitly removes official-event-gallery.json.'
-);
-assert.ok(
-  integrityWorkflow.includes('permissions:\n  contents: read'),
-  'Official gallery integrity workflow must remain read-only.'
-);
-assert.ok(
-  integrityWorkflow.includes('https://www.norbertbanhalmi.com/official-event-gallery.json'),
-  'Official gallery integrity workflow does not verify the live canonical contract.'
-);
-assert.ok(
-  integrityWorkflow.includes('https://www.flickr.com/people/vipach/'),
-  'Official gallery integrity workflow does not protect the Flickr profile URL.'
-);
+assert.ok(fs.existsSync('official-event-gallery.json'), 'Official event gallery source contract missing from deployable repository root');
+assert.equal(vercel?.git?.deploymentEnabled, true, 'Official event gallery requires repository-root Git deployment to remain enabled');
+
+const redirects = Array.isArray(vercel.redirects) ? vercel.redirects : [];
+const galleryHijack = redirects.find((rule) => rule?.source === '/official-event-gallery.json');
+assert.ok(!galleryHijack, 'Vercel routing must not redirect the canonical official-event-gallery.json contract away from the professional domain');
 
 console.log('official-event-gallery: OK');
