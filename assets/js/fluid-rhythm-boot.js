@@ -1,4 +1,4 @@
-/* Loader for the canonical fluid 4K rhythm contract. Navigation authority lives in mega-menu.js. */
+/* Loader for the canonical fluid 4K rhythm contract. Navigation authority lives in mega-menu.js plus the compact editorial menu contract. */
 (function(){
   'use strict';
   var href = '/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27';
@@ -13,7 +13,22 @@
     document.head.appendChild(link);
   }
 
-  /* Runtime owns disclosure state only. Pixel geometry belongs to the canonical stylesheet. */
+  /* Dedicated menu geometry is an explicit design-authority stylesheet, not
+     an inline/runtime patch. Loading it after the canonical rhythm gives the
+     approved menu composition deterministic precedence on every page. */
+  var menuHref = '/assets/css/mega-menu-harmony-v30.css?v=20260917-menu-harmony-v30';
+  var menuLink = document.querySelector('link[data-mega-menu-harmony]');
+  if (menuLink) {
+    if (menuLink.getAttribute('href') !== menuHref) menuLink.setAttribute('href', menuHref);
+  } else {
+    menuLink = document.createElement('link');
+    menuLink.rel = 'stylesheet';
+    menuLink.href = menuHref;
+    menuLink.setAttribute('data-mega-menu-harmony', '');
+    document.head.appendChild(menuLink);
+  }
+
+  /* Runtime owns disclosure state only. Pixel geometry belongs to committed stylesheets. */
   var query = window.matchMedia('(min-width:1180px)');
   var groups = Array.prototype.slice.call(document.querySelectorAll('details.footer-accordion'));
   function syncFooterGroups(){
