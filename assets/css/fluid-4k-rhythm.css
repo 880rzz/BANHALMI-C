@@ -453,3 +453,47 @@ html body .site-footer .footer-accordion:not([open])>ul{
     padding-top:10px!important;
   }
 }
+
+/* HOMEPAGE-HERO-HEIGHT-V28-20260917
+   Trilingual homepage media only: 15% shorter than the established image/video
+   field on tablet and desktop. The following copy section keeps its own rhythm. */
+@media (min-width:621px) and (max-width:1179px){
+  html body main[data-homepage-redesign="stage76"]{
+    --homepage-hero-media-height:39.5604vw;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
+    height:var(--homepage-hero-media-height)!important;
+    min-height:0!important;
+    max-height:var(--homepage-hero-media-height)!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+}
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]{
+    --homepage-hero-media-height:clamp(629px,35.7vw,748px);
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
+    height:var(--homepage-hero-media-height)!important;
+    min-height:0!important;
+    max-height:var(--homepage-hero-media-height)!important;
+  }
+}
+@media (min-width:1180px) and (max-height:760px){
+  html body main[data-homepage-redesign="stage76"]{
+    --homepage-hero-media-height:561px;
+  }
+}
