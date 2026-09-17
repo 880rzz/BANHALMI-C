@@ -1,7 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "git": {
-    "deploymentEnabled": false
+    "deploymentEnabled": true
   },
-  "redirects": []
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://www.norbertbanhalmi.com/hu/:path*",
+      "permanent": true
+    }
+  ]
 }
