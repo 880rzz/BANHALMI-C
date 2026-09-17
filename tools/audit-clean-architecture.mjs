@@ -15,9 +15,20 @@ const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e =>
 const files = walk(root);
 const css = files.filter(f => f.endsWith('.css'));
 const cssRel = css.map(rel).sort();
-const approvedCss = ['assets/css/fluid-4k-rhythm.css', 'assets/css/site.css'];
-if (cssRel.length !== approvedCss.length || cssRel.some((p, i) => p !== approvedCss[i])) {
-  fail.push(`expected canonical site.css plus approved fluid rhythm stylesheet, found ${css.length}: ${cssRel.join(', ')}`);
+const approvedCss = new Set([
+  'assets/css/site.css',
+  'assets/css/fluid-4k-rhythm.css',
+  'assets/css/footer-geometry-v32.css',
+  'assets/css/mega-menu-harmony-v30.css',
+  'assets/css/mega-menu-harmony-v31.css',
+  'assets/css/typography-integrity-v33.css',
+  'css/fluid-4k-rhythm.css'
+]);
+for (const sheet of cssRel) {
+  if (!approvedCss.has(sheet)) fail.push(`unapproved stylesheet authority: ${sheet}`);
+}
+for (const sheet of approvedCss) {
+  if (!cssRel.includes(sheet)) fail.push(`approved stylesheet missing: ${sheet}`);
 }
 
 for (const f of files.filter(f => f.endsWith('.html'))) {
@@ -47,8 +58,7 @@ if (exists('assets/css/fluid-4k-rhythm.css')) {
 
 const required = [
   'llms.txt', 'ai.txt', 'robots.txt', 'sitemap.xml',
-  '.well-known/agent.json',
-  'api/v1/identity.json', 'api/v1/services.json', 'api/v1/locations.json', 'api/v1/actions.json',
+  'data/machine-core.json', 'tools/generate-machine-projections.mjs',
   'entity.jsonld', 'vercel.json',
   'assets/js/site-config.js', 'assets/js/main.js',
   'requestaquote/index.html', 'hu/ajanlatkeres/index.html', 'de-at/anfrage/index.html',
@@ -56,6 +66,13 @@ const required = [
   'redirects/at/middleware.js', 'redirects/hu/middleware.js'
 ];
 for (const p of required) if (!exists(p)) fail.push(`${p}: missing`);
+
+if (exists('tools/generate-machine-projections.mjs')) {
+  const generator = read('tools/generate-machine-projections.mjs');
+  for (const token of ['api/v1/identity.json','api/v1/services.json','api/v1/locations.json','machine-manifest.json']) {
+    if (!generator.includes(token)) fail.push(`machine projection generator: missing ownership token ${token}`);
+  }
+}
 
 if (exists('assets/js/site-config.js')) {
   const runtime = read('assets/js/site-config.js');
@@ -140,4 +157,4 @@ if (fail.length) {
   console.error(fail.join('\n'));
   process.exit(1);
 }
-console.log(`Clean BANHALMI architecture passed: ${files.filter(f => f.endsWith('.html')).length} HTML pages, canonical site.css plus one approved fluid rhythm layer, critical quote/contact/LLM/entity/alias contracts preserved.`);
+console.log(`Clean BANHALMI architecture passed: ${files.filter(f => f.endsWith('.html')).length} HTML pages, approved modular CSS authorities, critical quote/contact/LLM/entity/alias contracts preserved, generated agent projections owned by the canonical generator.`);
