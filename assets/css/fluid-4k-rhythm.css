@@ -23,63 +23,6 @@
   html body .bn-mega-panel{padding-top:48px!important;padding-bottom:28px!important;padding-left:64px!important;padding-right:64px!important;column-gap:48px!important}
   html body main .reviews-drawer-section{padding-top:clamp(52px,4vw,68px)!important;padding-bottom:clamp(52px,4vw,68px)!important}
 }
-
-/* V28 — compact editorial rhythm: no joined blocks, no oversized homepage hero. */
-html body main{
-  --bn-block-gap:clamp(24px,2.4vw,42px);
-}
-/* A universal stack rule: adjacent content panels must always breathe. */
-html body main :is(.location-cards,.contact-grid,.faq-list,.faq-cards)>*+*{
-  margin-block-start:var(--bn-block-gap);
-}
-html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid,.location-cards,.contact-grid,.faq-list,.faq-cards){
-  row-gap:var(--bn-block-gap)!important;
-}
-@media (min-width:721px){
-  html body main[data-homepage-redesign=stage76]{--desktop-hero-min:clamp(470px,54svh,620px)!important;}
-  html body main[data-homepage-redesign=stage76]>.hero-visual-only,
-  html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-figure,
-  html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-figure :is(picture,.hero-video),
-  html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-figure picture>img{
-    min-block-size:0!important;
-    block-size:var(--desktop-hero-min)!important;
-    max-block-size:620px!important;
-  }
-  /* The desktop mega menu already has the header brand; remove its duplicate intro. */
-  html body .bn-mega-menu .bn-mega-intro{display:none!important;}
-  html body .bn-mega-menu .bn-mega-panel{grid-template-rows:minmax(0,1fr)!important;padding-top:calc(var(--header-h,72px) + 24px)!important;}
-  html body .bn-mega-menu .bn-mega-grid{align-content:start!important;padding-top:clamp(22px,3vh,40px)!important;}
-  /* The editorial portrait has its own natural square proportion, never a tall empty frame. */
-  html body main .hero.oeuvre-hero{padding-block:clamp(42px,4vw,68px)!important;}
-  html body main .hero.oeuvre-hero>.wrap>.service-hero-image{
-    aspect-ratio:1 / 1!important;
-    block-size:min(52svh,520px)!important;
-    min-block-size:0!important;
-    max-block-size:520px!important;
-    align-self:start!important;
-  }
-}
-
-/* Footer: three readable rows rather than a narrow twelve-column table. */
-@media (min-width:900px){
-  html body .site-footer .footer-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    grid-template-rows:auto auto auto!important;
-    column-gap:clamp(30px,4vw,64px)!important;
-    row-gap:clamp(28px,3vw,46px)!important;
-  }
-  html body .site-footer .footer-brand-col{grid-column:1!important;grid-row:1 / span 2!important;max-inline-size:34ch!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(1){grid-column:2!important;grid-row:1!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(2){grid-column:3!important;grid-row:1!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){grid-column:2!important;grid-row:2!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(4){grid-column:3!important;grid-row:2!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(5){grid-column:1!important;grid-row:3!important;}
-  html body .site-footer .footer-grid>div:has(.footer-contact-list){grid-column:2!important;grid-row:3!important;}
-  html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:3!important;grid-row:3!important;}
-  html body .site-footer .footer-contact-list{grid-template-columns:1fr!important;gap:0!important;}
-  html body .site-footer .footer-contact-list .footer-studio{padding:0 0 18px!important;margin:0!important;}
-  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{padding:18px 0 0!important;border-top:1px solid rgba(255,255,255,.16)!important;}
-}
 @media (min-width:1600px){html body main .collage-gallery{column-count:5!important}}
 @media (min-width:2200px){html body main .collage-gallery{column-count:6!important}}
 
@@ -509,33 +452,4 @@ html body .site-footer .footer-accordion:not([open])>ul{
     margin-top:12px!important;
     padding-top:10px!important;
   }
-}
-
-/* V28 FINAL — these declarations intentionally remain last: the legacy sheet
-   has several historical layout layers and these are the single visual authority. */
-@media (min-width:721px){
-  html body main[data-homepage-redesign=stage76]{--desktop-hero-min:clamp(470px,54svh,620px)!important;}
-  html body main[data-homepage-redesign=stage76]>.hero-visual-only,
-  html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-figure,
-  html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-figure :is(picture,.hero-video),
-  html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-figure picture>img{block-size:var(--desktop-hero-min)!important;min-block-size:0!important;max-block-size:620px!important;}
-  html body .bn-mega-menu .bn-mega-intro{display:none!important;}
-  html body .bn-mega-menu .bn-mega-panel{grid-template-rows:minmax(0,1fr)!important;padding-top:calc(var(--header-h,72px) + 24px)!important;}
-  html body .bn-mega-menu .bn-mega-grid{align-content:start!important;padding-top:clamp(22px,3vh,40px)!important;}
-  html body main .hero.oeuvre-hero{padding-block:clamp(42px,4vw,68px)!important;}
-  html body main .hero.oeuvre-hero>.wrap>.service-hero-image{aspect-ratio:1 / 1!important;block-size:min(52svh,520px)!important;min-block-size:0!important;max-block-size:520px!important;align-self:start!important;}
-}
-@media (min-width:900px){
-  html body .site-footer .footer-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;grid-template-rows:auto auto auto!important;column-gap:clamp(30px,4vw,64px)!important;row-gap:clamp(28px,3vw,46px)!important;}
-  html body .site-footer .footer-brand-col{grid-column:1!important;grid-row:1 / span 2!important;max-inline-size:34ch!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(1){grid-column:2!important;grid-row:1!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(2){grid-column:3!important;grid-row:1!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){grid-column:2!important;grid-row:2!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(4){grid-column:3!important;grid-row:2!important;}
-  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(5){grid-column:1!important;grid-row:3!important;}
-  html body .site-footer .footer-grid>div:has(.footer-contact-list){grid-column:2!important;grid-row:3!important;}
-  html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:3!important;grid-row:3!important;}
-  html body .site-footer .footer-contact-list{grid-template-columns:1fr!important;gap:0!important;}
-  html body .site-footer .footer-contact-list .footer-studio{padding:0 0 18px!important;margin:0!important;}
-  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{padding:18px 0 0!important;border-top:1px solid rgba(255,255,255,.16)!important;}
 }
