@@ -7,8 +7,8 @@ const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8')
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
-must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260916-live-pixel-v22'),'live-pixel cache token missing');
-must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260916-live-pixel-v22'),'production artifact must parser-discover the same canonical geometry CSS token');
+must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260917-responsive-visual-v26'),'responsive visual cache token missing');
+must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260917-responsive-visual-v26'),'production artifact must parser-discover the same canonical geometry CSS token');
 must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
 must(boot.includes("window.matchMedia('(min-width:1180px)')"),'desktop footer disclosure breakpoint missing');
 must(boot.includes('details.open = query.matches;'),'footer disclosure state must track viewport');
@@ -17,6 +17,7 @@ must(!boot.includes('--desktop-hero-min'),'runtime must not own hero geometry');
 must(!boot.includes('object-position:center 30%'),'runtime must not own image crop geometry');
 must(authority.visualGeometry?.runtimeGeometryOverridesAllowed===false,'canonical authority must prohibit runtime geometry overrides');
 must(fluid.includes('LIVE-PIXEL-GEOMETRY-V22'),'canonical live-pixel stylesheet marker missing');
+must(fluid.includes('RESPONSIVE-VISUAL-SYSTEM-V26'),'responsive visual system marker missing');
 must(fluid.includes('--desktop-hero-min:clamp(740px,42vw,880px)'),'canonical homepage hero geometry missing');
 must(fluid.includes('--desktop-copy:clamp(560px,38vw,680px)'),'canonical homepage copy-panel geometry missing');
 must(fluid.includes('font-size:clamp(2.5rem,2.65vw,3.3rem)!important'),'homepage desktop H1 minimum must remain 40px');

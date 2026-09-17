@@ -22,7 +22,9 @@ const megaMenuScriptRe = /<script data-banhalmi-mega-menu="" defer="" src="\/ass
 const quotePdfScriptRe = /<script([^>]*?)src="(\/assets\/js\/quote-pdf\.js[^\"]*)"([^>]*)><\/script>/g;
 
 const asyncStyle = '<link rel="preload" as="style" href="$1"/><link rel="stylesheet" href="$1" media="print" onload="this.media=\'all\';this.onload=null"/><noscript><link rel="stylesheet" href="$1"/></noscript>';
-const fluidRhythmStyle = '<link rel="stylesheet" href="/assets/css/fluid-4k-rhythm.css?v=20260916-live-pixel-v22" data-fluid-4k-rhythm=""/>';
+const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260917-responsive-visual-v26';
+const fluidRhythmStyle = `<link rel="stylesheet" href="${fluidRhythmHref}" data-fluid-4k-rhythm=""/>`;
+const fluidRhythmLinkRe = /<link\s+rel="stylesheet"\s+href="\/assets\/css\/fluid-4k-rhythm\.css[^\"]*"\s+data-fluid-4k-rhythm=""\s*\/>/g;
 
 const executivePositioningCopy = {
   'lifestyle/index.html': {
@@ -78,6 +80,10 @@ for (const file of htmlFiles) {
 
   /* The geometry stylesheet must be parser-discovered in <head> on every production page.
      Loading it from runtime JS caused deterministic CLS on service pages such as /portrait/. */
+  /* The artifact is the deployment authority. Normalize an existing geometry
+     link as well as injecting a missing one, otherwise an old cache token can
+     make a browser render an earlier design after a successful deployment. */
+  html = html.replace(fluidRhythmLinkRe, fluidRhythmStyle);
   if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\/head>/i, `${fluidRhythmStyle}</head>`);
   if (!html.includes('data-fluid-4k-rhythm')) throw new Error(`Fluid rhythm stylesheet missing in ${rel}`);
 
