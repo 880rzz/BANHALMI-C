@@ -1159,7 +1159,12 @@
   }
   function stop(){
     video.pause();
+    figure.classList.remove('is-video-playing');
   }
+  video.addEventListener('playing',function(){figure.classList.add('is-video-playing');});
+  video.addEventListener('pause',function(){figure.classList.remove('is-video-playing');});
+  video.addEventListener('ended',function(){figure.classList.remove('is-video-playing');});
+  video.addEventListener('error',function(){figure.classList.remove('is-video-playing');});
 
   if(canHover){
     figure.addEventListener('mouseenter',play,{passive:true});

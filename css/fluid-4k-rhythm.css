@@ -171,3 +171,36 @@ html body .site-footer .footer-grid{
   html body .site-footer .banhalmi-ecosystem{grid-template-columns:1fr!important;gap:0!important;}
   html body .site-footer .banhalmi-ecosystem a{border-right:0!important;border-bottom:1px solid rgba(245,245,247,.12)!important;}
 }
+
+/* HOMEPAGE-HERO-SEAM-V25-20260917
+   The visual begins directly under the header at every viewport. The still is
+   the LCP fallback only; once motion is actually playing it cannot show
+   through at the bottom of the video. */
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+  padding-top:0!important;
+  margin-top:0!important;
+}
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+  margin-bottom:0!important;
+  background:#0a0a0a!important;
+}
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center center!important;
+}
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture{
+  opacity:1;
+  transition:opacity .18s linear;
+}
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure.is-video-playing>picture{
+  opacity:0!important;
+}
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signature-line{
+  color:#c7a542!important;
+  text-shadow:0 2px 16px rgba(0,0,0,.38)!important;
+}
