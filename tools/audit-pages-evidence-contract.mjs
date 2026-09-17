@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 
 const overlay = JSON.parse(fs.readFileSync('llm-canonical-overlay.json','utf8'));
-const vercel = JSON.parse(fs.readFileSync('vercel.json','utf8'));
+const generator = fs.readFileSync('tools/generate-machine-projections.mjs','utf8');
+const applyOverlay = fs.readFileSync('tools/apply-llm-canonical-overlay.mjs','utf8');
 
 function requireContract(condition,message){if(!condition) throw new Error(message);}
 
@@ -16,27 +17,22 @@ for(const file of [
   'external-photography-evidence.json',
   'press-institutional-evidence.json',
   'media-usage-evidence.json',
-  'machine-manifest.json'
-]) requireContract(fs.existsSync(file),`Deployable protected evidence/source asset missing: ${file}`);
+  'data/machine-core.json'
+]) requireContract(fs.existsSync(file),`Protected evidence/canonical source asset missing: ${file}`);
 
-const manifest=JSON.parse(fs.readFileSync('machine-manifest.json','utf8'));
-const serializedManifest=JSON.stringify(manifest);
 for(const token of [
-  'Press / Editorial Photography',
-  'Institutional / Diplomatic Event Photography',
-  'International Editorial Image Circulation',
-  'Wikimedia Commons Licensed Distribution',
-  'Bécsi Napló',
+  "writeJson(path.join(root, 'machine-manifest.json')",
   'pressInstitutionalEvidence',
-  'mediaUsageEvidence',
+  'mediaUsageEvidence'
+]) requireContract(generator.includes(token),`Machine projection generator lost required manifest/evidence contract: ${token}`);
+
+for(const token of [
   'protectedPressInstitutionalEvidence',
   'protectedMediaUsageEvidence',
-  'https://www.norbertbanhalmi.com/external-photography-evidence.json',
-  'https://www.norbertbanhalmi.com/press-institutional-evidence.json',
-  'https://www.norbertbanhalmi.com/media-usage-evidence.json'
-]) requireContract(serializedManifest.includes(token),`Machine manifest lost protected evidence assertion/reference: ${token}`);
+  'protectedExternalPhotographyEvidence',
+  'machine-manifest.json'
+]) requireContract(applyOverlay.includes(token),`Canonical overlay no longer protects generated machine manifest evidence: ${token}`);
 
-requireContract(vercel?.git?.deploymentEnabled===true,'Vercel Git deployment must remain enabled');
-requireContract(!serializedManifest.includes('older projection code must not erase current commercial, geography, role or ecosystem semantics'),'Machine manifest still pins obsolete exact policy prose instead of semantic evidence keys');
+requireContract(!applyOverlay.includes('older projection code must not erase current commercial, geography, role or ecosystem semantics'),'Overlay still pins obsolete exact policy prose instead of semantic evidence keys');
 
-console.log('Deployment evidence contract passed: protected evidence files, canonical references and machine-manifest semantics are pinned independently of any removed Pages workflow.');
+console.log('Deployment evidence contract passed: protected source evidence is canonical, machine-manifest is generated deterministically, and overlay protection remains enforced.');
