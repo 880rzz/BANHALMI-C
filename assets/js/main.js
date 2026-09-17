@@ -58,11 +58,21 @@
 
   // Production audit: accessible Services submenu and gallery lightbox.
 
-  // Footer groups are native disclosures at every viewport. Automatically
-  // opening them on desktop created a second, needlessly tall footer row.
+  // Footer groups are disclosures on compact screens and full information
+  // columns on desktop. Keeping the source of truth here prevents a later
+  // script from silently hiding the desktop footer content.
   var footerAccordions = Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion"));
   if (footerAccordions.length) {
-    footerAccordions.forEach(function (details) { details.open = false; });
+    var footerDesktopQuery = window.matchMedia("(min-width: 1180px)");
+    var syncFooterAccordions = function () {
+      footerAccordions.forEach(function (details) { details.open = footerDesktopQuery.matches; });
+    };
+    syncFooterAccordions();
+    if (typeof footerDesktopQuery.addEventListener === "function") {
+      footerDesktopQuery.addEventListener("change", syncFooterAccordions);
+    } else if (typeof footerDesktopQuery.addListener === "function") {
+      footerDesktopQuery.addListener(syncFooterAccordions);
+    }
   }
 
   // Scroll reveal (respects reduced motion)
@@ -1149,7 +1159,12 @@
   }
   function stop(){
     video.pause();
+    figure.classList.remove('is-video-playing');
   }
+  video.addEventListener('playing',function(){figure.classList.add('is-video-playing');});
+  video.addEventListener('pause',function(){figure.classList.remove('is-video-playing');});
+  video.addEventListener('ended',function(){figure.classList.remove('is-video-playing');});
+  video.addEventListener('error',function(){figure.classList.remove('is-video-playing');});
 
   if(canHover){
     figure.addEventListener('mouseenter',play,{passive:true});

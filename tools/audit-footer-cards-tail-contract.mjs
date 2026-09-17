@@ -23,7 +23,7 @@ must(fluid.includes('grid-template-rows:auto!important')&&fluid.includes('grid-a
 must(/\.archive-cards>\.archive-card\{[^}]*height:100%!important;[^}]*display:flex!important;[^}]*flex-direction:column!important/.test(fluid),'archive cards must remain equal-height flex columns');
 must((fluid.match(/min-height:24px!important/g)||[]).length>=2,'compact footer contact actions must retain at least 24px height');
 must(!fluid.includes('min-height:22px!important'),'compact footer must not regress below 24px');
-must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260917-responsive-visual-v26'),'responsive visual cache-bust token missing');
+must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27'),'visual repair cache-bust token missing');
 must(!boot.includes('style.textContent'),'runtime geometry injection must not return');
 
 if(failures.length){

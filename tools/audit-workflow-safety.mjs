@@ -37,8 +37,10 @@ if(!/git archive --format=tar HEAD \| tar -xf - -C _site/.test(pages)) errors.pu
 if(!/printf '%s\\n' \"\$GITHUB_SHA\" > _site\/deployment-sha\.txt/.test(pages)) errors.push('pages.yml must stamp the exact source SHA into the artifact');
 if(!/Verify exact .*commit is live on custom domain/i.test(pages)) errors.push('pages.yml must verify the exact deployed SHA on the custom domain');
 if(!/needs:\s*exact-live/.test(pages)) errors.push('pages.yml production live gate must depend on exact-live verification');
-if(!pages.includes('fetch-depth: 0')) errors.push('pages.yml must use full Git history for truthful per-page sitemap lastmod rendering');
-if(!pages.includes('render-production-sitemap-lastmod.mjs _site')) errors.push('pages.yml must render production sitemap lastmod from Git history');
+if(!pages.includes('node tools/assert-production-integrity.mjs _site')) errors.push('pages.yml must prove the artifact bytes match committed source before deployment');
+for (const mutator of ['optimize-production-artifact.mjs _site','restore-production-design-authority.mjs _site','harden-production-artifact.mjs _site','render-production-sitemap-lastmod.mjs _site','esbuild@']) {
+  if (pages.includes(mutator)) errors.push(`pages.yml must not mutate the deploy artifact: ${mutator}`);
+}
 
 for (const token of [
   'llm-canonical-overlay.json',
@@ -55,7 +57,7 @@ for (const token of [
 }
 
 const emergency=workflows.get('emergency-pages-deploy.yml')||'';
-for(const token of ['audit-machine-core.mjs','audit-authority-integrity.mjs','audit-llm-commercial-contract.mjs','harden-production-artifact.mjs','llm-canonical-overlay.json','approximately 50','independent professional partner','1190 Döbling','XII. kerület']){
+for(const token of ['audit-machine-core.mjs','audit-authority-integrity.mjs','audit-llm-commercial-contract.mjs','assert-production-integrity.mjs','llm-canonical-overlay.json','approximately 50','independent professional partner','1190 Döbling','XII. kerület']){
   if(!emergency.includes(token)) errors.push(`emergency-pages-deploy.yml must not bypass current LLM/authority contract: missing ${token}`);
 }
 if(/without quality gates/i.test(emergency)) errors.push('emergency-pages-deploy.yml must not advertise or implement a quality-gate bypass');
@@ -64,13 +66,5 @@ const liveProbe=workflows.get('live-production-probe.yml')||'';
 if(/Unsupported (?:employee|worksFor) semantics|Employment regression|worksFor regression/i.test(liveProbe)) errors.push('live-production-probe.yml must not block a corrective PR by requiring production to already contain the proposed semantic fix; post-deploy semantic checks belong in llm-live-integrity.yml');
 if(!liveProbe.includes('deployment-sha.txt')) errors.push('live-production-probe.yml must still verify the exact current main deployment SHA');
 
-const harden=await readFile(path.resolve(import.meta.dirname,'./harden-production-artifact.mjs'),'utf8');
-const generatePos=harden.indexOf('generateMachineProjections(root)');
-const overlayPos=harden.indexOf('applyLlmCanonicalOverlay(root)');
-if(generatePos<0||overlayPos<0||generatePos>=overlayPos) errors.push('harden-production-artifact.mjs must apply the protected LLM overlay after machine projection generation');
-for(const token of ['llm-canonical-overlay.json','people-roles.json','market-geography.json','llm-commercial-contract.json']){
-  if(!harden.includes(token)) errors.push(`harden-production-artifact.mjs protected contract missing: ${token}`);
-}
-
 if(errors.length){console.error(errors.join('\n'));process.exit(1)}
-console.log('Workflow safety audit passed: permanent workflows are read-only; tracked source must remain unchanged after audits; normal and emergency deploys use committed HEAD and hardened artifacts; corrective PRs are not blocked by stale production semantics; generated machine projections are overlaid by the protected current LLM contract; truthful sitemap freshness is release-gated; live anti-rollback tokens are mandatory.');
+console.log('Workflow safety audit passed: permanent workflows deploy only committed public bytes, reject artifact mutation, and retain exact-live SHA verification.');

@@ -22,7 +22,7 @@ const megaMenuScriptRe = /<script data-banhalmi-mega-menu="" defer="" src="\/ass
 const quotePdfScriptRe = /<script([^>]*?)src="(\/assets\/js\/quote-pdf\.js[^\"]*)"([^>]*)><\/script>/g;
 
 const asyncStyle = '<link rel="preload" as="style" href="$1"/><link rel="stylesheet" href="$1" media="print" onload="this.media=\'all\';this.onload=null"/><noscript><link rel="stylesheet" href="$1"/></noscript>';
-const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260917-responsive-visual-v26';
+const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27';
 const fluidRhythmStyle = `<link rel="stylesheet" href="${fluidRhythmHref}" data-fluid-4k-rhythm=""/>`;
 const fluidRhythmLinkRe = /<link\s+rel="stylesheet"\s+href="\/assets\/css\/fluid-4k-rhythm\.css[^\"]*"\s+data-fluid-4k-rhythm=""\s*\/>/g;
 
