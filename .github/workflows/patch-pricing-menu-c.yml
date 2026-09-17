@@ -1,1 +1,64 @@
-name: noop
+name: One-time pricing menu migration C
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Move pricing into Services as item 5
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const p = 'assets/js/mega-menu-v65-base.js';
+          let s = fs.readFileSync(p, 'utf8');
+          const replacements = [
+            ["Canonical navigation authority: services → work → about/pricing/contact.", "Canonical navigation authority: services (pricing item 5) → work → about/contact."],
+            ["supportTitle:'About · Pricing · Contact'", "supportTitle:'About · Contact'"],
+            ["supportTitle:'Rólam · Árak · Kapcsolat'", "supportTitle:'Rólam · Kapcsolat'"],
+            ["supportTitle:'Über BANHALMI · Preise · Kontakt'", "supportTitle:'Über BANHALMI · Kontakt'"],
+            ["var grid=document.createElement('div');grid.className='bn-mega-grid';var svc=document.createElement('div');svc.className='bn-mega-column bn-mega-services';svc.append(sectionHead(t.servicesTitle,t.servicesDesc));t.services.forEach(function(x){svc.append(node(x,'bn-mega-service'));});var main=document.createElement('div');", "var grid=document.createElement('div');grid.className='bn-mega-grid';var q=l==='hu'?'/hu/ajanlatkeres/':l==='de'?'/de-at/anfrage/':'/requestaquote/';var svc=document.createElement('div');svc.className='bn-mega-column bn-mega-services';svc.append(sectionHead(t.servicesTitle,t.servicesDesc));t.services.forEach(function(x){svc.append(node(x,'bn-mega-service'));});svc.append(node([q,t.cta,t.ctaDesc],'bn-mega-pricing bn-mega-service'));var main=document.createElement('div');"],
+            ["t.support.forEach(function(x){foot.append(node(x));});var q=l==='hu'?'/hu/ajanlatkeres/':l==='de'?'/de-at/anfrage/':'/requestaquote/';foot.append(node([q,t.cta,t.ctaDesc],'bn-mega-pricing'));grid.append(svc,main,foot);", "t.support.forEach(function(x){foot.append(node(x));});grid.append(svc,main,foot);"]
+          ];
+          for (const [from, to] of replacements) {
+            if (!s.includes(from)) throw new Error('Expected mega-menu source pattern missing: ' + from.slice(0,120));
+            s = s.replace(from, to);
+          }
+          fs.writeFileSync(p, s);
+
+          const a = 'tools/audit-navigation-ecosystem.mjs';
+          let audit = fs.readFileSync(a, 'utf8');
+          audit = audit.replace("fs.readFileSync('assets/js/mega-menu.js','utf8')", "fs.readFileSync('assets/js/mega-menu-v65-base.js','utf8')")
+                       .replace("'About · Pricing · Contact'", "'About · Contact'")
+                       .replace("'Rólam · Árak · Kapcsolat'", "'Rólam · Kapcsolat'")
+                       .replace("'Über BANHALMI · Preise · Kontakt'", "'Über BANHALMI · Kontakt'")
+                       .replace("\"foot.append(node([q,t.cta,t.ctaDesc],'bn-mega-pricing'))\"", "\"svc.append(node([q,t.cta,t.ctaDesc],'bn-mega-pricing bn-mega-service'))\"")
+                       .replace(/mega-menu\.js missing navigation token/g, 'mega-menu-v65-base.js missing navigation token')
+                       .replace("console.log('Navigation ecosystem audit passed: canonical multilingual service-first hierarchy and Gallery → Art Archive → Partners Work menu are present.');", "console.log('Navigation ecosystem audit passed: Pricing is the fifth Services item in EN/HU/DE; canonical service-first hierarchy and Gallery → Art Archive → Partners Work menu are present.');");
+          fs.writeFileSync(a, audit);
+          NODE
+      - name: Verify navigation contract
+        run: node tools/audit-navigation-ecosystem.mjs
+      - name: Cleanup accidental temporary files and commit
+        run: |
+          rm -f .tmp2 .tmp3 .github/workflows/patch-pricing-menu-c.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Move pricing to fifth Services menu item [skip ci]"
+          git push origin HEAD:main
