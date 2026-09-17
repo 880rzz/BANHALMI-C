@@ -3,6 +3,7 @@ import fs from 'node:fs';
 const failures=[];
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const menuHarmony=fs.readFileSync('assets/css/mega-menu-harmony-v30.css','utf8');
 const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
 const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
@@ -47,12 +48,29 @@ must(fluid.includes('font-size:clamp(2.5rem,2.65vw,3.3rem)!important'),'homepage
 must(/\.collage-gallery\{column-count:4!important/.test(fluid),'1440 portrait gallery four-column density contract missing');
 must(/@media\s*\(min-width:1600px\)\{html body main \.collage-gallery\{column-count:5!important\}\}/.test(fluid),'wide desktop portrait gallery five-column density contract missing');
 must(/@media\s*\(min-width:2200px\)\{html body main \.collage-gallery\{column-count:6!important\}\}/.test(fluid),'2560/4K portrait gallery six-column density contract missing');
+
+const menuAuthority=authority.navigation?.megaMenu||{};
+must(menuAuthority.contractVersion==='v30','mega menu authority must be v30');
+must(menuAuthority.desktopOverlayBelowHeader===true,'desktop mega menu must begin below the real header');
+must(menuAuthority.duplicateBrandIntroHidden===true&&menuAuthority.duplicateTailHidden===true,'duplicated BANHALMI intro/tail must remain hidden');
+must(menuAuthority.desktopDescriptionsHidden===true&&menuAuthority.mobileDescriptionsHidden===true,'mega-menu item descriptions must remain compact/hidden');
+must(menuAuthority.visualTile===true,'mega menu visual tile must remain enabled');
+must(boot.includes('/assets/css/mega-menu-harmony-v30.css?v=20260917-menu-harmony-v30'),'menu harmony stylesheet cache token missing from boot loader');
+must(menuHarmony.includes('MEGA-MENU-HARMONY-V30-20260917'),'menu harmony stylesheet authority marker missing');
+must(menuHarmony.includes('.bn-mega-intro:not(.bn-mega-tail)')&&menuHarmony.includes('.bn-mega-tail'),'duplicated menu intro/tail suppression missing');
+must(menuHarmony.includes('inset:var(--header-h,72px) 0 auto 0!important'),'desktop menu must start below header instead of covering the whole viewport');
+must(menuHarmony.includes('grid-template-columns:minmax(0,1.18fr) minmax(0,.92fr) minmax(0,1.08fr) minmax(230px,.92fr)!important'),'desktop editorial four-column menu geometry missing');
+must(menuHarmony.includes("url('/assets/img/curated/hero-signature-960.avif')"),'desktop visual menu tile source missing');
+must(menuHarmony.includes('inset:var(--header-h,64px) 0 0 0!important'),'mobile menu must start below the header');
+must(menuHarmony.includes('min-block-size:150px!important'),'mobile visual tile contract missing');
+must(!menuHarmony.includes('height:100dvh'),'v30 menu must not reintroduce a full-viewport desktop panel');
+
 must(!fs.existsSync('assets/css/layout-contract-v18.css'),'layout recovery must not introduce a third stylesheet authority');
 must(!fs.existsSync('assets/js/layout-contract-v18.js'),'layout recovery must not introduce a second geometry runtime');
 
 if(failures.length){
-  console.error(`BANHALMI layout contract v20 failed (${failures.length}):`);
+  console.error(`BANHALMI layout contract v21 failed (${failures.length}):`);
   failures.forEach(f=>console.error(`- ${f}`));
   process.exit(1);
 }
-console.log('BANHALMI layout contract v20 passed: trilingual homepage still/video media is 15% shorter on tablet and desktop, the copy panel is unchanged, the production hardener cannot rewrite the media geometry, canonical CSS remains parser-discovered, and desktop/4K density contracts are protected.');
+console.log('BANHALMI layout contract v21 passed: compact editorial mega menu starts below the real header, duplicate BANHALMI menu chrome is suppressed, mobile/desktop navigation is density-controlled, and the trilingual homepage/footer geometry remains protected.');
