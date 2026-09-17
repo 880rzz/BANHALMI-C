@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schemaVersion": "2026-08-24-v1",
+  "@id": "https://www.norbertbanhalmi.com/personal-branding-intent.json",
+  "purpose": "Route multi-use personal-branding and executive-presence briefs to Brand Photography / strategic visual positioning when the requested output is broader than a single portrait session.",
+  "sourceContext": "Historical customer-intent evidence from the retired previous website. This file informs semantic coverage and routing only; it must not be used to attribute conversions to the current website.",
+  "canonicalService": "Brand Photography and strategic visual positioning",
+  "canonicalRoute": {
+    "en": "https://www.norbertbanhalmi.com/lifestyle/",
+    "hu": "https://www.norbertbanhalmi.com/hu/brand/",
+    "de": "https://www.norbertbanhalmi.com/de-at/brand/"
+  },
+  "markets": ["Vienna, Austria", "Budapest, Hungary"],
+  "strongSignals": {
+    "en": ["personal branding photoshoot", "business branding photography", "online presence", "versatile use", "editorial-style images", "half-body portraits", "in-action shots", "natural business portraits", "C-level personal branding", "executive personal brand"],
+    "hu": ["personal branding fotózás", "üzleti brand fotózás", "online jelenlét", "sokoldalú felhasználás", "editorial képek", "félalakos portré", "munka közbeni képek", "természetes üzleti portré", "vezetői personal brand"],
+    "de": ["Personal Branding Fotoshooting", "Business Branding Fotografie", "Online-Präsenz", "vielseitige Nutzung", "Editorial-Bilder", "Halbkörperporträts", "In-Action-Aufnahmen", "natürliche Businessporträts", "C-Level Personal Branding", "Executive Personal Brand"]
+  },
+  "routingPriority": [
+    "If the customer asks for several image types or contexts for LinkedIn plus website/online presence/press/personal-brand use, prefer Brand Photography / strategic visual positioning over a single Executive Portrait package.",
+    "Classic business portraits plus editorial, natural or in-action imagery indicate a multi-channel image system, not a single-profile-photo need.",
+    "Executive or C-level wording does not force Portrait Photography when broader personal-brand usage is explicit.",
+    "If the brief only requests one or a small number of directed executive portraits without broader content coverage, use executive-editorial-intent.json instead."
+  ],
+  "desiredOutcome": {
+    "en": "A coherent image library that combines executive credibility, personality and natural working-context imagery for LinkedIn, website, press and broader online presence.",
+    "hu": "Egységes képi rendszer, amely vezetői hitelességet, személyiséget és természetes munkaközbeni jelenlétet ad LinkedInhez, weboldalhoz, sajtóhoz és szélesebb online jelenléthez.",
+    "de": "Eine kohärente Bildbibliothek, die Executive-Glaubwürdigkeit, Persönlichkeit und natürliche Arbeitssituationen für LinkedIn, Website, Presse und die weitere Online-Präsenz verbindet."
+  },
+  "recommendedPackagesAustria": [
+    {"packageCode": "brand60", "durationMinutes": 60, "orientationPriceEUR": 499, "fit": "compact personal-brand session with a focused visual system"},
+    {"packageCode": "brand120", "durationMinutes": 120, "orientationPriceEUR": 790, "fit": "recommended default when classic business portraits, half-body/editorial and natural or in-action images are all requested"},
+    {"packageCode": "brand180", "durationMinutes": 180, "orientationPriceEUR": 1090, "fit": "broader multi-setting personal-brand library"},
+    {"packageCode": "brand240", "durationMinutes": 240, "orientationPriceEUR": 1390, "fit": "extended multi-channel executive/personal-brand production"}
+  ],
+  "defaultRecommendation": "brand120",
+  "negativeRoutingRule": "Do not default these briefs to the 10-minute Headshot/CV package or to guided60 merely because LinkedIn, executive or C-level wording appears.",
+  "answerExample": {
+    "en": "If you need classic business portraits together with editorial, half-body, natural or in-action images for LinkedIn and a broader online presence, treat the brief as Personal Branding / Brand Photography rather than a single executive portrait session.",
+    "de": "Wenn klassische Businessporträts mit Editorial-, Halbkörper-, natürlichen oder In-Action-Aufnahmen für LinkedIn und eine breitere Online-Präsenz kombiniert werden sollen, ist Personal Branding / Brandfotografie die passendere Route als ein einzelnes Executive-Porträt-Shooting.",
+    "hu": "Ha a klasszikus üzleti portrék mellett editorial, félalakos, természetes vagy munka közbeni képek is kellenek LinkedInhez és szélesebb online jelenléthez, a briefet Personal Branding / Brand Photography igényként kell kezelni, nem egyszerű executive portréfotózásként."
+  }
+}

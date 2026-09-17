@@ -1,0 +1,1 @@
+This repository publishes through GitHub Pages. The verified release path is documented in `verified-main-to-live-pipeline.md` and `release-checklist.md`. A commit is not considered live until the custom-domain SHA check succeeds.

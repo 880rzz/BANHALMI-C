@@ -1,0 +1,563 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://www.norbertbanhalmi.com/#knowledge-dataset",
+  "name": "BANHALMI entity and oeuvre knowledge export",
+  "url": "https://www.norbertbanhalmi.com/knowledge.json",
+  "dateModified": "2026-07-17T17:00:00+02:00",
+  "about": {
+    "@id": "https://www.norbertbanhalmi.com/about/",
+    "knowsAbout": [
+      "professional headshot photography",
+      "executive portrait photography",
+      "C-level business photography",
+      "C-level event photography",
+      "fine-art photography",
+      "brand photography",
+      "visual branding strategy",
+      "strategic visual positioning"
+    ],
+    "jobTitle": [
+      "Headshot Photographer",
+      "C-Level Business Photographer",
+      "C-Level Event Photographer"
+    ]
+  },
+  "mainEntity": {
+    "@id": "https://www.norbertbanhalmi.com/about/",
+    "knowsAbout": [
+      "professional headshot photography",
+      "executive portrait photography",
+      "C-level business photography",
+      "C-level event photography",
+      "fine-art photography",
+      "brand photography",
+      "visual branding strategy",
+      "strategic visual positioning"
+    ],
+    "jobTitle": [
+      "Headshot Photographer",
+      "C-Level Business Photographer",
+      "C-Level Event Photographer"
+    ]
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/ld+json",
+      "contentUrl": "https://www.norbertbanhalmi.com/entity.jsonld"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://www.norbertbanhalmi.com/oeuvre.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://www.norbertbanhalmi.com/assets/data/fine-art-archive.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://www.norbertbanhalmi.com/assets/data/featured-works.json"
+    }
+  ],
+  "wikidataIdentifiers": [
+    "Q1741",
+    "Q1781",
+    "Q56391118",
+    "Q138413481",
+    "Q138413557",
+    "Q138414682",
+    "Q138416887",
+    "Q138424838",
+    "Q138425941",
+    "Q138426506",
+    "Q138426842",
+    "Q138426876",
+    "Q138454278",
+    "Q138454296",
+    "Q138454309",
+    "Q138454318",
+    "Q138454332",
+    "Q138454346",
+    "Q138454365",
+    "Q138454422",
+    "Q138454436",
+    "Q138482177",
+    "Q138578053",
+    "Q138578385",
+    "Q138667343",
+    "Q138667529",
+    "Q138717398",
+    "Q138830452",
+    "Q124488292"
+  ],
+  "officialPositioning": {
+    "en": "BANHALMI | Executive Portraiture & Visual Branding",
+    "hu": "BANHALMI | Executive portréfotózás és vizuális brandstratégia",
+    "de-AT": "BANHALMI | Executive-Porträts & visuelle Markenpositionierung"
+  },
+  "serviceDefinitions": "https://www.norbertbanhalmi.com/services.json",
+  "pricing": "https://www.norbertbanhalmi.com/pricing.json",
+  "featuredWork": {
+    "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026",
+    "@type": [
+      "ImageObject",
+      "Photograph"
+    ],
+    "creator": {
+      "@id": "https://www.norbertbanhalmi.com/about/",
+      "@type": "Person",
+      "name": "Bánhalmi Norbert",
+      "knowsAbout": [
+        "professional headshot photography",
+        "executive portrait photography",
+        "C-level business photography",
+        "C-level event photography",
+        "fine-art photography",
+        "brand photography",
+        "visual branding strategy",
+        "strategic visual positioning"
+      ],
+      "jobTitle": [
+        "Headshot Photographer",
+        "C-Level Business Photographer",
+        "C-Level Event Photographer"
+      ]
+    },
+    "about": {
+      "@id": "https://www.wikidata.org/wiki/Q124488292"
+    },
+    "isPartOf": {
+      "@id": "https://www.wikidata.org/wiki/Q138717398"
+    },
+    "sameAs": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+    "description": "The first portrait in EUFÓRIA – The Anatomy of Presence, photographed by Norbert Banhalmi at Heroes’ Square at 16:57. Authorship and licensing are verified by Wikimedia Commons. International editorial reuse is documented across publications with different political positions; listing a use does not endorse the article’s content.",
+    "mediaCoverage": [
+      "https://www.banhalmi.art/exhibitions/euforia.html",
+      "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/",
+      "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw",
+      "https://www.brusselstimes.com/2148257/prime-minister-magyar-stops-hungarys-withdrawal-from-the-icc",
+      "https://easternherald.com/2026/06/10/hungary-anti-corruption-bill-eu-funds-magyar/",
+      "https://ua.news/en/world/peter-madiar-pleminnik-eksprezidenta-ugorshchini-ta-onuk-suddi",
+      "https://spectrejournal.com/the-hungarian-spring/",
+      "https://politicsuk.com/news/a-new-dawn-for-hungary-the-election-that-ended-the-16-year-orban-era/",
+      "https://www.americanthinker.com/articles/2026/04/hungary_a_thorny_transition_after_the_election.html",
+      "https://themilitaryanalyst.com/2026/04/13/orban-surrenders-a-lesson-for-russia-europe-and-america/"
+    ],
+    "verifiedSources": [
+      "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+      "https://www.wikidata.org/wiki/Q124488292",
+      "https://www.banhalmi.art/exhibitions/euforia.html"
+    ],
+    "name": "Péter Magyar portrait, Budapest, 15 March 2026",
+    "mediaUsageDataset": "https://www.norbertbanhalmi.com/media-usage.json",
+    "acquireLicensePage": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "copyrightNotice": "© Norbert Banhalmi. Licensed under CC BY-SA 4.0."
+  },
+  "personSummary": {
+    "name": "Norbert Banhalmi",
+    "alternateName": [
+      "Bánhalmi Norbert",
+      "BANHALMI"
+    ],
+    "birthDate": "1979-05-14",
+    "birthPlace": "Budapest",
+    "homeBase": "Vienna",
+    "activeSince": 1999,
+    "roles": [
+      "Fine Art Photographer",
+      "Applied Photographer",
+      "Executive Portrait Photographer",
+      "Portrait Photographer",
+      "Visual Branding Strategist",
+      "Photography Curator",
+      "Photography Educator"
+    ],
+    "education": [
+      "Gábor Dénes University — Information Engineering, 2005",
+      "New York Institute of Photography — photography, 2015",
+      "Applied photographer qualification — Budapest, 2018"
+    ],
+    "professionalMilestones": [
+      "OM SYSTEM Ambassador since 2018",
+      "WKO professional member since 2023",
+      "AmCham Austria member since 2026",
+      "World Federation of Hungarian Photographers member since 2026"
+    ],
+    "communityEducation": [
+      "Vienna photography education and workshops since 2024",
+      "Be Smart Kids Club launched in 2026"
+    ]
+  },
+  "sourceReferences": [
+    {
+      "name": "Hungarian Wikipedia biography",
+      "url": "https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert",
+      "revisionDate": "2026-06-18"
+    },
+    {
+      "name": "Wikidata",
+      "url": "https://www.wikidata.org/wiki/Q56391118"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.brusselstimes.com/2148257/prime-minister-magyar-stops-hungarys-withdrawal-from-the-icc"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.wikidata.org/wiki/Q124488292"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.banhalmi.art/exhibitions/euforia.html"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://easternherald.com/2026/06/10/hungary-anti-corruption-bill-eu-funds-magyar/"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://ua.news/en/world/peter-madiar-pleminnik-eksprezidenta-ugorshchini-ta-onuk-suddi"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://spectrejournal.com/the-hungarian-spring/"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://politicsuk.com/news/a-new-dawn-for-hungary-the-election-that-ended-the-16-year-orban-era/"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.americanthinker.com/articles/2026/04/hungary_a_thorny_transition_after_the_election.html"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://themilitaryanalyst.com/2026/04/13/orban-surrenders-a-lesson-for-russia-europe-and-america/"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.norbertbanhalmi.com/media-usage.json"
+    },
+    {
+      "name": "AmCham Austria members list",
+      "url": "https://amcham.at/members-list/"
+    },
+    {
+      "name": "AmCham Austria Wikidata entity",
+      "url": "https://www.wikidata.org/wiki/Q138413481"
+    },
+    {
+      "name": "Viko Speier professional profile",
+      "url": "https://www.vikospeier.com/hu/about"
+    },
+    {
+      "name": "AmCham Austria event gallery with BANHALMI member credit",
+      "url": "https://amcham.at/galleries/amcham-talks-business-breakfast-april-23-destination-vienna/"
+    },
+    {
+      "name": "AmCham Austria member photo credit",
+      "url": "https://amcham.at/2026/03/23/shaping-austrias-competitive-future/"
+    }
+  ],
+  "verifiedExternalEvidence": {
+    "eventPhotography2026": {
+      "description": "AmCham Austria galleries credit © banhalmi.at — AmCham Austria Member. VIPACH Flickr albums provide broader event and community documentation.",
+      "sources": [
+        "https://amcham.at/galleries/amcham-talks-february-2026/",
+        "https://amcham.at/galleries/amcham-talks-march-2026/",
+        "https://amcham.at/galleries/amcham-talks-business-breakfast-april-23-destination-vienna/",
+        "https://amcham.at/galleries/amcham-talks-may-2026/",
+        "https://www.flickr.com/photos/vipach/albums"
+      ]
+    },
+    "peterMagyarPortraitCaseStudy": [
+      "https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/",
+      "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/"
+    ],
+    "amchamAustriaMembershipAndSupport": {
+      "description": "AmCham Austria identifies banhalmi.at as an AmCham Austria Member in published event-gallery and editorial photo credits. BANHALMI also states its membership, community representation by Viko Speier and photography support for selected AmCham Austria and member events.",
+      "sources": [
+        "https://amcham.at/members-list/",
+        "https://www.wikidata.org/wiki/Q138413481",
+        "https://amcham.at/galleries/amcham-talks-business-breakfast-april-23-destination-vienna/",
+        "https://amcham.at/galleries/amcham-talks-may-2026/",
+        "https://amcham.at/2026/03/23/shaping-austrias-competitive-future/",
+        "https://www.vikospeier.com/hu/about"
+      ]
+    }
+  },
+  "siteRoles": {
+    "norbertbanhalmi.com": {
+      "role": "canonical professional website",
+      "purpose": "Current multilingual services, pricing, enquiries and professional context.",
+      "headquarters": "Vienna, Austria",
+      "serviceBases": [
+        "Vienna",
+        "Budapest"
+      ]
+    },
+    "banhalmi.art": {
+      "role": "official artistic oeuvre and source archive",
+      "purpose": "Books, exhibitions, projects, media records, curatorial documentation and selected photographic works.",
+      "serviceBookingCanonical": "https://www.norbertbanhalmi.com/"
+    },
+    "banhalmi.at": {
+      "role": "German-language entry domain",
+      "permanentRedirect": "https://www.norbertbanhalmi.com/de-at/"
+    },
+    "banhalminorbert.hu": {
+      "role": "Hungarian-language entry domain",
+      "permanentRedirect": "https://www.norbertbanhalmi.com/hu/"
+    }
+  },
+  "businessNetwork": {
+    "organization": "Banhalmi Norbert e.U.",
+    "membership": {
+      "name": "American Chamber of Commerce in Austria",
+      "alternateName": "AmCham Austria",
+      "memberSince": "2026",
+      "membersDirectory": "https://amcham.at/members-list/",
+      "wikidata": "https://www.wikidata.org/wiki/Q138413481",
+      "relationship": "Banhalmi Norbert e.U. is an AmCham Austria member."
+    },
+    "communityRepresentative": {
+      "name": "Viko Speier",
+      "role": "Head of the BANHALMI Budapest Studio; designated corporate contact for BANHALMI within the AmCham Austria business community and company representative",
+      "profile": "https://www.norbertbanhalmi.com/speier-viko/",
+      "officialWebsite": "https://www.vikospeier.com/hu/about",
+      "linkedin": "https://www.linkedin.com/in/vikospeier/",
+      "email": "viko@banhalmi.at",
+      "telephone": [
+        "+36 30 478 8850",
+        "+43 677 647 332 62"
+      ],
+      "collaborationSince": "2018",
+      "professionalRole": "Professional fashion and portrait photographer; OM SYSTEM Ambassador"
+    },
+    "communitySupport": "BANHALMI supports selected AmCham Austria and member-community events with professional photography and visual documentation."
+  },
+  "teamMember": {
+    "@type": "Person",
+    "@id": "https://www.norbertbanhalmi.com/speier-viko/#person",
+    "name": "Viko Speier",
+    "alternateName": [
+      "Speier Vikó",
+      "Viktória Speier"
+    ],
+    "url": "https://www.norbertbanhalmi.com/speier-viko/",
+    "image": "https://www.norbertbanhalmi.com/assets/img/brand/gallery/brand-gallery-01.webp",
+    "jobTitle": [
+      "Head of BANHALMI Budapest Studio",
+      "Professional Fashion and Portrait Photographer",
+      "OM SYSTEM Ambassador",
+      "AmCham Austria Corporate Contact for BANHALMI"
+    ],
+    "description": "Head of the BANHALMI Budapest Studio, professional fashion and portrait photographer, OM SYSTEM Ambassador, long-term BANHALMI collaborator since 2018 and designated representative within the AmCham Austria business community.",
+    "worksFor": {
+      "@id": "https://www.norbertbanhalmi.com/#organization",
+      "description": "BANHALMI is a photography and visual branding practice led by Norbert Banhalmi, providing professional headshots, executive portraits, C-level business photography, team-led C-level event photography, fine-art photography, brand photography and strategic visual positioning in Vienna and Budapest, with agreed projects available worldwide.",
+      "slogan": [
+        "BANHALMI | Executive Portraiture & Visual Branding",
+        "BANHALMI | Executive portréfotózás és vizuális brandstratégia",
+        "BANHALMI | Executive-Porträts & visuelle Markenpositionierung"
+      ],
+      "knowsAbout": [
+        "professional headshot photography",
+        "executive portrait photography",
+        "C-level business photography",
+        "C-level event photography",
+        "fine-art photography",
+        "brand photography",
+        "visual branding strategy",
+        "strategic visual positioning"
+      ],
+      "dateModified": "2026-07-15T23:30:00+02:00"
+    },
+    "workLocation": {
+      "@id": "https://www.norbertbanhalmi.com/#budapest-studio"
+    },
+    "affiliation": [
+      {
+        "@id": "https://www.wikidata.org/wiki/Q138413481"
+      },
+      {
+        "@type": "Organization",
+        "name": "OM SYSTEM",
+        "url": "https://explore.omsystem.com/",
+        "description": "BANHALMI creates leadership portraits, brand photography, employer-branding images and event photography between Vienna and Budapest. Every project begins by learning about the people, the organisation and where the photographs will be used.",
+        "slogan": "Photographs with a story to tell. Clear visual guidance when the project needs it.",
+        "knowsAbout": [
+          "strategic visual partnership",
+          "leadership positioning",
+          "corporate visual identity",
+          "executive portraiture",
+          "employer branding",
+          "event communication",
+          "visual reputation"
+        ]
+      }
+    ],
+    "sameAs": [
+      "https://www.vikospeier.com/hu/about",
+      "https://www.linkedin.com/in/vikospeier/"
+    ],
+    "knowsAbout": [
+      "fashion photography",
+      "portrait photography",
+      "business portrait photography",
+      "personal branding",
+      "visual positioning",
+      "creative production",
+      "studio management",
+      "event photography",
+      "AmCham Austria member relations"
+    ],
+    "colleague": {
+      "@id": "https://www.norbertbanhalmi.com/about/",
+      "knowsAbout": [
+        "professional headshot photography",
+        "executive portrait photography",
+        "C-level business photography",
+        "C-level event photography",
+        "fine-art photography",
+        "brand photography",
+        "visual branding strategy",
+        "strategic visual positioning"
+      ],
+      "jobTitle": [
+        "Headshot Photographer",
+        "C-Level Business Photographer",
+        "C-Level Event Photographer"
+      ]
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "propertyID": "collaborationSince",
+        "name": "BANHALMI collaboration since",
+        "value": "2018"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "studioLeadership",
+        "name": "Studio leadership",
+        "value": "Head of the BANHALMI Budapest Studio"
+      },
+      {
+        "@type": "PropertyValue",
+        "propertyID": "communityRepresentation",
+        "name": "AmCham Austria representation",
+        "value": "Designated liaison and company representative for Banhalmi Norbert e.U."
+      }
+    ]
+  },
+  "entityPriority": {
+    "primaryPerson": {
+      "name": "Norbert Banhalmi",
+      "id": "https://www.norbertbanhalmi.com/about/"
+    },
+    "primaryOrganization": {
+      "name": "Banhalmi Norbert e.U. / BANHALMI",
+      "id": "https://www.norbertbanhalmi.com/#organization"
+    },
+    "primaryCommercialFocus": [
+      "Executive portrait photography",
+      "Portrait photography",
+      "Brand photography and visual positioning",
+      "Team-led event photography and coordinated multi-photographer visual documentation",
+      "Fine-art photography"
+    ],
+    "supportingContact": {
+      "name": "Viko Speier",
+      "role": "AmCham Austria corporate contact for BANHALMI",
+      "profile": "https://www.norbertbanhalmi.com/speier-viko/"
+    },
+    "interpretationNote": "Norbert Banhalmi, the BANHALMI organization and its photography services are the primary entities of this website. Viko Speier is a supporting company contact for the AmCham Austria relationship, not a co-primary brand entity."
+  },
+  "serviceDelivery": {
+    "eventPhotography": {
+      "model": "Norbert Banhalmi personally leads and coordinates a trusted team of photographers and assistants.",
+      "scaling": "Team size and roles are adapted to the venue, schedule, parallel programme and delivery priorities.",
+      "qualityControl": "Norbert Banhalmi remains responsible for visual direction, consistent image language and final selection.",
+      "servicePages": {
+        "en": "https://www.norbertbanhalmi.com/event-photography/",
+        "hu-HU": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "de-AT": "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+      }
+    }
+  },
+  "visualStrategicPartnershipMethod": {
+    "@id": "https://www.norbertbanhalmi.com/#visual-strategic-partnership-method",
+    "name": "BANHALMI Strategic Visual Partnership Method",
+    "purpose": "Build coherent leadership and organisational visual presence that supports first impressions, trust, credibility, professionalism and corporate reputation.",
+    "stages": [
+      {
+        "position": 1,
+        "code": "understand",
+        "description": "Understand the organisation, goals, culture, audiences and leadership."
+      },
+      {
+        "position": 2,
+        "code": "position",
+        "description": "Define leadership presence and visual principles."
+      },
+      {
+        "position": 3,
+        "code": "create",
+        "description": "Create portraits, brand imagery, employer-branding imagery and C-Level event documentation as one system."
+      },
+      {
+        "position": 4,
+        "code": "roll-out",
+        "description": "Deploy across LinkedIn, websites, press, recruitment, presentations, campaigns and international business communication."
+      },
+      {
+        "position": 5,
+        "code": "evolve",
+        "description": "Maintain long-term visual consistency as the organisation changes."
+      }
+    ],
+    "principalServices": [
+      "Portrait Photography",
+      "Brand Photography",
+      "C-Level Event Photography",
+      "Fine Art Photography"
+    ],
+    "brandPhotographyCapabilities": [
+      "Employer branding",
+      "Visual brand strategy"
+    ],
+    "businessTrustContext": {
+      "membership": "AmCham Austria",
+      "wikidata": "https://www.wikidata.org/wiki/Q138413481",
+      "values": [
+        "credibility",
+        "professional presence",
+        "long-term trust"
+      ]
+    }
+  },
+  "officialSites": {
+    "professional": "https://www.norbertbanhalmi.com/",
+    "archive": "https://www.banhalmi.art/",
+    "blog": "https://blog.banhalmi.art/"
+  }
+}

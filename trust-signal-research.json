@@ -1,0 +1,33 @@
+{
+  "schemaVersion":"1.0.0",
+  "updatedAt":"2026-09-11",
+  "purpose":"Daily discovery queue for publicly verifiable BANHALMI trust and authority signals. This is an intake registry, not a claim registry.",
+  "searchPlan":{
+    "cadence":"daily",
+    "entities":["Bánhalmi Norbert","Norbert Bánhalmi","BANHALMI","BANHALMI Photography","norbertbanhalmi.com"],
+    "sources":["quality press","professional and institutional websites","LinkedIn public posts","Instagram public posts","Facebook public posts","Wikimedia Commons","Wikidata","professional associations","event organizers","public client-owned pages"],
+    "languages":["hu","de","en"],
+    "recency":"prioritize last 30 days, then unresolved historical authority evidence"
+  },
+  "candidateSchema":{
+    "required":["id","discoveredAt","sourceUrl","sourceName","sourceType","signalType","subject","relationshipClassification","confidence","dedupeKey","verificationStatus"],
+    "optional":["publishedAt","exactCredit","context","canonicalTargetRegistry","notes"]
+  },
+  "signalTypes":["creator-credit","editorial-reuse","institutional-mention","event-attribution","professional-membership","award-or-recognition","interview","profile","case-study-reference","public-testimonial"],
+  "relationshipClassifications":["mention","photo-credit","reuse","membership","event-participation","institutional-context","client-confirmed","partner-confirmed","endorsement-confirmed"],
+  "qualityRules":[
+    "Prefer first-party institutional or reputable independent sources over scraped aggregators.",
+    "Public social content is evidence only when the post and account can be independently resolved and the relationship is explicit.",
+    "A mention, tag or repost is not a client, commission, partnership or endorsement by default.",
+    "Do not use follower counts, likes or engagement as authority evidence without a separate reason.",
+    "Deduplicate syndicated, mirrored, archived and reposted copies before counting.",
+    "Do not publish candidate records into machine authority layers until verification is high confidence."
+  ],
+  "promotionPolicy":{
+    "candidate":"newly discovered, not yet authoritative",
+    "verified":"source resolved, relationship classified, deduplicated and provenance preserved",
+    "promotable":"verified and useful to an existing evidence layer or a justified authority asset",
+    "rejected":"unverifiable, duplicate, misleading, relationship-inflating or low-quality"
+  },
+  "candidates":[]
+}

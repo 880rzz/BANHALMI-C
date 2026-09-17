@@ -1,0 +1,120 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://blog.banhalmi.art/#blog",
+      "url": "https://blog.banhalmi.art/",
+      "name": "BANHALMI Blog",
+      "description": "Essays, professional reflections and current writing connected to Norbert Bánhalmi's photographic practice.",
+      "inLanguage": ["hu-HU", "en-GB", "de-AT"],
+      "author": {"@id": "https://www.norbertbanhalmi.com/about/"},
+      "creator": {"@id": "https://www.norbertbanhalmi.com/about/"},
+      "publisher": {"@id": "https://www.norbertbanhalmi.com/#organization"},
+      "isPartOf": {"@id": "https://blog.banhalmi.art/#website"},
+      "isRelatedTo": [
+        {"@id": "https://www.norbertbanhalmi.com/#website"},
+        {"@id": "https://www.banhalmi.art/#website"}
+      ],
+      "about": [
+        {"@id": "https://www.norbertbanhalmi.com/about/"},
+        {"@id": "https://www.banhalmi.art/#website"}
+      ],
+      "hasPart": [
+        {"@id": "https://blog.banhalmi.art/en/blog/categories/portrait-portfolio-photography#collection"},
+        {"@id": "https://blog.banhalmi.art/en/blog/categories/portrait-headshot-photography#collection"},
+        {"@id": "https://blog.banhalmi.art/en/blog/categories/fine-art-nude-photography#collection"},
+        {"@id": "https://blog.banhalmi.art/en/blog/categories/vipach-photography-community#collection"}
+      ],
+      "subjectOf": {
+        "@type": "DataDownload",
+        "@id": "https://www.norbertbanhalmi.com/blog-collections.json#service-editorial-collections",
+        "contentUrl": "https://www.norbertbanhalmi.com/blog-collections.json",
+        "encodingFormat": "application/json",
+        "name": "BANHALMI multilingual service-related editorial collection map"
+      },
+      "sameAs": ["https://blog.banhalmi.art/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://blog.banhalmi.art/#website",
+      "url": "https://blog.banhalmi.art/",
+      "name": "BANHALMI Blog",
+      "inLanguage": ["hu-HU", "en-GB", "de-AT"],
+      "publisher": {"@id": "https://www.norbertbanhalmi.com/#organization"},
+      "creator": {"@id": "https://www.norbertbanhalmi.com/about/"},
+      "about": {"@id": "https://www.norbertbanhalmi.com/about/"},
+      "mainEntity": {"@id": "https://blog.banhalmi.art/#blog"},
+      "isRelatedTo": [
+        {"@id": "https://www.norbertbanhalmi.com/#website"},
+        {"@id": "https://www.banhalmi.art/#website"}
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://blog.banhalmi.art/en/blog/categories/portrait-portfolio-photography#collection",
+      "url": "https://blog.banhalmi.art/en/blog/categories/portrait-portfolio-photography",
+      "name": "Portfolio and fashion photography editorial collection",
+      "about": ["portfolio photography", "fashion photography", "brand photography", "artist portfolio"],
+      "isPartOf": {"@id": "https://blog.banhalmi.art/#blog"},
+      "isRelatedTo": [
+        {"@id": "https://www.norbertbanhalmi.com/lifestyle/"},
+        {"@id": "https://www.norbertbanhalmi.com/hu/brand/"},
+        {"@id": "https://www.norbertbanhalmi.com/de-at/brand/"}
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://blog.banhalmi.art/en/blog/categories/portrait-headshot-photography#collection",
+      "url": "https://blog.banhalmi.art/en/blog/categories/portrait-headshot-photography",
+      "name": "Portrait photography editorial collection",
+      "about": ["portrait photography", "executive portrait", "headshot", "CV photography", "dating profile photography"],
+      "isPartOf": {"@id": "https://blog.banhalmi.art/#blog"},
+      "isRelatedTo": [
+        {"@id": "https://www.norbertbanhalmi.com/portrait/"},
+        {"@id": "https://www.norbertbanhalmi.com/hu/portre/"},
+        {"@id": "https://www.norbertbanhalmi.com/de-at/portrait/"}
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://blog.banhalmi.art/en/blog/categories/fine-art-nude-photography#collection",
+      "url": "https://blog.banhalmi.art/en/blog/categories/fine-art-nude-photography",
+      "name": "Artistic nude photography editorial collection",
+      "about": [
+        "artistic nude photography",
+        "fine-art photography",
+        "body",
+        "identity",
+        "author-led photography",
+        {"@id": "https://www.banhalmi.art/exhibitions/ebredes.html"}
+      ],
+      "mentions": [
+        {"@id": "https://www.banhalmi.art/exhibitions/ebredes.html"},
+        {"@id": "https://www.banhalmi.art/exhibitions/touch-wien.html"},
+        {"@id": "https://www.banhalmi.art/exhibitions/themensdream.html"}
+      ],
+      "isPartOf": {"@id": "https://blog.banhalmi.art/#blog"},
+      "isRelatedTo": [
+        {"@id": "https://www.banhalmi.art/exhibitions/ebredes.html"},
+        {"@id": "https://www.banhalmi.art/exhibitions/touch-wien.html"},
+        {"@id": "https://www.banhalmi.art/exhibitions/themensdream.html"},
+        {"@id": "https://www.norbertbanhalmi.com/glamour/"},
+        {"@id": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/"},
+        {"@id": "https://www.norbertbanhalmi.com/de-at/fine-art/"}
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://blog.banhalmi.art/en/blog/categories/vipach-photography-community#collection",
+      "url": "https://blog.banhalmi.art/en/blog/categories/vipach-photography-community",
+      "name": "Professional photography and visual-positioning articles",
+      "about": ["photography", "visual positioning", "brand strategy", "professional methodology"],
+      "isPartOf": {"@id": "https://blog.banhalmi.art/#blog"},
+      "isRelatedTo": [
+        {"@id": "https://www.norbertbanhalmi.com/#website"},
+        {"@id": "https://www.norbertbanhalmi.com/about/"}
+      ]
+    }
+  ]
+}

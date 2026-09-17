@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+const contract=fs.readFileSync('APPLE-DESIGN-CONTRACT.md','utf8');
+const policy=JSON.parse(fs.readFileSync('tools/design-contract-policy.json','utf8'));
+const fail=(ok,msg)=>{if(!ok){console.error(`DESIGN CONTRACT FAIL: ${msg}`);process.exitCode=1;}};
+fail(contract.includes('Same-type cards in the same rendered row use equal outer visual height'),'equal-height card authority missing');
+fail(contract.includes('Footer columns, metadata and legal records may wrap across multiple lines'),'semantic footer wrapping authority missing');
+fail(contract.includes('Atomic identifiers must remain intact'),'atomic identifier protection missing');
+fail(contract.includes('must never be restored by a generator, optimizer, restore, hardening or remediation job'),'rewrite/restore rollback guard missing');
+fail(policy.rules.equalHeightSameTypeCardsDesktop===true,'desktop equal-height policy disabled');
+fail(policy.rules.naturalHeightCardsMobile===true,'mobile natural-height policy disabled');
+fail(policy.rules.footerMayWrapAcrossLines===true,'footer wrapping policy disabled');
+fail(policy.rules.footerAtomicIdentifiersNoWrap===true,'atomic identifier policy disabled');
+fail(policy.rules.legacyFullFooterSingleLineRule===false,'retired single-line footer policy re-enabled');
+if(!process.exitCode) console.log('DESIGN CONTRACT OK');

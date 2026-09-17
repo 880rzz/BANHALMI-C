@@ -1,0 +1,148 @@
+{
+  "documentType": "BANHALMI canonical entity identity contract",
+  "version": "2026-09-10-v5",
+  "dateModified": "2026-09-10T07:00:00+02:00",
+  "canonicalPerson": {
+    "@type": "Person",
+    "@id": "https://www.norbertbanhalmi.com/about/",
+    "name": "Bánhalmi Norbert",
+    "alternateName": [
+      "Norbert Banhalmi",
+      "Norbert Bánhalmi",
+      "Norbert BANHALMI"
+    ],
+    "wikidata": "https://www.wikidata.org/wiki/Q56391118"
+  },
+  "canonicalOrganization": {
+    "@type": "Organization",
+    "@id": "https://www.norbertbanhalmi.com/#organization",
+    "name": "Banhalmi Norbert e.U.",
+    "legalName": "Banhalmi Norbert e.U.",
+    "wikidata": "https://www.wikidata.org/wiki/Q138425941",
+    "brand": "https://www.norbertbanhalmi.com/#brand",
+    "legalBusinessStart": "2023-11-27"
+  },
+  "canonicalBrand": {
+    "@type": "Brand",
+    "@id": "https://www.norbertbanhalmi.com/#brand",
+    "name": "BANHALMI",
+    "owner": "https://www.norbertbanhalmi.com/#organization",
+    "founder": "https://www.norbertbanhalmi.com/about/",
+    "wikidata": null,
+    "alternateName": [
+      "BANHALMI Photography"
+    ],
+    "namingPriority": {
+      "primary": "BANHALMI",
+      "secondary": "BANHALMI Photography"
+    }
+  },
+  "history": {
+    "practiceSince": 1999,
+    "legalCompanyStart": "2023-11-27",
+    "interpretationRule": "The public 'since 1999' statement describes the continuity of Norbert Bánhalmi's photographic practice and BANHALMI professional history. It is not the legal founding date of Banhalmi Norbert e.U."
+  },
+  "locations": [
+    {
+      "@id": "https://www.norbertbanhalmi.com/#vienna-studio",
+      "name": "BANHALMI Vienna Studio",
+      "city": "Vienna",
+      "cityWikidata": "https://www.wikidata.org/wiki/Q1741",
+      "market": "Austria",
+      "locationRole": "physical photography studio and client location",
+      "address": {
+        "streetAddress": "Schwedenplatz 2, Top 8–9",
+        "postalCode": "1010",
+        "district": "Innere Stadt",
+        "addressCountry": "AT"
+      },
+      "googleBusinessProfile": "https://maps.app.goo.gl/QsMeDA8Bgq5yKxAo8",
+      "preferredLandingPage": "https://www.norbertbanhalmi.com/de-at/",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Vienna",
+          "sameAs": "https://www.wikidata.org/wiki/Q1741"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Vienna and surrounding area",
+          "addressCountry": "AT"
+        }
+      ],
+      "isStudio": true,
+      "clientAccess": "Photography and meetings by arrangement."
+    },
+    {
+      "@id": "https://www.norbertbanhalmi.com/#vienna-gersthofer-office",
+      "name": "BANHALMI Vienna Office — Gersthofer Straße",
+      "city": "Vienna",
+      "cityWikidata": "https://www.wikidata.org/wiki/Q1741",
+      "market": "Austria",
+      "locationRole": "active office and client meeting location; not a photography studio",
+      "address": {
+        "streetAddress": "Gersthofer Straße 150–154/6/2",
+        "postalCode": "1180",
+        "district": "Währing",
+        "addressCountry": "AT"
+      },
+      "googleBusinessProfile": "https://g.page/r/CdO4Kej3jIkfEBM",
+      "organizationWikidata": "https://www.wikidata.org/wiki/Q138425941",
+      "wkoSource": "https://firmen.wko.at/norbert-banhalmi-visuelle-strategische-partnerschaft-f%C3%BCr-f%C3%BChrungskr%C3%A4fte/wien/?firmaid=2ac00da5-198a-4840-9678-3b5719ce154e",
+      "preferredLandingPage": "https://www.norbertbanhalmi.com/de-at/",
+      "isStudio": false,
+      "clientAccess": "Clients are received by arrangement.",
+      "interpretationRule": "This is a real active business location belonging to Banhalmi Norbert e.U.; it must be represented as an office/client meeting location, not as a studio or merely as areaServed."
+    },
+    {
+      "@id": "https://www.norbertbanhalmi.com/#budapest-studio",
+      "name": "BANHALMI Budapest Studio",
+      "city": "Budapest",
+      "cityWikidata": "https://www.wikidata.org/wiki/Q1781",
+      "market": "Hungary",
+      "locationRole": "physical photography studio and client location",
+      "address": {
+        "streetAddress": "Lágymányosi u. 15",
+        "postalCode": "1111",
+        "district": "Budapest XI. kerület",
+        "addressCountry": "HU"
+      },
+      "googleBusinessProfile": "https://maps.app.goo.gl/nEvcjbCA1wmgQtXJA",
+      "preferredLandingPage": "https://www.norbertbanhalmi.com/hu/",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Budapest",
+          "sameAs": "https://www.wikidata.org/wiki/Q1781"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Budapest and surrounding area",
+          "addressCountry": "HU"
+        }
+      ],
+      "isStudio": true,
+      "clientAccess": "Photography and meetings by arrangement."
+    }
+  ],
+  "serviceGeography": {
+    "primaryLocalCoverage": [
+      "Vienna and surrounding area",
+      "Budapest and surrounding area"
+    ],
+    "worldwideAvailability": true,
+    "rule": "Agreed projects may be undertaken worldwide by travel. Worldwide project locations do not become permanent studios or offices."
+  },
+  "rules": [
+    "Q56391118 identifies the Person only.",
+    "Q138425941 identifies Banhalmi Norbert e.U. only and may be used as organization evidence for the documented Gersthofer office location.",
+    "BANHALMI is a Brand and currently has no dedicated Wikidata item.",
+    "Do not use Q56391118 or Q138425941 as Brand sameAs values.",
+    "Do not interpret 'since 1999' as the legal founding date of Banhalmi Norbert e.U.; it refers to the photographic practice and BANHALMI professional history.",
+    "Google Business Profile URLs belong to their respective local location entity and must not identify the Person.",
+    "Schwedenplatz 2, 1010 Wien is the Vienna studio; Gersthofer Straße 150–154/6/2, 1180 Wien is a separate active office/client meeting location and is not a studio.",
+    "Service areas are areaServed signals only and must not be confused with the explicitly documented studio and office entities.",
+    "banhalmi.art is the artistic archive and Person/oeuvre evidence layer; norbertbanhalmi.com is the professional service and local-business layer.",
+    "BANHALMI Photography is the secondary/commercial photography brand name of BANHALMI; it is not a separate company, Organization or legal entity."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "schemaVersion":"1.3.0",
+  "updatedAt":"2026-09-12",
+  "chiefOrchestrator":"BANHALMI Ecosystem Steward",
+  "rules":{
+    "singleOrchestrationAuthority":true,
+    "specializedAuditsMayMutatePolicy":false,
+    "conflictResolution":"resolve against ecosystem-policy.json and canonical source-of-truth",
+    "thresholdWeakeningForbidden":true
+  },
+  "audits":[
+    {"id":"search-console-readiness","scope":"BANHALMI source and production","type":"source-contract","authority":"diagnostic","writeCapability":"none","requiredForRelease":true},
+    {"id":"workflow-safety","scope":"GitHub Actions","type":"safety","authority":"blocking","writeCapability":"none","requiredForRelease":true},
+    {"id":"browser-qa","scope":"rendered production-equivalent pages","type":"browser","authority":"blocking","writeCapability":"none","requiredForRelease":true},
+    {"id":"lighthouse-mobile","scope":"mobile production-equivalent and live","type":"performance-accessibility-seo","authority":"blocking","writeCapability":"none","requiredForRelease":true},
+    {"id":"lighthouse-desktop","scope":"desktop production-equivalent and live","type":"performance-accessibility-seo","authority":"blocking","writeCapability":"none","requiredForRelease":true},
+    {"id":"live-llm-entity-integrity","scope":"public machine-readable endpoints","type":"live-integrity","authority":"monitor","writeCapability":"none","requiredForRelease":false},
+    {"id":"external-photography-evidence","scope":"external/public photography evidence","type":"evidence","authority":"diagnostic","writeCapability":"none","requiredForRelease":true},
+    {"id":"press-institutional-evidence","scope":"press and institutional evidence","type":"evidence","authority":"diagnostic","writeCapability":"none","requiredForRelease":true},
+    {"id":"media-usage-evidence","scope":"deduplicated editorial/media reuse","type":"evidence","authority":"diagnostic","writeCapability":"none","requiredForRelease":true},
+    {"id":"daily-public-trust-research","scope":"public web, press and public social posts","type":"discovery","authority":"candidate-only","writeCapability":"PR-only-after-verification","requiredForRelease":false},
+    {"id":"executive-risk-reversal","scope":"qualified executive portrait lead conversion and Proof-of-Concept guardrails","type":"conversion-safety","authority":"blocking","writeCapability":"none","requiredForRelease":true,"source":"executive-risk-reversal.json","rule":"Risk reversal must remain selective, privacy-safe, evidence-safe, commercially bounded and must never become an automatic free-service entitlement."},
+    {"id":"executive-positioning-model","scope":"executive brand photography and visual positioning across person, seniority, generational context, role, professional field, stakeholder audience, channels and market culture","type":"positioning-integrity","authority":"blocking","writeCapability":"none","requiredForRelease":true,"source":"executive-positioning-model.json","rule":"Executive visual positioning must be individualized and context-aware. Generation may inform communication context but must never become a demographic stereotype or a standalone styling rule."},
+    {"id":"official-event-gallery","scope":"BANHALMI Photography × VIPACH Flickr profile and downstream relationship pointers","type":"external-gallery-authority","authority":"blocking","writeCapability":"none","requiredForRelease":true,"source":"official-event-gallery.json","rule":"The Flickr profile is the official shared event and community photography gallery of BANHALMI Photography and VIPACH. It is an external evidence surface, not a Layer-1 canonical property, and must preserve team-level authorship and relationship boundaries."}
+  ],
+  "requiredMutationFlow":["current-main-read","live-read","policy-read","proposed-diff","protected-regression-check","branch","PR","CI","merge","deploy","exact-live","reverse-audit"],
+  "dailyBalanceReview":{
+    "compare":["professional-commercial","artistic","editorial-knowledge","technical","trust-evidence","conversion"],
+    "flagRelativeImbalance":true,
+    "rule":"A technically healthy layer may still be flagged when it materially lags the other canonical layers in authority, evidence or discoverability."
+  }
+}

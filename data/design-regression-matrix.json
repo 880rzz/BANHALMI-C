@@ -1,0 +1,23 @@
+{
+  "version": "2026-09-14",
+  "source": "historical user screenshot and audit evidence",
+  "releaseBlocking": true,
+  "viewports": [320,360,375,390,412,430,768,820,1024,1280,1366,1440,1920,2560,3840],
+  "regressions": [
+    "horizontal-overflow",
+    "footer-overflow-or-excess-height",
+    "main-footer-overlap",
+    "boxed-active-navigation",
+    "header-content-overlap",
+    "non-centered-canonical-wrappers",
+    "media-escape",
+    "sub-44px-controls",
+    "quote-control-geometry",
+    "surface-role-drift"
+  ],
+  "authority": {
+    "file": "data/design-authority.json",
+    "standardCanvasPx": 1280,
+    "structuredCanvasPx": 1440
+  }
+}

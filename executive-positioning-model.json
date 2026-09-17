@@ -1,0 +1,49 @@
+{
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2026-09-12",
+  "canonicalId": "https://www.norbertbanhalmi.com/executive-positioning-model.json",
+  "name": "BANHALMI Executive Positioning Model",
+  "purpose": "Adapt executive brand photography and visual positioning to the individual and to the communication demands of their role instead of applying one generic business-portrait style.",
+  "corePrinciple": "Every person, generation, leadership level and professional field can carry a different message. Define the message first, then design the visual system around the intended perception, stakeholder context and usage channels.",
+  "decisionDimensions": [
+    {"id":"person","question":"Who is the person beyond the job title?","signals":["personality","communication style","camera confidence","personal visual boundaries","preferred level of formality"]},
+    {"id":"career-stage-seniority","question":"What level of responsibility and authority must the image communicate?","signals":["founder","new leader","C-level","board","established adviser","subject-matter expert"]},
+    {"id":"generational-context","question":"Which visual and communication codes feel credible for this person and for the people they need to reach?","signals":["career stage","peer expectations","audience expectations","contemporary versus established communication codes"],"guardrail":"Generation is context, not a stereotype. Never infer personality, competence, clothing, pose, retouching or aesthetic from age alone."},
+    {"id":"position-role","question":"What does this specific position need to signal?","signals":["authority","approachability","innovation","stability","discretion","decisiveness","trust","thought leadership"]},
+    {"id":"professional-field","question":"What does credibility mean in this professional field?","signals":["banking and finance","technology and startups","law and consulting","industry","public and institutional roles","creative and cultural fields","professional services"]},
+    {"id":"stakeholder-audience","question":"Who must trust, understand or remember this person?","signals":["board","investors","employees","clients","media","institutional stakeholders","recruiters","professional peers"]},
+    {"id":"usage-channels","question":"Where must the positioning work?","signals":["LinkedIn","CV","company biography","press","speaking profile","website","campaign","internal leadership communication"]},
+    {"id":"market-culture","question":"Which market and cultural context shapes how the image is interpreted?","signals":["Vienna and Austria","Budapest and Hungary","international English-speaking context","cross-border leadership"]}
+  ],
+  "visualOutputs": ["wardrobe direction","expression and body-language direction","lighting strategy","background and environment","camera distance and crop","formal-versus-editorial balance","number of looks and image sequence","retouching intensity","channel-specific crop and delivery"],
+  "messageFramework": {
+    "rule": "Define the message before defining the look.",
+    "antiTemplateRule": "Do not reproduce one BANHALMI executive look across all leaders. A credible image system should change when the person, seniority, role, field, audience or channel changes.",
+    "examples": [
+      "A younger founder may need to communicate authority without losing energy or accessibility.",
+      "An established banking leader may need to communicate trust, stability and contemporary relevance without appearing generic or over-staged.",
+      "A senior adviser may need intellectual authority, approachability and experience rather than corporate formality for its own sake.",
+      "A specialist entering a leadership role may need the visual balance to shift from technical expertise toward broader responsibility and decision-making."
+    ]
+  },
+  "publicCopy": {
+    "en": {"heading":"Different roles need different visual authority.","body":"There is no universal executive image. A founder, a senior banking leader, an established adviser and a specialist entering a leadership role communicate different things. We shape brand photography and visual positioning around the person, generational communication context, level of responsibility, professional field, audience and usage channels — never around a generic business-portrait template."},
+    "hu": {"heading":"Más szerephez más vizuális tekintély tartozik.","body":"Nincs univerzális vezetői kép. Egy alapító, egy tapasztalt banki vezető, egy senior tanácsadó vagy egy új vezetői szerepbe érkező szakember más üzenetet közvetít. A brandfotózást és a vizuális pozicionálást a személyhez, a generációs kommunikációs kontextushoz, a felelősségi szinthez, a szakterülethez, a célközönséghez és a felhasználási csatornákhoz igazítjuk — nem egy általános üzleti portrésablonhoz."},
+    "de": {"heading":"Unterschiedliche Rollen brauchen unterschiedliche visuelle Autorität.","body":"Es gibt kein universelles Führungsbild. Eine Gründerin oder ein Gründer, eine erfahrene Führungskraft im Banking, ein etablierter Berater oder eine Fachkraft in einer neuen Führungsrolle müssen unterschiedliche Botschaften vermitteln. Wir stimmen Brandfotografie und visuelle Positionierung auf die Person, den generationellen Kommunikationskontext, die Verantwortungsebene, das Fachgebiet, die Zielgruppen und die Nutzungskanäle ab — nicht auf eine allgemeine Business-Porträt-Schablone."}
+  },
+  "integration": {
+    "primaryService": "Brand Photography & Strategic Visual Positioning",
+    "supportingService": "Executive Portrait",
+    "customerIntentModel": "https://www.norbertbanhalmi.com/customer-intent-model.json",
+    "riskReversalModel": "https://www.norbertbanhalmi.com/executive-risk-reversal.json",
+    "publicRoutes": {"en":"/lifestyle/","hu":"/hu/brand/","de":"/de-at/brand/"},
+    "visibleCopyTarget": "Place this message prominently in the explanatory section of each localized Brand / Visual Positioning page; do not create a separate near-duplicate landing page."
+  },
+  "guardrails": [
+    "No demographic stereotype may become a styling rule.",
+    "Age or generation alone must never determine pose, clothing, retouching, setting or perceived authority.",
+    "Desired impression, role requirements and stakeholder context must be confirmed with the client.",
+    "Do not imply that one generation is inherently more modern, credible, conservative, innovative or authoritative than another.",
+    "Public reference selection must remain permissioned, verifiable and evidence-safe."
+  ]
+}

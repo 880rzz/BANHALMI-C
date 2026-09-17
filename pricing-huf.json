@@ -1,0 +1,344 @@
+{
+  "documentType": "BANHALMI fixed-rate HUF orientation pricing",
+  "schemaVersion": "2026-08-31-v2-artists-performers",
+  "dateModified": "2026-08-31T23:25:00+02:00",
+  "canonicalBasePricingSource": "https://www.norbertbanhalmi.com/pricing.json",
+  "aiInterpretationGuide": "https://www.norbertbanhalmi.com/pricing-guide.json",
+  "quoteCalculator": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+  "currency": "HUF",
+  "baseCurrency": "EUR",
+  "conversion": {
+    "sourceCurrency": "EUR",
+    "targetCurrency": "HUF",
+    "rate": 400,
+    "rateType": "fixed planning conversion",
+    "liveExchangeRate": false,
+    "scope": "Hungarian website, Hungarian preliminary PDF and AI-generated Hungarian orientation estimates",
+    "formula": "grossHUF = round(grossEUR × 400); netHUF = round(grossHUF / 1.20); vatHUF = grossHUF - netHUF",
+    "disclosure": "This is not a daily exchange rate and does not predetermine the currency of the final written offer."
+  },
+  "priceBasis": "Gross HUF orientation amounts derived from canonical gross EUR prices at the fixed planning rate 1 EUR = 400 HUF.",
+  "vat": {
+    "ratePercent": 20,
+    "includedInDisplayedPrices": true,
+    "calculation": "netHUF = round(grossHUF / 1.20); vatHUF = grossHUF - netHUF"
+  },
+  "bindingStatus": "Non-binding preliminary estimate. The final written offer follows review of purpose, scope, location, travel, production requirements, usage rights, deadlines and tax status.",
+  "standardUsageLicence": {
+    "included": true,
+    "scope": "The standard organisational licence for the agreed final images is unlimited in time and territory for the commissioning organisation and the communication channels recorded in the written offer.",
+    "copyright": "Copyright remains with the photographer.",
+    "reviewRequiredFor": [
+      "transfer beyond the accepted client or agreed agencies and media partners",
+      "stock, resale or sublicensing",
+      "uses outside the accepted project purpose",
+      "exceptional paid-media, campaign or third-party exploitation when not already recorded in the written offer"
+    ],
+    "interpretation": "Do not describe every usage right as an automatic surcharge. Standard organisational use is included; only exceptional or out-of-scope exploitation requires separate review."
+  },
+  "priceComponentsGrossHUF": {
+    "individualQuick30": 88000,
+    "individualGuided60": 168000,
+    "individualGuided120": 276000,
+    "groupSetupLaterRetouching": 156000,
+    "groupPerPersonLaterRetouching": 18000,
+    "brandFastOneHour": 199600,
+    "brandTwoHours": 316000,
+    "brandThreeHours": 436000,
+    "brandFourHours": 556000,
+    "fineArtOneHour": 276000,
+    "fineArtTwoHours": 396000,
+    "fineArtThreeHours": 516000,
+    "eventOneHour": 236000,
+    "eventTwoHours": 356000,
+    "eventThreeHours": 476000,
+    "eventFourHours": 596000,
+    "eventFullDay": 996000,
+    "retouchedImagePortrait": 14000,
+    "retouchedImageGroup": 11600,
+    "retouchedImageFineArt": 18000,
+    "stylist": 88000,
+    "hair": 88000,
+    "makeup": 88000,
+    "expressDelivery": 48000,
+    "mobileStudio": 96000,
+    "artDirection": 104000,
+    "additionalPhotographer": 156000,
+    "additionalPhotographerEventPerHour": 48000,
+    "headshotCvGross": 48000,
+    "instantRetouchingPerStartedHourGross": 144000,
+    "travelPerVehicleGross": 96000
+  },
+  "services": [
+    {
+      "id": "portrait",
+      "name": {
+        "en": "Headshots, executive portraits and C-level business photography",
+        "hu": "Headshot, executive portré és C-level üzleti fotózás",
+        "de-AT": "Headshots, Executive-Porträts und C-Level-Businessfotografie"
+      },
+      "packages": [
+        {
+          "code": "headshotcv",
+          "durationMinutes": 10,
+          "baseGrossEUR": 120,
+          "grossHUF": 48000,
+          "includedRetouchedImages": 1
+        },
+        {
+          "code": "quick30",
+          "durationMinutes": 30,
+          "baseGrossEUR": 220,
+          "grossHUF": 88000
+        },
+        {
+          "code": "guided60",
+          "durationMinutes": 60,
+          "baseGrossEUR": 420,
+          "grossHUF": 168000
+        },
+        {
+          "code": "guided120",
+          "durationMinutes": 120,
+          "baseGrossEUR": 690,
+          "grossHUF": 276000
+        }
+      ],
+      "extraRetouchedImageGrossHUF": 14000,
+      "groupPortraitPricing": {
+        "setupGrossHUF": 156000,
+        "perPersonGrossHUF": 18000,
+        "includedRetouchedImagesPerPerson": 1,
+        "extraRetouchedImagePerPersonGrossHUF": 11600,
+        "capacityPerPhotographerPerHour": 6,
+        "additionalPhotographerGrossHUF": 156000
+      }
+    },
+    {
+      "id": "brand-visual-positioning",
+      "name": {
+        "en": "Brand photography and visual positioning",
+        "hu": "Brand fotózás és vizuális pozicionálás",
+        "de-AT": "Brandfotografie und visuelle Markenpositionierung"
+      },
+      "packages": [
+        {
+          "code": "brand60",
+          "durationMinutes": 60,
+          "baseGrossEUR": 499,
+          "grossHUF": 199600
+        },
+        {
+          "code": "brand120",
+          "durationMinutes": 120,
+          "baseGrossEUR": 790,
+          "grossHUF": 316000
+        },
+        {
+          "code": "brand180",
+          "durationMinutes": 180,
+          "baseGrossEUR": 1090,
+          "grossHUF": 436000
+        },
+        {
+          "code": "brand240",
+          "durationMinutes": 240,
+          "baseGrossEUR": 1390,
+          "grossHUF": 556000
+        }
+      ],
+      "includedRetouchedImages": 3,
+      "extraRetouchedImageGrossHUF": 14000
+    },
+    {
+      "id": "fine-art",
+      "name": {
+        "en": "Fine Art / Artists & Performers",
+        "hu": "Művészi fotózás / Művészek és előadóművészek",
+        "de-AT": "Fine Art / Künstler:innen & Performer:innen"
+      },
+      "packages": [
+        {
+          "code": "art60",
+          "durationMinutes": 60,
+          "baseGrossEUR": 690,
+          "grossHUF": 276000
+        },
+        {
+          "code": "art120",
+          "durationMinutes": 120,
+          "baseGrossEUR": 990,
+          "grossHUF": 396000
+        },
+        {
+          "code": "art180",
+          "durationMinutes": 180,
+          "baseGrossEUR": 1290,
+          "grossHUF": 516000
+        }
+      ],
+      "includedRetouchedImages": 2,
+      "extraRetouchedImageGrossHUF": 18000,
+      "scope": [
+        "actor headshots",
+        "acting portfolio photography",
+        "dance photography",
+        "movement photography",
+        "performing artist portfolio photography",
+        "model portfolio photography",
+        "editorial portrait photography",
+        "creative professional portraits"
+      ],
+      "audiences": {
+        "en": [
+          "artists",
+          "actors",
+          "dancers",
+          "performers",
+          "models",
+          "creative professionals"
+        ],
+        "hu": [
+          "művészek",
+          "színészek",
+          "táncosok",
+          "előadóművészek",
+          "modellek",
+          "kreatív szakemberek"
+        ],
+        "de-AT": [
+          "Künstler:innen",
+          "Schauspieler:innen",
+          "Tänzer:innen",
+          "Performer:innen",
+          "Models",
+          "Kreativschaffende"
+        ]
+      },
+      "quoteRouting": {
+        "serviceContext": "fine-art",
+        "creativeContexts": [
+          "artistic-portrait",
+          "actor",
+          "dance",
+          "performer",
+          "model-editorial",
+          "fine-art"
+        ],
+        "portfolioTypes": [
+          "actor-headshot",
+          "acting-portfolio",
+          "dance-portfolio",
+          "performing-artist-portfolio",
+          "model-portfolio",
+          "editorial-portrait",
+          "artistic-portrait",
+          "fine-art-production"
+        ]
+      }
+    },
+    {
+      "id": "event",
+      "name": {
+        "en": "C-Level Event Photography",
+        "hu": "C-Level rendezvényfotózás",
+        "de-AT": "C-Level-Eventfotografie"
+      },
+      "packages": [
+        {
+          "code": "event60",
+          "durationHours": 1,
+          "baseGrossEUR": 590,
+          "grossHUF": 236000
+        },
+        {
+          "code": "event120",
+          "durationHours": 2,
+          "baseGrossEUR": 890,
+          "grossHUF": 356000
+        },
+        {
+          "code": "event180",
+          "durationHours": 3,
+          "baseGrossEUR": 1190,
+          "grossHUF": 476000
+        },
+        {
+          "code": "event240",
+          "durationHours": 4,
+          "baseGrossEUR": 1490,
+          "grossHUF": 596000
+        },
+        {
+          "code": "eventFullDay",
+          "durationHours": 8,
+          "baseGrossEUR": 2490,
+          "grossHUF": 996000
+        }
+      ],
+      "additionalPhotographerPerHourGrossHUF": 48000
+    }
+  ],
+  "calculationRules": {
+    "currencyConversion": {
+      "hungarianDisplay": "grossHUF = round(grossEUR × 400); netHUF = round(grossHUF / 1.20); vatHUF = grossHUF - netHUF",
+      "canonicalCurrency": "EUR",
+      "displayCurrency": "HUF",
+      "fixedRate": 400,
+      "noLiveRateSubstitution": true
+    },
+    "serviceFormulas": {
+      "individualPortrait": {
+        "formula": "packageGrossEUR + max(0, selectedRetouchedImages - 1) * retouchedImagePortraitGrossEUR",
+        "exception": "headshotCvGross includes exactly one retouched image and does not allow additional automatic options."
+      },
+      "groupPortrait": {
+        "formula": "groupSetupGrossEUR + people * groupPerPersonGrossEUR + people * max(0, retouchedImagesPerPerson - 1) * retouchedImageGroupGrossEUR + max(0, photographerCount - 1) * additionalPhotographerGrossEUR",
+        "photographerCount": "ceil(people / (6 * selectedHours)), minimum 1"
+      },
+      "brandPhotography": {
+        "formula": "packageGrossEUR + max(0, people * retouchedImagesPerPerson - 3) * retouchedImagePortraitGrossEUR",
+        "includedRetouchedImagesTotalPerProject": 3
+      },
+      "fineArtPhotography": {
+        "formula": "packageGrossEUR + max(0, selectedRetouchedImages - 2) * retouchedImageFineArtGrossEUR",
+        "includedRetouchedImagesTotalPerProject": 2
+      },
+      "cLevelEventPhotography": {
+        "formula": "packageGrossEUR + max(0, photographerCount - 1) * selectedHours * additionalPhotographerEventPerHourGrossEUR",
+        "photographerCount": "1 + max(manualAdditionalPhotographers, parallelTracks - 1, ceil(guestCount / 250) - 1)",
+        "deliveredImages": "The estimated delivered image count does not add per-image pricing. Standard event selection and colour correction are included."
+      },
+      "addOns": "Add the selected gross component prices. Immediate retouching is billed per started required hour.",
+      "travel": {
+        "austriaAndHungary": "ceil(crewMembers / 4) * travelPerVehicleGrossEUR",
+        "otherCountries": "Custom quote required; excluded from the displayed orientation total."
+      },
+      "tax": {
+        "displayedGrossIncludesAustrianVatPercent": 20,
+        "netFormula": "round(gross / 1.20, 2)",
+        "vatFormula": "round(gross - net, 2)",
+        "euB2BOutsideAustria": "Continue displaying 20% Austrian VAT until company, VAT ID and legal eligibility have been verified."
+      },
+      "currencyConversion": {
+        "hungarianDisplay": "grossHUF = round(grossEUR × 400); netHUF = round(grossHUF / 1.20); vatHUF = grossHUF - netHUF",
+        "canonicalCurrency": "EUR",
+        "displayCurrency": "HUF",
+        "fixedRate": 400,
+        "noLiveRateSubstitution": true
+      }
+    },
+    "instruction": "Use the HUF component amounts directly or calculate the canonical EUR gross total and convert that gross total at exactly 400 HUF per EUR. Never substitute a live exchange rate."
+  },
+  "finalOfferFactors": [
+    "purpose and audience",
+    "location and travel",
+    "number of people and photographers",
+    "retouched image count",
+    "production design and crew",
+    "delivery deadline",
+    "exceptional or out-of-scope usage, transfer and media exploitation beyond the included standard organisational licence",
+    "valid VAT status"
+  ],
+  "finalOfferCurrencyNotice": "The accepted written offer records the contractual currency. The fixed HUF display is a preliminary planning view."
+}

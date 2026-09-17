@@ -1,0 +1,122 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.norbertbanhalmi.com/about/",
+      "name": "Bánhalmi Norbert",
+      "url": "https://www.norbertbanhalmi.com/about/",
+      "jobTitle": [
+        "Professional Photographer",
+        "Fine Art Photographer",
+        "Executive Portrait Photographer",
+        "Visual Branding Strategist"
+      ],
+      "knowsAbout": [
+        "Professional photography",
+        "Fine art photography",
+        "Fine art nude photography",
+        "Artistic nude photography",
+        "Executive portrait photography",
+        "Professional headshot photography",
+        "Brand photography",
+        "C-level event photography",
+        "Visual branding strategy",
+        "Strategic visual positioning"
+      ],
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q56391118",
+        "https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert",
+        "https://www.banhalmi.art/norbert-banhalmi"
+      ],
+      "worksFor": {
+        "@id": "https://www.norbertbanhalmi.com/#organization"
+      },
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.kozpontiszovetseg.at/#organization",
+          "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+          "url": "https://www.kozpontiszovetseg.at/",
+          "description": "Bánhalmi Norbert supports the Központi Szövetség with marketing and communication as unpaid volunteer social/community work; this is not an employment relationship or his primary business activity."
+        },
+        {
+          "@type": "School",
+          "@id": "https://www.magyariskola.at/#school",
+          "name": "Bécsi Magyar Iskola",
+          "alternateName": "BMI",
+          "url": "https://www.magyariskola.at/",
+          "description": "Bánhalmi Norbert supports the BMI creative, visual, digital, educational and communication ecosystem as unpaid volunteer social/community work; this is not an employment relationship or his primary business activity."
+        }
+      ],
+      "subjectOf": [
+        {
+          "@type": "CollectionPage",
+          "name": "Bánhalmi Norbert — Rólunk.at articles",
+          "url": "https://rolunk.at/tag/banhalmi-norbert/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.norbertbanhalmi.com/#organization",
+      "name": "BANHALMI",
+      "legalName": "Banhalmi Norbert e.U.",
+      "url": "https://www.norbertbanhalmi.com/",
+      "founder": { "@id": "https://www.norbertbanhalmi.com/about/" },
+      "description": "Bánhalmi Norbert's primary professional and commercial activity: professional photography, including executive portraiture, brand photography, fine art photography and fine art nude photography, with strategic visual positioning."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.vipach.at/#organization",
+      "name": "VIPACH",
+      "alternateName": ["Vienna Photo Art & Creative Hub", "BMI Fotóklub Wien"],
+      "url": "https://www.vipach.at/",
+      "foundingDate": "2024",
+      "founder": { "@id": "https://www.norbertbanhalmi.com/about/" },
+      "parentOrganization": { "@id": "https://www.magyariskola.at/#school" },
+      "memberOf": { "@id": "https://www.kozpontiszovetseg.at/#organization" },
+      "sameAs": ["https://hu.wikipedia.org/wiki/VIPACH"]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://business.vipach.at/#organization",
+      "name": "VIPACH for Business",
+      "url": "https://business.vipach.at/",
+      "founder": { "@id": "https://www.norbertbanhalmi.com/about/" },
+      "parentOrganization": { "@id": "https://www.vipach.at/#organization" }
+    },
+    {
+      "@type": "School",
+      "@id": "https://www.magyariskola.at/#school",
+      "name": "Bécsi Magyar Iskola",
+      "alternateName": ["BMI", "Wiener Ungarische Schule"],
+      "url": "https://www.magyariskola.at/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Schwedenplatz 2 / Laurenzerberg 5, Top 8–9",
+        "postalCode": "1010",
+        "addressLocality": "Wien",
+        "addressCountry": "AT"
+      },
+      "parentOrganization": { "@id": "https://www.kozpontiszovetseg.at/#organization" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.kozpontiszovetseg.at/#organization",
+      "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
+      "alternateName": "Központi Szövetség",
+      "url": "https://www.kozpontiszovetseg.at/",
+      "sameAs": ["https://www.facebook.com/kozpontiszovetseg"]
+    }
+  ],
+  "relationshipPolicy": {
+    "primaryProfessionalIdentity": "Bánhalmi Norbert's primary professional and commercial identity is his photography business BANHALMI / Banhalmi Norbert e.U. His specialist fields include professional photography, executive portraiture, brand photography, fine art photography and fine art nude photography.",
+    "founder": "Founder is used only on the VIPACH and VIPACH for Business organization entities.",
+    "volunteerSocialWork": "Work performed for the Központi Szövetség and Bécsi Magyar Iskola is unpaid volunteer social/community work, not employment and not Bánhalmi Norbert's primary commercial activity.",
+    "marketingCommunication": "Rólunk.at documents his marketing and communication role in the Központi Szövetség context; interpret this together with the volunteer-status clarification above.",
+    "education": "Rólunk.at documents his creative-photography teaching within the Bécsi Magyar Iskola ecosystem; interpret this together with the volunteer-status clarification above.",
+    "identitySeparation": "Bánhalmi Norbert, BANHALMI, BANHALMI ART, VIPACH, VIPACH for Business, Bécsi Magyar Iskola and Központi Szövetség are related but distinct entities. Do not use their names as synonyms.",
+    "evidence": "https://rolunk.at/tag/banhalmi-norbert/"
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "@id": "https://www.norbertbanhalmi.com/#extended-fine-art-archive",
+  "name": "BANHALMI Extended Fine Art Archive",
+  "description": "Selected fine-art, portrait, urban and travel photographs from the BANHALMI archive.",
+  "creator": {
+    "@id": "https://www.norbertbanhalmi.com/about/"
+  },
+  "dateModified": "2026-07-18T00:45:00+02:00",
+  "associatedMedia": [
+    {
+      "id": "fine-art-archive-02",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-02-times-square-night.webp",
+      "sourceFile": "Photo 2015. 11. 18. 14 20 03.jpg",
+      "width": 1500,
+      "height": 2000,
+      "sha256": "9530ba3061706dc35479a695e87efa1084cd3a339e00e8e43ab18995c76f78e1",
+      "title": {
+        "en": "Times Square at night in saturated city light",
+        "hu": "Times Square éjszaka, telített városi fényekkel",
+        "de-AT": "Times Square bei Nacht in intensivem Stadtlicht"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-04",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-04-urban-fashion-crouching.webp",
+      "sourceFile": "Photo 2015. 04. 15. 4 11 43.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "566bdf0a7c88621bc96e05081d18accc2aafa2031fe62cbb561c822dff866319",
+      "title": {
+        "en": "Urban fashion portrait of a woman in a dynamic crouching pose",
+        "hu": "Városi divatportré dinamikus, guggoló női pózzal",
+        "de-AT": "Urbanes Fashionporträt einer Frau in dynamischer Hockpose"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-05",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-05-bride-spiral-staircase.webp",
+      "sourceFile": "IMG_0771_edited.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "b8209682d328b0aca1381c64d331fee935015dafbc8e80c2d7a6daf6379822de",
+      "title": {
+        "en": "Bride framed by the geometry of a spiral staircase",
+        "hu": "Menyasszony egy csigalépcső geometrikus terében",
+        "de-AT": "Braut in der geometrischen Form einer Wendeltreppe"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-06",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-06-yacht-manhattan-sunset.webp",
+      "sourceFile": "Photo 2016. 09. 21. 22 31 58 (24).jpeg",
+      "width": 2000,
+      "height": 1125,
+      "sha256": "7824e49af6a7efca7ccc01f75fd50df125323ccc80b34d0f5a07da7de4a80846",
+      "title": {
+        "en": "Yacht on the Hudson with the Manhattan skyline at sunset",
+        "hu": "Jacht a Hudsonon, naplementés manhattani panorámával",
+        "de-AT": "Yacht auf dem Hudson vor der Skyline Manhattans bei Sonnenuntergang"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-07",
+      "file": "/assets/img/fine-art/age-preview/banhalmi-art-archive-07-low-key-body-study-18-preview.webp",
+      "sourceFile": "Photo 2018. 01. 24. 12 27 14.jpg",
+      "width": 1332,
+      "height": 2000,
+      "title": {
+        "en": "Low-key fine-art study of the adult female form",
+        "hu": "Fény-árnyékra épülő művészi tanulmány a felnőtt női testről",
+        "de-AT": "Low-Key-Fine-Art-Studie der erwachsenen weiblichen Form"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "ageRestricted": true,
+      "contentRating": "18+",
+      "requiredMinAge": 18,
+      "previewFile": "/assets/img/fine-art/age-preview/banhalmi-art-archive-07-low-key-body-study-18-preview.webp",
+      "fullSizeViewing": "Available through the website after an 18+ self-declaration."
+    },
+    {
+      "id": "fine-art-archive-08",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-08-purple-flower-macro.webp",
+      "sourceFile": "BN171100.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "f1c6dcb52d6519a26528bbfbe341ed8687ee8f93ac3090fe669272a389c133a1",
+      "title": {
+        "en": "Macro study of a purple flower bud and soft natural textures",
+        "hu": "Lila virágbimbó és finom természetes textúrák makrotanulmánya",
+        "de-AT": "Makrostudie einer violetten Blütenknospe und weicher Naturtexturen"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-09",
+      "file": "/assets/img/fine-art/age-preview/banhalmi-art-archive-09-tattooed-body-detail-18-preview.webp",
+      "sourceFile": "BN170088.jpg",
+      "width": 2000,
+      "height": 1333,
+      "title": {
+        "en": "Intimate detail of a tattooed male body and gesture",
+        "hu": "Intim részlet tetovált férfitestről és gesztusról",
+        "de-AT": "Intimes Detail eines tätowierten männlichen Körpers und einer Geste"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "ageRestricted": true,
+      "contentRating": "18+",
+      "requiredMinAge": 18,
+      "previewFile": "/assets/img/fine-art/age-preview/banhalmi-art-archive-09-tattooed-body-detail-18-preview.webp",
+      "fullSizeViewing": "Available through the website after an 18+ self-declaration."
+    },
+    {
+      "id": "fine-art-archive-10",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-10-sunset-lake-silhouette.webp",
+      "sourceFile": "BN170052.jpg",
+      "width": 2000,
+      "height": 1219,
+      "sha256": "af63ed8554ee7a0158c9a37e9f0501997656787c37d3700011bb2f82fa7498af",
+      "title": {
+        "en": "Minimal sunset landscape with a distant silhouette above the water",
+        "hu": "Minimalista naplementés táj távoli sziluettel a víz felett",
+        "de-AT": "Minimalistische Sonnenuntergangslandschaft mit ferner Silhouette über dem Wasser"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-11",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-11-dramatic-stairwell-window.webp",
+      "sourceFile": "BN170012.jpg",
+      "width": 2000,
+      "height": 1500,
+      "sha256": "2fd1afc4d32c72b11ab228f7b4ff76056d9fa62656f3e98161f598706effe51b",
+      "title": {
+        "en": "Architectural study of a stairwell, window and directional light",
+        "hu": "Lépcsőház, ablak és irányított fény építészeti tanulmánya",
+        "de-AT": "Architekturbild von Treppenhaus, Fenster und gerichtetem Licht"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-12",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-12-woman-red-classic-car.webp",
+      "sourceFile": "IMG_9007.JPG",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "253f8692e8bb3444762247e0846297d2aa0eb39d1c5c94683da549df80f66d03",
+      "title": {
+        "en": "Woman in red driving a classic car",
+        "hu": "Piros ruhás nő klasszikus autó volánjánál",
+        "de-AT": "Frau in Rot am Steuer eines klassischen Automobils"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-13",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-13-balloons-times-square.webp",
+      "sourceFile": "IMG_7560.JPG",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "4c6ccb3ac4303267f3c842df6a09504bfee6234f2c8d86ccd2e428891a4fd3f5",
+      "title": {
+        "en": "Woman with pale balloons in Times Square",
+        "hu": "Nő világos lufikkal a Times Square forgatagában",
+        "de-AT": "Frau mit hellen Ballons am Times Square"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-14",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-14-woman-color-portrait.webp",
+      "sourceFile": "IMG_6278.JPG",
+      "width": 2000,
+      "height": 2000,
+      "sha256": "f50145f7ca1b4ce48ce196efc9f8bcf6e41f4a56bb7f83c700a4be0f559e531d",
+      "title": {
+        "en": "Direct colour portrait of a young woman against a neutral background",
+        "hu": "Fiatal nő közvetlen színes portréja semleges háttér előtt",
+        "de-AT": "Direktes Farbporträt einer jungen Frau vor neutralem Hintergrund"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-15",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-15-blue-haired-violinist.webp",
+      "sourceFile": "IMG_1990 2.JPG",
+      "width": 1333,
+      "height": 2000,
+      "sha256": "572fc5bfdec0a058809a5b09247cfeade0ceffb5ce0d0621614a44b28b31e99c",
+      "title": {
+        "en": "Fine-art portrait of a blue-haired violinist",
+        "hu": "Kék hajú hegedűművész művészi portréja",
+        "de-AT": "Fine-Art-Porträt einer blauhaarigen Violinistin"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-16",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-16-couple-new-york-street.webp",
+      "sourceFile": "Photo 2017. 10. 06. 21 02 03.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "a84dc08315df1a9c87654e814f53d1ba524b5b6fb3a28e1a2e8402520b1b5705",
+      "title": {
+        "en": "Couple walking through a New York street scene",
+        "hu": "Pár egy New York-i utcai jelenetben",
+        "de-AT": "Paar in einer New Yorker Straßenszene"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-19",
+      "file": "/assets/img/fine-art/age-preview/banhalmi-art-archive-19-monochrome-intimate-portrait-18-preview.webp",
+      "sourceFile": "Bűn.jpg",
+      "width": 2000,
+      "height": 1333,
+      "title": {
+        "en": "Monochrome intimate portrait with clasped hands and lowered gaze",
+        "hu": "Fekete-fehér intim portré összekulcsolt kézzel és lehajtott tekintettel",
+        "de-AT": "Monochromes intimes Porträt mit gefalteten Händen und gesenktem Blick"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "ageRestricted": true,
+      "contentRating": "18+",
+      "requiredMinAge": 18,
+      "previewFile": "/assets/img/fine-art/age-preview/banhalmi-art-archive-19-monochrome-intimate-portrait-18-preview.webp",
+      "fullSizeViewing": "Available through the website after an 18+ self-declaration."
+    },
+    {
+      "id": "fine-art-archive-20",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-20-lone-figure-new-york.webp",
+      "sourceFile": "19055245_1372737692763161_7511964172149172488_o.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "9de66d55eb7cd1cd053df761e8bc2c4627aff0232e427d31ca237ba5939996e2",
+      "title": {
+        "en": "Lone figure crossing a New York street",
+        "hu": "Magányos alak egy New York-i utcán",
+        "de-AT": "Einzelne Figur auf einer New Yorker Straße"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-21",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-21-man-rooftop-new-york.webp",
+      "sourceFile": "Photo 2017. 05. 07. 11 54 54.jpg",
+      "width": 2000,
+      "height": 1125,
+      "sha256": "b2a1c19945af6d9fc6ce28809c05a984fb145a5ad3d3ce4cb77e40f46fd12950",
+      "title": {
+        "en": "Man seated on a rooftop above New York",
+        "hu": "Férfi egy New York fölé magasodó tetőn",
+        "de-AT": "Mann auf einem Dach über New York"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-23",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-23-geometric-building-facade.webp",
+      "sourceFile": "Photo 2015. 11. 08. 22 37 27 (3).png",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "d0c6575341a5bb74bf97423236b1c274b072fe7aa0d61472da64745e6dfc9ff0",
+      "title": {
+        "en": "Abstract geometric study of a modern building façade",
+        "hu": "Modern épülethomlokzat absztrakt geometriai tanulmánya",
+        "de-AT": "Abstrakte geometrische Studie einer modernen Gebäudefassade"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-24",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-24-solitary-woman-beach.webp",
+      "sourceFile": "Photo 2015. 10. 16. 22 29 28.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "87f5b6d789c6a7d731dad28ad0b516e025516beed4e8b35996bf0cc98c8bbeb0",
+      "title": {
+        "en": "Solitary figure seated on a wide beach facing the sea",
+        "hu": "Magányos alak a tenger felé fordulva egy széles parton",
+        "de-AT": "Einzelne sitzende Figur an einem weiten Strand mit Blick aufs Meer"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-25",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-25-manhattan-fog-skyline.webp",
+      "sourceFile": "Photo 2015. 03. 26. 16 56 37.jpg",
+      "width": 2000,
+      "height": 1500,
+      "sha256": "2a066b2b7b6fe3c2892c35e9c8445b920a32c2cab127984f3cc896fd2550a595",
+      "title": {
+        "en": "Manhattan skyline and One World Trade Center emerging through fog",
+        "hu": "Manhattan panorámája és a One World Trade Center a ködből kibontakozva",
+        "de-AT": "Manhattan-Skyline und One World Trade Center im Nebel"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-26",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-26-urban-figure-street.webp",
+      "sourceFile": "Photo 2015. 10. 17. 22 21 34.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "c11138a25122e4b84cb13691fab82c8bb94b7c374be644cc8c142599d9c8d1a4",
+      "title": {
+        "en": "Urban figure moving through a cinematic New York street",
+        "hu": "Városi alak filmszerű New York-i utcai térben",
+        "de-AT": "Urbane Figur in einer filmischen New Yorker Straßenszene"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-27",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-27-modern-interior-skyline.webp",
+      "sourceFile": "Photo 2015. 10. 30. 20 36 33.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "f71bdfd12ff2e8f2073969125e6d99b78b725cc42f4cff4a2f6d93f9832d8cfa",
+      "title": {
+        "en": "Modern interior opening toward the Manhattan skyline",
+        "hu": "Modern enteriőr a manhattani panoráma felé nyitva",
+        "de-AT": "Modernes Interieur mit Blick auf die Skyline Manhattans"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-28",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-28-skyline-framed-window.webp",
+      "sourceFile": "Photo 2015. 10. 23. 20 28 40.jpg",
+      "width": 1582,
+      "height": 2000,
+      "sha256": "d560dc34ba9c9e993dee1c20f35126aad3bcadcce9403c44b756f8706f07dc80",
+      "title": {
+        "en": "New York skyline framed by a narrow interior window",
+        "hu": "New York látképe keskeny belső ablakkeretben",
+        "de-AT": "New Yorker Skyline in einem schmalen Innenfenster gerahmt"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-29",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-29-classic-car-new-york.webp",
+      "sourceFile": "Photo 2015. 11. 01. 3 05 02.jpg",
+      "width": 1920,
+      "height": 1280,
+      "sha256": "88011d1db49f21994457e34cd19adb531ecd6590a2ee9d0d1bd79e861f0c4987",
+      "title": {
+        "en": "Classic car moving through a New York street",
+        "hu": "Klasszikus autó egy New York-i utcán",
+        "de-AT": "Klassisches Automobil auf einer New Yorker Straße"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    },
+    {
+      "id": "fine-art-archive-31",
+      "file": "/assets/img/fine-art/archive-extended/banhalmi-art-archive-31-police-motorcycles-night.webp",
+      "sourceFile": "Photo 2015. 11. 01. 16 47 24.jpg",
+      "width": 2000,
+      "height": 1333,
+      "sha256": "d4b0d14e4b98333649210f73ae9b356dc99b0ad89242e64416b125c41ec7542b",
+      "title": {
+        "en": "Police motorcycles and vehicles beneath a bridge at night",
+        "hu": "Rendőrmotorok és járművek egy híd alatt éjszaka",
+        "de-AT": "Polizeimotorräder und Fahrzeuge nachts unter einer Brücke"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+    }
+  ],
+  "contentPolicy": {
+    "ageRestrictedContent": "Adult artistic body and intimate studies use darkened previews and an image-level 18+ self-declaration gate.",
+    "minors": "Images depicting minors are excluded from the public gallery."
+  }
+}

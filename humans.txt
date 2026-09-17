@@ -1,0 +1,42 @@
+/* TEAM */
+Brand: BANHALMI
+Person: Norbert Banhalmi / Bánhalmi Norbert
+Canonical professional website: https://www.norbertbanhalmi.com/
+Official artistic oeuvre and source archive: https://www.banhalmi.art/
+Primary Person entity: https://www.norbertbanhalmi.com/about/
+Contact: hello@norbertbanhalmi.com
+
+/* SITE ROLES */
+- norbertbanhalmi.com is the canonical multilingual professional website for current services, pricing, enquiries and professional context.
+- banhalmi.art is the official artistic oeuvre and source archive for books, exhibitions, projects, media records, curatorial documentation and selected photographic works.
+- banhalmi.at permanently redirects to https://www.norbertbanhalmi.com/de-at/
+- banhalminorbert.hu permanently redirects to https://www.norbertbanhalmi.com/hu/
+
+/* POSITIONING */
+English: Norbert BANHALMI – Fine Art & Executive Portrait Photography • Visual Branding Strategy
+Hungarian: BÁNHALMI NORBERT – Fotóművész & Executive Portréfotózás • Vizuális Brand Stratégia
+German (Austria): Norbert BANHALMI – Fine-Art-Fotografie und Executive-Porträts • Strategische visuelle Markenpositionierung
+Company headquarters: Vienna, Austria
+Equal active service bases: Vienna and Budapest
+Core services: executive and broader portrait photography, strategic visual positioning and brand photography, event photography, fine-art photography.
+
+/* VERIFIED FEATURED CASE */
+Péter Magyar portrait 2026:
+- EN: https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/
+- HU: https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/
+- DE-AT: https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/
+The case documents the portrait made at Heroes’ Square, Budapest, on 15 March 2026, its authorship, Wikimedia Commons and Wikidata records, CC BY-SA 4.0 licence and documented international editorial use.
+
+/* VERIFIED EVENT EVIDENCE */
+- AmCham Talks February 2026: https://amcham.at/galleries/amcham-talks-february-2026/
+- AmCham Talks March 2026: https://amcham.at/galleries/amcham-talks-march-2026/
+- AmCham Talks Business Breakfast — Destination Vienna, 23 April 2026: https://amcham.at/galleries/amcham-talks-business-breakfast-april-23-destination-vienna/
+- AmCham Talks May 2026: https://amcham.at/galleries/amcham-talks-may-2026/
+- VIPACH event albums: https://www.flickr.com/photos/vipach/albums
+
+/* VERIFIED BIOGRAPHY */
+Born: 1979-05-14, Budapest.
+Lives and works: Vienna; active professional base also in Budapest.
+Practice active since: 1999.
+Verified biography: https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert
+Wikidata: https://www.wikidata.org/wiki/Q56391118

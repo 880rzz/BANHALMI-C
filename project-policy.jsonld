@@ -1,0 +1,71 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "DigitalDocument",
+      "@id": "https://www.norbertbanhalmi.com/project-policy.jsonld#document",
+      "url": "https://www.norbertbanhalmi.com/project-policy.jsonld",
+      "name": "BANHALMI project policy and delivery framework",
+      "description": "Machine-readable interpretation of estimates, payments, invoicing, scope, licensing, approvals, delivery, confidentiality, publication, storage, deletion and accessibility for BANHALMI professional photography projects.",
+      "inLanguage": ["en", "hu-HU", "de-AT"],
+      "dateModified": "2026-08-03",
+      "publisher": {"@id": "https://www.norbertbanhalmi.com/#organization"},
+      "author": {"@id": "https://www.norbertbanhalmi.com/about/"},
+      "mainEntity": {"@id": "https://www.norbertbanhalmi.com/project-policy.jsonld#service-policy"},
+      "isBasedOn": [
+        "https://www.norbertbanhalmi.com/faq/",
+        "https://www.norbertbanhalmi.com/terms-conditions/",
+        "https://www.norbertbanhalmi.com/privacy-policy/",
+        "https://www.norbertbanhalmi.com/requestaquote/"
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.norbertbanhalmi.com/project-policy.jsonld#service-policy",
+      "name": "BANHALMI commissioned photography project framework",
+      "provider": {"@id": "https://www.norbertbanhalmi.com/#organization"},
+      "areaServed": [
+        {"@type": "City", "name": "Vienna"},
+        {"@type": "City", "name": "Budapest"},
+        {"@type": "AdministrativeArea", "name": "Europe"}
+      ],
+      "availableChannel": [
+        {"@type": "ServiceChannel", "serviceUrl": "https://www.norbertbanhalmi.com/requestaquote/", "availableLanguage": "en"},
+        {"@type": "ServiceChannel", "serviceUrl": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/", "availableLanguage": "hu-HU"},
+        {"@type": "ServiceChannel", "serviceUrl": "https://www.norbertbanhalmi.com/de-at/anfrage/", "availableLanguage": "de-AT"}
+      ],
+      "termsOfService": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "additionalProperty": [
+        {"@type": "PropertyValue", "name": "Estimate status", "value": "Website and calculator amounts are non-binding preliminary estimates; the accepted written offer controls final scope and price."},
+        {"@type": "PropertyValue", "name": "Booking payment", "value": "A booking payment applies only when the accepted written offer specifies one; no universal percentage is implied."},
+        {"@type": "PropertyValue", "name": "Currency and VAT", "value": "The accepted written offer records currency, applicable VAT treatment and any verified cross-border tax treatment."},
+        {"@type": "PropertyValue", "name": "Invoice plan", "value": "The accepted written offer records whether invoicing is single-stage or staged, the final invoice point and invoice payment deadlines."},
+        {"@type": "PropertyValue", "name": "Overdue payment", "value": "An overdue agreed payment may pause production or final delivery, subject to the accepted agreement and applicable law."},
+        {"@type": "PropertyValue", "name": "Additional costs", "value": "Additional work and third-party costs require written approval before invoicing unless already defined in the accepted agreement."},
+        {"@type": "PropertyValue", "name": "Standard licence", "value": "Agreed final images may be used by the commissioning organisation on recorded channels, normally without time or territory limit unless the written offer states otherwise; copyright remains with the photographer."},
+        {"@type": "PropertyValue", "name": "Approval", "value": "The client appoints one authorised decision-maker and consolidates multi-stakeholder feedback."},
+        {"@type": "PropertyValue", "name": "Publication files", "value": "Only selected and approved final files are publication assets; previews, contact sheets, rejected frames and intermediate retouching files are not."},
+        {"@type": "PropertyValue", "name": "Confidentiality", "value": "Unpublished portraits, internal events, strategic materials, contact sheets and project discussions are confidential by default."},
+        {"@type": "PropertyValue", "name": "Portfolio permission", "value": "Delivery or payment does not automatically grant BANHALMI portfolio or reference rights; a separate permission or valid legal basis is required."},
+        {"@type": "PropertyValue", "name": "Storage", "value": "Project files may be retained for a reasonable operational period, but permanent archive storage is not guaranteed and the client must back up delivered files."},
+        {"@type": "PropertyValue", "name": "Deletion", "value": "Written deletion requests are handled where applicable, subject to contract, accounting, legal-claim and other valid retention duties."},
+        {"@type": "PropertyValue", "name": "Studios", "value": "Vienna and Budapest are two active operational bases of one enterprise and one project system."},
+        {"@type": "PropertyValue", "name": "Accessibility", "value": "The professional site supports visible keyboard focus, practical interaction targets, invalid-field visibility, reduced motion and forced colours."}
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.norbertbanhalmi.com/project-policy.jsonld#project-process",
+      "name": "BANHALMI commissioned project process",
+      "inLanguage": ["en", "hu-HU", "de-AT"],
+      "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Visual brief"},
+        {"@type": "HowToStep", "position": 2, "name": "Use map"},
+        {"@type": "HowToStep", "position": 3, "name": "Preparation"},
+        {"@type": "HowToStep", "position": 4, "name": "Guided production"},
+        {"@type": "HowToStep", "position": 5, "name": "Structured selection"},
+        {"@type": "HowToStep", "position": 6, "name": "Delivery system"}
+      ]
+    }
+  ]
+}

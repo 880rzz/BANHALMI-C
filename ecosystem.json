@@ -1,0 +1,384 @@
+{
+  "documentType": "canonical-digital-ecosystem-map",
+  "schemaVersion": "2026-09-07-v8-six-pillar-ecosystem",
+  "dateModified": "2026-09-07T19:25:00+02:00",
+  "name": "BANHALMI canonical digital ecosystem",
+  "canonicalPerson": {
+    "@id": "https://www.norbertbanhalmi.com/about/",
+    "name": "Norbert Banhalmi",
+    "alternateName": [
+      "Bánhalmi Norbert",
+      "Norbert Bánhalmi",
+      "BANHALMI"
+    ],
+    "wikidata": "https://www.wikidata.org/wiki/Q56391118"
+  },
+  "canonicalOrganization": {
+    "@id": "https://www.norbertbanhalmi.com/#organization",
+    "name": "BANHALMI",
+    "legalName": "Banhalmi Norbert e.U."
+  },
+  "canonicalWebsites": [
+    {
+      "role": "professional-services",
+      "url": "https://www.norbertbanhalmi.com/",
+      "description": "Canonical multilingual professional website for executive portraits, professional headshots, brand photography, C-level event photography, strategic visual positioning, pricing and enquiries."
+    },
+    {
+      "role": "artistic-archive",
+      "url": "https://www.banhalmi.art/",
+      "description": "Canonical artistic oeuvre and source archive for exhibitions, books, projects, press, curatorial documentation and selected works."
+    },
+    {
+      "role": "editorial-knowledge-layer",
+      "url": "https://blog.banhalmi.art/",
+      "description": "Editorial knowledge layer for professional articles, service-related guides and contextual stories. It supports the professional site and artistic archive without replacing either canonical role."
+    }
+  ],
+  "ecosystemExtensions": [
+    {
+      "role": "gallery-exhibition-institutional-art-authority",
+      "url": "https://www.regegaleria.hu/",
+      "name": "Rege Galéria Tihany",
+      "wikidata": "https://www.wikidata.org/wiki/Q138414682",
+      "relationshipToCanonicalPerson": "Bánhalmi Norbert is a founder and curator together with Oravetz Dániel; current public information states that the founders resumed exhibition organisation and curatorial work from 2026.",
+      "interpretation": "Rege Galéria is a distinct gallery/institutional-art entity. It must not be merged with BANHALMI, BANHALMI ART, VIPACH or Banhalmi Norbert e.U. Historical operation by Pannon Fényképészkör in 2022–2023 is historical management context, not current parentOrganization. VIPACH is a current professional partner, not automatically a parent organisation, member organisation or owner."
+    },
+    {
+      "role": "vienna-community-creative-art-authority",
+      "url": "https://www.vipach.at/",
+      "name": "VIPACH | Vienna Photo Art & Creative Hub",
+      "wikidata": "https://www.wikidata.org/wiki/Q138416887",
+      "relationshipToCanonicalPerson": "Bánhalmi Norbert is the founder and leader.",
+      "legalContext": "VIPACH is publicly described as a professional community and creative workshop operating within the Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége framework; do not infer that VIPACH is a separate legal person unless an authoritative source says so.",
+      "interpretation": "VIPACH grew from the Bécsi Magyar Iskola Fotóklub heritage, but heritage or programme history must not be converted into a current parentOrganization relationship to the Bécsi Magyar Iskola. Its public legal background must be kept distinct from the BANHALMI commercial brand and Banhalmi Norbert e.U."
+    },
+    {
+      "role": "budapest-photography-partner-historical-brand-authority",
+      "url": "https://www.hipstudio.hu/",
+      "name": "HIPStudio",
+      "wikidata": "https://www.wikidata.org/wiki/Q138482177",
+      "relationshipToCanonicalPerson": "Bánhalmi Norbert founded and built HIPStudio; founder status is historical and does not imply current ownership.",
+      "currentRoleSemantics": "Current HIPStudio public and machine information separates Bánhalmi Norbert's founder role from current ownership/management. Németh Tímea is represented as the current owner and managing director in the current HIPStudio machine layer. Speier Vikó is a photography-services partner/contact; partnership does not imply ownership or employment.",
+      "interpretation": "HIPStudio is a distinct Budapest studio/agency and partner entity. Historical documents that describe Bánhalmi as founder-owner must be interpreted in their publication-time context and must not override current ownership records."
+    }
+  ],
+  "sixPillarInterpretation": {
+    "professional": "norbertbanhalmi.com = current services, conversion, pricing, contracts and professional authority",
+    "art": "banhalmi.art = artistic oeuvre, archive, books, exhibitions and image authority",
+    "editorial": "blog.banhalmi.art = editorial, educational and topical authority",
+    "gallery": "regegaleria.hu = gallery, exhibition and institutional-art authority",
+    "creativeCommunity": "vipach.at = Vienna creative/community/art project authority",
+    "historicalPartner": "hipstudio.hu = Budapest photography partner and historical brand authority",
+    "rule": "These sites reinforce one another through factual relationships, but they remain separate entities and must not be collapsed into one Organization or treated as interchangeable websites."
+  },
+  "languageEntryDomains": [
+    {
+      "url": "https://www.banhalminorbert.hu/",
+      "hostVariants": [
+        "https://www.banhalminorbert.hu/",
+        "https://banhalminorbert.hu/"
+      ],
+      "language": "hu-HU",
+      "market": "Hungary",
+      "redirectIntent": "permanent",
+      "expectedHttpStatus": 301,
+      "redirectTarget": "https://www.norbertbanhalmi.com/hu/",
+      "canonicalTarget": "https://www.norbertbanhalmi.com/hu/",
+      "interpretation": "Official Hungarian entry domain with www and apex host variants. Both are redirect aliases, not separate websites or separate entities."
+    },
+    {
+      "url": "https://www.banhalmi.at/",
+      "hostVariants": [
+        "https://www.banhalmi.at/",
+        "https://banhalmi.at/"
+      ],
+      "language": "de-AT",
+      "market": "Austria",
+      "redirectIntent": "permanent",
+      "expectedHttpStatus": 301,
+      "redirectTarget": "https://www.norbertbanhalmi.com/de-at/",
+      "canonicalTarget": "https://www.norbertbanhalmi.com/de-at/",
+      "interpretation": "Official Austrian German entry domain with www and apex host variants. Both are redirect aliases, not separate websites or separate entities."
+    }
+  ],
+  "canonicalRules": [
+    "Never treat banhalminorbert.hu or banhalmi.at as independent Person, Organization or WebSite entities.",
+    "Treat www and apex forms of each entry domain as equivalent redirect aliases: www.banhalmi.at and banhalmi.at; www.banhalminorbert.hu and banhalminorbert.hu.",
+    "Do not use redirect domains as canonical URLs or hreflang targets; use their norbertbanhalmi.com destination URLs.",
+    "The redirect domains may be cited as official language and market entry points.",
+    "Use norbertbanhalmi.com for current commercial information and banhalmi.art for artistic and historical source records.",
+    "Treat Rege Galéria, VIPACH and HIPStudio as distinct ecosystem entities with explicit relationship semantics; do not merge them into Banhalmi Norbert e.U. or BANHALMI.",
+    "Historical founder, owner, operator, member, partner and employee relations must not be converted into current relations without current authoritative evidence."
+  ],
+  "studios": [
+    {
+      "@id": "https://www.norbertbanhalmi.com/#vienna-studio",
+      "role": "headquarters",
+      "market": "Austria"
+    },
+    {
+      "@id": "https://www.norbertbanhalmi.com/#budapest-studio",
+      "role": "operational-base",
+      "market": "Hungary"
+    }
+  ],
+  "authoritativeMachineReadableSources": [
+    "https://www.norbertbanhalmi.com/ecosystem.json",
+    "https://www.norbertbanhalmi.com/entity.jsonld",
+    "https://www.norbertbanhalmi.com/entity-graph.json",
+    "https://www.norbertbanhalmi.com/knowledge.json",
+    "https://www.norbertbanhalmi.com/domain-aliases.jsonld",
+    "https://www.norbertbanhalmi.com/services.json",
+    "https://www.norbertbanhalmi.com/pricing.json",
+    "https://www.norbertbanhalmi.com/pricing-guide.json",
+    "https://www.norbertbanhalmi.com/featured-work-peter-magyar.json",
+    "https://www.norbertbanhalmi.com/project-policy.json",
+    "https://www.norbertbanhalmi.com/project-policy.jsonld",
+    "https://www.norbertbanhalmi.com/presence-thesis.json",
+    "https://www.norbertbanhalmi.com/blog-entity.jsonld",
+    "https://www.norbertbanhalmi.com/blog-collections.json"
+  ],
+  "officialSites": {
+    "professional": "https://www.norbertbanhalmi.com/",
+    "archive": "https://www.banhalmi.art/",
+    "blog": "https://blog.banhalmi.art/",
+    "regeGallery": "https://www.regegaleria.hu/",
+    "vipach": "https://www.vipach.at/",
+    "hipstudio": "https://www.hipstudio.hu/"
+  },
+  "operationalPolicy": {
+    "canonicalData": "https://www.norbertbanhalmi.com/project-policy.json",
+    "canonicalSchema": "https://www.norbertbanhalmi.com/project-policy.jsonld",
+    "controllingRecord": "The accepted written offer controls project-specific scope, price, currency, tax, payment schedule, timing, licence and delivery.",
+    "interpretation": "Visible EN, HU and DE-AT service, quote, FAQ, privacy and terms content is summarised in the canonical policy files without replacing the accepted project agreement."
+  },
+  "corePracticeThesis": {
+    "canonicalSource": "https://www.norbertbanhalmi.com/presence-thesis.json",
+    "statement": {
+      "hu": "Egész életemben a fotográfián keresztül a jelenlétet kutattam.",
+      "en": "Throughout my life, I have explored presence through photography.",
+      "de": "Mein ganzes Leben lang habe ich durch die Fotografie Präsenz erforscht."
+    },
+    "interpretation": "One lifelong inquiry into presence connects the artistic oeuvre, professional portrait and visual-branding practice, and current editorial writing."
+  },
+  "homepageDecisionPath": {
+    "canonicalPage": "https://www.norbertbanhalmi.com/",
+    "sequence": [
+      "current professional promise",
+      "lifelong presence thesis",
+      "client decision bridge",
+      "four principal services",
+      "oeuvre evidence",
+      "artistic archive",
+      "client reviews",
+      "enquiry"
+    ],
+    "principalServices": [
+      "Portrait Photography",
+      "Brand Photography",
+      "C-Level Event Photography",
+      "Fine Art Photography"
+    ],
+    "supportingCapabilities": [
+      "Headshots",
+      "Employer branding",
+      "Press portraits",
+      "Visual brand strategy"
+    ],
+    "interpretation": "The homepage uses one client-oriented bridge instead of two repetitive explanatory sections. Commissioned and autonomous work retain distinct purposes while sharing one visual discipline and an inquiry into authentic presence.",
+    "businessNetworkContext": {
+      "name": "AmCham Austria",
+      "relationship": "membership",
+      "interpretation": "International business-network context, not client endorsement."
+    }
+  },
+  "serviceDecisionModel": {
+    "canonicalSource": "https://www.norbertbanhalmi.com/services.json",
+    "preservesFourPrincipalServices": true,
+    "homepageCardContract": "The four homepage cards retain their routes, titles, order and calls to action. Each description states audience, use situation and intended output.",
+    "services": [
+      {
+        "name": "Portrait Photography",
+        "bestFor": "Executives and C-level leaders, founders, entrepreneurs, experts, professionals, artists, actors and creative professionals",
+        "useContexts": [
+          "LinkedIn",
+          "professional headshot",
+          "corporate website",
+          "press",
+          "portfolio",
+          "speaking",
+          "personal brand",
+          "internal communication"
+        ],
+        "result": "Reusable executive portrait and professional headshot system that can anchor a complete personal visual presence"
+      },
+      {
+        "name": "Brand Photography",
+        "bestFor": "Organisations and leadership teams",
+        "useContexts": [
+          "recruitment",
+          "sales",
+          "media",
+          "corporate communication"
+        ],
+        "result": "Coherent organisational image library"
+      },
+      {
+        "name": "C-Level Event Photography",
+        "bestFor": "Boards, leadership teams, conferences and institutions",
+        "useContexts": [
+          "press",
+          "internal communication",
+          "institutional archive"
+        ],
+        "result": "Discreet editorial and institutional documentation"
+      },
+      {
+        "name": "Fine Art Photography",
+        "bestFor": "Private individuals seeking author-led personal work",
+        "useContexts": [
+          "fine-art portraiture",
+          "nude art",
+          "personal artistic series"
+        ],
+        "result": "Personal fine-art work created with respectful direction, consent and discretion"
+      }
+    ]
+  },
+  "servicePageFramework": {
+    "appliesTo": [
+      "Portrait Photography",
+      "Brand Photography",
+      "C-Level Event Photography"
+    ],
+    "presentation": "Commercial project terms remain fully available in one initially collapsed native details disclosure on each service page.",
+    "includes": [
+      "project fee and licensing",
+      "delivery system",
+      "file retention",
+      "image rights",
+      "governance and confidentiality",
+      "booking and contingency"
+    ],
+    "accessibility": "Native details and summary semantics support keyboard and assistive-technology access.",
+    "fineArtBoundary": "Fine Art Photography keeps its separate consent, privacy and artistic-process model rather than inheriting the corporate framework drawer.",
+    "semanticRepairs": {
+      "pages": [
+        "faq/index.html",
+        "terms-conditions/index.html",
+        "hu/gyik/index.html",
+        "hu/aszf/index.html",
+        "de-at/faq/index.html",
+        "de-at/agb/index.html"
+      ],
+      "rule": "Governance and booking sections remain inside the main content element on service, FAQ and terms pages."
+    }
+  },
+  "serviceConversionPath": {
+    "appliesTo": [
+      "Portrait Photography",
+      "Brand Photography",
+      "C-Level Event Photography"
+    ],
+    "earlyChoice": {
+      "primary": "Service-specific invitation linking to the final three-way next-step selector.",
+      "secondary": "Anchor link to selected work on the same page."
+    },
+    "evidenceSequence": [
+      "selected work",
+      "client reviews",
+      "verified professional context"
+    ],
+    "finalDecision": [
+      "configure a non-binding package",
+      "send a message",
+      "book a 15-minute video call"
+    ],
+    "duplicateCtaRemoved": true,
+    "principle": "The page invites orientation early, provides evidence before commitment and asks for one final decision only."
+  },
+  "fineArtPrivateJourney": {
+    "appliesTo": "Fine Art Photography",
+    "principle": "A consent-led private commission is the primary service path; public archive resources remain available as supporting context rather than replacing the enquiry route.",
+    "heroChoice": {
+      "primary": "Anchor to the existing private-conversation CTA",
+      "secondary": "Anchor to selected personal work"
+    },
+    "visibleSelection": "Fine-art portraits and studies of identity, biography and the body remain visible.",
+    "extendedArchive": "Existing urban, architectural and travel studies remain complete, searchable and lightbox-enabled inside one initially closed native disclosure.",
+    "archiveResources": [
+      "localized Press archive",
+      "localized BANHALMI journal"
+    ],
+    "safeguards": [
+      "clear boundaries",
+      "consent",
+      "privacy",
+      "joint image selection",
+      "18+ self-declaration gate for intimate previews"
+    ],
+    "commercialFrameworkBoundary": "Fine Art retains its own privacy and consent path rather than inheriting the corporate three-way selector or project-framework drawer."
+  },
+  "quoteServiceContext": {
+    "publicParameter": "service",
+    "allowlist": {
+      "portrait": "individual",
+      "brand": "brand",
+      "event": "event",
+      "fine-art": "art"
+    },
+    "sourcePages": [
+      "portrait/index.html",
+      "lifestyle/index.html",
+      "event-photography/index.html",
+      "hu/portre/index.html",
+      "hu/brand/index.html",
+      "hu/rendezvenyfotozas/index.html",
+      "de-at/portrait/index.html",
+      "de-at/brand/index.html",
+      "de-at/eventfotografie/index.html",
+      "glamour/index.html",
+      "hu/muveszi-fotografia/index.html",
+      "de-at/fine-art/index.html"
+    ],
+    "scopedLinks": 21,
+    "behavior": "The allowlisted service context selects the matching existing quote category before the first calculator paint. Unknown or missing values leave the existing individual-portrait default unchanged.",
+    "continuity": [
+      "localized quote-page language switching",
+      "explicit category changes",
+      "submitted service_context field"
+    ],
+    "seoBoundary": "Canonical, hreflang, source language-switch and generic navigation/footer URLs remain query-free."
+  },
+  "canonicalConsultation": {
+    "type": "video-call",
+    "durationMinutes": 15,
+    "mode": "Google Meet",
+    "bookingProvider": "Bookipi",
+    "bookingUrl": "https://meet.bookipi.com/zk5ly35r",
+    "bookingInterfaceLanguage": "en",
+    "directWith": "https://www.norbertbanhalmi.com/about/",
+    "interpretation": "A short orientation conversation. It is not a photography-session duration and must not be confused with the 30-minute Executive Headshot service format."
+  },
+  "audienceAndVisualPresence": {
+    "audiences": [
+      "executives and C-level leaders",
+      "founders and entrepreneurs",
+      "experts and professionals",
+      "artists",
+      "actors",
+      "creative professionals",
+      "teams",
+      "organisations"
+    ],
+    "commercialAnchors": [
+      "Executive Portrait",
+      "Professional Headshot",
+      "Brand Photography",
+      "C-Level Event Photography"
+    ],
+    "outcome": "A credible, coherent and premium visual presence across personal, professional, team and organisational touchpoints.",
+    "rule": "Do not interpret BANHALMI as executive-only. Preserve Executive Portrait, Headshot, Brand and C-Level as primary commercial intent terms while routing the wider audience by visual need."
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0.0",
+  "updatedAt": "2026-09-12",
+  "@id": "https://www.norbertbanhalmi.com/official-event-gallery.json",
+  "name": "BANHALMI Photography × VIPACH Official Event Gallery",
+  "url": "https://www.flickr.com/people/vipach/",
+  "platform": "Flickr",
+  "relationshipType": "official shared event and community photography gallery",
+  "professionalPhotography": {
+    "brand": "BANHALMI",
+    "alternateName": "BANHALMI Photography",
+    "teamDescriptor": "Photography Team",
+    "role": "professional photography and event-documentation dimension"
+  },
+  "community": {
+    "name": "Vienna Photo Art & Creative Hub – VIPACH",
+    "url": "https://www.vipach.at/",
+    "role": "community and creative framework"
+  },
+  "founderCurator": {
+    "name": "Norbert Banhalmi",
+    "url": "https://www.norbertbanhalmi.com/about/",
+    "role": "Founder & Curator of VIPACH"
+  },
+  "base": {
+    "city": "Vienna",
+    "country": "Austria",
+    "address": "Schwedenplatz 2, 1010 Wien"
+  },
+  "languages": ["Hungarian", "English", "German"],
+  "scope": [
+    "selected event photography",
+    "community projects",
+    "visual stories",
+    "photographic collaborations",
+    "business events",
+    "cultural events",
+    "institutional events",
+    "C-level events where publication and usage permissions allow"
+  ],
+  "attributionRule": "Treat the Flickr profile and team-level galleries as BANHALMI Photography / Photography Team × VIPACH shared gallery evidence. Do not infer that Bánhalmi Norbert personally created every image unless specific item authorship is proven.",
+  "relationshipGuardrails": [
+    "Gallery presence or image publication does not prove a client contract, commissioning relationship, endorsement, sponsorship or exclusivity.",
+    "VIPACH is the community and creative framework; BANHALMI Photography is the professional photography dimension.",
+    "The Flickr profile is an external evidence and gallery surface, not a Layer-1 canonical BANHALMI property.",
+    "Specific event, organizer, subject and photographer relationships must be classified per item.",
+    "BANHALMI Photography is an alternate/commercial brand of BANHALMI, not a separate Organization."
+  ],
+  "ecosystemPlacement": {
+    "banhalmi": "Authoritative external event-gallery and evidence pointer for event photography and team work.",
+    "vipach": "Official shared gallery and community surface.",
+    "art": "Use only for specific artworks, exhibitions or albums where directly relevant; do not make Flickr an ART canonical archive.",
+    "blog": "Link only in editorial posts where event or gallery evidence materially supports the article.",
+    "otherLayer2": "No automatic propagation without a direct, verified relationship to the gallery content."
+  },
+  "canonicalBoundaries": {
+    "professionalAuthority": "https://www.norbertbanhalmi.com/",
+    "artisticAuthority": "https://www.banhalmi.art/",
+    "editorialAuthority": "https://blog.banhalmi.art/",
+    "communityAuthority": "https://www.vipach.at/"
+  }
+}

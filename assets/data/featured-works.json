@@ -1,0 +1,101 @@
+{
+  "featuredWorks": [
+    {
+      "@type": [
+        "ImageObject",
+        "Photograph"
+      ],
+      "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026",
+      "name": "Péter Magyar portrait, Budapest, 15 March 2026",
+      "description": "Portrait of Péter Magyar photographed by Norbert Banhalmi at Hősök tere in Budapest on 15 March 2026. The photograph is part of the EUFÓRIA – The Anatomy of Presence project and is published on Wikimedia Commons under CC BY-SA 4.0. Péter Magyar’s official Wikidata entity lists Peter-Magyar-portrait-2026.jpg as an image.",
+      "contentUrl": "https://www.norbertbanhalmi.com/assets/img/portraits/service-gallery/peter-magyar-portrait-2026-by-norbert-banhalmi.webp",
+      "url": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Bánhalmi Norbert"
+      },
+      "dateCreated": "2026-03-15T16:57:25+01:00",
+      "contentLocation": {
+        "@type": "Place",
+        "name": "Hősök tere, Budapest, Hungary"
+      },
+      "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "acquireLicensePage": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+      "isPartOf": [
+        {
+          "@id": "https://www.banhalmi.art/exhibitions/euforia.html#artwork"
+        },
+        {
+          "@id": "https://www.wikidata.org/wiki/Q138717398"
+        }
+      ],
+      "subjectOf": {
+        "@type": "Article",
+        "@id": "https://www.banhalmi.art/exhibitions/euforia.html#article",
+        "url": "https://www.banhalmi.art/exhibitions/euforia.html",
+        "name": "EUFÓRIA – a Jelenlét anatómiája",
+        "inLanguage": "hu-HU"
+      },
+      "keywords": [
+        "executive portrait photography",
+        "documentary portrait",
+        "Péter Magyar",
+        "Magyar Péter",
+        "Norbert Banhalmi",
+        "Bánhalmi Norbert",
+        "EUFÓRIA",
+        "Hősök tere",
+        "Budapest",
+        "Wikimedia Commons",
+        "Wikidata Q124488292"
+      ],
+      "alternateName": [
+        "Peter-Magyar-portrait-2026.jpg",
+        "Magyar Péter portréja – Budapest, 2026. március 15."
+      ],
+      "sameAs": [
+        "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg"
+      ],
+      "isBasedOn": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+      "encodingFormat": "image/webp",
+      "width": 1351,
+      "height": 1800,
+      "creditText": "Photograph by Norbert Banhalmi",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "copyrightNotice": "© Norbert Banhalmi. Licensed under CC BY-SA 4.0.",
+      "about": {
+        "@id": "https://www.wikidata.org/wiki/Q124488292"
+      },
+      "identifier": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Wikimedia Commons filename",
+          "value": "Peter-Magyar-portrait-2026.jpg",
+          "url": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Depicted person Wikidata",
+          "value": "Q124488292",
+          "url": "https://www.wikidata.org/wiki/Q124488292"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Creator Wikidata",
+          "value": "Q56391118",
+          "url": "https://www.wikidata.org/wiki/Q56391118"
+        },
+        {
+          "@type": "PropertyValue",
+          "propertyID": "Project Wikidata",
+          "value": "Q138717398",
+          "url": "https://www.wikidata.org/wiki/Q138717398"
+        }
+      ]
+    }
+  ],
+  "dateModified": "2026-07-09T12:00:00+02:00"
+}

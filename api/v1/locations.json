@@ -1,0 +1,15 @@
+{
+  "viennaStudio": {
+    "address": "Schwedenplatz 2, Top 8–9, 1010 Wien, Austria",
+    "type": "studio"
+  },
+  "viennaOffice": {
+    "address": "Gersthofer Straße 150–154/6/2, 1180 Wien, Austria",
+    "type": "office/client meeting location"
+  },
+  "budapestStudio": {
+    "address": "Lágymányosi u. 15, 1111 Budapest, Hungary",
+    "type": "studio"
+  },
+  "worldwideTravel": true
+}

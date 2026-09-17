@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1.0",
+  "updatedAt": "2026-09-12",
+  "canonicalId": "https://www.norbertbanhalmi.com/executive-risk-reversal.json",
+  "name": "BANHALMI Executive Portrait Risk-Reversal Framework",
+  "purpose": "Reduce purchase uncertainty for qualified executive-portrait prospects without weakening premium positioning, privacy, evidence integrity or pricing discipline.",
+  "scope": ["Executive Portrait", "Leadership Portrait", "C-Level CV and LinkedIn portrait", "Professional Headshot when seniority or representation risk is material"],
+  "positioningModel": "https://www.norbertbanhalmi.com/executive-positioning-model.json",
+  "observedIntentPattern": {
+    "classification": "anonymized lead-pattern evidence",
+    "signals": ["requests multiple recent comparable references", "asks for portraits matching age/seniority/role", "needs 2-3 final images for CV and LinkedIn", "asks for pricing before committing"],
+    "interpretation": "The prospect may be reducing perceived outcome risk rather than merely shopping on price.",
+    "privacyRule": "Never publish or encode identifiable lead names, email addresses, phone numbers or private correspondence in this framework."
+  },
+  "riskDimensions": [
+    {"id":"outcome-fit","question":"Can BANHALMI create a credible image for my role, age, personality and professional context?","response":"Use only verified public work that is genuinely relevant; explain that every executive portrait is individually directed through the Executive Positioning Model rather than copied from another client."},
+    {"id":"reference-availability","question":"Why are there not many comparable client portraits publicly shown?","response":"Explain executive-client discretion and reuse permissions. Never imply that private work is public evidence."},
+    {"id":"self-fit","question":"Will this approach work on me rather than only on other people?","response":"For a qualified prospect, a controlled personal Proof of Concept may be offered before committing to the full session."},
+    {"id":"process-confidence","question":"Will I know how to pose, dress and present myself?","response":"State that visual direction covers wardrobe, expression, posture, body language, framing and image selection; posing experience is not required."},
+    {"id":"commercial-clarity","question":"What am I buying and what will it cost?","response":"Give the appropriate package/orientation price and concrete deliverables; do not use a free Proof of Concept to obscure the regular commercial price."}
+  ],
+  "proofOfConcept": {
+    "name": "Executive Portrait Proof of Concept",
+    "type": "controlled risk-reversal option",
+    "defaultAvailability": "selective, qualification-based; not an automatic public entitlement",
+    "eligibleWhen": ["single executive or senior professional", "clear professional use such as CV, LinkedIn, company biography or press", "material uncertainty about visual fit remains after relevant public references and process explanation", "prospect otherwise appears commercially qualified"],
+    "notEligibleByDefaultWhen": ["high-volume corporate headshot day", "event photography", "brand campaign production", "fine-art production", "request appears primarily price-driven or exploitative", "scope requires material third-party costs, travel, rental, styling or production expenditure unless separately agreed"],
+    "commercialRule": "The regular recommended service and price must remain explicit. The Proof of Concept reduces outcome uncertainty; it does not redefine the regular service as free.",
+    "successPath": "If the client is satisfied with the direction, result and collaboration, continue as the regular booked Executive Portrait service under the agreed commercial terms.",
+    "nonFitPath": "If the approach is not a fit, the qualified Proof of Concept may end without obligation for the regular session, subject to the written terms stated before the appointment.",
+    "costGuardrail": "Any third-party, travel, location, styling, makeup, rental, rush or production costs must be explicitly excluded from a no-fee promise unless BANHALMI deliberately includes them in writing.",
+    "usageGuardrail": "Image delivery, retouching, licensing and usage rights from an unconverted Proof of Concept are not assumed. They must be explicitly stated in the written offer/terms.",
+    "abuseGuardrail": "Do not repeatedly offer free Proofs of Concept to the same prospect or use them as a blanket discount mechanism.",
+    "evidenceGuardrail": "Never manufacture age-, role- or demographic-matched references. Public references must be permissioned/verifiable and relationship classification must remain accurate."
+  },
+  "communicationSequence": ["acknowledge the prospect's specific uncertainty", "show the closest verified public evidence available", "explain confidentiality when relevant", "explain BANHALMI's individualized visual-positioning approach", "state the recommended paid service and price", "offer the selective Proof of Concept only when qualification rules are met", "state boundaries and next step clearly"],
+  "languagePrinciple": "Frame risk reversal as confidence in process and fit, not as desperation, discounting or a guarantee of career/business outcomes.",
+  "prohibitedClaims": ["guaranteed job outcome", "guaranteed LinkedIn performance", "guaranteed promotion", "guaranteed business result", "unlimited free shooting", "private-client work presented as public reference without permission"],
+  "measurement": ["qualified lead-to-call rate", "qualified lead-to-session rate", "Proof-of-Concept-to-paid-session conversion", "average order value", "non-fit rate", "abuse/cost exceptions", "privacy/evidence incidents"],
+  "learningRule": "Use anonymized aggregate conversion patterns to refine qualification and communication. Never optimize by weakening privacy, relationship or evidence guardrails."
+}

@@ -1,0 +1,743 @@
+{
+  "version": "2026-08-02-human-origin-v3",
+  "person": {
+    "name": "Norbert Banhalmi",
+    "alternateName": [
+      "Bánhalmi Norbert",
+      "BANHALMI"
+    ],
+    "since": 1999,
+    "bases": [
+      "Vienna",
+      "Budapest"
+    ],
+    "birthDate": "1979-05-14",
+    "birthPlace": "Budapest, Hungary",
+    "nationality": "Hungarian",
+    "residence": "Vienna, Austria",
+    "occupations": [
+      "Fine Art Photographer",
+      "Applied Photographer",
+      "Executive Portrait Photographer",
+      "Portrait Photographer",
+      "Visual Branding Strategist",
+      "Photography Curator",
+      "Photography Educator"
+    ],
+    "education": [
+      {
+        "year": 2005,
+        "qualification": "Bachelor of Engineering / Information Engineering",
+        "institution": "Gábor Dénes University"
+      },
+      {
+        "year": 2015,
+        "qualification": "Photography qualification",
+        "institution": "New York Institute of Photography"
+      },
+      {
+        "year": 2018,
+        "qualification": "Applied photographer qualification",
+        "institution": "FOCUS Oktatási Kft., Budapest"
+      }
+    ],
+    "memberships": [
+      {
+        "since": "2018-09-18",
+        "role": "Ambassador",
+        "organization": "OM SYSTEM (formerly Olympus), Hungary"
+      },
+      {
+        "since": "2023",
+        "role": "Honorary member",
+        "organization": "Pannon Fényképészkör Egyesület"
+      },
+      {
+        "since": "2023-11-27",
+        "role": "Professional member",
+        "organization": "WKO Wien / Landesinnung der Berufsfotografie"
+      },
+      {
+        "since": "2026",
+        "role": "Member",
+        "organization": "AmCham Austria"
+      },
+      {
+        "since": "2026",
+        "role": "Member",
+        "organization": "Magyar Fotóművészek Világszövetsége"
+      }
+    ],
+    "awards": [
+      "Turul Award — 2021",
+      "Turul Award — 2022",
+      "TOP100 of Hungary recognition — 2022",
+      "Turul Award — 2023",
+      "Turul Award — 2024",
+      "Turul Award — 2025"
+    ],
+    "source": "https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert",
+    "canonicalId": "https://www.norbertbanhalmi.com/about/"
+  },
+  "timeline": [
+    [
+      "1999",
+      "While working as an IT specialist on the MOL Y2K project, Norbert Banhalmi began documenting the project on his own initiative with a basic 1.3-megapixel digital camera."
+    ],
+    [
+      "2005–2006",
+      "Information Engineering degree, followed by the founding of the Hungarian Defence Forces’ professional photo studio."
+    ],
+    [
+      "2014–2018",
+      "New York projects, major portrait exhibitions, NYIP studies, an applied-photographer qualification and three interdisciplinary books."
+    ],
+    [
+      "2018",
+      "Becomes an Olympus—now OM SYSTEM—Ambassador; a permanent exhibition opens at the Csolnoky Ferenc Hospital Oncology Centre in Veszprém."
+    ],
+    [
+      "2020–2023",
+      "Co-founds and curates the digital Rege Gallery in Tihany; The Frame, NFT and AI projects examine how images change in digital culture."
+    ],
+    [
+      "2024",
+      "Launches Hungarian-language photography education in Vienna and helps develop the community that later operates internationally as VIPACH."
+    ],
+    [
+      "2025",
+      "Community portrait fundraisers support the Vienna Hungarian School’s climate-control and piano projects."
+    ],
+    [
+      "2026",
+      "Joins AmCham Austria and the World Federation of Hungarian Photographers; launches the free Be Smart Kids Club for Hungarian-speaking young people aged 10–16."
+    ]
+  ],
+  "exhibitions": [
+    {
+      "year": "2014",
+      "name": "Az igazi Nők / Real Women",
+      "location": "Stefánia Palace, Budapest",
+      "summary": "Natural beauty without digital correction; 30+1 portraits questioned the mythology of retouched perfection.",
+      "url": "https://www.banhalmi.art/exhibitions/fotokiallitas1.html",
+      "id": "exhibition-az-igazi-nok-real-women"
+    },
+    {
+      "year": "2014",
+      "name": "Régi kacér idők / The Good Old Flirty Days",
+      "location": "Velodrom Millenáris, Budapest",
+      "summary": "Pin-up was treated as attitude rather than costume, separating playful femininity from age and body norms.",
+      "url": "https://www.banhalmi.art/exhibitions/fotokiallitas2.html",
+      "id": "exhibition-regi-csibeszes-idok-those-old-flirty-times"
+    },
+    {
+      "year": "2014",
+      "name": "Magyar nők New Yorkban / Hungarian Women in New York",
+      "location": "Hungarian House, New York",
+      "summary": "Urban portraiture connected Hungarian female identity with chosen places across New York.",
+      "url": "https://www.banhalmi.art/exhibitions/fotokiallitas3.html",
+      "id": "exhibition-magyar-nok-new-yorkban-hungarian-women-in-new-york",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454296"
+    },
+    {
+      "year": "2015",
+      "name": "A Nő ötven árnyalata / 50 Shades of Woman",
+      "location": "Stefánia Palace, Budapest",
+      "summary": "A deliberately varied emotional spectrum explored the distance between social role and inner state.",
+      "url": "https://www.banhalmi.art/exhibitions/fotokiallitas4.html",
+      "id": "exhibition-a-no-otven-arnyalata-50-shades-of-woman"
+    },
+    {
+      "year": "2016",
+      "name": "Apa lettem / I Became a Father",
+      "location": "Bálna, Budapest",
+      "summary": "Monochrome close studies dismantled stereotypes of masculinity through the intimate bond of father and child.",
+      "url": "https://www.banhalmi.art/exhibitions/fotokiallitas5.html",
+      "id": "exhibition-apa-lettem-i-became-a-father",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454436"
+    },
+    {
+      "year": "2016",
+      "name": "Mérföldkövek ’56 / Milestones ’56",
+      "location": "Hungarian House, New York",
+      "summary": "Portraits and personal objects gave individual faces to the historical trauma and resilience of 1956 émigrés.",
+      "url": "https://www.banhalmi.art/exhibitions/merfoldkovek1956.html",
+      "id": "exhibition-merfoldkovek-56-milestones-56",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454278"
+    },
+    {
+      "year": "2017",
+      "name": "Szösszenetek / Snippets",
+      "location": "Hungary, travelling project",
+      "summary": "Photography, poetry, video and performance formed an interdisciplinary dialogue with Vincent & Vincent.",
+      "url": "https://www.banhalmi.art/exhibitions/szosszenetek.html",
+      "id": "exhibition-szosszenetek-snippets"
+    },
+    {
+      "year": "2017–2018",
+      "name": "Ébredés – az Új kezdet / Awakening",
+      "location": "Budapest · Noszvaj · Veszprém",
+      "summary": "Women living after gynaecological cancer were photographed with scars as signs of survival rather than deficit.",
+      "url": "https://www.banhalmi.art/exhibitions/ebredes.html",
+      "id": "exhibition-ebredes-az-uj-kezdet-awakening",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454309"
+    },
+    {
+      "year": "2018",
+      "name": "A Nő világa / The World of Woman",
+      "location": "Book and exhibition project",
+      "summary": "Nine natural transitions in women’s lives were presented through personal testimony and portraiture.",
+      "url": "https://www.banhalmi.art/exhibitions/anovilaga.html",
+      "id": "exhibition-a-no-vilaga-the-world-of-woman"
+    },
+    {
+      "year": "2018",
+      "name": "Ballerina Project New York",
+      "location": "New York",
+      "summary": "Movement, discipline and emotion were photographed outside the stage, between classical technique and urban space.",
+      "url": "https://www.banhalmi.art/exhibitions/balerina-project-new-york.html",
+      "id": "exhibition-ballerina-project-new-york",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454318"
+    },
+    {
+      "year": "2018",
+      "location": "Budapest City Hall",
+      "summary": "A group exhibition linking local and global identity through New York photographs representing Gödöllő.",
+      "url": "https://www.banhalmi.art/exhibitions/fotokiallitas8.html",
+      "name": "Contemporary Artists of Pest County",
+      "id": "exhibition-contemporary-artists-of-pest-county"
+    },
+    {
+      "year": "2021",
+      "name": "The Frame — 20 Years",
+      "location": "Rege Gallery, Tihany",
+      "summary": "Samsung The Frame became a changing digital exhibition surface for two decades of work.",
+      "url": "https://www.banhalmi.art/exhibitions/theframe.html",
+      "id": "exhibition-the-frame-20-years",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454346"
+    },
+    {
+      "year": "2021",
+      "name": "Te is lehetsz… / You Can Be Too…",
+      "location": "Rege Gallery, Tihany",
+      "summary": "A collaboration with the Hungarian National Ballet Institute focused on discipline, becoming and career choice.",
+      "url": "https://www.banhalmi.art/exhibitions/teislehetsz.html",
+      "id": "exhibition-te-is-lehetsz-you-can-be-too"
+    },
+    {
+      "year": "2022",
+      "name": "The Men’s Dream",
+      "location": "Club Skinos, New York",
+      "summary": "Fine-art nude, NFT technology and a charity auction were combined to question authenticity in digital culture.",
+      "url": "https://www.banhalmi.art/exhibitions/themensdream.html",
+      "id": "exhibition-the-mens-dream",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454332"
+    },
+    {
+      "year": "2023",
+      "name": "A valóság hamis arcai / The False Faces of Reality",
+      "location": "Rege Gallery, Tihany",
+      "summary": "AI-generated portraits were used to provoke media literacy and distrust of technically perfect images.",
+      "url": "https://www.banhalmi.art/exhibitions/avalosag.html",
+      "id": "exhibition-a-valosag-hamis-arcai-the-false-faces-of-reality"
+    },
+    {
+      "year": "2024",
+      "name": "Touch Vienna & Touch Munich",
+      "location": "Vienna · Munich",
+      "summary": "Warm, gold-toned images presented tantra massage as holistic care and rehabilitated touch as a sacred human act.",
+      "url": "https://www.banhalmi.art/exhibitions/touch-wien.html",
+      "id": "exhibition-touch-vienna-touch-munich",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454365"
+    },
+    {
+      "year": "2024",
+      "name": "Én a Nő / I Am the Woman",
+      "location": "Bewusst Sein Im Fokus, Vienna",
+      "summary": "A collective visual mosaic rejected a single definition of womanhood and anticipated the community logic of VIPACH.",
+      "url": "https://www.banhalmi.art/exhibitions/enano.html",
+      "id": "exhibition-en-a-no-i-am-the-woman"
+    },
+    {
+      "year": "2025",
+      "name": "Femme Fatale",
+      "location": "CITYgalleryVIENNA, Vienna",
+      "summary": "Lyrical softness and elemental strength were brought together in a collaborative reading of the archetype.",
+      "url": "https://www.banhalmi.art/exhibitions/femmefatale.html",
+      "id": "exhibition-femme-fatale"
+    },
+    {
+      "year": "2025",
+      "name": "Más kép / Más / Different Image Different",
+      "location": "Veszprém",
+      "summary": "Photography in dialogue with Zsófia Szele’s poetry examined chronic illness, caregiving, resilience and love.",
+      "url": "https://www.banhalmi.art/exhibitions/mas-kepp-mas.html",
+      "id": "exhibition-mas-kep-mas-different-image-different",
+      "wikidata": "https://www.wikidata.org/wiki/Q138454422"
+    },
+    {
+      "year": "2027",
+      "location": "Project in development, 2026–2027",
+      "summary": "A twenty-work interdisciplinary project about unchoreographed presence and a tribute to Robert Capa’s ethos.",
+      "url": "https://www.banhalmi.art/exhibitions/euforia.html",
+      "name": "EUFÓRIA — The Anatomy of Presence",
+      "id": "exhibition-euforia-the-anatomy-of-presence",
+      "wikidata": "https://www.wikidata.org/wiki/Q138717398",
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026",
+        "contentUrl": "https://www.norbertbanhalmi.com/assets/img/portraits/service-gallery/peter-magyar-portrait-2026-by-norbert-banhalmi.webp",
+        "sameAs": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+        "about": "https://www.wikidata.org/wiki/Q124488292",
+        "creator": "https://www.norbertbanhalmi.com/about/",
+        "description": "The first portrait in EUFÓRIA – The Anatomy of Presence, photographed by Norbert Banhalmi at Heroes’ Square, Budapest, on 15 March 2026 at 16:57. Wikimedia Commons verifies authorship and open licensing. The image has documented educational, encyclopaedic and international editorial reuse across publications with differing political viewpoints.",
+        "mediaCoverage": [
+          "https://www.banhalmi.art/exhibitions/euforia.html",
+          "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/",
+          "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw",
+          "https://www.brusselstimes.com/2148257/prime-minister-magyar-stops-hungarys-withdrawal-from-the-icc",
+          "https://easternherald.com/2026/06/10/hungary-anti-corruption-bill-eu-funds-magyar/",
+          "https://ua.news/en/world/peter-madiar-pleminnik-eksprezidenta-ugorshchini-ta-onuk-suddi",
+          "https://spectrejournal.com/the-hungarian-spring/",
+          "https://politicsuk.com/news/a-new-dawn-for-hungary-the-election-that-ended-the-16-year-orban-era/",
+          "https://www.americanthinker.com/articles/2026/04/hungary_a_thorny_transition_after_the_election.html",
+          "https://themilitaryanalyst.com/2026/04/13/orban-surrenders-a-lesson-for-russia-europe-and-america/"
+        ],
+        "verifiedSources": [
+          "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+          "https://www.wikidata.org/wiki/Q124488292",
+          "https://www.banhalmi.art/exhibitions/euforia.html"
+        ],
+        "mediaUsageDataset": "https://www.norbertbanhalmi.com/media-usage.json"
+      },
+      "featuredSubject": {
+        "name": "Péter Magyar",
+        "wikidata": "https://www.wikidata.org/wiki/Q124488292"
+      }
+    }
+  ],
+  "books": [
+    {
+      "year": "2017",
+      "name": "Ébredés – az Új kezdet! / Awakening: The New Beginning!",
+      "isbn": "9789631286632",
+      "contributors": "Dr. Dank Magdolna, Elek Erika, Dr. Csernus Imre, Bánhalmi Norbert",
+      "summary": "A book about women after gynaecological cancer, bringing artistic nude photography and personal testimony into a public language of recovery.",
+      "url": "https://www.banhalmi.art/#books",
+      "id": "book-ebredes-az-uj-kezdet-awakening-the-new-beginning",
+      "wikidata": "https://www.wikidata.org/wiki/Q138426842"
+    },
+    {
+      "year": "2017",
+      "name": "Szösszenetek / Snippets",
+      "isbn": "9786150000534",
+      "contributors": "Vincent & Vincent, Kovács Olga, Telekes Péter, Bánhalmi Norbert",
+      "summary": "A multi-sensory collaboration in which poems are reinterpreted through photographic and moving-image illustrations.",
+      "url": "https://www.banhalmi.art/#books",
+      "id": "book-szosszenetek-snippets",
+      "wikidata": "https://www.wikidata.org/wiki/Q138667529"
+    },
+    {
+      "year": "2018",
+      "name": "A Nő világa / The World of Woman",
+      "isbn": "9786150018294",
+      "contributors": "Vámos Miklós, Lénárt Éva, Bánhalmi Norbert",
+      "summary": "Nine transitions in women’s lives, presented through first-person stories and portraiture as a record of diversity and transformation.",
+      "url": "https://www.banhalmi.art/#books",
+      "id": "book-a-no-vilaga-the-world-of-woman",
+      "wikidata": "https://www.wikidata.org/wiki/Q138426876"
+    }
+  ],
+  "media": [
+    {
+      "year": "2017",
+      "url": "https://she.life.hu/nofilter/2017/03/banhalmi-norbert-profi-fotos-interju-modell-belso-szepseg-szepnek-latni-magad",
+      "name": "SHE / Life.hu — The man who looks at your appearance but sees your soul",
+      "id": "media-she-life-hu-the-man-who-looks-at-your-appearance-but-sees-your-soul",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2021",
+      "url": "https://zarido.hu/muvesz-az-uzlet-mogott-1-resz/",
+      "name": "Záridő — The Artist Behind the Business, Part 1: New York",
+      "id": "media-zarido-the-artist-behind-the-business-part-1-new-york",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2024",
+      "url": "https://jazzy.hu/adasok/banhalmi-norbert-fotomuvesz",
+      "name": "Jazzy Radio — Dr. Jazzy interview with photographic artist Norbert Bánhalmi",
+      "id": "media-jazzy-radio-dr-jazzy-interview-with-photographic-artist-norbert-banhalmi",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2025",
+      "url": "https://www.kiskegyed.hu/kepernyo/sulyos-baleset-vilaghiru-magyar-fotomuvesz/1dl719d",
+      "name": "Kiskegyed — “I would like to make people’s lives more beautiful”",
+      "id": "media-kiskegyed-i-would-like-to-make-peoples-lives-more-beautiful",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2025",
+      "url": "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
+      "name": "Rólunk.at — “The impossible is only a word”",
+      "id": "media-rolunk-at-the-impossible-is-only-a-word",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2014",
+      "url": "https://tinkmara.com/2014/12/14/magyar-nok-new-yorkban/",
+      "name": "Tinkmara — Hungarian Women in New York",
+      "id": "media-tinkmara-hungarian-women-in-new-york",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2015",
+      "url": "https://nlc.hu/foto/20150306/a-no-otven-arnyalata-foto/",
+      "name": "NLC — Fifty Shades of Woman",
+      "id": "media-nlc-fifty-shades-of-woman",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2016",
+      "url": "https://www.magyarforradalom1956.hu/v/merfoldkovek--56-os-portrekepekbol-rendeztek-kiallitast-new-yorkban/",
+      "name": "Magyarforradalom1956 — Milestones ’56 exhibition in New York",
+      "id": "media-magyarforradalom1956-milestones-56-exhibition-in-new-york",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2016",
+      "url": "https://web.archive.org/web/20180424135310/http://csalad.hu/2016/06/07/apanak-lenni-jo-meselnek-a-fotok",
+      "name": "Család.hu — Becoming a father: the photographs tell the story",
+      "id": "media-csalad-hu-becoming-a-father-the-photographs-tell-the-story",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2017",
+      "url": "https://she.life.hu/nofilter/20170413-aktfotozas-elmeny-onbizalom-mellrak-tulelo-melleltavolito-mutet.html",
+      "name": "SHE / Life.hu — My first and last fine-art nude photo session",
+      "id": "media-she-life-hu-my-first-and-last-fine-art-nude-photo-session",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2018",
+      "url": "https://www.veol.hu/vezeto-hirek/2018/03/csolnoky-ferenc-korhaz-onkologiai-centrum-rak-kiallitas",
+      "name": "VEOL — Permanent exhibition at the Oncology Centre",
+      "id": "media-veol-permanent-exhibition-at-the-oncology-centre",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2019–21",
+      "url": "https://zarido.hu/muvesz-az-uzlet-mogott-3-resz/",
+      "name": "Záridő — The Artist Behind the Business, interview series",
+      "id": "media-zarido-the-artist-behind-the-business-interview-series",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2019–21",
+      "url": "https://sms-bridges.com/reveal-your-artistic-side/",
+      "name": "The Japan Times / Bridges — Reveal your artistic side",
+      "id": "media-the-japan-times-bridges-reveal-your-artistic-side",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2021",
+      "url": "https://www.youtube.com/watch?v=cv4ylqkvNo4",
+      "name": "Petőfi TV — Digital photography exhibition in Tihany",
+      "id": "media-petofi-tv-digital-photography-exhibition-in-tihany",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2021–26",
+      "url": "https://zarido.hu/a-nagy-mentoakcio-muveszet-elvitelre/",
+      "name": "Záridő — Art to Go: a community rescue initiative",
+      "id": "media-zarido-art-to-go-a-community-rescue-initiative",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2021–26",
+      "url": "https://www.bitcoinbazis.hu/a-magyar-fotomuvesz-aki-az-aktfotokat-az-nft-k-vilagaba-invitalta/",
+      "name": "Bitcoinbázis — A Hungarian photographer brings nude art into the NFT world",
+      "id": "media-bitcoinbazis-a-hungarian-photographer-brings-fine-art-nude-work-into-the-nft-wor",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2021–26",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3300070/",
+      "name": "ORF Volksgruppen — A photography club in Vienna",
+      "id": "media-orf-volksgruppen-a-photography-club-in-vienna",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2026",
+      "url": "https://www.stihon.eu/2026/01/29/itt-a-3-lapszam/",
+      "name": "StiHon.eu — When photography creates community",
+      "id": "media-stihon-eu-when-photography-creates-community",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    },
+    {
+      "year": "2026",
+      "url": "https://rolunk.at/kultura/egyeves-a-bmi-fotoklub-hogyan-teremt-kozosseget-a-muveszet",
+      "name": "Rólunk.at — One year of the BMI Photo Club: how art builds community",
+      "id": "media-rolunk-at-one-year-of-the-bmi-photo-club-how-art-builds-community",
+      "summary": "Source-linked record in the BANHALMI artistic archive."
+    }
+  ],
+  "@context": "https://schema.org",
+  "@id": "https://www.norbertbanhalmi.com/oeuvre.json",
+  "schemaVersion": "4.0",
+  "dateModified": "2026-07-11T12:00:00+02:00",
+  "entityGraph": "https://www.norbertbanhalmi.com/entity.jsonld",
+  "wikidataEntityCount": 28,
+  "permanentExhibitions": [
+    {
+      "since": 2018,
+      "name": "Permanent exhibition at the Csolnoky Ferenc Hospital Oncology Centre",
+      "location": "Veszprém, Hungary",
+      "theme": "Portraits and stories of women affected by cancer",
+      "source": "https://www.veol.hu/vezeto-hirek/2018/03/csolnoky-ferenc-korhaz-onkologiai-centrum-rak-kiallitas"
+    }
+  ],
+  "curatorialProjects": [
+    {
+      "year": "2020",
+      "title": "Most vagy Soha / Now or Never — photography exhibition",
+      "venue": "Rege Gallery Tihany"
+    },
+    {
+      "year": "2020",
+      "title": "Sári varázslatos világa — paintings by Sára Bernát",
+      "venue": "Rege Gallery Tihany"
+    },
+    {
+      "year": "2021",
+      "title": "Szemek a nagyvilágból — photography by Péter Kónya",
+      "venue": "Rege Gallery Tihany"
+    },
+    {
+      "year": "2021",
+      "title": "Medi-Szín — paintings by Barnabás Szabó Sipos",
+      "venue": "Rege Gallery Tihany"
+    },
+    {
+      "year": "2021",
+      "title": "The Frame — digital photography exhibition",
+      "venue": "Rege Gallery Tihany"
+    },
+    {
+      "year": "2021",
+      "title": "Balaton-felvidék — Pannon Photographers Association",
+      "venue": "Rege Gallery Tihany"
+    },
+    {
+      "year": "2022",
+      "title": "Félúton — digital painting exhibition by Enikő Gecse-Legény",
+      "venue": "Rege Gallery Tihany"
+    },
+    {
+      "year": "2022",
+      "title": "A természet csendje — Baumann Béla × John Judit × Polgár Martina",
+      "venue": "Rege Gallery Tihany"
+    }
+  ],
+  "communityAndEducation": [
+    {
+      "year": 2021,
+      "name": "Művészet Elvitelre / Art to Go",
+      "type": "charity art action",
+      "partners": [
+        "OM SYSTEM",
+        "Starbucks",
+        "participating artists"
+      ]
+    },
+    {
+      "year": 2024,
+      "name": "Hungarian-language photography education in Vienna",
+      "type": "education and workshops",
+      "organization": "Bécsi Magyar Iskola / BMI Fotóklub"
+    },
+    {
+      "year": 2025,
+      "name": "Climate-control fundraiser",
+      "type": "community portrait fundraiser",
+      "beneficiary": "Bécsi Magyar Iskola"
+    },
+    {
+      "year": 2025,
+      "name": "Piano fundraiser",
+      "type": "community portrait fundraiser",
+      "beneficiary": "Bécsi Magyar Iskola"
+    },
+    {
+      "year": 2026,
+      "name": "Be Smart Kids Club",
+      "type": "free digital education",
+      "audience": "Hungarian-speaking young people aged 10–16",
+      "topics": [
+        "artificial intelligence",
+        "content creation",
+        "modern web development",
+        "nonprofit service"
+      ]
+    }
+  ],
+  "professionalArticles": [
+    {
+      "title": "RGB fotózás – az új trend",
+      "url": "https://web.archive.org/"
+    },
+    {
+      "title": "Amikor csak egy táncpartnered van egész estére",
+      "url": "https://www.milcclub.com/post/amikor-csak-egy-t%C3%A1ncpartnered-van-eg%C3%A9sz-est%C3%A9re"
+    },
+    {
+      "title": "Amikor kéznél van pár Lume Cube",
+      "url": "https://www.tripont.hu/amikor-keznel-van-par-lume-cube-b602.html"
+    },
+    {
+      "title": "Egy kezdő fotós New Yorkban",
+      "url": "https://web.archive.org/web/20180621233214/http%3A//www.tripont.hu/problog/3032/egy_kezdo_fotos_new_yorkban"
+    },
+    {
+      "title": "Aktfotózás otthon, a fürdőszobában",
+      "url": "https://web.archive.org/web/20180217103411/http%3A//www.tripont.hu/problog/2950/aktfozoas_otthon_a_furdoszobaban"
+    },
+    {
+      "title": "A legkisebbel a nagyok között",
+      "url": "https://web.archive.org/web/20181107032149/http%3A//www.tripont.hu/problog/3182/a_legkisebbel_a_nagyok_kozott"
+    }
+  ],
+  "videoMedia": [
+    {
+      "title": "M1 — A Nő 50 árnyalata fotókiállítás",
+      "url": "https://www.youtube.com/watch?v=AfK29ELPWBY"
+    },
+    {
+      "title": "ECHO TV / SHE — Ébredés: Az Új kezdet!",
+      "url": "https://www.youtube.com/watch?v=rkSlrX6kEyg"
+    },
+    {
+      "title": "M5 — Mérföldkövek ’56 portrék és életutak",
+      "url": "https://www.youtube.com/watch?v=Q9vXitVpo7Y"
+    },
+    {
+      "title": "Petőfi TV — Digitális fotókiállítás Tihanyban",
+      "url": "https://www.youtube.com/watch?v=cv4ylqkvNo4"
+    },
+    {
+      "title": "A Hét Embere — interjú Schmuck Andorral",
+      "url": "https://www.youtube.com/watch?v=zCHkRlv-ZB0"
+    },
+    {
+      "title": "Trend Magazin — Retusált címlapfotók, nem létező ideálok",
+      "url": "https://www.youtube.com/watch?v=nyKyRWrtn7Q"
+    },
+    {
+      "title": "M5 Kultúra — IV. Budapesti fotósviadal",
+      "url": "https://www.youtube.com/watch?v=ch66zZp4--w"
+    },
+    {
+      "title": "M1 Kunszt — A portréfotózás és a mögötte rejlő pszichológia",
+      "url": "https://www.youtube.com/watch?v=Fv3J_l8Mp_I"
+    },
+    {
+      "title": "Petőfi TV — Apa lettem fotókiállítás",
+      "url": "https://www.youtube.com/watch?v=dDfbT7JlDi4"
+    },
+    {
+      "title": "Petőfi TV — A Nő világa könyv és kiállítás",
+      "url": "https://www.youtube.com/watch?v=cuPzuMSXxMc"
+    },
+    {
+      "title": "Záridő Magazin — 20 éves jubileumi nagyinterjú",
+      "url": "https://www.youtube.com/watch?v=npJ6YeYxQ64"
+    },
+    {
+      "title": "Mindennapkönyv — „Minden, ami egy nővel megtörténhet”",
+      "url": "https://www.youtube.com/watch?v=ZzZj0ompifI"
+    }
+  ],
+  "sourceReferences": [
+    {
+      "name": "Hungarian Wikipedia biography",
+      "url": "https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert",
+      "revisionDate": "2026-06-18",
+      "status": "checked revision"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.brusselstimes.com/2148257/prime-minister-magyar-stops-hungarys-withdrawal-from-the-icc"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg"
+    },
+    {
+      "name": "Source reference",
+      "url": "https://www.wikidata.org/wiki/Q124488292"
+    },
+    {
+      "name": "Documented media or context source",
+      "url": "https://www.banhalmi.art/exhibitions/euforia.html"
+    },
+    {
+      "name": "Documented media or context source",
+      "url": "https://easternherald.com/2026/06/10/hungary-anti-corruption-bill-eu-funds-magyar/"
+    },
+    {
+      "name": "Documented media or context source",
+      "url": "https://ua.news/en/world/peter-madiar-pleminnik-eksprezidenta-ugorshchini-ta-onuk-suddi"
+    },
+    {
+      "name": "Documented media or context source",
+      "url": "https://spectrejournal.com/the-hungarian-spring/"
+    },
+    {
+      "name": "Documented media or context source",
+      "url": "https://politicsuk.com/news/a-new-dawn-for-hungary-the-election-that-ended-the-16-year-orban-era/"
+    },
+    {
+      "name": "Documented media or context source",
+      "url": "https://www.americanthinker.com/articles/2026/04/hungary_a_thorny_transition_after_the_election.html"
+    },
+    {
+      "name": "Documented media or context source",
+      "url": "https://themilitaryanalyst.com/2026/04/13/orban-surrenders-a-lesson-for-russia-europe-and-america/"
+    },
+    {
+      "name": "Documented media or context source",
+      "url": "https://www.norbertbanhalmi.com/media-usage.json"
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "peter-magyar-portrait-2026",
+      "name": "Péter Magyar portrait — visual positioning case study",
+      "url": "https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/",
+      "languageVersions": {
+        "en": "https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/",
+        "de-AT": "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/",
+        "hu-HU": "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/"
+      },
+      "image": "https://www.norbertbanhalmi.com/assets/img/portraits/service-gallery/peter-magyar-portrait-2026-by-norbert-banhalmi.webp",
+      "evidence": "https://www.norbertbanhalmi.com/media-usage.json"
+    }
+  ],
+  "origin": {
+    "year": 1999,
+    "context": "MOL Y2K project",
+    "role": "IT specialist",
+    "action": "Self-initiated documentation of the project",
+    "equipment": "Basic 1.3-megapixel digital camera; exact model not claimed",
+    "evidenceStatus": "Artist recollection",
+    "chronology": "Military documentation followed later as a separate phase."
+  }
+}

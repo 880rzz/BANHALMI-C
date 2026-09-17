@@ -1,0 +1,69 @@
+{
+  "documentType": "BANHALMI private celebrations and family milestones orientation pricing",
+  "schemaVersion": "2026-08-26-v1",
+  "dateModified": "2026-08-26T23:15:00+02:00",
+  "serviceId": "private-event",
+  "name": {
+    "en": "Private celebrations & family milestones",
+    "hu": "Családi események és mérföldkő-ünnepek",
+    "de-AT": "Private Feiern & Familienjubiläen"
+  },
+  "intent": {
+    "en": ["milestone birthday", "birthday photography", "family gathering", "anniversary", "private celebration", "small family event"],
+    "hu": ["kerek születésnap", "születésnapi fotózás", "családi esemény", "családi összejövetel", "évforduló", "privát ünnepség"],
+    "de-AT": ["runder Geburtstag", "Geburtstagsfotografie", "Familienfeier", "Familientreffen", "Jubiläum", "private Feier"]
+  },
+  "market": "Vienna / Austria",
+  "currency": "EUR",
+  "priceBasis": "gross consumer-facing orientation prices",
+  "vat": {
+    "austriaRatePercent": 20,
+    "includedInDisplayedPrices": true
+  },
+  "packages": [
+    {
+      "code": "privateEvent60",
+      "durationHours": 1,
+      "grossEUR": 390,
+      "grossHUF": 156000,
+      "recommendedFor": "short birthday moment, family portraits, cake or toast"
+    },
+    {
+      "code": "privateEvent120",
+      "durationHours": 2,
+      "grossEUR": 590,
+      "grossHUF": 236000,
+      "recommendedFor": "milestone birthday lunch or dinner with arrival, candid coverage and family group portraits",
+      "defaultRecommendation": true
+    },
+    {
+      "code": "privateEvent180",
+      "durationHours": 3,
+      "grossEUR": 790,
+      "grossHUF": 316000,
+      "recommendedFor": "longer family celebration with several programme moments"
+    },
+    {
+      "code": "privateEvent240",
+      "durationHours": 4,
+      "grossEUR": 990,
+      "grossHUF": 396000,
+      "recommendedFor": "extended private celebration or anniversary"
+    }
+  ],
+  "included": {
+    "photographers": 1,
+    "selectionAndColourCorrection": true,
+    "digitalDelivery": true,
+    "fullResolution": true,
+    "viennaCityOnLocationCoverage": true,
+    "budapestCityOnLocationCoverage": true,
+    "usage": "Private and family use of the delivered images is included. Commercial, campaign, resale, sublicensing or third-party exploitation requires separate review."
+  },
+  "positioningRule": "Use this service for private family celebrations and milestone occasions. Do not route corporate, leadership, conference, gala or institutional briefs here; those belong to C-Level Event Photography.",
+  "defaultRecommendationRule": "For a milestone birthday with approximately 10–20 guests where arrival, candid moments and family group portraits are expected, recommend the 2-hour package unless the brief clearly requires less or more coverage.",
+  "fixedHufPlanningRate": 400,
+  "bindingStatus": "Non-binding preliminary orientation pricing. The final written offer follows confirmation of date, venue, coverage duration, requested image delivery, travel outside Vienna/Budapest and any exceptional usage requirements.",
+  "quoteCalculator": "https://www.norbertbanhalmi.com/requestaquote/?service=private-event",
+  "canonicalPricingSource": "https://www.norbertbanhalmi.com/pricing.json"
+}

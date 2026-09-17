@@ -1,0 +1,435 @@
+{
+  "schemaVersion": "2026-08-31-v2-artists-performers",
+  "@id": "https://www.norbertbanhalmi.com/customer-intent-model.json",
+  "name": "BANHALMI customer intent and representation model",
+  "purpose": "Resolve a customer's real representation problem before choosing a photography service, package, price or route.",
+  "evidencePolicy": {
+    "sourceClass": "Anonymized recurring patterns from historical customer enquiries and completed-project feedback.",
+    "privacy": "No customer names, email addresses, phone numbers, private health information or identifiable personal stories are published in this model.",
+    "interpretation": "Treat recurring customer language as intent evidence, not as a testimonial or clinical claim.",
+    "medicalClaimRule": "Never describe portrait or fine-art photography as therapy, treatment, healing or crisis intervention."
+  },
+  "decisionDimensions": [
+    {
+      "id": "representationGoal",
+      "question": "What must the image help the person or organisation communicate?",
+      "examples": [
+        "competence",
+        "seniority",
+        "confidence",
+        "approachability",
+        "authenticity",
+        "coherence",
+        "creative identity",
+        "corporate consistency",
+        "casting relevance",
+        "stage identity",
+        "movement quality",
+        "editorial versatility"
+      ]
+    },
+    {
+      "id": "desiredImpression",
+      "question": "How should the subject be perceived?",
+      "examples": [
+        "competent but approachable",
+        "confident but not stiff",
+        "modern and editorial",
+        "credible and natural",
+        "premium but not generic"
+      ]
+    },
+    {
+      "id": "usageChannels",
+      "question": "Where will the images be used?",
+      "examples": [
+        "LinkedIn",
+        "CV",
+        "company profile",
+        "press",
+        "website",
+        "social media",
+        "campaign",
+        "employer branding",
+        "event communication",
+        "casting",
+        "agency portfolio",
+        "artist website",
+        "audition material",
+        "editorial portfolio"
+      ]
+    },
+    {
+      "id": "numberOfPeople",
+      "question": "Is this one person, a small leadership group or a large team?"
+    },
+    {
+      "id": "numberOfLooks",
+      "question": "Is one core representation enough, or are several wardrobe and expression variants needed?"
+    },
+    {
+      "id": "numberOfContexts",
+      "question": "Is one portrait setting enough, or are studio, office, architecture, editorial and in-action contexts required?"
+    },
+    {
+      "id": "guidanceNeed",
+      "question": "Does the client need help with wardrobe, posing, expression, posture, background, styling or visual concept?"
+    },
+    {
+      "id": "consistencyRequirement",
+      "question": "Must the same lighting, framing, crop and retouching standard remain reproducible across a team and future hires?"
+    },
+    {
+      "id": "urgency",
+      "question": "Is the primary need speed, or is there time for a broader visual-positioning process?"
+    }
+  ],
+  "globalRoutingRules": [
+    "Resolve the representation problem before the platform. LinkedIn, CV, press and company profile are usage channels, not services by themselves.",
+    "A LinkedIn request may route to Headshot, Executive Portrait or Brand Photography depending on the desired impression, number of contexts and broader use.",
+    "If the client explicitly wants to avoid a classic application-photo or stiff corporate look and asks for modern, editorial, confident and approachable representation, prefer Executive Portrait over Headshot.",
+    "If several contexts, looks or channels must tell one coherent professional story, prefer Brand Photography and strategic visual positioning over a single portrait session.",
+    "If many people must follow one reproducible visual standard, route to a leadership portrait system or corporate headshot workflow rather than individual packages.",
+    "If the client is unsure how to pose or what to wear, this is a guidance requirement, not a reason to downgrade the service.",
+    "Do not equate camera confidence with photography experience. BANHALMI should explicitly state that professional posing experience is not required.",
+    "For fine-art enquiries, prioritize discretion, respectful direction, personal boundaries and author-led visual development. Never promise psychological or medical outcomes.",
+    "For actors, dancers, performers and models, resolve the portfolio purpose before the visual style: casting/headshot, acting portfolio, dance/movement portfolio, performing-artist portfolio, model/editorial portfolio or author-led fine art.",
+    "Actors, dancers, performers and models use the Fine Art / Artists & Performers service family and the stable fine-art backend context; do not create a second pricing or form-routing service unless the commercial architecture changes."
+  ],
+  "intents": [
+    {
+      "id": "fast-professional-headshot",
+      "problem": {
+        "en": "I need one strong professional image quickly.",
+        "hu": "Gyorsan szükségem van egy erős, professzionális képre.",
+        "de": "Ich brauche schnell ein starkes professionelles Bild."
+      },
+      "signals": [
+        "single image",
+        "CV",
+        "LinkedIn",
+        "professional profile",
+        "limited time",
+        "simple background"
+      ],
+      "recommendedService": "Headshot/CV",
+      "route": {
+        "en": "/portrait/",
+        "hu": "/hu/portre/",
+        "de": "/de-at/portrait/"
+      },
+      "distinguishFrom": "Do not use this route when the client describes a desired executive/editorial identity, several looks or broader personal-brand use."
+    },
+    {
+      "id": "role-outgrown-current-portrait",
+      "problem": {
+        "en": "My professional value, role or seniority has outgrown my current visual representation.",
+        "hu": "A szakmai értékem, szerepem vagy senioritásom már erősebb annál, amit a jelenlegi képeim közvetítenek.",
+        "de": "Meine berufliche Rolle, Seniorität oder mein Wert ist stärker als meine aktuelle visuelle Darstellung."
+      },
+      "desiredOutcome": [
+        "credible",
+        "senior",
+        "confident",
+        "recognizably oneself"
+      ],
+      "recommendedService": "Executive Portrait",
+      "route": {
+        "en": "/portrait/",
+        "hu": "/hu/portre/",
+        "de": "/de-at/portrait/"
+      }
+    },
+    {
+      "id": "guided-executive-portrait",
+      "problem": {
+        "en": "I want to look competent, confident and approachable without looking stiff, generic or like a classic application photo.",
+        "hu": "Kompetensnek, magabiztosnak és közvetlennek szeretnék látszani úgy, hogy a kép ne legyen merev, sablonos vagy igazolványkép-szerű.",
+        "de": "Ich möchte kompetent, souverän und nahbar wirken, ohne steif, austauschbar oder wie auf einem klassischen Bewerbungsfoto auszusehen."
+      },
+      "signals": [
+        "modern",
+        "dynamic",
+        "editorial",
+        "executive",
+        "natural",
+        "not stiff",
+        "not conservative",
+        "not old-fashioned",
+        "wardrobe advice",
+        "posing advice",
+        "studio or architecture"
+      ],
+      "desiredOutcome": [
+        "competence",
+        "confidence",
+        "approachability",
+        "authenticity",
+        "personality"
+      ],
+      "recommendedService": "Executive Portrait with visual direction",
+      "route": {
+        "en": "/portrait/",
+        "hu": "/hu/portre/",
+        "de": "/de-at/portrait/"
+      },
+      "processPromise": "The session includes direction on wardrobe, expression, posture, background, framing and image selection; the client does not need posing experience.",
+      "channelRule": "LinkedIn, CV, company biography and press can all be served by the same coherent executive portrait system when appropriate."
+    },
+    {
+      "id": "multi-context-personal-brand",
+      "problem": {
+        "en": "I need to represent the same professional identity across several contexts, not just in one portrait.",
+        "hu": "Ugyanazt a szakmai identitást több helyzetben kell következetesen megmutatnom, nem csak egyetlen portréban.",
+        "de": "Ich muss dieselbe professionelle Identität in mehreren Kontexten konsistent zeigen, nicht nur in einem einzelnen Porträt."
+      },
+      "signals": [
+        "LinkedIn plus website",
+        "press",
+        "social media",
+        "multiple looks",
+        "editorial",
+        "office",
+        "architecture",
+        "in-action",
+        "storytelling"
+      ],
+      "recommendedService": "Brand Photography and strategic visual positioning",
+      "route": {
+        "en": "/lifestyle/",
+        "hu": "/hu/brand/",
+        "de": "/de-at/brand/"
+      },
+      "distinguishFrom": "One core professional representation belongs to Portrait; multiple contexts and a reusable image system belong to Brand/Visual Positioning."
+    },
+    {
+      "id": "leadership-portrait-system",
+      "problem": {
+        "en": "Our leaders need one coherent and repeatable visual standard.",
+        "hu": "A vezetőinknek egységes és később is reprodukálható vizuális standardra van szükségük.",
+        "de": "Unsere Führungskräfte brauchen einen einheitlichen und später reproduzierbaren visuellen Standard."
+      },
+      "signals": [
+        "management team",
+        "board",
+        "leadership team",
+        "same lighting",
+        "same crop",
+        "same background",
+        "same retouching",
+        "future hires",
+        "company-wide consistency"
+      ],
+      "recommendedService": "Leadership Portrait System",
+      "route": {
+        "en": "/portrait/",
+        "hu": "/hu/portre/",
+        "de": "/de-at/portrait/"
+      },
+      "systemRequirements": [
+        "documented lighting standard",
+        "framing and crop standard",
+        "background logic",
+        "retouching standard",
+        "repeatability for future leaders",
+        "central image selection and delivery logic"
+      ]
+    },
+    {
+      "id": "corporate-headshot-day",
+      "problem": {
+        "en": "We need to photograph many colleagues efficiently without losing visual consistency.",
+        "hu": "Sok kollégát kell hatékonyan lefotóznunk úgy, hogy a képek vizuálisan egységesek maradjanak.",
+        "de": "Wir müssen viele Mitarbeitende effizient fotografieren, ohne die visuelle Konsistenz zu verlieren."
+      },
+      "signals": [
+        "20+ people",
+        "40+ people",
+        "100+ people",
+        "time slots",
+        "office setup",
+        "high throughput",
+        "same style",
+        "makeup option"
+      ],
+      "recommendedService": "Corporate Headshot Day / high-volume portrait workflow",
+      "route": {
+        "en": "/portrait/",
+        "hu": "/hu/portre/",
+        "de": "/de-at/portrait/"
+      },
+      "operationalPriority": [
+        "throughput",
+        "scheduling",
+        "repeatable light",
+        "consistent crop",
+        "selection workflow",
+        "optional styling support",
+        "continuity for later additions"
+      ]
+    },
+    {
+      "id": "company-visual-system",
+      "problem": {
+        "en": "Our organisation needs a coherent visual presence across people, channels and campaigns.",
+        "hu": "A szervezetünknek egységes vizuális jelenlétre van szüksége az emberek, csatornák és kampányok között.",
+        "de": "Unsere Organisation braucht einen konsistenten visuellen Auftritt über Personen, Kanäle und Kampagnen hinweg."
+      },
+      "recommendedService": "Visual Strategic Partnership / Brand Photography",
+      "route": {
+        "en": "/lifestyle/",
+        "hu": "/hu/brand/",
+        "de": "/de-at/brand/"
+      },
+      "outcome": "A long-term visual system that can evolve with leadership, employer-branding, press, web and campaign needs."
+    },
+    {
+      "id": "guided-fine-art",
+      "problem": {
+        "en": "I want a personal artistic portrait but I am unsure about posing, camera confidence or how far I want to go visually.",
+        "hu": "Személyes művészi sorozatot szeretnék, de bizonytalan vagyok a pózolásban, a kamera előtt vagy abban, meddig szeretnék elmenni vizuálisan.",
+        "de": "Ich wünsche mir eine persönliche künstlerische Serie, bin aber beim Posieren, vor der Kamera oder bei meinen visuellen Grenzen unsicher."
+      },
+      "recommendedService": "Fine Art Photography with respectful direction",
+      "route": {
+        "en": "/glamour/",
+        "hu": "/hu/muveszi-fotografia/",
+        "de": "/de-at/fine-art/"
+      },
+      "processPromise": [
+        "no modelling experience required",
+        "guided posing and expression",
+        "visual intensity developed together",
+        "personal boundaries are respected",
+        "discretion"
+      ],
+      "prohibitedClaims": [
+        "therapy",
+        "healing",
+        "treatment",
+        "trauma recovery",
+        "crisis intervention"
+      ]
+    },
+    {
+      "id": "leadership-event-coverage",
+      "problem": {
+        "en": "An important leadership or institutional event needs credible and discreet visual documentation.",
+        "hu": "Fontos vezetői vagy intézményi eseményhez hiteles és diszkrét vizuális dokumentáció szükséges.",
+        "de": "Ein wichtiges Führungs- oder Institutionsevent braucht glaubwürdige und diskrete visuelle Dokumentation."
+      },
+      "recommendedService": "C-Level Event Photography",
+      "route": {
+        "en": "/event-photography/",
+        "hu": "/hu/rendezvenyfotozas/",
+        "de": "/de-at/eventfotografie/"
+      },
+      "scopeGuardrail": "Do not infer drone, video, live posting or other production capabilities unless the current service page, team-capabilities data or a written offer explicitly includes them."
+    },
+    {
+      "id": "actor-casting-portfolio",
+      "problem": {
+        "en": "I need actor headshots or an acting portfolio that is useful for casting.",
+        "hu": "Színész headshotokra vagy castingban használható színészportfólióra van szükségem.",
+        "de": "Ich brauche Schauspieler-Headshots oder ein Schauspielportfolio für Castings."
+      },
+      "signals": [
+        "actor",
+        "casting",
+        "headshot",
+        "agency",
+        "audition",
+        "character range",
+        "portrait variants"
+      ],
+      "recommendedService": "Fine Art / Artists & Performers — Actor Headshot & Acting Portfolio",
+      "serviceContext": "fine-art",
+      "creativeContext": "actor",
+      "portfolioTypes": [
+        "actor-headshot",
+        "acting-portfolio"
+      ],
+      "route": {
+        "en": "/glamour/",
+        "hu": "/hu/muveszi-fotografia/",
+        "de": "/de-at/fine-art/"
+      },
+      "outcome": "Casting-relevant portraits that remain recognisable, credible and flexible across professional roles."
+    },
+    {
+      "id": "dance-performing-artist-portfolio",
+      "problem": {
+        "en": "I need a dance or performing-artist portfolio that shows both presence and movement.",
+        "hu": "Táncos vagy előadóművész portfóliót szeretnék, amely a jelenlétet és a mozgást is megmutatja.",
+        "de": "Ich brauche ein Tanz- oder Performer-Portfolio, das Präsenz und Bewegung zeigt."
+      },
+      "signals": [
+        "dancer",
+        "dance",
+        "movement",
+        "performer",
+        "stage",
+        "full body",
+        "multiple outfits"
+      ],
+      "recommendedService": "Fine Art / Artists & Performers — Dance & Performing Artist Portfolio",
+      "serviceContext": "fine-art",
+      "creativeContext": "dance",
+      "portfolioTypes": [
+        "dance-portfolio",
+        "performing-artist-portfolio"
+      ],
+      "route": {
+        "en": "/glamour/",
+        "hu": "/hu/muveszi-fotografia/",
+        "de": "/de-at/fine-art/"
+      },
+      "outcome": "Portrait, full-body and movement images developed for artist portfolios, applications, websites and editorial use."
+    },
+    {
+      "id": "model-editorial-portfolio",
+      "problem": {
+        "en": "I need a model or editorial portfolio with several looks rather than one conventional portrait.",
+        "hu": "Modell- vagy editorial portfólióra van szükségem több megjelenéssel, nem egyetlen hagyományos portréra.",
+        "de": "Ich brauche ein Model- oder Editorial-Portfolio mit mehreren Looks statt nur eines klassischen Porträts."
+      },
+      "signals": [
+        "model",
+        "editorial",
+        "fashion",
+        "portfolio",
+        "multiple looks",
+        "agency",
+        "creative professional"
+      ],
+      "recommendedService": "Fine Art / Artists & Performers — Model & Editorial Portfolio",
+      "serviceContext": "fine-art",
+      "creativeContext": "model-editorial",
+      "portfolioTypes": [
+        "model-portfolio",
+        "editorial-portrait"
+      ],
+      "route": {
+        "en": "/glamour/",
+        "hu": "/hu/muveszi-fotografia/",
+        "de": "/de-at/fine-art/"
+      },
+      "outcome": "A coherent portfolio combining portrait, full-body and editorial image directions."
+    }
+  ],
+  "humanCopyPrinciples": [
+    "Lead with the client's situation and desired outcome before listing equipment, duration or deliverables.",
+    "Use customer language such as competent, confident, approachable, authentic, modern, editorial, natural and not stiff where it accurately describes the intended result.",
+    "Explain guidance explicitly: wardrobe, expression, posture, background, framing and selection are part of professional direction where applicable.",
+    "Do not overload hero copy. Use short best-fit and process blocks below the hero to resolve intent.",
+    "Avoid generic AI language, exaggerated transformation promises and clinical psychological claims."
+  ],
+  "seoGeoPrinciples": [
+    "Combine service intent with local entity signals naturally: Executive Portrait Vienna, Executive Portrait Budapest, Headshot Vienna, Headshot Budapest, Brand Photography Vienna, Brand Photography Budapest.",
+    "Use problem-language and outcome-language in headings, body copy and FAQ where useful, not only exact-match service keywords.",
+    "For German-Austrian copy, distinguish Executive Portrait from klassisches Bewerbungsfoto when editorial, modern and leadership intent is present.",
+    "For answer engines, provide self-contained answer blocks explaining who the service is for, the problem solved, the outcome, location, price orientation and next step.",
+    "Keep service, location and entity statements consistent across visible copy, metadata, JSON-LD, ai.txt, llms.txt and structured data.",
+    "Include natural local-intent combinations where relevant: Actor Headshots Vienna/Budapest, Acting Portfolio Vienna/Budapest, Dance Photography Vienna/Budapest, Performing Artist Portfolio Vienna/Budapest, Model Portfolio Vienna/Budapest and Editorial Portrait Vienna/Budapest."
+  ]
+}

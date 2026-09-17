@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "@id": "https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#services",
+      "name": "BANHALMI service-intent map",
+      "description": "Machine-readable mapping between common customer representation needs and BANHALMI photography services in Vienna and Budapest.",
+      "itemListElement": [
+        {"@type":"ListItem","position":1,"item":{"@id":"https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#headshot"}},
+        {"@type":"ListItem","position":2,"item":{"@id":"https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#executive-portrait"}},
+        {"@type":"ListItem","position":3,"item":{"@id":"https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#visual-positioning"}},
+        {"@type":"ListItem","position":4,"item":{"@id":"https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#leadership-system"}},
+        {"@type":"ListItem","position":5,"item":{"@id":"https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#corporate-headshot-day"}},
+        {"@type":"ListItem","position":6,"item":{"@id":"https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#fine-art"}},
+        {"@type":"ListItem","position":7,"item":{"@id":"https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#event"}}
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#headshot",
+      "name": "Professional Headshot / CV Portrait",
+      "serviceType": "Professional headshot photography",
+      "provider": {"@id":"https://www.norbertbanhalmi.com/#organization"},
+      "areaServed": [{"@type":"City","name":"Vienna"},{"@type":"City","name":"Budapest"}],
+      "url": "https://www.norbertbanhalmi.com/portrait/",
+      "description": "Focused professional portrait for clients who primarily need one polished image quickly for CV, LinkedIn or a professional profile."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#executive-portrait",
+      "name": "Executive Portrait with Visual Direction",
+      "serviceType": "Executive portrait photography",
+      "provider": {"@id":"https://www.norbertbanhalmi.com/#organization"},
+      "areaServed": [{"@type":"City","name":"Vienna"},{"@type":"City","name":"Budapest"}],
+      "url": "https://www.norbertbanhalmi.com/portrait/",
+      "audience": {"@type":"Audience","audienceType":"Executives, C-level leaders, founders, entrepreneurs, experts and professionals"},
+      "description": "Guided executive portrait photography for people whose current visual representation no longer reflects their role, seniority or professional direction, or who want to appear competent, confident and approachable without a stiff or generic application-photo look."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#visual-positioning",
+      "name": "Brand Photography and Strategic Visual Positioning",
+      "serviceType": "Brand photography and visual positioning",
+      "provider": {"@id":"https://www.norbertbanhalmi.com/#organization"},
+      "areaServed": [{"@type":"City","name":"Vienna"},{"@type":"City","name":"Budapest"}],
+      "url": "https://www.norbertbanhalmi.com/lifestyle/",
+      "description": "Multi-context image system for professionals and organisations that need one coherent identity across website, LinkedIn, press, social media, presentations, employer branding and campaigns."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#leadership-system",
+      "name": "Leadership Portrait System",
+      "serviceType": "Corporate leadership portrait system",
+      "provider": {"@id":"https://www.norbertbanhalmi.com/#organization"},
+      "areaServed": [{"@type":"City","name":"Vienna"},{"@type":"City","name":"Budapest"}],
+      "url": "https://www.norbertbanhalmi.com/portrait/",
+      "audience": {"@type":"BusinessAudience","audienceType":"Leadership teams, boards and organisations"},
+      "description": "Repeatable leadership portrait standard based on consistent lighting, framing, crop, background logic and retouching so current and future leaders remain part of one coherent visual language."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#corporate-headshot-day",
+      "name": "Corporate Headshot Day",
+      "serviceType": "High-volume corporate headshot photography",
+      "provider": {"@id":"https://www.norbertbanhalmi.com/#organization"},
+      "areaServed": [{"@type":"City","name":"Vienna"},{"@type":"City","name":"Budapest"}],
+      "url": "https://www.norbertbanhalmi.com/portrait/",
+      "audience": {"@type":"BusinessAudience","audienceType":"Companies and professional teams"},
+      "description": "Efficient on-location or agreed-location workflow for photographing larger groups while maintaining a consistent lighting, framing and retouching standard."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#fine-art",
+      "name": "Guided Fine Art Photography",
+      "serviceType": "Fine-art portrait photography",
+      "provider": {"@id":"https://www.norbertbanhalmi.com/#organization"},
+      "areaServed": [{"@type":"City","name":"Vienna"},{"@type":"City","name":"Budapest"}],
+      "url": "https://www.norbertbanhalmi.com/glamour/",
+      "description": "Author-led personal fine-art portrait process with respectful visual direction, discretion and jointly defined visual boundaries; modelling experience is not required."
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.norbertbanhalmi.com/customer-intent-schema.jsonld#event",
+      "name": "C-Level Event Photography",
+      "serviceType": "C-level and institutional event photography",
+      "provider": {"@id":"https://www.norbertbanhalmi.com/#organization"},
+      "areaServed": [{"@type":"City","name":"Vienna"},{"@type":"City","name":"Budapest"}],
+      "url": "https://www.norbertbanhalmi.com/event-photography/",
+      "description": "Credible and discreet visual documentation for leadership, business and institutional events, delivered according to the agreed brief and team scope."
+    }
+  ]
+}

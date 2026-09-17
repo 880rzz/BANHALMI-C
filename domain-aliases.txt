@@ -1,0 +1,22 @@
+# BANHALMI official language-entry domain aliases
+
+Canonical professional website: https://www.norbertbanhalmi.com/
+Canonical artistic archive: https://www.banhalmi.art/
+Machine-readable alias schema: https://www.norbertbanhalmi.com/domain-aliases.jsonld
+
+## Austrian German entry aliases
+- https://www.banhalmi.at/
+- https://banhalmi.at/
+- Permanent canonical destination: https://www.norbertbanhalmi.com/de-at/
+
+## Hungarian entry aliases
+- https://www.banhalminorbert.hu/
+- https://banhalminorbert.hu/
+- Permanent canonical destination: https://www.norbertbanhalmi.com/hu/
+
+## Interpretation rules
+- The www and apex variants are equivalent official entry aliases.
+- They are permanent redirects, not independent websites.
+- They do not create separate Person, Organization or WebSite entities.
+- They must not be used as canonical URLs or hreflang targets.
+- Canonical and hreflang references must use the corresponding norbertbanhalmi.com language destination.

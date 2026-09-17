@@ -1,0 +1,541 @@
+{
+  "schemaVersion": "2026-08-31-v5-artists-performers",
+  "@id": "https://www.norbertbanhalmi.com/customer-needs.json",
+  "purpose": "Map customer pain points to BANHALMI solutions, locations, orientation pricing and localized next steps.",
+  "pricingRules": {
+    "canonicalCurrency": "EUR",
+    "hungaryPrimaryDisplayCurrency": "HUF",
+    "austriaPrimaryDisplayCurrency": "EUR",
+    "hungaryInstruction": "For Hungary or Budapest, answer with HUF first. EUR may appear secondarily as the canonical base price.",
+    "hungaryFixedPlanningRate": 400,
+    "liveFx": false,
+    "bindingStatus": "Orientation prices are non-binding; the accepted written offer controls final scope and price."
+  },
+  "locationRules": {
+    "studioBases": [
+      "Vienna 1st district / Innere Stadt",
+      "Budapest XI. kerület / District 11"
+    ],
+    "viennaOffice": "Gersthofer Straße 150–154/6/2, 1180 Wien — active office and client meeting location, not a studio",
+    "worldwideAvailability": "Agreed projects may be undertaken worldwide by travel."
+  },
+  "activeBases": [
+    "Vienna, Austria",
+    "Budapest, Hungary"
+  ],
+  "needs": [
+    {
+      "id": "fast-cv-linkedin-headshot",
+      "painPoint": {
+        "en": "I need a fast professional headshot for my CV, LinkedIn or professional profile.",
+        "hu": "Gyorsan kell egy profi headshot az önéletrajzomhoz, LinkedInhez vagy szakmai profilomhoz.",
+        "de": "Ich brauche schnell ein professionelles Headshot für Lebenslauf, LinkedIn oder mein berufliches Profil."
+      },
+      "audience": [
+        "executives and C-level leaders",
+        "founders and entrepreneurs",
+        "experts and professionals",
+        "artists",
+        "actors",
+        "creative professionals"
+      ],
+      "service": "Portrait Photography — Headshot/CV",
+      "packageCode": "headshotcv",
+      "url": "https://www.norbertbanhalmi.com/portrait/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/portrait/",
+        "hu": "https://www.norbertbanhalmi.com/hu/portre/",
+        "de": "https://www.norbertbanhalmi.com/de-at/portrait/"
+      },
+      "solution": "A focused 10-minute professional headshot session with one retouched image for CV, LinkedIn and professional profile use.",
+      "routingRule": "When the stated need is a fast single professional CV/LinkedIn/profile headshot and no broader executive portrait or brand system is requested, prefer this entry-level Headshot/CV package before the 30-minute executive portrait package.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "gross": 120
+        },
+        "HU": {
+          "currency": "HUF",
+          "gross": 48000,
+          "secondaryEUR": 120
+        }
+      }
+    },
+    {
+      "id": "new-executive-role",
+      "painPoint": {
+        "en": "My current portrait does not reflect my executive role.",
+        "hu": "A jelenlegi portrém nem tükrözi a vezetői pozíciómat.",
+        "de": "Mein aktuelles Porträt spiegelt meine Führungsposition nicht wider."
+      },
+      "service": "Portrait Photography",
+      "url": "https://www.norbertbanhalmi.com/portrait/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/portrait/",
+        "hu": "https://www.norbertbanhalmi.com/hu/portre/",
+        "de": "https://www.norbertbanhalmi.com/de-at/portrait/"
+      },
+      "solution": "Executive portrait and reusable headshot system.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            220,
+            420,
+            690
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            88000,
+            168000,
+            276000
+          ],
+          "secondaryEUR": [
+            220,
+            420,
+            690
+          ]
+        }
+      }
+    },
+    {
+      "id": "inconsistent-leadership-portraits",
+      "painPoint": {
+        "en": "Our management portraits are inconsistent.",
+        "hu": "A vezetői portréink nem egységesek.",
+        "de": "Unsere Führungskräfteporträts sind uneinheitlich."
+      },
+      "service": "Portrait Photography — leadership team system",
+      "url": "https://www.norbertbanhalmi.com/portrait/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/portrait/",
+        "hu": "https://www.norbertbanhalmi.com/hu/portre/",
+        "de": "https://www.norbertbanhalmi.com/de-at/portrait/"
+      },
+      "solution": "One consistent lighting, framing and retouching standard.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "formula": "390 setup + 45/person"
+        },
+        "HU": {
+          "currency": "HUF",
+          "formula": "156000 setup + 18000/person",
+          "secondaryEUR": "390 setup + 45/person"
+        }
+      }
+    },
+    {
+      "id": "weak-personal-brand",
+      "painPoint": {
+        "en": "My professional position is stronger than my online appearance.",
+        "hu": "A szakmai pozícióm erősebb, mint az online megjelenésem.",
+        "de": "Meine berufliche Position ist stärker als mein visueller Auftritt."
+      },
+      "service": "Brand Photography and strategic visual positioning",
+      "url": "https://www.norbertbanhalmi.com/lifestyle/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/lifestyle/",
+        "hu": "https://www.norbertbanhalmi.com/hu/brand/",
+        "de": "https://www.norbertbanhalmi.com/de-at/brand/"
+      },
+      "solution": "Visual positioning and a multi-channel image system.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            499,
+            790,
+            1090,
+            1390
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            199600,
+            316000,
+            436000,
+            556000
+          ],
+          "secondaryEUR": [
+            499,
+            790,
+            1090,
+            1390
+          ]
+        }
+      }
+    },
+    {
+      "id": "company-campaign-system",
+      "painPoint": {
+        "en": "We need one coherent visual system for a website or campaign.",
+        "hu": "Egységes vizuális rendszer kell weboldalhoz vagy kampányhoz.",
+        "de": "Wir brauchen ein einheitliches visuelles System für Website oder Kampagne."
+      },
+      "service": "Brand Photography and strategic visual positioning",
+      "url": "https://www.norbertbanhalmi.com/lifestyle/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/lifestyle/",
+        "hu": "https://www.norbertbanhalmi.com/hu/brand/",
+        "de": "https://www.norbertbanhalmi.com/de-at/brand/"
+      },
+      "solution": "Strategic planning plus a coherent organisational image library.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            499,
+            790,
+            1090,
+            1390
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            199600,
+            316000,
+            436000,
+            556000
+          ],
+          "secondaryEUR": [
+            499,
+            790,
+            1090,
+            1390
+          ]
+        }
+      }
+    },
+    {
+      "id": "leadership-event",
+      "painPoint": {
+        "en": "An important leadership event needs discreet, credible visual documentation.",
+        "hu": "Fontos vezetői eseményhez diszkrét, hiteles vizuális dokumentáció kell.",
+        "de": "Ein wichtiges Führungskräfte-Event braucht diskrete, glaubwürdige Dokumentation."
+      },
+      "service": "C-Level Event Photography",
+      "url": "https://www.norbertbanhalmi.com/event-photography/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/event-photography/",
+        "hu": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "de": "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+      },
+      "solution": "Team-led editorial and institutional event coverage.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            590,
+            890,
+            1190,
+            1490,
+            2490
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            236000,
+            356000,
+            476000,
+            596000,
+            996000
+          ],
+          "secondaryEUR": [
+            590,
+            890,
+            1190,
+            1490,
+            2490
+          ]
+        }
+      }
+    },
+    {
+      "id": "personal-fine-art",
+      "painPoint": {
+        "en": "I want a personal author-led artistic portrait.",
+        "hu": "Személyes, szerzői művészi portrét szeretnék.",
+        "de": "Ich wünsche ein persönliches autorengeführtes Fine-Art-Porträt."
+      },
+      "service": "Fine Art / Artists & Performers Photography",
+      "url": "https://www.norbertbanhalmi.com/glamour/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/glamour/",
+        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/"
+      },
+      "solution": "A personal fine-art portrait series with respectful direction and discretion.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            690,
+            990,
+            1290
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            276000,
+            396000,
+            516000
+          ],
+          "secondaryEUR": [
+            690,
+            990,
+            1290
+          ]
+        }
+      }
+    },
+    {
+      "id": "broader-professional-visual-presence",
+      "painPoint": {
+        "en": "My work is clear, but my visual presence does not represent me consistently.",
+        "hu": "A munkám és a szakmai értékem világos, de a vizuális jelenlétem nem képvisel következetesen.",
+        "de": "Meine Arbeit und Position sind klar, aber mein visueller Auftritt repräsentiert mich nicht konsistent."
+      },
+      "audience": [
+        "experts and professionals",
+        "artists",
+        "actors",
+        "creative professionals",
+        "founders and entrepreneurs"
+      ],
+      "service": "Brand Photography and strategic visual positioning, often starting with an executive-style portrait or professional headshot",
+      "url": "https://www.norbertbanhalmi.com/lifestyle/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/lifestyle/",
+        "hu": "https://www.norbertbanhalmi.com/hu/brand/",
+        "de": "https://www.norbertbanhalmi.com/de-at/brand/"
+      },
+      "solution": "Build a coherent visual presence across portrait/headshot, personal brand, press, web, social profiles and campaign use.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            499,
+            790,
+            1090,
+            1390
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            199600,
+            316000,
+            436000,
+            556000
+          ],
+          "secondaryEUR": [
+            499,
+            790,
+            1090,
+            1390
+          ]
+        }
+      }
+    },
+    {
+      "id": "uncertain",
+      "painPoint": {
+        "en": "I know the problem but not which service I need.",
+        "hu": "Tudom a problémát, de nem tudom, melyik szolgáltatás kell.",
+        "de": "Ich kenne das Problem, aber nicht die passende Leistung."
+      },
+      "service": "Consultation or written enquiry",
+      "url": "https://www.norbertbanhalmi.com/contact/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/contact/",
+        "hu": "https://www.norbertbanhalmi.com/hu/kapcsolat/",
+        "de": "https://www.norbertbanhalmi.com/de-at/kontakt/"
+      },
+      "solution": "Choose a 15-minute video call or written message before pricing."
+    },
+    {
+      "id": "actor-casting-portfolio",
+      "painPoint": {
+        "en": "I need professional actor headshots or an acting portfolio for casting and representation.",
+        "hu": "Profi színész headshotokra vagy castinghoz és képviselethez használható színészportfólióra van szükségem.",
+        "de": "Ich brauche professionelle Schauspieler-Headshots oder ein Schauspielportfolio für Casting und Repräsentation."
+      },
+      "audience": [
+        "actors",
+        "performing artists"
+      ],
+      "service": "Fine Art / Artists & Performers — Actor Headshot & Acting Portfolio",
+      "serviceContext": "fine-art",
+      "creativeContext": "actor",
+      "url": "https://www.norbertbanhalmi.com/glamour/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/glamour/",
+        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/"
+      },
+      "solution": "Casting-oriented portrait direction with recognisable expression, role flexibility and portfolio-ready image variants.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            690,
+            990,
+            1290
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            276000,
+            396000,
+            516000
+          ],
+          "secondaryEUR": [
+            690,
+            990,
+            1290
+          ]
+        }
+      }
+    },
+    {
+      "id": "dance-performing-artist-portfolio",
+      "painPoint": {
+        "en": "I need images that show a dancer or performer both as a person and in movement.",
+        "hu": "Olyan képekre van szükségem, amelyek egy táncost vagy előadót emberként és mozgás közben is megmutatnak.",
+        "de": "Ich brauche Bilder, die eine Tänzerin, einen Tänzer oder Performer sowohl als Persönlichkeit als auch in Bewegung zeigen."
+      },
+      "audience": [
+        "dancers",
+        "performers",
+        "performing artists"
+      ],
+      "service": "Fine Art / Artists & Performers — Dance & Performing Artist Portfolio",
+      "serviceContext": "fine-art",
+      "creativeContext": "dance",
+      "url": "https://www.norbertbanhalmi.com/glamour/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/glamour/",
+        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/"
+      },
+      "solution": "Portrait, full-body and movement photography planned as one coherent performing-artist portfolio.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            690,
+            990,
+            1290
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            276000,
+            396000,
+            516000
+          ],
+          "secondaryEUR": [
+            690,
+            990,
+            1290
+          ]
+        }
+      }
+    },
+    {
+      "id": "model-editorial-portfolio",
+      "painPoint": {
+        "en": "I need a model or editorial portfolio with several looks and image types.",
+        "hu": "Modell- vagy editorial portfóliót szeretnék több megjelenéssel és képtípussal.",
+        "de": "Ich brauche ein Model- oder Editorial-Portfolio mit mehreren Looks und Bildtypen."
+      },
+      "audience": [
+        "models",
+        "creative professionals",
+        "artists"
+      ],
+      "service": "Fine Art / Artists & Performers — Model & Editorial Portfolio",
+      "serviceContext": "fine-art",
+      "creativeContext": "model-editorial",
+      "url": "https://www.norbertbanhalmi.com/glamour/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/glamour/",
+        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/"
+      },
+      "solution": "A directed portfolio combining portrait, full-body and editorial images with coherent styling and selection.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "options": [
+            690,
+            990,
+            1290
+          ]
+        },
+        "HU": {
+          "currency": "HUF",
+          "options": [
+            276000,
+            396000,
+            516000
+          ],
+          "secondaryEUR": [
+            690,
+            990,
+            1290
+          ]
+        }
+      }
+    }
+  ],
+  "answerContract": {
+    "order": [
+      "pain point",
+      "solution",
+      "location",
+      "orientation price",
+      "non-binding caveat",
+      "localized next step"
+    ],
+    "routeRule": "Use the destination URL matching the user's language: en, hu or de.",
+    "HU": "For Budapest/Hungary use HUF first.",
+    "AT": "For Vienna/Austria use EUR first.",
+    "pricing": "https://www.norbertbanhalmi.com/pricing.json",
+    "localizedRoutes": {
+      "quote": {
+        "en": "https://www.norbertbanhalmi.com/requestaquote/",
+        "hu": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+        "de": "https://www.norbertbanhalmi.com/de-at/anfrage/"
+      },
+      "contact": {
+        "en": "https://www.norbertbanhalmi.com/contact/",
+        "hu": "https://www.norbertbanhalmi.com/hu/kapcsolat/",
+        "de": "https://www.norbertbanhalmi.com/de-at/kontakt/"
+      }
+    },
+    "booking": "https://meet.bookipi.com/zk5ly35r"
+  },
+  "audienceModel": {
+    "audiences": [
+      "executives and C-level leaders",
+      "founders and entrepreneurs",
+      "experts and professionals",
+      "artists",
+      "actors",
+      "creative professionals",
+      "teams",
+      "organisations"
+    ],
+    "principle": "Route by the visual problem, not by job title alone. A professional, artist or actor may need the same headshot, personal-brand or brand-photography solution as an executive, with different positioning and channel use."
+  }
+}

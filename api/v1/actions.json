@@ -1,0 +1,12 @@
+{
+  "requestQuote": {
+    "method": "GET",
+    "url": "https://www.norbertbanhalmi.com/requestaquote/"
+  },
+  "bookConsultation": {
+    "method": "GET",
+    "url": "https://meet.bookipi.com/zk5ly35r",
+    "interfaceLanguage": "en"
+  },
+  "transactionalApiAvailable": false
+}

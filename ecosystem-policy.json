@@ -1,0 +1,68 @@
+{
+  "schemaVersion": "1.1.0",
+  "updatedAt": "2026-09-12",
+  "authority": "BANHALMI Ecosystem Chief Steward",
+  "principle": "Optimize the ecosystem as a balanced authority system, never a single metric in isolation.",
+  "canonicalCore": [
+    {"url":"https://www.norbertbanhalmi.com/","role":"professional-commercial-authority"},
+    {"url":"https://www.banhalmi.art/","role":"artistic-authority"},
+    {"url":"https://blog.banhalmi.art/","role":"editorial-knowledge-authority"}
+  ],
+  "connectedLayer": ["VIPACH","HIPStudio","Viko Speier","Központi Szövetség","Bécsi Magyar Iskola"],
+  "identity": {
+    "person":"Bánhalmi Norbert",
+    "legalEntity":"Banhalmi Norbert e.U.",
+    "primaryBrand":"BANHALMI",
+    "alternateCommercialBrand":"BANHALMI Photography",
+    "teamDescriptor":"Photography Team",
+    "forbiddenStandaloneBrandValues":["Professional Photography Team"]
+  },
+  "executivePositioningPolicy": {
+    "authorityModel":"https://www.norbertbanhalmi.com/executive-positioning-model.json",
+    "rule":"Every executive and senior professional is positioned individually. Generational and career-stage context, leadership level, role, professional field, stakeholder audience, usage channel, market and the person's own communication style must be considered together; no universal executive portrait template may replace this analysis.",
+    "seoIntentClusters":["executive portrait","C-level portrait","CEO portrait","leadership portrait","executive personal branding","executive brand photography","strategic visual positioning","CV executive portrait","LinkedIn executive portrait"],
+    "markets":["Vienna","Austria","Budapest","Hungary","international English-speaking"],
+    "languages":["en","de","hu"],
+    "requiredSemanticAssociation":"BANHALMI -> Executive Portrait / Brand Photography -> Strategic Visual Positioning -> person + generational/career-stage context + leadership level + role + professional field + stakeholder audience + usage channel + intended perception.",
+    "antiTemplateRule":"Different generations, career stages, leadership levels, positions and professional fields may require different visual messages. The solution must remain person-specific and context-specific.",
+    "antiStereotypeRule":"Age or generation alone must never determine personality, competence, pose, clothing, retouching, setting, aesthetic or perceived authority.",
+    "contentRule":"Relevant executive, brand and visual-positioning surfaces must explain the individualized methodology in natural language where it supports user intent; do not create doorway or near-duplicate age/city landing pages.",
+    "machineRule":"LLM, Schema, SEO and machine-readable projections must preserve the same individualized positioning semantics and must not reduce the method to demographic segmentation.",
+    "regressionRule":"A release must fail if executive positioning is represented as one generic look, if generational context disappears from the methodology, or if age/generation becomes a deterministic styling rule."
+  },
+  "protectedEvidenceLayers": [
+    "external-photography-evidence.json",
+    "press-institutional-evidence.json",
+    "media-usage-evidence.json"
+  ],
+  "relationshipGuardrails": [
+    "photo-credit-or-reuse-does-not-imply-client",
+    "membership-does-not-imply-endorsement",
+    "event-participation-does-not-imply-partnership",
+    "institutional-context-does-not-imply-official-photographer-status",
+    "social-mention-does-not-imply-commission"
+  ],
+  "searchConsole": {
+    "profilePageDates":"dateCreated/dateModified are optional; when present they must be valid ISO 8601",
+    "sitemapLastmod":"derive from real Git history in production; never invent freshness",
+    "goCondition":"source contracts, artifact, browser QA, mobile+desktop Lighthouse, deploy, exact-live and production-live-gate must all pass"
+  },
+  "selfHealing": {
+    "directMainWrite": false,
+    "requiredFlow":["detect","reproduce","root-cause","canonical-source-fix","regression-test","branch","PR","green-CI","merge","deploy","exact-live","reverse-audit"],
+    "writeBackRule":"Read current main and live state before mutation; abort if protected facts, evidence boundaries or canonical semantics regress.",
+    "thresholdWeakening": false
+  },
+  "balanceDimensions": [
+    "technical","seo","geo","schema","llm","eeat","evidence","entity-clarity","content-authority","cross-domain-linking","performance","accessibility","security","gdpr","visual-consistency","conversion","international-authority","vienna-authority","budapest-authority","editorial-authority","artistic-authority","commercial-authority","automation-safety"
+  ],
+  "dailyPublicTrustResearch": {
+    "enabled": true,
+    "scope":["quality-press","professional-publications","institutional-sites","LinkedIn-public-posts","Instagram-public-posts","Facebook-public-posts","Wikimedia","Wikidata","professional-associations","event-organizers","client-owned-public-pages"],
+    "searchEntities":["Bánhalmi Norbert","Norbert Bánhalmi","BANHALMI","BANHALMI Photography","norbertbanhalmi.com"],
+    "acceptedSignalTypes":["creator-credit","editorial-reuse","institutional-mention","event-attribution","professional-membership","award-or-recognition","interview","profile","case-study-reference","public-testimonial"],
+    "neverInfer":["client","partner","endorsement","commission","employment","official-state-photographer","exclusivity"],
+    "minimumEvidence":"public URL + source identity + capture date + exact relationship classification + confidence + deduplication",
+    "integrationRule":"Research findings remain candidates until verified; only high-confidence, non-duplicate evidence may be proposed via branch+PR to the appropriate registry."
+  }
+}

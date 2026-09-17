@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "2026-08-24-v1",
+  "@id": "https://www.norbertbanhalmi.com/service-intent-copy.json",
+  "purpose": "Canonical localized copy source for human-readable service-intent, GEO answer blocks and metadata refinement without creating new public service pages.",
+  "portrait": {
+    "en": {
+      "bestFitHeading": "When an executive portrait is the right fit",
+      "bestFit": [
+        "Your current portrait no longer reflects your role, seniority or professional direction.",
+        "You want to look confident, credible and approachable without looking stiff, generic or overly corporate.",
+        "You need one coherent professional image for LinkedIn, CV, company biography and press use.",
+        "You know the impression you want to create, but you want professional direction on wardrobe, expression, posture, background and framing."
+      ],
+      "guidanceHeading": "You do not need to know how to pose",
+      "guidance": "The session is directed around the impression the image needs to create. Wardrobe, expression, posture, background, framing and final image selection are guided as part of the process. The goal is not to make you look like a generic executive, but to make your professional credibility visible without losing personality.",
+      "channelClarification": "LinkedIn, CV, company profile and press are usage channels. The right service depends on what the image must communicate, not on the platform alone.",
+      "metaDescriptionCandidate": "Executive portrait and professional headshot photography in Vienna & Budapest for leaders and professionals who want to look credible, confident and approachable — with guidance on wardrobe, expression, posture and visual direction."
+    },
+    "hu": {
+      "bestFitHeading": "Mikor jó választás az executive portré?",
+      "bestFit": [
+        "A jelenlegi portréd már nem tükrözi a szerepedet, senioritásodat vagy szakmai irányodat.",
+        "Magabiztosnak, hitelesnek és közvetlennek szeretnél látszani anélkül, hogy a kép merev, sablonos vagy túl vállalati lenne.",
+        "Egy következetes szakmai képre van szükséged LinkedInhez, önéletrajzhoz, vállalati bemutatkozáshoz és sajtómegjelenéshez.",
+        "Tudod, milyen benyomást szeretnél kelteni, de szakmai vezetést szeretnél az öltözékhez, arckifejezéshez, testtartáshoz, háttérhez és képkivágáshoz."
+      ],
+      "guidanceHeading": "Nem kell tudnod pózolni",
+      "guidance": "A fotózás vezetett folyamat: abból indulunk ki, mit kell a képnek közvetítenie rólad. Segítünk az öltözék, arckifejezés, testtartás, háttér, képkivágás és végső képkiválasztás kialakításában. A cél nem egy sablonos vezetői kép, hanem hogy a szakmai hitelességed úgy váljon láthatóvá, hogy közben önmagad maradsz.",
+      "channelClarification": "A LinkedIn, az önéletrajz, a vállalati profil és a sajtó felhasználási csatornák. A megfelelő szolgáltatást az dönti el, mit kell a képnek közvetítenie, nem önmagában az, hogy hol használod.",
+      "metaDescriptionCandidate": "Executive portré és professzionális headshot fotózás Bécsben és Budapesten vezetőknek és szakembereknek, akik hiteles, magabiztos és közvetlen megjelenést szeretnének — vezetett öltözék-, póz- és vizuális iránnyal."
+    },
+    "de": {
+      "bestFitHeading": "Wann ist ein Executive Portrait die richtige Wahl?",
+      "bestFit": [
+        "Ihr aktuelles Porträt entspricht Ihrer heutigen Rolle, Seniorität oder beruflichen Richtung nicht mehr.",
+        "Sie möchten souverän, kompetent und nahbar wirken, ohne steif, austauschbar oder übertrieben corporate auszusehen.",
+        "Sie benötigen ein konsistentes professionelles Bild für LinkedIn, Lebenslauf, Unternehmensprofil und Presse.",
+        "Sie wissen, welche Wirkung Sie erzielen möchten, wünschen sich aber professionelle Führung bei Kleidung, Ausdruck, Haltung, Hintergrund und Bildausschnitt."
+      ],
+      "guidanceHeading": "Sie müssen nicht wissen, wie man posiert",
+      "guidance": "Das Shooting wird von der gewünschten Wirkung des Bildes ausgehend geführt. Kleidung, Ausdruck, Haltung, Hintergrund, Bildausschnitt und finale Bildauswahl werden gemeinsam entwickelt. Ziel ist kein austauschbares Führungskräftefoto, sondern eine glaubwürdige professionelle Präsenz, in der Persönlichkeit sichtbar bleibt.",
+      "channelClarification": "LinkedIn, Lebenslauf, Unternehmensprofil und Presse sind Nutzungskanäle. Die passende Leistung richtet sich danach, was das Bild vermitteln soll — nicht allein danach, wo es verwendet wird.",
+      "bewerbungsfotoClarification": "Wenn Sie ein modernes, dynamisches oder editoriales Executive Portrait suchen, ist das etwas anderes als ein klassisches Bewerbungsfoto: Im Mittelpunkt stehen professionelle Wirkung, Persönlichkeit, Souveränität und Nahbarkeit.",
+      "metaDescriptionCandidate": "Executive Portrait und Headshot Fotografie in Wien & Budapest für Führungskräfte und Professionals, die kompetent, souverän und nahbar wirken möchten — mit professioneller Führung bei Kleidung, Ausdruck und Haltung."
+    }
+  },
+  "brand": {
+    "en": {
+      "distinctionHeading": "One portrait or a complete visual presence?",
+      "distinction": "If you need one core professional representation, start with Portrait Photography. If the same professional identity must work across several looks, locations and contexts — website, LinkedIn, press, social media, presentations or campaigns — Brand Photography and strategic visual positioning build the broader image system.",
+      "bestFit": [
+        "You need several looks and environments, not one final profile picture.",
+        "Your website, LinkedIn, press and social presence should feel like one coherent professional identity.",
+        "You need editorial, environmental or in-action images that show how you work, not only how you look.",
+        "Your professional positioning has changed and the entire image library needs to catch up."
+      ]
+    },
+    "hu": {
+      "distinctionHeading": "Egy portré vagy teljes vizuális jelenlét?",
+      "distinction": "Ha egyetlen erős szakmai reprezentációra van szükséged, a portréfotózás a megfelelő kiindulópont. Ha ugyanazt a szakmai identitást több öltözékben, helyszínen és helyzetben kell következetesen megmutatni — weboldalon, LinkedInen, sajtóban, social felületeken, prezentációkban vagy kampányokban — a brand fotózás és a stratégiai vizuális pozicionálás építi fel a teljes képrendszert.",
+      "bestFit": [
+        "Több megjelenésre és környezetre van szükséged, nem egyetlen profilképre.",
+        "A weboldaladnak, LinkedInednek, sajtó- és social jelenlétednek ugyanazt a szakmai identitást kell közvetítenie.",
+        "Editorial, környezeti vagy munka közbeni képekre is szükséged van, amelyek nemcsak azt mutatják meg, hogyan nézel ki, hanem azt is, hogyan dolgozol.",
+        "Megváltozott a szakmai pozicionálásod, és a teljes képi jelenlétednek követnie kell ezt."
+      ]
+    },
+    "de": {
+      "distinctionHeading": "Ein Porträt oder ein vollständiger visueller Auftritt?",
+      "distinction": "Wenn Sie eine zentrale professionelle Darstellung benötigen, ist Portrait Photography der richtige Ausgangspunkt. Wenn dieselbe berufliche Identität über mehrere Looks, Orte und Kontexte hinweg funktionieren soll — Website, LinkedIn, Presse, Social Media, Präsentationen oder Kampagnen — entsteht mit Brand Photography und strategischer visueller Positionierung ein umfassenderes Bildsystem.",
+      "bestFit": [
+        "Sie benötigen mehrere Looks und Umgebungen statt nur eines Profilbildes.",
+        "Website, LinkedIn, Presse und Social Media sollen dieselbe professionelle Identität vermitteln.",
+        "Sie brauchen editoriale, kontextuelle oder In-Action-Bilder, die nicht nur zeigen, wie Sie aussehen, sondern auch wie Sie arbeiten.",
+        "Ihre berufliche Positionierung hat sich verändert und Ihre gesamte Bildwelt soll diesen Schritt nachvollziehen."
+      ]
+    }
+  },
+  "leadershipSystem": {
+    "en": {
+      "heading": "One visual standard. Every leader.",
+      "body": "For leadership teams, consistency is a system rather than a one-day styling decision. Lighting, framing, crop, background logic and retouching can be documented so new executives photographed later still belong to the same visual language.",
+      "proofOrientedBenefits": ["repeatable lighting and framing", "consistent crop and retouching", "efficient scheduling for larger teams", "continuity when new leaders join"]
+    },
+    "hu": {
+      "heading": "Egy vizuális standard. Minden vezetőnek.",
+      "body": "Vezetői csapatoknál az egységesség nem egyetlen fotózási nap stílusdöntése, hanem reprodukálható rendszer. A fény, képkivágás, háttérlogika és retusálási standard dokumentálható, így a később érkező vezetők portréi is ugyanabba a vizuális nyelvbe illeszkednek.",
+      "proofOrientedBenefits": ["reprodukálható fény és képkivágás", "egységes crop és retusálás", "hatékony időbeosztás nagyobb csapatoknál", "folytonosság új vezetők érkezésekor"]
+    },
+    "de": {
+      "heading": "Ein visueller Standard. Für jede Führungskraft.",
+      "body": "Bei Führungsteams ist Konsistenz kein einmaliger Stilentscheid, sondern ein reproduzierbares System. Licht, Bildausschnitt, Hintergrundlogik und Retusche können dokumentiert werden, sodass auch später fotografierte neue Führungskräfte zur gleichen visuellen Sprache gehören.",
+      "proofOrientedBenefits": ["reproduzierbares Licht und Framing", "konsistenter Bildausschnitt und Retusche", "effiziente Terminplanung für größere Teams", "Kontinuität bei neuen Führungskräften"]
+    }
+  },
+  "fineArt": {
+    "en": {
+      "guidanceHeading": "A guided artistic process — no modelling experience required",
+      "guidance": "You do not need to arrive knowing how to pose. The visual direction develops step by step, with clear guidance on movement, expression and composition. The intensity and personal boundaries of the series are defined together, and discretion is treated as part of the professional process.",
+      "claimGuardrail": "Describe the experience in terms of trust, direction, discretion, artistic authorship and personal expression. Do not describe it as therapy, treatment, healing or trauma recovery."
+    },
+    "hu": {
+      "guidanceHeading": "Vezetett alkotói folyamat — nem kell modellnek lenned",
+      "guidance": "Nem kell úgy érkezned, hogy tudod, hogyan kell pózolni. A vizuális irány lépésről lépésre alakul, egyértelmű segítséggel a mozdulatokhoz, arckifejezéshez és kompozícióhoz. A sorozat intenzitását és személyes határait közösen határozzuk meg, a diszkréció pedig a professzionális folyamat része.",
+      "claimGuardrail": "Az élményt bizalom, vezetés, diszkréció, szerzői látásmód és személyes önkifejezés mentén kell leírni. Nem nevezhető terápiának, kezelésnek, gyógyításnak vagy traumafeldolgozásnak."
+    },
+    "de": {
+      "guidanceHeading": "Ein geführter künstlerischer Prozess — keine Modelerfahrung erforderlich",
+      "guidance": "Sie müssen nicht wissen, wie man posiert. Die visuelle Richtung entsteht Schritt für Schritt, mit klarer Führung bei Bewegung, Ausdruck und Komposition. Intensität und persönliche Grenzen der Serie werden gemeinsam definiert; Diskretion ist Teil des professionellen Prozesses.",
+      "claimGuardrail": "Die Erfahrung wird über Vertrauen, Führung, Diskretion, künstlerische Handschrift und persönlichen Ausdruck beschrieben. Keine Aussagen über Therapie, Behandlung, Heilung oder Traumabewältigung."
+    }
+  },
+  "faqCandidates": {
+    "en": [
+      {"q": "I only need a LinkedIn photo. Should I book a headshot or an executive portrait?", "a": "LinkedIn is only the usage channel. Choose the focused headshot when speed and one polished image are the priority. Choose an executive portrait when the image needs to communicate seniority, personality, confidence or a more editorial professional presence."},
+      {"q": "What if I do not know how to pose?", "a": "You do not need posing experience. Wardrobe, expression, posture, background, framing and image selection are professionally directed according to the impression the portrait should create."},
+      {"q": "Can you keep management portraits consistent when new leaders join later?", "a": "Yes. For leadership teams, lighting, framing, crop, background logic and retouching can be documented as a repeatable portrait standard."}
+    ],
+    "hu": [
+      {"q": "Csak LinkedIn-képre van szükségem. Headshotot vagy executive portrét válasszak?", "a": "A LinkedIn csak a felhasználási csatorna. A fókuszált headshot jó választás, ha a gyorsaság és egyetlen professzionális kép a fő cél. Executive portré akkor indokolt, ha a képnek senioritást, személyiséget, magabiztosságot vagy editorial jellegű szakmai jelenlétet is közvetítenie kell."},
+      {"q": "Mi van, ha nem tudok pózolni?", "a": "Nem kell pózolási tapasztalat. Az öltözéket, arckifejezést, testtartást, hátteret, képkivágást és képkiválasztást annak megfelelően vezetjük, milyen benyomást kell a portrénak közvetítenie."},
+      {"q": "Az újonnan érkező vezetők portréi később is illeszthetők ugyanabba a stílusba?", "a": "Igen. Vezetői csapatoknál a fény, framing, crop, háttérlogika és retusálás dokumentálható reprodukálható portréstandardként."}
+    ],
+    "de": [
+      {"q": "Ich brauche nur ein LinkedIn-Foto. Headshot oder Executive Portrait?", "a": "LinkedIn ist nur der Nutzungskanal. Ein fokussiertes Headshot passt, wenn Geschwindigkeit und ein einzelnes professionelles Bild im Vordergrund stehen. Ein Executive Portrait ist sinnvoll, wenn das Bild zusätzlich Seniorität, Persönlichkeit, Souveränität oder eine editorialere professionelle Wirkung vermitteln soll."},
+      {"q": "Was ist, wenn ich nicht weiß, wie man posiert?", "a": "Sie brauchen keine Posiererfahrung. Kleidung, Ausdruck, Haltung, Hintergrund, Bildausschnitt und Bildauswahl werden professionell entsprechend der gewünschten Wirkung geführt."},
+      {"q": "Können neue Führungskräfte später im gleichen Stil fotografiert werden?", "a": "Ja. Licht, Framing, Bildausschnitt, Hintergrundlogik und Retusche können für Führungsteams als reproduzierbarer Porträtstandard dokumentiert werden."}
+    ]
+  }
+}

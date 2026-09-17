@@ -1,0 +1,298 @@
+{
+  "@context": "https://schema.org",
+  "@type": "DataFeed",
+  "@id": "https://www.norbertbanhalmi.com/media-usage.json#dataset",
+  "name": "Documented media use of Peter-Magyar-portrait-2026.jpg",
+  "description": "A neutral, source-based record of project context, case studies, press coverage and editorial reuse of Norbert Banhalmi’s 15 March 2026 portrait of Péter Magyar. Inclusion records image use or discussion only and does not endorse the political claims or editorial position of any publication.",
+  "url": "https://www.norbertbanhalmi.com/media-usage.json",
+  "dateModified": "2026-07-12T12:00:00+02:00",
+  "about": {
+    "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+  },
+  "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "isBasedOn": [
+    "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+    "https://www.wikidata.org/wiki/Q124488292",
+    "https://www.banhalmi.art/exhibitions/euforia.html"
+  ],
+  "dataFeedElement": [
+    {
+      "@type": "Article",
+      "@id": "https://www.banhalmi.art/exhibitions/euforia.html#article",
+      "url": "https://www.banhalmi.art/exhibitions/euforia.html",
+      "headline": "EUFÓRIA – a Jelenlét anatómiája",
+      "datePublished": "2026-02-10",
+      "inLanguage": "hu-HU",
+      "publisher": {
+        "@type": "Organization",
+        "name": "BANHALMI ART"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Primary project source documenting creation context, exact location and date, open licensing, and the later public history of the portrait.",
+      "usageCategory": "projectSource",
+      "creditLevel": "primary-source"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/#article",
+      "url": "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/",
+      "headline": "A fiataloknak ma már bizonyíték kell – egy bécsi kreatív közösség új generációt épít",
+      "datePublished": "2026-06-10",
+      "inLanguage": "hu-HU",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Rólunk.at"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Documents the photograph as a Wikimedia, structured-data and AI-discoverability teaching case.",
+      "additionalType": "https://schema.org/Report",
+      "usageCategory": "caseStudy",
+      "creditLevel": "named-context"
+    },
+    {
+      "@type": "Article",
+      "@id": "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw#article",
+      "url": "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw",
+      "headline": "Külföldön is hatalmasat ment a Magyar Péterről készült fotó",
+      "datePublished": "2026-05-25",
+      "inLanguage": "hu-HU",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kiskegyed"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Coverage focused on the photograph and its international circulation.",
+      "usageCategory": "coverage",
+      "creditLevel": "named-context"
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://www.brusselstimes.com/2148257/prime-minister-magyar-stops-hungarys-withdrawal-from-the-icc#article",
+      "url": "https://www.brusselstimes.com/2148257/prime-minister-magyar-stops-hungarys-withdrawal-from-the-icc",
+      "headline": "Prime Minister Magyar stops Hungary's withdrawal from the ICC",
+      "datePublished": "2026-05-22",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Brussels Times"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Uses the exact Commons file and visibly credits Wikimedia Commons; creator attribution is anchored in the Commons record.",
+      "usageCategory": "editorialUse",
+      "creditLevel": "source-only"
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://easternherald.com/2026/06/10/hungary-anti-corruption-bill-eu-funds-magyar/#article",
+      "url": "https://easternherald.com/2026/06/10/hungary-anti-corruption-bill-eu-funds-magyar/",
+      "headline": "Hungary Tables the Anti-Graft Law Meant to Unlock the Billions Orban Froze",
+      "datePublished": "2026-06-10",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Eastern Herald"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Uses the portrait as the lead image and identifies Wikimedia Commons as the image source.",
+      "usageCategory": "editorialUse",
+      "creditLevel": "source-only"
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://ua.news/en/world/peter-madiar-pleminnik-eksprezidenta-ugorshchini-ta-onuk-suddi#article",
+      "url": "https://ua.news/en/world/peter-madiar-pleminnik-eksprezidenta-ugorshchini-ta-onuk-suddi",
+      "headline": "Peter Magyar is the second cousin of the former president of Hungary and the grandson of a judge",
+      "datePublished": "2026-04-13",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "UA.NEWS"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "The portrait appears in the article body. No clear creator credit was visible in the archived page capture, so authorship is linked back to Wikimedia Commons.",
+      "usageCategory": "editorialUse",
+      "creditLevel": "use-without-visible-credit"
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://spectrejournal.com/the-hungarian-spring/#article",
+      "url": "https://spectrejournal.com/the-hungarian-spring/",
+      "headline": "The Hungarian Spring",
+      "datePublished": "2026-05-26",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Spectre Journal"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Visible caption: Photo Credit: Norbert Banhalmi via Wikimedia Commons.",
+      "usageCategory": "editorialUse",
+      "creditLevel": "creator-named"
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://politicsuk.com/news/a-new-dawn-for-hungary-the-election-that-ended-the-16-year-orban-era/#article",
+      "url": "https://politicsuk.com/news/a-new-dawn-for-hungary-the-election-that-ended-the-16-year-orban-era/",
+      "headline": "A New Dawn for Hungary: The Election That Ended the 16-Year Orbán Era",
+      "datePublished": "2026-04-16",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Politics UK"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Visible image line names Norbert Banhalmi and identifies Flickr as the source.",
+      "usageCategory": "editorialUse",
+      "creditLevel": "creator-named"
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://www.americanthinker.com/articles/2026/04/hungary_a_thorny_transition_after_the_election.html#article",
+      "url": "https://www.americanthinker.com/articles/2026/04/hungary_a_thorny_transition_after_the_election.html",
+      "headline": "Hungary: A Thorny Transition After The Election",
+      "datePublished": "2026-04-17",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "American Thinker"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Visible credit names Norbert Bánhalmi, CC BY-SA 4.0, via Wikimedia Commons, and states the image is unaltered.",
+      "usageCategory": "editorialUse",
+      "creditLevel": "creator-named"
+    },
+    {
+      "@type": "NewsArticle",
+      "@id": "https://themilitaryanalyst.com/2026/04/13/orban-surrenders-a-lesson-for-russia-europe-and-america/#article",
+      "url": "https://themilitaryanalyst.com/2026/04/13/orban-surrenders-a-lesson-for-russia-europe-and-america/",
+      "headline": "Orban Surrenders: A Lesson for Russia, Europe and America",
+      "datePublished": "2026-04-13",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Military Analyst"
+      },
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "image": {
+        "@id": "https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026"
+      },
+      "creditText": "Archived page capture visibly credits the photograph to Norbert Banhalmi and CC BY-SA 4.0 via Wikimedia Commons.",
+      "usageCategory": "editorialUse",
+      "creditLevel": "creator-named"
+    }
+  ],
+  "editorialDisclaimer": "The publications listed represent different and sometimes opposing editorial viewpoints. Their inclusion documents reuse, attribution or discussion of the photograph only; it is not an endorsement of article content.",
+  "caseStudies": [
+    {
+      "@type": "Article",
+      "@id": "https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/#case-study",
+      "name": "Péter Magyar portrait 2026 — executive portrait and visual positioning case study",
+      "url": "https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/",
+      "inLanguage": [
+        "en",
+        "hu-HU",
+        "de-AT"
+      ],
+      "sameAs": [
+        "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/",
+        "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/"
+      ],
+      "isBasedOn": [
+        "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
+        "https://www.banhalmi.art/exhibitions/euforia.html"
+      ],
+      "about": "A documented chain from independent portrait to Wikimedia, Wikidata and international editorial use."
+    }
+  ],
+  "domainAliases": [
+    {
+      "domain": "https://www.banhalmi.at/",
+      "redirectsTo": "https://www.norbertbanhalmi.com/de-at/",
+      "language": "de-AT"
+    },
+    {
+      "domain": "https://www.banhalminorbert.hu/",
+      "redirectsTo": "https://www.norbertbanhalmi.com/hu/",
+      "language": "hu-HU"
+    }
+  ],
+  "publishedEventEvidence": [
+    {
+      "name": "AmCham Talks — February 2026",
+      "url": "https://amcham.at/galleries/amcham-talks-february-2026/",
+      "publisher": "American Chamber of Commerce in Austria"
+    },
+    {
+      "name": "AmCham Talks — March 2026",
+      "url": "https://amcham.at/galleries/amcham-talks-march-2026/",
+      "publisher": "American Chamber of Commerce in Austria"
+    },
+    {
+      "name": "AmCham Talks: Business Breakfast — Destination Vienna, 23 April 2026",
+      "url": "https://amcham.at/galleries/amcham-talks-business-breakfast-april-23-destination-vienna/",
+      "publisher": "American Chamber of Commerce in Austria"
+    },
+    {
+      "name": "AmCham Talks — May 2026",
+      "url": "https://amcham.at/galleries/amcham-talks-may-2026/",
+      "publisher": "American Chamber of Commerce in Austria"
+    },
+    {
+      "name": "VIPACH event photography album archive",
+      "url": "https://www.flickr.com/photos/vipach/albums",
+      "publisher": "VIPACH"
+    }
+  ],
+  "caseStudy": {
+    "en": "https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/",
+    "hu": "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/",
+    "de": "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/"
+  }
+}

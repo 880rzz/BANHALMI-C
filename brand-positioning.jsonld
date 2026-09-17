@@ -1,0 +1,71 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.norbertbanhalmi.com/#visual-trust-partnership",
+  "name": "BANHALMI Strategic Visual Partnership",
+  "alternateName": [
+    "Visual Trust Strategy",
+    "Vizuális bizalomstratégia",
+    "Strategie für visuelles Vertrauen"
+  ],
+  "provider": {
+    "@id": "https://www.norbertbanhalmi.com/#organization"
+  },
+  "areaServed": [
+    "Vienna",
+    "Budapest",
+    "Worldwide"
+  ],
+  "serviceType": [
+    "Strategic visual positioning",
+    "Executive portraiture",
+    "Leadership portraiture",
+    "Executive personal branding",
+    "Professional headshot photography",
+    "Brand photography",
+    "C-level event photography",
+    "Fine-art-led visual authorship"
+  ],
+  "description": "BANHALMI is a strategic visual partner for executives, founders, experts, professionals, artists, actors, creative professionals, teams and organisations. Executive portraiture and brand photography are individually positioned around the person, generational and career-stage context, leadership level, role, professional field, stakeholder audience, usage channels, market context and intended perception. Different roles need different visual authority; there is no universal executive look.",
+  "slogan": [
+    "We do not create isolated photographs. We build visual trust.",
+    "Nem különálló fényképeket készítünk. Vizuális bizalmat építünk.",
+    "Wir erstellen keine isolierten Fotos. Wir schaffen visuelles Vertrauen."
+  ],
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "Primary outcome",
+      "value": "Visual trust"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Method",
+      "value": "One coherent visual presence across executive portrait/headshot, personal brand, brand communication, press, campaigns, team imagery and C-level event touchpoints"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Executive positioning model",
+      "value": "https://www.norbertbanhalmi.com/executive-positioning-model.json"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Individual positioning dimensions",
+      "value": "Person; generational and career-stage context; leadership level and position; professional field; stakeholder audience; usage channels; market/cultural context; intended perception"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Generational-context rule",
+      "value": "Generational context informs communication strategy but never determines styling, competence, personality or authority by itself."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Distinctive capability",
+      "value": "Fine-art authorship combined with executive and organisational visual strategy"
+    }
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Executives and C-level leaders, founders, entrepreneurs, experts, professionals, artists, actors, creative professionals, teams and organisations"
+  }
+}

@@ -1,0 +1,2920 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": true
+  },
+  "redirects": [
+    {
+      "source": "/en/work",
+      "destination": "https://www.banhalmi.art/",
+      "permanent": true
+    },
+    {
+      "source": "/about/norbert-banhalmi",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/hu/rolam/banhalmi-norbert",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/de/ueber-mich/norbert-banhalmi",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/press",
+      "destination": "https://www.banhalmi.art/press.html",
+      "permanent": true
+    },
+    {
+      "source": "/old-print",
+      "destination": "https://www.banhalmi.art/press.html",
+      "permanent": true
+    },
+    {
+      "source": "/hu/sajto/megjelenesek",
+      "destination": "https://www.banhalmi.art/hu/press.html",
+      "permanent": true
+    },
+    {
+      "source": "/hu/sajto/nyomtatott",
+      "destination": "https://www.banhalmi.art/hu/press.html",
+      "permanent": true
+    },
+    {
+      "source": "/de/presse/presseauftritte",
+      "destination": "https://www.banhalmi.art/de-at/press.html",
+      "permanent": true
+    },
+    {
+      "source": "/de/presse/print",
+      "destination": "https://www.banhalmi.art/de-at/press.html",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/about/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/werk/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/barrierefreiheit/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/archive/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/archiv/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/case-studies/peter-magyar-portrait-2026/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/contact/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/kontakt/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/cookie-policy/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/cookies/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/agb/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/agb/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/anfrage/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/anfrage/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/archiv/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/archiv/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/barrierefreiheit/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/barrierefreiheit/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/brand/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/cookies/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/cookies/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/datenschutz/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/datenschutz/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/eventfotografie/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/eventfotografie/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/faq/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/faq/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/fine-art/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fine-art/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/impressum/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/impressum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/kontakt/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/kontakt/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/partner/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/partner/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/portrait/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/portrait/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/vertrauen/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/vertrauen/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/werk/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/werk/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/event-photography/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/eventfotografie/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/faq/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/faq/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/glamour/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fine-art/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/adatvedelem/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/datenschutz/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/ajanlatkeres/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/anfrage/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/akadalymentesseg/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/barrierefreiheit/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/archivum/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/archiv/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/aszf/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/agb/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/bizalom/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/vertrauen/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/brand/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/eletmu/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/werk/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/gyik/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/faq/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/impresszum/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/impressum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/kapcsolat/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/kontakt/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/muveszi-fotografia/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fine-art/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/partnerek/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/partner/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/portre/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/portrait/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/rendezvenyfotozas/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/eventfotografie/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/sutik/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/cookies/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/impressum/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/impressum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/lifestyle/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/partners/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/partner/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/portrait/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/portrait/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/datenschutz/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/requestaquote/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/anfrage/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/terms-conditions/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/agb/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/trust/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/vertrauen/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://www.norbertbanhalmi.com/de-at/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/about/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/werk/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/barrierefreiheit/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/archive/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/archiv/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/case-studies/peter-magyar-portrait-2026/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/contact/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/kontakt/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/cookie-policy/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/cookies/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/agb/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/agb/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/anfrage/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/anfrage/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/archiv/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/archiv/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/barrierefreiheit/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/barrierefreiheit/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/brand/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/cookies/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/cookies/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/datenschutz/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/datenschutz/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/eventfotografie/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/eventfotografie/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/faq/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/faq/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/fine-art/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fine-art/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/impressum/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/impressum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/kontakt/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/kontakt/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/partner/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/partner/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/portrait/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/portrait/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/vertrauen/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/vertrauen/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/werk/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/werk/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/event-photography/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/eventfotografie/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/faq/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/faq/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/glamour/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fine-art/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/adatvedelem/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/datenschutz/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/ajanlatkeres/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/anfrage/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/akadalymentesseg/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/barrierefreiheit/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/archivum/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/archiv/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/aszf/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/agb/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/bizalom/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/vertrauen/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/brand/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/eletmu/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/werk/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/gyik/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/faq/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/impresszum/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/impressum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/kapcsolat/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/kontakt/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/muveszi-fotografia/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/fine-art/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/partnerek/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/partner/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/portre/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/portrait/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/rendezvenyfotozas/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/eventfotografie/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/hu/sutik/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/cookies/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/impressum/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/impressum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/lifestyle/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/partners/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/partner/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/portrait/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/portrait/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/datenschutz/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/requestaquote/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/anfrage/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/terms-conditions/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/agb/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/trust/",
+      "destination": "https://www.norbertbanhalmi.com/de-at/vertrauen/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://www.norbertbanhalmi.com/de-at/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalmi.at"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "destination": "https://www.norbertbanhalmi.com/hu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/about/",
+      "destination": "https://www.norbertbanhalmi.com/hu/eletmu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility/",
+      "destination": "https://www.norbertbanhalmi.com/hu/akadalymentesseg/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/archive/",
+      "destination": "https://www.norbertbanhalmi.com/hu/archivum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/case-studies/peter-magyar-portrait-2026/",
+      "destination": "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/contact/",
+      "destination": "https://www.norbertbanhalmi.com/hu/kapcsolat/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/cookie-policy/",
+      "destination": "https://www.norbertbanhalmi.com/hu/sutik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/",
+      "destination": "https://www.norbertbanhalmi.com/hu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/agb/",
+      "destination": "https://www.norbertbanhalmi.com/hu/aszf/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/anfrage/",
+      "destination": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/archiv/",
+      "destination": "https://www.norbertbanhalmi.com/hu/archivum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/barrierefreiheit/",
+      "destination": "https://www.norbertbanhalmi.com/hu/akadalymentesseg/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/brand/",
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/cookies/",
+      "destination": "https://www.norbertbanhalmi.com/hu/sutik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/datenschutz/",
+      "destination": "https://www.norbertbanhalmi.com/hu/adatvedelem/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/eventfotografie/",
+      "destination": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "destination": "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/faq/",
+      "destination": "https://www.norbertbanhalmi.com/hu/gyik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/fine-art/",
+      "destination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/impressum/",
+      "destination": "https://www.norbertbanhalmi.com/hu/impresszum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/kontakt/",
+      "destination": "https://www.norbertbanhalmi.com/hu/kapcsolat/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/partner/",
+      "destination": "https://www.norbertbanhalmi.com/hu/partnerek/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/portrait/",
+      "destination": "https://www.norbertbanhalmi.com/hu/portre/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/hu/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/vertrauen/",
+      "destination": "https://www.norbertbanhalmi.com/hu/bizalom/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/werk/",
+      "destination": "https://www.norbertbanhalmi.com/hu/eletmu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/event-photography/",
+      "destination": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/faq/",
+      "destination": "https://www.norbertbanhalmi.com/hu/gyik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/glamour/",
+      "destination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/",
+      "destination": "https://www.norbertbanhalmi.com/hu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/adatvedelem/",
+      "destination": "https://www.norbertbanhalmi.com/hu/adatvedelem/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/ajanlatkeres/",
+      "destination": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/akadalymentesseg/",
+      "destination": "https://www.norbertbanhalmi.com/hu/akadalymentesseg/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/archivum/",
+      "destination": "https://www.norbertbanhalmi.com/hu/archivum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/aszf/",
+      "destination": "https://www.norbertbanhalmi.com/hu/aszf/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/bizalom/",
+      "destination": "https://www.norbertbanhalmi.com/hu/bizalom/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/brand/",
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/eletmu/",
+      "destination": "https://www.norbertbanhalmi.com/hu/eletmu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "destination": "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/gyik/",
+      "destination": "https://www.norbertbanhalmi.com/hu/gyik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/impresszum/",
+      "destination": "https://www.norbertbanhalmi.com/hu/impresszum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/kapcsolat/",
+      "destination": "https://www.norbertbanhalmi.com/hu/kapcsolat/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/muveszi-fotografia/",
+      "destination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/partnerek/",
+      "destination": "https://www.norbertbanhalmi.com/hu/partnerek/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/portre/",
+      "destination": "https://www.norbertbanhalmi.com/hu/portre/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/rendezvenyfotozas/",
+      "destination": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/hu/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/sutik/",
+      "destination": "https://www.norbertbanhalmi.com/hu/sutik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/impressum/",
+      "destination": "https://www.norbertbanhalmi.com/hu/impresszum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/lifestyle/",
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/partners/",
+      "destination": "https://www.norbertbanhalmi.com/hu/partnerek/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/portrait/",
+      "destination": "https://www.norbertbanhalmi.com/hu/portre/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "https://www.norbertbanhalmi.com/hu/adatvedelem/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/requestaquote/",
+      "destination": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/hu/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/terms-conditions/",
+      "destination": "https://www.norbertbanhalmi.com/hu/aszf/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/trust/",
+      "destination": "https://www.norbertbanhalmi.com/hu/bizalom/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://www.norbertbanhalmi.com/hu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "destination": "https://www.norbertbanhalmi.com/hu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/about/",
+      "destination": "https://www.norbertbanhalmi.com/hu/eletmu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/accessibility/",
+      "destination": "https://www.norbertbanhalmi.com/hu/akadalymentesseg/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/archive/",
+      "destination": "https://www.norbertbanhalmi.com/hu/archivum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/case-studies/peter-magyar-portrait-2026/",
+      "destination": "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/contact/",
+      "destination": "https://www.norbertbanhalmi.com/hu/kapcsolat/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/cookie-policy/",
+      "destination": "https://www.norbertbanhalmi.com/hu/sutik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/",
+      "destination": "https://www.norbertbanhalmi.com/hu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/agb/",
+      "destination": "https://www.norbertbanhalmi.com/hu/aszf/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/anfrage/",
+      "destination": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/archiv/",
+      "destination": "https://www.norbertbanhalmi.com/hu/archivum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/barrierefreiheit/",
+      "destination": "https://www.norbertbanhalmi.com/hu/akadalymentesseg/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/brand/",
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/cookies/",
+      "destination": "https://www.norbertbanhalmi.com/hu/sutik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/datenschutz/",
+      "destination": "https://www.norbertbanhalmi.com/hu/adatvedelem/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/eventfotografie/",
+      "destination": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/fallstudien/peter-magyar-portraet-2026/",
+      "destination": "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/faq/",
+      "destination": "https://www.norbertbanhalmi.com/hu/gyik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/fine-art/",
+      "destination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/impressum/",
+      "destination": "https://www.norbertbanhalmi.com/hu/impresszum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/kontakt/",
+      "destination": "https://www.norbertbanhalmi.com/hu/kapcsolat/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/partner/",
+      "destination": "https://www.norbertbanhalmi.com/hu/partnerek/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/portrait/",
+      "destination": "https://www.norbertbanhalmi.com/hu/portre/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/hu/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/vertrauen/",
+      "destination": "https://www.norbertbanhalmi.com/hu/bizalom/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/de-at/werk/",
+      "destination": "https://www.norbertbanhalmi.com/hu/eletmu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/event-photography/",
+      "destination": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/faq/",
+      "destination": "https://www.norbertbanhalmi.com/hu/gyik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/glamour/",
+      "destination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/",
+      "destination": "https://www.norbertbanhalmi.com/hu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/adatvedelem/",
+      "destination": "https://www.norbertbanhalmi.com/hu/adatvedelem/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/ajanlatkeres/",
+      "destination": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/akadalymentesseg/",
+      "destination": "https://www.norbertbanhalmi.com/hu/akadalymentesseg/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/archivum/",
+      "destination": "https://www.norbertbanhalmi.com/hu/archivum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/aszf/",
+      "destination": "https://www.norbertbanhalmi.com/hu/aszf/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/bizalom/",
+      "destination": "https://www.norbertbanhalmi.com/hu/bizalom/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/brand/",
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/eletmu/",
+      "destination": "https://www.norbertbanhalmi.com/hu/eletmu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "destination": "https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/gyik/",
+      "destination": "https://www.norbertbanhalmi.com/hu/gyik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/impresszum/",
+      "destination": "https://www.norbertbanhalmi.com/hu/impresszum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/kapcsolat/",
+      "destination": "https://www.norbertbanhalmi.com/hu/kapcsolat/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/muveszi-fotografia/",
+      "destination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/partnerek/",
+      "destination": "https://www.norbertbanhalmi.com/hu/partnerek/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/portre/",
+      "destination": "https://www.norbertbanhalmi.com/hu/portre/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/rendezvenyfotozas/",
+      "destination": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/hu/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/hu/sutik/",
+      "destination": "https://www.norbertbanhalmi.com/hu/sutik/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/impressum/",
+      "destination": "https://www.norbertbanhalmi.com/hu/impresszum/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/lifestyle/",
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/partners/",
+      "destination": "https://www.norbertbanhalmi.com/hu/partnerek/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/portrait/",
+      "destination": "https://www.norbertbanhalmi.com/hu/portre/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/privacy-policy/",
+      "destination": "https://www.norbertbanhalmi.com/hu/adatvedelem/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/requestaquote/",
+      "destination": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/speier-viko/",
+      "destination": "https://www.norbertbanhalmi.com/hu/speier-viko/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/terms-conditions/",
+      "destination": "https://www.norbertbanhalmi.com/hu/aszf/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/trust/",
+      "destination": "https://www.norbertbanhalmi.com/hu/bizalom/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/:path*",
+      "destination": "https://www.norbertbanhalmi.com/hu/",
+      "permanent": true,
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ]
+    },
+    {
+      "source": "/oneletrajz-cv-fotozas",
+      "destination": "/hu/portre/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio-fotozas",
+      "destination": "/hu/portre/",
+      "permanent": true
+    },
+    {
+      "source": "/muveszi-aktfotozas",
+      "destination": "/hu/muveszi-fotografia/",
+      "permanent": true
+    },
+    {
+      "source": "/reklam-fotozas",
+      "destination": "/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/post/amikor-csak-egy-táncpartnered-van-egész-estére",
+      "destination": "https://blog.banhalmi.art/post/amikor-csak-egy-táncpartnered-van-egész-estére",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tags/filter-nélkül-a-testem-története",
+      "destination": "https://blog.banhalmi.art/blog",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "destination": "/index.html",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "referer",
+          "value": "^https://www\\.norbertbanhalmi\\.com/hu/.*"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "destination": "/index.html",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "referer",
+          "value": "^https://www\\.norbertbanhalmi\\.com/de-at/.*"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "destination": "/hu/",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^hu.*"
+        }
+      ]
+    },
+    {
+      "source": "/",
+      "destination": "/de-at/",
+      "permanent": false,
+      "has": [
+        {
+          "type": "header",
+          "key": "accept-language",
+          "value": "^de.*"
+        }
+      ]
+    }
+  ]
+}
