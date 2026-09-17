@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-16-v20-compact-footer-geometry",
+  "version": "2026-09-17-v28-homepage-hero-media-15pct",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -34,6 +34,20 @@
       {"width": 2560, "height": 1440, "homepageHeroMaxPx": 920, "footerMaxPx": 420, "portraitGalleryColumns": 6},
       {"width": 3840, "height": 2160, "homepageHeroMaxPx": 1080, "footerMaxPx": 440, "portraitGalleryColumns": 6}
     ],
+    "homepageHeroMedia": {
+      "reductionFraction": 0.15,
+      "mobileUnchangedMaxPx": 620,
+      "tabletMinPx": 621,
+      "tabletMaxPx": 1179,
+      "tabletHeightVw": 39.5604,
+      "desktopMinPx": 1180,
+      "desktopHeight": "clamp(629px,35.7vw,748px)",
+      "shortDesktopMaxViewportHeightPx": 760,
+      "shortDesktopHeightPx": 561,
+      "copyPanelGeometryUnchanged": true,
+      "languages": ["en", "de-AT", "hu-HU"],
+      "pages": ["index.html", "de-at/index.html", "hu/index.html"]
+    },
     "homepageHeroMaxViewportFraction": 0.92,
     "sameRowCardHeightTolerancePx": 2,
     "reviewsSectionPaddingMaxPx": 72,
