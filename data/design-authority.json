@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-17-v29-two-row-desktop-footer",
+  "version": "2026-09-17-v30-compact-editorial-mega-menu",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -85,8 +85,8 @@
     "sameRowCardHeightTolerancePx": 2,
     "reviewsSectionPaddingMaxPx": 72,
     "sectionStartToHeadingMaxPx": 180,
-    "megaMenuFirstContentMaxPx": 132,
-    "megaMenuBottomWhitespaceMaxPx": 104,
+    "megaMenuFirstContentMaxPx": 72,
+    "megaMenuBottomWhitespaceMaxPx": 44,
     "runtimeGeometryOverridesAllowed": false
   },
   "navigation": {
@@ -95,7 +95,30 @@
     "activeBorder": "none",
     "activeBoxShadow": "none",
     "activeRadiusPx": 0,
-    "megaMenu": {"background": "#202530", "panelMaxPx": 1440, "desktopSidePaddingPx": 88, "desktopTopPaddingPx": 86, "desktopBottomPaddingPx": 34, "desktopColumnGapPx": 72, "sectionRuleColor": "rgba(183,156,68,.34)", "focusStyle": "underline-only", "pointerAutofocus": false, "pricingTreatment": "gold-text"}
+    "megaMenu": {
+      "background": "#202530",
+      "panelMaxPx": 1360,
+      "desktopSidePaddingPx": 36,
+      "desktopTopPaddingPx": 38,
+      "desktopBottomPaddingPx": 38,
+      "desktopColumnGapPx": 0,
+      "sectionRuleColor": "rgba(183,156,68,.28)",
+      "focusStyle": "underline-only",
+      "pointerAutofocus": false,
+      "pricingTreatment": "gold-text",
+      "contractVersion": "v30",
+      "desktopOverlayBelowHeader": true,
+      "desktopColumns": 4,
+      "desktopMaxHeightPx": 520,
+      "desktopDescriptionsHidden": true,
+      "duplicateBrandIntroHidden": true,
+      "duplicateTailHidden": true,
+      "visualTile": true,
+      "visualTileSource": "/assets/img/curated/hero-signature-960.avif",
+      "mobileStartsBelowHeader": true,
+      "mobileDescriptionsHidden": true,
+      "mobileSectionSpacingCompact": true
+    }
   },
   "principles": {"singleLeftContentAxis": true, "readingMeasureSeparateFromStructuredCanvas": true, "standardAndStructuredCanvasesAreDistinct": true, "computedGeometryIsReleaseEvidence": true, "noPatchLayerAfterCanonicalAuthority": true, "footerRemainsInNormalDocumentFlow": true, "historicalScreenshotRegressionsAreReleaseBlocking": true, "designAuditsMustReadCanonicalAuthority": true}
 }
