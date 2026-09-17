@@ -43,6 +43,27 @@
     document.head.appendChild(menuLink);
   }
 
+  /* Typography integrity is global: short hyphenated service terms may move
+     to the next line as a unit but may not split at an internal hyphen. */
+  var typeHref = '/assets/css/typography-integrity-v33.css?v=20260917-typography-v33';
+  var typeLink = document.querySelector('link[data-typography-integrity]');
+  if (typeLink) {
+    if (typeLink.getAttribute('href') !== typeHref) typeLink.setAttribute('href', typeHref);
+  } else {
+    typeLink = document.createElement('link');
+    typeLink.rel = 'stylesheet';
+    typeLink.href = typeHref;
+    typeLink.setAttribute('data-typography-integrity','');
+    document.head.appendChild(typeLink);
+  }
+  if (!document.querySelector('script[data-typography-integrity]')) {
+    var typeScript = document.createElement('script');
+    typeScript.src = '/assets/js/typography-integrity-v33.js?v=20260917-typography-v33';
+    typeScript.defer = true;
+    typeScript.setAttribute('data-typography-integrity','');
+    document.head.appendChild(typeScript);
+  }
+
   /* Runtime owns disclosure state only. Pixel geometry belongs to committed stylesheets. */
   var query = window.matchMedia('(min-width:1180px)');
   var groups = Array.prototype.slice.call(document.querySelectorAll('details.footer-accordion'));

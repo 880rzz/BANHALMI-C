@@ -1,0 +1,16 @@
+/* TYPOGRAPHY-INTEGRITY-V33-20260917
+   Semantic line-break protection for short compound service terms.
+   Terms may move as a unit to the next line, but must not split at an internal hyphen. */
+
+html body .bn-term-lock{
+  white-space:nowrap!important;
+  word-break:keep-all!important;
+  overflow-wrap:normal!important;
+  hyphens:none!important;
+}
+
+/* Do not let surrounding editorial labels force arbitrary mid-word breaks. */
+html body :is(.eyebrow,.hero-location-line,.more,.fp-choice strong,.fp-choice em,.nav-links,.bn-mega-panel,.site-footer){
+  word-break:normal;
+  overflow-wrap:normal;
+}
