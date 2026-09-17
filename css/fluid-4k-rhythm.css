@@ -85,3 +85,89 @@
     margin:0 auto!important;
   }
 }
+
+/* FOOTER-RESTORE-V24-20260917
+   One stable information layout across the site: full details on desktop,
+   native disclosures on compact screens. Explicit placement eliminates the
+   empty footer tail caused by implicit grid rows. */
+html body>.site-footer{
+  block-size:auto!important;
+  min-block-size:0!important;
+  max-block-size:none!important;
+  align-self:start!important;
+  overflow:visible!important;
+}
+html body .site-footer .footer-grid{
+  grid-auto-rows:max-content!important;
+  align-content:start!important;
+}
+@media (min-width:1180px){
+  html body .site-footer{
+    padding:34px 0 22px!important;
+  }
+  html body .site-footer .footer-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    grid-template-rows:auto auto!important;
+    gap:30px clamp(24px,2.4vw,42px)!important;
+    align-items:start!important;
+  }
+  html body .site-footer .footer-brand-col{
+    grid-column:1!important;
+    grid-row:1!important;
+    max-width:34ch!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion{
+    min-width:0!important;
+    margin:0!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(1){grid-column:2!important;grid-row:1!important}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(2){grid-column:3!important;grid-row:1!important}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){grid-column:4!important;grid-row:1!important}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(4){grid-column:1!important;grid-row:2!important}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(5){grid-column:2!important;grid-row:2!important}
+  html body .site-footer .footer-grid>div:has(.footer-contact-list){grid-column:3!important;grid-row:2!important;min-width:0!important}
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:4!important;grid-row:2!important;min-width:0!important}
+  html body .site-footer .footer-accordion:not([open])>ul{display:block!important;}
+  html body .site-footer .footer-accordion>summary{pointer-events:none!important;cursor:default!important;}
+  html body .site-footer .footer-accordion>summary::after{display:none!important;}
+  html body .site-footer .footer-accordion li>a{
+    min-height:28px!important;
+    padding-block:2px!important;
+    white-space:normal!important;
+    overflow-wrap:anywhere!important;
+    line-height:1.35!important;
+  }
+  html body .site-footer .footer-contact-list{grid-template-columns:1fr!important;}
+  html body .site-footer .footer-contact-list .footer-studio{padding-bottom:12px!important;}
+  html body .site-footer .footer-bottom{
+    margin-top:22px!important;
+    padding-top:14px!important;
+  }
+  html body .site-footer .banhalmi-ecosystem{margin-top:12px!important;padding-top:10px!important;}
+}
+@media (min-width:621px) and (max-width:1179px){
+  html body .site-footer{padding:30px 0 20px!important;}
+  html body .site-footer .footer-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:26px 28px!important;
+  }
+  html body .site-footer .footer-brand-col{grid-column:1 / -1!important;max-width:42ch!important;}
+  html body .site-footer .footer-grid>details.footer-accordion{grid-column:auto!important;}
+  html body .site-footer .footer-grid>div:has(.footer-contact-list),
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:auto!important;}
+}
+@media (max-width:620px){
+  html body .site-footer{padding:28px 0 18px!important;}
+  html body .site-footer .footer-grid{grid-template-columns:1fr!important;gap:0!important;}
+  html body .site-footer .footer-brand-col{grid-column:auto!important;max-width:36ch!important;margin-bottom:20px!important;}
+  html body .site-footer .footer-accordion{border-top:1px solid rgba(245,245,247,.16)!important;}
+  html body .site-footer .footer-accordion>summary{min-height:48px!important;padding:0 28px 0 0!important;}
+  html body .site-footer .footer-accordion li>a{min-height:42px!important;white-space:normal!important;line-height:1.4!important;}
+  html body .site-footer .footer-grid>div:has(.footer-contact-list),
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){margin-top:24px!important;}
+  html body .site-footer .footer-contact-list{grid-template-columns:1fr!important;}
+  html body .site-footer .footer-bottom{margin-top:22px!important;padding-top:14px!important;}
+  html body .site-footer .footer-bottom>span{white-space:normal!important;}
+  html body .site-footer .banhalmi-ecosystem{grid-template-columns:1fr!important;gap:0!important;}
+  html body .site-footer .banhalmi-ecosystem a{border-right:0!important;border-bottom:1px solid rgba(245,245,247,.12)!important;}
+}
