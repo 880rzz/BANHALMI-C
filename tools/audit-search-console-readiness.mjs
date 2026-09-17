@@ -6,7 +6,6 @@ const core=JSON.parse(fs.readFileSync('data/machine-core.json','utf8'));
 const overlay=JSON.parse(fs.readFileSync('llm-canonical-overlay.json','utf8'));
 const ai=JSON.parse(fs.readFileSync('ai-entry.json','utf8'));
 const sitemap=fs.readFileSync('sitemap.xml','utf8');
-const vercel=JSON.parse(fs.readFileSync('vercel.json','utf8'));
 const req=(ok,msg)=>{if(!ok)errors.push(msg)};
 
 req(core.brand?.name==='BANHALMI','Canonical primary brand drift');
@@ -15,21 +14,18 @@ req(!(JSON.stringify(core).includes('"positioning":"Professional Photography Tea
 req(overlay.forbiddenBrandValues?.includes('Professional Photography Team'),'Overlay no longer forbids retired brand positioning');
 req(ai?.identity?.brand?.positioning==='Photography Team','Committed AI entry still contains retired brand positioning');
 req(!/<lastmod>/.test(sitemap),'Source sitemap must remain lastmod-free unless freshness can be derived truthfully from production source history');
-req(vercel?.git?.deploymentEnabled===true,'Vercel Git deployment must remain enabled for the repository-root deployment contract');
 req(fs.existsSync('external-photography-evidence.json')&&fs.existsSync('press-institutional-evidence.json')&&fs.existsSync('media-usage-evidence.json'),'Protected evidence registry missing');
 
-const redirects=Array.isArray(vercel.redirects)?vercel.redirects:[];
-for(const [host,destination] of [
-  ['banhalmi.at','https://www.norbertbanhalmi.com/de-at/:path*'],
-  ['www.banhalmi.at','https://www.norbertbanhalmi.com/de-at/:path*'],
-  ['banhalminorbert.hu','https://www.norbertbanhalmi.com/hu/:path*'],
-  ['www.banhalminorbert.hu','https://www.norbertbanhalmi.com/hu/:path*']
+for(const [file,destination] of [
+  ['redirects/at/vercel.json','https://www.norbertbanhalmi.com/de-at/:path*'],
+  ['redirects/hu/vercel.json','https://www.norbertbanhalmi.com/hu/:path*']
 ]){
-  const rule=redirects.find((candidate)=>
-    candidate?.source==='/:path*'&&candidate?.destination===destination&&candidate?.permanent===true&&
-    Array.isArray(candidate?.has)&&candidate.has.some((condition)=>condition?.type==='header'&&String(condition?.key||'').toLowerCase()==='host'&&condition?.value===host)
-  );
-  req(Boolean(rule),`Vercel canonical routing contract missing permanent alias redirect for ${host}`);
+  let config;
+  try{config=JSON.parse(fs.readFileSync(file,'utf8'));}catch(error){errors.push(`${file}: invalid or missing (${error.message})`);continue;}
+  req(config?.git?.deploymentEnabled===true,`${file}: Git deployment must be enabled on the active BANHALMI-C redirect project`);
+  const redirects=Array.isArray(config.redirects)?config.redirects:[];
+  const rule=redirects.find((candidate)=>candidate?.source==='/:path*'&&candidate?.destination===destination&&candidate?.permanent===true);
+  req(Boolean(rule),`${file}: canonical permanent catch-all redirect missing`);
 }
 
 // Google Search Console ProfilePage hardening.
@@ -85,4 +81,4 @@ for(const file of htmlFiles){
 req(profilePageCount>0,'No ProfilePage schema found; Search Console ProfilePage contract is no longer exercised');
 
 if(errors.length){console.error(errors.join('\n'));process.exit(1)}
-console.log(`Strict E-E-A-T / Search Console source readiness passed: canonical brand semantics, stable sitemap source, Vercel alias routing and ${profilePageCount} ProfilePage node(s) are coherent; ${profileDateCreatedCount} optional dateCreated value(s) validated.`);
+console.log(`Strict E-E-A-T / Search Console source readiness passed: canonical brand semantics, stable sitemap source, dedicated Vercel entry-domain projects and ${profilePageCount} ProfilePage node(s) are coherent; ${profileDateCreatedCount} optional dateCreated value(s) validated.`);
