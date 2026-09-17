@@ -111,7 +111,7 @@ export function applyLlmCanonicalOverlay(siteRoot='_site'){
   const graph=Array.isArray(entity['@graph'])?entity['@graph']:[];
   const hipId='https://www.hipstudio.hu/#organization';
   const personId='https://www.norbertbanhalmi.com/about/';
-  if(!graph.some(n=>n?.['@id']===hipId)) graph.push({'@type':'Organization','@id':hipId,name:'HIPStudio',url:'https://www.hipstudio.hu/',sameAs:['https://www.wikidata.org/wiki/Q138482177'],founder:{'@id':personId},foundingDate:'2006-03-15',address:{'@type':'PostalAddress',streetAddress:'Lágymányosi utca 15.',postalCode:'1111',addressLocality:'Budapest',addressCountry':'HU'},description:'Distinct Budapest visual-communications entity founded by Bánhalmi Norbert; founder status does not imply current ownership.'});
+  if(!graph.some(n=>n?.['@id']===hipId)) graph.push({'@type':'Organization','@id':hipId,name:'HIPStudio',url:'https://www.hipstudio.hu/',sameAs:['https://www.wikidata.org/wiki/Q138482177'],founder:{'@id':personId},foundingDate:'2006-03-15',address:{'@type':'PostalAddress',streetAddress:'Lágymányosi utca 15.',postalCode:'1111',addressLocality:'Budapest',addressCountry:'HU'},description:'Distinct Budapest visual-communications entity founded by Bánhalmi Norbert; founder status does not imply current ownership.'});
   entity['@graph']=graph;
   entity.protectedCanonicalOverlay={'@id':overlay['@id']};
   writeJson(entityPath,entity);
