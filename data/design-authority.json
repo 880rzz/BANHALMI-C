@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-17-v28-homepage-hero-media-15pct",
+  "version": "2026-09-17-v29-two-row-desktop-footer",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -23,16 +23,49 @@
     "quoteInfoColumnPx": 44,
     "quoteWorkspaceMinFormToIntroRatio": 1.55,
     "serviceProcessBottomMarginPx": 0,
-    "footer": {"desktopColumns": 4, "desktopBands": 3, "compactDesktopColumns": 6, "tabletColumns": 6, "mobileColumns": 1, "desktopMinPx": 1180, "compactDesktopMinPx": 769, "tabletMinPx": 621, "paddingTopPx": 28, "paddingBottomPx": 18, "desktopGapPx": 18, "tabletGapPx": 14, "summaryMinHeightPx": 44, "linkRowGapPx": 8, "compactPaddingTopPx": 14, "compactPaddingBottomPx": 10, "compactColumnGapPx": 12, "compactRowGapPx": 8, "compactFooterBottomMarginPx": 8, "compactFooterBottomPaddingPx": 6, "compactEcosystemMarginPx": 4, "compactEcosystemPaddingPx": 4},
-    "documentFlow": {"layoutMode": "grid", "documentBackground": "#202530", "footerAfterDocumentGapMaxPx": 2, "mainToFooterOverlapTolerancePx": 2, "footerMaxViewportFractionOnTabletDesktop": 0.54, "footerAbsoluteMaxPx": 480}
+    "footer": {
+      "desktopColumns": 12,
+      "desktopContentRows": 2,
+      "desktopBands": 3,
+      "desktopMinPx": 1180,
+      "desktopMaxContentPx": 1440,
+      "desktopSideInsetPx": 48,
+      "desktopColumnGapMinPx": 24,
+      "desktopColumnGapMaxPx": 42,
+      "desktopRowGapMinPx": 58,
+      "desktopRowGapMaxPx": 78,
+      "desktopContactColumns": 2,
+      "desktopTopRowGroups": ["brand", "services", "archive", "profile"],
+      "desktopBottomRowGroups": ["contact", "social", "memberships", "legal"],
+      "desktopNoMidWordBreaks": true,
+      "compactDesktopColumns": 6,
+      "tabletColumns": 6,
+      "mobileColumns": 1,
+      "compactDesktopMinPx": 769,
+      "tabletMinPx": 621,
+      "paddingTopPx": 42,
+      "paddingBottomPx": 24,
+      "tabletGapPx": 14,
+      "summaryMinHeightPx": 44,
+      "linkRowGapPx": 10,
+      "compactPaddingTopPx": 14,
+      "compactPaddingBottomPx": 10,
+      "compactColumnGapPx": 12,
+      "compactRowGapPx": 8,
+      "compactFooterBottomMarginPx": 8,
+      "compactFooterBottomPaddingPx": 6,
+      "compactEcosystemMarginPx": 4,
+      "compactEcosystemPaddingPx": 4
+    },
+    "documentFlow": {"layoutMode": "grid", "documentBackground": "#202530", "footerAfterDocumentGapMaxPx": 2, "mainToFooterOverlapTolerancePx": 2, "footerMaxViewportFractionOnTabletDesktop": 0.82, "footerAbsoluteMaxPx": 760}
   },
   "responsive": {"touchTargetPx": 44, "minViewportPx": 320, "maxViewportPx": 3840},
   "visualGeometry": {
     "requiredDesktopViewports": [
-      {"width": 1440, "height": 900, "homepageHeroMaxPx": 760, "footerMaxPx": 450, "portraitGalleryColumns": 4},
-      {"width": 1920, "height": 1080, "homepageHeroMaxPx": 830, "footerMaxPx": 420, "portraitGalleryColumns": 5},
-      {"width": 2560, "height": 1440, "homepageHeroMaxPx": 920, "footerMaxPx": 420, "portraitGalleryColumns": 6},
-      {"width": 3840, "height": 2160, "homepageHeroMaxPx": 1080, "footerMaxPx": 440, "portraitGalleryColumns": 6}
+      {"width": 1440, "height": 900, "homepageHeroMaxPx": 760, "footerMaxPx": 720, "portraitGalleryColumns": 4},
+      {"width": 1920, "height": 1080, "homepageHeroMaxPx": 830, "footerMaxPx": 720, "portraitGalleryColumns": 5},
+      {"width": 2560, "height": 1440, "homepageHeroMaxPx": 920, "footerMaxPx": 740, "portraitGalleryColumns": 6},
+      {"width": 3840, "height": 2160, "homepageHeroMaxPx": 1080, "footerMaxPx": 760, "portraitGalleryColumns": 6}
     ],
     "homepageHeroMedia": {
       "reductionFraction": 0.15,
