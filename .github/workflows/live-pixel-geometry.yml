@@ -61,6 +61,7 @@ jobs:
       - name: Run compact desktop through 4K pixel gate
         env:
           LIVE_PIXEL_BASE_URL: http://127.0.0.1:4173
+          FOOTER_RELEASE_ONLY: '1'
         run: node tools/audit-live-pixel-geometry.mjs
       - name: Run targeted responsive browser audit
         env:
