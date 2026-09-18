@@ -3919,7 +3919,8 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
 /* Final visual authority: Apple-like optical rhythm, explicit alignment semantics,
    WCAG-safe contrast, and one predictable desktop/tablet/mobile geometry. */
 :root{
-  --apple-page-max:1200px;
+  --apple-page-max:1280px;
+  --apple-structured-max:1440px;
   --apple-reading-max:760px;
   --apple-wide-reading-max:900px;
   --apple-gutter:clamp(20px,4.2vw,56px);
@@ -4154,8 +4155,8 @@ html body main .trust-hero p.lead{
 
 /* One typographic scale: display type is restrained; body, descriptions and
    disclosure copy share a readable rhythm in every language. */
-html body main h1{font-size:clamp(2.1rem,3.25vw,3.25rem)!important;line-height:1.08!important;letter-spacing:-.024em!important;}
-html body main h2{font-size:clamp(1.45rem,2.1vw,2.1rem)!important;line-height:1.18!important;letter-spacing:-.022em!important;}
+html body main h1{font-size:clamp(2.5rem,3.6vw,3.625rem)!important;line-height:1.08!important;letter-spacing:-.024em!important;}
+html body main h2{font-size:clamp(1.625rem,2.4vw,2.375rem)!important;line-height:1.18!important;letter-spacing:-.022em!important;}
 html body main h3{font-size:clamp(18px,1.45vw,1.3rem)!important;line-height:1.24!important;letter-spacing:-.012em!important;}
 html body main :is(p,li,dd){font-size:16px!important;line-height:1.62!important;}
 html body main .lead{font-size:clamp(19px,1.6vw,1.4rem)!important;line-height:1.48!important;}
@@ -4186,7 +4187,7 @@ html body main .grid-3{display:grid!important;grid-template-columns:repeat(3,min
 html body main :is(.card,.step,.quote-step,.quote-summary-card,.category-card,.option-row){height:auto!important;min-height:0!important;align-self:start!important;}
 html body main .service-process-grid,
 html body main .quote-deep-details .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
-html body main .service-process-grid{margin-bottom:var(--apple-section-space)!important;}
+html body main .service-process-grid{margin-bottom:0!important;}
 html body main .partner-grid{gap:var(--apple-card-gap)!important;}
 /* Component axes are explicit: the membership CTA belongs to the full five-card
    grid, while FAQ headings and their disclosures begin on one reading column. */
@@ -4261,6 +4262,19 @@ html body .site-footer .footer-bottom{display:grid!important;grid-template-colum
 html body .site-footer .footer-bottom>span:first-child{justify-self:start!important;text-align:left!important;white-space:nowrap!important;}
 html body .site-footer .footer-bottom>span:last-child{justify-self:end!important;text-align:right!important;white-space:nowrap!important;}
 html body .site-footer,html body .site-footer .wrap{min-height:0!important;}
+/* DESIGN-AUTHORITY-SOURCE-SYNC-20260918
+   Committed source equivalent of the former artifact compiler rules. */
+html body main h3 + :is(p,.lead,.description,.desc){margin-top:10px!important;}
+@media(min-width:1440px){html body main .wrap:has(> :is(.service-process-grid,.partner-grid,.partner-grid-memberships,.archive-cards,.two-reading-grid,.smart-quote-layout)){width:min(calc(100% - 2 * var(--apple-gutter)),var(--apple-structured-max))!important;max-width:var(--apple-structured-max)!important;}html body main :is(.service-process-grid,.partner-grid,.partner-grid-memberships,.archive-cards,.two-reading-grid,.smart-quote-layout){width:100%!important;max-width:var(--apple-structured-max)!important;margin-left:auto!important;margin-right:auto!important;}}
+@media(max-width:1439px){html body main :is(.service-process-grid,.partner-grid,.partner-grid-memberships,.archive-cards,.two-reading-grid,.smart-quote-layout){width:100%!important;max-width:var(--apple-page-max)!important;margin-left:auto!important;margin-right:auto!important;}}
+html body main :is(.service-process-grid,.partner-grid,.partner-grid-memberships,.archive-cards,.two-reading-grid){gap:24px!important;}
+html body .smart-quote-layout .category-card{display:grid!important;grid-template-columns:24px minmax(0,1fr)!important;column-gap:14px!important;align-items:center!important;}
+html body .smart-quote-layout .category-card>input[type="radio"]{grid-column:1!important;inline-size:24px!important;block-size:24px!important;min-width:24px!important;min-height:24px!important;margin:0!important;}
+html body .smart-quote-layout .category-card>span{grid-column:2!important;display:grid!important;grid-template-columns:minmax(0,1fr) 44px!important;column-gap:12px!important;align-items:center!important;min-width:0!important;}
+html body .smart-quote-layout .category-card .info-tip{position:static!important;grid-column:2!important;justify-self:end!important;margin:0!important;}
+@media(max-width:620px){html body main .partner-grid-memberships>:last-child:nth-child(odd){grid-column:1/-1!important;width:calc((100% - .7rem)/2)!important;justify-self:center!important;}}
+html body .site-header a{min-height:44px!important;display:inline-flex!important;align-items:center!important;}
+html body .site-header :is(.lang-switch a,.nav-links a){min-height:44px!important;}
 @media(max-width:1460px){
   html body .site-footer .footer-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:28px!important;}
   html body .site-footer .footer-accordion li>a{align-items:flex-start!important;white-space:normal!important;}
@@ -4269,8 +4283,8 @@ html body .site-footer,html body .site-footer .wrap{min-height:0!important;}
 }
 
 @media(max-width:768px){
-  html body main h1{font-size:clamp(2.15rem,4.8vw,2.75rem)!important;}
-  html body main h2{font-size:clamp(1.55rem,3.2vw,2rem)!important;}
+  html body main h1{font-size:clamp(2.375rem,5.2vw,2.875rem)!important;}
+  html body main h2{font-size:clamp(1.5625rem,3.5vw,2.125rem)!important;}
   html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid){grid-template-columns:1fr!important;}
   html body main :is(.service-process-grid,.quote-deep-details .card-grid){grid-template-columns:1fr!important;}
   html body .site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 22px!important;}
