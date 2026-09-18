@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-18-v34-single-footer-quote-intrinsic",
+  "version": "2026-09-18-v35-canonical-design-authority",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -51,8 +51,8 @@
       "desktopSideInsetPx": 48,
       "desktopColumnGapMinPx": 24,
       "desktopColumnGapMaxPx": 42,
-      "desktopRowGapMinPx": 58,
-      "desktopRowGapMaxPx": 78,
+      "desktopRowGapMinPx": 36,
+      "desktopRowGapMaxPx": 36,
       "desktopContactColumns": 2,
       "desktopTopRowGroups": [
         "brand",
@@ -90,8 +90,8 @@
       "mobileColumns": 1,
       "compactDesktopMinPx": 769,
       "tabletMinPx": 621,
-      "paddingTopPx": 42,
-      "paddingBottomPx": 24,
+      "paddingTopPx": 28,
+      "paddingBottomPx": 16,
       "tabletGapPx": 14,
       "summaryMinHeightPx": 44,
       "linkRowGapPx": 10,
