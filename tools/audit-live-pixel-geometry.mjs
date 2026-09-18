@@ -5,7 +5,7 @@ import { chromium } from '@playwright/test';
 const base=(process.env.LIVE_PIXEL_BASE_URL||'http://127.0.0.1:4173').replace(/\/$/,'');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const viewports=authority.visualGeometry?.requiredDesktopViewports||[];
-const maxHeroFraction=Number(authority.visualGeometry?.homepageHeroMaxViewportFraction||0.92);
+const maxHeroFraction=Number(authority.visualGeometry?.homepageHeroMaxViewportFraction||0.92);\nconst heroReduction=Number(authority.visualGeometry?.homepageHeroMedia?.reductionFraction||0.15);
 const footerFraction=Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDesktop||0.54);
 const footerAbsolute=Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx||480);
 const cardTolerance=Number(authority.visualGeometry?.sameRowCardHeightTolerancePx||2);
@@ -100,7 +100,7 @@ for(const vp of viewports){
       else {
         const allowed=Math.min(Number(vp.homepageHeroMaxPx),height*maxHeroFraction);
         if(result.hero.height>allowed+2) issues.push(`homepage hero ${result.hero.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
-        if(Math.abs(result.hero.visual.height-result.hero.copy.height)>2) issues.push(`hero panels differ by ${Math.abs(result.hero.visual.height-result.hero.copy.height).toFixed(1)}px`);
+        const reduction=1-(result.hero.visual.height/result.hero.copy.height);\n        if(result.hero.visual.height>result.hero.copy.height+2) issues.push(`hero visual ${result.hero.visual.height.toFixed(1)}px exceeds copy ${result.hero.copy.height.toFixed(1)}px`);\n        if(Math.abs(reduction-heroReduction)>0.04) issues.push(`hero visual reduction ${(reduction*100).toFixed(1)}% differs from approved ${(heroReduction*100).toFixed(1)}%`);
       }
       const rowIssues=sameRowHeightIssues(result.cards,cardTolerance);
       if(rowIssues.length) issues.push(`decision-card row height delta ${Math.max(...rowIssues.map(x=>x.delta)).toFixed(1)}px > ${cardTolerance}px`);
