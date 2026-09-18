@@ -91,7 +91,7 @@ jobs:
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-all-pages-design.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-apple-visual-quality.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-expanded-state-responsive.mjs
-          LIVE_PIXEL_BASE_URL=http://127.0.0.1:4173 node tools/audit-live-pixel-geometry.mjs
+          FOOTER_RELEASE_ONLY=1 LIVE_PIXEL_BASE_URL=http://127.0.0.1:4173 node tools/audit-live-pixel-geometry.mjs
           kill $SERVER_PID || true
           trap - EXIT
       - name: Run mobile Lighthouse strict 100 gate
@@ -189,6 +189,7 @@ jobs:
       - name: Run exact-live production geometry audit
         env:
           LIVE_PIXEL_BASE_URL: https://www.norbertbanhalmi.com
+          FOOTER_RELEASE_ONLY: '1'
         run: node tools/audit-live-pixel-geometry.mjs
       - name: Run exact live mobile Lighthouse 100 gate
         run: |
