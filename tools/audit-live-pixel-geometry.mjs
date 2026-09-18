@@ -4,6 +4,7 @@ import { chromium } from '@playwright/test';
 
 const base=(process.env.LIVE_PIXEL_BASE_URL||'http://127.0.0.1:4173').replace(/\/$/,'');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
+const footerReleaseOnly=process.env.FOOTER_RELEASE_ONLY==='1';
 const authorityViewports=authority.visualGeometry?.requiredDesktopViewports||[];
 const compactViewports=[
   {width:1180,height:800,homepageHeroMaxPx:760,footerMaxPx:760,portraitGalleryColumns:4},
@@ -124,7 +125,7 @@ for(const vp of viewports){
       if(result.footer.visualBands!==3) issues.push(`footer visual bands ${result.footer.visualBands} != 3`);
     }
     if(result.reviews&&(result.reviews.paddingTop>reviewsPaddingMax+1||result.reviews.paddingBottom>reviewsPaddingMax+1)) issues.push(`reviews padding ${result.reviews.paddingTop.toFixed(1)}/${result.reviews.paddingBottom.toFixed(1)}px > ${reviewsPaddingMax}px`);
-    if(target.kind==='home'){
+    if(target.kind==='home'&&!footerReleaseOnly){
       if(!result.hero) issues.push('split homepage hero missing');
       else {
         const allowed=Math.min(Number(vp.homepageHeroMaxPx),height*maxHeroFraction);
@@ -134,13 +135,13 @@ for(const vp of viewports){
       const rowIssues=sameRowHeightIssues(result.cards,cardTolerance);
       if(rowIssues.length) issues.push(`decision-card row height delta ${Math.max(...rowIssues.map(x=>x.delta)).toFixed(1)}px > ${cardTolerance}px`);
     }
-    if(target.kind==='portrait'){
+    if(target.kind==='portrait'&&!footerReleaseOnly){
       if(!result.gallery) issues.push('portrait collage gallery not found');
       else if(result.gallery.columns<Number(vp.portraitGalleryColumns)) issues.push(`portrait gallery ${result.gallery.columns} columns < ${vp.portraitGalleryColumns}`);
     }
 
     const slug=`${width}x${height}-${target.lang}-${target.kind}`;
-    if(target.lang==='en'&&target.kind==='home'){
+    if(!footerReleaseOnly&&target.lang==='en'&&target.kind==='home'){
       const button=page.locator('.menu-btn').first();
       if(await button.count()){
         await button.click();
