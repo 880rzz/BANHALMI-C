@@ -7,7 +7,7 @@ const overlay=JSON.parse(fs.readFileSync('llm-canonical-overlay.json','utf8'));
 const ai=JSON.parse(fs.readFileSync('ai-entry.json','utf8'));
 const sitemap=fs.readFileSync('sitemap.xml','utf8');
 const pages=fs.readFileSync('.github/workflows/pages.yml','utf8');
-const pr=fs.readFileSync('.github/workflows/desktop-regression.yml','utf8');
+const pixel=fs.readFileSync('.github/workflows/live-pixel-geometry.yml','utf8');
 const emergency=fs.readFileSync('.github/workflows/emergency-pages-deploy.yml','utf8');
 const req=(ok,msg)=>{if(!ok)errors.push(msg)};
 
@@ -16,13 +16,14 @@ req(core.brand?.positioning==='Photography Team','Canonical brand positioning is
 req(!(JSON.stringify(core).includes('"positioning":"Professional Photography Team"')),'Retired brand positioning remains in canonical machine core');
 req(overlay.forbiddenBrandValues?.includes('Professional Photography Team'),'Overlay no longer forbids retired brand positioning');
 req(ai?.identity?.brand?.positioning==='Photography Team','Committed AI entry still contains retired brand positioning');
-req(!/<lastmod>/.test(sitemap),'Source sitemap must remain a lastmod-free template; production lastmod is Git-history rendered');
-req(pages.includes('fetch-depth: 0'),'Production deploy checkout lacks full history for truthful sitemap lastmod');
-req(pages.includes('render-production-sitemap-lastmod.mjs _site'),'Production deploy does not render truthful sitemap lastmod');
-req(pr.includes('render-production-sitemap-lastmod.mjs _site'),'PR artifact does not exercise production sitemap rendering');
-req(emergency.includes('fetch-depth: 0'),'Emergency deploy checkout lacks full history for truthful sitemap lastmod');
-req(emergency.includes('render-production-sitemap-lastmod.mjs _site'),'Emergency deploy does not render truthful sitemap lastmod');
-req(emergency.includes("grep -Eq '<lastmod>")&&emergency.includes('_site/sitemap.xml'),'Emergency deploy does not assert rendered sitemap lastmod');
+req(!/<lastmod>/.test(sitemap),'Committed sitemap must remain lastmod-free unless dates are maintained truthfully in source');
+req(pages.includes('git archive --format=tar HEAD | tar -xf - -C _site'),'Production deploy must assemble the immutable artifact from committed HEAD');
+req(pages.includes('assert-production-integrity.mjs _site'),'Production deploy must prove artifact bytes match committed source');
+req(!pages.includes('render-production-sitemap-lastmod.mjs _site'),'Production deploy must not mutate sitemap metadata after source audit');
+req(pixel.includes('assert-production-integrity.mjs _site'),'PR render gate must audit an immutable source-identical artifact');
+req(pixel.includes('audit-live-pixel-geometry.mjs'),'PR render gate must exercise the live pixel geometry audit');
+req(emergency.includes('assert-production-integrity.mjs _site'),'Emergency deploy must prove artifact bytes match committed source');
+req(!emergency.includes('render-production-sitemap-lastmod.mjs _site'),'Emergency deploy must not mutate sitemap metadata after source audit');
 req(fs.existsSync('external-photography-evidence.json')&&fs.existsSync('press-institutional-evidence.json')&&fs.existsSync('media-usage-evidence.json'),'Protected evidence registry missing');
 
 // Google Search Console ProfilePage hardening.
@@ -78,4 +79,4 @@ for(const file of htmlFiles){
 req(profilePageCount>0,'No ProfilePage schema found; Search Console ProfilePage contract is no longer exercised');
 
 if(errors.length){console.error(errors.join('\n'));process.exit(1)}
-console.log(`Strict E-E-A-T / Search Console source readiness passed: canonical brand semantics, truthful normal/emergency sitemap contracts and ${profilePageCount} ProfilePage node(s) are coherent; ${profileDateCreatedCount} optional dateCreated value(s) validated.`);
+console.log(`Strict E-E-A-T / Search Console source readiness passed: canonical brand semantics, immutable sitemap deployment contracts and ${profilePageCount} ProfilePage node(s) are coherent; ${profileDateCreatedCount} optional dateCreated value(s) validated.`);
