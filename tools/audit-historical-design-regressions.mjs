@@ -24,8 +24,8 @@ must(Number(authority.layout?.footer?.compactDesktopColumns)===6,'BANHALMI compa
 must(Number(authority.layout?.footer?.compactDesktopMinPx)===769,'BANHALMI compact desktop footer must begin at 769px so the 768px tablet contract cannot overlap it');
 must(Number(authority.layout?.footer?.tabletColumns)===6,'BANHALMI tablet footer must remain six-column compact geometry');
 must(Number(authority.layout?.footer?.mobileColumns)===1,'BANHALMI mobile footer must remain single-column geometry');
-must(Number(authority.layout?.footer?.paddingTopPx)===30&&Number(authority.layout?.footer?.paddingBottomPx)===18,'BANHALMI footer padding authority changed');
-must(Number(authority.layout?.footer?.desktopRowGapMinPx)===36&&Number(authority.layout?.footer?.desktopRowGapMaxPx)===48,'BANHALMI wide desktop footer row gap authority changed');
+must(Number(authority.layout?.footer?.paddingTopPx)===24&&Number(authority.layout?.footer?.paddingBottomPx)===16,'BANHALMI footer padding authority changed');
+must(Number(authority.layout?.footer?.desktopRowGapMinPx)===28&&Number(authority.layout?.footer?.desktopRowGapMaxPx)===36,'BANHALMI wide desktop footer row gap authority changed');
 must(Number(authority.layout?.footer?.tabletGapPx)===14,'BANHALMI tablet footer gap authority changed');
 must(authority.navigation?.activeState==='text-only','BANHALMI active navigation must remain text-only');
 must(authority.navigation?.activeFill==='none'&&authority.navigation?.activeBorder==='none'&&authority.navigation?.activeBoxShadow==='none','BANHALMI active navigation may not regain box styling');
