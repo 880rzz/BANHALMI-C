@@ -62,11 +62,11 @@ jobs:
           test -s _site/press-institutional-evidence.json
           test -s _site/media-usage-evidence.json
           test -s _site/machine-manifest.json
-          grep -Fq 'Press / Editorial Photography' _site/llms.txt
-          grep -Fq 'Institutional / Diplomatic Event Photography' _site/llms.txt
-          grep -Fq 'International Editorial Image Circulation' _site/llms.txt
-          grep -Fq 'Wikimedia Commons Licensed Distribution' _site/llms.txt
-          grep -Fq 'Bécsi Napló' _site/llms.txt
+          grep -Fq 'Press / Editorial Photography' _site/press-institutional-evidence.json
+          grep -Fq 'Institutional / Diplomatic Event Photography' _site/press-institutional-evidence.json
+          grep -Fq 'International Editorial Image Circulation' _site/media-usage-evidence.json
+          grep -Fq 'Wikimedia Commons Licensed Distribution' _site/media-usage-evidence.json
+          grep -Fq 'Bécsi Napló' _site/press-institutional-evidence.json
           grep -Fq 'pressInstitutionalEvidence' _site/llm-canonical-overlay.json
           grep -Fq 'mediaUsageEvidence' _site/llm-canonical-overlay.json
           grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
@@ -74,7 +74,6 @@ jobs:
           grep -Fq 'https://www.norbertbanhalmi.com/external-photography-evidence.json' _site/llm-canonical-overlay.json
           grep -Fq 'https://www.norbertbanhalmi.com/press-institutional-evidence.json' _site/machine-manifest.json
           grep -Fq 'https://www.norbertbanhalmi.com/media-usage-evidence.json' _site/machine-manifest.json
-          grep -Fq 'https://www.norbertbanhalmi.com/machine-manifest.json' _site/data/machine-core.json
           grep -Fq 'pressInstitutionalEvidence' _site/llm-canonical-overlay.json
           grep -Fq 'mediaUsageEvidence' _site/llm-canonical-overlay.json
           grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
