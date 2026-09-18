@@ -1,0 +1,17 @@
+{
+  "name": "BANHALMI",
+  "canonical": "https://www.norbertbanhalmi.com/",
+  "type": "commercial-authority",
+  "languages": [
+    "en",
+    "hu-HU",
+    "de-AT"
+  ],
+  "artisticArchive": "https://www.banhalmi.art/",
+  "read": [
+    "/api/v1/identity.json",
+    "/api/v1/services.json",
+    "/api/v1/locations.json",
+    "/api/v1/actions.json"
+  ]
+}
