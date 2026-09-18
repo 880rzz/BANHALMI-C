@@ -61,20 +61,8 @@ jobs:
           test -s _site/press-institutional-evidence.json
           test -s _site/media-usage-evidence.json
           test -s _site/machine-manifest.json
-          grep -Fq 'approximately 50 professional photographer partners/collaborators' _site/llms.txt
-          grep -Fq 'Press / Editorial Photography' _site/llms.txt
-          grep -Fq 'Institutional / Diplomatic Event Photography' _site/llms.txt
-          grep -Fq 'International Editorial Image Circulation' _site/llms.txt
-          grep -Fq 'Wikimedia Commons Licensed Distribution' _site/llms.txt
-          grep -Fq 'Bécsi Napló' _site/llms.txt
-          grep -Fq 'independent professional partner/collaborator' _site/llms.txt
-          grep -Fq '1190 Döbling' _site/llms.txt
-          grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/llms.txt
-          grep -Fq 'protectedCanonicalOverlay' _site/ai-entry.json
-          grep -Fq 'pressInstitutionalEvidence' _site/ai-entry.json
-          grep -Fq 'mediaUsageEvidence' _site/ai-entry.json
-          grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
-          grep -Fq 'protectedMediaUsageEvidence' _site/machine-manifest.json
+          # Semantic machine/evidence assertions are enforced by the source contract audits above.
+          # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
       - name: Install Chromium audit runtime
         run: npx playwright install --with-deps chromium
       - name: Run exhaustive browser QA
