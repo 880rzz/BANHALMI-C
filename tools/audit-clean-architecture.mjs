@@ -15,9 +15,12 @@ const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e =>
 const files = walk(root);
 const css = files.filter(f => f.endsWith('.css'));
 const cssRel = css.map(rel).sort();
-const approvedCss = ['assets/css/fluid-4k-rhythm.css', 'assets/css/site.css'];
+const approvedCss = ['assets/css/fluid-4k-rhythm.css', 'assets/css/mega-menu-harmony-v31.css', 'assets/css/site.css', 'assets/css/typography-integrity-v33.css'];
 if (cssRel.length !== approvedCss.length || cssRel.some((p, i) => p !== approvedCss[i])) {
-  fail.push(`expected canonical site.css plus approved fluid rhythm stylesheet, found ${css.length}: ${cssRel.join(', ')}`);
+  fail.push(`expected canonical site/fluid/menu/typography stylesheet set, found ${css.length}: ${cssRel.join(', ')}`);
+}
+for (const stale of ['assets/css/mega-menu-harmony-v30.css','css/fluid-4k-rhythm.css','assets/css/footer-geometry-v32.css']) {
+  if (exists(stale)) fail.push(`${stale}: stale duplicate CSS authority returned`);
 }
 
 for (const f of files.filter(f => f.endsWith('.html'))) {
@@ -68,7 +71,7 @@ if (exists('assets/js/site-config.js')) {
     ['customer delivery verification', 'body.customerEmailSent === true'],
     ['submission key', 'submission_key'],
     ['fluid rhythm shared loader', 'data-fluid-4k-rhythm'],
-    ['fluid rhythm cache-busted stylesheet', '/assets/css/fluid-4k-rhythm.css?v=20260914-rhythm']
+    ['fluid rhythm cache-busted stylesheet', '/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27']
   ];
   for (const [name, token] of runtimeContracts) if (!runtime.includes(token)) fail.push(`quote/runtime: ${name} contract missing`);
 }
@@ -140,4 +143,4 @@ if (fail.length) {
   console.error(fail.join('\n'));
   process.exit(1);
 }
-console.log(`Clean BANHALMI architecture passed: ${files.filter(f => f.endsWith('.html')).length} HTML pages, canonical site.css plus one approved fluid rhythm layer, critical quote/contact/LLM/entity/alias contracts preserved.`);
+console.log(`Clean BANHALMI architecture passed: ${files.filter(f => f.endsWith('.html')).length} HTML pages, canonical site/fluid/menu/typography CSS authorities, no stale duplicate layers, and critical quote/contact/LLM/entity/alias contracts preserved.`);
