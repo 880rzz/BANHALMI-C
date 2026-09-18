@@ -3,7 +3,6 @@ import fs from 'node:fs';
 const failures=[];
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
-const footerV32=fs.readFileSync('assets/css/footer-geometry-v32.css','utf8');
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
 const footer=authority.layout?.footer||{};
@@ -40,7 +39,9 @@ must(v29.includes('nth-of-type(5){grid-column:8 / span 3!important;grid-row:2!im
 must(v29.includes('grid-column:1 / span 5!important')&&v29.includes('grid-column:11 / span 2!important'),'contact/legal second-row placement changed');
 must(v29.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'),'desktop contact studio split missing');
 
-must(footerV32.includes('FOOTER-GEOMETRY-V32-20260917'),'footer v32 authority marker missing');
+must(fluid.includes('FOOTER-SINGLE-AUTHORITY-20260918'),'single footer authority marker missing from canonical fluid stylesheet');
+const footerV32=fluid.split('FOOTER-SINGLE-AUTHORITY-20260918')[1]||'';
+must(footerV32.includes('FOOTER-GEOMETRY-V32-20260917'),'footer v32 geometry marker missing from canonical fluid stylesheet');
 must(footerV32.includes('@media (min-width:1180px) and (max-width:1439px)'),'small-desktop footer media range missing');
 must(footerV32.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'small-desktop 8-track geometry missing');
 must(footerV32.includes('grid-template-rows:auto auto!important'),'small-desktop two-row geometry missing');
@@ -49,9 +50,7 @@ must(footerV32.includes('inline-size:min(100%,calc(100vw - 64px))!important'),'s
 must(footerV32.includes('overflow-x:clip!important'),'small-desktop footer overflow containment missing');
 must(footerV32.includes('min-inline-size:0!important'),'small-desktop intrinsic-width reset missing');
 must(footerV32.includes('overflow-wrap:anywhere!important'),'unbreakable legal/contact token fallback missing');
-
-must(boot.includes('/assets/css/footer-geometry-v32.css?v=20260917-footer-v32'),'footer v32 stylesheet loader token missing');
-must(boot.indexOf('footer-geometry-v32.css')>boot.indexOf('fluid-4k-rhythm.css'),'footer v32 must load after canonical fluid geometry');
+must(!boot.includes('footer-geometry-v32.css'),'duplicate footer stylesheet runtime loader must remain removed');
 must(!boot.includes('style.textContent'),'runtime geometry injection must not return');
 must(!hardener.includes('footer-geometry-v32.css'),'production hardener must not rewrite footer v32 geometry');
 must((fluid.match(/min-height:24px!important/g)||[]).length>=2,'compact footer contact actions must retain at least 24px height');
@@ -62,4 +61,4 @@ if(failures.length){
   failures.forEach(f=>console.error(`- ${f}`));
   process.exit(1);
 }
-console.log('BANHALMI footer/card/tail contract passed: 1180-1439px uses the overflow-safe two-row 8-track footer v32, 1440px+ retains the approved two-row 12-track composition, studio blocks remain separate and production hardening cannot rewrite v32 geometry.');
+console.log('BANHALMI footer/card/tail contract passed: 1180-1439px uses the overflow-safe two-row 8-track footer v32, 1440px+ retains the approved two-row 12-track composition, studio blocks remain separate and production hardening cannot rewrite canonical footer geometry.');
