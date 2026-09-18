@@ -47,8 +47,10 @@ for (const route of ['requestaquote/index.html','hu/ajanlatkeres/index.html','de
 
 for (const route of ['privacy-policy/index.html','hu/adatvedelem/index.html','de-at/datenschutz/index.html']) {
   const html = await readFile(path.join(root, route), 'utf8');
-  if (!html.includes('G-90C452LJKQ')) failures.push(`${route}: GA4 property not disclosed`);
-  if (!/banhalmi\.art/i.test(html)) failures.push(`${route}: ART domain not disclosed`);
+  for (const token of ['G-90C452LJKQ','G-PKLH4H5YKD','G-EY91Q4QSVF','blog.banhalmi.art']) {
+    if (!html.includes(token)) failures.push(`${route}: ecosystem analytics/privacy token missing: ${token}`);
+  }
+  if (/same GA4 property|shared GA4 property|ugyanazt a GA4|gemeinsame GA4-Property/i.test(html)) failures.push(`${route}: obsolete shared-GA4 claim remains`);
   if (!/2026/.test(html)) failures.push(`${route}: review date missing`);
 }
 

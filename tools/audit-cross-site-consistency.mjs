@@ -70,8 +70,11 @@ for (const file of files) {
 
 for (const route of ['privacy-policy/index.html', 'hu/adatvedelem/index.html', 'de-at/datenschutz/index.html']) {
   const content = await readFile(path.join(root, route), 'utf8');
-  if (!content.includes('data-cross-site-privacy="true"')) failures.push(`${route}: missing BANHALMI ART privacy disclosure`);
-  if (!content.includes('G-90C452LJKQ')) failures.push(`${route}: missing shared GA4 property disclosure`);
+  if (!content.includes('data-cross-site-privacy="true"')) failures.push(`${route}: missing BANHALMI ecosystem privacy disclosure`);
+  for (const token of ['www.norbertbanhalmi.com', 'www.banhalmi.art', 'blog.banhalmi.art', 'G-90C452LJKQ', 'G-PKLH4H5YKD', 'G-EY91Q4QSVF']) {
+    if (!content.includes(token)) failures.push(`${route}: missing ecosystem analytics/domain token ${token}`);
+  }
+  if (/same GA4 property|shared GA4 property|ugyanazt a GA4|gemeinsame GA4-Property/i.test(content)) failures.push(`${route}: obsolete shared-GA4 claim remains`);
 }
 
 for (const failure of failures) console.error(`FAIL ${failure}`);
