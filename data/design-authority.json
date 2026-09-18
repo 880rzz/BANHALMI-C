@@ -1,13 +1,23 @@
 {
-  "version": "2026-09-17-v33-semantic-typography-integrity",
+  "version": "2026-09-18-v34-single-footer-quote-intrinsic",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
   "wideReadingMaxPx": 900,
   "typography": {
-    "desktop": {"h1": "clamp(2.5rem,3.6vw,3.625rem)", "h2": "clamp(1.625rem,2.4vw,2.375rem)", "h3": "clamp(18px,1.45vw,1.3rem)"},
-    "tablet": {"h1": "clamp(2.375rem,5.2vw,2.875rem)", "h2": "clamp(1.5625rem,3.5vw,2.125rem)"},
-    "mobile": {"h1": "clamp(2.15rem,11vw,3rem)", "h2": "clamp(1.65rem,8vw,2.1rem)"},
+    "desktop": {
+      "h1": "clamp(2.5rem,3.6vw,3.625rem)",
+      "h2": "clamp(1.625rem,2.4vw,2.375rem)",
+      "h3": "clamp(18px,1.45vw,1.3rem)"
+    },
+    "tablet": {
+      "h1": "clamp(2.375rem,5.2vw,2.875rem)",
+      "h2": "clamp(1.5625rem,3.5vw,2.125rem)"
+    },
+    "mobile": {
+      "h1": "clamp(2.15rem,11vw,3rem)",
+      "h2": "clamp(1.65rem,8vw,2.1rem)"
+    },
     "h3DescriptionGapPx": 10,
     "semanticBreakProtection": {
       "contractVersion": "v33",
@@ -44,16 +54,36 @@
       "desktopRowGapMinPx": 58,
       "desktopRowGapMaxPx": 78,
       "desktopContactColumns": 2,
-      "desktopTopRowGroups": ["brand", "services", "archive", "profile"],
-      "desktopBottomRowGroups": ["contact", "social", "memberships", "legal"],
+      "desktopTopRowGroups": [
+        "brand",
+        "services",
+        "archive",
+        "profile"
+      ],
+      "desktopBottomRowGroups": [
+        "contact",
+        "social",
+        "memberships",
+        "legal"
+      ],
       "desktopNoMidWordBreaks": true,
       "smallDesktopMinPx": 1180,
       "smallDesktopMaxPx": 1439,
       "smallDesktopColumns": 8,
       "smallDesktopContentRows": 2,
       "smallDesktopSideInsetPx": 32,
-      "smallDesktopTopRowGroups": ["brand", "services", "archive", "profile"],
-      "smallDesktopBottomRowGroups": ["contact", "social", "memberships", "legal"],
+      "smallDesktopTopRowGroups": [
+        "brand",
+        "services",
+        "archive",
+        "profile"
+      ],
+      "smallDesktopBottomRowGroups": [
+        "contact",
+        "social",
+        "memberships",
+        "legal"
+      ],
       "smallDesktopOverflowGuard": true,
       "compactDesktopColumns": 6,
       "tabletColumns": 6,
@@ -72,17 +102,60 @@
       "compactFooterBottomMarginPx": 8,
       "compactFooterBottomPaddingPx": 6,
       "compactEcosystemMarginPx": 4,
-      "compactEcosystemPaddingPx": 4
+      "compactEcosystemPaddingPx": 4,
+      "canonicalGeometryAuthority": "assets/css/fluid-4k-rhythm.css",
+      "separateGeometryStylesheetAllowed": false,
+      "runtimeGeometryLoaderAllowed": false
     },
-    "documentFlow": {"layoutMode": "grid", "documentBackground": "#202530", "footerAfterDocumentGapMaxPx": 2, "mainToFooterOverlapTolerancePx": 2, "footerMaxViewportFractionOnTabletDesktop": 0.82, "footerAbsoluteMaxPx": 760}
+    "documentFlow": {
+      "layoutMode": "grid",
+      "documentBackground": "#202530",
+      "footerAfterDocumentGapMaxPx": 2,
+      "mainToFooterOverlapTolerancePx": 2,
+      "footerMaxViewportFractionOnTabletDesktop": 0.82,
+      "footerAbsoluteMaxPx": 760
+    },
+    "quote": {
+      "categoryCardHeight": "intrinsic",
+      "equalHeightStretchingAllowed": false,
+      "authority": "assets/css/fluid-4k-rhythm.css"
+    }
   },
-  "responsive": {"touchTargetPx": 44, "minViewportPx": 320, "maxViewportPx": 3840},
+  "responsive": {
+    "touchTargetPx": 44,
+    "minViewportPx": 320,
+    "maxViewportPx": 3840
+  },
   "visualGeometry": {
     "requiredDesktopViewports": [
-      {"width": 1440, "height": 900, "homepageHeroMaxPx": 760, "footerMaxPx": 720, "portraitGalleryColumns": 4},
-      {"width": 1920, "height": 1080, "homepageHeroMaxPx": 830, "footerMaxPx": 720, "portraitGalleryColumns": 5},
-      {"width": 2560, "height": 1440, "homepageHeroMaxPx": 920, "footerMaxPx": 740, "portraitGalleryColumns": 6},
-      {"width": 3840, "height": 2160, "homepageHeroMaxPx": 1080, "footerMaxPx": 760, "portraitGalleryColumns": 6}
+      {
+        "width": 1440,
+        "height": 900,
+        "homepageHeroMaxPx": 760,
+        "footerMaxPx": 720,
+        "portraitGalleryColumns": 4
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "homepageHeroMaxPx": 830,
+        "footerMaxPx": 720,
+        "portraitGalleryColumns": 5
+      },
+      {
+        "width": 2560,
+        "height": 1440,
+        "homepageHeroMaxPx": 920,
+        "footerMaxPx": 740,
+        "portraitGalleryColumns": 6
+      },
+      {
+        "width": 3840,
+        "height": 2160,
+        "homepageHeroMaxPx": 1080,
+        "footerMaxPx": 760,
+        "portraitGalleryColumns": 6
+      }
     ],
     "homepageHeroMedia": {
       "reductionFraction": 0.15,
@@ -95,8 +168,16 @@
       "shortDesktopMaxViewportHeightPx": 760,
       "shortDesktopHeightPx": 561,
       "copyPanelGeometryUnchanged": true,
-      "languages": ["en", "de-AT", "hu-HU"],
-      "pages": ["index.html", "de-at/index.html", "hu/index.html"]
+      "languages": [
+        "en",
+        "de-AT",
+        "hu-HU"
+      ],
+      "pages": [
+        "index.html",
+        "de-at/index.html",
+        "hu/index.html"
+      ]
     },
     "homepageHeroMaxViewportFraction": 0.92,
     "sameRowCardHeightTolerancePx": 2,
@@ -139,5 +220,14 @@
       "mobileTextOnly": true
     }
   },
-  "principles": {"singleLeftContentAxis": true, "readingMeasureSeparateFromStructuredCanvas": true, "standardAndStructuredCanvasesAreDistinct": true, "computedGeometryIsReleaseEvidence": true, "noPatchLayerAfterCanonicalAuthority": true, "footerRemainsInNormalDocumentFlow": true, "historicalScreenshotRegressionsAreReleaseBlocking": true, "designAuditsMustReadCanonicalAuthority": true}
+  "principles": {
+    "singleLeftContentAxis": true,
+    "readingMeasureSeparateFromStructuredCanvas": true,
+    "standardAndStructuredCanvasesAreDistinct": true,
+    "computedGeometryIsReleaseEvidence": true,
+    "noPatchLayerAfterCanonicalAuthority": true,
+    "footerRemainsInNormalDocumentFlow": true,
+    "historicalScreenshotRegressionsAreReleaseBlocking": true,
+    "designAuditsMustReadCanonicalAuthority": true
+  }
 }
