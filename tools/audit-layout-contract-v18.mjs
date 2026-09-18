@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const failures=[];
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
-const menuHarmony=fs.readFileSync('assets/css/mega-menu-harmony-v31.css','utf8');
+const menuHarmony=fluid;
 const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
 const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
@@ -57,7 +57,7 @@ must(menuAuthority.desktopDescriptionsHidden===true&&menuAuthority.mobileDescrip
 must(menuAuthority.visualTile===false&&menuAuthority.sloganTile===false,'mega menu must remain free of hero image and slogan tiles');
 must(menuAuthority.decorativeSectionArrows===false,'non-functional section arrows must remain disabled');
 must(menuAuthority.mobileTextOnly===true,'mobile mega menu must remain text-first');
-must(boot.includes('/assets/css/mega-menu-harmony-v31.css?v=20260917-menu-harmony-v31'),'menu harmony stylesheet cache token missing from boot loader');
+must(!boot.includes('mega-menu-harmony-v31.css'),'separate menu harmony stylesheet loader returned');
 must(menuHarmony.includes('MEGA-MENU-HARMONY-V31-20260917'),'menu harmony stylesheet authority marker missing');
 must(menuHarmony.includes('.bn-mega-grid::after{content:none!important;display:none!important;}'),'menu visual/slogan pseudo-tile suppression missing');
 must(menuHarmony.includes('.bn-mega-section-head::after{content:none!important;display:none!important;}'),'non-functional mobile arrows are not explicitly suppressed');
