@@ -1085,3 +1085,10 @@ html body :is(.eyebrow,.hero-location-line,.more,.fp-choice strong,.fp-choice em
   html body .site-footer .banhalmi-ecosystem{margin-top:8px!important;}
   html body .site-footer .banhalmi-ecosystem a{min-block-size:30px!important;padding:4px 12px!important;}
 }
+
+
+/* MEGA-MENU-COMPACT-RHYTHM-V35-20260918
+   Tightens only vertical menu whitespace; the v31 three-column information architecture remains unchanged. */
+@media (min-width:861px){
+  html body .bn-mega-panel{padding:24px 0 36px!important;}
+}
