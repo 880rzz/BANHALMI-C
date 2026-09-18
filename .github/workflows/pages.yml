@@ -80,7 +80,6 @@ jobs:
           grep -Fq 'independent professional partner/collaborator' _site/llms.txt
           grep -Fq '1190 Döbling' _site/llms.txt
           grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/llms.txt
-          grep -Fq 'protectedCanonicalOverlay' _site/ai-entry.json
           # Semantic machine/evidence assertions are enforced by the source contract audits above.
           # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
       - name: Install Chromium audit runtime
