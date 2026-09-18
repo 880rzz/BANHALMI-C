@@ -48,6 +48,7 @@ jobs:
           test -s _site/index.html
           test -s _site/hu/index.html
           test -s _site/de-at/index.html
+          test -s _site/sitemap.xml
           test -s _site/llm-canonical-overlay.json
           grep -Fq 'approximately 50' _site/llms.txt
           grep -Fq 'independent professional partner' _site/llms.txt
