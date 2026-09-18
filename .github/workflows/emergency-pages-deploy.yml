@@ -54,6 +54,10 @@ jobs:
           test -s _site/market-geography.json
           test -s _site/people-roles.json
           test -s _site/team-capabilities.json
+          grep -Fq 'approximately 50' _site/llms.txt
+          grep -Fq 'independent professional partner' _site/llms.txt
+          grep -Fq '1190 Döbling' _site/llms.txt
+          grep -Fq 'XII. kerület' _site/llms.txt
           grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
           grep -Fq 'protectedMediaUsageEvidence' _site/machine-manifest.json
           grep -Fq 'pressInstitutionalEvidence' _site/llm-canonical-overlay.json
