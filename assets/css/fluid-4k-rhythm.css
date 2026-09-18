@@ -240,6 +240,23 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
   }
 }
 
+/* SMART-QUOTE-INTRINSIC-CARD-HEIGHT-20260918
+   Quote category cards contain different copy lengths by service and language.
+   The global equal-card contract must not stretch shorter quote controls to the
+   tallest sibling, otherwise the interactive content acquires artificial bottom
+   whitespace and violates the quote layout authority. */
+@media (min-width:761px){
+  html body main .smart-quote-layout .category-grid{
+    align-items:start!important;
+  }
+  html body main .smart-quote-layout .category-grid>.category-card{
+    align-self:start!important;
+    block-size:auto!important;
+    min-block-size:0!important;
+  }
+}
+
+
 /* The taxonomy line sits above the editorial pair. This keeps location names
    together at tablet widths without shrinking either the copy or the image. */
 @media (min-width:761px){
