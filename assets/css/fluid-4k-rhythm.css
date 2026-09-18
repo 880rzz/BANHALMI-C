@@ -1067,3 +1067,21 @@ html body :is(.eyebrow,.hero-location-line,.more,.fp-choice strong,.fp-choice em
   word-break:normal;
   overflow-wrap:normal;
 }
+
+
+/* FOOTER-WIDE-COMPACT-V35-20260918
+   Wide desktop keeps the approved 12-track / two-row information architecture,
+   while removing accumulated vertical slack from historical footer layers. */
+@media (min-width:1440px){
+  html body .site-footer{padding:28px 0 16px!important;}
+  html body .site-footer .footer-grid{row-gap:36px!important;}
+  html body .site-footer .footer-grid::before{transform:translateY(-18px)!important;}
+  html body .site-footer .footer-brand-col .footer-entity{margin:12px 0 16px!important;}
+  html body .site-footer .footer-accordion>summary,
+  html body .site-footer .footer-heading{margin-bottom:12px!important;}
+  html body .site-footer .footer-accordion ul{row-gap:8px!important;}
+  html body .site-footer .footer-contact-actions{margin-top:16px!important;padding-top:10px!important;}
+  html body .site-footer .footer-bottom{margin-top:24px!important;padding-top:12px!important;}
+  html body .site-footer .banhalmi-ecosystem{margin-top:8px!important;}
+  html body .site-footer .banhalmi-ecosystem a{min-block-size:30px!important;padding:4px 12px!important;}
+}
