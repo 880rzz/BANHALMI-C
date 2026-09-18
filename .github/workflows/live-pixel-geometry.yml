@@ -1,0 +1,81 @@
+name: Live pixel geometry
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'assets/css/**'
+      - 'assets/js/fluid-rhythm-boot.js'
+      - 'data/design-authority.json'
+      - 'tools/audit-live-pixel-geometry.mjs'
+      - 'tools/audit-browser-layout.mjs'
+      - 'tools/audit-layout-contract-v18.mjs'
+      - 'tools/audit-footer-cards-tail-contract.mjs'
+      - 'tools/audit-historical-design-regressions.mjs'
+      - 'tools/assert-production-integrity.mjs'
+      - '.github/workflows/live-pixel-geometry.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pixel-geometry:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Verify source authority contracts
+        run: |
+          set -euo pipefail
+          node tools/audit-layout-contract-v18.mjs
+          node tools/audit-footer-cards-tail-contract.mjs
+          node tools/audit-historical-design-regressions.mjs
+      - name: Assemble immutable production-equivalent artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _site artifacts/live-pixel-geometry artifacts/browser-layout
+          mkdir -p _site
+          git archive --format=tar HEAD | tar -xf - -C _site
+          rm -rf _site/.github _site/tools _site/tests _site/node_modules _site/artifacts
+          rm -f _site/package.json _site/package-lock.json
+          printf '%s\n' "$GITHUB_SHA" > _site/deployment-sha.txt
+          node tools/assert-production-integrity.mjs _site
+      - name: Start immutable artifact server
+        run: |
+          node tools/perf-static-server.mjs _site 4173 >/tmp/banhalmi-live-pixel-http.log 2>&1 &
+          echo $! > /tmp/banhalmi-live-pixel-http.pid
+          for i in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:4173/ >/dev/null; then exit 0; fi
+            sleep 0.5
+          done
+          cat /tmp/banhalmi-live-pixel-http.log
+          exit 1
+      - name: Run compact desktop through 4K pixel gate
+        env:
+          LIVE_PIXEL_BASE_URL: http://127.0.0.1:4173
+          FOOTER_RELEASE_ONLY: '1'
+        run: node tools/audit-live-pixel-geometry.mjs
+      - name: Run targeted responsive browser audit
+        env:
+          AUDIT_BASE_URL: http://127.0.0.1:4173
+          AUDIT_SITE_DIR: _site
+          AUDIT_PATHS: "/,/portrait/,/lifestyle/,/hu/,/hu/portre/,/hu/brand/,/de-at/,/de-at/portrait/,/de-at/brand/"
+        run: node tools/audit-browser-layout.mjs
+      - name: Upload visual evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: banhalmi-c-live-pixel-${{ github.sha }}
+          path: |
+            artifacts/live-pixel-geometry/
+            artifacts/browser-layout/
+          if-no-files-found: warn
+          retention-days: 14
