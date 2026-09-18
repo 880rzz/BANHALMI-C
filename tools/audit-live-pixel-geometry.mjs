@@ -117,6 +117,7 @@ for(const vp of viewports){
     if(target.lang==='en'&&target.kind==='home'){
       const button=page.locator('.menu-btn').first();
       if(await button.count()){
+        try{await page.waitForSelector('#bn-mega-menu',{state:'attached',timeout:4000});}catch{}
         await button.click();
         await page.waitForTimeout(350);
         const mega=await page.evaluate(()=>{
