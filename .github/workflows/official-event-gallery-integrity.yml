@@ -1,0 +1,41 @@
+name: Official event gallery integrity
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_run:
+    workflows:
+      - "Full quality gate and production deploy"
+      - "Emergency production deploy"
+    types: [completed]
+  workflow_dispatch:
+  schedule:
+    - cron: '27 5 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  source-contract:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify gallery contract
+        run: |
+          set -euo pipefail
+          test -s official-event-gallery.json
+          grep -Fq 'https://www.flickr.com/people/vipach/' official-event-gallery.json
+          grep -Fq 'BANHALMI Photography × VIPACH Official Event Gallery' official-event-gallery.json
+
+  live-contract:
+    if: github.event_name != 'pull_request' && (github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify live gallery contract
+        run: |
+          set -euo pipefail
+          body="$(curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' 'https://www.norbertbanhalmi.com/official-event-gallery.json')"
+          printf '%s' "$body" | grep -Fq 'https://www.flickr.com/people/vipach/'
+          printf '%s' "$body" | grep -Fq 'BANHALMI Photography × VIPACH Official Event Gallery'
+          printf '%s' "$body" | grep -Fq 'not a Layer-1 canonical BANHALMI property'
