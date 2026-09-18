@@ -57,11 +57,24 @@ jobs:
           test -s _site/market-geography.json
           test -s _site/people-roles.json
           test -s _site/llm-commercial-contract.json
+          test -s _site/external-photography-evidence.json
+          test -s _site/press-institutional-evidence.json
+          test -s _site/media-usage-evidence.json
+          test -s _site/machine-manifest.json
           grep -Fq 'approximately 50 professional photographer partners/collaborators' _site/llms.txt
+          grep -Fq 'Press / Editorial Photography' _site/llms.txt
+          grep -Fq 'Institutional / Diplomatic Event Photography' _site/llms.txt
+          grep -Fq 'International Editorial Image Circulation' _site/llms.txt
+          grep -Fq 'Wikimedia Commons Licensed Distribution' _site/llms.txt
+          grep -Fq 'Bécsi Napló' _site/llms.txt
           grep -Fq 'independent professional partner/collaborator' _site/llms.txt
           grep -Fq '1190 Döbling' _site/llms.txt
           grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/llms.txt
           grep -Fq 'protectedCanonicalOverlay' _site/ai-entry.json
+          grep -Fq 'pressInstitutionalEvidence' _site/ai-entry.json
+          grep -Fq 'mediaUsageEvidence' _site/ai-entry.json
+          grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
+          grep -Fq 'protectedMediaUsageEvidence' _site/machine-manifest.json
       - name: Install Chromium audit runtime
         run: npx playwright install --with-deps chromium
       - name: Run exhaustive browser QA
@@ -166,7 +179,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          for url in             'https://www.norbertbanhalmi.com/'             'https://www.norbertbanhalmi.com/portrait/'             'https://www.norbertbanhalmi.com/lifestyle/'             'https://www.norbertbanhalmi.com/hu/'             'https://www.norbertbanhalmi.com/hu/portre/'             'https://www.norbertbanhalmi.com/hu/brand/'             'https://www.norbertbanhalmi.com/de-at/'             'https://www.norbertbanhalmi.com/de-at/portrait/'             'https://www.norbertbanhalmi.com/de-at/brand/'             'https://www.norbertbanhalmi.com/hu/impresszum/'             'https://www.norbertbanhalmi.com/llms.txt'             'https://www.norbertbanhalmi.com/ai-entry.json'; do
+          for url in             'https://www.norbertbanhalmi.com/'             'https://www.norbertbanhalmi.com/portrait/'             'https://www.norbertbanhalmi.com/lifestyle/'             'https://www.norbertbanhalmi.com/hu/'             'https://www.norbertbanhalmi.com/hu/portre/'             'https://www.norbertbanhalmi.com/hu/brand/'             'https://www.norbertbanhalmi.com/de-at/'             'https://www.norbertbanhalmi.com/de-at/portrait/'             'https://www.norbertbanhalmi.com/de-at/brand/'             'https://www.norbertbanhalmi.com/hu/impresszum/'             'https://www.norbertbanhalmi.com/llms.txt'             'https://www.norbertbanhalmi.com/ai-entry.json'             'https://www.norbertbanhalmi.com/external-photography-evidence.json'             'https://www.norbertbanhalmi.com/press-institutional-evidence.json'             'https://www.norbertbanhalmi.com/media-usage-evidence.json'             'https://www.norbertbanhalmi.com/machine-manifest.json'; do
             curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' "$url" >/dev/null
           done
           impressum="$(curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' 'https://www.norbertbanhalmi.com/hu/impresszum/')"
