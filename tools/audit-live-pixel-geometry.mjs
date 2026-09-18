@@ -6,6 +6,7 @@ const base=(process.env.LIVE_PIXEL_BASE_URL||'http://127.0.0.1:4173').replace(/\
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const viewports=authority.visualGeometry?.requiredDesktopViewports||[];
 const maxHeroFraction=Number(authority.visualGeometry?.homepageHeroMaxViewportFraction||0.92);
+const heroReduction=Number(authority.visualGeometry?.homepageHeroMedia?.reductionFraction||0);
 const footerFraction=Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDesktop||0.54);
 const footerAbsolute=Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx||480);
 const cardTolerance=Number(authority.visualGeometry?.sameRowCardHeightTolerancePx||2);
@@ -100,7 +101,10 @@ for(const vp of viewports){
       else {
         const allowed=Math.min(Number(vp.homepageHeroMaxPx),height*maxHeroFraction);
         if(result.hero.height>allowed+2) issues.push(`homepage hero ${result.hero.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
-        if(Math.abs(result.hero.visual.height-result.hero.copy.height)>2) issues.push(`hero panels differ by ${Math.abs(result.hero.visual.height-result.hero.copy.height).toFixed(1)}px`);
+        const actualMediaRatio=result.hero.copy.height>0?result.hero.visual.height/result.hero.copy.height:0;
+        const expectedMediaRatio=1-heroReduction;
+        if(heroReduction>0&&Math.abs(actualMediaRatio-expectedMediaRatio)>0.015) issues.push(`hero media/copy ratio ${actualMediaRatio.toFixed(3)} != intended ${expectedMediaRatio.toFixed(3)}`);
+        if(result.hero.visual.height>result.hero.copy.height+2) issues.push('hero media exceeds unchanged copy panel height');
       }
       const rowIssues=sameRowHeightIssues(result.cards,cardTolerance);
       if(rowIssues.length) issues.push(`decision-card row height delta ${Math.max(...rowIssues.map(x=>x.delta)).toFixed(1)}px > ${cardTolerance}px`);
@@ -112,6 +116,7 @@ for(const vp of viewports){
 
     const slug=`${width}x${height}-${target.lang}-${target.kind}`;
     if(target.lang==='en'&&target.kind==='home'){
+      await page.waitForSelector('#bn-mega-menu',{state:'attached',timeout:5000}).catch(()=>{});
       const button=page.locator('.menu-btn').first();
       if(await button.count()){
         await button.click();
@@ -145,7 +150,7 @@ for(const vp of viewports){
   await context.close();
 }
 await browser.close();
-const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-V19',designVersion:authority.version,base,viewports,pages,reports,failures};
+const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-V20',designVersion:authority.version,base,viewports,pages,reports,failures};
 fs.writeFileSync(path.join(outDir,'report.json'),JSON.stringify(report,null,2));
 if(failures.length){
   console.error(`BANHALMI live pixel geometry failed (${failures.length} page/viewport combinations):`);
