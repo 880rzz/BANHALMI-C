@@ -9,6 +9,8 @@ const core = readJson('data/machine-core.json');
 
 const errors = [];
 const assert = (condition, message) => { if (!condition) errors.push(message); };
+const sha40 = /^[0-9a-f]{40}$/i;
+const isoDay = /^\d{4}-\d{2}-\d{2}$/;
 
 assert(policy.authority === 'BANHALMI Ecosystem Chief Steward', 'Chief Steward authority missing');
 assert(policy.identity?.primaryBrand === core.brand?.name, 'Policy primary brand must match machine core');
@@ -23,13 +25,33 @@ assert(policy.protectedEvidenceLayers?.includes('external-photography-evidence.j
 assert(policy.protectedEvidenceLayers?.includes('press-institutional-evidence.json'), 'Press/institutional evidence protection missing');
 assert(policy.protectedEvidenceLayers?.includes('media-usage-evidence.json'), 'Media usage evidence protection missing');
 
+const entryDomains = policy.entryDomains || [];
+for (const expected of [
+  ['banhalmi.at', 'https://www.norbertbanhalmi.com/de-at/'],
+  ['www.banhalmi.at', 'https://www.norbertbanhalmi.com/de-at/'],
+  ['banhalminorbert.hu', 'https://www.norbertbanhalmi.com/hu/'],
+  ['www.banhalminorbert.hu', 'https://www.norbertbanhalmi.com/hu/']
+]) {
+  const [host, destination] = expected;
+  const entry = entryDomains.find((candidate) => candidate.host === host);
+  assert(entry?.role === 'routing-alias', `Entry domain ${host} must remain a routing-alias, not an independent authority`);
+  assert(entry?.canonicalDestination === destination, `Entry domain ${host} canonical destination drift`);
+  assert(entry?.indexable === false, `Entry domain ${host} must remain non-indexable as an independent authority`);
+}
+
 assert(registry.chiefOrchestrator === 'BANHALMI Ecosystem Steward', 'Audit registry must name the Chief Steward');
 assert(registry.rules?.singleOrchestrationAuthority === true, 'Single orchestration authority contract missing');
 assert(registry.audits?.some((a) => a.id === 'daily-public-trust-research' && a.authority === 'candidate-only'), 'Daily trust research must be candidate-only');
 assert(Array.isArray(registry.requiredMutationFlow) && registry.requiredMutationFlow.includes('PR') && registry.requiredMutationFlow.includes('exact-live'), 'Mutation flow must require PR and exact-live');
 
-assert(state.mainSha === '00cf18fead075d66f06d01ab21a45ed9db96aa2f', 'State baseline SHA changed without explicit state refresh');
-assert(state.production?.exactLive === 'success', 'State baseline must record exact-live success');
+assert(state.snapshotKind === 'production-main-baseline', 'State snapshot kind must explicitly describe a production-main baseline');
+assert(typeof state.currentMainSha === 'string' && sha40.test(state.currentMainSha), 'Current main SHA must be a 40-character Git SHA');
+assert(typeof state.asOf === 'string' && isoDay.test(state.asOf) && Number.isFinite(Date.parse(`${state.asOf}T00:00:00Z`)), 'State asOf must be a valid ISO date');
+assert(typeof state.lastVerifiedProduction?.mainSha === 'string' && sha40.test(state.lastVerifiedProduction.mainSha), 'Last verified production SHA must be recorded separately');
+assert(typeof state.lastVerifiedProduction?.asOf === 'string' && isoDay.test(state.lastVerifiedProduction.asOf), 'Last verified production date must be recorded separately');
+assert(Date.parse(`${state.asOf}T00:00:00Z`) >= Date.parse(`${state.lastVerifiedProduction?.asOf}T00:00:00Z`), 'Current source snapshot cannot predate the last verified production snapshot');
+assert(state.lastVerifiedProduction?.production?.exactLive === 'success', 'Last verified production snapshot must record exact-live success');
+assert(!Object.prototype.hasOwnProperty.call(state, 'production'), 'Current source snapshot must not masquerade as current production verification');
 assert(Array.isArray(state.knownOpportunities) && state.knownOpportunities.length >= 5, 'Opportunity backlog unexpectedly empty');
 
 assert(research.purpose?.includes('intake registry'), 'Trust research must remain an intake registry, not a claim registry');
@@ -74,4 +96,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log('Ecosystem control-plane audit passed: policy, audit registry, state baseline and daily trust research are coherent.');
+console.log('Ecosystem control-plane audit passed: canonical policy, explicit entry-domain roles, source snapshot, verified-production snapshot and trust research are coherent.');

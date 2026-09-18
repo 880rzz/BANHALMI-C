@@ -1,12 +1,18 @@
 {
-  "schemaVersion": "1.1.0",
-  "updatedAt": "2026-09-12",
+  "schemaVersion": "1.2.0",
+  "updatedAt": "2026-09-17",
   "authority": "BANHALMI Ecosystem Chief Steward",
   "principle": "Optimize the ecosystem as a balanced authority system, never a single metric in isolation.",
   "canonicalCore": [
     {"url":"https://www.norbertbanhalmi.com/","role":"professional-commercial-authority"},
     {"url":"https://www.banhalmi.art/","role":"artistic-authority"},
     {"url":"https://blog.banhalmi.art/","role":"editorial-knowledge-authority"}
+  ],
+  "entryDomains": [
+    {"host":"banhalmi.at","role":"routing-alias","canonicalDestination":"https://www.norbertbanhalmi.com/de-at/","indexable":false},
+    {"host":"www.banhalmi.at","role":"routing-alias","canonicalDestination":"https://www.norbertbanhalmi.com/de-at/","indexable":false},
+    {"host":"banhalminorbert.hu","role":"routing-alias","canonicalDestination":"https://www.norbertbanhalmi.com/hu/","indexable":false},
+    {"host":"www.banhalminorbert.hu","role":"routing-alias","canonicalDestination":"https://www.norbertbanhalmi.com/hu/","indexable":false}
   ],
   "connectedLayer": ["VIPACH","HIPStudio","Viko Speier","Központi Szövetség","Bécsi Magyar Iskola"],
   "identity": {
@@ -44,8 +50,8 @@
   ],
   "searchConsole": {
     "profilePageDates":"dateCreated/dateModified are optional; when present they must be valid ISO 8601",
-    "sitemapLastmod":"derive from real Git history in production; never invent freshness",
-    "goCondition":"source contracts, artifact, browser QA, mobile+desktop Lighthouse, deploy, exact-live and production-live-gate must all pass"
+    "sitemapLastmod":"source sitemap remains a stable template; do not invent freshness or couple Search Console readiness to a removed deployment workflow",
+    "goCondition":"source contracts, artifact/browser QA where applicable, deployment verification and exact-live checks must all pass before production state is marked current"
   },
   "selfHealing": {
     "directMainWrite": false,

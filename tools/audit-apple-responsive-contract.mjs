@@ -47,9 +47,9 @@ walk('.');
 const realPages = htmlFiles.filter(p=>!p.startsWith('redirects/'));
 if (realPages.length < 50) failures.push(`unexpectedly low HTML coverage: ${realPages.length}`);
 
-const workflow = fs.readFileSync('.github/workflows/pages.yml','utf8');
-if (workflow.includes('home.css')) failures.push('site.css must remain the only production stylesheet; home.css generation detected');
-if (workflow.includes('purgecss')) failures.push('homepage PurgeCSS fork detected; single CSS authority must not be split');
+const vercelText = fs.readFileSync('vercel.json','utf8');
+if (vercelText.includes('home.css')) failures.push('site.css must remain the only production stylesheet; home.css generation/routing detected');
+if (vercelText.toLowerCase().includes('purgecss')) failures.push('homepage PurgeCSS fork detected; single CSS authority must not be split');
 
 if (failures.length){console.error(failures.join('\n'));process.exit(1)}
 console.log(`Approved Aug 14 Apple CSS baseline passed for BANHALMI: ${realPages.length} HTML files; one final CSS authority, responsive geometry and contrast guards active.`);
