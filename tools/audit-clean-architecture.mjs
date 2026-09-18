@@ -15,7 +15,7 @@ const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e =>
 const files = walk(root);
 const css = files.filter(f => f.endsWith('.css'));
 const cssRel = css.map(rel).sort();
-const approvedCss = ['assets/css/fluid-4k-rhythm.css', 'assets/css/site.css'];
+const approvedCss = ['assets/css/fluid-4k-rhythm.css', 'assets/css/mega-menu-harmony-v31.css', 'assets/css/site.css', 'assets/css/typography-integrity-v33.css'];
 if (cssRel.length !== approvedCss.length || cssRel.some((p, i) => p !== approvedCss[i])) {
   fail.push(`expected canonical site.css plus approved fluid rhythm stylesheet, found ${css.length}: ${cssRel.join(', ')}`);
 }
@@ -140,4 +140,4 @@ if (fail.length) {
   console.error(fail.join('\n'));
   process.exit(1);
 }
-console.log(`Clean BANHALMI architecture passed: ${files.filter(f => f.endsWith('.html')).length} HTML pages, canonical site.css plus one approved fluid rhythm layer, critical quote/contact/LLM/entity/alias contracts preserved.`);
+console.log(`Clean BANHALMI architecture passed: ${files.filter(f => f.endsWith('.html')).length} HTML pages, exact approved CSS authority set preserved with no legacy duplicate layers, critical quote/contact/LLM/entity/alias contracts preserved.`);

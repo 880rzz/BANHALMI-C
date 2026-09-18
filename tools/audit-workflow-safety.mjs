@@ -47,17 +47,17 @@ for (const token of [
   'market-geography.json',
   'people-roles.json',
   'llm-commercial-contract.json',
-  'approximately 50 professional photographer partners/collaborators',
-  'independent professional partner/collaborator',
-  '1190 Döbling',
-  'XII. kerület / District 12 / Hegyvidék',
-  'protectedCanonicalOverlay'
+  'machine-manifest.json',
+  'pressInstitutionalEvidence',
+  'mediaUsageEvidence',
+  'protectedPressInstitutionalEvidence',
+  'protectedMediaUsageEvidence'
 ]) {
   if (!pages.includes(token)) errors.push(`pages.yml anti-rollback production gate missing token: ${token}`);
 }
 
 const emergency=workflows.get('emergency-pages-deploy.yml')||'';
-for(const token of ['audit-machine-core.mjs','audit-authority-integrity.mjs','audit-llm-commercial-contract.mjs','assert-production-integrity.mjs','llm-canonical-overlay.json','approximately 50','independent professional partner','1190 Döbling','XII. kerület']){
+for(const token of ['audit-machine-core.mjs','audit-authority-integrity.mjs','audit-llm-commercial-contract.mjs','assert-production-integrity.mjs','llm-canonical-overlay.json','machine-manifest.json','market-geography.json','people-roles.json','team-capabilities.json','pressInstitutionalEvidence','mediaUsageEvidence','protectedPressInstitutionalEvidence','protectedMediaUsageEvidence']){
   if(!emergency.includes(token)) errors.push(`emergency-pages-deploy.yml must not bypass current LLM/authority contract: missing ${token}`);
 }
 if(/without quality gates/i.test(emergency)) errors.push('emergency-pages-deploy.yml must not advertise or implement a quality-gate bypass');

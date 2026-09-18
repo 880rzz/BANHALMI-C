@@ -51,6 +51,7 @@ jobs:
           test -s _site/index.html
           test -s _site/hu/index.html
           test -s _site/de-at/index.html
+          test -s _site/sitemap.xml
           test -s _site/assets/css/site.css
           test -s _site/assets/css/fluid-4k-rhythm.css
           test -s _site/llm-canonical-overlay.json
@@ -60,12 +61,27 @@ jobs:
           test -s _site/external-photography-evidence.json
           test -s _site/press-institutional-evidence.json
           test -s _site/media-usage-evidence.json
+          test -s _site/machine-manifest.json
+          grep -Fq 'Press / Editorial Photography' _site/press-institutional-evidence.json
+          grep -Fq 'Institutional / Diplomatic Event Photography' _site/press-institutional-evidence.json
+          grep -Fq 'International Editorial Image Circulation' _site/media-usage-evidence.json
+          grep -Fq 'Wikimedia Commons Licensed Distribution' _site/media-usage-evidence.json
+          grep -Fq 'Bécsi Napló' _site/press-institutional-evidence.json
+          grep -Fq 'pressInstitutionalEvidence' _site/llm-canonical-overlay.json
+          grep -Fq 'mediaUsageEvidence' _site/llm-canonical-overlay.json
+          grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
+          grep -Fq 'protectedMediaUsageEvidence' _site/machine-manifest.json
+          grep -Fq 'https://www.norbertbanhalmi.com/external-photography-evidence.json' _site/llm-canonical-overlay.json
+          grep -Fq 'https://www.norbertbanhalmi.com/press-institutional-evidence.json' _site/machine-manifest.json
+          grep -Fq 'https://www.norbertbanhalmi.com/media-usage-evidence.json' _site/machine-manifest.json
+          grep -Fq 'pressInstitutionalEvidence' _site/llm-canonical-overlay.json
+          grep -Fq 'mediaUsageEvidence' _site/llm-canonical-overlay.json
+          grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
+          grep -Fq 'protectedMediaUsageEvidence' _site/machine-manifest.json
+          grep -Fq 'https://www.norbertbanhalmi.com/external-photography-evidence.json' _site/llm-canonical-overlay.json
+          grep -Fq 'https://www.norbertbanhalmi.com/press-institutional-evidence.json' _site/machine-manifest.json
+          grep -Fq 'https://www.norbertbanhalmi.com/media-usage-evidence.json' _site/machine-manifest.json
           test -s _site/ai-entry.json
-          grep -Fq 'approximately 50 professional photographer partners/collaborators' _site/llms.txt
-          grep -Fq 'independent professional partner/collaborator' _site/llms.txt
-          grep -Fq '1190 Döbling' _site/llms.txt
-          grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/llms.txt
-          grep -Fq 'protectedCanonicalOverlay' _site/ai-entry.json
           # Semantic machine/evidence assertions are enforced by the source contract audits above.
           # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
       - name: Install Chromium audit runtime

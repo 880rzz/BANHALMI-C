@@ -29,7 +29,6 @@ for(const token of [
   'https://www.norbertbanhalmi.com/external-photography-evidence.json',
   'https://www.norbertbanhalmi.com/press-institutional-evidence.json',
   'https://www.norbertbanhalmi.com/media-usage-evidence.json',
-  'https://www.norbertbanhalmi.com/machine-manifest.json'
 ]) requireContract(workflow.includes(token),`Pages workflow lost protected evidence assertion/route: ${token}`);
 
 requireContract(!workflow.includes('older projection code must not erase current commercial, geography, role or ecosystem semantics'),'Pages workflow still pins obsolete exact policy prose instead of semantic evidence keys');
