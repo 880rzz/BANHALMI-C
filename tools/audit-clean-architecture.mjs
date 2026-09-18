@@ -15,7 +15,7 @@ const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e =>
 const files = walk(root);
 const css = files.filter(f => f.endsWith('.css'));
 const cssRel = css.map(rel).sort();
-const approvedCss = ['assets/css/fluid-4k-rhythm.css', 'assets/css/footer-geometry-v32.css', 'assets/css/mega-menu-harmony-v31.css', 'assets/css/site.css', 'assets/css/typography-integrity-v33.css'];
+const approvedCss = ['assets/css/fluid-4k-rhythm.css', 'assets/css/mega-menu-harmony-v31.css', 'assets/css/site.css', 'assets/css/typography-integrity-v33.css'];
 if (cssRel.length !== approvedCss.length || cssRel.some((p, i) => p !== approvedCss[i])) {
   fail.push(`expected canonical site.css plus approved fluid rhythm stylesheet, found ${css.length}: ${cssRel.join(', ')}`);
 }
