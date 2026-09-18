@@ -292,7 +292,8 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
   html body main .hero.oeuvre-hero>.wrap{
     display:grid!important;
     grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)!important;
-    gap:var(--bn-editorial-gap)!important;
+    column-gap:var(--bn-editorial-gap)!important;
+    row-gap:14px!important;
     align-items:center!important;
     width:min(var(--bn-content-max),100%)!important;
   }
@@ -504,7 +505,7 @@ html body .site-footer .footer-accordion:not([open])>ul{
    track assignment so content cannot collapse or overlap. */
 @media (min-width:1180px){
   html body .site-footer{
-    padding:clamp(30px,2.6vw,42px) 0 18px!important;
+    padding:clamp(24px,2vw,32px) 0 16px!important;
   }
   html body .site-footer>.wrap{
     width:min(1440px,calc(100vw - 96px))!important;
@@ -518,7 +519,7 @@ html body .site-footer .footer-accordion:not([open])>ul{
     grid-template-rows:auto auto!important;
     grid-auto-flow:row!important;
     column-gap:clamp(24px,2.5vw,42px)!important;
-    row-gap:clamp(36px,3vw,48px)!important;
+    row-gap:clamp(28px,2vw,36px)!important;
     align-items:start!important;
     overflow:visible!important;
   }
@@ -529,7 +530,7 @@ html body .site-footer .footer-accordion:not([open])>ul{
     align-self:start!important;
     block-size:1px!important;
     inline-size:100%!important;
-    transform:translateY(calc(-1 * clamp(18px,1.5vw,24px)))!important;
+    transform:translateY(calc(-1 * clamp(14px,1vw,18px)))!important;
     background:rgba(245,245,247,.18)!important;
     pointer-events:none!important;
   }
@@ -702,8 +703,8 @@ html body .site-footer .footer-accordion:not([open])>ul{
     justify-content:space-between!important;
     align-items:flex-start!important;
     gap:20px 36px!important;
-    margin-top:24px!important;
-    padding-top:12px!important;
+    margin-top:18px!important;
+    padding-top:10px!important;
     border-top:1px solid rgba(245,245,247,.18)!important;
     font-size:clamp(.74rem,.66vw,.86rem)!important;
     line-height:1.45!important;
@@ -721,7 +722,7 @@ html body .site-footer .footer-accordion:not([open])>ul{
   }
   html body .site-footer .banhalmi-ecosystem{
     width:min(1440px,calc(100vw - 96px))!important;
-    margin:8px auto 0!important;
+    margin:6px auto 0!important;
     padding:0!important;
     border-top:0!important;
     gap:0!important;
