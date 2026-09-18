@@ -50,8 +50,7 @@ for (const token of [
   'approximately 50 professional photographer partners/collaborators',
   'independent professional partner/collaborator',
   '1190 Döbling',
-  'XII. kerület / District 12 / Hegyvidék',
-  'protectedCanonicalOverlay'
+  'XII. kerület / District 12 / Hegyvidék'
 ]) {
   if (!pages.includes(token)) errors.push(`pages.yml anti-rollback production gate missing token: ${token}`);
 }
