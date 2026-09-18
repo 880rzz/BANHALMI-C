@@ -20,7 +20,9 @@ requireTokens('hu/adatvedelem/index.html', [
   'Nemzetközi',
   'Österreichische Datenschutzbehörde',
   'G-90C452LJKQ',
-  'domainek közötti'
+  'G-PKLH4H5YKD',
+  'G-EY91Q4QSVF',
+  'blog.banhalmi.art'
 ]);
 
 if (errors.length) {
