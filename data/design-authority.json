@@ -229,5 +229,17 @@
     "footerRemainsInNormalDocumentFlow": true,
     "historicalScreenshotRegressionsAreReleaseBlocking": true,
     "designAuditsMustReadCanonicalAuthority": true
+  },
+  "releaseGovernance": {
+    "requiredGates": [
+      "source-contracts",
+      "browser-qa",
+      "lighthouse-mobile-100",
+      "lighthouse-desktop-100",
+      "exact-live-sha",
+      "production-live-gate"
+    ],
+    "deployArtifact": "immutable-committed-head",
+    "runtimeGeometryMutationAllowed": false
   }
 }
