@@ -26,6 +26,9 @@ must(Number(footer.smallDesktopMinPx)===1180&&Number(footer.smallDesktopMaxPx)==
 must(Number(footer.smallDesktopColumns)===8,'small-desktop footer must use the approved 8-track grid');
 must(Number(footer.smallDesktopContentRows)===2,'small-desktop footer must remain two rows');
 must(footer.smallDesktopOverflowGuard===true,'small-desktop overflow guard must stay enabled');
+must(Number(footer.smallDesktopPaddingTopPx)===14&&Number(footer.smallDesktopPaddingBottomPx)===10,'small-desktop root padding changed');
+must(Number(footer.smallDesktopRowGapPx)===22,'small-desktop footer row gap changed');
+must(Number(footer.smallDesktopFooterBottomMarginPx)===12&&Number(footer.smallDesktopFooterBottomPaddingPx)===8,'small-desktop footer-bottom rhythm changed');
 must(flow.documentBackground==='#202530','document floor must match dark footer');
 must(Number(flow.footerAfterDocumentGapMaxPx)===2,'footer-after-document overhang tolerance changed');
 must(Number(flow.footerMaxViewportFractionOnTabletDesktop)<=0.82,'desktop footer viewport fraction became too permissive');
@@ -51,6 +54,8 @@ must(footerV32.includes('FOOTER-GEOMETRY-V32-20260917'),'footer v32 geometry mar
 must(footerV32.includes('@media (min-width:1180px) and (max-width:1439px)'),'small-desktop footer media range missing');
 must(footerV32.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'small-desktop 8-track geometry missing');
 must(footerV32.includes('grid-template-rows:auto auto!important'),'small-desktop two-row geometry missing');
+must(footerV32.includes('padding:14px 0 10px!important'),'small-desktop canonical padding drifted');
+must(footerV32.includes('row-gap:22px!important'),'small-desktop canonical row gap drifted');
 must(footerV32.includes('grid-column:1 / span 3!important')&&footerV32.includes('grid-column:7 / span 2!important'),'small-desktop contact/legal placement missing');
 must(footerV32.includes('inline-size:min(100%,calc(100vw - 64px))!important'),'small-desktop footer safe viewport width missing');
 must(footerV32.includes('overflow-x:clip!important'),'small-desktop footer overflow containment missing');
