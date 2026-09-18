@@ -1,0 +1,32 @@
+# PR production-state probe. Reports live/main drift without blocking a corrective PR.
+name: Live production probe
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report BANHALMI-C main and live deployment SHA
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          expected="$(curl -fsSL -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' 'https://api.github.com/repos/880rzz/BANHALMI-C/git/ref/heads/main' | python3 -c "import json,sys; print(json.load(sys.stdin)['object']['sha'])")"
+          actual="$(curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' 'https://www.norbertbanhalmi.com/deployment-sha.txt' || true)"
+          echo "EXPECTED_BANHALMI_C_MAIN_SHA=$expected"
+          echo "LIVE_DEPLOYMENT_SHA=${actual:-unavailable}"
+          if [ -z "$actual" ]; then
+            echo '::warning::Live deployment SHA is unavailable; post-merge exact-live is authoritative.'
+          elif [ "$actual" != "$expected" ]; then
+            echo "::warning::Production currently differs from BANHALMI-C main ($actual != $expected). Corrective PRs remain allowed; pages.yml closes drift after merge."
+          fi
+          curl -fsSL --max-time 30 'https://www.norbertbanhalmi.com/' >/dev/null
+          curl -fsSL --max-time 30 'https://www.norbertbanhalmi.com/hu/impresszum/' >/dev/null
