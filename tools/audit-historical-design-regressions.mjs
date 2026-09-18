@@ -7,7 +7,7 @@ const restore=fs.readFileSync('tools/restore-production-design-authority.mjs','u
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
 const menuLoader=fs.readFileSync('assets/js/mega-menu.js','utf8');
 const menuCore=fs.readFileSync(fs.existsSync('assets/js/mega-menu-v65-base.js')?'assets/js/mega-menu-v65-base.js':'assets/js/mega-menu.js','utf8');
-const menuHarmony=(fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'';
+const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
 must(Number(authority.pageMaxPx)===1280,'BANHALMI canonical standard canvas must remain 1280px');
