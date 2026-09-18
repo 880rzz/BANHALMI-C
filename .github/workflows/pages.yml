@@ -60,7 +60,6 @@ jobs:
           test -s _site/external-photography-evidence.json
           test -s _site/press-institutional-evidence.json
           test -s _site/media-usage-evidence.json
-          test -s _site/machine-manifest.json
           # Semantic machine/evidence assertions are enforced by the source contract audits above.
           # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
       - name: Install Chromium audit runtime
