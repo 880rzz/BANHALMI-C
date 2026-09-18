@@ -1,0 +1,207 @@
+name: Full quality gate and production deploy
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: banhalmi-production-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run source contract audits
+        run: |
+          set -euo pipefail
+          npm test
+          node tools/audit-historical-design-regressions.mjs
+      - name: Prepare immutable Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _site artifacts/browser-layout artifacts/live-pixel-geometry artifacts/exhaustive-visual artifacts/expanded-state-visual artifacts/lighthouse-desktop artifacts/lighthouse-mobile
+          mkdir -p _site
+          git archive --format=tar HEAD | tar -xf - -C _site
+          rm -rf _site/.github _site/tools _site/tests _site/node_modules _site/artifacts
+          rm -f _site/package.json _site/package-lock.json
+          printf '%s\n' "$GITHUB_SHA" > _site/deployment-sha.txt
+          node tools/assert-production-integrity.mjs _site
+          test -s _site/index.html
+          test -s _site/hu/index.html
+          test -s _site/de-at/index.html
+          test -s _site/assets/css/site.css
+          test -s _site/assets/css/fluid-4k-rhythm.css
+          test -s _site/llm-canonical-overlay.json
+          test -s _site/market-geography.json
+          test -s _site/people-roles.json
+          test -s _site/llm-commercial-contract.json
+          test -s _site/external-photography-evidence.json
+          test -s _site/press-institutional-evidence.json
+          test -s _site/media-usage-evidence.json
+          test -s _site/ai-entry.json
+          grep -Fq 'approximately 50 professional photographer partners/collaborators' _site/llms.txt
+          grep -Fq 'independent professional partner/collaborator' _site/llms.txt
+          grep -Fq '1190 Döbling' _site/llms.txt
+          grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/llms.txt
+          grep -Fq 'protectedCanonicalOverlay' _site/ai-entry.json
+          # Semantic machine/evidence assertions are enforced by the source contract audits above.
+          # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
+      - name: Install Chromium audit runtime
+        run: npx playwright install --with-deps chromium
+      - name: Run exhaustive browser QA
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/perf-static-server.mjs _site 4173 > /tmp/banhalmi-browser-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          for i in $(seq 1 80); do curl -fsS http://127.0.0.1:4173/ >/dev/null && break; sleep 0.25; done
+          npm run test:e2e
+          AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-browser-layout.mjs
+          AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-first-principles-layout.mjs
+          AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-all-pages-design.mjs
+          AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-apple-visual-quality.mjs
+          AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-expanded-state-responsive.mjs
+          FOOTER_RELEASE_ONLY=1 LIVE_PIXEL_BASE_URL=http://127.0.0.1:4173 node tools/audit-live-pixel-geometry.mjs
+          kill $SERVER_PID || true
+          trap - EXIT
+      - name: Run mobile Lighthouse strict 100 gate
+        run: |
+          npx --yes @lhci/cli@0.15.1 autorun --config=./lighthouserc.mobile.cjs
+          node tools/audit-lighthouse-all-runs.mjs artifacts/lighthouse-mobile
+      - name: Run desktop Lighthouse strict 100 gate
+        run: |
+          npx --yes @lhci/cli@0.15.1 autorun --config=./lighthouserc.desktop.cjs
+          node tools/audit-lighthouse-all-runs.mjs artifacts/lighthouse-desktop
+      - name: Upload browser and Lighthouse evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: banhalmi-c-quality-${{ github.sha }}
+          path: |
+            artifacts/browser-layout
+            artifacts/live-pixel-geometry
+            artifacts/exhaustive-visual
+            artifacts/expanded-state-visual
+            artifacts/apple-visual-quality.json
+            artifacts/lighthouse-mobile
+            artifacts/lighthouse-desktop
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload the exact audited Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: quality-gate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy exact audited BANHALMI-C artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  exact-live:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify exact BANHALMI-C commit is live on custom domain
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="$GITHUB_SHA"
+          actual=''
+          for attempt in $(seq 1 30); do
+            actual="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' 'https://www.norbertbanhalmi.com/deployment-sha.txt' || true)"
+            if [ "$actual" = "$expected" ]; then
+              echo "Exact live SHA verified: $actual"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Expected live SHA $expected but received ${actual:-nothing}." >&2
+          exit 1
+
+  production-live-gate:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: exact-live
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - name: Check out exact deployed source
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install live audit runtime
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+      - name: Verify critical production routes and HU Impresszum
+        shell: bash
+        run: |
+          set -euo pipefail
+          for url in             'https://www.norbertbanhalmi.com/'             'https://www.norbertbanhalmi.com/portrait/'             'https://www.norbertbanhalmi.com/lifestyle/'             'https://www.norbertbanhalmi.com/hu/'             'https://www.norbertbanhalmi.com/hu/portre/'             'https://www.norbertbanhalmi.com/hu/brand/'             'https://www.norbertbanhalmi.com/de-at/'             'https://www.norbertbanhalmi.com/de-at/portrait/'             'https://www.norbertbanhalmi.com/de-at/brand/'             'https://www.norbertbanhalmi.com/hu/impresszum/'             'https://www.norbertbanhalmi.com/llms.txt'             'https://www.norbertbanhalmi.com/ai-entry.json'             'https://www.norbertbanhalmi.com/external-photography-evidence.json'             'https://www.norbertbanhalmi.com/press-institutional-evidence.json'             'https://www.norbertbanhalmi.com/media-usage-evidence.json'             'https://www.norbertbanhalmi.com/machine-manifest.json'; do
+            curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' "$url" >/dev/null
+          done
+          impressum="$(curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' 'https://www.norbertbanhalmi.com/hu/impresszum/')"
+          grep -Fq 'Bánhalmi Norbert e.U.' <<<"$impressum"
+          grep -Fq 'művészi fotográfiai' <<<"$impressum"
+          ! grep -Fq 'művészi fotográfia</strong>i' <<<"$impressum"
+      - name: Run exact-live production geometry audit
+        env:
+          LIVE_PIXEL_BASE_URL: https://www.norbertbanhalmi.com
+          FOOTER_RELEASE_ONLY: '1'
+        run: node tools/audit-live-pixel-geometry.mjs
+      - name: Run exact live mobile Lighthouse 100 gate
+        run: |
+          rm -rf artifacts/lighthouse-production-mobile
+          npx --yes @lhci/cli@0.15.1 autorun --config=./lighthouserc.production-mobile.cjs
+          node tools/audit-lighthouse-all-runs.mjs artifacts/lighthouse-production-mobile
+      - name: Run exact live desktop Lighthouse 100 gate
+        run: |
+          rm -rf artifacts/lighthouse-production-desktop
+          npx --yes @lhci/cli@0.15.1 autorun --config=./lighthouserc.production-desktop.cjs
+          node tools/audit-lighthouse-all-runs.mjs artifacts/lighthouse-production-desktop
+      - name: Upload exact-live production evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: banhalmi-c-live-production-${{ github.sha }}
+          path: |
+            artifacts/live-pixel-geometry
+            artifacts/lighthouse-production-mobile
+            artifacts/lighthouse-production-desktop
+          if-no-files-found: warn
+          retention-days: 14
