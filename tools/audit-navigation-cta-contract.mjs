@@ -17,10 +17,10 @@ const menuLoader=fs.readFileSync('assets/js/mega-menu.js','utf8');
 const menuCorePath=fs.existsSync('assets/js/mega-menu-v65-base.js')?'assets/js/mega-menu-v65-base.js':'assets/js/mega-menu.js';
 const menu=fs.readFileSync(menuCorePath,'utf8');
 if(menuCorePath!=='assets/js/mega-menu.js'){
-  if(!/mega-menu-v65-base\\.js\\?v=20260917-[a-z0-9-]+/.test(menuLoader))failures.push('mega-menu loader lost canonical v65 core handoff');
+  if(!/mega-menu-v65-base\.js\?v=20260917-[a-z0-9-]+/.test(menuLoader))failures.push('mega-menu loader lost canonical v65 core handoff');
   if(/mega-menu-harmony-v(?:30|31)\\.css/.test(menuLoader))failures.push('separate mega-menu stylesheet loader returned');
 }
-for(const token of ['Services','Work','About · Pricing · Contact','Executive Portraits','Gallery','Art Archive','Partners','Szolgáltatások','Munkák','Rólam · Árak · Kapcsolat','Executive portré','Galéria','Művészeti archívum','Partnerek','Leistungen','Arbeiten','Über BANHALMI · Preise · Kontakt','Executive-Porträts','Galerie','Kunstarchiv','Partner',"grid.append(svc,main,foot)"])if(!menu.includes(token))failures.push('service-first multilingual navigation token missing: '+token);
+for(const token of ['Services','Work','About · Contact','Executive Portraits','Gallery','Art Archive','Partners','Szolgáltatások','Munkák','Rólam · Kapcsolat','Executive portré','Galéria','Művészeti archívum','Partnerek','Leistungen','Arbeiten','Über BANHALMI · Kontakt','Executive-Porträts','Galerie','Kunstarchiv','Partner',"grid.append(svc,main,foot)"])if(!menu.includes(token))failures.push('service-first multilingual navigation token missing: '+token);
 for(const retired of ['Selected Work','Válogatott munkák','Ausgewählte Arbeiten','Books & Exhibitions','Könyvek és kiállítások','Bücher & Ausstellungen',"['/about/','Oeuvre'","['/hu/eletmu/','Életmű'","['/de-at/werk/','Werk'"])if(menu.includes(retired))failures.push('retired primary navigation structure returned: '+retired);
 if(failures.length){console.error('Navigation/CTA contract FAILED:\n'+failures.map(x=>' - '+x).join('\n'));process.exit(1)}
 console.log('Navigation/CTA contract passed: canonical routes, descriptive CTAs, canonical v31 menu core integrity and service-first EN/HU/DE navigation hierarchy are release-blocking.');
