@@ -1,0 +1,93 @@
+name: Emergency production deploy
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: banhalmi-production-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run non-negotiable source contracts
+        run: |
+          set -euo pipefail
+          node tools/audit-workflow-safety.mjs
+          node tools/audit-machine-core.mjs
+          node tools/audit-authority-integrity.mjs
+          node tools/audit-llm-commercial-contract.mjs
+      - name: Prepare immutable emergency Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site
+          git archive --format=tar HEAD | tar -xf - -C _site
+          rm -rf _site/.github _site/tools _site/tests _site/node_modules _site/artifacts
+          rm -f _site/package.json _site/package-lock.json
+          printf '%s\n' "$GITHUB_SHA" > _site/deployment-sha.txt
+          node tools/assert-production-integrity.mjs _site
+          test -s _site/index.html
+          test -s _site/hu/index.html
+          test -s _site/de-at/index.html
+          test -s _site/llm-canonical-overlay.json
+          grep -Fq 'approximately 50' _site/llms.txt
+          grep -Fq 'independent professional partner' _site/llms.txt
+          grep -Fq '1190 Döbling' _site/llms.txt
+          grep -Fq 'XII. kerület' _site/llms.txt
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Deploy immutable emergency artifact
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  exact-live:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify emergency BANHALMI-C commit is live
+        shell: bash
+        run: |
+          set -euo pipefail
+          expected="$GITHUB_SHA"
+          actual=''
+          for attempt in $(seq 1 30); do
+            actual="$(curl -fsSL --max-time 20 -H 'Cache-Control: no-cache' 'https://www.norbertbanhalmi.com/deployment-sha.txt' || true)"
+            if [ "$actual" = "$expected" ]; then
+              echo "Exact live SHA verified: $actual"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Expected live SHA $expected but received ${actual:-nothing}." >&2
+          exit 1
