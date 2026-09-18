@@ -82,11 +82,12 @@ jobs:
           grep -Fq 'https://www.norbertbanhalmi.com/press-institutional-evidence.json' _site/machine-manifest.json
           grep -Fq 'https://www.norbertbanhalmi.com/media-usage-evidence.json' _site/machine-manifest.json
           test -s _site/ai-entry.json
-          grep -Fq 'approximately 50 professional photographer partners/collaborators' _site/llms.txt
-          grep -Fq 'independent professional partner/collaborator' _site/llms.txt
-          grep -Fq '1190 Döbling' _site/llms.txt
-          grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/llms.txt
-          grep -Fq 'protectedCanonicalOverlay' _site/ai-entry.json
+          grep -Fq 'approximately 50 professional photographer partners/collaborators' _site/team-capabilities.json
+          grep -Fq 'independent professional partner/collaborator' _site/team-capabilities.json
+          grep -Fq '1190 Döbling' _site/market-geography.json
+          grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/market-geography.json
+          # protectedCanonicalOverlay is exercised by audit-machine-projection-regression.mjs before artifact creation; committed public evidence remains canonical in llm-canonical-overlay.json.
+          test -s _site/llm-canonical-overlay.json
           # Semantic machine/evidence assertions are enforced by the source contract audits above.
           # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
       - name: Install Chromium audit runtime
