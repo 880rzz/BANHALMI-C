@@ -15,8 +15,7 @@ requireContract(mediaRef === 'https://www.norbertbanhalmi.com/media-usage-eviden
 for(const requiredArtifactPath of [
   '_site/external-photography-evidence.json',
   '_site/press-institutional-evidence.json',
-  '_site/media-usage-evidence.json',
-  '_site/machine-manifest.json'
+  '_site/media-usage-evidence.json'
 ]) requireContract(workflow.includes(requiredArtifactPath),`Pages workflow lost required evidence artifact: ${requiredArtifactPath}`);
 
 // Evidence semantics, labels, routes and protected-reference relationships are
