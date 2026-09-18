@@ -18,6 +18,10 @@ must(footer.desktopNoMidWordBreaks===true,'desktop footer must prohibit ordinary
 must(Number(footer.desktopMinPx)===1180,'desktop footer breakpoint changed');
 must(Number(footer.wideDesktopMinPx)===1440,'wide-desktop footer breakpoint must remain 1440px');
 must(Number(footer.desktopMaxContentPx)===1440,'desktop footer content width changed');
+must(Number(footer.paddingTopPx)===30&&Number(footer.paddingBottomPx)===18,'wide desktop footer root padding changed');
+must(Number(footer.desktopRowGapMinPx)===36&&Number(footer.desktopRowGapMaxPx)===48,'wide desktop footer row gap changed');
+must(Number(footer.desktopFooterBottomMarginPx)===24&&Number(footer.desktopFooterBottomPaddingPx)===12,'footer-bottom compact rhythm changed');
+must(Number(footer.desktopContactActionsMarginPx)===16&&Number(footer.desktopContactActionsPaddingPx)===10,'desktop contact action rhythm changed');
 must(Number(footer.smallDesktopMinPx)===1180&&Number(footer.smallDesktopMaxPx)===1439,'small-desktop footer range changed');
 must(Number(footer.smallDesktopColumns)===8,'small-desktop footer must use the approved 8-track grid');
 must(Number(footer.smallDesktopContentRows)===2,'small-desktop footer must remain two rows');
@@ -31,6 +35,8 @@ must(fluid.includes('FOOTER-TWO-ROW-V29-20260917'),'two-row footer v29 wide-desk
 const v29=fluid.split('FOOTER-TWO-ROW-V29-20260917')[1]||'';
 must(/grid-template-columns:repeat\(12,minmax\(0,1fr\)\)!important/.test(v29),'v29 wide-desktop footer 12-track grid missing');
 must(/grid-template-rows:auto auto!important/.test(v29),'v29 desktop footer must have exactly two content rows');
+must(v29.includes('padding:clamp(30px,2.6vw,42px) 0 18px!important'),'v29 wide-desktop root padding drifted');
+must(v29.includes('row-gap:clamp(36px,3vw,48px)!important'),'v29 wide-desktop row gap drifted');
 must(v29.includes('nth-of-type(1){grid-column:4 / span 2!important;grid-row:1!important;}'),'services placement changed');
 must(v29.includes('nth-of-type(2){grid-column:6 / span 2!important;grid-row:1!important;}'),'archive placement changed');
 must(v29.includes('nth-of-type(3){grid-column:8 / span 3!important;grid-row:1!important;}'),'profile placement changed');
