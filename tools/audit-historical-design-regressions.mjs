@@ -57,7 +57,7 @@ const footerV29=fluid.split('FOOTER-TWO-ROW-V29-20260917')[1]||'';
 must(footerV29.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track geometry');
 must(footerV29.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row geometry');
 must(footerV29.includes('word-break:normal!important')&&footerV29.includes('overflow-wrap:normal!important')&&footerV29.includes('hyphens:none!important'),'canonical footer lost no-mid-word-break protection');
-must(menuLoader.includes('mega-menu-v65-base.js?v=20260917-menu-harmony-v31'),'v31 mega-menu loader lost canonical core handoff');
+must(menuLoader.includes('mega-menu-v65-base.js?v=20260917-pricing-service-v32'),'v31 mega-menu loader lost canonical core handoff');
 must(menuLoader.includes('mega-menu-harmony-v31.css?v=20260917-menu-harmony-v31'),'v31 mega-menu loader lost harmony stylesheet handoff');
 must(menuHarmony.includes('MEGA-MENU-HARMONY-V31-20260917'),'v31 menu harmony marker missing');
 must(menuHarmony.includes('inset:var(--header-h,72px) 0 auto 0!important'),'desktop mega menu returned to full-screen coverage');
