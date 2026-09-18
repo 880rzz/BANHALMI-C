@@ -14,7 +14,7 @@ window.BANHALMI_CONFIG = Object.assign({}, window.BANHALMI_CONFIG || {}, {
   if(document.querySelector('link[data-fluid-4k-rhythm]')) return;
   var link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = '/assets/css/fluid-4k-rhythm.css?v=20260914-rhythm';
+  link.href = '/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27';
   link.setAttribute('data-fluid-4k-rhythm','');
   document.head.appendChild(link);
 })();

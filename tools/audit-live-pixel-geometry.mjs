@@ -4,7 +4,15 @@ import { chromium } from '@playwright/test';
 
 const base=(process.env.LIVE_PIXEL_BASE_URL||'http://127.0.0.1:4173').replace(/\/$/,'');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
-const viewports=authority.visualGeometry?.requiredDesktopViewports||[];
+const footerReleaseOnly=process.env.FOOTER_RELEASE_ONLY==='1';
+const authorityViewports=authority.visualGeometry?.requiredDesktopViewports||[];
+const compactViewports=[
+  {width:1180,height:800,homepageHeroMaxPx:760,footerMaxPx:760,portraitGalleryColumns:4},
+  {width:1280,height:800,homepageHeroMaxPx:760,footerMaxPx:760,portraitGalleryColumns:4},
+  {width:1366,height:768,homepageHeroMaxPx:760,footerMaxPx:760,portraitGalleryColumns:4},
+  {width:1439,height:900,homepageHeroMaxPx:760,footerMaxPx:760,portraitGalleryColumns:4}
+];
+const viewports=[...compactViewports,...authorityViewports];
 const maxHeroFraction=Number(authority.visualGeometry?.homepageHeroMaxViewportFraction||0.92);
 const footerFraction=Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDesktop||0.54);
 const footerAbsolute=Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx||480);
@@ -15,10 +23,13 @@ const megaBottomMax=Number(authority.visualGeometry?.megaMenuBottomWhitespaceMax
 const pages=[
   {lang:'en',kind:'home',pathname:'/'},
   {lang:'en',kind:'portrait',pathname:'/portrait/'},
+  {lang:'en',kind:'brand',pathname:'/lifestyle/'},
   {lang:'hu',kind:'home',pathname:'/hu/'},
   {lang:'hu',kind:'portrait',pathname:'/hu/portre/'},
+  {lang:'hu',kind:'brand',pathname:'/hu/brand/'},
   {lang:'de',kind:'home',pathname:'/de-at/'},
-  {lang:'de',kind:'portrait',pathname:'/de-at/portrait/'}
+  {lang:'de',kind:'portrait',pathname:'/de-at/portrait/'},
+  {lang:'de',kind:'brand',pathname:'/de-at/brand/'}
 ];
 const requiredWidths=[1440,1920,2560,3840];
 const actualWidths=viewports.map(v=>Number(v.width));
@@ -67,8 +78,23 @@ for(const vp of viewports){
       const isVisible=el=>{if(!el)return false;const s=getComputedStyle(el),r=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&Number(s.opacity)!==0&&r.width>0&&r.height>0};
       const rect=el=>{const r=el.getBoundingClientRect();return {top:r.top+scrollY,left:r.left,width:r.width,height:r.height,bottom:r.bottom+scrollY,right:r.right}};
       const footer=document.querySelector('.site-footer');
+      const footerPrimary=footer?.querySelector('.footer-grid');
+      const footerBottom=footer?.querySelector('.footer-bottom');
+      const footerEcosystem=footer?.querySelector('.banhalmi-ecosystem')||document.querySelector('body>.banhalmi-ecosystem');
       const reviews=document.querySelector('main .reviews-drawer-section');
-      const data={footer:footer&&isVisible(footer)?rect(footer):null,reviews:null,hero:null,cards:[],gallery:null,mega:null};
+      const renderedRows=grid=>{
+        if(!grid)return 0;
+        const tops=[...grid.children].filter(isVisible).map(el=>el.getBoundingClientRect().top).sort((a,b)=>a-b);
+        const rows=[];
+        for(const top of tops)if(!rows.some(row=>Math.abs(row-top)<=2))rows.push(top);
+        return rows.length;
+      };
+      const footerRect=footer&&isVisible(footer)?rect(footer):null;
+      const data={
+        documentOverflow:Math.max(document.documentElement.scrollWidth,document.body.scrollWidth)-innerWidth,
+        footer:footerRect?{...footerRect,primaryRows:renderedRows(footerPrimary),visualBands:[footerPrimary,footerBottom,footerEcosystem].filter(isVisible).length,columns:footerPrimary?getComputedStyle(footerPrimary).gridTemplateColumns:''}:null,
+        reviews:null,hero:null,cards:[],gallery:null,mega:null
+      };
       if(reviews&&isVisible(reviews)){const s=getComputedStyle(reviews);data.reviews={...rect(reviews),paddingTop:px(s.paddingTop),paddingBottom:px(s.paddingBottom)}}
       if(kind==='home'){
         const main=document.querySelector('main[data-homepage-redesign="stage76"]');
@@ -89,13 +115,17 @@ for(const vp of viewports){
     },{kind:target.kind});
 
     const issues=[];
+    if(result.documentOverflow>2) issues.push(`document horizontal overflow ${result.documentOverflow.toFixed(1)}px`);
     if(!result.footer) issues.push('footer missing');
     else {
       const allowed=Math.min(Number(vp.footerMaxPx||footerAbsolute),footerAbsolute,height*footerFraction);
       if(result.footer.height>allowed+2) issues.push(`footer ${result.footer.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
+      const expectedRows=width<1440?Number(authority.layout?.footer?.smallDesktopContentRows||2):Number(authority.layout?.footer?.desktopContentRows||2);
+      if(result.footer.primaryRows!==expectedRows) issues.push(`footer primary rows ${result.footer.primaryRows} != ${expectedRows}`);
+      if(result.footer.visualBands!==3) issues.push(`footer visual bands ${result.footer.visualBands} != 3`);
     }
     if(result.reviews&&(result.reviews.paddingTop>reviewsPaddingMax+1||result.reviews.paddingBottom>reviewsPaddingMax+1)) issues.push(`reviews padding ${result.reviews.paddingTop.toFixed(1)}/${result.reviews.paddingBottom.toFixed(1)}px > ${reviewsPaddingMax}px`);
-    if(target.kind==='home'){
+    if(target.kind==='home'&&!footerReleaseOnly){
       if(!result.hero) issues.push('split homepage hero missing');
       else {
         const allowed=Math.min(Number(vp.homepageHeroMaxPx),height*maxHeroFraction);
@@ -105,13 +135,13 @@ for(const vp of viewports){
       const rowIssues=sameRowHeightIssues(result.cards,cardTolerance);
       if(rowIssues.length) issues.push(`decision-card row height delta ${Math.max(...rowIssues.map(x=>x.delta)).toFixed(1)}px > ${cardTolerance}px`);
     }
-    if(target.kind==='portrait'){
+    if(target.kind==='portrait'&&!footerReleaseOnly){
       if(!result.gallery) issues.push('portrait collage gallery not found');
       else if(result.gallery.columns<Number(vp.portraitGalleryColumns)) issues.push(`portrait gallery ${result.gallery.columns} columns < ${vp.portraitGalleryColumns}`);
     }
 
     const slug=`${width}x${height}-${target.lang}-${target.kind}`;
-    if(target.lang==='en'&&target.kind==='home'){
+    if(!footerReleaseOnly&&target.lang==='en'&&target.kind==='home'){
       const button=page.locator('.menu-btn').first();
       if(await button.count()){
         await button.click();
@@ -145,11 +175,11 @@ for(const vp of viewports){
   await context.close();
 }
 await browser.close();
-const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-V19',designVersion:authority.version,base,viewports,pages,reports,failures};
+const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-20260918',designVersion:authority.version,base,viewports,pages,reports,failures};
 fs.writeFileSync(path.join(outDir,'report.json'),JSON.stringify(report,null,2));
 if(failures.length){
   console.error(`BANHALMI live pixel geometry failed (${failures.length} page/viewport combinations):`);
   failures.forEach(f=>console.error(`- ${f}`));
   process.exit(1);
 }
-console.log(`BANHALMI live pixel geometry passed: ${pages.length} pages across ${viewports.length} desktop/4K viewports with hero, footer, reviews, card, portrait-gallery and mega-menu geometry verified.`);
+console.log(`BANHALMI live pixel geometry passed: ${pages.length} EN/HU/DE home/portrait/brand pages across ${viewports.length} compact-desktop/desktop/4K viewports; footer rows/bands/overflow, hero, cards, portrait gallery and mega-menu geometry verified.`);

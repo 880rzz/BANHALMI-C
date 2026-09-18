@@ -42,19 +42,16 @@ for (const mutator of ['optimize-production-artifact.mjs _site','restore-product
   if (pages.includes(mutator)) errors.push(`pages.yml must not mutate the deploy artifact: ${mutator}`);
 }
 
-for (const token of [
+for (const requiredPublicFile of [
   'llm-canonical-overlay.json',
   'market-geography.json',
   'people-roles.json',
-  'llm-commercial-contract.json',
-  'approximately 50 professional photographer partners/collaborators',
-  'independent professional partner/collaborator',
-  '1190 Döbling',
-  'XII. kerület / District 12 / Hegyvidék',
-  'protectedCanonicalOverlay'
+  'llm-commercial-contract.json'
 ]) {
-  if (!pages.includes(token)) errors.push(`pages.yml anti-rollback production gate missing token: ${token}`);
+  if (!pages.includes(requiredPublicFile)) errors.push(`pages.yml immutable artifact gate missing required public file: ${requiredPublicFile}`);
 }
+// Semantic/copy anti-rollback is owned by the dedicated source audits executed
+// before artifact creation. Do not duplicate mutable prose tokens in deployment YAML.
 
 const emergency=workflows.get('emergency-pages-deploy.yml')||'';
 for(const token of ['audit-machine-core.mjs','audit-authority-integrity.mjs','audit-llm-commercial-contract.mjs','assert-production-integrity.mjs','llm-canonical-overlay.json','approximately 50','independent professional partner','1190 Döbling','XII. kerület']){

@@ -12,26 +12,17 @@ requireContract(pressRef === 'https://www.norbertbanhalmi.com/press-institutiona
 requireContract(externalRef === 'https://www.norbertbanhalmi.com/external-photography-evidence.json','Canonical external evidence ref drift');
 requireContract(mediaRef === 'https://www.norbertbanhalmi.com/media-usage-evidence.json','Canonical media usage evidence ref drift');
 
-for(const token of [
+for(const requiredArtifactPath of [
   '_site/external-photography-evidence.json',
   '_site/press-institutional-evidence.json',
-  '_site/media-usage-evidence.json',
-  '_site/machine-manifest.json',
-  'Press / Editorial Photography',
-  'Institutional / Diplomatic Event Photography',
-  'International Editorial Image Circulation',
-  'Wikimedia Commons Licensed Distribution',
-  'Bécsi Napló',
-  'pressInstitutionalEvidence',
-  'mediaUsageEvidence',
-  'protectedPressInstitutionalEvidence',
-  'protectedMediaUsageEvidence',
-  'https://www.norbertbanhalmi.com/external-photography-evidence.json',
-  'https://www.norbertbanhalmi.com/press-institutional-evidence.json',
-  'https://www.norbertbanhalmi.com/media-usage-evidence.json',
-  'https://www.norbertbanhalmi.com/machine-manifest.json'
-]) requireContract(workflow.includes(token),`Pages workflow lost protected evidence assertion/route: ${token}`);
+  '_site/media-usage-evidence.json'
+]) requireContract(workflow.includes(requiredArtifactPath),`Pages workflow lost required evidence artifact: ${requiredArtifactPath}`);
+
+// Evidence semantics, labels, routes and protected-reference relationships are
+// validated from canonical source files by the dedicated evidence/machine audits.
+// Deployment YAML must only guarantee that those audited public files survive
+// unchanged into the immutable artifact.
 
 requireContract(!workflow.includes('older projection code must not erase current commercial, geography, role or ecosystem semantics'),'Pages workflow still pins obsolete exact policy prose instead of semantic evidence keys');
 
-console.log('Pages evidence deployment contract passed: external + press + deduplicated media evidence routes and semantic manifest assertions are pinned without brittle policy-prose matching.');
+console.log('Pages evidence deployment contract passed: external + press + deduplicated media evidence files are preserved in the immutable artifact without duplicating mutable semantic copy in deployment YAML.');

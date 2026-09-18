@@ -24,7 +24,8 @@ must(Number(authority.layout?.footer?.compactDesktopColumns)===6,'BANHALMI compa
 must(Number(authority.layout?.footer?.compactDesktopMinPx)===769,'BANHALMI compact desktop footer must begin at 769px so the 768px tablet contract cannot overlap it');
 must(Number(authority.layout?.footer?.tabletColumns)===6,'BANHALMI tablet footer must remain six-column compact geometry');
 must(Number(authority.layout?.footer?.mobileColumns)===1,'BANHALMI mobile footer must remain single-column geometry');
-must(Number(authority.layout?.footer?.paddingTopPx)===42&&Number(authority.layout?.footer?.paddingBottomPx)===24,'BANHALMI footer padding authority changed');
+must(Number(authority.layout?.footer?.paddingTopPx)===24&&Number(authority.layout?.footer?.paddingBottomPx)===16,'BANHALMI footer padding authority changed');
+must(Number(authority.layout?.footer?.desktopRowGapMinPx)===28&&Number(authority.layout?.footer?.desktopRowGapMaxPx)===36,'BANHALMI wide desktop footer row gap authority changed');
 must(Number(authority.layout?.footer?.tabletGapPx)===14,'BANHALMI tablet footer gap authority changed');
 must(authority.navigation?.activeState==='text-only','BANHALMI active navigation must remain text-only');
 must(authority.navigation?.activeFill==='none'&&authority.navigation?.activeBorder==='none'&&authority.navigation?.activeBoxShadow==='none','BANHALMI active navigation may not regain box styling');
@@ -57,7 +58,7 @@ const footerV29=fluid.split('FOOTER-TWO-ROW-V29-20260917')[1]||'';
 must(footerV29.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track geometry');
 must(footerV29.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row geometry');
 must(footerV29.includes('word-break:normal!important')&&footerV29.includes('overflow-wrap:normal!important')&&footerV29.includes('hyphens:none!important'),'canonical footer lost no-mid-word-break protection');
-must(menuLoader.includes('mega-menu-v65-base.js?v=20260917-menu-harmony-v31'),'v31 mega-menu loader lost canonical core handoff');
+must(menuLoader.includes('mega-menu-v65-base.js?v=20260917-pricing-service-v32'),'v31 mega-menu loader lost canonical core handoff');
 must(menuLoader.includes('mega-menu-harmony-v31.css?v=20260917-menu-harmony-v31'),'v31 mega-menu loader lost harmony stylesheet handoff');
 must(menuHarmony.includes('MEGA-MENU-HARMONY-V31-20260917'),'v31 menu harmony marker missing');
 must(menuHarmony.includes('inset:var(--header-h,72px) 0 auto 0!important'),'desktop mega menu returned to full-screen coverage');
