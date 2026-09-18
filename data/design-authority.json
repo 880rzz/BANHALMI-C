@@ -106,7 +106,14 @@
       "desktopFooterBottomMarginPx": 24,
       "desktopFooterBottomPaddingPx": 12,
       "desktopContactActionsMarginPx": 16,
-      "desktopContactActionsPaddingPx": 10
+      "desktopContactActionsPaddingPx": 10,
+      "smallDesktopPaddingTopPx": 14,
+      "smallDesktopPaddingBottomPx": 10,
+      "smallDesktopRowGapPx": 22,
+      "smallDesktopFooterBottomMarginPx": 12,
+      "smallDesktopFooterBottomPaddingPx": 8,
+      "smallDesktopEcosystemMarginPx": 4,
+      "smallDesktopEcosystemPaddingPx": 4
     },
     "documentFlow": {
       "layoutMode": "grid",
