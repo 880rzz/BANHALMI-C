@@ -28,7 +28,7 @@
   function syncFooterGroups(){
     groups.forEach(function(details){
       var compact = !query.matches;
-      details.open = !compact;
+      details.open = query.matches;
       var list = details.querySelector('ul');
       if (list) list.hidden = compact;
     });
