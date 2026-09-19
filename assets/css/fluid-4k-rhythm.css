@@ -1211,3 +1211,12 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body main>section[data-surface="white"]:not(.hero){padding-bottom:0!important;}
   html body main .executive-positioning-section{padding-bottom:96px!important;}
 }
+
+
+/* FOOTER-TABLET-DISCLOSURE-FAIL-CLOSED-20260919 */
+/* Closed disclosure lists must remain out of layout below the desktop footer breakpoint.
+   This final rule intentionally outranks legacy and artifact-hardening layers. */
+@media (max-width:1179px){
+  html body .site-footer .footer-accordion:not([open])>ul{display:none!important;}
+  html body .site-footer .footer-accordion>summary{pointer-events:auto!important;cursor:pointer!important;}
+}
