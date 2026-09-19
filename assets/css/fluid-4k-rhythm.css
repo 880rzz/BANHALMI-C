@@ -1281,3 +1281,38 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     display:none!important;
   }
 }
+
+
+/* FOOTER-ROOT-CAUSE-FINAL-CLOSURE-20260919
+   The earlier desktop expansion rules were emitted later in this canonical
+   stylesheet than the compact disclosure rules. At 768/820px that cascade
+   reopened every list before the audit could measure the footer. Compact
+   disclosure is now the final authority below the desktop breakpoint. */
+@media (max-width:1179px){
+  html body .site-footer details.footer-accordion>ul,
+  html body .site-footer details.footer-accordion:not([open])>ul,
+  html body .site-footer details.footer-accordion[open]>ul{
+    display:none!important;
+    block-size:0!important;
+    min-block-size:0!important;
+    max-block-size:0!important;
+    overflow:hidden!important;
+    margin-block:0!important;
+    padding-block:0!important;
+    visibility:hidden!important;
+  }
+  html body .site-footer details.footer-accordion>summary{
+    display:block!important;
+    min-block-size:32px!important;
+    line-height:1.25!important;
+  }
+}
+@media (min-width:1180px){
+  html body .site-footer details.footer-accordion>ul{
+    display:grid!important;
+    block-size:auto!important;
+    max-block-size:none!important;
+    overflow:visible!important;
+    visibility:visible!important;
+  }
+}
