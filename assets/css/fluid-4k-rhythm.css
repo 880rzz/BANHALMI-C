@@ -1151,3 +1151,13 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body main .smart-quote-layout .category-card>span{display:block!important;width:100%!important;max-width:none!important;}
   html body main .smart-quote-layout .category-card>span>.info-tip{display:inline-grid!important;position:static!important;vertical-align:middle!important;margin-left:12px!important;}
 }
+
+/* FINAL-CASCADE-CLOSURE-20260919E: category info control right anchoring */
+@media (max-width:620px){
+  html body main .smart-quote-layout .category-card>span>.info-tip{
+    position:static!important;
+    display:grid!important;
+    float:right!important;
+    margin:0 0 8px 12px!important;
+  }
+}
