@@ -26,6 +26,14 @@
 @media (min-width:1600px){html body main .collage-gallery{column-count:5!important}}
 @media (min-width:2200px){html body main .collage-gallery{column-count:6!important}}
 
+
+/* FINAL-LAYOUT-CONTRACT-20260919: service hero rhythm and gallery breathing */
+@media (min-width:761px){
+  html body main .hero.service-hero.service-editorial-hero>.wrap{row-gap:0!important;}
+  html body main .hero.service-hero.service-editorial-hero .lead{margin-top:0!important;}
+}
+html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!important;}
+
 /* FLUID-4K-RHYTHM-20260914:END */
 
 /* HOMEPAGE-HERO-V23-20260917
