@@ -4349,13 +4349,3 @@ body.whatsapp-cookie-visible .whatsapp-contact{bottom:max(112px,calc(env(safe-ar
 }
 /* EXECUTIVE-WHATSAPP-CONTACT-V1:END */
 /* APPLE-RESPONSIVE-CONTRACT-V1:END */
-
-
-/* FOOTER-COMPACT-AUTHORITY-20260919
-   The compact/tablet footer is a disclosure list, not an expanded desktop grid.
-   Keep all lists out of layout below the desktop breakpoint at the final loaded CSS layer. */
-@media (max-width:1179px){
-  html body .site-footer details.footer-accordion > ul{
-    display:none!important;
-  }
-}
