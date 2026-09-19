@@ -34,6 +34,17 @@
 }
 html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!important;}
 
+
+/* FINAL-LAYOUT-CONTRACT-20260919B: oeuvre rhythm and mobile centering */
+@media (min-width:761px){
+  html body main .hero.oeuvre-hero>.wrap{row-gap:0!important;}
+  html body main .hero.oeuvre-hero .lead{margin-top:0!important;}
+}
+@media (max-width:620px){
+  html body main .category-card span{display:block!important;max-width:none!important;}
+  html body main .partner-grid-memberships> :last-child:nth-child(odd){grid-column:1 / -1!important;justify-self:center!important;}
+}
+
 /* FLUID-4K-RHYTHM-20260914:END */
 
 /* HOMEPAGE-HERO-V23-20260917
