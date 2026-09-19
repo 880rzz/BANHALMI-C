@@ -52,6 +52,13 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body main .smart-quote-layout .option-row>span>em{max-inline-size:calc(100% - 56px)!important;}
 }
 
+
+/* FINAL-LAYOUT-CONTRACT-20260919D: mobile category info control clears copy */
+@media (max-width:620px){
+  html body main .smart-quote-layout .category-card>span>strong,
+  html body main .smart-quote-layout .category-card>span>em{max-inline-size:calc(100% - 56px)!important;}
+}
+
 /* FLUID-4K-RHYTHM-20260914:END */
 
 /* HOMEPAGE-HERO-V23-20260917
