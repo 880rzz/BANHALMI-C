@@ -68,7 +68,7 @@ for(const width of widths){
         if(verticalOverlap){
           if(v.right>c.left+2)failures.push(`${rel} @${width}x${height}: split hero panels overlap by ${(v.right-c.left).toFixed(1)}px`);
           if(Math.abs(v.top-c.top)>2)failures.push(`${rel} @${width}x${height}: split hero panel tops diverge by ${Math.abs(v.top-c.top).toFixed(1)}px`);
-          if(Math.abs(v.height-c.height)>4)failures.push(`${rel} @${width}x${height}: split hero panel heights diverge by ${Math.abs(v.height-c.top).toFixed(1)}px`);
+          if(Math.abs(v.height-c.height)>4)failures.push(`${rel} @${width}x${height}: split hero panel heights diverge by ${Math.abs(v.height-c.height).toFixed(1)}px`);
         }
       }
     }
