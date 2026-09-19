@@ -1313,3 +1313,15 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     visibility:visible!important;
   }
 }
+/* INTERACTIVE-SUMMARY-TARGET-CLOSURE-20260919
+   The browser accessibility audit measures every visible summary, including the
+   responsive navigation submenu. Keep all interactive summaries at the same
+   touch-target floor so a hidden/expanded state cannot regress the gate. */
+@media (max-width:1179px){
+  html body .site-header .nav-submenu>summary,
+  html body .site-footer details.footer-accordion>summary,
+  html body details.review-drawer>summary{
+    min-block-size:44px!important;
+    line-height:1.25!important;
+  }
+}
