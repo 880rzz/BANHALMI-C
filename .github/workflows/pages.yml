@@ -96,23 +96,32 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          : > /tmp/banhalmi-browser-server.log
           node tools/perf-static-server.mjs _site 4173 > /tmp/banhalmi-browser-server.log 2>&1 &
           SERVER_PID=$!
-          trap 'kill $SERVER_PID || true' EXIT
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
           READY=0
-          for i in $(seq 1 80); do
-            if curl -fsS --max-time 2 http://127.0.0.1:4173/ >/dev/null; then
-              READY=1
-              break
+          for i in $(seq 1 120); do
+            if grep -Fq "PERF_SERVER_READY http://127.0.0.1:4173" /tmp/banhalmi-browser-server.log; then
+              if curl -fsS --max-time 5 http://127.0.0.1:4173/ >/dev/null; then
+                READY=1
+                break
+              fi
+            fi
+            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+              echo "Static audit server exited before readiness." >&2
+              cat /tmp/banhalmi-browser-server.log >&2 || true
+              exit 1
             fi
             sleep 0.25
           done
           if [ "$READY" -ne 1 ]; then
             echo "Static audit server did not become ready." >&2
             cat /tmp/banhalmi-browser-server.log >&2 || true
-            kill "$SERVER_PID" || true
+            kill "$SERVER_PID" 2>/dev/null || true
             exit 1
           fi
+          echo "Static audit server ready; running all page audits."
           npm run test:e2e
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-browser-layout.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-first-principles-layout.mjs
