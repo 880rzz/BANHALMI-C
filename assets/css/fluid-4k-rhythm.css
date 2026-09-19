@@ -1222,3 +1222,18 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body .site-footer .footer-accordion>ul{display:none!important;}
   html body .site-footer .footer-accordion>summary{pointer-events:auto!important;cursor:pointer!important;}
 }
+
+
+/* FOOTER-TABLET-LAYOUT-COLLAPSE-20260919 */
+@media (max-width:1179px){
+  html body .site-footer .footer-accordion>ul{
+    display:none!important;
+    block-size:0!important;
+    min-block-size:0!important;
+    max-block-size:0!important;
+    overflow:hidden!important;
+    margin-block:0!important;
+    padding-block:0!important;
+    visibility:hidden!important;
+  }
+}
