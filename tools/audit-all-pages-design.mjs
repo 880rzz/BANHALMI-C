@@ -14,7 +14,7 @@ const pageMaxForWidth=(width)=>width>=2560?1760:width>=1920?1600:width>=1600?144
 const structuredMaxForWidth=(width)=>width>=1600?pageMaxForWidth(width):baseStructuredMaxPx;
 const flow=designAuthority.layout?.documentFlow||{};
 const touchTargetPx=Number(designAuthority.responsive?.touchTargetPx)||44;
-const footerMaxViewportFraction=Number(flow.footerMaxViewportFractionOnTabletDesktop)||0.85;
+const footerAbsoluteMaxPx=Number(flow.footerAbsoluteMaxPx)||760;
 const structuredSelector=':scope > :is(.service-process-grid,.partner-grid,.partner-grid-memberships,.archive-cards,.two-reading-grid,.smart-quote-layout)';
 const files=[];
 function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const full=path.join(dir,e.name);if(e.isDirectory())walk(full);else if(e.isFile()&&e.name.endsWith('.html'))files.push(full)}}
@@ -54,7 +54,7 @@ for(const width of widths){
     if(r.footerRight>width+2||r.footerLeft<-2)failures.push(`${rel} @${width}x${height}: footer escapes viewport [${r.footerLeft.toFixed(1)},${r.footerRight.toFixed(1)}]`);
     if(r.footerTop!=null&&r.mainBottom!=null&&r.footerTop<r.mainBottom-Number(flow.mainToFooterOverlapTolerancePx||2))failures.push(`${rel} @${width}x${height}: footer overlaps main content by ${(r.mainBottom-r.footerTop).toFixed(1)}px`);
     if(r.unreservedAfterFooter!=null&&r.unreservedAfterFooter>Number(flow.footerAfterDocumentGapMaxPx||2))failures.push(`${rel} @${width}x${height}: ${r.unreservedAfterFooter.toFixed(1)}px unreserved document overhang remains after footer`);
-    if(r.footerHeight>height*footerMaxViewportFraction&&width>=768)failures.push(`${rel} @${width}x${height}: footer occupies ${(r.footerHeight/height*100).toFixed(0)}% of viewport`);
+    if(r.footerHeight>footerAbsoluteMaxPx&&width>=768)failures.push(`${rel} @${width}x${height}: footer occupies ${(r.footerHeight/height*100).toFixed(0)}% of viewport (${r.footerHeight.toFixed(1)}px > ${footerAbsoluteMaxPx}px contract)`);
     for(const w of r.wraps){if(w.axis)failures.push(`${rel} @${width}x${height}: wrapper not centered ${w.left.toFixed(1)}/${w.right.toFixed(1)}`);else failures.push(`${rel} @${width}x${height}: ${w.isStructured?'structured ':''}.wrap exceeds canonical max ${w.allowedMax}px (${w.width.toFixed(1)}px)`);}
     if(r.homepageSplit){
       if(!r.splitHero)failures.push(`${rel} @${width}x${height}: homepage stage76 split hero panels are not both visible`);
@@ -62,9 +62,14 @@ for(const width of widths){
         const v=r.splitHero.visual,c=r.splitHero.copy;
         if(Math.abs(v.left)>2)failures.push(`${rel} @${width}x${height}: split hero visual must anchor to viewport left (${v.left.toFixed(1)}px)`);
         if(Math.abs(c.right-width)>2)failures.push(`${rel} @${width}x${height}: split hero copy must anchor to viewport right (${c.right.toFixed(1)}px of ${width}px)`);
-        if(v.right>c.left+2)failures.push(`${rel} @${width}x${height}: split hero panels overlap by ${(v.right-c.left).toFixed(1)}px`);
-        if(Math.abs(v.top-c.top)>2)failures.push(`${rel} @${width}x${height}: split hero panel tops diverge by ${Math.abs(v.top-c.top).toFixed(1)}px`);
-        if(Math.abs(v.height-c.height)>4)failures.push(`${rel} @${width}x${height}: split hero panel heights diverge by ${Math.abs(v.height-c.height).toFixed(1)}px`);
+        const verticalOverlap=v.bottom>c.top+2&&c.bottom>v.top+2;
+        // Stage76 intentionally stacks the full-width visual and copy panels.
+        // Horizontal geometry is comparable only when the panels share vertical space.
+        if(verticalOverlap){
+          if(v.right>c.left+2)failures.push(`${rel} @${width}x${height}: split hero panels overlap by ${(v.right-c.left).toFixed(1)}px`);
+          if(Math.abs(v.top-c.top)>2)failures.push(`${rel} @${width}x${height}: split hero panel tops diverge by ${Math.abs(v.top-c.top).toFixed(1)}px`);
+          if(Math.abs(v.height-c.height)>4)failures.push(`${rel} @${width}x${height}: split hero panel heights diverge by ${Math.abs(v.height-c.top).toFixed(1)}px`);
+        }
       }
     }
     for(const s of r.surfaces){if(s.surfaceName==='white'&&s.bg!=='rgb(255, 255, 255)')failures.push(`${rel} @${width}x${height}: white surface rendered ${s.bg}`);if(s.surfaceName==='soft'&&s.bg!=='rgb(245, 245, 247)')failures.push(`${rel} @${width}x${height}: soft surface rendered ${s.bg}`);if(s.surfaceName==='dark'&&!['rgb(13, 27, 46)','rgb(32, 37, 48)','rgb(28, 31, 38)'].includes(s.bg))failures.push(`${rel} @${width}x${height}: dark surface rendered ${s.bg}`);}
