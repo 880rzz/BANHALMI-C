@@ -1325,3 +1325,15 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     line-height:1.25!important;
   }
 }
+
+
+/* TABLET-FOOTER-GRID-ROOT-CAUSE-20260919
+   At 761–1179px the existing item spans total twelve tracks. The former
+   six-track grid therefore created implicit rows and an oversized footer. */
+@media (min-width:761px) and (max-width:1179px){
+  html body .site-footer .footer-grid{
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    column-gap:14px!important;
+    row-gap:14px!important;
+  }
+}
