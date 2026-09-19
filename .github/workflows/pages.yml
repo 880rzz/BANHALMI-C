@@ -152,7 +152,7 @@ jobs:
             artifacts/apple-visual-quality.json
             artifacts/lighthouse-mobile
             artifacts/lighthouse-desktop
-          if-no-files-found: warn
+          if-no-files-found: error
           retention-days: 14
       - name: Upload the exact audited Pages artifact
         uses: actions/upload-pages-artifact@v4
@@ -247,5 +247,5 @@ jobs:
             artifacts/live-pixel-geometry
             artifacts/lighthouse-production-mobile
             artifacts/lighthouse-production-desktop
-          if-no-files-found: warn
+          if-no-files-found: error
           retention-days: 14
