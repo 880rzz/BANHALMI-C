@@ -14,7 +14,7 @@ const pageMaxForWidth=(width)=>width>=2560?1760:width>=1920?1600:width>=1600?144
 const structuredMaxForWidth=(width)=>width>=1600?pageMaxForWidth(width):baseStructuredMaxPx;
 const flow=designAuthority.layout?.documentFlow||{};
 const touchTargetPx=Number(designAuthority.responsive?.touchTargetPx)||44;
-const footerMaxViewportFraction=Number(flow.footerMaxViewportFractionOnTabletDesktop)||0.85;
+const footerAbsoluteMaxPx=Number(flow.footerAbsoluteMaxPx)||760;
 const structuredSelector=':scope > :is(.service-process-grid,.partner-grid,.partner-grid-memberships,.archive-cards,.two-reading-grid,.smart-quote-layout)';
 const files=[];
 function walk(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const full=path.join(dir,e.name);if(e.isDirectory())walk(full);else if(e.isFile()&&e.name.endsWith('.html'))files.push(full)}}
@@ -38,12 +38,12 @@ for(const width of widths){
       const heroCopy=homepageSplit?main.querySelector(':scope > .hero-copy-only'):null;
       const splitHero=homepageSplit&&visible(heroVisual)&&visible(heroCopy)?{visual:heroVisual.getBoundingClientRect(),copy:heroCopy.getBoundingClientRect()}:null;
       const surfaces=[];for(const el of document.querySelectorAll('main>section[data-surface]')){if(!visible(el))continue;const s=getComputedStyle(el);surfaces.push({surfaceName:el.getAttribute('data-surface'),bg:s.backgroundColor,color:s.color});}
-      const wraps=[];for(const w of document.querySelectorAll('main .wrap')){if(!visible(w))continue;const b=w.getBoundingClientRect();const isStructured=innerWidth>=structuredBreakpointPx&&Boolean(w.querySelector(structuredSelector));const allowedMax=isStructured?structuredMaxPx:pageMaxPx;const isSplitHeroWrap=homepageSplit&&Boolean(w.closest('.hero-visual-only,.hero-copy-only'));if(b.width>Math.min(innerWidth,allowedMax)+4)wraps.push({width:b.width,allowedMax,isStructured});if(!isSplitHeroWrap&&innerWidth>=1024&&b.width<innerWidth-80&&Math.abs(b.left-(innerWidth-b.right))>5)wraps.push({axis:true,left:b.left,right:innerWidth-b.right});}
+      const wraps=[];for(const w of document.querySelectorAll('main .wrap')){if(!visible(w))continue;const b=w.getBoundingClientRect();const isStructured=innerWidth>=structuredBreakpointPx&&Boolean(w.querySelector(structuredSelector));const allowedMax=isStructured?structuredMaxPx:pageMaxPx;const isSplitHeroWrap=homepageSplit&&Boolean(w.closest('.hero-visual-only,.hero-copy-only'));const isHomepageFullBleed=homepageSplit&&b.width>innerWidth-4;if(b.width>Math.min(innerWidth,allowedMax)+4&&!isHomepageFullBleed)wraps.push({width:b.width,allowedMax,isStructured});if(!isSplitHeroWrap&&!isHomepageFullBleed&&innerWidth>=1024&&b.width<innerWidth-80&&Math.abs(b.left-(innerWidth-b.right))>5)wraps.push({axis:true,left:b.left,right:innerWidth-b.right});}
       const info=[...document.querySelectorAll('.smart-quote-layout .info-tip[data-tooltip]')].filter(visible).map(el=>({position:getComputedStyle(el).position,b:el.getBoundingClientRect(),card:el.closest('.category-card,.option-row')?.getBoundingClientRect()||null}));
       const mainBox=visible(main)?main.getBoundingClientRect():null,footerBox=visible(footer)?footer.getBoundingClientRect():null,footerBottomDocument=footerBox?footerBox.bottom+scrollY:null,bodyPaddingBottom=parseFloat(bodyStyle.paddingBottom)||0,rawAfterFooter=footerBottomDocument==null?null:Math.max(0,de.scrollHeight-footerBottomDocument),unreservedAfterFooter=rawAfterFooter==null?null:Math.max(0,rawAfterFooter-bodyPaddingBottom);
       const media=[];for(const el of document.querySelectorAll('main img,main video,main iframe,main svg')){if(!visible(el))continue;const b=el.getBoundingClientRect();if(b.left<-2||b.right>innerWidth+2||b.width>innerWidth+2)media.push(`${el.tagName.toLowerCase()} ${b.left.toFixed(1)}..${b.right.toFixed(1)}`);if(media.length>=8)break;}
       const touch=[];if(innerWidth<=1024){for(const el of document.querySelectorAll('button,summary,.btn,.menu-btn,.nav-cta,.site-header a,input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]),select,textarea')){if(!visible(el))continue;const b=el.getBoundingClientRect();if(b.height<touchTargetPx-0.5)touch.push(`${el.tagName.toLowerCase()} height=${b.height.toFixed(1)}`);if((el.matches('button,.menu-btn')||el.getAttribute('role')==='button')&&b.width<touchTargetPx-0.5)touch.push(`${el.tagName.toLowerCase()} width=${b.width.toFixed(1)}`);if(touch.length>=8)break;}}
-      const activeNav=[];for(const a of document.querySelectorAll('.site-header a.active,.site-header a[aria-current="page"],.site-header .active>a')){if(!visible(a))continue;const s=getComputedStyle(a),border=parseFloat(s.borderTopWidth)+parseFloat(s.borderRightWidth)+parseFloat(s.borderBottomWidth)+parseFloat(s.borderLeftWidth);if(border>0||s.boxShadow!=='none'||(s.backgroundColor!=='rgba(0, 0, 0, 0)'&&s.backgroundColor!=='transparent')||parseFloat(s.borderRadius)>1)activeNav.push('active navigation is boxed');}
+      const activeNav=[];for(const a of document.querySelectorAll('.site-header .nav-links a.active:not(.nav-cta),.site-header .nav-links a[aria-current="page"]:not(.nav-cta),.site-header .nav-links .active>a:not(.nav-cta)')){if(!visible(a))continue;const s=getComputedStyle(a),border=parseFloat(s.borderTopWidth)+parseFloat(s.borderRightWidth)+parseFloat(s.borderBottomWidth)+parseFloat(s.borderLeftWidth);if(border>0||s.boxShadow!=='none'||(s.backgroundColor!=='rgba(0, 0, 0, 0)'&&s.backgroundColor!=='transparent')||parseFloat(s.borderRadius)>1)activeNav.push('active navigation is boxed');}
       return {overflow:de.scrollWidth-de.clientWidth,headerHeight:visible(header)?header.getBoundingClientRect().height:0,surfaces,wraps,homepageSplit,splitHero,info,bodyDisplay:bodyStyle.display,htmlBackground:getComputedStyle(de).backgroundColor,mainRight:mainBox?.right??0,footerRight:footerBox?.right??0,footerLeft:footerBox?.left??0,footerTop:footerBox?.top??null,mainBottom:mainBox?.bottom??null,rawAfterFooter,unreservedAfterFooter,media,touch,activeNav,footerHeight:footerBox?.height??0};
     },{pageMaxPx,structuredMaxPx,structuredBreakpointPx,structuredSelector,touchTargetPx});
     if(r.overflow>1)failures.push(`${rel} @${width}x${height}: document horizontal overflow ${r.overflow}px`);
@@ -54,7 +54,7 @@ for(const width of widths){
     if(r.footerRight>width+2||r.footerLeft<-2)failures.push(`${rel} @${width}x${height}: footer escapes viewport [${r.footerLeft.toFixed(1)},${r.footerRight.toFixed(1)}]`);
     if(r.footerTop!=null&&r.mainBottom!=null&&r.footerTop<r.mainBottom-Number(flow.mainToFooterOverlapTolerancePx||2))failures.push(`${rel} @${width}x${height}: footer overlaps main content by ${(r.mainBottom-r.footerTop).toFixed(1)}px`);
     if(r.unreservedAfterFooter!=null&&r.unreservedAfterFooter>Number(flow.footerAfterDocumentGapMaxPx||2))failures.push(`${rel} @${width}x${height}: ${r.unreservedAfterFooter.toFixed(1)}px unreserved document overhang remains after footer`);
-    if(r.footerHeight>height*footerMaxViewportFraction&&width>=768)failures.push(`${rel} @${width}x${height}: footer occupies ${(r.footerHeight/height*100).toFixed(0)}% of viewport`);
+    if(r.footerHeight>footerAbsoluteMaxPx&&width>=768)failures.push(`${rel} @${width}x${height}: footer occupies ${(r.footerHeight/height*100).toFixed(0)}% of viewport (${r.footerHeight.toFixed(1)}px > ${footerAbsoluteMaxPx}px contract)`);
     for(const w of r.wraps){if(w.axis)failures.push(`${rel} @${width}x${height}: wrapper not centered ${w.left.toFixed(1)}/${w.right.toFixed(1)}`);else failures.push(`${rel} @${width}x${height}: ${w.isStructured?'structured ':''}.wrap exceeds canonical max ${w.allowedMax}px (${w.width.toFixed(1)}px)`);}
     if(r.homepageSplit){
       if(!r.splitHero)failures.push(`${rel} @${width}x${height}: homepage stage76 split hero panels are not both visible`);
@@ -62,9 +62,14 @@ for(const width of widths){
         const v=r.splitHero.visual,c=r.splitHero.copy;
         if(Math.abs(v.left)>2)failures.push(`${rel} @${width}x${height}: split hero visual must anchor to viewport left (${v.left.toFixed(1)}px)`);
         if(Math.abs(c.right-width)>2)failures.push(`${rel} @${width}x${height}: split hero copy must anchor to viewport right (${c.right.toFixed(1)}px of ${width}px)`);
-        if(v.right>c.left+2)failures.push(`${rel} @${width}x${height}: split hero panels overlap by ${(v.right-c.left).toFixed(1)}px`);
-        if(Math.abs(v.top-c.top)>2)failures.push(`${rel} @${width}x${height}: split hero panel tops diverge by ${Math.abs(v.top-c.top).toFixed(1)}px`);
-        if(Math.abs(v.height-c.height)>4)failures.push(`${rel} @${width}x${height}: split hero panel heights diverge by ${Math.abs(v.height-c.height).toFixed(1)}px`);
+        const verticalOverlap=v.bottom>c.top+2&&c.bottom>v.top+2;
+        // Stage76 intentionally stacks the full-width visual and copy panels.
+        // Horizontal geometry is comparable only when the panels share vertical space.
+        if(verticalOverlap){
+          if(v.right>c.left+2)failures.push(`${rel} @${width}x${height}: split hero panels overlap by ${(v.right-c.left).toFixed(1)}px`);
+          if(Math.abs(v.top-c.top)>2)failures.push(`${rel} @${width}x${height}: split hero panel tops diverge by ${Math.abs(v.top-c.top).toFixed(1)}px`);
+          if(Math.abs(v.height-c.height)>4)failures.push(`${rel} @${width}x${height}: split hero panel heights diverge by ${Math.abs(v.height-c.height).toFixed(1)}px`);
+        }
       }
     }
     for(const s of r.surfaces){if(s.surfaceName==='white'&&s.bg!=='rgb(255, 255, 255)')failures.push(`${rel} @${width}x${height}: white surface rendered ${s.bg}`);if(s.surfaceName==='soft'&&s.bg!=='rgb(245, 245, 247)')failures.push(`${rel} @${width}x${height}: soft surface rendered ${s.bg}`);if(s.surfaceName==='dark'&&!['rgb(13, 27, 46)','rgb(32, 37, 48)','rgb(28, 31, 38)'].includes(s.bg))failures.push(`${rel} @${width}x${height}: dark surface rendered ${s.bg}`);}

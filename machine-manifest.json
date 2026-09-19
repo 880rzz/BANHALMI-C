@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.4",
+  "canonicalSource": "https://www.norbertbanhalmi.com/data/machine-core.json",
+  "dateModified": "2026-09-17T08:35:56Z",
+  "generatedOutputs": [
+    "/api/v1/identity.json",
+    "/api/v1/locations.json",
+    "/api/v1/services.json",
+    "/ai-entry.json",
+    "/entity.jsonld",
+    "/authority-evidence.json",
+    "/recognitions.json",
+    "/llms.txt",
+    "/ai.txt",
+    "/machine-manifest.json"
+  ],
+  "protectedContracts": [
+    "https://www.norbertbanhalmi.com/llm-commercial-contract.json",
+    "https://www.norbertbanhalmi.com/market-geography.json",
+    "https://www.norbertbanhalmi.com/people-roles.json",
+    "https://www.norbertbanhalmi.com/team-capabilities.json",
+    "https://www.norbertbanhalmi.com/recognitions.json",
+    "https://www.norbertbanhalmi.com/transatlantic-evidence.json"
+  ],
+  "policy": "Public machine entry points are committed from the canonical core plus explicitly protected evidence overlays. CI audits are read-only and must not write source files. Committed output must never downgrade canonical geography, role, team-size, commercial-contract, institutional-evidence or third-party recognition semantics.",
+  "protectedOverlay": "https://www.norbertbanhalmi.com/llm-canonical-overlay.json",
+  "protectedPressInstitutionalEvidence": "https://www.norbertbanhalmi.com/press-institutional-evidence.json",
+  "protectedMediaUsageEvidence": "https://www.norbertbanhalmi.com/media-usage-evidence.json",
+  "protectedOverlayPolicy": "Committed after canonical projection and protected-overlay reconciliation; older projection code must not erase current commercial, geography, role, brand/team, external photography, press/editorial/institutional, deduplicated media-usage or ecosystem semantics.",
+  "brandTeamContract": {
+    "primaryBrand": "BANHALMI",
+    "photographyName": "BANHALMI Photography",
+    "teamDescriptor": "Photography Team",
+    "separateOrganization": false
+  }
+}
