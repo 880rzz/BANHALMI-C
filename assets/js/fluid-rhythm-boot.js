@@ -26,7 +26,12 @@
   var query = window.matchMedia('(min-width:1180px)');
   var groups = Array.prototype.slice.call(document.querySelectorAll('details.footer-accordion'));
   function syncFooterGroups(){
-    groups.forEach(function(details){ details.open = query.matches; });
+    groups.forEach(function(details){
+      var compact = !query.matches;
+      details.open = !compact;
+      var list = details.querySelector('ul');
+      if (list) list.hidden = compact;
+    });
   }
   if (groups.length) {
     syncFooterGroups();
