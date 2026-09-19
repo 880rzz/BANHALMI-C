@@ -13,49 +13,7 @@
     document.head.appendChild(link);
   }
 
-  /* Small-desktop footer geometry is a committed authority stylesheet loaded
-     after the canonical rhythm. This guarantees that production hardening
-     cannot reintroduce the old 12-track 1180-1439px overflow geometry. */
-  var footerHref = '/assets/css/footer-geometry-v32.css?v=20260917-footer-v32';
-  var footerLink = document.querySelector('link[data-footer-geometry]');
-  if (footerLink) {
-    if (footerLink.getAttribute('href') !== footerHref) footerLink.setAttribute('href', footerHref);
-  } else {
-    footerLink = document.createElement('link');
-    footerLink.rel = 'stylesheet';
-    footerLink.href = footerHref;
-    footerLink.setAttribute('data-footer-geometry','');
-    document.head.appendChild(footerLink);
-  }
-
-  /* Dedicated menu geometry is an explicit design-authority stylesheet, not
-     an inline/runtime patch. Loading it after the canonical rhythm gives the
-     approved menu composition deterministic precedence on every page. */
-  var menuHref = '/assets/css/mega-menu-harmony-v31.css?v=20260917-menu-harmony-v31';
-  var menuLink = document.querySelector('link[data-mega-menu-harmony]');
-  if (menuLink) {
-    if (menuLink.getAttribute('href') !== menuHref) menuLink.setAttribute('href', menuHref);
-  } else {
-    menuLink = document.createElement('link');
-    menuLink.rel = 'stylesheet';
-    menuLink.href = menuHref;
-    menuLink.setAttribute('data-mega-menu-harmony','');
-    document.head.appendChild(menuLink);
-  }
-
-  /* Typography integrity is global: short hyphenated service terms may move
-     to the next line as a unit but may not split at an internal hyphen. */
-  var typeHref = '/assets/css/typography-integrity-v33.css?v=20260917-typography-v33';
-  var typeLink = document.querySelector('link[data-typography-integrity]');
-  if (typeLink) {
-    if (typeLink.getAttribute('href') !== typeHref) typeLink.setAttribute('href', typeHref);
-  } else {
-    typeLink = document.createElement('link');
-    typeLink.rel = 'stylesheet';
-    typeLink.href = typeHref;
-    typeLink.setAttribute('data-typography-integrity','');
-    document.head.appendChild(typeLink);
-  }
+  /* Typography integrity is global; CSS is canonicalized in fluid-4k-rhythm.css. */
   if (!document.querySelector('script[data-typography-integrity]')) {
     var typeScript = document.createElement('script');
     typeScript.src = '/assets/js/typography-integrity-v33.js?v=20260917-typography-v33';

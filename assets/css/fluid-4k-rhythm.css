@@ -26,6 +26,39 @@
 @media (min-width:1600px){html body main .collage-gallery{column-count:5!important}}
 @media (min-width:2200px){html body main .collage-gallery{column-count:6!important}}
 
+
+/* FINAL-LAYOUT-CONTRACT-20260919: service hero rhythm and gallery breathing */
+@media (min-width:761px){
+  html body main .hero.service-hero.service-editorial-hero>.wrap{row-gap:0!important;}
+  html body main .hero.service-hero.service-editorial-hero .lead{margin-top:0!important;}
+}
+html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!important;}
+
+
+/* FINAL-LAYOUT-CONTRACT-20260919B: oeuvre rhythm and mobile centering */
+@media (min-width:761px){
+  html body main .hero.oeuvre-hero>.wrap{row-gap:0!important;}
+  html body main .hero.oeuvre-hero .lead{margin-top:0!important;}
+}
+@media (max-width:620px){
+  html body main .category-card span{display:block!important;max-width:none!important;}
+  html body main .partner-grid-memberships> :last-child:nth-child(odd){grid-column:1 / -1!important;justify-self:center!important;}
+}
+
+
+/* FINAL-LAYOUT-CONTRACT-20260919C: mobile quote info control clears option copy */
+@media (max-width:620px){
+  html body main .smart-quote-layout .option-row>span>strong,
+  html body main .smart-quote-layout .option-row>span>em{max-inline-size:calc(100% - 56px)!important;}
+}
+
+
+/* FINAL-LAYOUT-CONTRACT-20260919D: mobile category info control clears copy */
+@media (max-width:620px){
+  html body main .smart-quote-layout .category-card>span>strong,
+  html body main .smart-quote-layout .category-card>span>em{max-inline-size:calc(100% - 56px)!important;}
+}
+
 /* FLUID-4K-RHYTHM-20260914:END */
 
 /* HOMEPAGE-HERO-V23-20260917
@@ -329,7 +362,14 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
    Removes the remaining visual seams and replaces competing footer layouts
    with one explicit information grid. */
 html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
-  background:#f5f5f7!important;
+  background:#fff!important;
+}
+@media (max-width:1024px){
+  html body .site-header .brand{
+    display:inline-flex!important;
+    align-items:center!important;
+    min-height:44px!important;
+  }
 }
 html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signature-line{
   color:#9a7419!important;
@@ -735,4 +775,435 @@ html body .site-footer .footer-accordion:not([open])>ul{
     font-size:clamp(.72rem,.64vw,.84rem)!important;
     line-height:1.3!important;
   }
+}
+
+/* FOOTER-SINGLE-AUTHORITY-20260918
+   Canonicalized from footer-geometry-v32.css. This block is the single committed
+   footer geometry authority for 1180-1439px and is parser-discovered on every page.
+*/
+/* FOOTER-GEOMETRY-V32-20260917
+   Small-desktop footer authority. The 12-track wide-desktop footer is retained
+   from 1440px upward; 1180-1439px uses an 8-track two-row composition so
+   intrinsic text widths cannot push the document beyond the viewport. */
+
+html body .site-footer,
+html body .site-footer>.wrap,
+html body .site-footer .footer-grid,
+html body .site-footer .footer-grid>*{
+  min-inline-size:0!important;
+  max-inline-size:100%;
+}
+
+@media (min-width:1180px) and (max-width:1439px){
+  html body .site-footer{
+    inline-size:100%!important;
+    max-inline-size:100%!important;
+    overflow-x:clip!important;
+    padding:14px 0 10px!important;
+  }
+  html body .site-footer>.wrap{
+    inline-size:min(100%,calc(100vw - 64px))!important;
+    max-inline-size:1280px!important;
+    margin-inline:auto!important;
+    padding-inline:0!important;
+  }
+  html body .site-footer .footer-grid{
+    display:grid!important;
+    grid-template-columns:repeat(8,minmax(0,1fr))!important;
+    grid-template-rows:auto auto!important;
+    grid-auto-flow:row!important;
+    column-gap:clamp(16px,1.55vw,22px)!important;
+    row-gap:22px!important;
+    align-items:start!important;
+    overflow:visible!important;
+  }
+  html body .site-footer .footer-grid::before{
+    grid-column:1 / -1!important;
+    grid-row:2!important;
+    transform:translateY(-11px)!important;
+  }
+  html body .site-footer .footer-brand-col{
+    grid-column:1 / span 2!important;
+    grid-row:1!important;
+    max-inline-size:30ch!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(1){grid-column:3 / span 1!important;grid-row:1!important;}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(2){grid-column:4 / span 1!important;grid-row:1!important;}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){grid-column:5 / span 2!important;grid-row:1!important;}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(4){grid-column:4 / span 1!important;grid-row:2!important;}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(5){grid-column:5 / span 2!important;grid-row:2!important;}
+  html body .site-footer .footer-grid>div:has(.footer-contact-list){
+    grid-column:1 / span 3!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    grid-column:7 / span 2!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-accordion>summary,
+  html body .site-footer .footer-heading,
+  html body .site-footer .footer-accordion li,
+  html body .site-footer .footer-accordion li>a,
+  html body .site-footer .footer-contact-list *,
+  html body .site-footer .footer-legal-list *{
+    min-inline-size:0!important;
+    max-inline-size:100%!important;
+  }
+  html body .site-footer .footer-accordion li>a,
+  html body .site-footer .footer-heading,
+  html body .site-footer .footer-accordion>summary{
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+    hyphens:none!important;
+  }
+  html body .site-footer .footer-contact-list{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:0 18px!important;
+  }
+  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{
+    padding-left:18px!important;
+  }
+  html body .site-footer .footer-legal-list li{
+    grid-template-columns:minmax(48px,.55fr) minmax(0,1fr)!important;
+    column-gap:8px!important;
+  }
+  html body .site-footer .footer-legal-list li>strong,
+  html body .site-footer .footer-contact-list :is(.footer-phone,.footer-whatsapp),
+  html body .site-footer .footer-contact-actions a{
+    overflow-wrap:anywhere!important;
+  }
+  html body .site-footer .footer-bottom{
+    margin-top:12px!important;
+    padding-top:8px!important;
+  }
+  html body .site-footer .footer-bottom>span{
+    min-inline-size:0!important;
+    max-inline-size:48%!important;
+  }
+  html body .site-footer .banhalmi-ecosystem{
+    inline-size:min(100%,calc(100vw - 64px))!important;
+    max-inline-size:1280px!important;
+    margin:4px auto 0!important;
+    padding-top:4px!important;
+  }
+  html body .site-footer .banhalmi-ecosystem a{
+    min-inline-size:0!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+}
+
+@media (min-width:1440px){
+  html body .site-footer,
+  html body .site-footer>.wrap,
+  html body .site-footer .banhalmi-ecosystem{
+    max-inline-size:100%!important;
+  }
+}
+
+/* SMART-QUOTE-INTRINSIC-CARD-HEIGHT-20260918
+   Quote category cards contain different copy lengths by service and language.
+   The global equal-card contract must not stretch shorter quote controls to the
+   tallest sibling, otherwise the interactive content acquires artificial bottom
+   whitespace and violates the quote layout authority. */
+@media (min-width:761px){
+  html body main .smart-quote-layout .category-grid{
+    align-items:start!important;
+  }
+  html body main .smart-quote-layout .category-grid>.category-card{
+    align-self:start!important;
+    block-size:auto!important;
+    min-block-size:0!important;
+  }
+}
+
+
+/* Canonicalized from former standalone menu authority. */
+/* MEGA-MENU-HARMONY-V31-20260917
+   Text-first BANHALMI navigation. No decorative hero image, no slogan tile,
+   no fake disclosure arrows. The real site header remains visible and the
+   navigation uses only functional, readable links in a compact editorial grid. */
+
+html body .bn-mega-menu{
+  background:rgba(32,37,48,.992)!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+}
+html body .bn-mega-menu .bn-mega-intro:not(.bn-mega-tail),
+html body .bn-mega-menu .bn-mega-tail,
+html body .bn-mega-menu .bn-mega-desc,
+html body .bn-mega-menu .bn-mega-section-head p{
+  display:none!important;
+}
+html body .bn-mega-menu .bn-mega-link{
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  transform:none!important;
+}
+html body .bn-mega-menu .bn-mega-link:hover,
+html body .bn-mega-menu .bn-mega-link:focus-visible,
+html body .bn-mega-menu .bn-mega-link.active,
+html body .bn-mega-menu .bn-mega-link[aria-current="page"]{
+  background:transparent!important;
+  box-shadow:none!important;
+  transform:none!important;
+  text-decoration-line:underline!important;
+  text-decoration-thickness:1px!important;
+  text-underline-offset:.24em!important;
+  text-decoration-color:currentColor!important;
+}
+
+@media (min-width:861px){
+  html body .bn-mega-menu{
+    inset:var(--header-h,72px) 0 auto 0!important;
+    block-size:auto!important;
+    min-block-size:0!important;
+    max-block-size:calc(100dvh - var(--header-h,72px))!important;
+    overflow:auto!important;
+    overscroll-behavior:contain!important;
+    border-top:1px solid rgba(183,156,68,.16)!important;
+    border-bottom:1px solid rgba(183,156,68,.22)!important;
+    box-shadow:0 20px 44px rgba(0,0,0,.16)!important;
+  }
+  html body .bn-mega-panel{
+    display:block!important;
+    inline-size:min(1240px,calc(100vw - 80px))!important;
+    max-inline-size:1240px!important;
+    block-size:auto!important;
+    min-block-size:0!important;
+    margin:0 auto!important;
+    padding:clamp(28px,2.4vw,40px) 0 clamp(30px,2.6vw,44px)!important;
+  }
+  html body .bn-mega-grid{
+    display:grid!important;
+    grid-template-columns:minmax(0,1.12fr) minmax(0,.9fr) minmax(0,1.08fr)!important;
+    gap:0!important;
+    align-items:start!important;
+    align-content:start!important;
+    padding:0!important;
+    min-block-size:0!important;
+  }
+  html body .bn-mega-grid::after{content:none!important;display:none!important;}
+  html body .bn-mega-column{
+    min-inline-size:0!important;
+    padding:0 clamp(28px,3vw,46px)!important;
+    border-left:1px solid rgba(245,245,247,.11)!important;
+  }
+  html body .bn-mega-column:first-child{padding-left:0!important;border-left:0!important;}
+  html body .bn-mega-column:last-child{padding-right:0!important;}
+  html body .bn-mega-section-head{
+    margin:0 0 18px!important;
+    padding:0 0 12px!important;
+    border-bottom:1px solid rgba(183,156,68,.28)!important;
+  }
+  html body .bn-mega-section-head::after{content:none!important;display:none!important;}
+  html body .bn-mega-section-head>span{
+    color:#d1b451!important;
+    font-size:clamp(.72rem,.64vw,.82rem)!important;
+    line-height:1.2!important;
+    letter-spacing:.14em!important;
+    text-transform:uppercase!important;
+  }
+  html body .bn-mega-item{margin:0!important;padding:0!important;}
+  html body .bn-mega-item+.bn-mega-item{margin-top:10px!important;}
+  html body .bn-mega-link{
+    display:inline-flex!important;
+    align-items:center!important;
+    min-block-size:29px!important;
+    padding:0!important;
+    color:#f5f5f7!important;
+    font-size:clamp(.9rem,.8vw,1.02rem)!important;
+    line-height:1.3!important;
+    letter-spacing:-.01em!important;
+  }
+  html body .bn-mega-pricing .bn-mega-link{color:#d1b451!important;}
+}
+
+@media (max-width:860px){
+  html body .bn-mega-menu{
+    inset:var(--header-h,64px) 0 0 0!important;
+    block-size:calc(100dvh - var(--header-h,64px))!important;
+    min-block-size:0!important;
+    overflow-y:auto!important;
+    overscroll-behavior:contain!important;
+    border-top:1px solid rgba(245,245,247,.09)!important;
+  }
+  html body .bn-mega-panel{
+    display:block!important;
+    inline-size:100%!important;
+    max-inline-size:none!important;
+    block-size:auto!important;
+    min-block-size:100%!important;
+    padding:12px 22px max(28px,env(safe-area-inset-bottom))!important;
+  }
+  html body .bn-mega-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:0!important;
+    align-content:start!important;
+    padding:0!important;
+  }
+  html body .bn-mega-grid::after{content:none!important;display:none!important;}
+  html body .bn-mega-column{
+    min-inline-size:0!important;
+    padding:22px 0 20px!important;
+    border-bottom:1px solid rgba(183,156,68,.24)!important;
+  }
+  html body .bn-mega-column:last-child{border-bottom:0!important;padding-bottom:8px!important;}
+  html body .bn-mega-section-head{
+    position:static!important;
+    margin:0 0 13px!important;
+    padding:0 0 10px!important;
+    border-bottom:0!important;
+  }
+  html body .bn-mega-section-head::after{content:none!important;display:none!important;}
+  html body .bn-mega-section-head>span{
+    color:#d1b451!important;
+    font-size:.78rem!important;
+    line-height:1.2!important;
+    letter-spacing:.15em!important;
+    text-transform:uppercase!important;
+  }
+  html body .bn-mega-item{margin:0!important;padding:0!important;}
+  html body .bn-mega-item+.bn-mega-item{margin-top:5px!important;}
+  html body .bn-mega-link{
+    display:flex!important;
+    align-items:center!important;
+    min-block-size:40px!important;
+    padding:4px 0!important;
+    color:#eef0f4!important;
+    font-size:1rem!important;
+    line-height:1.28!important;
+    letter-spacing:-.012em!important;
+  }
+  html body .bn-mega-pricing .bn-mega-link{color:#d1b451!important;}
+}
+
+@media (max-width:430px){
+  html body .bn-mega-panel{padding-inline:18px!important;}
+  html body .bn-mega-column{padding-block:19px 17px!important;}
+  html body .bn-mega-section-head{margin-bottom:10px!important;}
+  html body .bn-mega-link{min-block-size:38px!important;font-size:.98rem!important;}
+}
+
+
+/* Canonicalized from former standalone typography authority. */
+/* TYPOGRAPHY-INTEGRITY-V33-20260917
+   Semantic line-break protection for short compound service terms.
+   Terms may move as a unit to the next line, but must not split at an internal hyphen. */
+
+html body .bn-term-lock{
+  white-space:nowrap!important;
+  word-break:keep-all!important;
+  overflow-wrap:normal!important;
+  hyphens:none!important;
+}
+
+/* Do not let surrounding editorial labels force arbitrary mid-word breaks. */
+html body :is(.eyebrow,.hero-location-line,.more,.fp-choice strong,.fp-choice em,.nav-links,.bn-mega-panel,.site-footer){
+  word-break:normal;
+  overflow-wrap:normal;
+}
+
+
+/* FOOTER-WIDE-COMPACT-V35-20260918
+   Wide desktop keeps the approved 12-track / two-row information architecture,
+   while removing accumulated vertical slack from historical footer layers. */
+@media (min-width:1440px){
+  html body .site-footer{padding:28px 0 16px!important;}
+  html body .site-footer .footer-grid{row-gap:36px!important;}
+  html body .site-footer .footer-grid::before{transform:translateY(-18px)!important;}
+  html body .site-footer .footer-brand-col .footer-entity{margin:12px 0 16px!important;}
+  html body .site-footer .footer-accordion>summary,
+  html body .site-footer .footer-heading{margin-bottom:12px!important;}
+  html body .site-footer .footer-accordion ul{row-gap:8px!important;}
+  html body .site-footer .footer-contact-actions{margin-top:16px!important;padding-top:10px!important;}
+  html body .site-footer .footer-bottom{margin-top:24px!important;padding-top:12px!important;}
+  html body .site-footer .banhalmi-ecosystem{margin-top:8px!important;}
+  html body .site-footer .banhalmi-ecosystem a{min-block-size:30px!important;padding:4px 12px!important;}
+}
+
+
+/* MEGA-MENU-COMPACT-RHYTHM-V35-20260918
+   Tightens only vertical menu whitespace; the v31 three-column information architecture remains unchanged. */
+@media (min-width:861px){
+  html body .bn-mega-panel{padding:24px 0 36px!important;}
+}
+
+
+/* FOOTER-SUMMARY-TARGET-V35-20260918
+   Restores the canonical 44px summary target that an older desktop footer
+   compression rule accidentally zeroed. */
+@media (min-width:1180px){
+  html body .site-footer .footer-accordion>summary{
+    display:flex!important;
+    align-items:center!important;
+    min-block-size:44px!important;
+  }
+}
+
+
+/* FINAL-CASCADE-CLOSURE-20260919: last-authority responsive rhythm */
+@media (min-width:761px){
+  html body main .hero.service-hero.service-editorial-hero>.wrap{row-gap:0!important;}
+  html body main .hero.service-hero.service-editorial-hero .lead{margin-top:0!important;}
+  html body main .hero.oeuvre-hero>.wrap{row-gap:0!important;}
+  html body main .hero.oeuvre-hero .lead{margin-top:0!important;}
+}
+html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!important;}
+@media (max-width:620px){
+  html body main .smart-quote-layout .category-card>span{display:block!important;width:100%!important;max-width:none!important;}
+  html body main .smart-quote-layout .category-card>span>.info-tip{display:inline-grid!important;position:static!important;vertical-align:middle!important;margin-left:12px!important;}
+}
+
+/* FINAL-CASCADE-CLOSURE-20260919E: category info control right anchoring */
+@media (max-width:620px){
+  html body main .smart-quote-layout .category-card>span>.info-tip{
+    position:static!important;
+    display:grid!important;
+    float:right!important;
+    margin:0 0 8px 12px!important;
+  }
+}
+
+
+/* FINAL-RESPONSIVE-CLOSURE-20260919F: white process section and compact quote cards */
+@media (min-width:621px){
+  html body main>section[data-surface="white"]:not(.hero){padding-bottom:clamp(56px,6vw,96px)!important;}
+}
+@media (max-width:620px){
+  html body main .smart-quote-layout .category-card{
+    display:block!important;
+    position:relative!important;
+    padding:18px 18px 18px 50px!important;
+  }
+  html body main .smart-quote-layout .category-card>input[type="radio"],
+  html body main .smart-quote-layout .category-card>input[type="checkbox"]{
+    position:absolute!important;
+    left:18px!important;
+    top:20px!important;
+    margin:0!important;
+  }
+  html body main .smart-quote-layout .category-card>span{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+  }
+  html body main .smart-quote-layout .category-card>span>.info-tip{
+    position:static!important;
+    display:grid!important;
+    float:right!important;
+    margin:0 0 8px 12px!important;
+  }
+}
+
+
+/* FINAL-SECTION-RHYTHM-CLOSURE-20260919G */
+@media (min-width:621px){
+  html body main .service-gallery-section,
+  html body main>section[data-surface="white"]:not(.hero){padding-bottom:0!important;}
+  html body main .executive-positioning-section{padding-bottom:96px!important;}
 }

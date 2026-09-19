@@ -4154,8 +4154,8 @@ html body main .trust-hero p.lead{
 
 /* One typographic scale: display type is restrained; body, descriptions and
    disclosure copy share a readable rhythm in every language. */
-html body main h1{font-size:clamp(2.1rem,3.25vw,3.25rem)!important;line-height:1.08!important;letter-spacing:-.024em!important;}
-html body main h2{font-size:clamp(1.45rem,2.1vw,2.1rem)!important;line-height:1.18!important;letter-spacing:-.022em!important;}
+html body main h1{font-size:clamp(2.5rem,4vw,3.25rem)!important;line-height:1.08!important;letter-spacing:-.024em!important;}
+html body main h2{font-size:clamp(1.625rem,2.1vw,2.1rem)!important;line-height:1.18!important;letter-spacing:-.022em!important;}
 html body main h3{font-size:clamp(18px,1.45vw,1.3rem)!important;line-height:1.24!important;letter-spacing:-.012em!important;}
 html body main :is(p,li,dd){font-size:16px!important;line-height:1.62!important;}
 html body main .lead{font-size:clamp(19px,1.6vw,1.4rem)!important;line-height:1.48!important;}
@@ -4269,8 +4269,8 @@ html body .site-footer,html body .site-footer .wrap{min-height:0!important;}
 }
 
 @media(max-width:768px){
-  html body main h1{font-size:clamp(2.15rem,4.8vw,2.75rem)!important;}
-  html body main h2{font-size:clamp(1.55rem,3.2vw,2rem)!important;}
+  html body main h1{font-size:clamp(2.375rem,4.8vw,2.75rem)!important;}
+  html body main h2{font-size:clamp(1.5625rem,3.2vw,2rem)!important;}
   html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid){grid-template-columns:1fr!important;}
   html body main :is(.service-process-grid,.quote-deep-details .card-grid){grid-template-columns:1fr!important;}
   html body .site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 22px!important;}
