@@ -66,10 +66,12 @@
     var footerDesktopQuery = window.matchMedia("(min-width: 1180px)");
     var syncFooterAccordions = function () {
       footerAccordions.forEach(function (details) {
-        details.open = footerDesktopQuery.matches;
+        var compact = !footerDesktopQuery.matches;
+        details.open = !compact;
         var list = details.querySelector("ul");
         if (list) {
-          list.style.setProperty("display", footerDesktopQuery.matches ? "block" : "none", "important");
+          list.hidden = compact;
+          list.style.setProperty("display", compact ? "none" : "block", "important");
         }
       });
     };
@@ -78,7 +80,10 @@
       if (summary) summary.addEventListener("click", function () {
         window.requestAnimationFrame(function () {
           var list = details.querySelector("ul");
-          if (list) list.style.setProperty("display", details.open ? "block" : "none", "important");
+          if (list) {
+            list.hidden = !details.open;
+            list.style.setProperty("display", details.open ? "block" : "none", "important");
+          }
         });
       });
     });
