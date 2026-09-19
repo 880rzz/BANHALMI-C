@@ -1161,3 +1161,34 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     margin:0 0 8px 12px!important;
   }
 }
+
+
+/* FINAL-RESPONSIVE-CLOSURE-20260919F: white process section and compact quote cards */
+@media (min-width:621px){
+  html body main>section[data-surface="white"]:not(.hero){padding-bottom:clamp(56px,6vw,96px)!important;}
+}
+@media (max-width:620px){
+  html body main .smart-quote-layout .category-card{
+    display:block!important;
+    position:relative!important;
+    padding:18px 18px 18px 50px!important;
+  }
+  html body main .smart-quote-layout .category-card>input[type="radio"],
+  html body main .smart-quote-layout .category-card>input[type="checkbox"]{
+    position:absolute!important;
+    left:18px!important;
+    top:20px!important;
+    margin:0!important;
+  }
+  html body main .smart-quote-layout .category-card>span{
+    display:block!important;
+    width:100%!important;
+    max-width:none!important;
+  }
+  html body main .smart-quote-layout .category-card>span>.info-tip{
+    position:static!important;
+    display:grid!important;
+    float:right!important;
+    margin:0 0 8px 12px!important;
+  }
+}
