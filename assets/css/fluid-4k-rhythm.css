@@ -1253,3 +1253,24 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     visibility:hidden!important;
   }
 }
+
+
+/* FOOTER-DESKTOP-SEPARATOR-AND-MEMBERSHIP-NOWRAP-20260919 */
+/* Align the section separator with the approved compact footer rhythm and
+   keep the two long membership labels intact in every language. */
+@media (min-width:1180px){
+  html body .site-footer .footer-grid::before{
+    transform:translateY(-28px)!important;
+  }
+  html body .site-footer .footer-grid>details[data-memberships-footer] li:nth-child(4)>a,
+  html body .site-footer .footer-grid>details[data-memberships-footer] li:nth-child(5)>a{
+    display:inline-block!important;
+    max-inline-size:none!important;
+    white-space:nowrap!important;
+    word-break:keep-all!important;
+    overflow-wrap:normal!important;
+    hyphens:none!important;
+    font-size:clamp(.64rem,.56vw,.76rem)!important;
+    letter-spacing:-.012em!important;
+  }
+}
