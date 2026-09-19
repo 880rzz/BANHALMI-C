@@ -1300,7 +1300,7 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   }
   html body .site-footer details.footer-accordion>summary{
     display:block!important;
-    min-block-size:32px!important;
+    min-block-size:44px!important;
     line-height:1.25!important;
   }
 }
