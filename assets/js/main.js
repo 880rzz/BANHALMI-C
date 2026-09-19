@@ -65,8 +65,23 @@
   if (footerAccordions.length) {
     var footerDesktopQuery = window.matchMedia("(min-width: 1180px)");
     var syncFooterAccordions = function () {
-      footerAccordions.forEach(function (details) { details.open = footerDesktopQuery.matches; });
+      footerAccordions.forEach(function (details) {
+        details.open = footerDesktopQuery.matches;
+        var list = details.querySelector("ul");
+        if (list) {
+          list.style.setProperty("display", footerDesktopQuery.matches ? "block" : "none", "important");
+        }
+      });
     };
+    footerAccordions.forEach(function (details) {
+      var summary = details.querySelector("summary");
+      if (summary) summary.addEventListener("click", function () {
+        window.requestAnimationFrame(function () {
+          var list = details.querySelector("ul");
+          if (list) list.style.setProperty("display", details.open ? "block" : "none", "important");
+        });
+      });
+    });
     syncFooterAccordions();
     if (typeof footerDesktopQuery.addEventListener === "function") {
       footerDesktopQuery.addEventListener("change", syncFooterAccordions);
