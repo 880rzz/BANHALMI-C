@@ -1192,3 +1192,11 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     margin:0 0 8px 12px!important;
   }
 }
+
+
+/* FINAL-SECTION-RHYTHM-CLOSURE-20260919G */
+@media (min-width:621px){
+  html body main .service-gallery-section,
+  html body main>section[data-surface="white"]:not(.hero){padding-bottom:0!important;}
+  html body main .executive-positioning-section{padding-bottom:96px!important;}
+}
