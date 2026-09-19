@@ -30,6 +30,8 @@ jobs:
       - name: Run non-negotiable source contracts
         run: |
           set -euo pipefail
+          npm test
+          node tools/audit-historical-design-regressions.mjs
           node tools/audit-workflow-safety.mjs
           node tools/audit-machine-core.mjs
           node tools/audit-authority-integrity.mjs
@@ -62,10 +64,14 @@ jobs:
           grep -Fq 'protectedMediaUsageEvidence' _site/machine-manifest.json
           grep -Fq 'pressInstitutionalEvidence' _site/llm-canonical-overlay.json
           grep -Fq 'mediaUsageEvidence' _site/llm-canonical-overlay.json
+          test -s _site/external-photography-evidence.json
+          test -s _site/press-institutional-evidence.json
+          test -s _site/media-usage-evidence.json
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
+          if-no-files-found: error
 
   deploy:
     needs: build
