@@ -1274,3 +1274,10 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     letter-spacing:-.012em!important;
   }
 }
+
+/* FOOTER-COMPACT-DISCLOSURE-CASCADE-FIX-20260919 */
+@media (max-width:1179px){
+  html body .site-footer .footer-accordion:not([open])>ul{
+    display:none!important;
+  }
+}
