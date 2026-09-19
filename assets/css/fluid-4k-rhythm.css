@@ -362,7 +362,14 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
    Removes the remaining visual seams and replaces competing footer layouts
    with one explicit information grid. */
 html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
-  background:#f5f5f7!important;
+  background:#fff!important;
+}
+@media (max-width:1024px){
+  html body .site-header .brand{
+    display:inline-flex!important;
+    align-items:center!important;
+    min-height:44px!important;
+  }
 }
 html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signature-line{
   color:#9a7419!important;
