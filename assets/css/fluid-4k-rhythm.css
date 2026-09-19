@@ -1217,6 +1217,8 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
 /* Closed disclosure lists must remain out of layout below the desktop footer breakpoint.
    This final rule intentionally outranks legacy and artifact-hardening layers. */
 @media (max-width:1179px){
-  html body .site-footer .footer-accordion:not([open])>ul{display:none!important;}
+  /* The compact footer is collapsed by layout, regardless of stale open state.
+     Runtime click handling may re-enable one list with inline !important. */
+  html body .site-footer .footer-accordion>ul{display:none!important;}
   html body .site-footer .footer-accordion>summary{pointer-events:auto!important;cursor:pointer!important;}
 }
