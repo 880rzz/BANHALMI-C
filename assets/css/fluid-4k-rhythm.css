@@ -401,13 +401,10 @@ html body .site-footer .footer-grid{
   align-content:start!important;
 }
 /* FOOTER-TABLET-DISCLOSURE-ROOT-CAUSE-20260919
-   Closed footer accordions must remain collapsed below the desktop contract.
-   The previous global rule expanded all five lists at 621–899px and made the
-   tablet footer 856–939px tall. */
+   Closed footer accordions remain collapsed below the desktop contract.
+   The former min-width:900px expansion was removed; compact disclosure is
+   owned only by the final max-width:1179px authority below. */
 @media (min-width:900px){
-  html body .site-footer .footer-accordion:not([open])>ul{
-    display:block!important;
-  }
   html body .site-footer{
     padding:clamp(32px,3.2vw,48px) 0 22px!important;
   }
