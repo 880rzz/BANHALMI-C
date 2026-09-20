@@ -1381,3 +1381,183 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     row-gap:14px!important;
   }
 }
+
+
+/* FINAL-FOOTER-MEGA-AUTHORITY-20260920
+   One final cascade authority for footer containment, studio separation,
+   equal mega-menu typography and full-screen mobile navigation. */
+html body .site-footer{
+  inline-size:100%!important;
+  max-inline-size:100%!important;
+  overflow-x:clip!important;
+  box-sizing:border-box!important;
+}
+html body .site-footer>.wrap{
+  inline-size:min(calc(100% - 88px),1760px)!important;
+  max-inline-size:1760px!important;
+  min-inline-size:0!important;
+  margin-inline:auto!important;
+  box-sizing:border-box!important;
+}
+html body .site-footer .footer-grid,
+html body .site-footer .footer-bottom{
+  min-inline-size:0!important;
+  max-inline-size:100%!important;
+  box-sizing:border-box!important;
+}
+html body .site-footer .footer-bottom{
+  border-top:1px solid rgba(245,245,247,.18)!important;
+}
+html body .site-footer .footer-bottom>span:first-child{
+  font-size:0!important;
+  white-space:nowrap!important;
+}
+html body .site-footer .footer-bottom>span:first-child::after{
+  font-size:13px;
+  letter-spacing:.01em;
+  content:"BANHALMI · since 1999";
+}
+html[lang^="hu"] body .site-footer .footer-bottom>span:first-child::after{
+  content:"BANHALMI · 1999 óta";
+}
+html[lang^="de"] body .site-footer .footer-bottom>span:first-child::after{
+  content:"BANHALMI · seit 1999";
+}
+@media (min-width:1180px){
+  html body .site-footer .footer-grid{
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    grid-template-rows:auto auto!important;
+    column-gap:20px!important;
+    row-gap:30px!important;
+    align-items:start!important;
+  }
+  html body .site-footer .footer-brand-col{
+    grid-column:1 / span 3!important;
+    grid-row:1!important;
+    min-inline-size:0!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(1){
+    grid-column:4 / span 3!important;
+    grid-row:1!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(2){
+    grid-column:7 / span 3!important;
+    grid-row:1!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){
+    grid-column:10 / span 3!important;
+    grid-row:1!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion[data-social-footer]{
+    grid-column:5 / span 2!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]{
+    grid-column:7 / span 4!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-contact-list){
+    grid-column:1 / span 4!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    grid-column:11 / span 2!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-contact-list{
+    grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)!important;
+    column-gap:18px!important;
+    min-inline-size:0!important;
+  }
+  html body .site-footer .footer-contact-list .footer-studio{
+    min-inline-size:0!important;
+  }
+  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{
+    padding-inline-start:28px!important;
+    border-inline-start:1px solid rgba(245,245,247,.2)!important;
+  }
+  html body .site-footer .footer-contact-list .footer-studio-link,
+  html body .site-footer .footer-contact-list .footer-address,
+  html body .site-footer .footer-contact-list .footer-phone{
+    white-space:nowrap!important;
+    overflow-wrap:normal!important;
+    word-break:keep-all!important;
+  }
+  html body .site-footer .footer-accordion[data-memberships-footer] li>a{
+    white-space:nowrap!important;
+    overflow-wrap:normal!important;
+    word-break:keep-all!important;
+    letter-spacing:-.012em!important;
+  }
+}
+html body .bn-mega-panel{
+  width:min(1760px,calc(100vw - 80px))!important;
+  max-width:1760px!important;
+  min-width:0!important;
+  margin-inline:auto!important;
+  box-sizing:border-box!important;
+  overflow-x:clip!important;
+}
+html body .bn-mega-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:clamp(28px,3.4vw,64px)!important;
+}
+html body .bn-mega-column,
+html body .bn-mega-item,
+html body .bn-mega-link,
+html body .bn-mega-desc{
+  min-width:0!important;
+  box-sizing:border-box!important;
+}
+html body .bn-mega-section-head span,
+html body .bn-mega-link{
+  font-size:clamp(.92rem,1vw,1.08rem)!important;
+  line-height:1.25!important;
+  letter-spacing:.01em!important;
+}
+html body .bn-mega-desc{
+  margin:.28rem 0 0!important;
+  font-size:clamp(.72rem,.72vw,.84rem)!important;
+  line-height:1.45!important;
+  color:rgba(245,245,247,.68)!important;
+}
+html body .bn-mega-item{
+  margin-block:.7rem!important;
+}
+@media (max-width:720px){
+  html body .site-footer>.wrap{
+    inline-size:calc(100% - 40px)!important;
+  }
+  html body .site-footer .footer-bottom>span:first-child{
+    white-space:normal!important;
+  }
+  html body .bn-mega-menu{
+    position:fixed!important;
+    inset:0!important;
+    width:100vw!important;
+    height:100dvh!important;
+    min-height:100dvh!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    overscroll-behavior:contain!important;
+  }
+  html body .bn-mega-panel{
+    width:100%!important;
+    max-width:none!important;
+    min-height:100dvh!important;
+    padding:76px 24px 32px!important;
+    overflow:visible!important;
+  }
+  html body .bn-mega-grid{
+    grid-template-columns:1fr!important;
+    gap:18px!important;
+  }
+  html body .bn-mega-section-head span,
+  html body .bn-mega-link{
+    font-size:1rem!important;
+  }
+  html body .bn-mega-desc{
+    font-size:.78rem!important;
+    line-height:1.45!important;
+  }
+}
