@@ -86,7 +86,7 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     overflow:clip;
   }
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
-    min-height:var(--desktop-hero-min)!important;
+    min-height:var(--homepage-hero-media-height)!important;
     padding:0!important;
     background:#0a0a0a!important;
   }
@@ -94,7 +94,7 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
     width:100%!important;
     max-width:none!important;
-    height:var(--desktop-hero-min)!important;
+    height:var(--homepage-hero-media-height)!important;
     min-height:0!important;
     margin:0!important;
   }
@@ -102,7 +102,7 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure picture>img,
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
     width:100%!important;
-    height:var(--desktop-hero-min)!important;
+    height:var(--homepage-hero-media-height)!important;
     min-height:0!important;
     max-height:none!important;
   }
