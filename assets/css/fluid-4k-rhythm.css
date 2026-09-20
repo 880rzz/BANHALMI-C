@@ -23,6 +23,67 @@
   html body .bn-mega-panel{padding-top:48px!important;padding-bottom:28px!important;padding-left:64px!important;padding-right:64px!important;column-gap:48px!important}
   html body main .reviews-drawer-section{padding-top:clamp(52px,4vw,68px)!important;padding-bottom:clamp(52px,4vw,68px)!important}
 }
+
+/* FOOTER-OVERFLOW-ROOT-FIX-20260920
+   Keep the footer inside the viewport and give the long membership labels
+   enough grid width without allowing implicit track expansion. */
+@media (min-width:1180px){
+  html body .site-footer{
+    box-sizing:border-box!important;
+    inline-size:100%!important;
+    max-inline-size:100%!important;
+    overflow-x:clip!important;
+  }
+  html body .site-footer>.wrap{
+    box-sizing:border-box!important;
+    inline-size:min(calc(100% - 64px),1760px)!important;
+    max-inline-size:1760px!important;
+    margin-inline:auto!important;
+  }
+  html body .site-footer .footer-grid{
+    box-sizing:border-box!important;
+    min-inline-size:0!important;
+    max-inline-size:100%!important;
+  }
+  html body .site-footer .footer-bottom{
+    min-inline-size:0!important;
+    max-inline-size:100%!important;
+    flex-wrap:wrap!important;
+  }
+  html body .site-footer .footer-bottom>span{max-inline-size:100%!important;}
+}
+@media (min-width:1440px){
+  html body .site-footer .footer-grid>div:has(.footer-contact-list){
+    grid-column:1 / span 4!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(4){
+    grid-column:5 / span 2!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(5){
+    grid-column:7 / span 4!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    grid-column:11 / span 2!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-contact-list{column-gap:20px!important;}
+  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{
+    padding-left:20px!important;
+  }
+  html body .site-footer .footer-accordion li>a,
+  html body .site-footer .footer-accordion li{
+    min-inline-size:0!important;
+    max-inline-size:100%!important;
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+    hyphens:none!important;
+  }
+}
+
 @media (min-width:1600px){html body main .collage-gallery{column-count:5!important}}
 @media (min-width:2200px){html body main .collage-gallery{column-count:6!important}}
 
@@ -734,5 +795,75 @@ html body .site-footer .footer-accordion:not([open])>ul{
     overflow-wrap:normal!important;
     font-size:clamp(.72rem,.64vw,.84rem)!important;
     line-height:1.3!important;
+  }
+}
+
+/* FOOTER-OVERFLOW-FINAL-AUTHORITY-20260920 */
+@media (min-width:1180px){
+  html body .site-footer{
+    box-sizing:border-box!important;
+    inline-size:100%!important;
+    max-inline-size:100%!important;
+    overflow-x:clip!important;
+  }
+  html body .site-footer>.wrap{
+    box-sizing:border-box!important;
+    inline-size:min(calc(100% - 64px),1760px)!important;
+    max-inline-size:1760px!important;
+    margin-inline:auto!important;
+  }
+  html body .site-footer .footer-grid{
+    box-sizing:border-box!important;
+    min-inline-size:0!important;
+    max-inline-size:100%!important;
+  }
+  html body .site-footer .footer-bottom{
+    min-inline-size:0!important;
+    max-inline-size:100%!important;
+    flex-wrap:wrap!important;
+  }
+  html body .site-footer .footer-bottom>span{max-inline-size:100%!important;}
+}
+@media (min-width:1440px){
+  html body .site-footer .footer-grid>div:has(.footer-contact-list){
+    grid-column:1 / span 4!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(4){
+    grid-column:5 / span 2!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(5){
+    grid-column:7 / span 4!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    grid-column:11 / span 2!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-contact-list{column-gap:20px!important;}
+  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{
+    padding-left:20px!important;
+  }
+  html body .site-footer .footer-accordion li>a,
+  html body .site-footer .footer-accordion li{
+    min-inline-size:0!important;
+    max-inline-size:100%!important;
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+    hyphens:none!important;
+  }
+}
+/* ROOT-HERO-PANEL-EQUALIZATION-20260920
+   Keep desktop homepage visual and copy panels on the same measured block
+   size so padding cannot expand the copy panel beyond the hero contract. */
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    block-size:var(--desktop-hero-min)!important;
+    min-block-size:var(--desktop-hero-min)!important;
+    max-block-size:var(--desktop-hero-min)!important;
+    box-sizing:border-box!important;
   }
 }
