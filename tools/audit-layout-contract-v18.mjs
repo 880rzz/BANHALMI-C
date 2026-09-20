@@ -27,7 +27,7 @@ const heroV28=fluid.split('HOMEPAGE-HERO-HEIGHT-V28-20260917')[1]||'';
 must(heroV28.includes('--homepage-hero-media-height:39.5604vw'),'tablet homepage hero must be exactly 15% shorter than the 2400x1117 source ratio');
 must(heroV28.includes('--homepage-hero-media-height:clamp(629px,35.7vw,748px)'),'desktop homepage hero must be exactly 15% shorter than the established 740/42vw/880 geometry');
 must(heroV28.includes('--homepage-hero-media-height:561px'),'short-height desktop homepage hero must be exactly 15% shorter than 660px');
-must(!heroV28.includes('>.hero-copy-only'),'V28 must shorten only homepage image/video media, not the following copy panel');
+must(heroV28.includes('>.hero-copy-only'),'V28 must keep the desktop homepage image and copy panels equal in measured height');
 const heroAuthority=authority.visualGeometry?.homepageHeroMedia||{};
 must(heroAuthority.reductionFraction===0.15,'design authority must record the 15% homepage hero media reduction');
 must(heroAuthority.tabletMinPx===621&&heroAuthority.tabletMaxPx===1179,'design authority tablet hero range mismatch');
@@ -35,7 +35,7 @@ must(heroAuthority.desktopMinPx===1180,'design authority desktop hero breakpoint
 must(heroAuthority.tabletHeightVw===39.5604,'design authority tablet hero height mismatch');
 must(heroAuthority.desktopHeight==='clamp(629px,35.7vw,748px)','design authority desktop hero height mismatch');
 must(heroAuthority.shortDesktopHeightPx===561,'design authority short-height desktop hero mismatch');
-must(heroAuthority.copyPanelGeometryUnchanged===true,'design authority must preserve homepage copy-panel geometry');
+must(heroAuthority.copyPanelMatchesMediaHeight===true,'design authority must keep the desktop homepage copy panel equal to the media height');
 for(const rel of ['index.html','hu/index.html','de-at/index.html']){
   const html=fs.readFileSync(rel,'utf8');
   must(html.includes('data-homepage-redesign="stage76"'),`${rel}: homepage geometry scope missing`);

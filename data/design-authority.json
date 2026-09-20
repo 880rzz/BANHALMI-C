@@ -167,7 +167,8 @@
       "desktopHeight": "clamp(629px,35.7vw,748px)",
       "shortDesktopMaxViewportHeightPx": 760,
       "shortDesktopHeightPx": 561,
-      "copyPanelGeometryUnchanged": true,
+      "copyPanelGeometryUnchanged": false,
+      "copyPanelMatchesMediaHeight": true,
       "languages": [
         "en",
         "de-AT",

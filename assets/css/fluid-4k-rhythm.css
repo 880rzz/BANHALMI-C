@@ -518,21 +518,6 @@ html body .site-footer .footer-grid{
 
 }
 
-/* ROOT-HERO-PANEL-EQUALIZATION-20260920
-   The V23 visual/copy override must keep both desktop hero panels on the
-   same measured block size. Box sizing prevents copy padding from expanding
-   the panel beyond the shared hero contract. */
-@media (min-width:1180px){
-  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
-  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
-    block-size:var(--desktop-hero-min)!important;
-    min-block-size:var(--desktop-hero-min)!important;
-    max-block-size:var(--desktop-hero-min)!important;
-    box-sizing:border-box!important;
-  }
-}
-
-
 /* HOMEPAGE-HERO-HEIGHT-V28-20260917
    Trilingual homepage media only: 15% shorter than the established image/video
    field on tablet and desktop. The following copy section keeps its own rhythm. */
@@ -574,6 +559,19 @@ html body .site-footer .footer-grid{
 @media (min-width:1180px) and (max-height:760px){
   html body main[data-homepage-redesign="stage76"]{
     --homepage-hero-media-height:561px;
+  }
+}
+
+/* ROOT-HERO-PANEL-EQUALIZATION-20260920
+   V28 is the final owner of the desktop homepage hero height, so both grid
+   panels must consume that same value after V28 has resolved its breakpoint. */
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    block-size:var(--homepage-hero-media-height)!important;
+    min-block-size:var(--homepage-hero-media-height)!important;
+    max-block-size:var(--homepage-hero-media-height)!important;
+    box-sizing:border-box!important;
   }
 }
 
