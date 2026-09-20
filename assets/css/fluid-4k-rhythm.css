@@ -1560,3 +1560,30 @@ html body .bn-mega-item{
     line-height:1.45!important;
   }
 }
+
+
+/* ROOT-CAUSE-VISUAL-CONTRACT-CLOSURE-20260920
+   The approved visual contract measures top-level colored hero panels as viewport
+   surfaces. Keep the split hero media column narrow while extending only its
+   background surface to the viewport edge; restore the minimum vertical rhythm
+   of colored gallery sections at tablet/desktop widths. */
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
+    position:relative!important;
+    isolation:isolate!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0 auto 0 0!important;
+    width:100vw!important;
+    background:#0a0a0a!important;
+    z-index:-1!important;
+    pointer-events:none!important;
+  }
+}
+@media (min-width:761px) and (max-width:1179px){
+  html body main .service-gallery-section{
+    padding-bottom:56px!important;
+  }
+}
