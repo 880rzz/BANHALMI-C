@@ -1655,3 +1655,18 @@ html body .bn-mega-item{
     padding-top:18px!important;
   }
 }
+
+/* LIGHTHOUSE-DESKTOP-PORTRAIT-CLOSURE-20260920
+   Keep visible footer links comfortably targetable and prevent masonry/gallery
+   images from selecting a source materially wider than their desktop column. */
+html body .site-footer .footer-accordion li>a{
+  display:inline-flex!important;
+  align-items:center!important;
+  min-block-size:24px!important;
+  line-height:1.25!important;
+}
+@media (min-width:1180px){
+  html body main .collage-gallery>figure.editorial-image img{
+    max-inline-size:100%!important;
+  }
+}
