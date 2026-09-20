@@ -4348,8 +4348,6 @@ body.whatsapp-cookie-visible .whatsapp-contact{bottom:max(112px,calc(env(safe-ar
   }
 }
 /* EXECUTIVE-WHATSAPP-CONTACT-V1:END */
-/* APPLE-RESPONSIVE-CONTRACT-V1:END */
-
 /* CLS-ROOT-CAUSE-CLOSURE-20260920
    Cookie consent must not animate the fixed contact affordance during first paint.
    The previous bottom offset moved a visible WhatsApp control and produced a
@@ -4365,3 +4363,5 @@ body.whatsapp-cookie-visible .whatsapp-contact{
     bottom:max(14px,env(safe-area-inset-bottom))!important;
   }
 }
+
+/* APPLE-RESPONSIVE-CONTRACT-V1:END */
