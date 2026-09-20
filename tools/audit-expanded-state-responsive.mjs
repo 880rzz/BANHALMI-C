@@ -25,7 +25,7 @@ for(const width of widths){
     await page.evaluate(()=>{for(const d of document.querySelectorAll('main details,footer details'))d.open=true;});
     await page.waitForTimeout(100);
     const issues=await page.evaluate(()=>{
-      const out=[];const w=innerWidth;const px=v=>parseFloat(v)||0;
+      const out=[];const w=innerWidth;const px=(v,el)=>{if(!v||v==='none')return 0;const n=parseFloat(v);if(!Number.isFinite(n))return 0;if(v.trim().endsWith('%')){const parent=el?.parentElement;const pr=parent?.getBoundingClientRect();return pr&&pr.width>0?n*pr.width/100:n}return n};
       const visible=el=>{const s=getComputedStyle(el),r=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&Number(s.opacity)!==0&&r.width>0&&r.height>0};
       const name=el=>`${el.tagName.toLowerCase()}${el.id?'#'+el.id:''}${el.className?'.'+String(el.className).trim().replace(/\s+/g,'.').slice(0,90):''}`;
       if(document.documentElement.scrollWidth>document.documentElement.clientWidth+1)out.push(`document overflow ${document.documentElement.scrollWidth-document.documentElement.clientWidth}px`);
@@ -46,7 +46,7 @@ for(const width of widths){
           const centre=innerWidth/2,dc=(fr.left+fr.right)/2;if(Math.abs(dc-centre)>4)out.push(`${name(d)} footer disclosure off-centre by ${Math.abs(dc-centre).toFixed(1)}px`);
           for(const el of d.querySelectorAll('summary,p,div')){if(!visible(el))continue;const s=getComputedStyle(el);if((el.innerText||'').trim()&&s.textAlign!=='center'&&s.textAlign!=='start')out.push(`${name(el)} unexpected footer alignment ${s.textAlign}`);}
         }
-        if(px(fs.maxWidth)>0&&fr.width>px(fs.maxWidth)+2)out.push(`${name(d)} exceeds max-width`);
+        if(px(fs.maxWidth,d)>0&&fr.width>px(fs.maxWidth,d)+2)out.push(`${name(d)} exceeds max-width`);
       }
       return [...new Set(out)].slice(0,120);
     });
