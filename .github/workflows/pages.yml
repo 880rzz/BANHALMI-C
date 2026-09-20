@@ -6,6 +6,7 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # PR synchronize must re-run the complete release gate after every source-authority change.
 
 permissions:
   contents: read
