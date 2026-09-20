@@ -507,7 +507,8 @@ html body .site-footer .footer-grid{
   html body main[data-homepage-redesign="stage76"]{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(560px,680px)!important;align-items:stretch!important;}
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only{grid-column:1!important;grid-row:1!important;min-height:clamp(740px,42vw,880px)!important;}
   html body main[data-homepage-redesign="stage76"]>.hero-copy-only{grid-column:2!important;grid-row:1!important;min-height:clamp(740px,42vw,880px)!important;}
-  html body main[data-homepage-redesign="stage76"]>section:not(.hero-visual-only):not(.hero-copy-only) .wrap{width:min(100%,1280px)!important;max-width:1280px!important;margin-inline:auto!important;}
+  html body main[data-homepage-redesign="stage76"]>section:not(.hero-visual-only):not(.hero-copy-only) .wrap:not(:has(> .service-process-grid,> .partner-grid,> .partner-grid-memberships,> .archive-cards,> .two-reading-grid,> .smart-quote-layout)){width:min(100%,1280px)!important;max-width:1280px!important;margin-inline:auto!important;}
+  html body main[data-homepage-redesign="stage76"]>section:not(.hero-visual-only):not(.hero-copy-only) .wrap:has(> .service-process-grid,> .partner-grid,> .partner-grid-memberships,> .archive-cards,> .two-reading-grid,> .smart-quote-layout){width:min(100%,1600px)!important;max-width:1600px!important;margin-inline:auto!important;}
 }
 
 /* HOMEPAGE-HERO-HEIGHT-V28-20260917
