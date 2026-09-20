@@ -495,6 +495,21 @@ html body .site-footer .footer-grid{
   }
 }
 
+
+
+/* ROOT-VISUAL-CONTRACT-CLOSURE-20260920: final authority for homepage split geometry and tablet rhythm. */
+@media (min-width:621px) and (max-width:1179px){
+  html body main .service-gallery-section,
+  html body main>section[data-surface="white"]:not(.hero),
+  html body main .executive-positioning-section{padding-bottom:64px!important;}
+}
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(560px,680px)!important;align-items:stretch!important;}
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{grid-column:1!important;grid-row:1!important;min-height:clamp(740px,42vw,880px)!important;}
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{grid-column:2!important;grid-row:1!important;min-height:clamp(740px,42vw,880px)!important;}
+  html body main[data-homepage-redesign="stage76"]>section:not(.hero-visual-only):not(.hero-copy-only) .wrap{width:min(100%,1280px)!important;max-width:1280px!important;margin-inline:auto!important;}
+}
+
 /* HOMEPAGE-HERO-HEIGHT-V28-20260917
    Trilingual homepage media only: 15% shorter than the established image/video
    field on tablet and desktop. The following copy section keeps its own rhythm. */
@@ -1343,18 +1358,4 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     column-gap:14px!important;
     row-gap:14px!important;
   }
-}
-
-
-/* ROOT-VISUAL-CONTRACT-CLOSURE-20260920: final authority for homepage split geometry and tablet rhythm. */
-@media (min-width:621px) and (max-width:1179px){
-  html body main .service-gallery-section,
-  html body main>section[data-surface="white"]:not(.hero),
-  html body main .executive-positioning-section{padding-bottom:64px!important;}
-}
-@media (min-width:1180px){
-  html body main[data-homepage-redesign="stage76"]{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(560px,680px)!important;align-items:stretch!important;}
-  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{grid-column:1!important;grid-row:1!important;min-height:clamp(740px,42vw,880px)!important;}
-  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{grid-column:2!important;grid-row:1!important;min-height:clamp(740px,42vw,880px)!important;}
-  html body main[data-homepage-redesign="stage76"]>section:not(.hero-visual-only):not(.hero-copy-only) .wrap{width:min(100%,1280px)!important;max-width:1280px!important;margin-inline:auto!important;}
 }
