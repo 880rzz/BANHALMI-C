@@ -61,6 +61,22 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
 
 /* FLUID-4K-RHYTHM-20260914:END */
 
+
+
+/* ROOT-HERO-PANEL-EQUALIZATION-20260920
+   The V23 visual/copy override must keep both desktop hero panels on the
+   same measured block size. Box sizing prevents copy padding from expanding
+   the panel beyond the shared hero contract. */
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    block-size:var(--desktop-hero-min)!important;
+    min-block-size:var(--desktop-hero-min)!important;
+    max-block-size:var(--desktop-hero-min)!important;
+    box-sizing:border-box!important;
+  }
+}
+
 /* HOMEPAGE-HERO-V23-20260917
    The portrait and its motion layer form one uninterrupted, full-width hero.
    The signature remains readable on the photograph in the brand gold. */
