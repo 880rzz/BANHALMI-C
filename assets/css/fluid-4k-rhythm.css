@@ -1210,6 +1210,13 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
 }
 
 
+/* ROOT-LAYOUT-CLOSURE-20260920: compact sections must not leave audit-visible trailing void. */
+@media (min-width:621px){
+  html body main .service-gallery-section,
+  html body main>section[data-surface="white"]:not(.hero),
+  html body main .executive-positioning-section{padding-bottom:clamp(40px,4vw,56px)!important;}
+}
+
 /* FOOTER-TABLET-DISCLOSURE-FAIL-CLOSED-20260919 */
 /* Closed disclosure lists must remain out of layout below the desktop footer breakpoint.
    This final rule intentionally outranks legacy and artifact-hardening layers. */
