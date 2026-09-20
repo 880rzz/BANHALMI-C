@@ -1632,3 +1632,26 @@ html body .bn-mega-item{
     padding-bottom:32px!important;
   }
 }
+
+
+/* LIVE-PIXEL-GEOMETRY-FINAL-CLOSURE-20260920 */
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
+    align-self:start!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure picture,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure picture>img,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
+    align-self:start!important;
+    height:clamp(629px,35.7vw,748px)!important;
+    min-height:0!important;
+    max-height:clamp(629px,35.7vw,748px)!important;
+  }
+}
+@media (min-width:861px){
+  html body .bn-mega-panel{
+    padding-top:18px!important;
+  }
+}
