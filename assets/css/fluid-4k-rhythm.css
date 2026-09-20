@@ -1595,3 +1595,16 @@ html body .bn-mega-item{
     padding-bottom:56px!important;
   }
 }
+
+
+/* EXPANDED-STATE-FOOTER-CONTAINMENT-CLOSURE-20260920 */
+@media (max-width:1179px){
+  html body .site-footer details.footer-accordion,
+  html body .site-footer .footer-grid>details.footer-accordion{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    max-inline-size:100%!important;
+    box-sizing:border-box!important;
+  }
+}
