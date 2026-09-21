@@ -21,8 +21,9 @@ const quoteMainScriptRe = /<script[^>]*\bsrc="(\/assets\/js\/main\.js\?v=[^\"]+)
 const megaMenuScriptRe = /<script data-banhalmi-mega-menu="" defer="" src="\/assets\/js\/mega-menu\.js\?v=[^\"]+"><\/script>/g;
 const quotePdfScriptRe = /<script([^>]*?)src="(\/assets\/js\/quote-pdf\.js[^\"]*)"([^>]*)><\/script>/g;
 
-const asyncStyle = '<link rel="preload" as="style" href="$1"/><link rel="stylesheet" href="$1" media="print" onload="this.media=\'all\';this.onload=null"/><noscript><link rel="stylesheet" href="$1"/></noscript>';
-const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27';
+const synchronousStyle = '<link rel="stylesheet" href="$1"/>';
+const deferredSiteStyleRe = /<link rel="preload" as="style" href="(\/assets\/css\/site\.css[^"]*)"\/><link rel="stylesheet" href="\1" media="print" onload="this\.media='all';this\.onload=null"\/><noscript><link rel="stylesheet" href="\1"\/><\/noscript>/g;
+const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28';
 const fluidRhythmStyle = `<link rel="stylesheet" href="${fluidRhythmHref}" data-fluid-4k-rhythm=""/>`;
 const fluidRhythmLinkRe = /<link\s+rel="stylesheet"\s+href="\/assets\/css\/fluid-4k-rhythm\.css[^\"]*"\s+data-fluid-4k-rhythm=""\s*\/>/g;
 
@@ -72,10 +73,12 @@ for (const file of htmlFiles) {
 
   html = renderExecutivePositioningCopy(rel, html);
 
-  /* The async stylesheet conversion must be idempotent: a later run must not
-     rewrite the <noscript> fallback into nested preload/stylesheet blocks. */
-  if (!isQuote && !isHome && !html.includes('media="print" onload="this.media=\'all\';this.onload=null"')) {
-    html = html.replace(stylesheetRe, asyncStyle);
+  /* Layout CSS is intentionally render-blocking. Deferring the canonical
+     stylesheet painted service pages without their base geometry and then
+     reflowed the entire document when media changed from print to all. */
+  html = html.replace(deferredSiteStyleRe, synchronousStyle);
+  if (/href="\/assets\/css\/site\.css[^"]*"[^>]*media="print"/.test(html)) {
+    throw new Error(`Deferred canonical stylesheet remained in ${rel}`);
   }
 
   /* The geometry stylesheet must be parser-discovered in <head> on every production page.

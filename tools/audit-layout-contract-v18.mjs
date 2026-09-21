@@ -9,8 +9,8 @@ const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
-must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27'),'visual repair cache token missing');
-must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27'),'production artifact must parser-discover the same canonical geometry CSS token');
+must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'render-stability cache token missing');
+must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'production artifact must parser-discover the same canonical geometry CSS token');
 must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
 must(boot.includes("window.matchMedia('(min-width:1180px)')"),'desktop footer disclosure breakpoint missing');
 must(boot.includes('details.open = query.matches;'),'footer disclosure state must track viewport');
