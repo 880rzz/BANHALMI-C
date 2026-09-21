@@ -69,3 +69,26 @@ test('first mobile tap is queued while mega-menu core loads', async ({ page }) =
   await expect(menu).toBeVisible({ timeout: 3000 });
   await expect(button).toHaveAttribute('aria-expanded', 'true');
 });
+
+
+test('review drawer exposes a visible disclosure chevron', async ({ page }) => {
+  await page.goto('/portrait/', { waitUntil: 'domcontentloaded' });
+  const summary = page.locator('details.review-drawer > summary').first();
+  await expect(summary).toBeVisible();
+  const pseudo = await summary.evaluate(el => {
+    const s = getComputedStyle(el, '::after');
+    return { content:s.content, width:s.width, height:s.height, display:s.display };
+  });
+  expect(pseudo.display).not.toBe('none');
+  expect(pseudo.width).not.toBe('0px');
+  expect(pseudo.height).not.toBe('0px');
+});
+
+test('legal and contact card stacks keep visible separation', async ({ page }) => {
+  await page.goto('/faq/', { waitUntil: 'domcontentloaded' });
+  const legalGap = await page.locator('.legal-navigation .service-grid').evaluate(el => getComputedStyle(el).rowGap);
+  expect(parseFloat(legalGap)).toBeGreaterThanOrEqual(20);
+  await page.goto('/contact/', { waitUntil: 'domcontentloaded' });
+  const contactGap = await page.locator('.contact-routing .service-grid').evaluate(el => getComputedStyle(el).rowGap);
+  expect(parseFloat(contactGap)).toBeGreaterThanOrEqual(20);
+});
