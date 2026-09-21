@@ -56,18 +56,21 @@ test('pointer-open pricing menu never frames or auto-focuses Executive Portraits
 });
 
 
-test('first mobile tap is queued while mega-menu core loads', async ({ page }) => {
-  await page.route('**/assets/js/mega-menu-v65-base.js*', async route => {
-    await new Promise(resolve => setTimeout(resolve, 350));
-    await route.continue();
+test('first mobile tap opens immediately with single-stage menu runtime', async ({ page }) => {
+  let menuRequests = 0;
+  page.on('request', request => {
+    if (/\/assets\/js\/mega-menu(?:-v65-base)?\.js/.test(new URL(request.url()).pathname)) menuRequests += 1;
   });
   await page.goto('/', { waitUntil: 'domcontentloaded' });
   const button = page.locator('.menu-btn');
   await expect(button).toBeVisible();
+  const start = Date.now();
   await button.click();
   const menu = page.locator('#bn-mega-menu[aria-hidden="false"]');
-  await expect(menu).toBeVisible({ timeout: 3000 });
+  await expect(menu).toBeVisible({ timeout: 1000 });
+  expect(Date.now() - start).toBeLessThan(1000);
   await expect(button).toHaveAttribute('aria-expanded', 'true');
+  expect(menuRequests).toBeLessThanOrEqual(1);
 });
 
 
