@@ -2171,3 +2171,17 @@ html body .site-footer .footer-accordion li>a{
     color:#d1b451!important;
   }
 }
+
+
+/* UHD-HOMEPAGE-WRAP-BOUNDARY-20260921 */
+/* Root-cause closure for the final exhaustive design audit:
+   homepage content wraps may never exceed the canonical 1760px structured max
+   at UHD/4K widths. */
+@media (min-width:2560px){
+  html body main[data-homepage-redesign="stage76"]>section:not(.hero-visual-only):not(.hero-copy-only)>.wrap,
+  html body main[data-homepage-redesign="stage76"]>section:not(.hero-visual-only):not(.hero-copy-only) .wrap{
+    width:min(1760px,calc(100% - 80px))!important;
+    max-width:1760px!important;
+    margin-inline:auto!important;
+  }
+}
