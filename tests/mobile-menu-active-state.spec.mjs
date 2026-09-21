@@ -54,3 +54,18 @@ test('pointer-open pricing menu never frames or auto-focuses Executive Portraits
   expect(s.boxShadow).toBe('none');
   expect(s.outlineStyle).toBe('none');
 });
+
+
+test('first mobile tap is queued while mega-menu core loads', async ({ page }) => {
+  await page.route('**/assets/js/mega-menu-v65-base.js*', async route => {
+    await new Promise(resolve => setTimeout(resolve, 350));
+    await route.continue();
+  });
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
+  const button = page.locator('.menu-btn');
+  await expect(button).toBeVisible();
+  await button.click();
+  const menu = page.locator('#bn-mega-menu[aria-hidden="false"]');
+  await expect(menu).toBeVisible({ timeout: 3000 });
+  await expect(button).toHaveAttribute('aria-expanded', 'true');
+});

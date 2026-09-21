@@ -2063,23 +2063,28 @@ html body .site-footer .footer-accordion li>a{
 
 
 /* PIXEL-GATE-CORRECTION-20260921 */
-/* Preserve the requested visual fixes while returning desktop geometry to the
-   proven production contract. The black hero bleed came from the viewport-wide
-   pseudo surface, not from the intended two-column hero itself. */
+/* Root-cause authority: homepage desktop hero is stacked, not split.
+   The former pixel-gate correction reintroduced the two-column grid and
+   overrode the approved full-width structure. Keep media full-width, place
+   copy below it, and keep the rest of the homepage in normal document flow. */
 @media (min-width:1180px){
   html body main[data-homepage-redesign="stage76"]{
-    display:grid!important;
-    grid-template-columns:minmax(0,1fr) minmax(560px,680px)!important;
-    align-items:stretch!important;
+    display:block!important;
     overflow:clip!important;
   }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    grid-column:auto!important;
+    grid-row:auto!important;
+    width:100%!important;
+    max-width:none!important;
+  }
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
-    grid-column:1!important;
-    grid-row:1!important;
-    width:auto!important;
-    min-height:var(--homepage-hero-media-height)!important;
     height:var(--homepage-hero-media-height)!important;
+    min-height:var(--homepage-hero-media-height)!important;
     max-height:var(--homepage-hero-media-height)!important;
+    padding:0!important;
+    margin:0!important;
     background:#fff!important;
   }
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only::before{
@@ -2092,14 +2097,15 @@ html body .site-footer .footer-accordion li>a{
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img,
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
     width:100%!important;
-    height:var(--homepage-hero-media-height)!important;
+    max-width:none!important;
+    height:100%!important;
     min-height:0!important;
-    max-height:var(--homepage-hero-media-height)!important;
+    max-height:none!important;
+    margin:0!important;
   }
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
-    aspect-ratio:auto!important;
-    margin:0!important;
     overflow:hidden!important;
+    background:#fff!important;
   }
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img,
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
@@ -2107,20 +2113,20 @@ html body .site-footer .footer-accordion li>a{
     object-position:center center!important;
   }
   html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
-    grid-column:2!important;
-    grid-row:1!important;
-    width:auto!important;
-    height:var(--homepage-hero-media-height)!important;
-    min-height:var(--homepage-hero-media-height)!important;
-    max-height:var(--homepage-hero-media-height)!important;
-    padding:clamp(36px,2.8vw,52px) clamp(32px,3vw,52px)!important;
-    border-left:1px solid rgba(29,29,31,.09)!important;
-    overflow:auto!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    padding:clamp(56px,4.5vw,80px) clamp(32px,6vw,96px)!important;
+    border-left:0!important;
+    border-top:0!important;
+    background:#fff!important;
+    overflow:visible!important;
   }
   html body main[data-homepage-redesign="stage76"]>.hero-copy-only>.wrap{
-    width:100%!important;
-    max-width:560px!important;
-    margin:0!important;
+    width:min(100%,900px)!important;
+    max-width:900px!important;
+    margin-inline:auto!important;
+    padding-inline:0!important;
   }
 
   html body .bn-mega-menu{
@@ -2128,7 +2134,7 @@ html body .site-footer .footer-accordion li>a{
     inset:var(--header-h,56px) 0 0!important;
     width:100vw!important;
     height:calc(100dvh - var(--header-h,56px))!important;
-    min-height:calc(100dvh - var(--header-h,56px))!important;
+    min-height:0!important;
     overflow-y:auto!important;
     overflow-x:hidden!important;
     background:#202530!important;
@@ -2139,7 +2145,7 @@ html body .site-footer .footer-accordion li>a{
     min-height:0!important;
     height:auto!important;
     margin-inline:auto!important;
-    padding:24px 0 36px!important;
+    padding:18px 0 24px!important;
     display:block!important;
   }
   html body .bn-mega-desc,
@@ -2150,8 +2156,38 @@ html body .site-footer .footer-accordion li>a{
     grid-template-columns:repeat(3,minmax(0,1fr))!important;
     gap:clamp(40px,4.2vw,72px)!important;
   }
-}
 
+  html body .site-footer{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    padding-bottom:12px!important;
+    overflow-x:clip!important;
+  }
+  html body .site-footer .footer-grid{
+    min-width:0!important;
+    max-width:100%!important;
+    grid-auto-rows:max-content!important;
+    align-content:start!important;
+    overflow:visible!important;
+  }
+  html body .site-footer .footer-bottom{
+    margin-top:16px!important;
+    padding-top:10px!important;
+  }
+  html body .site-footer .banhalmi-ecosystem{
+    margin-top:6px!important;
+    padding-top:4px!important;
+    padding-bottom:0!important;
+  }
+  html body .site-footer .footer-contact-list{
+    column-gap:clamp(28px,2.6vw,44px)!important;
+  }
+  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{
+    padding-inline-start:clamp(24px,2vw,34px)!important;
+    border-inline-start:1px solid rgba(245,245,247,.14)!important;
+  }
+}
 
 /* DESCRIPTIVE-MENU-BOUNDARY-CORRECTION-20260921 */
 @media (min-width:1180px){
@@ -2198,5 +2234,83 @@ html body .site-footer .footer-accordion li>a{
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
     width:100%!important;
     max-width:1760px!important;
+  }
+}
+
+
+/* MOBILE-ROOT-CAUSE-CLOSURE-20260921 */
+/* The source hero artwork contains a soft-grey tail below the gold sweep.
+   On mobile the full intrinsic image exposed that tail. Crop the media by the
+   same 15% visual reduction used by the responsive contract and keep the copy
+   on a white surface. The menu leaves a bottom safety zone for mobile browser
+   chrome and remains scrollable. */
+@media (max-width:620px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
+    height:39.5604vw!important;
+    min-height:39.5604vw!important;
+    max-height:39.5604vw!important;
+    padding:0!important;
+    margin:0!important;
+    background:#fff!important;
+    overflow:hidden!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    overflow:hidden!important;
+    background:#fff!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img{
+    object-fit:cover!important;
+    object-position:center top!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    margin-top:0!important;
+    padding-top:clamp(52px,14vw,68px)!important;
+    background:#fff!important;
+    border-top:0!important;
+  }
+
+  html body .bn-mega-menu{
+    inset:0 0 max(72px,env(safe-area-inset-bottom)) 0!important;
+    width:100vw!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+  }
+  html body .bn-mega-panel{
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:0!important;
+    padding:64px 18px 18px!important;
+    overflow:visible!important;
+  }
+  html body .bn-mega-column{
+    padding-block:14px 12px!important;
+  }
+  html body .bn-mega-grid{
+    gap:0!important;
+  }
+  html body .bn-mega-link{
+    min-height:36px!important;
+  }
+
+  html body .site-footer{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    padding-bottom:max(10px,env(safe-area-inset-bottom))!important;
   }
 }
