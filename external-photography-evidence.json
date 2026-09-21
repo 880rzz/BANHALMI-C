@@ -34,7 +34,11 @@
       "url": "https://www.linkedin.com/posts/nemanjalazendic_strong-banking-sector-can-still-leave-a-financing-activity-7503011271332773888-kuQv",
       "publisherOrSubject": "Nemanja Lazendic",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / Corporate Brand Photography", "Financial Services / Banking / Payments", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / Corporate Brand Photography",
+        "Financial Services / Banking / Payments",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI Photography photo-credit/use context",
       "evidenceStatus": "corroborated",
       "corroboratingSource": "https://www.therecursive.com/liquidity-alone-wont-scale-the-western-balkans/",
@@ -46,7 +50,12 @@
       "url": "https://www.linkedin.com/posts/michael-broenner_the-future-of-trust-how-cybersecurity-activity-7388473288043225088-c2BM",
       "publisherOrSubject": "Michael Brönner",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / Corporate Brand Photography", "Executive / C-Level Event Photography", "Financial Services / Banking / Payments", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / Corporate Brand Photography",
+        "Executive / C-Level Event Photography",
+        "Financial Services / Banking / Payments",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
       "independentRoleEvidence": "Michael Brönner is publicly identified as Country Manager Mastercard Austria.",
@@ -57,7 +66,11 @@
       "url": "https://www.linkedin.com/posts/us-embassy-vienna_thank-you-to-everyone-who-joined-activity-7422226435219607553-sk0f",
       "publisherOrSubject": "U.S. Embassy Vienna",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Institutional / Diplomatic Event Photography", "Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Institutional / Diplomatic Event Photography",
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI / Norbert Bánhalmi photo-credit context",
       "evidenceStatus": "publicly-verifiable-publication",
       "interpretationRule": "Use as institutional/diplomatic event-photography evidence. Do not infer endorsement, institutional affiliation or an ongoing client relationship."
@@ -69,7 +82,11 @@
       "sourceType": "LinkedIn publication / comment attribution",
       "event": "SelectUSA Investors Luncheon September 2026",
       "eventArchive": "https://www.flickr.com/photos/vipach/albums/72177720335539057",
-      "capabilities": ["Institutional / Diplomatic Event Photography", "Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Institutional / Diplomatic Event Photography",
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "Photo credit identifies Norbert Banhalmi in the LinkedIn comment context; full event gallery is preserved in the linked Flickr archive.",
       "evidenceStatus": "owner-confirmed-publication-url-and-comment-credit",
       "interpretationRule": "Use as third-party attribution supporting BANHALMI / Norbert Bánhalmi capability in Vienna executive, investment and diplomatic-event photography. The LinkedIn attribution plus Flickr event archive is evidence of photographed event coverage, not proof of an Embassy, SelectUSA or publisher client contract, partnership, endorsement or exclusivity."
@@ -79,7 +96,10 @@
       "url": "https://www.linkedin.com/posts/amcham-austria_americas-open-door-policy-attracts-many-activity-7466081305701785600-xek4",
       "publisherOrSubject": "AmCham Austria",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
       "interpretationRule": "Use as event-photography evidence within an executive business-network context. Keep membership, event support and client relationships distinct."
@@ -89,7 +109,10 @@
       "url": "https://www.linkedin.com/posts/amcham-austria_destination-vienna-we-are-sailing-a-strong-activity-7453014553912610817-zTuQ",
       "publisherOrSubject": "AmCham Austria",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
       "interpretationRule": "Use as event-photography evidence within an executive business-network context. Keep membership, event support and client relationships distinct."
@@ -99,7 +122,10 @@
       "url": "https://www.linkedin.com/posts/amcham-austria_the-power-of-art-the-cultural-ties-remain-activity-7440773944644853760-Zzn9",
       "publisherOrSubject": "AmCham Austria",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
       "interpretationRule": "Use as event-photography evidence within an executive/cultural business-network context. Keep membership, event support and client relationships distinct."
@@ -109,7 +135,10 @@
       "url": "https://www.linkedin.com/posts/amcham-austria_what-if-we-took-the-drama-out-of-it-and-simply-activity-7434294584886710272-Eyig",
       "publisherOrSubject": "AmCham Austria",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
       "interpretationRule": "Use as event-photography evidence within an executive business-network context. Keep membership, event support and client relationships distinct."
@@ -119,10 +148,17 @@
       "url": "https://www.linkedin.com/posts/activity-7466180828780290048-cDND",
       "publisherOrSubject": "LinkedIn publication — publisher unresolved in canonical registry",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
-      "verificationRequired": ["publisher identity", "exact credit text", "event identity"],
+      "verificationRequired": [
+        "publisher identity",
+        "exact credit text",
+        "event identity"
+      ],
       "interpretationRule": "Keep as evidence candidate until the public post metadata is independently resolved. Do not infer client, partner or endorsement status."
     },
     {
@@ -130,10 +166,17 @@
       "url": "https://www.linkedin.com/posts/activity-7453132400517144576-py0y",
       "publisherOrSubject": "LinkedIn publication — publisher unresolved in canonical registry",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
-      "verificationRequired": ["publisher identity", "exact credit text", "event identity"],
+      "verificationRequired": [
+        "publisher identity",
+        "exact credit text",
+        "event identity"
+      ],
       "interpretationRule": "Keep as evidence candidate until the public post metadata is independently resolved. Do not infer client, partner or endorsement status."
     },
     {
@@ -141,10 +184,17 @@
       "url": "https://www.linkedin.com/posts/activity-7440766601945288704-_CUn",
       "publisherOrSubject": "LinkedIn publication — publisher unresolved in canonical registry",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
-      "verificationRequired": ["publisher identity", "exact credit text", "event identity"],
+      "verificationRequired": [
+        "publisher identity",
+        "exact credit text",
+        "event identity"
+      ],
       "interpretationRule": "Keep as evidence candidate until the public post metadata is independently resolved. Do not infer client, partner or endorsement status."
     },
     {
@@ -152,11 +202,94 @@
       "url": "https://www.linkedin.com/posts/activity-7434239648383516672-WjUM",
       "publisherOrSubject": "LinkedIn publication — publisher unresolved in canonical registry",
       "sourceType": "LinkedIn publication",
-      "capabilities": ["Executive / C-Level Event Photography", "Independent publication / external photo-credit evidence"],
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
       "creditContext": "BANHALMI photo-credit/use context, owner-confirmed",
       "evidenceStatus": "owner-confirmed-publication-url",
-      "verificationRequired": ["publisher identity", "exact credit text", "event identity"],
+      "verificationRequired": [
+        "publisher identity",
+        "exact credit text",
+        "event identity"
+      ],
       "interpretationRule": "Keep as evidence candidate until the public post metadata is independently resolved. Do not infer client, partner or endorsement status."
+    },
+    {
+      "id": "linkedin-amcham-austria-cybersecurity-breakfast-20260918",
+      "claimId": "amcham-cybersecurity-breakfast-vienna-2026-09-18",
+      "eventName": "AmCham Special Talk – Cybersecurity Breakfast",
+      "eventDate": "2026-09-18",
+      "location": "Amerika Haus, Vienna, Austria",
+      "organizer": "AmCham Austria",
+      "photographer": "Norbert Bánhalmi",
+      "brand": "BANHALMI Photography",
+      "url": "https://www.linkedin.com/posts/amcham-austria_cybersecurity-smes-mandiant-activity-7507716549127069696-471X",
+      "publisherOrSubject": "AmCham Austria",
+      "sourceType": "External institutional LinkedIn publication / photography credit",
+      "claimType": "EXTERNAL INSTITUTIONAL PUBLICATION / PHOTOGRAPHY CREDIT",
+      "institutionalSource": "https://www.linkedin.com/posts/amcham-austria_cybersecurity-smes-mandiant-activity-7507716549127069696-471X",
+      "gallerySource": "https://www.flickr.com/photos/vipach/albums/72177720335691211",
+      "independenceLevel": "THIRD-PARTY INSTITUTIONAL SOURCE",
+      "creditContext": "© BANHALMI Photography",
+      "evidenceStatus": "owner-supplied-institutional-publication-and-gallery-pending-public-readback",
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Institutional / Diplomatic Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
+      "allowedWording": [
+        "BANHALMI Photography documented an AmCham Austria Special Talk in Vienna.",
+        "BANHALMI Photography received photography credit in AmCham Austria's own publication of the event.",
+        "BANHALMI Photography has documented AmCham Austria business events in Vienna.",
+        "The work provides externally verifiable evidence of BANHALMI Photography operating in an international business/event environment."
+      ],
+      "prohibitedInference": [
+        "endorsement",
+        "recommendation",
+        "exclusive photographer status",
+        "official photographer status",
+        "long-term contract",
+        "commission",
+        "partnership",
+        "sponsorship",
+        "U.S. Embassy client relationship",
+        "Google/Mandiant client relationship"
+      ],
+      "serviceIntent": [
+        "C-Level Event Photography",
+        "Corporate Event Photography",
+        "Conference Photography",
+        "Institutional Event Photography",
+        "Business Event Photography",
+        "Executive Event Photography",
+        "Event Photographer Vienna / Eventfotograf Wien",
+        "Corporate Photographer Vienna",
+        "international business-event photography"
+      ],
+      "city": "Vienna",
+      "languageApplicability": [
+        "en",
+        "hu",
+        "de-AT"
+      ],
+      "schemaUsage": {
+        "allowed": [
+          "Person: Norbert Bánhalmi",
+          "Organization/Brand: BANHALMI Photography",
+          "Event: AmCham Special Talk – Cybersecurity Breakfast",
+          "location: Amerika Haus, Vienna",
+          "organizer: AmCham Austria",
+          "subjectOf/citation/evidence URL: AmCham Austria publication"
+        ],
+        "prohibited": [
+          "AmCham Austria as client/customer without separate evidence",
+          "LinkedIn event publication in sameAs"
+        ]
+      },
+      "verificationDate": "2026-09-21",
+      "status": "AUDITÁLT — owner-supplied evidence recorded; external public readback pending",
+      "interpretationRule": "Use as Vienna institutional/business event-photography and third-party publication-credit evidence. Do not infer endorsement, recommendation, official/exclusive photographer status, contract, commission, partnership, sponsorship, or U.S. Embassy/Google/Mandiant client relationship. The Flickr gallery is event-documentation evidence and must not be treated as independent institutional endorsement unless its publisher independence is separately proven."
     }
   ],
   "answerRules": [
