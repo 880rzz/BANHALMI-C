@@ -1,7 +1,7 @@
 /* Loader for the canonical fluid 4K rhythm contract. Navigation authority lives in mega-menu.js plus the compact editorial menu contract. */
 (function(){
   'use strict';
-  var href = '/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28';
+  var href = '/assets/css/fluid-4k-rhythm.css?v=20260921-production-integrity-v29';
   var existing = document.querySelector('link[data-fluid-4k-rhythm]');
   if (existing) {
     if (existing.getAttribute('href') !== href) existing.setAttribute('href', href);
