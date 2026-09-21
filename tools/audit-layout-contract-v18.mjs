@@ -53,7 +53,7 @@ const menuAuthority=authority.navigation?.megaMenu||{};
 must(menuAuthority.contractVersion==='v31','mega menu authority must be v31');
 must(menuAuthority.desktopOverlayBelowHeader===true&&menuAuthority.mobileStartsBelowHeader===true,'mega menu must begin below the real header at every viewport');
 must(menuAuthority.duplicateBrandIntroHidden===true&&menuAuthority.duplicateTailHidden===true,'duplicated BANHALMI intro/tail must remain hidden');
-must(menuAuthority.desktopDescriptionsHidden===true&&menuAuthority.mobileDescriptionsHidden===true,'mega-menu item descriptions must remain compact/hidden');
+must(menuAuthority.desktopDescriptionsHidden===false&&menuAuthority.mobileDescriptionsHidden===true,'desktop mega-menu descriptions must remain visible while mobile stays compact');
 must(menuAuthority.visualTile===false&&menuAuthority.sloganTile===false,'mega menu must remain free of hero image and slogan tiles');
 must(menuAuthority.decorativeSectionArrows===false,'non-functional section arrows must remain disabled');
 must(menuAuthority.mobileTextOnly===true,'mobile mega menu must remain text-first');

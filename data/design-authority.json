@@ -208,8 +208,8 @@
       "contractVersion": "v31",
       "desktopOverlayBelowHeader": true,
       "desktopColumns": 3,
-      "desktopMaxHeightPx": 500,
-      "desktopDescriptionsHidden": true,
+      "desktopMaxHeightPx": null,
+      "desktopDescriptionsHidden": false,
       "duplicateBrandIntroHidden": true,
       "duplicateTailHidden": true,
       "visualTile": false,
@@ -218,7 +218,8 @@
       "mobileStartsBelowHeader": true,
       "mobileDescriptionsHidden": true,
       "mobileSectionSpacingCompact": true,
-      "mobileTextOnly": true
+      "mobileTextOnly": true,
+      "desktopFullViewport": true
     }
   },
   "principles": {

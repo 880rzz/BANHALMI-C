@@ -33,7 +33,7 @@ must(mega.contractVersion==='v31','BANHALMI mega-menu authority must remain v31'
 must(Number(mega.panelMaxPx)===1240,'BANHALMI v31 menu canvas must remain 1240px');
 must(mega.desktopOverlayBelowHeader===true&&mega.mobileStartsBelowHeader===true,'BANHALMI menu must stay below the real header');
 must(mega.duplicateBrandIntroHidden===true&&mega.duplicateTailHidden===true,'BANHALMI duplicate menu branding/tail must remain suppressed');
-must(mega.desktopDescriptionsHidden===true&&mega.mobileDescriptionsHidden===true,'BANHALMI menu descriptions must remain density-controlled');
+must(mega.desktopDescriptionsHidden===false&&mega.mobileDescriptionsHidden===true,'BANHALMI desktop menu descriptions must remain visible while mobile stays compact');
 must(mega.visualTile===false&&mega.sloganTile===false,'BANHALMI menu must remain free of hero/slogan tiles');
 must(mega.decorativeSectionArrows===false,'BANHALMI menu must not reintroduce decorative section arrows');
 must(mega.mobileTextOnly===true,'BANHALMI mobile menu must remain text-first');
