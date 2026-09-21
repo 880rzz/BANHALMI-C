@@ -992,6 +992,71 @@ html body .site-footer .footer-grid>*{
   }
 }
 
+/* MOBILE-VIEW-FINAL-CLOSURE-20260921
+   Mobile review found three presentation regressions: the hero image section
+   retained a grey trailing band, compact footer disclosures were hidden even
+   after opening, and the descriptive mega-menu required scrolling before its
+   primary links were all visible. Keep the mobile authority explicit here so
+   it remains later than the historical cascade layers. */
+@media (max-width:680px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
+    background:#fff!important;
+  }
+  html body .site-footer details.footer-accordion:not([open])>ul{
+    display:none!important;
+    block-size:0!important;
+    max-block-size:0!important;
+    min-block-size:0!important;
+    margin:0!important;
+    padding-block:0!important;
+    overflow:hidden!important;
+    visibility:hidden!important;
+  }
+  html body .site-footer details.footer-accordion[open]>ul{
+    display:block!important;
+    block-size:auto!important;
+    max-block-size:none!important;
+    min-block-size:0!important;
+    margin:4px 0 0!important;
+    padding:0 0 12px!important;
+    overflow:visible!important;
+    visibility:visible!important;
+  }
+  html body .bn-mega-menu{overflow:hidden!important;}
+  html body .bn-mega-panel{
+    min-height:100dvh!important;
+    height:100dvh!important;
+    overflow:hidden!important;
+    padding:4.15rem 1.15rem .8rem!important;
+  }
+  html body .bn-mega-intro{gap:.2rem!important;padding-bottom:.65rem!important;}
+  html body .bn-mega-intro p,
+  html body .bn-mega-desc,
+  html body .bn-mega-tail{display:none!important;}
+  html body .bn-mega-grid{gap:0!important;padding:.55rem 0 0!important;}
+  html body .bn-mega-section-head{
+    margin:0 0 .35rem!important;
+    padding:0 0 .35rem!important;
+  }
+  html body .bn-mega-section-head>span{font-size:.78rem!important;letter-spacing:.13em!important;}
+  html body .bn-mega-item{padding:.02rem 0 .16rem!important;}
+  html body .bn-mega-link,
+  html body .bn-mega-service .bn-mega-link,
+  html body .bn-mega-footer .bn-mega-link{
+    min-height:36px!important;
+    display:flex!important;
+    align-items:center!important;
+    font-size:1.08rem!important;
+    line-height:1.08!important;
+    letter-spacing:-.02em!important;
+  }
+  html body .bn-mega-footer{
+    padding-top:.65rem!important;
+    border-top:1px solid var(--bn-menu-line)!important;
+  }
+  html body .bn-mega-footer .bn-mega-section-head{margin-bottom:.25rem!important;}
+}
+
 @media (min-width:1440px){
   html body .site-footer,
   html body .site-footer>.wrap,
@@ -1789,4 +1854,22 @@ html body .site-footer .footer-accordion li>a{
     max-inline-size:1280px!important;
     margin-top:6px!important;
   }
+}
+
+/* MOBILE-VIEW-FINAL-CLOSURE-20260921-END */
+@media (max-width:680px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{background:#fff!important;}
+  html body .site-footer details.footer-accordion:not([open])>ul{display:none!important;block-size:0!important;max-block-size:0!important;min-block-size:0!important;margin:0!important;padding-block:0!important;overflow:hidden!important;visibility:hidden!important;}
+  html body .site-footer details.footer-accordion[open]>ul{display:block!important;block-size:auto!important;max-block-size:none!important;min-block-size:0!important;margin:4px 0 0!important;padding:0 0 12px!important;overflow:visible!important;visibility:visible!important;}
+  html body .bn-mega-menu{overflow:hidden!important;}
+  html body .bn-mega-panel{min-height:100dvh!important;height:100dvh!important;overflow:hidden!important;padding:4.15rem 1.15rem .8rem!important;}
+  html body .bn-mega-intro{gap:.2rem!important;padding-bottom:.65rem!important;}
+  html body .bn-mega-intro p,html body .bn-mega-desc,html body .bn-mega-tail{display:none!important;}
+  html body .bn-mega-grid{gap:0!important;padding:.55rem 0 0!important;}
+  html body .bn-mega-section-head{margin:0 0 .35rem!important;padding:0 0 .35rem!important;}
+  html body .bn-mega-section-head>span{font-size:.78rem!important;letter-spacing:.13em!important;}
+  html body .bn-mega-item{padding:.02rem 0 .16rem!important;}
+  html body .bn-mega-link,html body .bn-mega-service .bn-mega-link,html body .bn-mega-footer .bn-mega-link{min-height:36px!important;display:flex!important;align-items:center!important;font-size:1.08rem!important;line-height:1.08!important;letter-spacing:-.02em!important;}
+  html body .bn-mega-footer{padding-top:.65rem!important;border-top:1px solid var(--bn-menu-line)!important;}
+  html body .bn-mega-footer .bn-mega-section-head{margin-bottom:.25rem!important;}
 }
