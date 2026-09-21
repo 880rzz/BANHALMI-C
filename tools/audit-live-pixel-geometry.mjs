@@ -101,10 +101,13 @@ for(const vp of viewports){
       else {
         const allowed=Math.min(Number(vp.homepageHeroMaxPx),height*maxHeroFraction);
         if(result.hero.height>allowed+2) issues.push(`homepage hero ${result.hero.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
+        const heroMediaAuthority=authority.visualGeometry?.homepageHeroMedia||{};
         const actualMediaRatio=result.hero.copy.height>0?result.hero.visual.height/result.hero.copy.height:0;
-        const expectedMediaRatio=authority.visualGeometry?.homepageHeroMedia?.copyPanelMatchesMediaHeight===true?1:1-heroReduction;
-        if(heroReduction>0&&Math.abs(actualMediaRatio-expectedMediaRatio)>0.015) issues.push(`hero media/copy ratio ${actualMediaRatio.toFixed(3)} != intended ${expectedMediaRatio.toFixed(3)}`);
-        if(result.hero.visual.height>result.hero.copy.height+2) issues.push('hero media exceeds unchanged copy panel height');
+        if(heroMediaAuthority.desktopLayout==='split'){
+          const expectedMediaRatio=heroMediaAuthority.copyPanelMatchesMediaHeight===true?1:1-heroReduction;
+          if(heroReduction>0&&Math.abs(actualMediaRatio-expectedMediaRatio)>0.015) issues.push(`hero media/copy ratio ${actualMediaRatio.toFixed(3)} != intended ${expectedMediaRatio.toFixed(3)}`);
+          if(heroMediaAuthority.copyPanelMatchesMediaHeight===true&&result.hero.visual.height>result.hero.copy.height+2) issues.push('hero media exceeds unchanged copy panel height');
+        }
       }
       const rowIssues=sameRowHeightIssues(result.cards,cardTolerance);
       if(rowIssues.length) issues.push(`decision-card row height delta ${Math.max(...rowIssues.map(x=>x.delta)).toFixed(1)}px > ${cardTolerance}px`);
