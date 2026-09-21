@@ -100,10 +100,14 @@ for(const vp of viewports){
       if(!result.hero) issues.push('split homepage hero missing');
       else {
         const allowed=Math.min(Number(vp.homepageHeroMaxPx),height*maxHeroFraction);
-        if(result.hero.height>allowed+2) issues.push(`homepage hero ${result.hero.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
         const heroMediaAuthority=authority.visualGeometry?.homepageHeroMedia||{};
-        const actualMediaRatio=result.hero.copy.height>0?result.hero.visual.height/result.hero.copy.height:0;
-        if(heroMediaAuthority.desktopLayout==='split'){
+        if(heroMediaAuthority.desktopLayout==='stacked'){
+          if(result.hero.visual.height>allowed+2) issues.push(`homepage hero media ${result.hero.visual.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
+          if(result.hero.copy.top<result.hero.visual.bottom-2) issues.push('stacked hero copy overlaps hero media');
+          if(Math.abs(result.hero.visual.left)>2||Math.abs(result.hero.visual.right-width)>2) issues.push('stacked hero media is not viewport width');
+        }else{
+          if(result.hero.height>allowed+2) issues.push(`homepage hero ${result.hero.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
+          const actualMediaRatio=result.hero.copy.height>0?result.hero.visual.height/result.hero.copy.height:0;
           const expectedMediaRatio=heroMediaAuthority.copyPanelMatchesMediaHeight===true?1:1-heroReduction;
           if(heroReduction>0&&Math.abs(actualMediaRatio-expectedMediaRatio)>0.015) issues.push(`hero media/copy ratio ${actualMediaRatio.toFixed(3)} != intended ${expectedMediaRatio.toFixed(3)}`);
           if(heroMediaAuthority.copyPanelMatchesMediaHeight===true&&result.hero.visual.height>result.hero.copy.height+2) issues.push('hero media exceeds unchanged copy panel height');
