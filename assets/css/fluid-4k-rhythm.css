@@ -2151,3 +2151,15 @@ html body .site-footer .footer-accordion li>a{
     gap:clamp(40px,4.2vw,72px)!important;
   }
 }
+
+
+/* DESCRIPTIVE-MENU-BOUNDARY-CORRECTION-20260921 */
+@media (min-width:1180px){
+  html body .bn-mega-menu .bn-mega-panel{
+    padding:12px 0 24px!important;
+  }
+  html body .bn-mega-menu .bn-mega-desc,
+  html body .bn-mega-menu .bn-mega-section-head p{
+    display:block!important;
+  }
+}
