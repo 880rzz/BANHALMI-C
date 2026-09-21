@@ -229,7 +229,10 @@
       "mobileBottomSafetyPx": 0,
       "firstPointerActivationMustOpen": true,
       "mobileBackgroundFillsViewport": true,
-      "contentVerticallyCentered": true
+      "contentVerticallyCentered": true,
+      "singleStageRuntime": true,
+      "nestedLoaderAllowed": false,
+      "parserDiscoveredOnHome": true
     }
   },
   "principles": {
