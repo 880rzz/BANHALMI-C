@@ -2633,3 +2633,12 @@ html body details.review-drawer[open]>summary::after{
     padding-bottom:0!important;
   }
 }
+
+
+/* TABLET-HERO-SIGNATURE-CONTRAST-20260922 */
+@media (min-width:621px) and (max-width:1179px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signature-line{
+    color:#fff!important;
+    text-shadow:0 1px 14px rgba(0,0,0,.72),0 0 2px rgba(0,0,0,.92)!important;
+  }
+}
