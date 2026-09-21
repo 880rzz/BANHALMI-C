@@ -2163,3 +2163,11 @@ html body .site-footer .footer-accordion li>a{
     display:block!important;
   }
 }
+
+
+/* TABLET-HERO-SIGNATURE-CONTRAST-20260921 */
+@media (min-width:621px) and (max-width:1179px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signature-line{
+    color:#d1b451!important;
+  }
+}
