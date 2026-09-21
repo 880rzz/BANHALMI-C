@@ -51,8 +51,8 @@
       "desktopSideInsetPx": 48,
       "desktopColumnGapMinPx": 24,
       "desktopColumnGapMaxPx": 42,
-      "desktopRowGapMinPx": 24,
-      "desktopRowGapMaxPx": 24,
+      "desktopRowGapMinPx": 26,
+      "desktopRowGapMaxPx": 26,
       "desktopContactColumns": 2,
       "desktopTopRowGroups": [
         "brand",
@@ -120,6 +120,10 @@
       "categoryCardHeight": "intrinsic",
       "equalHeightStretchingAllowed": false,
       "authority": "assets/css/fluid-4k-rhythm.css"
+    },
+    "sectionSpacing": {
+      "cardGapMinPx": 20,
+      "cardGapMaxPx": 28
     }
   },
   "responsive": {
@@ -165,7 +169,7 @@
       "tabletMaxPx": 1179,
       "tabletHeightVw": 39.5604,
       "desktopMinPx": 1180,
-      "desktopHeight": "clamp(629px,35.7vw,748px)",
+      "desktopHeight": "clamp(600px,42.8vw,720px)",
       "shortDesktopMaxViewportHeightPx": 760,
       "shortDesktopHeightPx": 561,
       "copyPanelGeometryUnchanged": false,
