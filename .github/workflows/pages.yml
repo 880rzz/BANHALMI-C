@@ -221,7 +221,7 @@ jobs:
             curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' "$url" >/dev/null
           done
           impressum="$(curl -fsSL --max-time 30 -H 'Cache-Control: no-cache' 'https://www.norbertbanhalmi.com/hu/impresszum/')"
-          grep -Fq 'Bánhalmi Norbert e.U.' <<<"$impressum"
+          grep -Fq 'Banhalmi Norbert e.U.' <<<"$impressum"
           grep -Fq 'művészi fotográfiai' <<<"$impressum"
           ! grep -Fq 'művészi fotográfia</strong>i' <<<"$impressum"
       - name: Run exact-live production geometry audit
