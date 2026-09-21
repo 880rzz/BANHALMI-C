@@ -24,12 +24,12 @@ for(const width of widths){
   for(const pathname of pages){
     const page=await context.newPage();
     try{await page.goto(new URL(pathname,base).href,{waitUntil:'domcontentloaded',timeout:30000});await page.waitForTimeout(150)}catch(e){failures.push(`${width}px ${pathname}: navigation ${e.message}`);await page.close();continue}
-    const result=await page.evaluate(({approvedPageMax,approvedStructuredMax,structuredBreakpointPx,structuredSelector})=>{
+    const result=await page.evaluate(({approvedPageMax,approvedStructuredMax,structuredBreakpointPx,structuredSelector,homepageDesktopLayout})=>{
       const issues=[];const px=v=>parseFloat(v)||0;const abs=Math.abs;
       const visible=el=>{if(!el)return false;const s=getComputedStyle(el),r=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&Number(s.opacity)!==0&&r.width>0&&r.height>0};
       const name=el=>`${el.tagName.toLowerCase()}${el.id?'#'+el.id:''}${el.className?'.'+String(el.className).trim().replace(/\s+/g,'.').slice(0,100):''}`;
       const w=innerWidth,bodyBg=getComputedStyle(document.body).backgroundColor;
-      const protectedHomepage=w>=1180&&Boolean(document.querySelector('main[data-homepage-redesign="stage76"]'));
+      const protectedHomepage=w>=1180&&Boolean(document.querySelector('main[data-homepage-redesign="stage76"]'));const stackedHomepage=protectedHomepage&&homepageDesktopLayout==='stacked';
       const left=s=>s.textAlign==='left'||s.textAlign==='start';
       const shortCentered=el=>!!el.closest('.hero,.hero-centered,.cta-band,.statement,.error-page,.site-footer')&&((el.innerText||'').trim().length<=220);
       const isLead=el=>el.classList.contains('lead')||el.closest('.lead');
@@ -81,7 +81,7 @@ for(const width of widths){
       }
 
       for(const wrap of document.querySelectorAll('main .wrap,main .container,main .content-wrap')){
-        if(!visible(wrap))continue;const r=wrap.getBoundingClientRect(),s=getComputedStyle(wrap),pl=px(s.paddingLeft),pr=px(s.paddingRight),effectiveLeft=r.left+pl,effectiveRight=w-r.right+pr;const isStructured=w>=structuredBreakpointPx&&Boolean(wrap.querySelector(structuredSelector));const allowedMax=isStructured?approvedStructuredMax:approvedPageMax;const allowedWidth=Math.min(w,allowedMax);const splitHeroWrap=protectedHomepage&&(wrap.matches('main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap')||wrap.matches('main[data-homepage-redesign="stage76"]>.hero-copy-only>.wrap'));if(r.right>w+2||r.left<-2)issues.push(`${name(wrap)} wrap escapes viewport [${r.left.toFixed(1)},${r.right.toFixed(1)}]`);if(w>=1024&&r.width>allowedWidth+2)issues.push(`${name(wrap)} ${isStructured?'structured ':'standard '}content width ${r.width.toFixed(0)}px > design authority ${allowedWidth}px`);if(w<=768&&!wrap.closest('.full-bleed,[data-full-bleed="true"]')&&(effectiveLeft<15||effectiveRight<15))issues.push(`${name(wrap)} mobile/tablet content gutter [${effectiveLeft.toFixed(1)},${effectiveRight.toFixed(1)}]px`);if(w>=1024&&!splitHeroWrap&&r.width<w-80&&abs(r.left-(w-r.right))>5)issues.push(`${name(wrap)} container not centered (${r.left.toFixed(1)} vs ${(w-r.right).toFixed(1)})`);
+        if(!visible(wrap))continue;const r=wrap.getBoundingClientRect(),s=getComputedStyle(wrap),pl=px(s.paddingLeft),pr=px(s.paddingRight),effectiveLeft=r.left+pl,effectiveRight=w-r.right+pr;const isStructured=w>=structuredBreakpointPx&&Boolean(wrap.querySelector(structuredSelector));const allowedMax=isStructured?approvedStructuredMax:approvedPageMax;const allowedWidth=Math.min(w,allowedMax);const homepageHeroVisualWrap=stackedHomepage&&wrap.matches('main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap');const splitHeroWrap=protectedHomepage&&!stackedHomepage&&(wrap.matches('main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap')||wrap.matches('main[data-homepage-redesign="stage76"]>.hero-copy-only>.wrap'));if(r.right>w+2||r.left<-2)issues.push(`${name(wrap)} wrap escapes viewport [${r.left.toFixed(1)},${r.right.toFixed(1)}]`);if(w>=1024&&!homepageHeroVisualWrap&&r.width>allowedWidth+2)issues.push(`${name(wrap)} ${isStructured?'structured ':'standard '}content width ${r.width.toFixed(0)}px > design authority ${allowedWidth}px`);if(w<=768&&!wrap.closest('.full-bleed,[data-full-bleed="true"]')&&(effectiveLeft<15||effectiveRight<15))issues.push(`${name(wrap)} mobile/tablet content gutter [${effectiveLeft.toFixed(1)},${effectiveRight.toFixed(1)}]px`);if(w>=1024&&!splitHeroWrap&&!homepageHeroVisualWrap&&r.width<w-80&&abs(r.left-(w-r.right))>5)issues.push(`${name(wrap)} container not centered (${r.left.toFixed(1)} vs ${(w-r.right).toFixed(1)})`);
       }
 
       if(protectedHomepage){
@@ -90,15 +90,24 @@ for(const width of widths){
         const visualWrap=visual?.querySelector(':scope>.wrap');
         const copyWrap=copy?.querySelector(':scope>.wrap');
         if(!visible(visual)||!visible(copy)||!visible(visualWrap)||!visible(copyWrap)){
-          issues.push('protected split hero is incomplete or hidden');
+          issues.push(`protected ${stackedHomepage?'stacked':'split'} hero is incomplete or hidden`);
         }else{
           const vr=visual.getBoundingClientRect(),cr=copy.getBoundingClientRect(),vwr=visualWrap.getBoundingClientRect(),cwr=copyWrap.getBoundingClientRect();
-          if(abs(vr.left)>2)issues.push(`protected split hero visual must align viewport left (${vr.left.toFixed(1)}px)`);
-          if(abs(w-cr.right)>2)issues.push(`protected split hero copy panel must align viewport right (${(w-cr.right).toFixed(1)}px)`);
-          if(vr.right>cr.left+2)issues.push(`protected split hero columns overlap by ${(vr.right-cr.left).toFixed(1)}px`);
-          if(abs(vr.top-cr.top)>2||abs(vr.bottom-cr.bottom)>2)issues.push(`protected split hero panel heights/top alignment drift [visual ${vr.top.toFixed(1)}–${vr.bottom.toFixed(1)}, copy ${cr.top.toFixed(1)}–${cr.bottom.toFixed(1)}]`);
-          if(abs(vwr.left-vr.left)>2||abs(vwr.right-vr.right)>2)issues.push(`protected split hero visual wrap must fill visual panel [${vwr.left.toFixed(1)},${vwr.right.toFixed(1)} vs ${vr.left.toFixed(1)},${vr.right.toFixed(1)}]`);
-          if(cwr.left<cr.left-2||cwr.right>cr.right+2)issues.push(`protected split hero copy wrap escapes copy panel [${cwr.left.toFixed(1)},${cwr.right.toFixed(1)} vs ${cr.left.toFixed(1)},${cr.right.toFixed(1)}]`);
+          if(stackedHomepage){
+            if(abs(vr.left)>2||abs(w-vr.right)>2)issues.push(`protected stacked hero visual must span viewport [${vr.left.toFixed(1)},${vr.right.toFixed(1)}]`);
+            if(abs(vwr.left-vr.left)>2||abs(vwr.right-vr.right)>2)issues.push(`protected stacked hero visual wrap must fill visual panel [${vwr.left.toFixed(1)},${vwr.right.toFixed(1)} vs ${vr.left.toFixed(1)},${vr.right.toFixed(1)}]`);
+            if(cr.top<vr.bottom-2)issues.push(`protected stacked hero copy overlaps visual by ${(vr.bottom-cr.top).toFixed(1)}px`);
+            if(abs(cr.left)>2||abs(w-cr.right)>2)issues.push(`protected stacked hero copy section must span viewport [${cr.left.toFixed(1)},${cr.right.toFixed(1)}]`);
+            if(cwr.left<cr.left-2||cwr.right>cr.right+2)issues.push(`protected stacked hero copy wrap escapes copy section [${cwr.left.toFixed(1)},${cwr.right.toFixed(1)} vs ${cr.left.toFixed(1)},${cr.right.toFixed(1)}]`);
+            if(cwr.width>Math.min(900,w)+2)issues.push(`protected stacked hero copy width ${cwr.width.toFixed(1)}px > 900px`);
+          }else{
+            if(abs(vr.left)>2)issues.push(`protected split hero visual must align viewport left (${vr.left.toFixed(1)}px)`);
+            if(abs(w-cr.right)>2)issues.push(`protected split hero copy panel must align viewport right (${(w-cr.right).toFixed(1)}px)`);
+            if(vr.right>cr.left+2)issues.push(`protected split hero columns overlap by ${(vr.right-cr.left).toFixed(1)}px`);
+            if(abs(vr.top-cr.top)>2||abs(vr.bottom-cr.bottom)>2)issues.push(`protected split hero panel heights/top alignment drift [visual ${vr.top.toFixed(1)}–${vr.bottom.toFixed(1)}, copy ${cr.top.toFixed(1)}–${cr.bottom.toFixed(1)}]`);
+            if(abs(vwr.left-vr.left)>2||abs(vwr.right-vr.right)>2)issues.push(`protected split hero visual wrap must fill visual panel [${vwr.left.toFixed(1)},${vwr.right.toFixed(1)} vs ${vr.left.toFixed(1)},${vr.right.toFixed(1)}]`);
+            if(cwr.left<cr.left-2||cwr.right>cr.right+2)issues.push(`protected split hero copy wrap escapes copy panel [${cwr.left.toFixed(1)},${cwr.right.toFixed(1)} vs ${cr.left.toFixed(1)},${cr.right.toFixed(1)}]`);
+          }
         }
       }
 
@@ -119,7 +128,7 @@ for(const width of widths){
       for(const el of [...document.querySelectorAll('main .hero a,main .hero button,main .cta-band a,main .cta-band button')].filter(visible)){if((el.innerText||'').trim().length>64)issues.push(`${name(el)} CTA label too long (${(el.innerText||'').trim().length} chars)`);}
 
       return {issues:[...new Set(issues)].slice(0,240),longText:longText.length,sections:[...document.querySelectorAll('main>section')].filter(visible).length};
-    },{approvedPageMax,approvedStructuredMax,structuredBreakpointPx,structuredSelector});
+    },{approvedPageMax,approvedStructuredMax,structuredBreakpointPx,structuredSelector,homepageDesktopLayout:design.visualGeometry?.homepageHeroMedia?.desktopLayout||'split'});
     reports.push({width,pathname,longText:result.longText,sections:result.sections,issues:result.issues.length});if(result.issues.length)failures.push(`${width}px ${pathname}: ${result.issues.join(' | ')}`);await page.close();
   }
   await context.close();
@@ -127,4 +136,4 @@ for(const width of widths){
 await browser.close();
 fs.mkdirSync('artifacts',{recursive:true});fs.writeFileSync('artifacts/apple-visual-quality.json',JSON.stringify({contract:'design-authority-backed-apple-visual',designVersion:design.version,pageMaxPx:approvedPageMax,structuredMaxPx:approvedStructuredMax,pages:pages.length,widths,reports,failures},null,2));
 if(failures.length){console.error(`BANHALMI approved visual contract found ${failures.length} failing page/viewport combinations.`);console.error(failures.join('\n'));process.exit(1)}
-console.log(`BANHALMI approved visual contract passed: ${pages.length} pages × ${widths.length} viewports; standard max ${approvedPageMax}px and structured max ${approvedStructuredMax}px plus typography, reading measure, gutters, surfaces, spacing rhythm, controls, grids, protected split-hero geometry and cell geometry verified.`);
+console.log(`BANHALMI approved visual contract passed: ${pages.length} pages × ${widths.length} viewports; standard max ${approvedPageMax}px and structured max ${approvedStructuredMax}px plus typography, reading measure, gutters, surfaces, spacing rhythm, controls, grids, protected authority-backed homepage hero geometry and cell geometry verified.`);
