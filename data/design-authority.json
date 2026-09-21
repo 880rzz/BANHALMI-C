@@ -51,8 +51,8 @@
       "desktopSideInsetPx": 48,
       "desktopColumnGapMinPx": 24,
       "desktopColumnGapMaxPx": 42,
-      "desktopRowGapMinPx": 36,
-      "desktopRowGapMaxPx": 36,
+      "desktopRowGapMinPx": 24,
+      "desktopRowGapMaxPx": 24,
       "desktopContactColumns": 2,
       "desktopTopRowGroups": [
         "brand",
@@ -105,7 +105,8 @@
       "compactEcosystemPaddingPx": 4,
       "canonicalGeometryAuthority": "assets/css/fluid-4k-rhythm.css",
       "separateGeometryStylesheetAllowed": false,
-      "runtimeGeometryLoaderAllowed": false
+      "runtimeGeometryLoaderAllowed": false,
+      "desktopInternalStudioDivider": false
     },
     "documentFlow": {
       "layoutMode": "grid",
@@ -221,8 +222,10 @@
       "mobileSectionSpacingCompact": true,
       "mobileTextOnly": true,
       "desktopFullViewport": true,
-      "mobileBottomSafetyPx": 72,
-      "firstPointerActivationMustOpen": true
+      "mobileBottomSafetyPx": 0,
+      "firstPointerActivationMustOpen": true,
+      "mobileBackgroundFillsViewport": true,
+      "contentVerticallyCentered": true
     }
   },
   "principles": {
