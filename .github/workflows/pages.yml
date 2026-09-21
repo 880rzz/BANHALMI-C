@@ -1,4 +1,5 @@
 name: Full quality gate and production deploy
+# ops-redeploy-marker: 2026-09-21-main-refresh
 
 on:
   pull_request:
