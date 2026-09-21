@@ -13,7 +13,7 @@
   }
   if(button)button.addEventListener('click',primeFirstOpen,true);
   var core=document.createElement('script');
-  core.src='/assets/js/mega-menu-v65-base.js?v=20260921-first-tap-root-cause';
+  core.src='/assets/js/mega-menu-v65-base.js?v=20260917-first-tap-root-cause';
   core.defer=true;
   core.setAttribute('data-banhalmi-mega-menu-core','');
   core.onload=function(){
