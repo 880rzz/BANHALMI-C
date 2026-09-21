@@ -3,11 +3,11 @@
    one tap always opens the menu. Presentation authority remains in CSS. */
 (function(){'use strict';
   if(document.querySelector('script[data-banhalmi-mega-menu-core]'))return;
-  var pendingOpen=false;
+  var pendingOpen=false; window.__bnMegaOpenRequested=false;
   var button=document.querySelector('.menu-btn');
   function primeFirstOpen(e){
     if(document.getElementById('bn-mega-menu'))return;
-    pendingOpen=true;
+    pendingOpen=true; window.__bnMegaOpenRequested=true;
     e.preventDefault();
     e.stopImmediatePropagation();
   }
@@ -21,7 +21,8 @@
     var menu=document.getElementById('bn-mega-menu');
     if(pendingOpen&&button&&menu&&menu.hidden){
       pendingOpen=false;
-      setTimeout(function(){button.click();},0);
+      window.__bnMegaOpenRequested=false;
+      if(menu.hidden)setTimeout(function(){button.click();},0);
     }
   };
   document.head.appendChild(core);
