@@ -2376,8 +2376,9 @@ html body .site-footer .footer-accordion li>a{
   }
 
   html body .bn-mega-menu{
-    display:flex!important;
-    align-items:stretch!important;
+    display:block!important;
+    padding-block:clamp(24px,5vh,64px)!important;
+    box-sizing:border-box!important;
   }
   html body .bn-mega-panel{
     min-height:0!important;
@@ -2387,7 +2388,7 @@ html body .site-footer .footer-accordion li>a{
   }
   html body .bn-mega-grid{
     width:100%!important;
-    margin-block:clamp(18px,3vh,34px)!important;
+    margin-block:0!important;
   }
   html body .bn-mega-grid{
     align-items:start!important;
