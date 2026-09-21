@@ -2060,3 +2060,94 @@ html body .site-footer .footer-accordion li>a{
     margin:0!important;
   }
 }
+
+
+/* PIXEL-GATE-CORRECTION-20260921 */
+/* Preserve the requested visual fixes while returning desktop geometry to the
+   proven production contract. The black hero bleed came from the viewport-wide
+   pseudo surface, not from the intended two-column hero itself. */
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr) minmax(560px,680px)!important;
+    align-items:stretch!important;
+    overflow:clip!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
+    grid-column:1!important;
+    grid-row:1!important;
+    width:auto!important;
+    min-height:var(--homepage-hero-media-height)!important;
+    height:var(--homepage-hero-media-height)!important;
+    max-height:var(--homepage-hero-media-height)!important;
+    background:#fff!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only::before{
+    display:none!important;
+    content:none!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
+    width:100%!important;
+    height:var(--homepage-hero-media-height)!important;
+    min-height:0!important;
+    max-height:var(--homepage-hero-media-height)!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    aspect-ratio:auto!important;
+    margin:0!important;
+    overflow:hidden!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
+    object-fit:cover!important;
+    object-position:center center!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    grid-column:2!important;
+    grid-row:1!important;
+    width:auto!important;
+    height:var(--homepage-hero-media-height)!important;
+    min-height:var(--homepage-hero-media-height)!important;
+    max-height:var(--homepage-hero-media-height)!important;
+    padding:clamp(36px,2.8vw,52px) clamp(32px,3vw,52px)!important;
+    border-left:1px solid rgba(29,29,31,.09)!important;
+    overflow:auto!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only>.wrap{
+    width:100%!important;
+    max-width:560px!important;
+    margin:0!important;
+  }
+
+  html body .bn-mega-menu{
+    position:fixed!important;
+    inset:var(--header-h,56px) 0 0!important;
+    width:100vw!important;
+    height:calc(100dvh - var(--header-h,56px))!important;
+    min-height:calc(100dvh - var(--header-h,56px))!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    background:#202530!important;
+  }
+  html body .bn-mega-panel{
+    width:min(1440px,calc(100vw - 80px))!important;
+    max-width:1440px!important;
+    min-height:0!important;
+    height:auto!important;
+    margin-inline:auto!important;
+    padding:24px 0 36px!important;
+    display:block!important;
+  }
+  html body .bn-mega-desc,
+  html body .bn-mega-section-head p{
+    display:block!important;
+  }
+  html body .bn-mega-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:clamp(40px,4.2vw,72px)!important;
+  }
+}
