@@ -2185,3 +2185,18 @@ html body .site-footer .footer-accordion li>a{
     margin-inline:auto!important;
   }
 }
+
+
+/* UHD-SPLIT-HERO-WRAP-CLOSURE-20260921 */
+@media (min-width:2560px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap{
+    width:100%!important;
+    max-width:1760px!important;
+    margin-left:0!important;
+    margin-right:auto!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    width:100%!important;
+    max-width:1760px!important;
+  }
+}
