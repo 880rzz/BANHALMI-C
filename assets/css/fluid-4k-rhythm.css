@@ -1873,3 +1873,190 @@ html body .site-footer .footer-accordion li>a{
   html body .bn-mega-footer{padding-top:.65rem!important;border-top:1px solid var(--bn-menu-line)!important;}
   html body .bn-mega-footer .bn-mega-section-head{margin-bottom:.25rem!important;}
 }
+
+
+/* TARGETED-HERO-MENU-FOOTER-RHYTHM-20260921 */
+/* Narrow remediation only: restore the approved full-width homepage hero,
+   full-viewport descriptive desktop menu, and stable footer/card rhythm. */
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]{
+    display:block!important;
+    overflow:visible!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    grid-column:auto!important;
+    grid-row:auto!important;
+    block-size:auto!important;
+    min-block-size:0!important;
+    max-block-size:none!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
+    width:100%!important;
+    padding:0!important;
+    margin:0!important;
+    background:#fff!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    width:100%!important;
+    max-width:none!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    aspect-ratio:2400 / 1117!important;
+    background:#fff!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-video{
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    width:100%!important;
+    min-height:0!important;
+    padding:clamp(64px,5vw,88px) clamp(32px,6vw,96px)!important;
+    border-left:0!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only>.wrap{
+    width:min(100%,900px)!important;
+    max-width:900px!important;
+    margin-inline:auto!important;
+  }
+
+  html body .bn-mega-menu{
+    position:fixed!important;
+    inset:var(--header-h,56px) 0 0!important;
+    width:100vw!important;
+    height:calc(100dvh - var(--header-h,56px))!important;
+    min-height:calc(100dvh - var(--header-h,56px))!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    background:#202530!important;
+  }
+  html body .bn-mega-panel{
+    width:min(1440px,calc(100vw - 80px))!important;
+    max-width:1440px!important;
+    min-height:100%!important;
+    margin-inline:auto!important;
+    padding:clamp(48px,6vh,76px) 0 clamp(56px,7vh,88px)!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+  }
+  html body .bn-mega-desc,
+  html body .bn-mega-section-head p{
+    display:block!important;
+  }
+  html body .bn-mega-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:clamp(40px,4.2vw,72px)!important;
+  }
+  html body .bn-mega-item{
+    margin-block:.82rem!important;
+  }
+
+  html body .site-footer{
+    overflow-x:clip!important;
+  }
+  html body .site-footer .footer-grid{
+    overflow:visible!important;
+  }
+  html body .site-footer .footer-contact-list{
+    column-gap:clamp(28px,2.6vw,44px)!important;
+  }
+  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{
+    padding-inline-start:clamp(24px,2vw,34px)!important;
+    border-inline-start:1px solid rgba(245,245,247,.14)!important;
+  }
+}
+@media (min-width:1440px){
+  html body .site-footer .footer-grid>div:has(.footer-contact-list){
+    grid-column:1 / span 4!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion[data-social-footer]{
+    grid-column:5 / span 2!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]{
+    grid-column:7 / span 4!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    grid-column:11 / span 2!important;
+  }
+  html body .site-footer .footer-accordion[data-memberships-footer] li>a{
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+}
+@media (max-width:1179px){
+  html body .site-footer,
+  html body .site-footer>.wrap,
+  html body .site-footer .footer-grid,
+  html body .site-footer .footer-grid>*{
+    min-width:0!important;
+    max-width:100%!important;
+    box-sizing:border-box!important;
+  }
+  html body .site-footer>.wrap{
+    width:calc(100% - 40px)!important;
+    margin-inline:auto!important;
+  }
+  html body .site-footer .footer-accordion>summary{
+    min-height:48px!important;
+    padding:12px 0 14px!important;
+    display:flex!important;
+    align-items:center!important;
+  }
+  html body .site-footer .footer-accordion li,
+  html body .site-footer .footer-accordion li>a{
+    max-width:100%!important;
+    white-space:normal!important;
+    overflow-wrap:anywhere!important;
+    word-break:normal!important;
+  }
+}
+@media (max-width:720px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    padding:0!important;
+    margin:0!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    background:#fff!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture{
+    display:block!important;
+    height:auto!important;
+    min-height:0!important;
+    margin:0!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    margin:0!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    margin-top:0!important;
+    border-top:0!important;
+  }
+  html body main .contact-routing .service-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:20px!important;
+  }
+  html body main .contact-routing .service-grid>.card{
+    margin:0!important;
+  }
+}
