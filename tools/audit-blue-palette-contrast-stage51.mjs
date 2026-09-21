@@ -17,6 +17,6 @@ for(const file of ['index.html','hu/index.html','de-at/index.html']){
   const html=fs.readFileSync(file,'utf8');
   const accents=(html.match(/class="title-accent title-accent--block"/g)||[]).length;
   if(accents!==2) throw new Error(`${file}: expected exactly 2 sparse type accents, found ${accents}`);
-  if(!html.includes('style.css?v=20260810-menu-polish-v65')) throw new Error(`${file}: Stage 63 cache token missing`);
+  if(!html.includes('style.css?v=20260921-menu-first-tap-v66')) throw new Error(`${file}: Stage 63 cache token missing`);
 }
 console.log('BANHALMI blue palette and sparse type accent WCAG contrast audit passed.');
