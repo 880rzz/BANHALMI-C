@@ -6,6 +6,7 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # PR synchronize must re-run the complete release gate after every source-authority change.
 
 permissions:
   contents: read
@@ -51,6 +52,7 @@ jobs:
           test -s _site/index.html
           test -s _site/hu/index.html
           test -s _site/de-at/index.html
+          test -s _site/sitemap.xml
           test -s _site/assets/css/site.css
           test -s _site/assets/css/fluid-4k-rhythm.css
           test -s _site/llm-canonical-overlay.json
@@ -60,12 +62,33 @@ jobs:
           test -s _site/external-photography-evidence.json
           test -s _site/press-institutional-evidence.json
           test -s _site/media-usage-evidence.json
+          test -s _site/machine-manifest.json
+          grep -Fq 'Press / Editorial Photography' _site/press-institutional-evidence.json
+          grep -Fq 'Institutional / Diplomatic Event Photography' _site/press-institutional-evidence.json
+          grep -Fq 'International Editorial Image Circulation' _site/media-usage-evidence.json
+          grep -Fq 'Wikimedia Commons Licensed Distribution' _site/media-usage-evidence.json
+          grep -Fq 'Bécsi Napló' _site/press-institutional-evidence.json
+          grep -Fq 'pressInstitutionalEvidence' _site/llm-canonical-overlay.json
+          grep -Fq 'mediaUsageEvidence' _site/llm-canonical-overlay.json
+          grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
+          grep -Fq 'protectedMediaUsageEvidence' _site/machine-manifest.json
+          grep -Fq 'https://www.norbertbanhalmi.com/external-photography-evidence.json' _site/llm-canonical-overlay.json
+          grep -Fq 'https://www.norbertbanhalmi.com/press-institutional-evidence.json' _site/machine-manifest.json
+          grep -Fq 'https://www.norbertbanhalmi.com/media-usage-evidence.json' _site/machine-manifest.json
+          grep -Fq 'pressInstitutionalEvidence' _site/llm-canonical-overlay.json
+          grep -Fq 'mediaUsageEvidence' _site/llm-canonical-overlay.json
+          grep -Fq 'protectedPressInstitutionalEvidence' _site/machine-manifest.json
+          grep -Fq 'protectedMediaUsageEvidence' _site/machine-manifest.json
+          grep -Fq 'https://www.norbertbanhalmi.com/external-photography-evidence.json' _site/llm-canonical-overlay.json
+          grep -Fq 'https://www.norbertbanhalmi.com/press-institutional-evidence.json' _site/machine-manifest.json
+          grep -Fq 'https://www.norbertbanhalmi.com/media-usage-evidence.json' _site/machine-manifest.json
           test -s _site/ai-entry.json
-          grep -Fq 'approximately 50 professional photographer partners/collaborators' _site/llms.txt
-          grep -Fq 'independent professional partner/collaborator' _site/llms.txt
-          grep -Fq '1190 Döbling' _site/llms.txt
-          grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/llms.txt
-          grep -Fq 'protectedCanonicalOverlay' _site/ai-entry.json
+          grep -Fq 'approximately 50 professional photographer partners/collaborators' _site/team-capabilities.json
+          grep -Fq 'independent professional partner/collaborator' _site/team-capabilities.json
+          grep -Fq '1190 Döbling' _site/market-geography.json
+          grep -Fq 'XII. kerület / District 12 / Hegyvidék' _site/market-geography.json
+          # protectedCanonicalOverlay is exercised by audit-machine-projection-regression.mjs before artifact creation; committed public evidence remains canonical in llm-canonical-overlay.json.
+          test -s _site/llm-canonical-overlay.json
           # Semantic machine/evidence assertions are enforced by the source contract audits above.
           # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
       - name: Install Chromium audit runtime
@@ -74,10 +97,32 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          : > /tmp/banhalmi-browser-server.log
           node tools/perf-static-server.mjs _site 4173 > /tmp/banhalmi-browser-server.log 2>&1 &
           SERVER_PID=$!
-          trap 'kill $SERVER_PID || true' EXIT
-          for i in $(seq 1 80); do curl -fsS http://127.0.0.1:4173/ >/dev/null && break; sleep 0.25; done
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          READY=0
+          for i in $(seq 1 120); do
+            if grep -Fq "PERF_SERVER_READY http://127.0.0.1:4173" /tmp/banhalmi-browser-server.log; then
+              if curl -fsS --max-time 5 http://127.0.0.1:4173/ >/dev/null; then
+                READY=1
+                break
+              fi
+            fi
+            if ! kill -0 "$SERVER_PID" 2>/dev/null; then
+              echo "Static audit server exited before readiness." >&2
+              cat /tmp/banhalmi-browser-server.log >&2 || true
+              exit 1
+            fi
+            sleep 0.25
+          done
+          if [ "$READY" -ne 1 ]; then
+            echo "Static audit server did not become ready." >&2
+            cat /tmp/banhalmi-browser-server.log >&2 || true
+            kill "$SERVER_PID" 2>/dev/null || true
+            exit 1
+          fi
+          echo "Static audit server ready; running all page audits."
           npm run test:e2e
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-browser-layout.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-first-principles-layout.mjs
@@ -108,7 +153,7 @@ jobs:
             artifacts/apple-visual-quality.json
             artifacts/lighthouse-mobile
             artifacts/lighthouse-desktop
-          if-no-files-found: warn
+          if-no-files-found: error
           retention-days: 14
       - name: Upload the exact audited Pages artifact
         uses: actions/upload-pages-artifact@v4
@@ -203,5 +248,5 @@ jobs:
             artifacts/live-pixel-geometry
             artifacts/lighthouse-production-mobile
             artifacts/lighthouse-production-desktop
-          if-no-files-found: warn
+          if-no-files-found: error
           retention-days: 14

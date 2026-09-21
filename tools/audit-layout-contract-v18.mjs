@@ -3,14 +3,14 @@ import fs from 'node:fs';
 const failures=[];
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
-const menuHarmony=fs.readFileSync('assets/css/mega-menu-harmony-v31.css','utf8');
+const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
 const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
-must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27'),'visual repair cache token missing');
-must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27'),'production artifact must parser-discover the same canonical geometry CSS token');
+must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'render-stability cache token missing');
+must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'production artifact must parser-discover the same canonical geometry CSS token');
 must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
 must(boot.includes("window.matchMedia('(min-width:1180px)')"),'desktop footer disclosure breakpoint missing');
 must(boot.includes('details.open = query.matches;'),'footer disclosure state must track viewport');
@@ -27,7 +27,7 @@ const heroV28=fluid.split('HOMEPAGE-HERO-HEIGHT-V28-20260917')[1]||'';
 must(heroV28.includes('--homepage-hero-media-height:39.5604vw'),'tablet homepage hero must be exactly 15% shorter than the 2400x1117 source ratio');
 must(heroV28.includes('--homepage-hero-media-height:clamp(629px,35.7vw,748px)'),'desktop homepage hero must be exactly 15% shorter than the established 740/42vw/880 geometry');
 must(heroV28.includes('--homepage-hero-media-height:561px'),'short-height desktop homepage hero must be exactly 15% shorter than 660px');
-must(!heroV28.includes('>.hero-copy-only'),'V28 must shorten only homepage image/video media, not the following copy panel');
+must(heroV28.includes('>.hero-copy-only'),'V28 must keep the desktop homepage image and copy panels equal in measured height');
 const heroAuthority=authority.visualGeometry?.homepageHeroMedia||{};
 must(heroAuthority.reductionFraction===0.15,'design authority must record the 15% homepage hero media reduction');
 must(heroAuthority.tabletMinPx===621&&heroAuthority.tabletMaxPx===1179,'design authority tablet hero range mismatch');
@@ -35,7 +35,7 @@ must(heroAuthority.desktopMinPx===1180,'design authority desktop hero breakpoint
 must(heroAuthority.tabletHeightVw===39.5604,'design authority tablet hero height mismatch');
 must(heroAuthority.desktopHeight==='clamp(629px,35.7vw,748px)','design authority desktop hero height mismatch');
 must(heroAuthority.shortDesktopHeightPx===561,'design authority short-height desktop hero mismatch');
-must(heroAuthority.copyPanelGeometryUnchanged===true,'design authority must preserve homepage copy-panel geometry');
+must(heroAuthority.copyPanelMatchesMediaHeight===true,'design authority must keep the desktop homepage copy panel equal to the media height');
 for(const rel of ['index.html','hu/index.html','de-at/index.html']){
   const html=fs.readFileSync(rel,'utf8');
   must(html.includes('data-homepage-redesign="stage76"'),`${rel}: homepage geometry scope missing`);
@@ -57,7 +57,7 @@ must(menuAuthority.desktopDescriptionsHidden===true&&menuAuthority.mobileDescrip
 must(menuAuthority.visualTile===false&&menuAuthority.sloganTile===false,'mega menu must remain free of hero image and slogan tiles');
 must(menuAuthority.decorativeSectionArrows===false,'non-functional section arrows must remain disabled');
 must(menuAuthority.mobileTextOnly===true,'mobile mega menu must remain text-first');
-must(boot.includes('/assets/css/mega-menu-harmony-v31.css?v=20260917-menu-harmony-v31'),'menu harmony stylesheet cache token missing from boot loader');
+must(!boot.includes('mega-menu-harmony-v31.css'),'separate menu harmony stylesheet loader returned');
 must(menuHarmony.includes('MEGA-MENU-HARMONY-V31-20260917'),'menu harmony stylesheet authority marker missing');
 must(menuHarmony.includes('.bn-mega-grid::after{content:none!important;display:none!important;}'),'menu visual/slogan pseudo-tile suppression missing');
 must(menuHarmony.includes('.bn-mega-section-head::after{content:none!important;display:none!important;}'),'non-functional mobile arrows are not explicitly suppressed');

@@ -1217,8 +1217,22 @@
     }
   }[locale];
 
-  if (!document.querySelector(".whatsapp-contact") && document.querySelector("main")) {
-    var link = document.createElement("a");
+  var cookieBar = document.querySelector(".cookie");
+  function cookieIsVisible() {
+    return !!(cookieBar && cookieBar.classList.contains("show"));
+  }
+  function syncContactVisibility(contact) {
+    if (!contact) return;
+    var covered = cookieIsVisible();
+    contact.style.visibility = covered ? "hidden" : "";
+    contact.style.pointerEvents = covered ? "none" : "";
+    if (covered) contact.setAttribute("aria-hidden", "true");
+    else contact.removeAttribute("aria-hidden");
+  }
+
+  var link = document.querySelector(".whatsapp-contact");
+  if (!link && document.querySelector("main")) {
+    link = document.createElement("a");
     link.className = "whatsapp-contact";
     link.href = "https://wa.me/4367761655592?text=" + encodeURIComponent(copy.message);
     link.target = "_blank";
@@ -1227,16 +1241,18 @@
     link.title = copy.title;
     link.setAttribute("data-contact-channel", "whatsapp");
     link.innerHTML = '<svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><path d="M16.04 3A12.9 12.9 0 0 0 5 22.58L3.3 29l6.57-1.72A12.93 12.93 0 1 0 16.04 3Zm0 23.52c-1.9 0-3.75-.51-5.37-1.47l-.39-.23-3.9 1.02 1.04-3.8-.25-.4A10.58 10.58 0 1 1 16.04 26.52Zm5.8-7.92c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.31-.82 1.03-1 1.24-.19.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57a9.55 9.55 0 0 1-1.76-2.19c-.18-.32-.02-.49.14-.65.14-.14.32-.37.47-.55.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.36-.26-.62-.52-.54-.71-.55h-.61c-.21 0-.55.08-.84.4-.29.31-1.11 1.08-1.11 2.64s1.14 3.07 1.29 3.28c.16.21 2.23 3.41 5.41 4.78.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.77 2.15-1.51.26-.74.26-1.37.18-1.5-.08-.13-.29-.21-.61-.37Z"/></svg>';
+    // Resolve consent state before insertion so first paint never sees a
+    // visible control that immediately moves or disappears.
+    syncContactVisibility(link);
     document.body.appendChild(link);
+  } else {
+    syncContactVisibility(link);
   }
 
-  var cookieBar = document.querySelector(".cookie");
-  function syncCookieOffset() {
-    document.body.classList.toggle("whatsapp-cookie-visible", !!(cookieBar && cookieBar.classList.contains("show")));
-  }
-  if (cookieBar) {
-    syncCookieOffset();
-    new MutationObserver(syncCookieOffset).observe(cookieBar, {attributes:true, attributeFilter:["class"]});
+  if (cookieBar && link) {
+    new MutationObserver(function () {
+      syncContactVisibility(link);
+    }).observe(cookieBar, {attributes:true, attributeFilter:["class"]});
   }
 })();
 /* EXECUTIVE-WHATSAPP-CONTACT-V1:END */

@@ -21,8 +21,9 @@ const quoteMainScriptRe = /<script[^>]*\bsrc="(\/assets\/js\/main\.js\?v=[^\"]+)
 const megaMenuScriptRe = /<script data-banhalmi-mega-menu="" defer="" src="\/assets\/js\/mega-menu\.js\?v=[^\"]+"><\/script>/g;
 const quotePdfScriptRe = /<script([^>]*?)src="(\/assets\/js\/quote-pdf\.js[^\"]*)"([^>]*)><\/script>/g;
 
-const asyncStyle = '<link rel="preload" as="style" href="$1"/><link rel="stylesheet" href="$1" media="print" onload="this.media=\'all\';this.onload=null"/><noscript><link rel="stylesheet" href="$1"/></noscript>';
-const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260917-visual-repair-v27';
+const synchronousStyle = '<link rel="stylesheet" href="$1"/>';
+const deferredSiteStyleRe = /<link rel="preload" as="style" href="(\/assets\/css\/site\.css[^"]*)"\/><link rel="stylesheet" href="\1" media="print" onload="this\.media='all';this\.onload=null"\/><noscript><link rel="stylesheet" href="\1"\/><\/noscript>/g;
+const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28';
 const fluidRhythmStyle = `<link rel="stylesheet" href="${fluidRhythmHref}" data-fluid-4k-rhythm=""/>`;
 const fluidRhythmLinkRe = /<link\s+rel="stylesheet"\s+href="\/assets\/css\/fluid-4k-rhythm\.css[^\"]*"\s+data-fluid-4k-rhythm=""\s*\/>/g;
 
@@ -53,7 +54,7 @@ function renderExecutivePositioningCopy(rel, html) {
 
 const homeMegaMenuLoader = `<script>(function(){var loading=false,ready=false,pending=false;function replay(){if(!ready||!pending)return;pending=false;var b=document.querySelector('.menu-btn');if(b)setTimeout(function(){b.click();},0);}function load(openAfter){if(openAfter)pending=true;if(ready){replay();return;}if(loading)return;loading=true;var s=document.createElement('script');s.src='/assets/js/mega-menu.js?v=20260810-menu-polish-v65';s.defer=true;s.setAttribute('data-banhalmi-mega-menu','');s.onload=function(){loading=false;ready=true;replay();};s.onerror=function(){loading=false;};document.head.appendChild(s);}document.addEventListener('pointerover',function(e){if(e.target.closest&&e.target.closest('.menu-btn'))load(false);},{passive:true,capture:true});document.addEventListener('focusin',function(e){if(e.target.closest&&e.target.closest('.menu-btn'))load(false);},true);document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('.menu-btn');if(!b||document.getElementById('bn-mega-menu'))return;if(!ready){e.preventDefault();e.stopImmediatePropagation();load(true);}},true);})();</script>`;
 
-const homeRuntimeLoader = `<script>(function(){var loaded=false,timer=null;function load(){if(loaded)return;loaded=true;if(timer)clearTimeout(timer);var s=document.createElement('script');s.src='/assets/js/main.js?v=20260808-mobile100-v2';s.defer=true;document.head.appendChild(s);}['pointerdown','keydown','touchstart'].forEach(function(type){addEventListener(type,load,{once:true,passive:true,capture:true});});timer=setTimeout(load,3000);})();</script>`;
+const homeRuntimeLoader = `<script>(function(){var compactCss=document.createElement('style');compactCss.setAttribute('data-footer-compact-authority','');compactCss.textContent='@media (max-width:1179px){html body .site-footer details.footer-accordion>ul{display:none!important;block-size:0!important;min-block-size:0!important;max-block-size:0!important;overflow:hidden!important;margin:0!important;padding:0!important;visibility:hidden!important}html body .site-footer details.footer-accordion>summary,html body .site-header .nav-submenu>summary,html body details.review-drawer>summary{min-block-size:44px!important;line-height:1.25!important}}';document.head.appendChild(compactCss);var groups=Array.prototype.slice.call(document.querySelectorAll('details.footer-accordion'));var query=matchMedia('(min-width:1180px)');function sync(){groups.forEach(function(details){var compact=!query.matches;details.open=!compact;var list=details.querySelector('ul');if(list){list.hidden=compact;list.style.setProperty('display',compact?'none':'block','important');}});}sync();if(query.addEventListener)query.addEventListener('change',sync);else if(query.addListener)query.addListener(sync);var loaded=false,timer=null;function load(){if(loaded)return;loaded=true;if(timer)clearTimeout(timer);var s=document.createElement('script');s.src='/assets/js/main.js?v=20260808-mobile100-v2';s.defer=true;document.head.appendChild(s);}['pointerdown','keydown','touchstart'].forEach(function(type){addEventListener(type,load,{once:true,passive:true,capture:true});});timer=setTimeout(load,3000);})();</script>`;
 
 function quoteRuntimeLoader(src) {
   const runtimeControls = '.menu-btn,[data-cookie-settings],.info-tip[data-tooltip]';
@@ -72,10 +73,12 @@ for (const file of htmlFiles) {
 
   html = renderExecutivePositioningCopy(rel, html);
 
-  /* The async stylesheet conversion must be idempotent: a later run must not
-     rewrite the <noscript> fallback into nested preload/stylesheet blocks. */
-  if (!isQuote && !isHome && !html.includes('media="print" onload="this.media=\'all\';this.onload=null"')) {
-    html = html.replace(stylesheetRe, asyncStyle);
+  /* Layout CSS is intentionally render-blocking. Deferring the canonical
+     stylesheet painted service pages without their base geometry and then
+     reflowed the entire document when media changed from print to all. */
+  html = html.replace(deferredSiteStyleRe, synchronousStyle);
+  if (/href="\/assets\/css\/site\.css[^"]*"[^>]*media="print"/.test(html)) {
+    throw new Error(`Deferred canonical stylesheet remained in ${rel}`);
   }
 
   /* The geometry stylesheet must be parser-discovered in <head> on every production page.
