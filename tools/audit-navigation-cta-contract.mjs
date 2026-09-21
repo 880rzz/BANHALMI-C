@@ -13,13 +13,10 @@ function isRedirect(h){return /<meta[^>]+http-equiv=["']refresh["']/i.test(h)||(
 function inspect(rel,abs){const h=fs.readFileSync(abs,'utf8');if(isRedirect(h)||!/<main\b/i.test(h))return;const base=origin+routeFor(rel);for(const m of h.matchAll(/<a\b[^>]*>[\s\S]*?<\/a>/gi)){const a=attrs(m[0]);const href=(a.href||'').trim();if(!href)continue;const cls=a.class||'';const isCta=/(?:^|\s)(?:btn|btn-link|cta|button)(?:\s|$)/i.test(cls);if(isCta&&generic.test(text(m[0])))failures.push(`${rel}: generic CTA label “${text(m[0])}”`);if(/^javascript:/i.test(href)||href==='#')failures.push(`${rel}: unsafe/empty navigation target ${href}`);if(/^(?:mailto:|tel:|https?:\/\/|#)/i.test(href)&&!href.startsWith(origin))continue;let u;try{u=new URL(href,base)}catch{failures.push(`${rel}: invalid href ${href}`);continue}if(u.origin!==origin)continue;const pathname=u.pathname;if(legacy.has(pathname)||legacy.has(pathname.replace(/\/$/,'')))failures.push(`${rel}: internal navigation points at legacy redirect source ${pathname}`);if(!existsRoute(pathname))failures.push(`${rel}: unresolved internal navigation ${href} → ${pathname}`)}}
 function walk(d,b=''){for(const e of fs.readdirSync(d,{withFileTypes:true})){if(e.isDirectory()&&skip.has(e.name))continue;const rel=path.posix.join(b,e.name),abs=path.join(d,e.name);if(e.isDirectory())walk(abs,rel);else if(e.isFile()&&e.name.endsWith('.html'))inspect(rel,abs)}}
 walk('.');
-const menuLoader=fs.readFileSync('assets/js/mega-menu.js','utf8');
-const menuCorePath=fs.existsSync('assets/js/mega-menu-v65-base.js')?'assets/js/mega-menu-v65-base.js':'assets/js/mega-menu.js';
-const menu=fs.readFileSync(menuCorePath,'utf8');
-if(menuCorePath!=='assets/js/mega-menu.js'){
-  if(!/mega-menu-v65-base\.js\?v=20260917-[a-z0-9-]+/.test(menuLoader))failures.push('mega-menu loader lost canonical v65 core handoff');
-  if(/mega-menu-harmony-v(?:30|31)\\.css/.test(menuLoader))failures.push('separate mega-menu stylesheet loader returned');
-}
+const menu=fs.readFileSync('assets/js/mega-menu.js','utf8');
+if(menu.includes('mega-menu-v65-base.js'))failures.push('nested mega-menu loader returned');
+if(menu.includes("document.createElement('script')"))failures.push('mega-menu runtime must not create a second navigation script');
+if(/mega-menu-harmony-v(?:30|31)\\.css/.test(menu))failures.push('separate mega-menu stylesheet loader returned');
 for(const token of ['Services','Work','About · Contact','Executive Portraits','Gallery','Art Archive','Partners','Szolgáltatások','Munkák','Rólam · Kapcsolat','Executive portré','Galéria','Művészeti archívum','Partnerek','Leistungen','Arbeiten','Über BANHALMI · Kontakt','Executive-Porträts','Galerie','Kunstarchiv','Partner',"grid.append(svc,main,foot)"])if(!menu.includes(token))failures.push('service-first multilingual navigation token missing: '+token);
 for(const retired of ['Selected Work','Válogatott munkák','Ausgewählte Arbeiten','Books & Exhibitions','Könyvek és kiállítások','Bücher & Ausstellungen',"['/about/','Oeuvre'","['/hu/eletmu/','Életmű'","['/de-at/werk/','Werk'"])if(menu.includes(retired))failures.push('retired primary navigation structure returned: '+retired);
 if(failures.length){console.error('Navigation/CTA contract FAILED:\n'+failures.map(x=>' - '+x).join('\n'));process.exit(1)}
