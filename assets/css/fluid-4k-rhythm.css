@@ -1293,7 +1293,7 @@ html body :is(.eyebrow,.hero-location-line,.more,.fp-choice strong,.fp-choice em
 /* MEGA-MENU-COMPACT-RHYTHM-V35-20260918
    Tightens only vertical menu whitespace; the v31 three-column information architecture remains unchanged. */
 @media (min-width:861px){
-  html body .bn-mega-panel{padding:24px 0 36px!important;}
+  html body .bn-mega-panel{padding:18px 0 30px!important;}
 }
 
 
