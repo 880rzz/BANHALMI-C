@@ -1,0 +1,448 @@
+{
+  "version": "2026-09-22",
+  "status": "AUDITÁLT",
+  "source": {
+    "property": "sc-domain:norbertbanhalmi.com",
+    "settledThrough": "2026-09-19",
+    "baseline28d": [
+      "2026-08-23",
+      "2026-09-19"
+    ],
+    "baseline6m": [
+      "2026-03-24",
+      "2026-09-19"
+    ]
+  },
+  "rules": {
+    "protectTop3": true,
+    "ownerPerCluster": true,
+    "noContentChangeWithoutEvidence": true
+  },
+  "protected": [
+    {
+      "query": "fényképész budapest",
+      "language": "HU",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "position28d": 1.78,
+      "impressions28d": 9,
+      "status": "PROTECTED",
+      "note": "Homepage currently wins; do not retitle/restructure for secondary intent."
+    },
+    {
+      "query": "fotós budapest",
+      "language": "HU",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "position28d": 2.6,
+      "impressions28d": 25,
+      "status": "PROTECTED"
+    },
+    {
+      "query": "profi fotós",
+      "language": "HU",
+      "city": "unspecified",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "position28d": 2.92,
+      "impressions28d": 49,
+      "status": "PROTECTED"
+    },
+    {
+      "query": "budapest fotós",
+      "language": "HU",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "position28d": 2.2,
+      "impressions28d": 5,
+      "status": "PROTECTED"
+    },
+    {
+      "query": "banhalmi",
+      "language": "brand",
+      "city": "unspecified",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "position28d": 2.67,
+      "impressions28d": 3,
+      "status": "PROTECTED"
+    }
+  ],
+  "opportunities": [
+    {
+      "priority": "P1",
+      "query": "event photographer budapest",
+      "cluster": "event",
+      "language": "EN",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/event-photography",
+      "correctUrl": "https://www.norbertbanhalmi.com/event-photography/",
+      "clicks6m": 3,
+      "impressions6m": 193,
+      "position6m": 9.54,
+      "band": "4-10",
+      "cannibalization": "LOW",
+      "action": "Protect content; normalize canonical/slash ownership; improve evidence/internal authority without title churn."
+    },
+    {
+      "priority": "P1",
+      "query": "event photography budapest",
+      "cluster": "event",
+      "language": "EN",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/event-photography",
+      "correctUrl": "https://www.norbertbanhalmi.com/event-photography/",
+      "clicks6m": 0,
+      "impressions6m": 14,
+      "position6m": 8.07,
+      "band": "4-10",
+      "cannibalization": "LOW",
+      "action": "Same owner; protect and strengthen."
+    },
+    {
+      "priority": "P1",
+      "query": "event photographer vienna",
+      "cluster": "event",
+      "language": "EN",
+      "city": "Vienna",
+      "currentUrl": "https://www.norbertbanhalmi.com/event-photography",
+      "correctUrl": "https://www.norbertbanhalmi.com/event-photography/",
+      "clicks6m": 0,
+      "impressions6m": 47,
+      "position6m": 10.21,
+      "band": "~10",
+      "cannibalization": "LOW",
+      "action": "Strengthen Vienna evidence and canonical owner without creating doorway page."
+    },
+    {
+      "priority": "P1",
+      "query": "branding fotografin wien",
+      "cluster": "brand",
+      "language": "DE",
+      "city": "Wien",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "correctUrl": "https://www.norbertbanhalmi.com/de-at/brand/",
+      "clicks6m": 0,
+      "impressions6m": 190,
+      "position6m": 10.33,
+      "band": "~10",
+      "cannibalization": "HIGH",
+      "action": "Investigate why homepage ranks instead of DE brand landing; fix internal/entity/local authority before copy changes."
+    },
+    {
+      "priority": "P1",
+      "query": "branding fotografie wien",
+      "cluster": "brand",
+      "language": "DE",
+      "city": "Wien",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "correctUrl": "https://www.norbertbanhalmi.com/de-at/brand/",
+      "clicks6m": 0,
+      "impressions6m": 158,
+      "position6m": 13.91,
+      "band": "11-20",
+      "cannibalization": "HIGH",
+      "action": "Wrong landing/authority gap investigation."
+    },
+    {
+      "priority": "P1",
+      "query": "portraitfotografie wien",
+      "cluster": "portrait",
+      "language": "DE",
+      "city": "Wien",
+      "currentUrl": "https://www.norbertbanhalmi.com/de-at",
+      "correctUrl": "https://www.norbertbanhalmi.com/de-at/portrait/",
+      "clicks6m": 0,
+      "impressions6m": 116,
+      "position6m": 18.13,
+      "band": "11-20",
+      "cannibalization": "HIGH",
+      "action": "Canonical owner mismatch; investigate legacy slashless and ?lang=de signals plus internal links."
+    },
+    {
+      "priority": "P1",
+      "query": "portraitfotograf wien",
+      "cluster": "portrait",
+      "language": "DE",
+      "city": "Wien",
+      "currentUrl": "https://www.norbertbanhalmi.com/de-at",
+      "correctUrl": "https://www.norbertbanhalmi.com/de-at/portrait/",
+      "clicks6m": 0,
+      "impressions6m": 65,
+      "position6m": 25.55,
+      "band": "20+",
+      "cannibalization": "HIGH",
+      "action": "Architectural owner gap; do not keyword-stuff."
+    },
+    {
+      "priority": "P1",
+      "query": "portré fotózás budapest",
+      "cluster": "portrait",
+      "language": "HU",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "correctUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+      "clicks6m": 0,
+      "impressions6m": 137,
+      "position6m": 13.27,
+      "band": "11-20",
+      "cannibalization": "HIGH",
+      "action": "Homepage outranks intended HU portrait landing; protect generic Top3 homepage terms while strengthening /hu/portre/."
+    },
+    {
+      "priority": "P1",
+      "query": "portréfotózás budapest",
+      "cluster": "portrait",
+      "language": "HU",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "correctUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+      "clicks6m": 0,
+      "impressions6m": 139,
+      "position6m": 20.32,
+      "band": "20+",
+      "cannibalization": "HIGH",
+      "action": "Architectural/service-owner gap."
+    },
+    {
+      "priority": "P1",
+      "query": "üzleti portré budapest",
+      "cluster": "portrait",
+      "language": "HU",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+      "correctUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+      "clicks6m": 0,
+      "impressions6m": 20,
+      "position6m": 17.35,
+      "band": "11-20",
+      "cannibalization": "LOW",
+      "action": "Correct owner; strengthen authority/evidence/internal links."
+    },
+    {
+      "priority": "P1",
+      "query": "budapest headshot",
+      "cluster": "portrait",
+      "language": "EN",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/portrait",
+      "correctUrl": "https://www.norbertbanhalmi.com/portrait/",
+      "clicks6m": 0,
+      "impressions6m": 13,
+      "position6m": 10.54,
+      "band": "~10",
+      "cannibalization": "MEDIUM",
+      "action": "Protect striking-distance owner; normalize slash and strengthen local proof."
+    },
+    {
+      "priority": "P1",
+      "query": "headshot fotózás budapest",
+      "cluster": "portrait",
+      "language": "HU",
+      "city": "Budapest",
+      "currentUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+      "correctUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+      "clicks6m": 0,
+      "impressions6m": 3,
+      "position6m": 10.67,
+      "band": "~10",
+      "cannibalization": "LOW",
+      "action": "Correct owner; low sample, observe before content change."
+    }
+  ],
+  "sixMarket": [
+    {
+      "market": "HU-BUD",
+      "status": "EVIDENCE-AVAILABLE",
+      "primaryGaps": [
+        "portrait owner cannibalization"
+      ],
+      "protected": [
+        "fényképész budapest",
+        "fotós budapest",
+        "budapest fotós"
+      ]
+    },
+    {
+      "market": "HU-VIE",
+      "status": "INPUT-NEM-ELÉRHETŐ",
+      "note": "No sufficiently supported city-intent sample isolated yet."
+    },
+    {
+      "market": "EN-BUD",
+      "status": "EVIDENCE-AVAILABLE",
+      "primaryGaps": [
+        "event striking distance",
+        "headshot owner/slash normalization"
+      ]
+    },
+    {
+      "market": "EN-VIE",
+      "status": "EVIDENCE-AVAILABLE",
+      "primaryGaps": [
+        "event striking distance"
+      ]
+    },
+    {
+      "market": "DE-BUD",
+      "status": "INPUT-NEM-ELÉRHETŐ",
+      "note": "No sufficiently supported German Budapest commercial sample isolated yet."
+    },
+    {
+      "market": "DE-VIE",
+      "status": "EVIDENCE-AVAILABLE",
+      "primaryGaps": [
+        "brand wrong landing",
+        "portrait owner/legacy URL fragmentation"
+      ]
+    }
+  ],
+  "nextActions": [
+    "Run ART live-route/redirect forensic audit for legacy /ajanlatkeres, /blog/tags/*, /post/* and ?lang=de URLs before modifying content.",
+    "Run Professional legacy URL audit for slashless /portrait, /de-at and ?lang=de signals.",
+    "Protect all identified Top-3 branded/generic winners; no title/H1 rewrites on protected URLs.",
+    "Then select the first P1 change that improves owner routing without changing protected page semantics."
+  ],
+  "ecosystemProperties": {
+    "professional": {
+      "property": "sc-domain:norbertbanhalmi.com",
+      "intentOwner": "commercial/professional"
+    },
+    "art": {
+      "property": "sc-domain:banhalmi.art",
+      "intentOwner": "artistic/cultural",
+      "baseline28d": [
+        "2026-08-23",
+        "2026-09-19"
+      ],
+      "settledThrough": "2026-09-19"
+    },
+    "blog": {
+      "property": "https://blog.banhalmi.art/",
+      "intentOwner": "editorial/photography-history",
+      "baseline28d": [
+        "2026-08-23",
+        "2026-09-19"
+      ],
+      "settledThrough": "2026-09-19"
+    }
+  },
+  "ecosystemProtected": [
+    {
+      "property": "ART",
+      "query": "bánhalmi norbert",
+      "url": "https://www.banhalmi.art/hu/",
+      "clicks": 6,
+      "impressions": 35,
+      "position": 1.51,
+      "status": "PROTECTED",
+      "reason": "Strong branded artistic entity result; do not convert ART homepage into commercial service landing."
+    },
+    {
+      "property": "ART",
+      "query": "bánhalmi norbert",
+      "url": "https://www.banhalmi.art/",
+      "clicks": 3,
+      "impressions": 28,
+      "position": 2.46,
+      "status": "PROTECTED"
+    },
+    {
+      "property": "ART",
+      "query": "banhalmi",
+      "url": "https://www.banhalmi.art/hu/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 1,
+      "status": "PROTECTED"
+    },
+    {
+      "property": "BLOG",
+      "query": "bánhalmi norbert",
+      "url": "https://blog.banhalmi.art/",
+      "clicks": 0,
+      "impressions": 25,
+      "position": 1.8,
+      "status": "PROTECTED",
+      "reason": "Editorial entity authority; preserve editorial intent and avoid commercial cannibalization."
+    },
+    {
+      "property": "BLOG",
+      "query": "henri cartier bresson behind the gare saint lazare",
+      "url": "https://blog.banhalmi.art/en/post/henri-cartier-bresson-gare-saint-lazare-1932-1",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1,
+      "status": "PROTECTED",
+      "reason": "Very low sample but exact topical winner; observe, do not churn."
+    }
+  ],
+  "ecosystemFindings": [
+    {
+      "priority": "P0/P1",
+      "property": "ART",
+      "finding": "GSC ART property contains indexed/querying legacy commercial/tag/blog URLs on www.banhalmi.art and also blog.banhalmi.art URLs.",
+      "evidence": [
+        "https://www.banhalmi.art/blog/tags/muveszi-akt-fotozas/",
+        "https://www.banhalmi.art/ajanlatkeres",
+        "https://blog.banhalmi.art/..."
+      ],
+      "action": "Forensic URL ownership audit before any ART content change; distinguish historical index data from current live routes and redirects."
+    },
+    {
+      "priority": "P1",
+      "property": "ART",
+      "finding": "Commercial queries such as 'profi fotózás budapest' still surface legacy ART request/quote URL.",
+      "evidence": {
+        "query": "profi fotózás budapest",
+        "url": "https://www.banhalmi.art/ajanlatkeres",
+        "position": 8,
+        "impressions": 1
+      },
+      "action": "Do not strengthen. Verify live status and migrate/redirect commercial intent to Professional only if current route still exists and evidence supports safe mapping."
+    },
+    {
+      "priority": "P1",
+      "property": "BLOG",
+      "finding": "Blog holds branded Person authority at position ~1.8 while also containing historical portrait/headshot category URLs.",
+      "action": "Protect branded/editorial authority; audit category ownership so Blog supports Professional contextually without becoming transactional owner."
+    },
+    {
+      "priority": "P1",
+      "property": "ART",
+      "finding": "Artistic nude topical authority appears on legacy www.banhalmi.art blog-tag URL at positions ~4.9–8.1.",
+      "evidence": [
+        "művészi aktfotózás",
+        "aktfotózás"
+      ],
+      "action": "Determine intended artistic owner (ART collection vs editorial Blog article/tag) before redirect or internal-link change; avoid sending artistic intent to Professional."
+    }
+  ],
+  "crossSiteOwnership": [
+    {
+      "entityIntent": "Professional/commercial services",
+      "owner": "norbertbanhalmi.com",
+      "supporters": [
+        "banhalmi.art contextual Person/oeuvre bridge",
+        "blog.banhalmi.art contextual editorial bridge"
+      ],
+      "rule": "Support only; ART/Blog must not become transactional service owners."
+    },
+    {
+      "entityIntent": "Fine art / oeuvre / exhibitions",
+      "owner": "banhalmi.art",
+      "supporters": [
+        "norbertbanhalmi.com fine-art bridge",
+        "blog.banhalmi.art relevant editorial articles"
+      ],
+      "rule": "Professional must not duplicate artistic collection intent."
+    },
+    {
+      "entityIntent": "Photography history / editorial research",
+      "owner": "blog.banhalmi.art",
+      "supporters": [
+        "banhalmi.art contextual cultural bridge",
+        "norbertbanhalmi.com Person/authority bridge"
+      ],
+      "rule": "Keep Article/BlogPosting topical ownership on Blog."
+    }
+  ]
+}
