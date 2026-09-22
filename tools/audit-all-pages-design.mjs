@@ -48,7 +48,7 @@ for(const width of widths){
     },{pageMaxPx,structuredMaxPx,structuredBreakpointPx,structuredSelector,touchTargetPx});
     if(r.overflow>1)failures.push(`${rel} @${width}x${height}: document horizontal overflow ${r.overflow}px`);
     if(r.headerHeight&&(r.headerHeight<48||r.headerHeight>110))failures.push(`${rel} @${width}x${height}: header height ${r.headerHeight.toFixed(1)}px`);
-    if(flow.layoutMode==='grid'&&r.bodyDisplay!=='grid')failures.push(`${rel} @${width}x${height}: body document flow is ${r.bodyDisplay}, expected grid`);
+    if(flow.layoutMode&&r.bodyDisplay!==flow.layoutMode)failures.push(`${rel} @${width}x${height}: body document flow is ${r.bodyDisplay}, expected ${flow.layoutMode}`);
     if(flow.documentBackground==='#ffffff'&&r.htmlBackground!=='rgb(255, 255, 255)')failures.push(`${rel} @${width}x${height}: html document floor rendered ${r.htmlBackground}, expected white`);
     if(r.mainRight>width+2)failures.push(`${rel} @${width}x${height}: main escapes viewport (${r.mainRight.toFixed(1)}px)`);
     if(r.footerRight>width+2||r.footerLeft<-2)failures.push(`${rel} @${width}x${height}: footer escapes viewport [${r.footerLeft.toFixed(1)},${r.footerRight.toFixed(1)}]`);
