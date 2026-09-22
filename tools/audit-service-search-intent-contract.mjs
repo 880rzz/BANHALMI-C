@@ -89,3 +89,16 @@ if (errors.length) {
   process.exit(1);
 }
 console.log('BANHALMI service-search contract passed: Portrait, Brand and C-Level Event remain distinct, localised, audience-led and evidence-linked.');
+
+
+const homepageOwnership = [
+  ['index.html', /BANHALMI \| Photography & Visual Positioning \| Vienna–Budapest/i, /Executive Portrait & Brand Photography/i],
+  ['hu/index.html', /BANHALMI \| Fotográfia & vizuális pozicionálás \| Bécs–Budapest/i, /Executive portré & Brand fotózás/i],
+  ['de-at/index.html', /BANHALMI \| Fotografie & visuelle Positionierung \| Wien–Budapest/i, /Executive-Porträts & Brandfotografie/i]
+];
+for (const [file, expectedHubTitle, forbiddenOldTitle] of homepageOwnership) {
+  const html = fs.readFileSync(file,'utf8');
+  const title = extractTitle(html);
+  if (!expectedHubTitle.test(title)) errors.push(`${file}: homepage title must remain a brand/service hub`);
+  if (forbiddenOldTitle.test(title)) errors.push(`${file}: homepage title still competes directly with primary portrait intent`);
+}
