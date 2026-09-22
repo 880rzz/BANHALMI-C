@@ -93,7 +93,6 @@ const serviceEvidenceContracts = [
       'https://www.norbertbanhalmi.com/peter-magyar-circulation-evidence.json',
       'https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/',
       'linkedin-nemanjalazendic',
-      'linkedin-michael-broenner'
     ],
     visibleUrls: [
       'https://www.linkedin.com/posts/nemanjalazendic_strong-banking-sector-can-still-leave-a-financing-activity-7503011271332773888-kuQv',
