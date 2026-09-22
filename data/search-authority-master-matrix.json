@@ -296,9 +296,153 @@
     }
   ],
   "nextActions": [
-    "Do not merge PR #25; homepage metadata is protected by current Top-3 generic HU queries.",
-    "Audit slashless and legacy ?lang=de URL signals before redirects/canonical changes.",
-    "Strengthen intended service owners via internal links, local proof, entity/schema parity before title/H1 rewrites.",
-    "Expand matrix with ART and Blog properties and candidate keyword universe before further content changes."
+    "Run ART live-route/redirect forensic audit for legacy /ajanlatkeres, /blog/tags/*, /post/* and ?lang=de URLs before modifying content.",
+    "Run Professional legacy URL audit for slashless /portrait, /de-at and ?lang=de signals.",
+    "Protect all identified Top-3 branded/generic winners; no title/H1 rewrites on protected URLs.",
+    "Then select the first P1 change that improves owner routing without changing protected page semantics."
+  ],
+  "ecosystemProperties": {
+    "professional": {
+      "property": "sc-domain:norbertbanhalmi.com",
+      "intentOwner": "commercial/professional"
+    },
+    "art": {
+      "property": "sc-domain:banhalmi.art",
+      "intentOwner": "artistic/cultural",
+      "baseline28d": [
+        "2026-08-23",
+        "2026-09-19"
+      ],
+      "settledThrough": "2026-09-19"
+    },
+    "blog": {
+      "property": "https://blog.banhalmi.art/",
+      "intentOwner": "editorial/photography-history",
+      "baseline28d": [
+        "2026-08-23",
+        "2026-09-19"
+      ],
+      "settledThrough": "2026-09-19"
+    }
+  },
+  "ecosystemProtected": [
+    {
+      "property": "ART",
+      "query": "bánhalmi norbert",
+      "url": "https://www.banhalmi.art/hu/",
+      "clicks": 6,
+      "impressions": 35,
+      "position": 1.51,
+      "status": "PROTECTED",
+      "reason": "Strong branded artistic entity result; do not convert ART homepage into commercial service landing."
+    },
+    {
+      "property": "ART",
+      "query": "bánhalmi norbert",
+      "url": "https://www.banhalmi.art/",
+      "clicks": 3,
+      "impressions": 28,
+      "position": 2.46,
+      "status": "PROTECTED"
+    },
+    {
+      "property": "ART",
+      "query": "banhalmi",
+      "url": "https://www.banhalmi.art/hu/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 1,
+      "status": "PROTECTED"
+    },
+    {
+      "property": "BLOG",
+      "query": "bánhalmi norbert",
+      "url": "https://blog.banhalmi.art/",
+      "clicks": 0,
+      "impressions": 25,
+      "position": 1.8,
+      "status": "PROTECTED",
+      "reason": "Editorial entity authority; preserve editorial intent and avoid commercial cannibalization."
+    },
+    {
+      "property": "BLOG",
+      "query": "henri cartier bresson behind the gare saint lazare",
+      "url": "https://blog.banhalmi.art/en/post/henri-cartier-bresson-gare-saint-lazare-1932-1",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1,
+      "status": "PROTECTED",
+      "reason": "Very low sample but exact topical winner; observe, do not churn."
+    }
+  ],
+  "ecosystemFindings": [
+    {
+      "priority": "P0/P1",
+      "property": "ART",
+      "finding": "GSC ART property contains indexed/querying legacy commercial/tag/blog URLs on www.banhalmi.art and also blog.banhalmi.art URLs.",
+      "evidence": [
+        "https://www.banhalmi.art/blog/tags/muveszi-akt-fotozas/",
+        "https://www.banhalmi.art/ajanlatkeres",
+        "https://blog.banhalmi.art/..."
+      ],
+      "action": "Forensic URL ownership audit before any ART content change; distinguish historical index data from current live routes and redirects."
+    },
+    {
+      "priority": "P1",
+      "property": "ART",
+      "finding": "Commercial queries such as 'profi fotózás budapest' still surface legacy ART request/quote URL.",
+      "evidence": {
+        "query": "profi fotózás budapest",
+        "url": "https://www.banhalmi.art/ajanlatkeres",
+        "position": 8,
+        "impressions": 1
+      },
+      "action": "Do not strengthen. Verify live status and migrate/redirect commercial intent to Professional only if current route still exists and evidence supports safe mapping."
+    },
+    {
+      "priority": "P1",
+      "property": "BLOG",
+      "finding": "Blog holds branded Person authority at position ~1.8 while also containing historical portrait/headshot category URLs.",
+      "action": "Protect branded/editorial authority; audit category ownership so Blog supports Professional contextually without becoming transactional owner."
+    },
+    {
+      "priority": "P1",
+      "property": "ART",
+      "finding": "Artistic nude topical authority appears on legacy www.banhalmi.art blog-tag URL at positions ~4.9–8.1.",
+      "evidence": [
+        "művészi aktfotózás",
+        "aktfotózás"
+      ],
+      "action": "Determine intended artistic owner (ART collection vs editorial Blog article/tag) before redirect or internal-link change; avoid sending artistic intent to Professional."
+    }
+  ],
+  "crossSiteOwnership": [
+    {
+      "entityIntent": "Professional/commercial services",
+      "owner": "norbertbanhalmi.com",
+      "supporters": [
+        "banhalmi.art contextual Person/oeuvre bridge",
+        "blog.banhalmi.art contextual editorial bridge"
+      ],
+      "rule": "Support only; ART/Blog must not become transactional service owners."
+    },
+    {
+      "entityIntent": "Fine art / oeuvre / exhibitions",
+      "owner": "banhalmi.art",
+      "supporters": [
+        "norbertbanhalmi.com fine-art bridge",
+        "blog.banhalmi.art relevant editorial articles"
+      ],
+      "rule": "Professional must not duplicate artistic collection intent."
+    },
+    {
+      "entityIntent": "Photography history / editorial research",
+      "owner": "blog.banhalmi.art",
+      "supporters": [
+        "banhalmi.art contextual cultural bridge",
+        "norbertbanhalmi.com Person/authority bridge"
+      ],
+      "rule": "Keep Article/BlogPosting topical ownership on Blog."
+    }
   ]
 }
