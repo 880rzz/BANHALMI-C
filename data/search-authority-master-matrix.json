@@ -1,9 +1,9 @@
 {
-  "version": "2026-09-22",
+  "version": "2026-09-22-v2",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
-    "settledThrough": "2026-09-19",
+    "settledThrough": "2026-09-20",
     "baseline28d": [
       "2026-08-23",
       "2026-09-19"
@@ -444,5 +444,48 @@
       ],
       "rule": "Keep Article/BlogPosting topical ownership on Blog."
     }
-  ]
+  ],
+  "p0Resolved": [
+    {
+      "issue": "depobos historical spam/indexing incident",
+      "property": "sc-domain:norbertbanhalmi.com",
+      "query": "depobos",
+      "current28d": {
+        "startDate": "2026-08-23",
+        "endDate": "2026-09-19",
+        "clicks": 0,
+        "impressions": 0
+      },
+      "status": "PRODUCTION-ELLENŐRZÖTT",
+      "note": "No impressions or clicks in the latest settled 28-day GSC window. Historical long-window data must not be treated as current active contamination."
+    }
+  ],
+  "canonicalServiceOwners": {
+    "portrait": {
+      "en": "https://www.norbertbanhalmi.com/portrait/",
+      "hu": "https://www.norbertbanhalmi.com/hu/portre/",
+      "de-AT": "https://www.norbertbanhalmi.com/de-at/portrait/"
+    },
+    "brand": {
+      "en": "https://www.norbertbanhalmi.com/lifestyle/",
+      "hu": "https://www.norbertbanhalmi.com/hu/brand/",
+      "de-AT": "https://www.norbertbanhalmi.com/de-at/brand/"
+    },
+    "event": {
+      "en": "https://www.norbertbanhalmi.com/event-photography/",
+      "hu": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+      "de-AT": "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+    },
+    "fineArt": {
+      "en": "https://www.norbertbanhalmi.com/glamour/",
+      "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+      "de-AT": "https://www.norbertbanhalmi.com/de-at/fine-art/",
+      "artisticAuthority": "https://www.banhalmi.art/"
+    }
+  },
+  "measurementPolicy": {
+    "minimumStableWindowWeeks": 8,
+    "noChurnDuringMeasurement": true,
+    "exception": "P0/P1 evidence-backed production, indexing, legal, severe entity/schema or revenue-impacting issue"
+  }
 }
