@@ -5,8 +5,7 @@ const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'))
 const audit=fs.readFileSync('tools/audit-all-pages-design.mjs','utf8');
 const restore=fs.readFileSync('tools/restore-production-design-authority.mjs','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
-const menuLoader=fs.readFileSync('assets/js/mega-menu.js','utf8');
-const menuCore=fs.readFileSync(fs.existsSync('assets/js/mega-menu-v65-base.js')?'assets/js/mega-menu-v65-base.js':'assets/js/mega-menu.js','utf8');
+const menuCore=fs.readFileSync('assets/js/mega-menu.js','utf8');
 const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
@@ -15,7 +14,8 @@ must(Number(authority.structuredMaxPx)===1440,'BANHALMI canonical structured can
 must(Number(authority.responsive?.touchTargetPx)===44,'BANHALMI canonical touch target must remain 44px');
 must(Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDesktop)<=0.82,'BANHALMI footer viewport threshold became too permissive');
 must(Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx)<=760,'BANHALMI desktop footer absolute maximum became too permissive');
-must(authority.layout?.documentFlow?.documentBackground==='#202530','BANHALMI document floor must remain aligned with the dark footer to prevent Safari tail exposure');
+must(authority.layout?.documentFlow?.layoutMode==='flex','BANHALMI document flow must preserve the final flex footer model');
+must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI document floor must remain white to prevent dark tail exposure outside the intrinsic footer');
 must(Number(authority.layout?.footer?.desktopColumns)===12,'BANHALMI desktop footer must use the approved 12-track grid');
 must(Number(authority.layout?.footer?.desktopContentRows)===2,'BANHALMI desktop footer content must remain exactly two rows');
 must(Number(authority.layout?.footer?.desktopContactColumns)===2,'BANHALMI desktop footer must keep Vienna and Budapest in separate contact columns');
@@ -57,8 +57,10 @@ const footerV29=fluid.split('FOOTER-TWO-ROW-V29-20260917')[1]||'';
 must(footerV29.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track geometry');
 must(footerV29.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row geometry');
 must(footerV29.includes('word-break:normal!important')&&footerV29.includes('overflow-wrap:normal!important')&&footerV29.includes('hyphens:none!important'),'canonical footer lost no-mid-word-break protection');
-must(/mega-menu-v65-base\.js\?v=20260917-[a-z0-9-]+/.test(menuLoader),'mega-menu loader lost canonical v65 core handoff');
-must(!menuLoader.includes('mega-menu-harmony-v31.css'),'separate v31 menu stylesheet loader returned');
+must(!menuCore.includes('mega-menu-v65-base.js'),'nested mega-menu loader returned');
+must(!menuCore.includes("document.createElement('script')"),'mega-menu runtime must remain single-stage');
+must(!menuCore.includes('mega-menu-harmony-v31.css'),'separate v31 menu stylesheet loader returned');
+must(mega.singleStageRuntime===true&&mega.nestedLoaderAllowed===false,'design authority must lock single-stage mega-menu runtime');
 must(menuHarmony.includes('MEGA-MENU-HARMONY-V31-20260917'),'v31 menu harmony marker missing');
 must(menuHarmony.includes('inset:var(--header-h,72px) 0 auto 0!important'),'desktop mega menu returned to full-screen coverage');
 must(menuHarmony.includes('.bn-mega-grid::after{content:none!important;display:none!important;}'),'menu visual tile suppression missing');

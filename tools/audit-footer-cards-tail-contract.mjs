@@ -22,7 +22,8 @@ must(Number(footer.smallDesktopMinPx)===1180&&Number(footer.smallDesktopMaxPx)==
 must(Number(footer.smallDesktopColumns)===8,'small-desktop footer must use the approved 8-track grid');
 must(Number(footer.smallDesktopContentRows)===2,'small-desktop footer must remain two rows');
 must(footer.smallDesktopOverflowGuard===true,'small-desktop overflow guard must stay enabled');
-must(flow.documentBackground==='#202530','document floor must match dark footer');
+must(flow.layoutMode==='flex','document flow must use the final flex footer model');
+must(flow.documentBackground==='#ffffff','document floor must remain white outside the intrinsic dark footer');
 must(Number(flow.footerAfterDocumentGapMaxPx)===2,'footer-after-document overhang tolerance changed');
 must(Number(flow.footerMaxViewportFractionOnTabletDesktop)<=0.82,'desktop footer viewport fraction became too permissive');
 must(Number(flow.footerAbsoluteMaxPx)<=760,'desktop footer absolute maximum became too permissive');

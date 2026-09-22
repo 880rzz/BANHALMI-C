@@ -33,7 +33,9 @@ must(heroAuthority.reductionFraction===0.15,'design authority must record the 15
 must(heroAuthority.tabletMinPx===621&&heroAuthority.tabletMaxPx===1179,'design authority tablet hero range mismatch');
 must(heroAuthority.desktopMinPx===1180,'design authority desktop hero breakpoint mismatch');
 must(heroAuthority.tabletHeightVw===39.5604,'design authority tablet hero height mismatch');
-must(heroAuthority.desktopHeight==='clamp(629px,35.7vw,748px)','design authority desktop hero height mismatch');
+must(heroAuthority.desktopHeight==='clamp(600px,42.8vw,720px)','design authority desktop hero height mismatch');
+must(fluid.includes('FINAL-LAYOUT-RUNTIME-CLOSURE-20260921'),'final hero/footer runtime closure marker missing');
+must(fluid.includes('height:clamp(600px,42.8vw,720px)!important'),'final desktop hero crop geometry missing');
 must(heroAuthority.shortDesktopHeightPx===561,'design authority short-height desktop hero mismatch');
 must(heroAuthority.desktopLayout==='stacked'&&heroAuthority.copyPanelMatchesMediaHeight===false,'design authority must keep the desktop homepage hero stacked with independent copy height');
 for(const rel of ['index.html','hu/index.html','de-at/index.html']){

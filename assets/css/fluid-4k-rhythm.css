@@ -2476,3 +2476,169 @@ html body .site-footer .footer-accordion li>a{
     font-size:.95rem!important;
   }
 }
+
+
+/* FINAL-LAYOUT-RUNTIME-CLOSURE-20260921 */
+/* Evidence-backed closure for live regressions reported on 2026-09-21.
+   Canonical effects only: no new runtime geometry injection. */
+
+/* 1) Short-page document flow: keep footer intrinsic and anchored to the viewport
+   without allowing the dark document floor to masquerade as footer height. */
+html{background:#fff!important;}
+html body{
+  min-height:100vh!important;
+  min-height:100dvh!important;
+  display:flex!important;
+  flex-direction:column!important;
+  background:#fff!important;
+}
+html body>main,
+html body>#main{
+  flex:1 0 auto!important;
+  width:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+}
+html body>.site-footer{
+  flex:0 0 auto!important;
+  align-self:stretch!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  max-height:none!important;
+  margin-top:auto!important;
+  overflow-x:clip!important;
+}
+
+/* 2) Card/block rhythm: never let adjacent rounded content cells visually fuse. */
+html body main .service-grid,
+html body main .cards-grid{
+  gap:clamp(20px,1.8vw,28px)!important;
+}
+html body main .contact-routing .service-grid{
+  row-gap:clamp(22px,2vw,30px)!important;
+}
+html body main .legal-navigation .service-grid{
+  row-gap:clamp(20px,1.8vw,28px)!important;
+}
+
+/* 3) Review disclosure affordance: restore a clear chevron without relying on
+   the browser-native details marker. */
+html body details.review-drawer>summary{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:16px!important;
+  padding-right:34px!important;
+  cursor:pointer!important;
+  list-style:none!important;
+}
+html body details.review-drawer>summary::-webkit-details-marker{display:none!important;}
+html body details.review-drawer>summary::after{
+  content:""!important;
+  position:absolute!important;
+  right:4px!important;
+  top:50%!important;
+  width:10px!important;
+  height:10px!important;
+  border-right:1.5px solid currentColor!important;
+  border-bottom:1.5px solid currentColor!important;
+  transform:translateY(-65%) rotate(45deg)!important;
+  transform-origin:center!important;
+  transition:transform .18s ease!important;
+  opacity:.78!important;
+}
+html body details.review-drawer[open]>summary::after{
+  transform:translateY(-35%) rotate(225deg)!important;
+}
+
+/* 4) Homepage hero: crop the artwork before the source-image grey tail so the
+   gold sweep transitions directly onto the white copy surface. */
+@media (min-width:1180px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
+    height:clamp(600px,42.8vw,720px)!important;
+    min-height:clamp(600px,42.8vw,720px)!important;
+    max-height:clamp(600px,42.8vw,720px)!important;
+    background:#fff!important;
+    overflow:hidden!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img{
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    background:#fff!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure>picture>img{
+    object-fit:cover!important;
+    object-position:center top!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    background:#fff!important;
+    margin-top:0!important;
+    border-top:0!important;
+  }
+}
+@media (max-width:1179px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    background:#fff!important;
+    overflow:hidden!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    background:#fff!important;
+    margin-top:0!important;
+    border-top:0!important;
+  }
+}
+
+/* 5) Footer desktop harmony: intrinsic vertical rhythm, no studio divider,
+   and no artificial dark floor below ecosystem navigation. */
+@media (min-width:1180px){
+  html body .site-footer{
+    padding:22px 0 14px!important;
+  }
+  html body .site-footer>.wrap{
+    width:min(calc(100% - 72px),1440px)!important;
+    max-width:1440px!important;
+    margin-inline:auto!important;
+  }
+  html body .site-footer .footer-grid{
+    grid-template-columns:repeat(12,minmax(0,1fr))!important;
+    grid-template-rows:auto auto!important;
+    grid-auto-rows:max-content!important;
+    column-gap:clamp(22px,2vw,32px)!important;
+    row-gap:26px!important;
+    align-items:start!important;
+    align-content:start!important;
+  }
+  html body .site-footer .footer-contact-list{
+    column-gap:28px!important;
+  }
+  html body .site-footer .footer-contact-list .footer-studio+.footer-studio{
+    padding-inline-start:0!important;
+    border-inline-start:0!important;
+  }
+  html body .site-footer .footer-bottom{
+    margin-top:18px!important;
+    padding-top:10px!important;
+  }
+  html body .site-footer .banhalmi-ecosystem{
+    margin-top:8px!important;
+    padding-top:8px!important;
+    padding-bottom:0!important;
+  }
+}
+
+
+/* TABLET-HERO-SIGNATURE-CONTRAST-20260922 */
+@media (min-width:621px) and (max-width:1179px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signature-line{
+    color:#1d1d1f!important;
+    text-shadow:none!important;
+  }
+}
