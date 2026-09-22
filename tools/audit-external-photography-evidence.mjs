@@ -167,7 +167,7 @@ for (const contract of serviceEvidenceContracts) {
   for (const url of contract.visibleUrls) {
     fail(html.includes(url), `Visible independent publication evidence missing from ${contract.path}: ${url}`);
   }
-  fail(/"@type":"Service"[sS]*?"isRelatedTo":[/m.test(html), `Service schema evidence relation missing from ${contract.path}`);
+  fail(/"@type":"Service"[\s\S]*?"isRelatedTo":\[/m.test(html), `Service schema evidence relation missing from ${contract.path}`);
 }
 
 console.log(`External photography evidence audit passed: ${records.length} LinkedIn records, ${amcham.length} AmCham records, brand/event authorship boundaries and service evidence links protected.`);
