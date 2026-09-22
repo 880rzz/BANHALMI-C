@@ -84,4 +84,90 @@ for (const record of records) {
   }
 }
 
-console.log(`External photography evidence audit passed: ${records.length} LinkedIn records, ${amcham.length} AmCham records, brand/event authorship boundaries protected.`);
+
+const serviceEvidenceContracts = [
+  {
+    path: 'portrait/index.html',
+    required: [
+      'https://www.norbertbanhalmi.com/external-photography-evidence.json',
+      'https://www.norbertbanhalmi.com/peter-magyar-circulation-evidence.json',
+      'https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/',
+      'linkedin-nemanjalazendic',
+      'linkedin-michael-broenner'
+    ],
+    visibleUrls: [
+      'https://www.linkedin.com/posts/nemanjalazendic_strong-banking-sector-can-still-leave-a-financing-activity-7503011271332773888-kuQv',
+      'https://www.linkedin.com/posts/michael-broenner_the-future-of-trust-how-cybersecurity-activity-7388473288043225088-c2BM'
+    ]
+  },
+  {
+    path: 'hu/portre/index.html',
+    required: [
+      'https://www.norbertbanhalmi.com/external-photography-evidence.json',
+      'https://www.norbertbanhalmi.com/peter-magyar-circulation-evidence.json',
+      'https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/'
+    ],
+    visibleUrls: [
+      'https://www.linkedin.com/posts/nemanjalazendic_strong-banking-sector-can-still-leave-a-financing-activity-7503011271332773888-kuQv',
+      'https://www.linkedin.com/posts/michael-broenner_the-future-of-trust-how-cybersecurity-activity-7388473288043225088-c2BM'
+    ]
+  },
+  {
+    path: 'de-at/portrait/index.html',
+    required: [
+      'https://www.norbertbanhalmi.com/external-photography-evidence.json',
+      'https://www.norbertbanhalmi.com/peter-magyar-circulation-evidence.json',
+      'https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/'
+    ],
+    visibleUrls: [
+      'https://www.linkedin.com/posts/nemanjalazendic_strong-banking-sector-can-still-leave-a-financing-activity-7503011271332773888-kuQv',
+      'https://www.linkedin.com/posts/michael-broenner_the-future-of-trust-how-cybersecurity-activity-7388473288043225088-c2BM'
+    ]
+  },
+  {
+    path: 'event-photography/index.html',
+    required: [
+      'https://www.norbertbanhalmi.com/external-photography-evidence.json',
+      'https://www.norbertbanhalmi.com/press-institutional-evidence.json'
+    ],
+    visibleUrls: [
+      'https://www.linkedin.com/posts/us-embassy-vienna_thank-you-to-everyone-who-joined-activity-7422226435219607553-sk0f',
+      'https://www.linkedin.com/posts/kwwalsh_selectusasummit-ugcPost-7505169409309782017-uTXl'
+    ]
+  },
+  {
+    path: 'hu/rendezvenyfotozas/index.html',
+    required: [
+      'https://www.norbertbanhalmi.com/external-photography-evidence.json',
+      'https://www.norbertbanhalmi.com/press-institutional-evidence.json'
+    ],
+    visibleUrls: [
+      'https://www.linkedin.com/posts/us-embassy-vienna_thank-you-to-everyone-who-joined-activity-7422226435219607553-sk0f',
+      'https://www.linkedin.com/posts/kwwalsh_selectusasummit-ugcPost-7505169409309782017-uTXl'
+    ]
+  },
+  {
+    path: 'de-at/eventfotografie/index.html',
+    required: [
+      'https://www.norbertbanhalmi.com/external-photography-evidence.json',
+      'https://www.norbertbanhalmi.com/press-institutional-evidence.json'
+    ],
+    visibleUrls: [
+      'https://www.linkedin.com/posts/us-embassy-vienna_thank-you-to-everyone-who-joined-activity-7422226435219607553-sk0f',
+      'https://www.linkedin.com/posts/kwwalsh_selectusasummit-ugcPost-7505169409309782017-uTXl'
+    ]
+  }
+];
+
+for (const contract of serviceEvidenceContracts) {
+  const html = fs.readFileSync(contract.path, 'utf8');
+  for (const token of contract.required) {
+    fail(html.includes(token), `Service evidence relation missing from ${contract.path}: ${token}`);
+  }
+  for (const url of contract.visibleUrls) {
+    fail(html.includes(url), `Visible independent publication evidence missing from ${contract.path}: ${url}`);
+  }
+  fail(/"@type":"Service"[sS]*?"isRelatedTo":[/m.test(html), `Service schema evidence relation missing from ${contract.path}`);
+}
+
+console.log(`External photography evidence audit passed: ${records.length} LinkedIn records, ${amcham.length} AmCham records, brand/event authorship boundaries and service evidence links protected.`);
