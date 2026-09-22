@@ -3,7 +3,7 @@
   "@type": "ItemList",
   "@id": "https://www.norbertbanhalmi.com/services.json#services",
   "name": "BANHALMI four principal service areas",
-  "dateModified": "2026-08-17T00:13:00+02:00",
+  "dateModified": "2026-09-22T11:10:00+02:00",
   "numberOfItems": 4,
   "itemListElement": [
     {
@@ -52,8 +52,19 @@
       "serviceType": "Brand Photography",
       "description": "Brand photography and strategic visual positioning for personal brands, teams and organisations that need a coherent visual presence across websites, press, campaigns, recruitment, sales and corporate communication.",
       "provider": {"@id": "https://www.norbertbanhalmi.com/#organization"},
-      "areaServed": ["Vienna", "Budapest", "Austria", "Hungary", "Worldwide"],
+      "areaServed": [
+        {"@type": "City", "name": "Vienna", "alternateName": "Wien", "sameAs": "https://www.wikidata.org/wiki/Q1741"},
+        {"@type": "City", "name": "Budapest", "sameAs": "https://www.wikidata.org/wiki/Q1781"},
+        {"@type": "Country", "name": "Austria"},
+        {"@type": "Country", "name": "Hungary"},
+        "Worldwide"
+      ],
       "url": "https://www.norbertbanhalmi.com/lifestyle/",
+      "localizedUrls": {
+        "en": "https://www.norbertbanhalmi.com/lifestyle/",
+        "hu-HU": "https://www.norbertbanhalmi.com/hu/brand/",
+        "de-AT": "https://www.norbertbanhalmi.com/de-at/brand/"
+      },
       "audience": {"@type": "Audience", "audienceType": "Personal brands, founders, experts, artists, actors, creative professionals, organisations, leadership teams and employer-branding teams"},
       "serviceOutput": "A coherent personal, team or organisational image system that connects portraiture, brand communication and channel use."
     },
