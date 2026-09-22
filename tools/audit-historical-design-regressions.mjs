@@ -14,7 +14,8 @@ must(Number(authority.structuredMaxPx)===1440,'BANHALMI canonical structured can
 must(Number(authority.responsive?.touchTargetPx)===44,'BANHALMI canonical touch target must remain 44px');
 must(Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDesktop)<=0.82,'BANHALMI footer viewport threshold became too permissive');
 must(Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx)<=760,'BANHALMI desktop footer absolute maximum became too permissive');
-must(authority.layout?.documentFlow?.documentBackground==='#202530','BANHALMI document floor must remain aligned with the dark footer to prevent Safari tail exposure');
+must(authority.layout?.documentFlow?.layoutMode==='flex','BANHALMI document flow must preserve the final flex footer model');
+must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI document floor must remain white to prevent dark tail exposure outside the intrinsic footer');
 must(Number(authority.layout?.footer?.desktopColumns)===12,'BANHALMI desktop footer must use the approved 12-track grid');
 must(Number(authority.layout?.footer?.desktopContentRows)===2,'BANHALMI desktop footer content must remain exactly two rows');
 must(Number(authority.layout?.footer?.desktopContactColumns)===2,'BANHALMI desktop footer must keep Vienna and Budapest in separate contact columns');
