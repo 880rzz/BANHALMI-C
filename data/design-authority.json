@@ -109,8 +109,8 @@
       "desktopInternalStudioDivider": false
     },
     "documentFlow": {
-      "layoutMode": "grid",
-      "documentBackground": "#202530",
+      "layoutMode": "flex",
+      "documentBackground": "#ffffff",
       "footerAfterDocumentGapMaxPx": 2,
       "mainToFooterOverlapTolerancePx": 2,
       "footerMaxViewportFractionOnTabletDesktop": 0.82,
