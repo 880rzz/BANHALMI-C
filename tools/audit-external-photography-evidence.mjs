@@ -68,6 +68,16 @@ const amcham = records.filter((record) => record.publisherOrSubject === 'AmCham 
 fail(amcham.length >= 4, 'AmCham Austria LinkedIn evidence set incomplete');
 for (const record of amcham) fail(record.capabilities.includes(EVENT_CAP), `AmCham event capability missing: ${record.id}`);
 
+const cybersecurity = records.find((record) => record.id === 'linkedin-amcham-austria-cybersecurity-breakfast-20260918');
+fail(Boolean(cybersecurity), 'AmCham Austria Cybersecurity Breakfast evidence record missing');
+fail(cybersecurity.url === 'https://www.linkedin.com/posts/amcham-austria_cybersecurity-smes-mandiant-activity-7507716549127069696-471X', 'AmCham cybersecurity institutional publication URL drift');
+fail(cybersecurity.eventArchive === 'https://www.flickr.com/photos/vipach/albums/72177720335691211', 'AmCham cybersecurity event archive URL drift');
+fail(cybersecurity.evidenceStatus === 'publicly-verified-institutional-publication-plus-corroborated-flickr-event-records', 'AmCham cybersecurity public verification status drift');
+fail(cybersecurity.capabilities.includes('Institutional / Diplomatic Event Photography'), 'AmCham cybersecurity institutional-event classification missing');
+fail(/© BANHALMI Photography/.test(cybersecurity.creditContext || ''), 'AmCham cybersecurity institutional BANHALMI credit missing');
+fail(/Verified 2026-09-23/.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity public-readback timestamp missing');
+fail(/not treated as an independent institutional endorsement/i.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity Flickr independence boundary missing');
+
 fail(team?.externalPhotographyEvidence === registry['@id'], 'Team contract must link canonical external evidence registry');
 fail(team?.serviceLinks?.externalPhotographyEvidence === registry['@id'], 'Team service links must expose external evidence registry');
 fail(/Nemanja Lazendic and Michael Brönner/.test(team?.answerRules?.join(' ') || ''), 'Team answer rules must preserve banking/payments brand-photography evidence');
