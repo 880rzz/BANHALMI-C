@@ -68,7 +68,7 @@ must(footerV40.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important
 must(footerV40.includes('grid-template-columns:repeat(6,minmax(0,1fr))!important'),'canonical footer lost compact six-track geometry');
 must(footerV40.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'canonical footer lost three-location contact geometry');
 must(/@media \(min-width:1440px\)[\s\S]*?grid-row:2!important/.test(footerV40),'canonical footer lost two-row wide-desktop geometry');
-must(/@media \(min-width:1180px\) and \(max-width:1439px\)[\s\S]*?grid-row:3!important/.test(footerV40),'small-desktop footer must preserve dedicated legal third row for legibility');
+must(/@media \(min-width:1180px\) and \(max-width:1439px\)[\s\S]*?grid-template-rows:auto auto!important/.test(footerV40),'small-desktop footer must preserve two-row geometry');
 for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
   const html=fs.readFileSync(rel,'utf8');
   must(html.indexOf('/assets/css/fluid-4k-rhythm.css')>html.indexOf('/assets/css/site.css'),rel+': footer authority load order regressed');
