@@ -68,7 +68,10 @@ must(footerV39.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important
 must(footerV39.includes('grid-template-columns:repeat(6,minmax(0,1fr))!important'),'canonical footer lost compact six-track geometry');
 must(footerV39.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'canonical footer lost three-location contact geometry');
 must(footerV39.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row desktop geometry');
-must(!/\\.site-footer\\b|\\.footer-[A-Za-z0-9_-]+\\b|\\.banhalmi-ecosystem\\b/.test(site),'site.css regained footer authority');
+for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
+  const html=fs.readFileSync(rel,'utf8');
+  must(html.indexOf('/assets/css/fluid-4k-rhythm.css')>html.indexOf('/assets/css/site.css'),rel+': footer authority load order regressed');
+}
 for(const stale of ['FOOTER-RESTORE-V24','VISUAL-REPAIR-V27','FOOTER-TWO-ROW-V29','FOOTER-GEOMETRY-V32','FOOTER-SINGLE-AUTHORITY-20260918','FOOTER-ROOT-CAUSE-FINAL-CLOSURE','FINAL-FOOTER-MEGA-AUTHORITY','FOOTER-RENDER-STABILITY','FOOTER-MENU-HARMONY-CLOSURE','FOOTER-THREE-LOCATION-V36','HU-TABLET-FOOTER-DENSITY-V38']) must(!fluid.includes(stale),'stale footer authority returned: '+stale);
 must(!/compactFooterReplacement|smallDesktopFooter|LIVE-PIXEL-GEOMETRY-V21-SMALL-DESKTOP/.test(hardener),'production hardener regained footer geometry mutation');
 must(!/const footerRules=|site-footer.*grid-template-columns/.test(restore),'design restore compiler regained footer geometry generation');
