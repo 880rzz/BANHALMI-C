@@ -49,7 +49,7 @@
         {"@type": "PropertyValue", "name": "Portfolio permission", "value": "Delivery or payment does not automatically grant BANHALMI portfolio or reference rights; a separate permission or valid legal basis is required."},
         {"@type": "PropertyValue", "name": "Storage", "value": "Project files may be retained for a reasonable operational period, but permanent archive storage is not guaranteed and the client must back up delivered files."},
         {"@type": "PropertyValue", "name": "Deletion", "value": "Written deletion requests are handled where applicable, subject to contract, accounting, legal-claim and other valid retention duties."},
-        {"@type": "PropertyValue", "name": "Studios", "value": "Vienna and Budapest are two active operational bases of one enterprise and one project system."},
+        {"@type": "PropertyValue", "name": "Physical business locations", "value": "BANHALMI operates in two cities through three active physical business locations: Vienna Studio (1010), Vienna office/client meeting location (1180), and Budapest Studio (1111). The Vienna office is not a studio."},
         {"@type": "PropertyValue", "name": "Accessibility", "value": "The professional site supports visible keyboard focus, practical interaction targets, invalid-field visibility, reduced motion and forced colours."}
       ]
     },
