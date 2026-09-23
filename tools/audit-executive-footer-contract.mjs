@@ -16,8 +16,9 @@ walk();
 const errors = [];
 const site = fs.readFileSync('assets/css/site.css', 'utf8');
 const fluid = fs.readFileSync('assets/css/fluid-4k-rhythm.css', 'utf8');
+const styles = `${site}\n${fluid}`;
 for (const selector of ['.footer-contact-list .footer-location','.footer-contact-actions','.footer-location-link']) {
-  if (!site.includes(selector)) errors.push(`canonical executive footer selector missing: ${selector}`);
+  if (!styles.includes(selector)) errors.push(`canonical executive footer selector missing: ${selector}`);
 }
 if (!fluid.includes('FOOTER-THREE-LOCATION-V36-20260923')) errors.push('three-location canonical footer authority missing');
 if (!fluid.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important')) errors.push('desktop three-location grid missing');
