@@ -5,7 +5,6 @@ const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'))
 const audit=fs.readFileSync('tools/audit-all-pages-design.mjs','utf8');
 const restore=fs.readFileSync('tools/restore-production-design-authority.mjs','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
-const site=fs.readFileSync('assets/css/site.css','utf8');
 const menuCore=fs.readFileSync('assets/js/mega-menu.js','utf8');
 const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
@@ -22,7 +21,7 @@ must(Number(authority.layout?.footer?.desktopContentRows)===2,'BANHALMI desktop 
 must(Number(authority.layout?.footer?.desktopContactColumns)===3,'BANHALMI desktop footer must keep Vienna studio, Vienna office and Budapest studio in three explicit contact columns');
 must(Number(authority.layout?.footer?.physicalBusinessLocationCount)===3,'BANHALMI footer must expose exactly three active physical business locations');
 must(authority.layout?.footer?.desktopNoMidWordBreaks===true,'BANHALMI desktop footer must prohibit mid-word breaks');
-must(site.includes('html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after')&&site.includes('background:#fff!important;'),'BANHALMI homepage hero gold sweep floor must remain white on EN/HU/DE homepages');
+must(fluid.includes('HOMEPAGE-WHITE-SWEEP-V37-20260923')&&fluid.includes('html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after')&&fluid.includes('background:#fff!important;'),'BANHALMI homepage hero gold sweep floor must remain white on EN/HU/DE homepages');
 must(Number(authority.layout?.footer?.compactDesktopColumns)===6,'BANHALMI compact desktop footer must remain six-column geometry');
 must(Number(authority.layout?.footer?.compactDesktopMinPx)===769,'BANHALMI compact desktop footer must begin at 769px so the 768px tablet contract cannot overlap it');
 must(Number(authority.layout?.footer?.tabletColumns)===6,'BANHALMI tablet footer must remain six-column compact geometry');
