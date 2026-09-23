@@ -2,6 +2,7 @@ import fs from 'node:fs';
 
 const failures=[];
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
+const mainRuntime=fs.readFileSync('assets/js/main.js','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
 const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
@@ -12,8 +13,8 @@ const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'render-stability cache token missing');
 must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'production artifact must parser-discover the same canonical geometry CSS token');
 must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
-must(boot.includes("window.matchMedia('(min-width:1180px)')"),'desktop footer disclosure breakpoint missing');
-must(boot.includes('details.open = query.matches;'),'footer disclosure state must track viewport');
+must(mainRuntime.includes('window.matchMedia("(min-width: 1180px)")'),'desktop footer disclosure breakpoint missing from canonical runtime');
+must(mainRuntime.includes('details.open = !compact;')&&mainRuntime.includes('list.style.setProperty("display", compact ? "none" : "block", "important")'),'footer disclosure state must track viewport in canonical runtime');
 must(!boot.includes('style.textContent'),'runtime must not inject layout CSS');
 must(!boot.includes('--desktop-hero-min'),'runtime must not own hero geometry');
 must(!boot.includes('object-position:center 30%'),'runtime must not own image crop geometry');
