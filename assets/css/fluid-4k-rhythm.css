@@ -1590,7 +1590,7 @@ html body .site-footer .banhalmi-ecosystem a{min-block-size:30px!important;displ
   html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){grid-column:8 / span 2!important;grid-row:1!important;}
   html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]{grid-column:10 / span 3!important;grid-row:1!important;}
   html body .site-footer .footer-grid>div:has(.footer-contact-list){grid-column:1 / span 7!important;grid-row:2!important;}
-  html body .site-footer .footer-grid>details.footer-accordion[data-social-footer]{grid-column:8 / span 2!important;grid-row:2!important;}
+  html body .site-footer .footer-grid>details.footer-accordion[data-social-footer]{grid-column:8 / span 2!important;grid-row:2!important;}\n  html body .site-footer .footer-grid>details.footer-accordion[data-social-footer] ul{grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:14px!important;row-gap:7px!important;}
   html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:10 / span 3!important;grid-row:2!important;}
   html body .site-footer .footer-contact-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:0 clamp(18px,1.7vw,28px)!important;}
   html body .site-footer .footer-phone{white-space:nowrap!important;}
