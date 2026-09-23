@@ -2661,3 +2661,21 @@ html body .site-footer .footer-contact-list .footer-location-profile{display:inl
 html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
   background:#fff!important;
 }
+
+
+/* HU-TABLET-FOOTER-DENSITY-V38-20260923: Hungarian labels and three physical locations need a denser tablet footer at the 768px audit boundary. Desktop two-row authority remains unchanged. */
+@media (min-width:721px) and (max-width:860px){
+  html[lang^="hu"] body .site-footer{padding-top:16px!important;padding-bottom:10px!important;}
+  html[lang^="hu"] body .site-footer>.wrap{inline-size:calc(100% - 40px)!important;}
+  html[lang^="hu"] body .site-footer .footer-grid{row-gap:12px!important;}
+  html[lang^="hu"] body .site-footer .footer-brand-col .footer-entity{margin:6px 0 8px!important;line-height:1.3!important;}
+  html[lang^="hu"] body .site-footer .footer-wko-profile img{height:48px!important;width:auto!important;}
+  html[lang^="hu"] body .site-footer .footer-accordion>summary,
+  html[lang^="hu"] body .site-footer .footer-heading{margin-bottom:6px!important;}
+  html[lang^="hu"] body .site-footer .footer-accordion ul{row-gap:3px!important;}
+  html[lang^="hu"] body .site-footer .footer-contact-list{gap:8px 14px!important;}
+  html[lang^="hu"] body .site-footer .footer-contact-list .footer-location{gap:2px!important;}
+  html[lang^="hu"] body .site-footer .footer-contact-actions{margin-top:8px!important;padding-top:6px!important;gap:5px 14px!important;}
+  html[lang^="hu"] body .site-footer .footer-bottom{margin-top:8px!important;padding-top:6px!important;}
+  html[lang^="hu"] body .site-footer .banhalmi-ecosystem{margin-top:4px!important;padding-top:3px!important;}
+}
