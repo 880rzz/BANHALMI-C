@@ -2599,6 +2599,11 @@ html body details.review-drawer[open]>summary::after{
 /* FOOTER-THREE-LOCATION-V36-20260923
    Root-cause footer authority for two cities / three physical business locations.
    Desktop stays two-row and overflow-safe with three equal location columns. */
+html body .site-footer .footer-contact-list .footer-location{display:grid!important;gap:4px!important;margin:0!important;min-inline-size:0!important;max-inline-size:100%!important;}
+html body .site-footer .footer-contact-list .footer-location+.footer-location{border-color:rgba(245,245,247,.16)!important;}
+html body .site-footer .footer-contact-list .footer-location-note{display:block!important;color:#AEB4C2!important;font-size:.78rem!important;line-height:1.35!important;overflow-wrap:anywhere!important;}
+html body .site-footer .footer-contact-list .footer-location-profile{display:inline-flex!important;align-items:center!important;min-height:28px!important;width:max-content!important;max-width:100%!important;color:#DCC56B!important;font-size:.78rem!important;line-height:1.25!important;white-space:normal!important;overflow-wrap:anywhere!important;}
+
 @media (min-width:621px) and (max-width:1179px){
   html body .site-footer .footer-contact-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px 18px!important;}
   html body .site-footer .footer-contact-list .footer-office{grid-column:1 / -1!important;}
