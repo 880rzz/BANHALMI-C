@@ -76,6 +76,9 @@ fail(cybersecurity.evidenceStatus === 'publicly-verified-institutional-publicati
 fail(cybersecurity.capabilities.includes('Institutional / Diplomatic Event Photography'), 'AmCham cybersecurity institutional-event classification missing');
 fail(/© BANHALMI Photography/.test(cybersecurity.creditContext || ''), 'AmCham cybersecurity institutional BANHALMI credit missing');
 fail(/Verified 2026-09-23/.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity public-readback timestamp missing');
+fail(Array.isArray(cybersecurity.relatedPublications) && cybersecurity.relatedPublications.length >= 2, 'AmCham cybersecurity related publication set incomplete');
+fail(cybersecurity.relatedPublications.some((entry) => entry.url === 'https://www.linkedin.com/posts/share-7483806723514814464-ZpLO/' && entry.publisher === 'Karin Zeltner' && /BANHALMI Photography/.test(entry.creditText || '')), 'Karin Zeltner BANHALMI Photography publication credit missing');
+fail(/Flickr independently exposes/.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity Flickr corroboration wording missing');
 fail(/not treated as an independent institutional endorsement/i.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity Flickr independence boundary missing');
 
 fail(team?.externalPhotographyEvidence === registry['@id'], 'Team contract must link canonical external evidence registry');
