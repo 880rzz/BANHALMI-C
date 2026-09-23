@@ -53,7 +53,7 @@
       "desktopColumnGapMaxPx": 42,
       "desktopRowGapMinPx": 26,
       "desktopRowGapMaxPx": 26,
-      "desktopContactColumns": 2,
+      "desktopContactColumns": 3,
       "desktopTopRowGroups": [
         "brand",
         "services",
@@ -106,7 +106,18 @@
       "canonicalGeometryAuthority": "assets/css/fluid-4k-rhythm.css",
       "separateGeometryStylesheetAllowed": false,
       "runtimeGeometryLoaderAllowed": false,
-      "desktopInternalStudioDivider": false
+      "desktopInternalStudioDivider": false,
+      "desktopContactSpanTracks": 6,
+      "smallDesktopContactSpanTracks": 4,
+      "compactContactColumns": 2,
+      "physicalBusinessLocationCount": 3,
+      "locationRoles": [
+        "vienna-studio",
+        "vienna-office",
+        "budapest-studio"
+      ],
+      "canonicalFinalMarker": "FOOTER-THREE-LOCATION-V36-20260923",
+      "desktopInternalLocationDivider": false
     },
     "documentFlow": {
       "layoutMode": "flex",
