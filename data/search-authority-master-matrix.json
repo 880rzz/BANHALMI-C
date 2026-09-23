@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-23-v6",
+  "version": "2026-09-23-v6+historical-authority-migration-v1",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
@@ -612,5 +612,225 @@
       },
       "rule": "Broad organisational/corporate visual-system intent belongs to Brand Photography. Leadership/team headshot intent belongs to Portrait. Event-specific corporate intent belongs to Event Photography. Do not create a generic corporate doorway page absent stronger city/language demand."
     }
-  ]
+  ],
+  "historicalAuthorityMigration": {
+    "status": "AUDITÁLT",
+    "analysisWindow": {
+      "start": "2025-09-23",
+      "end": "2026-09-20",
+      "settledThrough": "2026-09-20"
+    },
+    "architectureHistory": {
+      "before": "banhalmi.art served the Hungarian Professional + Artist market; norbertbanhalmi.com primarily served the Austrian/Vienna Professional market.",
+      "current": "norbertbanhalmi.com owns current Professional/commercial intent across Budapest and Vienna; banhalmi.art owns artistic oeuvre/fine-art intent; blog.banhalmi.art owns editorial/photography-history authority."
+    },
+    "migrationSignals": {
+      "artImpressionChangePoint": {
+        "date": "2026-07-13",
+        "beforeDailyMean": 256,
+        "afterDailyMean": 86,
+        "changePercent": -66.3
+      },
+      "artClickChangePoint": {
+        "date": "2026-07-19",
+        "beforeDailyMean": 8,
+        "afterDailyMean": 3,
+        "changePercent": -59.8
+      }
+    },
+    "analyticsIntegrity": {
+      "ga4PreSeparation": "MIXED / NEM TISZTA BASELINE",
+      "note": "Professional, ART and Blog shared the same analytics/statistics code until approximately mid-September 2026. Use pre-separation GA4 landing-page data for historical landing reconstruction, not clean property-level attribution. GSC remains the primary query/page authority source."
+    },
+    "statusDefinitions": {
+      "KEEP": "Correct current property still owns the intent.",
+      "PROTECT": "Strong current or historical authority that must not be disturbed without evidence.",
+      "RECOVER": "Valid historical BANHALMI authority exists but the correct current owner has not fully inherited it.",
+      "TRANSFER": "Legacy URL/property authority should be passed to a different current canonical owner.",
+      "SUPPORT": "Secondary content supports the canonical owner without competing.",
+      "DEPRECATE": "Legacy content has no authority worth preserving after evidence review.",
+      "NEW_AUTHORITY": "No meaningful historical BANHALMI authority exists; build from current architecture."
+    },
+    "records": [
+      {
+        "query": "profi fotós",
+        "cluster": "professional-photographer",
+        "language": "hu",
+        "city": "Budapest",
+        "intent": "commercial/entity",
+        "historicalProperty": "banhalmi.art",
+        "historicalUrl": "https://banhalmi.art/",
+        "historicalClicks": 4,
+        "historicalImpressions": 742,
+        "historicalPosition": 1.7493261455525606,
+        "currentProperty": "norbertbanhalmi.com",
+        "currentUrl": "https://www.norbertbanhalmi.com/",
+        "currentImpressions": 111,
+        "currentPosition": 1.981981981981982,
+        "correctOwner": "Professional",
+        "authorityStatus": "PROTECT",
+        "action": "Protect current Top-3 recovery; do not churn title/H1/content while measurement is active."
+      },
+      {
+        "query": "fotós budapest",
+        "cluster": "professional-photographer",
+        "language": "hu",
+        "city": "Budapest",
+        "intent": "commercial/entity",
+        "historicalProperty": "banhalmi.art",
+        "historicalUrl": "https://banhalmi.art/",
+        "historicalClicks": 9,
+        "historicalImpressions": 433,
+        "historicalPosition": 2.7321016166281753,
+        "currentProperty": "norbertbanhalmi.com",
+        "currentUrl": "https://www.norbertbanhalmi.com/",
+        "currentImpressions": 54,
+        "currentPosition": 3.1666666666666665,
+        "correctOwner": "Professional HU ecosystem",
+        "authorityStatus": "RECOVER",
+        "action": "Preserve recovered root-domain authority while strengthening HU ownership through existing architecture; no aggressive title/H1 rewrite."
+      },
+      {
+        "query": "profi fotózás budapest",
+        "cluster": "professional-photography",
+        "language": "hu",
+        "city": "Budapest",
+        "intent": "commercial",
+        "historicalProperty": "banhalmi.art",
+        "historicalUrl": "https://banhalmi.art/",
+        "historicalClicks": 7,
+        "historicalImpressions": 557,
+        "historicalPosition": 4.276481149012567,
+        "currentProperty": "norbertbanhalmi.com",
+        "currentUrl": "https://www.norbertbanhalmi.com/",
+        "currentImpressions": 103,
+        "currentPosition": 4.990291262135923,
+        "correctOwner": "Professional HU ecosystem",
+        "authorityStatus": "RECOVER",
+        "action": "Striking-distance recovery; protect current measurement window."
+      },
+      {
+        "query": "headshot fotózás budapest",
+        "cluster": "headshot-business-portrait",
+        "language": "hu",
+        "city": "Budapest",
+        "intent": "commercial",
+        "historicalProperty": "banhalmi.art",
+        "historicalUrl": "https://www.banhalmi.art/headshot-fotozas",
+        "historicalClicks": 6,
+        "historicalImpressions": 377,
+        "historicalPosition": 5.4190981432360745,
+        "currentProperty": "norbertbanhalmi.com",
+        "currentUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+        "currentImpressions": 3,
+        "currentPosition": 10.666666666666666,
+        "correctOwner": "https://www.norbertbanhalmi.com/hu/portre/",
+        "authorityStatus": "RECOVER",
+        "action": "Preserve legacy route transfer and measure the strengthened Portrait owner before further content change."
+      },
+      {
+        "query": "portfólió fotózás",
+        "cluster": "portfolio-personal-brand",
+        "language": "hu",
+        "city": "Budapest",
+        "intent": "commercial/model-portfolio",
+        "historicalProperty": "banhalmi.art",
+        "historicalUrl": "https://www.banhalmi.art/portfolio-fotozas",
+        "historicalClicks": 11,
+        "historicalImpressions": 841,
+        "historicalPosition": 6.944114149821641,
+        "currentProperty": "norbertbanhalmi.com",
+        "currentUrl": "https://www.norbertbanhalmi.com/hu/brand/",
+        "currentImpressions": 3,
+        "currentPosition": 31.666666666666668,
+        "currentMonthlyTrend": [
+          {
+            "month": "2026-07",
+            "position": 31.67,
+            "impressions": 3
+          },
+          {
+            "month": "2026-08",
+            "position": 14.33,
+            "impressions": 3
+          },
+          {
+            "month": "2026-09",
+            "position": 8.67,
+            "impressions": 3
+          }
+        ],
+        "correctOwner": "Professional Brand / portfolio intent",
+        "authorityStatus": "RECOVER",
+        "action": "Recovery is underway; no churn during active measurement."
+      },
+      {
+        "query": "akt fotózás",
+        "cluster": "artistic-nude",
+        "language": "hu",
+        "city": "Budapest/Hungary",
+        "intent": "artistic/oeuvre",
+        "historicalProperty": "banhalmi.art",
+        "historicalUrl": "https://www.banhalmi.art/muveszi-aktfotozas",
+        "historicalClicks": 174,
+        "historicalImpressions": 1637,
+        "historicalPosition": 3.8912645082467927,
+        "currentProperty": "banhalmi.art",
+        "currentUrl": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+        "correctOwner": "BANHALMI ART",
+        "authorityStatus": "KEEP",
+        "action": "Route the legacy artistic-nude authority to the Ébredés ART hub; current commission CTA continues to Professional."
+      },
+      {
+        "query": "művészi aktfotózás",
+        "cluster": "artistic-nude",
+        "language": "hu",
+        "city": "Hungary",
+        "intent": "artistic/oeuvre",
+        "historicalProperty": "banhalmi.art",
+        "historicalUrl": "https://www.banhalmi.art/muveszi-aktfotozas",
+        "historicalClicks": 3,
+        "historicalImpressions": 133,
+        "historicalPosition": 2.56,
+        "currentProperty": "banhalmi.art",
+        "currentUrl": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+        "correctOwner": "BANHALMI ART",
+        "authorityStatus": "KEEP",
+        "action": "Protect ART artistic authority and keep Professional only as current commission/conversion route."
+      },
+      {
+        "query": "portraitfotografie",
+        "cluster": "portrait",
+        "language": "de-AT",
+        "city": "Wien",
+        "intent": "commercial",
+        "historicalProperty": "norbertbanhalmi.com",
+        "historicalUrlVariants": [
+          "https://www.norbertbanhalmi.com/?lang=de",
+          "https://www.norbertbanhalmi.com/de-at",
+          "https://www.norbertbanhalmi.com/de-at/"
+        ],
+        "historicalSignals": [
+          {
+            "url": "https://www.norbertbanhalmi.com/?lang=de",
+            "impressions": 71,
+            "position": 8.901408450704224
+          },
+          {
+            "url": "https://www.norbertbanhalmi.com/de-at",
+            "impressions": 277,
+            "position": 10.537906137184116
+          },
+          {
+            "url": "https://www.norbertbanhalmi.com/de-at/",
+            "impressions": 269,
+            "position": 10.241635687732343
+          }
+        ],
+        "currentCanonical": "https://www.norbertbanhalmi.com/de-at/",
+        "authorityStatus": "PROTECT",
+        "action": "Historical URL fragmentation is resolved technically: slashless redirects, /de-at/ is indexed, ?lang=de is canonicalized/unknown. Do not churn measured service pages."
+      }
+    ]
+  }
 }
