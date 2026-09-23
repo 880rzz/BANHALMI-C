@@ -61,6 +61,22 @@
   // Footer groups are disclosures on compact screens and full information
   // columns on desktop. Keeping the source of truth here prevents a later
   // script from silently hiding the desktop footer content.
+  // Shared footer authority signal: keep accepted Budapest Artineris artist participation
+  // visible on every localized static page without duplicating page-specific markup logic.
+  var membershipFooter = document.querySelector("details.footer-accordion[data-memberships-footer] ul");
+  if (membershipFooter && !membershipFooter.querySelector('[data-artineris-participation]')) {
+    var artinerisItem = document.createElement("li");
+    var artinerisLink = document.createElement("a");
+    var footerLang = (document.documentElement.lang || "en").toLowerCase();
+    artinerisItem.setAttribute("data-artineris-participation", "artist");
+    artinerisLink.href = "https://budapest.artineris.com/en/artists/?codice=FMRAXT";
+    artinerisLink.target = "_blank";
+    artinerisLink.rel = "me noopener noreferrer";
+    artinerisLink.textContent = footerLang.indexOf("hu") === 0 ? "Budapest Artineris — művész résztvevő" : footerLang.indexOf("de") === 0 ? "Budapest Artineris — Künstler-Teilnahme" : "Budapest Artineris — Artist participant";
+    artinerisItem.appendChild(artinerisLink);
+    membershipFooter.appendChild(artinerisItem);
+  }
+
   var footerAccordions = Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion"));
   if (footerAccordions.length) {
     var footerDesktopQuery = window.matchMedia("(min-width: 1180px)");

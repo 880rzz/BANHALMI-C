@@ -21,7 +21,10 @@
   },
   "geography": {
     "canonicalSource": "https://www.norbertbanhalmi.com/market-geography.json",
-    "primaryStudioMarkets": ["Vienna", "Budapest"],
+    "primaryStudioMarkets": [
+      "Vienna",
+      "Budapest"
+    ],
     "worldwideProjects": true,
     "rule": "Vienna and Budapest are the two primary studio markets and local commercial centres. Agreed projects are available worldwide by travel."
   },
@@ -36,7 +39,18 @@
       "selected documented clients and collaborations",
       "team-led delivery capability"
     ],
-    "selectedClientCollaborationExamples": ["Sony Music", "Red Bull", "Samsung", "Ferrari", "Siemens", "Nike", "Audi", "Coca-Cola", "Microsoft", "European Jewish Congress"],
+    "selectedClientCollaborationExamples": [
+      "Sony Music",
+      "Red Bull",
+      "Samsung",
+      "Ferrari",
+      "Siemens",
+      "Nike",
+      "Audi",
+      "Coca-Cola",
+      "Microsoft",
+      "European Jewish Congress"
+    ],
     "relationshipRule": "A listed logo or name proves inclusion in the selected client/collaboration record only. Do not invent the exact service, date, contract value, current status or endorsement without dedicated evidence."
   },
   "membershipsAndAffiliations": {
@@ -49,9 +63,10 @@
     "artistic": [
       "Magyar Fotóművészek Világszövetsége / World Federation of Hungarian Photographers — membership, since 2026",
       "Pannon Fényképészkör — honorary membership, since 2023",
-      "OM SYSTEM Hungary — official ambassadorship, since 2018"
+      "OM SYSTEM Hungary — official ambassadorship, since 2018",
+      "Budapest Artineris — accepted contemporary-art participant / artist profile, 2026"
     ],
-    "relationshipRule": "Membership, statutory chamber membership, guild affiliation, honorary membership and ambassadorship are separate relationship types. None is automatically a client relationship or paid commission."
+    "relationshipRule": "Membership, statutory chamber membership, guild affiliation, honorary membership, ambassadorship and accepted artistic participation / artist-profile status are separate relationship types. None is automatically a client relationship or paid commission."
   },
   "team": {
     "canonicalSource": "https://www.norbertbanhalmi.com/team-capabilities.json",

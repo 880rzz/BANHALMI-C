@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-23-v39-single-footer-authority",
+  "version": "2026-09-23-v40-footer-composition",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -116,7 +116,7 @@
         "vienna-office",
         "budapest-studio"
       ],
-      "canonicalFinalMarker": "FOOTER-SINGLE-CANONICAL-V39-20260923",
+      "canonicalFinalMarker": "FOOTER-SINGLE-CANONICAL-V40-20260923",
       "desktopInternalLocationDivider": false,
       "singleGeometryAuthorityRequired": true,
       "legacyFooterMutatorsDisabled": true,

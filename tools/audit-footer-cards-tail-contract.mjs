@@ -15,18 +15,18 @@ const flow=authority.layout?.documentFlow||{};
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
 must(footer.canonicalGeometryAuthority==='assets/css/fluid-4k-rhythm.css','footer geometry authority must be fluid-4k-rhythm.css');
-must(footer.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V39-20260923','footer canonical marker drifted');
+must(footer.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V40-20260923','footer canonical marker drifted');
 must(footer.singleGeometryAuthorityRequired===true,'single footer geometry authority lock missing');
 must(footer.legacyFooterMutatorsDisabled===true,'legacy footer mutator lock missing');
 must(footer.runtimeDisclosureAuthority==='assets/js/main.js'&&Number(footer.runtimeDisclosureAuthorityCount)===1,'footer disclosure runtime must have exactly one owner');
 must(Number(footer.physicalBusinessLocationCount)===3,'footer must expose exactly three physical business locations');
 must(JSON.stringify(footer.locationRoles)===JSON.stringify(['vienna-studio','vienna-office','budapest-studio']),'footer location roles drifted');
 must(Number(footer.desktopColumns)===12&&Number(footer.smallDesktopColumns)===8&&Number(footer.tabletColumns)===6,'responsive footer grid authority drifted');
-must(Number(footer.desktopContentRows)===2&&Number(footer.smallDesktopContentRows)===2,'desktop footer must remain two rows');
+must(Number(footer.desktopContentRows)===2&&Number(footer.smallDesktopContentRows)===2,'desktop and small-desktop footer must remain two rows');
 must(flow.layoutMode==='flex'&&flow.documentBackground==='#ffffff','document/footer flow contract drifted');
 must(Number(flow.footerAbsoluteMaxPx)<=760,'footer absolute height guard became too permissive');
 
-must((fluid.match(/FOOTER-SINGLE-CANONICAL-V39-20260923/g)||[]).length===1,'canonical footer authority must occur exactly once');
+must((fluid.match(/FOOTER-SINGLE-CANONICAL-V40-20260923/g)||[]).length===1,'canonical footer authority must occur exactly once');
 for(const stale of ['FOOTER-RESTORE-V24','VISUAL-REPAIR-V27','FOOTER-TWO-ROW-V29','FOOTER-GEOMETRY-V32','FOOTER-SINGLE-AUTHORITY-20260918','FOOTER-ROOT-CAUSE-FINAL-CLOSURE','FINAL-FOOTER-MEGA-AUTHORITY','FOOTER-RENDER-STABILITY','FOOTER-MENU-HARMONY-CLOSURE','FOOTER-THREE-LOCATION-V36','HU-TABLET-FOOTER-DENSITY-V38']){
   must(!fluid.includes(stale),`stale footer authority returned: ${stale}`);
 }
@@ -44,6 +44,7 @@ must(fluid.includes('details.footer-accordion>ul')&&fluid.includes('visibility:h
 must(fluid.includes('overflow-x:clip!important')&&fluid.includes('overflow-wrap:anywhere!important'),'footer containment fallback missing');
 
 must(/footerAccordions/.test(main)&&/style\.setProperty\("display"/.test(main),'assets/js/main.js must own disclosure state and explicit list visibility');
+must(main.includes('data-artineris-participation')&&main.includes('budapest.artineris.com/en/artists/?codice=FMRAXT'),'shared footer must expose verified Budapest Artineris artist participation');
 must(!/footerAccordions|syncFooterGroups|syncFooterAccordions/.test(boot),'fluid rhythm boot must not own footer disclosure state');
 must(!/footerAccordions|syncFooterGroups|syncFooterAccordions/.test(legacyMain),'legacy js/main.js must not own footer disclosure state');
 must(!/compactFooterReplacement|smallDesktopFooter|LIVE-PIXEL-GEOMETRY-V21-SMALL-DESKTOP/.test(hardener),'production hardener must not rewrite footer geometry');
