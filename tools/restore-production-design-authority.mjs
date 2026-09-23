@@ -21,7 +21,7 @@ function replaceOne(css,re,replacement,label){
 function compileDesign(css){
   const d=design.typography.desktop,t=design.typography.tablet,l=design.layout,flow=l.documentFlow||{};
   const touch=Number(design.responsive?.touchTargetPx||44);
-  const nav=design.navigation||{},mega=nav.megaMenu||{},footer=l.footer||{};
+  const nav=design.navigation||{},mega=nav.megaMenu||{};
   const start='/* CANONICAL-DESIGN-SYSTEM-20260827:START',end='/* CANONICAL-DESIGN-SYSTEM-20260827:END */';
   const a=css.indexOf(start),b=css.indexOf(end);
   if(a<0||b<=a) throw new Error('BANHALMI final canonical CSS block missing.');
@@ -42,16 +42,15 @@ function compileDesign(css){
   if(!c.includes(anchor)) throw new Error('BANHALMI canonical responsive anchor missing.');
   c=c.replace(anchor,componentRules+anchor);
 
-  const footerRules=`\nhtml body .site-footer{padding:${Number(footer.paddingTopPx||42)}px 0 ${Number(footer.paddingBottomPx||26)}px!important;}\nhtml body .site-footer .footer-grid{gap:${Number(footer.desktopGapPx||22)}px!important;}\nhtml body .site-footer .footer-accordion>summary{min-height:${Number(footer.summaryMinHeightPx||44)}px!important;padding-block:10px!important;}\nhtml body .site-footer .footer-accordion li{margin-bottom:${Number(footer.linkRowGapPx||10)}px!important;}\n/* Legal identifiers must shrink inside the canonical footer track instead of widening the document. */\nhtml body .site-footer .footer-legal-list{min-width:0!important;max-width:100%!important;}\nhtml body .site-footer .footer-legal-list li{grid-template-columns:minmax(0,58px) minmax(0,1fr)!important;min-width:0!important;}\nhtml body .site-footer .footer-legal-list li>*{min-width:0!important;}\nhtml body .site-footer .footer-legal-list li>strong{white-space:normal!important;overflow-wrap:anywhere!important;word-break:normal!important;}\n@media(min-width:${Number(footer.desktopMinPx||1180)}px){html body .site-footer .footer-grid{grid-template-columns:minmax(220px,2fr) repeat(${Math.max(1,Number(footer.desktopColumns||6)-1)},minmax(0,1fr))!important;gap:${Number(footer.desktopGapPx||22)}px!important;}}\n@media(min-width:${Number(footer.compactDesktopMinPx||1024)}px) and (max-width:${Number(footer.desktopMinPx||1180)-1}px){html body .site-footer .footer-grid{grid-template-columns:repeat(${Number(footer.compactDesktopColumns||4)},minmax(0,1fr))!important;gap:${Number(footer.desktopGapPx||22)}px!important;}html body .site-footer .footer-brand-col{grid-column:span 2!important;}}\n@media(min-width:${Number(footer.tabletMinPx||621)}px) and (max-width:${Number(footer.compactDesktopMinPx||1024)-1}px){html body .site-footer .footer-grid{grid-template-columns:repeat(${Number(footer.tabletColumns||3)},minmax(0,1fr))!important;gap:${Number(footer.tabletGapPx||18)}px!important;}html body .site-footer .footer-brand-col{grid-column:1/-1!important;max-width:none!important;}}\n@media(max-width:${Number(footer.tabletMinPx||621)-1}px){html body .site-footer .footer-grid{grid-template-columns:repeat(${Number(footer.mobileColumns||1)},minmax(0,1fr))!important;gap:0!important;}html body .site-footer .footer-brand-col{grid-column:1/-1!important;}}\n`;
+  /* Footer geometry is owned exclusively by assets/css/fluid-4k-rhythm.css. */
 
   const megaRules=`\n/* Canonical fullscreen menu: screenshot-approved dark editorial layout. */\nhtml body .bn-mega-menu{background:${mega.background||'#202530'}!important;}\nhtml body .bn-mega-panel{width:min(${Number(mega.panelMaxPx||1440)}px,100%)!important;max-width:${Number(mega.panelMaxPx||1440)}px!important;}\nhtml body .bn-mega-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:${Number(mega.desktopColumnGapPx||72)}px!important;}\nhtml body .bn-mega-section-head{border-bottom:1px solid ${mega.sectionRuleColor||'rgba(183,156,68,.34)'}!important;}\nhtml body .bn-mega-link,html body .bn-mega-link:hover,html body .bn-mega-link:focus-visible,html body .bn-mega-link.active,html body .bn-mega-link[aria-current="page"]{border:0!important;border-radius:0!important;box-shadow:none!important;outline:0!important;background:transparent!important;transform:none!important;}\nhtml body .bn-mega-link:focus-visible,html body .bn-mega-link.active,html body .bn-mega-link[aria-current="page"]{text-decoration-line:underline!important;text-decoration-thickness:1px!important;text-underline-offset:.22em!important;text-decoration-color:currentColor!important;}\nhtml body .bn-mega-pricing .bn-mega-link{color:var(--bn-menu-gold)!important;}\n@media(min-width:861px){html body .bn-mega-panel{padding:${Number(mega.desktopTopPaddingPx||86)}px ${Number(mega.desktopSidePaddingPx||88)}px ${Number(mega.desktopBottomPaddingPx||34)}px!important;}}\n@media(max-width:860px){html body .bn-mega-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:2.15rem!important;}}\n@media(max-width:620px){html body .bn-mega-grid{grid-template-columns:1fr!important;gap:2rem!important;}}\n`;
-  c=`${c.trim()}\n${footerRules}\n${megaRules}`;
+  c=`${c.trim()}\n${megaRules}`;
 
   let compiled=before+c+after;
   compiled=replaceOne(compiled,/html\{min-height:100%;background:#202530!important\}/,`html{min-height:100%;background:${flow.documentBackground||'#ffffff'}!important}`,'document background floor');
   compiled=replaceOne(compiled,/body\{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column\}/,`body{min-height:100vh;min-height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--bg,#fff)}`,'document layout mode');
   compiled=replaceOne(compiled,/body>main,#main\{flex:1 0 auto;width:100%;min-width:0\}/,'body>main,#main{width:100%;min-width:0;min-height:0}','main normal-flow contract');
-  compiled=replaceOne(compiled,/body>\.site-footer,\.site-footer\{flex:0 0 auto;width:100%\}/,'body>.site-footer,.site-footer{width:100%;min-height:0}','footer normal-flow contract');
   return compiled;
 }
 
@@ -86,8 +85,6 @@ for(const required of [
   'max-width:var(--apple-structured-max)!important',
   `html body .site-header a{min-height:${Number(design.responsive?.touchTargetPx||44)}px!important`,
   'background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0px!important;',
-  `html body .site-footer{padding:${Number(design.layout.footer?.paddingTopPx||42)}px 0 ${Number(design.layout.footer?.paddingBottomPx||26)}px!important;}`,
-  'html body .site-footer .footer-legal-list{min-width:0!important;max-width:100%!important;}',
   `html body .bn-mega-panel{width:min(${Number(design.navigation?.megaMenu?.panelMaxPx||1440)}px,100%)!important`,
   'html body .bn-mega-link:focus-visible,html body .bn-mega-link.active,html body .bn-mega-link[aria-current="page"]{text-decoration-line:underline!important',
   `html{min-height:100%;background:${design.layout.documentFlow.documentBackground}!important}`,
@@ -96,4 +93,4 @@ for(const required of [
   'body>.site-footer,.site-footer{width:100%;min-height:0}'
 ]) if(!finalCss.includes(required)) throw new Error(`BANHALMI compiled design token missing: ${required}`);
 for(const rel of quotePages){const full=path.join(siteRoot,rel);if(!fs.existsSync(full)||!fs.readFileSync(full,'utf8').includes('/assets/js/private-event-quote.js')) throw new Error(`BANHALMI private-event quote adapter missing from ${rel}.`);}
-console.log(`BANHALMI production design compiled from ${design.version}; ${checked} HTML files checked, ${normalized} artifact HTML file(s) normalized, ${privateInjected} private-event quote adapter injection(s), ${pdfPatched} PDF label patch(es). Standard/structured canvases, ${Number(design.responsive?.touchTargetPx||44)}px header controls, screenshot-approved fullscreen mega-menu, compact responsive footer and normal document flow are active.`);
+console.log(`BANHALMI production design compiled from ${design.version}; ${checked} HTML files checked, ${normalized} artifact HTML file(s) normalized, ${privateInjected} private-event quote adapter injection(s), ${pdfPatched} PDF label patch(es). Standard/structured canvases, ${Number(design.responsive?.touchTargetPx||44)}px header controls, screenshot-approved fullscreen mega-menu, canonical footer geometry remains external and immutable; normal document flow is active.`);
