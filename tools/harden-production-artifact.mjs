@@ -137,7 +137,7 @@ applyLlmCanonicalOverlay(root);
 const fluidCssPath = path.join(root, 'assets/css/fluid-4k-rhythm.css');
 if (!fs.existsSync(fluidCssPath)) throw new Error('Production artifact lost assets/css/fluid-4k-rhythm.css during hardening.');
 let fluidCss = fs.readFileSync(fluidCssPath, 'utf8');
-if ((fluidCss.match(/FOOTER-SINGLE-CANONICAL-V39-20260923/g)||[]).length !== 1) throw new Error('BANHALMI canonical footer authority missing or duplicated during hardening.');
+if ((fluidCss.match(/FOOTER-SINGLE-CANONICAL-V40-20260923/g)||[]).length !== 1) throw new Error('BANHALMI canonical footer authority missing or duplicated during hardening.');
 
 const heroSignatureWhite = 'html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-signature-line{position:absolute;left:clamp(30px,3vw,56px);bottom:clamp(28px,3vw,52px);z-index:3;max-width:34ch!important;margin:0!important;color:#fff;';
 const heroSignatureGold = 'html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-signature-line{position:absolute;left:clamp(30px,3vw,56px);bottom:clamp(28px,3vw,52px);z-index:3;max-width:34ch!important;margin:0!important;color:#B79C44;';
