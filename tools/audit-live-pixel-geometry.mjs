@@ -16,10 +16,13 @@ const megaBottomMax=Number(authority.visualGeometry?.megaMenuBottomWhitespaceMax
 const pages=[
   {lang:'en',kind:'home',pathname:'/'},
   {lang:'en',kind:'portrait',pathname:'/portrait/'},
+  {lang:'en',kind:'brand',pathname:'/lifestyle/'},
   {lang:'hu',kind:'home',pathname:'/hu/'},
   {lang:'hu',kind:'portrait',pathname:'/hu/portre/'},
+  {lang:'hu',kind:'brand',pathname:'/hu/brand/'},
   {lang:'de',kind:'home',pathname:'/de-at/'},
-  {lang:'de',kind:'portrait',pathname:'/de-at/portrait/'}
+  {lang:'de',kind:'portrait',pathname:'/de-at/portrait/'},
+  {lang:'de',kind:'brand',pathname:'/de-at/brand/'}
 ];
 const requiredWidths=[1440,1920,2560,3840];
 const actualWidths=viewports.map(v=>Number(v.width));
