@@ -2655,3 +2655,9 @@ html body .site-footer .footer-contact-list .footer-location-profile{display:inl
     text-shadow:none!important;
   }
 }
+
+
+/* HOMEPAGE-WHITE-SWEEP-V37-20260923: homepage EN/HU/DE keeps the field below the gold sweep white without mutating hashed site.css. */
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
+  background:#fff!important;
+}
