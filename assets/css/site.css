@@ -2651,7 +2651,9 @@ main > section:not(.hero){
 /* Featured historical portrait lightbox references */
 .universal-lightbox-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:8px auto 0;max-width:min(92vw,900px);font-size:13px;line-height:1.4}.universal-lightbox-links[hidden]{display:none}.universal-lightbox-links a{color:#8A681F;text-decoration:none;border-bottom:1px solid rgba(183,156,68,.55)}.universal-lightbox-links a:hover,.universal-lightbox-links a:focus-visible{border-bottom-color:currentColor}.featured-historic-portrait{position:relative}.featured-historic-portrait:after{content:'Featured work';position:absolute;left:12px;bottom:12px;padding:5px 8px;border-radius:999px;background:rgba(0,0,0,.68);color:#fff;font-size:10px;letter-spacing:.08em;text-transform:uppercase;pointer-events:none}@media (max-width:680px){.universal-lightbox-links{font-size:12px;gap:7px 12px}.featured-historic-portrait:after{font-size:9px}}
 
-/* Hero image lower signature sweep — responsive soft-grey band with gold edge */
+/* Hero image lower signature sweep.
+   Homepage authority: white field below the gold edge on EN/HU/DE home.
+   Editorial/service media retain the soft-grey signature sweep. */
 .editorial-hero,
 .hero.hero-image-first .hero-figure,
 .service-hero-image{
@@ -2674,6 +2676,10 @@ main > section:not(.hero){
   border-radius:50% 50% 0 0 / 30% 30% 0 0;
   pointer-events:none;
   transform:translateZ(0);
+}
+
+html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
+  background:#fff!important;
 }
 
 @media (max-width:720px){
