@@ -60,9 +60,9 @@ must(audit.includes("fs.readFileSync('data/design-authority.json','utf8')"),'des
 must(restore.includes('data/design-authority.json'),'production compiler must read canonical design authority');
 must(restore.includes('html body .site-header a{min-height:${touch}px!important'),'production compiler lost 44px header-link closure');
 must(restore.includes('background:transparent!important;border:0!important;box-shadow:none!important;border-radius:${Number(nav.activeRadiusPx||0)}px!important'),'production compiler lost text-only active-navigation closure');
-must(authority.layout?.footer?.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V39-20260923','canonical footer marker drifted');
-must((fluid.match(/FOOTER-SINGLE-CANONICAL-V39-20260923/g)||[]).length===1,'canonical footer authority must occur exactly once');
-const footerV39=fluid.split('FOOTER-SINGLE-CANONICAL-V39-20260923')[1]||'';
+must(authority.layout?.footer?.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V40-20260923','canonical footer marker drifted');
+must((fluid.match(/FOOTER-SINGLE-CANONICAL-V40-20260923/g)||[]).length===1,'canonical footer authority must occur exactly once');
+const footerV39=fluid.split('FOOTER-SINGLE-CANONICAL-V40-20260923')[1]||'';
 must(footerV39.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track wide-desktop geometry');
 must(footerV39.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'canonical footer lost 8-track small-desktop geometry');
 must(footerV39.includes('grid-template-columns:repeat(6,minmax(0,1fr))!important'),'canonical footer lost compact six-track geometry');
