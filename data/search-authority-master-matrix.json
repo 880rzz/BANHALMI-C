@@ -1,12 +1,12 @@
 {
-  "version": "2026-09-22-v2",
+  "version": "2026-09-23-v5",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
     "settledThrough": "2026-09-20",
     "baseline28d": [
-      "2026-08-23",
-      "2026-09-19"
+      "2026-08-24",
+      "2026-09-20"
     ],
     "baseline6m": [
       "2026-03-24",
@@ -80,7 +80,10 @@
       "position6m": 9.54,
       "band": "4-10",
       "cannibalization": "LOW",
-      "action": "Protect content; normalize canonical/slash ownership; improve evidence/internal authority without title churn."
+      "action": "Protect content; normalize canonical/slash ownership; improve evidence/internal authority without title churn.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Verified transatlantic event evidence was connected to the canonical event services after the current GSC settled window. PR #32 / commit ac97573a75f7d3f242dec42cbd1c5962ee64a34c. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -95,7 +98,10 @@
       "position6m": 8.07,
       "band": "4-10",
       "cannibalization": "LOW",
-      "action": "Same owner; protect and strengthen."
+      "action": "Same owner; protect and strengthen.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Verified transatlantic event evidence was connected to the canonical event services after the current GSC settled window. PR #32 / commit ac97573a75f7d3f242dec42cbd1c5962ee64a34c. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -110,7 +116,10 @@
       "position6m": 10.21,
       "band": "~10",
       "cannibalization": "LOW",
-      "action": "Strengthen Vienna evidence and canonical owner without creating doorway page."
+      "action": "Strengthen Vienna evidence and canonical owner without creating doorway page.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Verified Vienna/transatlantic event evidence was connected to the canonical event services after the current GSC settled window. PR #32 / commit ac97573a75f7d3f242dec42cbd1c5962ee64a34c. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -125,7 +134,10 @@
       "position6m": 10.33,
       "band": "~10",
       "cannibalization": "HIGH",
-      "action": "Investigate why homepage ranks instead of DE brand landing; fix internal/entity/local authority before copy changes."
+      "action": "Investigate why homepage ranks instead of DE brand landing; fix internal/entity/local authority before copy changes.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Localized DE/HU brand service ownership was strengthened after the current GSC settled window. PR #29 / commit 14775f334d6eea4feb7e746c086796a69a73b23f. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -140,7 +152,10 @@
       "position6m": 13.91,
       "band": "11-20",
       "cannibalization": "HIGH",
-      "action": "Wrong landing/authority gap investigation."
+      "action": "Wrong landing/authority gap investigation.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Localized DE/HU brand service ownership was strengthened after the current GSC settled window. PR #29 / commit 14775f334d6eea4feb7e746c086796a69a73b23f. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -155,7 +170,10 @@
       "position6m": 18.13,
       "band": "11-20",
       "cannibalization": "HIGH",
-      "action": "Canonical owner mismatch; investigate legacy slashless and ?lang=de signals plus internal links."
+      "action": "Canonical owner mismatch; investigate legacy slashless and ?lang=de signals plus internal links.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Canonical portrait Service + city/entity ownership was strengthened in PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f after the current GSC settled window (through 2026-09-20). Do not churn title/H1/content until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -170,7 +188,10 @@
       "position6m": 25.55,
       "band": "20+",
       "cannibalization": "HIGH",
-      "action": "Architectural owner gap; do not keyword-stuff."
+      "action": "Architectural owner gap; do not keyword-stuff.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Canonical portrait Service + city/entity ownership was strengthened in PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f after the current GSC settled window (through 2026-09-20). Do not churn title/H1/content until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -185,7 +206,10 @@
       "position6m": 13.27,
       "band": "11-20",
       "cannibalization": "HIGH",
-      "action": "Homepage outranks intended HU portrait landing; protect generic Top3 homepage terms while strengthening /hu/portre/."
+      "action": "Homepage outranks intended HU portrait landing; protect generic Top3 homepage terms while strengthening /hu/portre/.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Canonical portrait Service + city/entity ownership was strengthened in PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f after the current GSC settled window (through 2026-09-20). Do not churn title/H1/content until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -200,7 +224,10 @@
       "position6m": 20.32,
       "band": "20+",
       "cannibalization": "HIGH",
-      "action": "Architectural/service-owner gap."
+      "action": "Architectural/service-owner gap.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Canonical portrait Service + city/entity ownership was strengthened in PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f after the current GSC settled window (through 2026-09-20). Do not churn title/H1/content until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -215,7 +242,10 @@
       "position6m": 17.35,
       "band": "11-20",
       "cannibalization": "LOW",
-      "action": "Correct owner; strengthen authority/evidence/internal links."
+      "action": "Correct owner; strengthen authority/evidence/internal links.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Canonical portrait Service + city/entity ownership was strengthened in PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f after the current GSC settled window (through 2026-09-20). Do not churn title/H1/content until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -230,7 +260,10 @@
       "position6m": 10.54,
       "band": "~10",
       "cannibalization": "MEDIUM",
-      "action": "Protect striking-distance owner; normalize slash and strengthen local proof."
+      "action": "Protect striking-distance owner; normalize slash and strengthen local proof.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Canonical portrait Service + city/entity ownership was strengthened in PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f after the current GSC settled window (through 2026-09-20). Do not churn title/H1/content until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -245,7 +278,10 @@
       "position6m": 10.67,
       "band": "~10",
       "cannibalization": "LOW",
-      "action": "Correct owner; low sample, observe before content change."
+      "action": "Correct owner; low sample, observe before content change.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Canonical portrait Service + city/entity ownership was strengthened in PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f after the current GSC settled window (through 2026-09-20). Do not churn title/H1/content until new settled data can measure the change, absent new P0/P1 evidence."
     }
   ],
   "sixMarket": [
@@ -310,19 +346,19 @@
       "property": "sc-domain:banhalmi.art",
       "intentOwner": "artistic/cultural",
       "baseline28d": [
-        "2026-08-23",
-        "2026-09-19"
+        "2026-08-24",
+        "2026-09-20"
       ],
-      "settledThrough": "2026-09-19"
+      "settledThrough": "2026-09-20"
     },
     "blog": {
       "property": "https://blog.banhalmi.art/",
       "intentOwner": "editorial/photography-history",
       "baseline28d": [
-        "2026-08-23",
-        "2026-09-19"
+        "2026-08-24",
+        "2026-09-20"
       ],
-      "settledThrough": "2026-09-19"
+      "settledThrough": "2026-09-20"
     }
   },
   "ecosystemProtected": [
@@ -330,9 +366,9 @@
       "property": "ART",
       "query": "bánhalmi norbert",
       "url": "https://www.banhalmi.art/hu/",
-      "clicks": 6,
-      "impressions": 35,
-      "position": 1.51,
+      "clicks": 7,
+      "impressions": 37,
+      "position": 1.4864864864864864,
       "status": "PROTECTED",
       "reason": "Strong branded artistic entity result; do not convert ART homepage into commercial service landing."
     },
@@ -341,8 +377,8 @@
       "query": "bánhalmi norbert",
       "url": "https://www.banhalmi.art/",
       "clicks": 3,
-      "impressions": 28,
-      "position": 2.46,
+      "impressions": 30,
+      "position": 2.466666666666667,
       "status": "PROTECTED"
     },
     {
@@ -359,8 +395,8 @@
       "query": "bánhalmi norbert",
       "url": "https://blog.banhalmi.art/",
       "clicks": 0,
-      "impressions": 25,
-      "position": 1.8,
+      "impressions": 27,
+      "position": 1.7407407407407407,
       "status": "PROTECTED",
       "reason": "Editorial entity authority; preserve editorial intent and avoid commercial cannibalization."
     },
@@ -487,5 +523,61 @@
     "minimumStableWindowWeeks": 8,
     "noChurnDuringMeasurement": true,
     "exception": "P0/P1 evidence-backed production, indexing, legal, severe entity/schema or revenue-impacting issue"
-  }
+  },
+  "measurementWindows": [
+    {
+      "changeId": "portrait-owner-entity-20260922",
+      "scope": [
+        "https://www.norbertbanhalmi.com/portrait/",
+        "https://www.norbertbanhalmi.com/hu/portre/",
+        "https://www.norbertbanhalmi.com/de-at/portrait/"
+      ],
+      "implementation": "PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f",
+      "measurementStart": "2026-09-22",
+      "baselineSettledThrough": "2026-09-20",
+      "minimumStableWindowWeeks": 8,
+      "status": "MÉRÉS ALATT",
+      "guardrail": "No further title/H1/content/schema ownership edits to these portrait URLs unless new P0/P1 evidence shows a production, indexing, canonical, entity or revenue-impacting fault."
+    },
+    {
+      "changeId": "brand-owner-entity-20260922",
+      "scope": [
+        "https://www.norbertbanhalmi.com/hu/brand/",
+        "https://www.norbertbanhalmi.com/de-at/brand/"
+      ],
+      "implementation": "PR #29 / commit 14775f334d6eea4feb7e746c086796a69a73b23f",
+      "measurementStart": "2026-09-22",
+      "baselineSettledThrough": "2026-09-20",
+      "minimumStableWindowWeeks": 8,
+      "status": "MÉRÉS ALATT",
+      "guardrail": "No further title/H1/content/schema ownership edits to these localized brand URLs unless new P0/P1 evidence shows a production, indexing, canonical, entity or revenue-impacting fault."
+    },
+    {
+      "changeId": "fine-art-owner-entity-20260922",
+      "scope": [
+        "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "https://www.norbertbanhalmi.com/de-at/fine-art/"
+      ],
+      "implementation": "PR #30 / commit 3e69538971a10d990fc43519bd75630a070fe9a2",
+      "measurementStart": "2026-09-22",
+      "baselineSettledThrough": "2026-09-20",
+      "minimumStableWindowWeeks": 8,
+      "status": "MÉRÉS ALATT",
+      "guardrail": "Preserve ART as artistic authority and avoid further localized fine-art ownership churn absent new P0/P1 evidence."
+    },
+    {
+      "changeId": "event-evidence-authority-20260922",
+      "scope": [
+        "https://www.norbertbanhalmi.com/event-photography/",
+        "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+      ],
+      "implementation": "PR #32 / commit ac97573a75f7d3f242dec42cbd1c5962ee64a34c",
+      "measurementStart": "2026-09-22",
+      "baselineSettledThrough": "2026-09-20",
+      "minimumStableWindowWeeks": 8,
+      "status": "MÉRÉS ALATT",
+      "guardrail": "Do not rewrite event service semantics while newly connected U.S. Embassy/SelectUSA/AmCham-style external evidence is entering measurement; only evidence-backed P0/P1 corrections may bypass the lock."
+    }
+  ]
 }
