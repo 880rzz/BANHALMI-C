@@ -62,12 +62,13 @@ must(restore.includes('html body .site-header a{min-height:${touch}px!important'
 must(restore.includes('background:transparent!important;border:0!important;box-shadow:none!important;border-radius:${Number(nav.activeRadiusPx||0)}px!important'),'production compiler lost text-only active-navigation closure');
 must(authority.layout?.footer?.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V40-20260923','canonical footer marker drifted');
 must((fluid.match(/FOOTER-SINGLE-CANONICAL-V40-20260923/g)||[]).length===1,'canonical footer authority must occur exactly once');
-const footerV39=fluid.split('FOOTER-SINGLE-CANONICAL-V40-20260923')[1]||'';
-must(footerV39.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track wide-desktop geometry');
-must(footerV39.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'canonical footer lost 8-track small-desktop geometry');
-must(footerV39.includes('grid-template-columns:repeat(6,minmax(0,1fr))!important'),'canonical footer lost compact six-track geometry');
-must(footerV39.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'canonical footer lost three-location contact geometry');
-must(footerV39.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row desktop geometry');
+const footerV40=fluid.split('FOOTER-SINGLE-CANONICAL-V40-20260923')[1]||'';
+must(footerV40.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track wide-desktop geometry');
+must(footerV40.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'canonical footer lost 8-track small-desktop geometry');
+must(footerV40.includes('grid-template-columns:repeat(6,minmax(0,1fr))!important'),'canonical footer lost compact six-track geometry');
+must(footerV40.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'canonical footer lost three-location contact geometry');
+must(/@media \(min-width:1440px\)[\s\S]*?grid-row:2!important/.test(footerV40),'canonical footer lost two-row wide-desktop geometry');
+must(/@media \(min-width:1180px\) and \(max-width:1439px\)[\s\S]*?grid-row:3!important/.test(footerV40),'small-desktop footer must preserve dedicated legal third row for legibility');
 for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
   const html=fs.readFileSync(rel,'utf8');
   must(html.indexOf('/assets/css/fluid-4k-rhythm.css')>html.indexOf('/assets/css/site.css'),rel+': footer authority load order regressed');
@@ -96,4 +97,4 @@ must(!audit.includes('pageMaxPx=1200'),'stale 1200px canvas may not return to ex
 must(!audit.includes('pageMaxPx=1500'),'stale 1500px canvas may not return to exhaustive audit');
 
 if(failures.length){console.error(`BANHALMI historical design regression guard failed (${failures.length}):`);for(const f of failures)console.error(`- ${f}`);process.exit(1)}
-console.log('BANHALMI historical design regression guard passed: canonical canvases, three-location two-row desktop footer authority, text-first v31 menu geometry, 1440/1920/2560/4K pixel gates and overflow protections are locked.');
+console.log('BANHALMI historical design regression guard passed: canonical canvases, V40 responsive footer authority, text-first v31 menu geometry, 1440/1920/2560/4K pixel gates and overflow protections are locked.');
