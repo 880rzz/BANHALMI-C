@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-23-v5",
+  "version": "2026-09-23-v6",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
@@ -282,6 +282,23 @@
       "status": "MÉRÉS ALATT",
       "measurementStart": "2026-09-22",
       "measurementReason": "Canonical portrait Service + city/entity ownership was strengthened in PR #26 / commit eecd60caeffb6fdefbaebf0b413689d273e2e44f after the current GSC settled window (through 2026-09-20). Do not churn title/H1/content until new settled data can measure the change, absent new P0/P1 evidence."
+    },
+    {
+      "priority": "P1",
+      "query": "corporate photographer",
+      "cluster": "corporate-brand",
+      "language": "EN",
+      "city": "UNSPECIFIED",
+      "currentUrl": "https://www.norbertbanhalmi.com/",
+      "correctUrl": "https://www.norbertbanhalmi.com/lifestyle/",
+      "clicks6m": 0,
+      "impressions6m": 77,
+      "position6m": 20.18,
+      "band": "20+",
+      "cannibalization": "HIGH",
+      "action": "Assign Brand Photography as the canonical owner for broad corporate-photographer intent; use Portrait as support for leadership/team headshots and Event only for event-specific intent. Do not create a doorway page or rewrite active measured service pages without additional city/language evidence.",
+      "status": "AUDITÁLT",
+      "evidence": "GSC 2026-03-24..2026-09-20: homepage 56 impressions at 19.71; legacy ?lang=de 3 at 20.00; /de-at 18 at 21.67. services.json already defines Corporate brand photography under Brand Photography; customer-intent-model routes multi-context organisational image systems to Brand and high-volume headshots to Portrait."
     }
   ],
   "sixMarket": [
@@ -578,6 +595,22 @@
       "minimumStableWindowWeeks": 8,
       "status": "MÉRÉS ALATT",
       "guardrail": "Do not rewrite event service semantics while newly connected U.S. Embassy/SelectUSA/AmCham-style external evidence is entering measurement; only evidence-backed P0/P1 corrections may bypass the lock."
+    }
+  ],
+  "ownershipRules": [
+    {
+      "cluster": "corporate-photographer",
+      "primaryOwner": "https://www.norbertbanhalmi.com/lifestyle/",
+      "localizedOwners": {
+        "en": "https://www.norbertbanhalmi.com/lifestyle/",
+        "hu": "https://www.norbertbanhalmi.com/hu/brand/",
+        "de-AT": "https://www.norbertbanhalmi.com/de-at/brand/"
+      },
+      "support": {
+        "leadershipAndTeamHeadshots": "https://www.norbertbanhalmi.com/portrait/",
+        "corporateEvents": "https://www.norbertbanhalmi.com/event-photography/"
+      },
+      "rule": "Broad organisational/corporate visual-system intent belongs to Brand Photography. Leadership/team headshot intent belongs to Portrait. Event-specific corporate intent belongs to Event Photography. Do not create a generic corporate doorway page absent stronger city/language demand."
     }
   ]
 }
