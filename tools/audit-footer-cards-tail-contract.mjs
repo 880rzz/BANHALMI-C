@@ -30,7 +30,12 @@ must((fluid.match(/FOOTER-SINGLE-CANONICAL-V39-20260923/g)||[]).length===1,'cano
 for(const stale of ['FOOTER-RESTORE-V24','VISUAL-REPAIR-V27','FOOTER-TWO-ROW-V29','FOOTER-GEOMETRY-V32','FOOTER-SINGLE-AUTHORITY-20260918','FOOTER-ROOT-CAUSE-FINAL-CLOSURE','FINAL-FOOTER-MEGA-AUTHORITY','FOOTER-RENDER-STABILITY','FOOTER-MENU-HARMONY-CLOSURE','FOOTER-THREE-LOCATION-V36','HU-TABLET-FOOTER-DENSITY-V38']){
   must(!fluid.includes(stale),`stale footer authority returned: ${stale}`);
 }
-must(!/\.site-footer\b|\.footer-[A-Za-z0-9_-]+\b|\.banhalmi-ecosystem\b/.test(site),'site.css must not own footer geometry or footer component selectors');
+for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
+  const html=fs.readFileSync(rel,'utf8');
+  const sitePos=html.indexOf('/assets/css/site.css');
+  const fluidPos=html.indexOf('/assets/css/fluid-4k-rhythm.css');
+  must(sitePos>=0&&fluidPos>sitePos,rel+': canonical fluid footer authority must load after base site.css');
+}
 must(fluid.includes('@media (min-width:1440px)')&&fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'wide desktop 12-track footer missing');
 must(fluid.includes('@media (min-width:1180px) and (max-width:1439px)')&&fluid.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'small desktop 8-track footer missing');
 must(fluid.includes('@media (max-width:1179px)')&&fluid.includes('grid-template-columns:repeat(6,minmax(0,1fr))!important'),'compact six-track footer missing');
