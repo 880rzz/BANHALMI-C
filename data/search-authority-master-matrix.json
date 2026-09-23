@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-23-v3",
+  "version": "2026-09-23-v4",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
@@ -80,7 +80,10 @@
       "position6m": 9.54,
       "band": "4-10",
       "cannibalization": "LOW",
-      "action": "Protect content; normalize canonical/slash ownership; improve evidence/internal authority without title churn."
+      "action": "Protect content; normalize canonical/slash ownership; improve evidence/internal authority without title churn.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Verified transatlantic event evidence was connected to the canonical event services after the current GSC settled window. PR #32 / commit ac97573a75f7d3f242dec42cbd1c5962ee64a34c. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -95,7 +98,10 @@
       "position6m": 8.07,
       "band": "4-10",
       "cannibalization": "LOW",
-      "action": "Same owner; protect and strengthen."
+      "action": "Same owner; protect and strengthen.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Verified transatlantic event evidence was connected to the canonical event services after the current GSC settled window. PR #32 / commit ac97573a75f7d3f242dec42cbd1c5962ee64a34c. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -110,7 +116,10 @@
       "position6m": 10.21,
       "band": "~10",
       "cannibalization": "LOW",
-      "action": "Strengthen Vienna evidence and canonical owner without creating doorway page."
+      "action": "Strengthen Vienna evidence and canonical owner without creating doorway page.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Verified Vienna/transatlantic event evidence was connected to the canonical event services after the current GSC settled window. PR #32 / commit ac97573a75f7d3f242dec42cbd1c5962ee64a34c. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -125,7 +134,10 @@
       "position6m": 10.33,
       "band": "~10",
       "cannibalization": "HIGH",
-      "action": "Investigate why homepage ranks instead of DE brand landing; fix internal/entity/local authority before copy changes."
+      "action": "Investigate why homepage ranks instead of DE brand landing; fix internal/entity/local authority before copy changes.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Localized DE/HU brand service ownership was strengthened after the current GSC settled window. PR #29 / commit 14775f334d6eea4feb7e746c086796a69a73b23f. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -140,7 +152,10 @@
       "position6m": 13.91,
       "band": "11-20",
       "cannibalization": "HIGH",
-      "action": "Wrong landing/authority gap investigation."
+      "action": "Wrong landing/authority gap investigation.",
+      "status": "MÉRÉS ALATT",
+      "measurementStart": "2026-09-22",
+      "measurementReason": "Localized DE/HU brand service ownership was strengthened after the current GSC settled window. PR #29 / commit 14775f334d6eea4feb7e746c086796a69a73b23f. Do not churn title/H1/content/schema ownership until new settled data can measure the change, absent new P0/P1 evidence."
     },
     {
       "priority": "P1",
@@ -523,6 +538,46 @@
       "minimumStableWindowWeeks": 8,
       "status": "MÉRÉS ALATT",
       "guardrail": "No further title/H1/content/schema ownership edits to these portrait URLs unless new P0/P1 evidence shows a production, indexing, canonical, entity or revenue-impacting fault."
+    },
+    {
+      "changeId": "brand-owner-entity-20260922",
+      "scope": [
+        "https://www.norbertbanhalmi.com/hu/brand/",
+        "https://www.norbertbanhalmi.com/de-at/brand/"
+      ],
+      "implementation": "PR #29 / commit 14775f334d6eea4feb7e746c086796a69a73b23f",
+      "measurementStart": "2026-09-22",
+      "baselineSettledThrough": "2026-09-20",
+      "minimumStableWindowWeeks": 8,
+      "status": "MÉRÉS ALATT",
+      "guardrail": "No further title/H1/content/schema ownership edits to these localized brand URLs unless new P0/P1 evidence shows a production, indexing, canonical, entity or revenue-impacting fault."
+    },
+    {
+      "changeId": "fine-art-owner-entity-20260922",
+      "scope": [
+        "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "https://www.norbertbanhalmi.com/de-at/fine-art/"
+      ],
+      "implementation": "PR #30 / commit 3e69538971a10d990fc43519bd75630a070fe9a2",
+      "measurementStart": "2026-09-22",
+      "baselineSettledThrough": "2026-09-20",
+      "minimumStableWindowWeeks": 8,
+      "status": "MÉRÉS ALATT",
+      "guardrail": "Preserve ART as artistic authority and avoid further localized fine-art ownership churn absent new P0/P1 evidence."
+    },
+    {
+      "changeId": "event-evidence-authority-20260922",
+      "scope": [
+        "https://www.norbertbanhalmi.com/event-photography/",
+        "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+      ],
+      "implementation": "PR #32 / commit ac97573a75f7d3f242dec42cbd1c5962ee64a34c",
+      "measurementStart": "2026-09-22",
+      "baselineSettledThrough": "2026-09-20",
+      "minimumStableWindowWeeks": 8,
+      "status": "MÉRÉS ALATT",
+      "guardrail": "Do not rewrite event service semantics while newly connected U.S. Embassy/SelectUSA/AmCham-style external evidence is entering measurement; only evidence-backed P0/P1 corrections may bypass the lock."
     }
   ]
 }
