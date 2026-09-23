@@ -1528,6 +1528,14 @@ html body .site-footer .footer-grid>div,
 html body .site-footer .footer-grid>details{
   min-inline-size:0!important;
   max-inline-size:100%!important;
+  margin-top:0!important;
+  margin-bottom:0!important;
+}
+html body .site-footer .footer-accordion{margin:0!important;padding:0!important;}
+html body .site-footer .footer-wko-profile{
+  margin:6px 0 0!important;
+  padding:4px 6px!important;
+  min-height:0!important;
 }
 html body .site-footer .brand{color:#fff!important;margin-bottom:8px!important;}
 html body .site-footer .footer-entity{
@@ -1665,7 +1673,7 @@ html body .site-footer .banhalmi-ecosystem a{
   html body .site-footer{padding:14px 0 9px!important;}
   html body .site-footer .footer-grid{
     grid-template-columns:repeat(6,minmax(0,1fr))!important;
-    grid-template-rows:auto auto auto!important;
+    grid-template-rows:auto auto!important;
     column-gap:12px!important;
     row-gap:8px!important;
   }
@@ -1675,8 +1683,8 @@ html body .site-footer .banhalmi-ecosystem a{
   html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){grid-column:5 / span 2!important;grid-row:1!important;}
   html body .site-footer .footer-grid>div:has(.footer-contact-list){grid-column:1 / span 3!important;grid-row:2!important;}
   html body .site-footer .footer-grid>details.footer-accordion[data-social-footer]{grid-column:4!important;grid-row:2!important;}
-  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]{grid-column:5 / span 2!important;grid-row:2!important;}
-  html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:1 / span 2!important;grid-row:3!important;}
+  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]{grid-column:5!important;grid-row:2!important;}
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:6!important;grid-row:2!important;}
   html body .site-footer details.footer-accordion>ul{
     display:none!important;
     block-size:0!important;
@@ -1688,10 +1696,24 @@ html body .site-footer .banhalmi-ecosystem a{
     visibility:hidden!important;
   }
   html body .site-footer .footer-contact-list{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
-    gap:7px 14px!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:0 12px!important;
   }
-  html body .site-footer .footer-contact-list .footer-office{grid-column:1 / -1!important;}
+  html body .site-footer .footer-contact-list .footer-office{grid-column:auto!important;}
+  html body .site-footer .footer-legal-list{row-gap:3px!important;}
+  html body .site-footer .footer-legal-list li{
+    grid-template-columns:1fr!important;
+    gap:1px!important;
+    font-size:.72rem!important;
+    line-height:1.22!important;
+  }
+  html body .site-footer .footer-contact-list :is(.footer-address,.footer-location-note,.footer-location-profile,.footer-phone){
+    font-size:.73rem!important;
+    line-height:1.25!important;
+  }
+  html body .site-footer .footer-contact-actions{margin-top:6px!important;padding-top:5px!important;gap:4px 10px!important;}
+  html body .site-footer .footer-bottom{margin-top:6px!important;padding-top:5px!important;}
+  html body .site-footer .banhalmi-ecosystem{margin-top:3px!important;padding-top:3px!important;}
   html[lang^="hu"] body .site-footer .footer-grid{row-gap:6px!important;}
   html[lang^="hu"] body .site-footer .footer-entity{margin:4px 0 6px!important;line-height:1.3!important;}
   html[lang^="hu"] body .site-footer .footer-contact-actions{margin-top:6px!important;padding-top:5px!important;}
