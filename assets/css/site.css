@@ -1,4 +1,3 @@
-
 /* === SOURCE: style.css === */
 /* NORBERTBANHALMI.COM — quiet Apple-like editorial
    Palette: snow white, black, champagne gold */
@@ -259,22 +258,6 @@ main>section{padding:72px 0;}
 .legal p,.legal li{color:var(--graphite);font-size:1rem;}
 .note-panel{background:var(--bg-alt);border-left:3px solid var(--gold);padding:14px 18px;font-size:0.92rem;color:var(--muted);border-radius:0 4px 4px 0;margin:18px 0;}
 
-/* ---------- Footer ---------- */
-.site-footer{background:#202530;color:#AEB4C2;padding:58px 0 30px;font-size:0.92rem;}
-.footer-grid{display:grid;grid-template-columns:minmax(240px,2fr) repeat(5,minmax(135px,1fr));gap:30px;align-items:start;}
-@media (max-width:820px){.footer-grid{grid-template-columns:1fr 1fr;gap:28px;}}
-@media (max-width:480px){.footer-grid{grid-template-columns:1fr;}}
-.site-footer .brand{color:#fff;display:block;margin-bottom:14px;}
-.site-footer h3{color:#fff;font-size:0.8rem;letter-spacing:-0.004em;margin:0 0 14px;font-weight:500;opacity:.92;}
-.site-footer ul{list-style:none;margin:0;padding:0;}
-.site-footer li{margin-bottom:10px;}
-.site-footer a{color:#9AA1B2;}
-.site-footer a:hover{color:#fff;}
-.footer-bottom{border-top:1px solid #243049;margin-top:46px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#6E7689;font-size:0.82rem;}
-.footer-bottom a{color:#6E7689;}
-.footer-bottom a:hover{color:#9AA1B2;}
-.footer-entity{color:#6E7689;font-size:0.84rem;max-width:46ch;line-height:1.55;}
-
 /* ---------- Breadcrumb ---------- */
 .crumb{font-size:0.82rem;color:var(--muted);padding-top:30px;letter-spacing:-0.006em;}
 .crumb a{color:var(--muted);}
@@ -453,17 +436,8 @@ main>section{padding:72px 0;}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;}
 .brand-logo{width:26px;height:26px;display:inline-block;object-fit:contain;}
 .brand-word{letter-spacing:.12em;}
-.site-footer .brand-logo{filter:invert(1);opacity:.92;}
-.site-footer .brand-word{color:#fff;}
 .hero-figure,.editorial-hero{background:#eee;border-color:rgba(22,32,58,.08);}
 .editorial-hero img{width:100%;height:auto;max-height:none;object-fit:contain;background:#eee;}
-.footer-since{display:block;margin-top:10px;color:#fff;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;}
-
-.footer-brand-col{max-width:360px;}
-.footer-contact-list strong,.footer-legal-list strong{color:#fff;font-weight:500;}
-.footer-legal-list span{display:inline-block;min-width:74px;color:#7C8495;}
-.footer-contact-list li{line-height:1.55;}
-@media (max-width:1080px){.footer-grid{grid-template-columns:1.4fr 1fr 1fr;}}
 
 
 /* Phase 8 — guided quote builder */
@@ -535,17 +509,6 @@ main>section{padding:72px 0;}
 .check-list li::before{
   background:var(--gold-deep);
 }
-.footer-brand-col .brand-word,
-.site-footer h3,
-.footer-since{
-  color:var(--gold-deep);
-}
-.site-footer{
-  border-top:1px solid var(--gold-line);
-}
-.footer-bottom{
-  border-top:1px solid var(--gold-line);
-}
 .btn-link{
   color:var(--gold-deep);
 }
@@ -555,46 +518,6 @@ main>section{padding:72px 0;}
 ::selection{
   background:var(--gold-soft);
   color:var(--ink);
-}
-
-
-/* Phase 11 — footer link clarity / Apple-style interaction */
-.site-footer a,
-.site-footer a:visited,
-.footer-bottom a,
-.footer-bottom a:visited{
-  color:#FFFFFF;
-  text-decoration:none;
-  transition:color .24s ease, transform .24s ease, opacity .24s ease;
-}
-.site-footer a:hover,
-.site-footer a:focus-visible,
-.footer-bottom a:hover,
-.footer-bottom a:focus-visible{
-  color:var(--gold-deep);
-  opacity:1;
-}
-.site-footer a:focus-visible,
-.footer-bottom a:focus-visible{
-  outline:1px solid var(--gold-deep);
-  outline-offset:3px;
-  border-radius:4px;
-}
-.site-footer li a{
-  display:inline-block;
-}
-.site-footer li a:hover{
-  transform:translateX(2px);
-}
-.site-footer span,
-.footer-entity,
-.footer-contact-list li,
-.footer-legal-list li{
-  color:#AEB4C2;
-}
-.footer-contact-list strong,
-.footer-legal-list strong{
-  color:#FFFFFF;
 }
 
 
@@ -617,126 +540,9 @@ main>section{padding:72px 0;}
   .editorial-hero .hero-center-logo{width:clamp(48px,15vw,86px);opacity:.22;}
 }
 
-
-/* Production 3.0 Phase 14 — footer spacing and brand-logo breathing room */
-.site-footer .wrap{
-  max-width:1440px;
-}
-.site-footer{
-  padding-top:76px;
-}
-.footer-grid{
-  grid-template-columns:
-    minmax(280px,1.45fr)
-    minmax(185px,.95fr)
-    minmax(175px,.9fr)
-    minmax(205px,1fr)
-    minmax(205px,1fr)
-    minmax(160px,.8fr)
-    minmax(230px,1fr);
-  column-gap:clamp(44px,4.4vw,82px);
-  row-gap:54px;
-}
-.site-footer .brand{
-  display:inline-flex;
-  align-items:center;
-  gap:18px;
-  margin-bottom:26px;
-}
-.site-footer .brand-logo{
-  flex:0 0 auto;
-}
-.site-footer .brand-word{
-  padding-left:2px;
-  letter-spacing:.14em;
-}
-.footer-brand-col{
-  max-width:390px;
-}
-.site-footer h3{
-  margin-bottom:18px;
-}
-.site-footer li{
-  margin-bottom:13px;
-}
-@media (max-width:1280px){
-  .site-footer .wrap{max-width:1120px;}
-  .footer-grid{
-    grid-template-columns:minmax(260px,1.35fr) repeat(3,minmax(180px,1fr));
-    column-gap:56px;
-    row-gap:48px;
-  }
-}
-@media (max-width:860px){
-  .footer-grid{
-    grid-template-columns:1fr 1fr;
-    column-gap:42px;
-    row-gap:40px;
-  }
-}
-@media (max-width:560px){
-  .site-footer{padding-top:56px;}
-  .footer-grid{grid-template-columns:1fr;row-gap:34px;}
-}
-
-/* Production 3.0 Phase 15 — responsive footer grid + editorial bullets
-   Goal: the footer must breathe on desktop and collapse cleanly on tablet/mobile. */
-.site-footer .wrap{
-  max-width:min(1480px, calc(100vw - 56px));
-}
-.site-footer{
-  padding-top:clamp(58px,7vw,88px);
-}
-.footer-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(min(225px,100%),1fr));
-  column-gap:clamp(52px,5.6vw,96px);
-  row-gap:clamp(36px,4.2vw,62px);
-  align-items:start;
-}
-@media (min-width:1180px){
-  
-}
-
-
-
-
-
-
-
-
-
-/* Footer link accordions — collapsible columns so the many footer links
-   stay tidy instead of competing for attention all at once. */
-
-
-
-
-
-
-
-
-@media (prefers-reduced-motion: reduce){
-  
-}
-
-@media (max-width:920px){
-  
-  
-  
-}
-@media (max-width:620px){
-  
-  
-  
-  
-  
-}
-
 /* Phase 16 — Apple-like hero image placement
    The signature hero image appears first, immediately below the header,
    with the copy following underneath. This keeps the page visual, quiet and premium. */
-
 
 
 @media (max-width:720px){
@@ -746,10 +552,6 @@ main>section{padding:72px 0;}
 
 /* Phase 17 — homepage-only full-bleed hero image under the header.
    Subpages keep the editorial text hero without the signature image. */
-
-
-
-
 
 
 @media (prefers-reduced-motion: reduce){
@@ -764,24 +566,11 @@ main>section{padding:72px 0;}
   
   
 }
-@media (hover:none) and (prefers-reduced-motion: no-preference){
-  
-  
-}
-@media (max-width:720px){
-  
-  
-}
 
 /* Phase 18 — curated portrait references */
 
 
-
-
-
-
 @media (min-width:960px){}
-@media (max-width:720px){}
 
 /* Phase 21 service exhibitions */
 @media (max-width:760px){}
@@ -789,45 +578,16 @@ main>section{padding:72px 0;}
 /* Accessible skip link — no inline handlers */
 
 
-
 /* Production v2 editorial collage update */
 
 
-
-
-
-
-
-
 @media (max-width:1100px){}
-@media (max-width:680px){}
 
 /* Production v2.1 — Apple-like micro motion and clean hero mark
    The motion layer is intentionally quiet: small lift, gentle fade, no gimmicks. */
 
 
 @media (max-width:720px){
-  
-}
-@media (prefers-reduced-motion: no-preference){
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-}
-@media (prefers-reduced-motion: reduce){
-  
   
 }
 
@@ -1105,120 +865,6 @@ border-bottom:1px solid rgba(180,144,72,.18);
   font-size:.9em;
   color:#8A681F;
 }
-@media (min-width:1180px){
-  .footer-brand-col{
-    grid-column:span 2;
-    max-width:430px;
-  }
-}
-.site-footer .brand{
-  gap:24px;
-  margin-bottom:30px;
-}
-.site-footer .brand-logo{
-  width:30px;
-  height:30px;
-}
-.site-footer .brand-word{
-  letter-spacing:.15em;
-  line-height:1;
-}
-.site-footer h3{
-  margin-bottom:20px;
-}
-.site-footer li{
-  margin-bottom:14px;
-}
-.site-footer .footer-grid > div:not(.footer-brand-col) ul:not(.footer-contact-list):not(.footer-legal-list) li > a,
-.site-footer .footer-grid > details.footer-accordion ul li > a{
-  display:inline-flex;
-  align-items:baseline;
-  gap:.56em;
-}
-.site-footer .footer-grid > div:not(.footer-brand-col) ul:not(.footer-contact-list):not(.footer-legal-list) li > a::before,
-.site-footer .footer-grid > details.footer-accordion ul li > a::before{
-  content:"•";
-  color:#8A681F;
-  font-weight:400;
-  line-height:1;
-  transform:translateY(-1px);
-}
-.site-footer .footer-grid > div:not(.footer-brand-col) ul:not(.footer-contact-list):not(.footer-legal-list) li > a:hover::before,
-.site-footer .footer-grid > div:not(.footer-brand-col) ul:not(.footer-contact-list):not(.footer-legal-list) li > a:focus-visible::before,
-.site-footer .footer-grid > details.footer-accordion ul li > a:hover::before,
-.site-footer .footer-grid > details.footer-accordion ul li > a:focus-visible::before{
-  color:#fff;
-}
-
-/* Footer link accordions — collapsible columns so the many footer links
-   stay tidy instead of competing for attention all at once. */
-.footer-accordion{
-  border-top:1px solid rgba(255,255,255,.08);
-}
-.footer-accordion summary{
-  cursor:pointer;
-  list-style:none;
-  position:relative;
-  padding:14px 28px 14px 0;
-  margin-bottom:0;
-  color:#fff;
-  font-size:0.8rem;
-  letter-spacing:-0.004em;
-  font-weight:500;
-  opacity:.92;
-  transition:opacity .2s ease, color .2s ease;
-}
-.footer-accordion summary::-webkit-details-marker{display:none;}
-.footer-accordion summary::after{
-  content:"";
-  position:absolute;
-  right:4px;
-  top:18px;
-  width:8px;
-  height:8px;
-  border-right:1.5px solid rgba(255,255,255,.55);
-  border-bottom:1.5px solid rgba(255,255,255,.55);
-  transform:rotate(45deg);
-  transition:transform .28s cubic-bezier(.16,1,.3,1), top .28s cubic-bezier(.16,1,.3,1);
-}
-.footer-accordion[open] summary::after{
-  transform:rotate(-135deg);
-  top:21px;
-}
-.footer-accordion summary:hover,
-.footer-accordion summary:focus-visible{
-  color:var(--gold-deep);
-  opacity:1;
-}
-.footer-accordion ul{
-  padding-bottom:6px;
-}
-.footer-accordion[open] summary{
-  margin-bottom:2px;
-}
-@media (prefers-reduced-motion: reduce){
-  .footer-accordion summary::after{transition:none;}
-}
-.footer-contact-list li,
-.footer-legal-list li{
-  margin-bottom:16px;
-}
-@media (max-width:920px){
-  .site-footer .wrap{max-width:min(100%, calc(100vw - 44px));}
-  .footer-grid{
-    grid-template-columns:repeat(2,minmax(0,1fr));
-    column-gap:clamp(30px,7vw,56px);
-    row-gap:42px;
-  }
-  .footer-brand-col{grid-column:1 / -1;max-width:620px;}
-}
-@media (max-width:620px){
-  .site-footer .wrap{max-width:min(100%, calc(100vw - 36px));}
-  .footer-grid{grid-template-columns:1fr;row-gap:34px;}
-  .site-footer .brand{gap:18px;margin-bottom:24px;}
-  .site-footer .brand-logo{width:28px;height:28px;}
-  .footer-bottom{gap:14px;}
-}
 
 /* Phase 16 — Apple-like hero image placement
    The signature hero image appears first, immediately below the header,
@@ -1354,13 +1000,6 @@ border-bottom:1px solid rgba(180,144,72,.18);
 @media (prefers-reduced-motion: no-preference){
   html{scroll-behavior:smooth;}
   .site-header{transition:background-color .32s ease, border-color .32s ease;}
-  .nav-links a,
-  .lang-switch a,
-  .site-footer a,
-  .btn,
-  .btn-link{
-    transition:color .28s cubic-bezier(.16,1,.3,1), opacity .28s cubic-bezier(.16,1,.3,1), transform .28s cubic-bezier(.16,1,.3,1), border-color .28s cubic-bezier(.16,1,.3,1), background-color .28s cubic-bezier(.16,1,.3,1);
-  }
   .btn:hover,
   .btn:focus-visible,
   .btn-link:hover,
@@ -1428,7 +1067,6 @@ border-bottom:1px solid rgba(180,144,72,.18);
 }
 
 
-
 @media (min-width:1180px){
   .menu-btn{display:inline-flex;}
   .nav-links{position:fixed;display:grid;align-items:initial;gap:0;min-width:0;background:rgba(255,255,255,.94);border-top:1px solid rgba(180,144,72,.16);border-bottom:1px solid rgba(180,144,72,.16);border-radius:0;box-shadow:0 28px 80px rgba(32,37,48,.10);padding:clamp(22px,4vw,42px) 0;opacity:0;visibility:hidden;transform:translateY(-12px);}
@@ -1452,7 +1090,6 @@ border-bottom:1px solid rgba(180,144,72,.18);
 @media (prefers-reduced-motion:reduce){
   .menu-btn,.menu-btn span,.nav-links,.nav-links a{transition:none;transform:none;}
 }
-
 
 
 /* Production 3.1 — Jony Ive typography, keyword emphasis and gentle scroll motion */
@@ -1511,24 +1148,6 @@ button.card:hover,
   .lang-switch .sep{display:none;}
   .lang-switch a{min-width:44px;min-height:44px;padding:0 8px;font-size:.72rem;}
 }
-
-
-/* Final privacy/quote hardening */
-.footer-cookie-settings{
-  border:0;
-  background:transparent;
-  color:inherit;
-  font:inherit;
-  text-decoration:underline;
-  text-underline-offset:3px;
-  cursor:pointer;
-  padding:0;
-}
-.footer-cookie-settings:focus-visible{
-  outline:2px solid var(--gold-deep);
-  outline-offset:4px;
-  border-radius:6px;
-}
 .quote-disclaimer{
   margin-top:14px;
   font-size:.92rem;
@@ -1563,7 +1182,6 @@ main>section{padding:var(--jony-air) 0;}
   color:rgba(32,37,48,.58);
   font-weight:500;
 }
-.quote-summary-card dt,.footer-since{ text-transform:none; letter-spacing:.01em; }
 h1{max-width:18ch;}
 h2{max-width:20ch;}
 .section-head{margin-bottom:clamp(32px,4.4vw,58px);}
@@ -1581,8 +1199,6 @@ h2{max-width:20ch;}
 .card:hover{box-shadow:none;transform:none;}
 .nav-links a{font-size:clamp(1.08rem,1.75vw,1.62rem);letter-spacing:-.026em;}
 .nav-cta::before{content:'→';}
-.site-footer .footer-grid > div:not(.footer-brand-col) ul:not(.footer-contact-list):not(.footer-legal-list) li > a::before,
-.site-footer .footer-grid > details.footer-accordion ul li > a::before{content:'·';color:#8A681F;}
 .jony-gallery-hero{padding-bottom:clamp(34px,5vw,74px);}
 .jony-gallery-intro{padding-top:0;}
 .jony-gallery-grid{column-count:3;column-gap:clamp(18px,2.4vw,34px);margin-top:clamp(28px,4vw,56px);}
@@ -1657,10 +1273,6 @@ h1,h2{max-width:none;}
   overflow-wrap:normal;
   hyphens:auto;
 }
-@media (max-width:1080px){
-  
-  
-}
 .about-portrait-split{
   display:grid;
   grid-template-columns:minmax(280px,.82fr) minmax(420px,1.18fr);
@@ -1692,7 +1304,6 @@ h1,h2{max-width:none;}
 .collage-gallery > figure img{display:block;width:100%;height:auto;}
 .gallery-archive-redirect{padding:96px 0;}
 .gallery-archive-redirect .prose{max-width:64ch;}
-
 
 
 /* BANHALMI drastic portrait gallery cleanup */
@@ -1905,7 +1516,7 @@ main a.editorial-inline-link:hover{
 .privacy-table th{font-weight:650;}
 @media (max-width:720px){.entity-facts{grid-template-columns:1fr}.entity-facts dt{padding-bottom:4px;border-bottom:0}.entity-facts dd{padding-top:0}.cookie-actions{gap:8px}}
 
-/* Social profile footer — text links only; no third-party embeds or tracking. */
+
 [data-social-footer] a[target="_blank"]::after{content:" ↗";font-size:.72em;opacity:.55;}
 [data-social-footer] a:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px;}
 
@@ -1931,38 +1542,6 @@ main a.editorial-inline-link:hover{
 .age-verification-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
 .age-verification-actions button{flex:1;min-width:190px}
 @media (max-width:560px){.age-gallery-notice{grid-template-columns:1fr}.age-gallery-notice strong{width:46px;height:46px}.age-verification-actions{flex-direction:column}.age-verification-actions button{width:100%}}
-
-/* Official WKO Vienna company profile in the global footer */
-.footer-wko-profile{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:max-content;
-  max-width:100%;
-  margin-top:22px;
-  padding:8px 10px;
-  border:1px solid rgba(203,169,104,.34);
-  border-radius:8px;
-  background:#111;
-  opacity:.92;
-  transition:opacity .2s ease, border-color .2s ease, transform .2s ease;
-}
-.footer-wko-profile img{
-  display:block;
-  width:min(206px,100%);
-  height:auto;
-}
-.footer-wko-profile:hover,
-.footer-wko-profile:focus-visible{
-  opacity:1;
-  border-color:var(--gold-deep);
-  transform:translateY(-1px);
-}
-@media (max-width:620px){
-  .footer-wko-profile{margin-top:18px;}
-  .footer-wko-profile img{width:184px;}
-}
-
 
 
 /* ==========================================================================
@@ -2196,41 +1775,6 @@ main>section{padding:clamp(64px,7.5vw,104px) 0;}
 .legal{max-width:760px;}
 .legal h2{font-size:clamp(1.35rem,2vw,1.65rem);line-height:1.2;letter-spacing:-.025em;}
 
-/* Footer: Apple-like information density; expanded on desktop, accordion on mobile. */
-.site-footer{
-  background:#1d1d1f;
-  color:#a1a1a6;
-  padding:clamp(52px,6vw,72px) 0 24px;
-  font-size:13px;
-  line-height:1.45;
-}
-.site-footer .wrap{max-width:1280px;}
-.footer-grid{
-  grid-template-columns:minmax(250px,1.6fr) repeat(3,minmax(155px,1fr));
-  column-gap:clamp(30px,4vw,58px);
-  row-gap:38px;
-}
-.footer-brand-col{grid-column:span 1;max-width:340px;}
-.site-footer .brand{gap:12px;margin-bottom:20px;}
-.site-footer .brand-logo{width:24px;height:24px;}
-.site-footer .brand-word{letter-spacing:.12em;}
-.footer-entity{font-size:13px;line-height:1.55;max-width:34ch;}
-.footer-wko-profile{display:inline-block;margin-top:18px;}
-.footer-wko-profile img{width:118px;height:auto;opacity:.9;}
-.site-footer h3,.footer-accordion summary{font-size:12px;line-height:1.35;letter-spacing:.01em;font-weight:600;}
-.site-footer h3{margin-bottom:13px;}
-.footer-accordion{border-top:0;}
-.footer-accordion summary{padding:0 24px 13px 0;}
-.footer-accordion ul{padding-bottom:0;}
-.site-footer li{margin-bottom:8px;}
-.site-footer a,.site-footer a:visited{color:#d2d2d7;}
-.site-footer a:hover,.site-footer a:focus-visible{color:#fff;}
-.site-footer .footer-grid > details.footer-accordion ul li > a::before,
-.site-footer .footer-grid > div:not(.footer-brand-col) ul:not(.footer-contact-list):not(.footer-legal-list) li > a::before{display:none;content:none;}
-.footer-contact-list li,.footer-legal-list li{margin-bottom:11px;}
-.footer-legal-list span{min-width:64px;}
-.footer-bottom{margin-top:38px;padding-top:18px;font-size:12px;line-height:1.5;border-color:rgba(255,255,255,.14);}
-
 /* Rendering and interaction performance. */
 @media screen{
   main > section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 780px;}
@@ -2258,8 +1802,6 @@ main>section{padding:clamp(64px,7.5vw,104px) 0;}
   h1{font-size:clamp(2.3rem,5.5vw,2.875rem);}
   h2{font-size:clamp(1.8rem,4.4vw,2.25rem);}
   .hero.hero-image-first h1{font-size:clamp(2.45rem,5.9vw,3.05rem);}
-  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:38px;}
-  .footer-brand-col{grid-column:1 / -1;}
 }
 @media (max-width:680px){
   :root{--header-h:52px;}
@@ -2291,10 +1833,6 @@ main>section{padding:clamp(64px,7.5vw,104px) 0;}
   .card{padding:23px;}
   .hero-actions{align-items:stretch;gap:11px;}
   .hero-actions .btn{margin:0;}
-  .footer-grid{grid-template-columns:1fr;row-gap:0;}
-  .footer-brand-col{margin-bottom:26px;}
-  .footer-accordion{border-top:1px solid rgba(255,255,255,.14);}
-  .footer-accordion summary{padding:14px 28px 14px 0;font-size:12px;}
 
   .nav-submenu summary{
     font-size:1.16rem;
@@ -2317,10 +1855,6 @@ main>section{padding:clamp(64px,7.5vw,104px) 0;}
     line-height:1.35;
     color:#8A681F !important;
   }
-  .footer-accordion summary::after{display:block;}
-  .footer-accordion ul{padding-bottom:12px;}
-  .site-footer > .wrap > .footer-grid > div:not(.footer-brand-col){margin-top:28px;}
-  .footer-bottom{flex-direction:column;gap:10px;}
   .grid-2{grid-template-columns:1fr;}
 }
 @media (max-width:400px){
@@ -2334,24 +1868,6 @@ main>section{padding:clamp(64px,7.5vw,104px) 0;}
 }
 @media print{
   main > section{content-visibility:visible!important;contain:none!important;}
-  .site-header,.site-footer,.cookie{display:none!important;}
-}
-
-/* 2026-07-08b — WKO asset reliability + persistent quote estimate */
-.footer-wko-profile{
-  width:min(206px,100%);
-  min-height:66px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  overflow:hidden;
-}
-.footer-wko-profile img{
-  display:block;
-  width:206px;
-  max-width:100%;
-  height:auto;
-  object-fit:contain;
 }
 
 /* Keep the estimate visible while the user configures the request. */
@@ -2624,29 +2140,12 @@ main > section:not(.hero){
     top:67% !important;
   }
 }
-.footer-wko-profile{
-  width:auto !important;
-  min-height:0 !important;
-  padding:5px 7px !important;
-}
-.footer-wko-profile img{
-  width:92px !important;
-  max-width:92px !important;
-  height:auto !important;
-}
-@media (max-width:620px){
-  .footer-wko-profile img{
-    width:82px !important;
-    max-width:82px !important;
-  }
-}
 
 /* FAQ topics and transparent WKO profile badge */
 .faq-topic{margin:0 0 clamp(28px,4vw,48px)}
 .faq-topic:last-child{margin-bottom:0}
 .faq-topic>h2{margin:0 0 16px;font-size:clamp(22px,2.2vw,30px);line-height:1.16;letter-spacing:-.025em}
 .faq-topic .faq{display:grid;gap:10px}
-.footer-wko-profile,.footer-wko-profile img{background:transparent!important}
 
 /* Featured historical portrait lightbox references */
 .universal-lightbox-links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin:8px auto 0;max-width:min(92vw,900px);font-size:13px;line-height:1.4}.universal-lightbox-links[hidden]{display:none}.universal-lightbox-links a{color:#8A681F;text-decoration:none;border-bottom:1px solid rgba(183,156,68,.55)}.universal-lightbox-links a:hover,.universal-lightbox-links a:focus-visible{border-bottom-color:currentColor}.featured-historic-portrait{position:relative}.featured-historic-portrait:after{content:'Featured work';position:absolute;left:12px;bottom:12px;padding:5px 8px;border-radius:999px;background:rgba(0,0,0,.68);color:#fff;font-size:10px;letter-spacing:.08em;text-transform:uppercase;pointer-events:none}@media (max-width:680px){.universal-lightbox-links{font-size:12px;gap:7px 12px}.featured-historic-portrait:after{font-size:9px}}
@@ -2957,7 +2456,6 @@ scrollbar-width:thin;
 }
 
 
-
 /* BANHALMI single case-study link treatment — 2026-07-12 */
 .universal-lightbox figure:has(.universal-lightbox-links > a:only-child) img{max-height:72vh;max-height:72dvh}
 .universal-lightbox-links:has(> a:only-child){display:flex;width:auto;max-width:max-content;max-height:none;overflow:visible;margin:2px auto 0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;}
@@ -3016,7 +2514,6 @@ html[lang="de-AT"] .featured-historic-portrait:after{content:'Ausgewähltes Werk
 .amcham-contact-grid{display:grid;grid-template-columns:1fr;gap:10px}.amcham-contact-item{display:flex;min-width:0;flex-direction:column;gap:5px;padding:15px 17px;border:1px solid rgba(27,27,27,.12);border-radius:14px;background:rgba(255,255,255,.72);color:var(--ink);text-decoration:none;transition:transform .18s ease,border-color .18s ease,background .18s ease}.amcham-contact-item:hover{transform:translateY(-2px);border-color:rgba(27,27,27,.28);background:#fff}.amcham-contact-item span{font-size:.82rem;line-height:1.25;letter-spacing:.075em;text-transform:uppercase;color:var(--graphite)}.amcham-contact-item strong{min-width:0;overflow-wrap:anywhere;font-size:1rem;line-height:1.4}
 .profile-source-note{margin-top:28px;font-size:.9rem;line-height:1.65;color:var(--graphite)}
 .contact-form-section{scroll-margin-top:110px}.contact-form-section .form-data-note,.field-help,.form-submit-wait-note{font-size:max(.875rem,14px);line-height:1.55}
-.site-footer h3,.footer-accordion summary{font-size:max(.8125rem,13px);line-height:1.4}.footer-bottom{font-size:max(.8125rem,13px);line-height:1.55}
 @media (max-width:900px){.person-profile-hero .wrap,.person-profile-facts,.person-profile-network{grid-template-columns:1fr}.person-profile-hero-copy{order:1}.person-profile-hero-media{order:0;max-width:620px;width:100%;justify-self:center;aspect-ratio:4/5}.executive-profile-grid{grid-template-columns:1fr}.amcham-profile-card{grid-template-columns:1fr}.amcham-profile-media{min-height:0;aspect-ratio:5/4}}
 @media (max-width:620px){.person-profile-hero{padding-top:38px}.person-profile-hero-media{border-radius:22px}.person-profile-actions,.amcham-profile-actions{align-items:stretch;flex-direction:column}.person-profile-actions .btn,.amcham-profile-actions .btn{width:100%;justify-content:center}.executive-profile-block{padding:32px 0}.amcham-profile-card{padding:22px}.amcham-profile-media{aspect-ratio:4/5}.amcham-profile-media img{object-position:50% 36%}}
 @media (prefers-reduced-motion:reduce){.amcham-contact-item{transition:none}}
@@ -3118,8 +2615,6 @@ h1,.hero.hero-image-first h1{letter-spacing:-.02em;}
 input,select,textarea,button{font-size:max(16px,1rem);}
 .menu-toggle,.lang-switch a{min-width:44px;min-height:44px;}
 @media (max-width:760px){
-  .site-footer a{display:inline-flex;align-items:center;min-height:44px;}
-  .footer-accordion summary{min-height:44px;display:flex;align-items:center;}
   .category-grid{grid-template-columns:1fr;}
 }
 /* Partners: locally hosted historical client marks and verified memberships. */
@@ -3145,9 +2640,6 @@ input,select,textarea,button{font-size:max(16px,1rem);}
 @media (max-width:620px){.partner-grid,.partner-grid-memberships{grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.partner-card{min-height:150px;padding:.8rem}.partner-logo{height:84px}.partner-name{font-size:.7rem}}
 @media (max-width:380px){.partner-grid,.partner-grid-memberships{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:reduce){.partner-card{transition:none}.partner-card:hover,.partner-card:focus-visible{transform:none}}
-
-/* BANHALMI_OFFICIAL_ECOSYSTEM */
-.banhalmi-ecosystem{display:flex;flex-wrap:wrap;justify-content:center;gap:.65rem 1.25rem;margin:1.6rem auto 0;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.16);font-size:.78rem;line-height:1.5}.banhalmi-ecosystem a{color:inherit;text-decoration:none;opacity:.76}.banhalmi-ecosystem a:hover,.banhalmi-ecosystem a:focus-visible{opacity:1;text-decoration:underline;text-underline-offset:.2em}.banhalmi-ecosystem a[aria-current="page"]{opacity:1;font-weight:600}@media(max-width:640px){.banhalmi-ecosystem{align-items:center;flex-direction:column;gap:.55rem}}
 
 /* Trust Center and legacy layout normalization — 2026-08-03.
    Some audited pages use the newer container/card-grid names. Keep both
@@ -3259,25 +2751,6 @@ html[lang^="hu"] .quote-total{font-variant-numeric:tabular-nums;font-size:clamp(
 #archive-references .fine-art-resource-actions{margin-top:30px;}
 @media (max-width:720px){.fine-art-archive-drawer > summary{grid-template-columns:minmax(0,1fr) auto;}.fine-art-archive-action{display:none;}}
 @media (max-width:640px){.fine-art-private-actions{align-items:flex-start;margin-top:24px;margin-bottom:28px;}}
-/* FINE-ART-PRIVATE-JOURNEY:END */
-/* PAGESPEED-STAGE32:START */
-/* Footer-only accessible gold: #CBB45F on #202530 is ~7.5:1 (WCAG AAA). */
-.site-footer{--footer-gold:#CBB45F;}
-.site-footer h3,
-.site-footer .footer-accordion summary{
-  color:var(--footer-gold)!important;
-  opacity:1!important;
-  font-weight:650!important;
-}
-.site-footer .footer-accordion summary:hover,
-.site-footer .footer-accordion summary:focus-visible{color:#fff!important;}
-.site-footer .footer-bottom{color:#AEB4C2!important;}
-.site-footer .footer-bottom a,
-.site-footer .footer-bottom button{color:#D2D2D7!important;}
-.site-footer .footer-bottom a:hover,
-.site-footer .footer-bottom a:focus-visible,
-.site-footer .footer-bottom button:hover,
-.site-footer .footer-bottom button:focus-visible{color:#fff!important;}
 /* PAGESPEED-STAGE32:END */
 
 
@@ -3287,15 +2760,6 @@ html[lang^="hu"] .quote-total{font-variant-numeric:tabular-nums;font-size:clamp(
 .smart-quote-layout .field.consent label{font-weight:400;}
 .form [data-form-note]{margin-top:16px;color:var(--gold-deep);}
 /* STAGE43-INLINE-PRESENTATION:END */
-
-
-/* STAGE46-FOOTER-VIEWPORT-AND-NAV-CLARITY */
-/* Short pages must end on the footer, not expose the white document canvas. */
-
-
-
-/* Footer brand uses the high-contrast dark-surface gold; the global brand span uses the light-surface text gold. */
-
 
 
 /* STAGE47-UI-DESIGN-CONTRACT:START */
@@ -3318,12 +2782,10 @@ html[lang^="hu"] .quote-total{font-variant-numeric:tabular-nums;font-size:clamp(
   --ui-reading-max:68ch;
 }
 
-/* Footer viewport contract. */
+
 html,body{min-height:100%}
 
 body>main{flex:1 0 auto;width:100%;min-width:0}
-body>.site-footer{margin-top:auto;width:100%}
-.site-footer .brand,.site-footer .brand span,.site-footer .brand-word{color:#CBB45F}
 
 /* Photographic surfaces: subtle 4px corner, never large app-card rounding. */
 .editorial-hero,.editorial-image,.pf-item,.lb img{border-radius:var(--ui-image-radius)}
@@ -3349,7 +2811,6 @@ body>.site-footer{margin-top:auto;width:100%}
 html{min-height:100%;background:#202530!important}
 body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 body>main,#main{flex:1 0 auto;width:100%;min-width:0}
-body>.site-footer,.site-footer{flex:0 0 auto;width:100%}
 .trust-proof .grid-3{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important;row-gap:24px!important}
 .trust-proof .grid-3>.card{margin:0!important;border-radius:12px}
 @media(max-width:760px){.trust-proof .grid-3{grid-template-columns:1fr!important;gap:16px!important;row-gap:16px!important}}
@@ -3383,60 +2844,6 @@ body>.site-footer,.site-footer{flex:0 0 auto;width:100%}
 @media(max-width:620px){
   .hero-booking-option{width:100%}
   .hero-booking-note{max-width:none}
-}
-/* STAGE68-EDITORIAL-MICROCOPY:END */
-
-
-/* STAGE-FOOTER-ECOSYSTEM-POLISH-20260813 */
-/* Keep the three official BANHALMI destinations compact, balanced and visible
-   as one intentional footer navigation row at every viewport. */
-.site-footer .banhalmi-ecosystem{
-  width:min(100%,760px);
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  align-items:stretch;
-  justify-content:center;
-  gap:0;
-  margin:1.35rem auto 0;
-  padding-top:1rem;
-  border-top:1px solid rgba(255,255,255,.16);
-  text-align:center;
-}
-.site-footer .banhalmi-ecosystem a{
-  min-width:0;
-  min-height:52px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:.65rem .8rem;
-  border-right:1px solid rgba(255,255,255,.12);
-  color:#AEB4C2;
-  opacity:.9;
-  font-size:.86rem;
-  line-height:1.3;
-  text-align:center;
-  text-wrap:balance;
-}
-.site-footer .banhalmi-ecosystem a:last-child{border-right:0}
-.site-footer .banhalmi-ecosystem a[aria-current="page"]{color:#fff;opacity:1;font-weight:600}
-.site-footer .banhalmi-ecosystem a:hover,
-.site-footer .banhalmi-ecosystem a:focus-visible{color:#fff;opacity:1}
-@media(max-width:640px){
-  .site-footer .banhalmi-ecosystem{
-    width:100%;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    align-items:stretch;
-    gap:0;
-    margin-top:1.2rem;
-    padding-top:.8rem;
-  }
-  .site-footer .banhalmi-ecosystem a{
-    min-height:56px;
-    padding:.55rem .38rem;
-    font-size:clamp(.76rem,3.25vw,.84rem);
-    line-height:1.25;
-    overflow-wrap:anywhere;
-  }
 }
 
 
@@ -3640,17 +3047,6 @@ html[lang^="de"] a.nav-cta::after{content:"Preise & Pakete";font-size:initial}
 html body .bn-mega-cta .bn-mega-link::after{font-size:clamp(.95rem,1.45vh,1.2rem)!important;line-height:1.08;letter-spacing:-.02em}
 html body .next-step-selector .card:first-child h3::after{font-size:1.2rem!important;font-weight:600;line-height:1.2;letter-spacing:-.014em}
 html body a.nav-cta::after{font-size:.85rem!important;font-weight:500;line-height:1.3;letter-spacing:-.006em}
-
-
-/* STAGE63-DESKTOP-MENU-FOOTER:START
-   Desktop navigation is a single-screen editorial overview. The third column
-   is internally split so support, journal, pricing and ART stay visible without
-   viewport scrolling. Mobile keeps the existing scrollable stacked pattern. */
-.site-footer{
-  background:
-    radial-gradient(circle at 72% 0%,rgba(183,156,68,.11) 0,rgba(183,156,68,0) 32%),
-    linear-gradient(145deg,#2D3444 0%,#29303F 46%,#202530 100%)!important;
-}
 @media(min-width:861px){
   .bn-mega-menu{overflow:hidden!important}
   .bn-mega-panel{
@@ -3695,7 +3091,6 @@ html body a.nav-cta::after{font-size:.85rem!important;font-weight:500;line-heigh
   .bn-mega-link{font-size:clamp(.92rem,1.55vh,1.12rem)}
   .bn-mega-service .bn-mega-link,.bn-mega-footer .bn-mega-link{font-size:clamp(.86rem,1.35vh,1rem)}
 }
-/* STAGE63-DESKTOP-MENU-FOOTER:END */
 
 
 /* STAGE64-ART-LIKE-FULLSCREEN-MENU:START */
@@ -3760,7 +3155,7 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
 .field-error,[role="alert"],.form-error{color:#7A1010;font-weight:600;line-height:1.45;}
 [aria-disabled="true"],button:disabled,input:disabled,select:disabled,textarea:disabled{cursor:not-allowed;opacity:.62;}
 .visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
-@media (max-width:680px){body{font-size:17px;line-height:1.6}.btn,button,input,select,textarea{font-size:16px}.nav-links a,.footer-accordion summary{min-height:44px;display:flex;align-items:center}}
+@media (max-width:680px){body{font-size:17px;line-height:1.6}.btn,button,input,select,textarea{font-size:16px}}
 @media (max-width:680px) and (hover:none) and (pointer:coarse){
   .nav-links a[aria-current="page"],
   .nav-links a.active,
@@ -3776,39 +3171,7 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
 }
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media (forced-colors:active){:focus-visible{outline:3px solid Highlight}.btn,.card,input,select,textarea{forced-color-adjust:auto}}
-
-/* PAGESPEED-STAGE32-TARGETS:START */
-/* Interactive targets must remain usable at every viewport. Lighthouse also
-   evaluates desktop/coarse-emulation combinations, so the footer and language
-   targets cannot be limited to the mobile media query. */
-.lang-switch a,
-.site-footer .footer-accordion summary,
-.site-footer .footer-accordion li>a,
-.banhalmi-ecosystem a{
-  min-height:44px;
-  display:inline-flex;
-  align-items:center;
-}
 .lang-switch a{min-width:44px;justify-content:center;padding-inline:8px;color:#5B616C;}
-.site-footer .footer-accordion li>a{padding-block:7px;}
-.site-footer .footer-accordion summary{cursor:pointer;}
-.banhalmi-ecosystem a{padding-block:8px;}
-/* Footer small text previously used #6E7689 on #202530 (about 3.37:1).
-   Keep the same cool-grey hierarchy while clearing WCAG AA for normal text. */
-.site-footer,
-.site-footer a,
-.footer-bottom,
-.footer-bottom a,
-.footer-entity{color:#AEB4C2;}
-.site-footer a:hover,.footer-bottom a:hover{color:#fff;}
-@media (max-width:680px), (pointer:coarse){
-  .site-footer a,
-  .site-footer button{
-    min-height:44px;
-    display:inline-flex;
-    align-items:center;
-  }
-}
 /* PAGESPEED-STAGE32-TARGETS:END */
 
 /* PAGESPEED-STAGE56-PAINT:START */
@@ -3862,7 +3225,7 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
 /* PAGESPEED-STAGE57-MOBILE-HERO-VIDEO:END */
 
 /* === INLINE SOURCE index.html / 1a784e6c529c === */
-/* Stage 14 — accessibility and usability hardening */:focus-visible{outline:3px solid #8A681F;outline-offset:3px;}a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{border-radius:6px;}button,.btn,[role="button"],summary,input[type="checkbox"],input[type="radio"]{min-height:44px;}input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}.field input[aria-invalid="true"],.field select[aria-invalid="true"],.field textarea[aria-invalid="true"],:user-invalid{border-color:#9B1C1C;box-shadow:0 0 0 3px rgba(155,28,28,.14);}.field-error,[role="alert"],.form-error{color:#7A1010;font-weight:600;line-height:1.45;}[aria-disabled="true"],button:disabled,input:disabled,select:disabled,textarea:disabled{cursor:not-allowed;opacity:.62;}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}@media (max-width:680px){body{font-size:17px;line-height:1.6}.btn,button,input,select,textarea{font-size:16px}.nav-links a,.footer-accordion summary{min-height:44px;display:flex;align-items:center}}@media (max-width:680px) and (hover:none) and (pointer:coarse){.nav-links a[aria-current="page"],.nav-links a.active,.nav-links .active>a{color:#8A681F!important;background:transparent!important;border:0!important;box-shadow:none!important;outline:0!important;outline-offset:0!important;border-radius:0!important;}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}@media (forced-colors:active){:focus-visible{outline:3px solid Highlight}.btn,.card,input,select,textarea{forced-color-adjust:auto}}/* PAGESPEED-STAGE32-TARGETS:START */ /* Interactive targets must remain usable at every viewport. Lighthouse also evaluates desktop/coarse-emulation combinations,so the footer and language targets cannot be limited to the mobile media query. */ .lang-switch a,.site-footer .footer-accordion summary,.site-footer .footer-accordion li>a,.banhalmi-ecosystem a{min-height:44px;display:inline-flex;align-items:center;}.lang-switch a{min-width:44px;justify-content:center;padding-inline:8px;color:#5B616C;}.site-footer .footer-accordion li>a{padding-block:7px;}.site-footer .footer-accordion summary{cursor:pointer;}.banhalmi-ecosystem a{padding-block:8px;}/* Footer small text previously used #6E7689 on #202530 (about 3.37:1). Keep the same cool-grey hierarchy while clearing WCAG AA for normal text. */ .site-footer,.site-footer a,.footer-bottom,.footer-bottom a,.footer-entity{color:#AEB4C2;}.site-footer a:hover,.footer-bottom a:hover{color:#fff;}@media (max-width:680px),(pointer:coarse){.site-footer a,.site-footer button{min-height:44px;display:inline-flex;align-items:center;}}/* PAGESPEED-STAGE32-TARGETS:END */ /* PAGESPEED-STAGE56-PAINT:START */ /* The LCP hero must never wait for the deferred IntersectionObserver reveal. Its image is already preloaded/high-priority;painting it immediately removes the JS dependency from above-the-fold visual completeness. */ .hero .reveal,.hero-figure.reveal,.editorial-hero.reveal{opacity:1!important;transform:none!important;}/* Skip layout/paint work for genuinely below-fold sections until they approach the viewport while reserving stable intrinsic space for scrolling/anchors. */ @supports (content-visibility:auto){main>section:nth-of-type(n+3){content-visibility:auto;contain-intrinsic-size:auto 760px;}}/* PAGESPEED-STAGE56-PAINT:END */ /* STAGE52-PAGESPEED-RUNTIME:START */ /* Avoid layout animations in the mobile navigation;transform/opacity remain available elsewhere. */ @media (max-width:1040px){.nav-links{transition:none!important;}}/* Text use of the brand gold must meet AA on the light navigation surface. */ @media (max-width:680px),(pointer:coarse){.lang-switch a.active,.nav-links a[aria-current="page"],.nav-links a.active,.nav-links .active>a{color:#8A681F!important;}}/* STAGE52-PAGESPEED-RUNTIME:END */ /* PAGESPEED-STAGE57-MOBILE-HERO-VIDEO:START */ /* Mobile/touch visitors get the optimized still hero only. The video remains lazy for desktop hover,but cannot be painted or activated on touch devices,so its data-src sources are never promoted to network requests on mobile. */ @media (hover:none),(pointer:coarse),(max-width:680px){.hero.hero-image-first .hero-video{display:none!important;}.hero.hero-image-first .hero-figure{pointer-events:none;}}/* PAGESPEED-STAGE57-MOBILE-HERO-VIDEO:END */
+/* Stage 14 — accessibility and usability hardening */:focus-visible{outline:3px solid #8A681F;outline-offset:3px;}a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{border-radius:6px;}button,.btn,[role="button"],summary,input[type="checkbox"],input[type="radio"]{min-height:44px;}input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}.field input[aria-invalid="true"],.field select[aria-invalid="true"],.field textarea[aria-invalid="true"],:user-invalid{border-color:#9B1C1C;box-shadow:0 0 0 3px rgba(155,28,28,.14);}.field-error,[role="alert"],.form-error{color:#7A1010;font-weight:600;line-height:1.45;}[aria-disabled="true"],button:disabled,input:disabled,select:disabled,textarea:disabled{cursor:not-allowed;opacity:.62;}.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}@media (max-width:680px){body{font-size:17px;line-height:1.6}.btn,button,input,select,textarea{font-size:16px}}@media (max-width:680px) and (hover:none) and (pointer:coarse){.nav-links a[aria-current="page"],.nav-links a.active,.nav-links .active>a{color:#8A681F!important;background:transparent!important;border:0!important;box-shadow:none!important;outline:0!important;outline-offset:0!important;border-radius:0!important;}}@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}@media (forced-colors:active){:focus-visible{outline:3px solid Highlight}.btn,.card,input,select,textarea{forced-color-adjust:auto}}.lang-switch a{min-width:44px;justify-content:center;padding-inline:8px;color:#5B616C;}/* PAGESPEED-STAGE32-TARGETS:END */ /* PAGESPEED-STAGE56-PAINT:START */ /* The LCP hero must never wait for the deferred IntersectionObserver reveal. Its image is already preloaded/high-priority;painting it immediately removes the JS dependency from above-the-fold visual completeness. */ .hero .reveal,.hero-figure.reveal,.editorial-hero.reveal{opacity:1!important;transform:none!important;}/* Skip layout/paint work for genuinely below-fold sections until they approach the viewport while reserving stable intrinsic space for scrolling/anchors. */ @supports (content-visibility:auto){main>section:nth-of-type(n+3){content-visibility:auto;contain-intrinsic-size:auto 760px;}}/* PAGESPEED-STAGE56-PAINT:END */ /* STAGE52-PAGESPEED-RUNTIME:START */ /* Avoid layout animations in the mobile navigation;transform/opacity remain available elsewhere. */ @media (max-width:1040px){.nav-links{transition:none!important;}}/* Text use of the brand gold must meet AA on the light navigation surface. */ @media (max-width:680px),(pointer:coarse){.lang-switch a.active,.nav-links a[aria-current="page"],.nav-links a.active,.nav-links .active>a{color:#8A681F!important;}}/* STAGE52-PAGESPEED-RUNTIME:END */ /* PAGESPEED-STAGE57-MOBILE-HERO-VIDEO:START */ /* Mobile/touch visitors get the optimized still hero only. The video remains lazy for desktop hover,but cannot be painted or activated on touch devices,so its data-src sources are never promoted to network requests on mobile. */ @media (hover:none),(pointer:coarse),(max-width:680px){.hero.hero-image-first .hero-video{display:none!important;}.hero.hero-image-first .hero-figure{pointer-events:none;}}/* PAGESPEED-STAGE57-MOBILE-HERO-VIDEO:END */
 
 /* === INLINE SOURCE requestaquote/index.html / bd71492e6e27 === */
 /* Quote flow simplification — keep pricing logic intact, reduce visible decision noise. */
@@ -3897,7 +3260,6 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
   .quote-summary-card .eyebrow{margin:0!important;font-size:.72rem;line-height:1.15;white-space:normal}
   .quote-summary-card .quote-total{margin:0!important;font-size:clamp(1.05rem,5vw,1.38rem)!important;line-height:1.1;white-space:nowrap;text-align:right}
   .quote-summary-card dl,.quote-summary-card>p{display:none!important}
-  .site-footer{padding-bottom:calc(82px + env(safe-area-inset-bottom))}
   .quote-decision-guide{padding:14px 15px;font-size:.9rem}
 }
 @media (max-width:360px){
@@ -4012,23 +3374,8 @@ p,li{line-height:1.58;}
 .form,.quote-builder{min-width:0;}
 .check-grid,.category-grid,.option-stack{min-width:0;}
 
-/* Executive footer: information is left aligned; brand block may breathe but does not float. */
-.site-footer{background:#202530!important;color:#AEB4C2!important;}
-.site-footer .wrap{width:min(100%,var(--apple-page-max))!important;max-width:var(--apple-page-max)!important;}
-.footer-grid{
-  display:grid!important;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr))!important;
-  gap:clamp(32px,4vw,56px)!important;
-  align-items:start!important;
-  text-align:left!important;
-}
-.footer-brand-col{grid-column:span 2;max-width:360px!important;text-align:left!important;}
-.site-footer :is(h3,li,p,a){text-align:left;}
-.footer-bottom{justify-content:flex-start!important;gap:12px 24px!important;text-align:left!important;}
-
 @media (max-width:1024px){
   :root{--apple-section-space:clamp(60px,7vw,84px);--apple-gutter:clamp(22px,4.5vw,44px);}
-  .footer-brand-col{grid-column:span 1;}
   .smart-quote-layout,.quote-layout{grid-template-columns:1fr!important;}
   .quote-intro{position:static!important;}
 }
@@ -4042,7 +3389,6 @@ p,li{line-height:1.58;}
   .gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
   .ticks{columns:1!important;}
   .section-head,.prose,.legal,.form,.quote-intro,.about-longform,.service-context-lead{max-width:100%!important;}
-  .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
 }
 @media (max-width:560px){
   :root{--apple-section-space:52px;--apple-gutter:20px;--apple-card-gap:16px;}
@@ -4054,9 +3400,6 @@ p,li{line-height:1.58;}
   .hero-actions .btn,.service-actions .btn{width:100%;text-align:center;}
   .gallery{grid-template-columns:1fr!important;}
   .card,.quote-step,.quote-summary-card,.amcham-benefit-box,.project-summary{border-radius:var(--apple-radius-small)!important;}
-  .footer-grid{grid-template-columns:1fr!important;}
-  .footer-brand-col{grid-column:auto;}
-  .footer-bottom{display:grid!important;grid-template-columns:1fr!important;}
 }
 @media (prefers-reduced-motion:reduce){
   .card,.btn,.menu-btn,.nav-links{transition:none!important;transform:none!important;}
@@ -4088,12 +3431,10 @@ p,li{line-height:1.58;}
 /* QUOTE-DENSITY-REMEDIATION-20260814:END */
 
 
-
 /* DESKTOP-A11Y-REMEDIATION-20260814:START */
 /* Lighthouse/browser-confirmed contrast, touch-target, wrapping and link distinctions. */
 html body [data-surface="dark"] .section-head :is(h1,h2,h3){color:#F5F5F7!important;}
 html body [data-surface="dark"] .section-head :is(.eyebrow,.label,.kicker){color:#DCC56B!important;}
-html body .site-footer .brand .brand-word{color:#DCC56B!important;}
 html body main :is(.section,.section-band) p a:not(.btn):not(.btn-link){
   text-decoration:underline!important;
   text-underline-offset:.18em!important;
@@ -4228,64 +3569,15 @@ html body .quote-deep-details>section.quote-legal-bridge{margin-top:0!important;
   html body .smart-quote-layout .quote-summary-card{padding-inline:20px!important;}
 }
 
-/* Executive footer: one operational hierarchy, not a loose collection of
-   links. Contact details lead; navigation remains compact on desktop while
-   preserving 44px touch targets on touch-first breakpoints. */
-html body .site-footer{padding-block:clamp(48px,5vw,64px) 28px!important;}
-html body .site-footer .footer-grid{display:grid!important;grid-template-columns:minmax(280px,1.15fr) minmax(225px,1fr) minmax(140px,.68fr) minmax(135px,.68fr) minmax(150px,.72fr) minmax(270px,1.2fr)!important;gap:clamp(20px,2.6vw,34px)!important;align-items:start!important;text-align:left!important;}
-html body .site-footer .footer-brand-col{grid-column:auto!important;max-width:330px!important;}
-html body .site-footer :is(.footer-grid,.footer-grid h3,.footer-grid p,.footer-grid li,.footer-grid a,.footer-bottom){text-align:left!important;}
-html body .site-footer .footer-accordion{margin:0!important;}
-html body .site-footer .footer-accordion>summary{min-height:44px!important;padding:0 20px 0 0!important;font-size:.78rem!important;line-height:1.25!important;letter-spacing:.015em!important;}
-html body .site-footer .footer-accordion>ul{margin:4px 0 0!important;padding:0!important;}
-html body .site-footer .footer-accordion li{margin:0!important;}
-html body .site-footer .footer-accordion li>a{display:inline-flex!important;align-items:center!important;min-height:30px!important;padding-block:2px!important;font-size:.82rem!important;line-height:1.3!important;white-space:nowrap!important;}
-html body .site-footer .footer-accordion li>a::before{display:inline-block!important;content:"•"!important;flex:0 0 auto!important;margin-right:.5em!important;color:#DCC56B!important;}
-html body .site-footer .footer-heading,
-html body .site-footer .footer-studio-link{color:#F5F5F7!important;font-weight:650!important;}
-html body .site-footer .footer-heading{margin:0 0 14px!important;font-size:.84rem!important;line-height:1.2!important;letter-spacing:.02em!important;text-transform:uppercase!important;}
-html body .site-footer .footer-contact-list{display:grid!important;gap:0!important;margin:0!important;padding:0!important;}
-html body .site-footer .footer-contact-list .footer-studio{display:grid!important;gap:4px!important;margin:0!important;padding:0 0 13px!important;}
-html body .site-footer .footer-contact-list .footer-studio+.footer-studio{padding:13px 0!important;border-top:1px solid rgba(245,245,247,.16)!important;}
-html body .site-footer .footer-contact-list .footer-address{display:block!important;color:#AEB4C2!important;font-size:.8rem!important;line-height:1.42!important;}
-html body .site-footer .footer-contact-list :is(.footer-phone,.footer-whatsapp){display:inline-flex!important;align-items:center!important;min-height:28px!important;width:max-content!important;color:#F5F5F7!important;font-size:.82rem!important;line-height:1.25!important;}
-html body .site-footer .footer-contact-list .footer-whatsapp{color:#DCC56B!important;}
-html body .site-footer .footer-contact-actions{display:grid!important;gap:2px!important;margin-top:4px!important;padding-top:12px!important;border-top:1px solid rgba(245,245,247,.16)!important;}
-html body .site-footer .footer-contact-actions a{display:inline-flex!important;align-items:center!important;min-height:28px!important;width:max-content!important;font-size:.82rem!important;line-height:1.25!important;}
-html body .site-footer .footer-contact-actions a:first-child{color:#F5F5F7!important;font-weight:650!important;}
-html body .site-footer .footer-legal-list{min-width:225px;}
-html body .site-footer .footer-legal-list li{display:grid!important;grid-template-columns:58px minmax(0,1fr)!important;column-gap:10px!important;align-items:start!important;margin-bottom:8px!important;line-height:1.35!important;}
-html body .site-footer .footer-legal-list li>*{min-width:0!important;line-height:1.35!important;}
-html body .site-footer .footer-legal-list li>strong{white-space:nowrap;}
-html body .site-footer .footer-bottom{display:grid!important;grid-template-columns:max-content minmax(0,1fr)!important;gap:8px 28px!important;align-items:center!important;justify-content:start!important;}
-html body .site-footer .footer-bottom>span:first-child{justify-self:start!important;text-align:left!important;white-space:nowrap!important;}
-html body .site-footer .footer-bottom>span:last-child{justify-self:end!important;text-align:right!important;white-space:nowrap!important;}
-html body .site-footer,html body .site-footer .wrap{min-height:0!important;}
-@media(max-width:1460px){
-  html body .site-footer .footer-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:28px!important;}
-  html body .site-footer .footer-accordion li>a{align-items:flex-start!important;white-space:normal!important;}
-  html body .site-footer .footer-accordion>summary{color:#CBB45F!important;opacity:1!important;font-weight:650!important;}
-  html body .site-footer .footer-accordion>summary:is(:hover,:focus-visible){color:#fff!important;}
-}
-
 @media(max-width:768px){
   html body main h1{font-size:clamp(2.375rem,4.8vw,2.75rem)!important;}
   html body main h2{font-size:clamp(1.5625rem,3.2vw,2rem)!important;}
   html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid){grid-template-columns:1fr!important;}
   html body main :is(.service-process-grid,.quote-deep-details .card-grid){grid-template-columns:1fr!important;}
-  html body .site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 22px!important;}
-  html body .site-footer .footer-accordion>summary{min-height:44px!important;padding-right:24px!important;}
-  html body .site-footer .footer-accordion li>a{min-height:44px!important;padding-block:0!important;}
-  html body .site-footer .footer-bottom{grid-template-columns:1fr!important;row-gap:8px!important;}
-  html body .site-footer .footer-bottom>span:first-child,
-  html body .site-footer .footer-bottom>span:last-child{justify-self:start!important;text-align:left!important;white-space:normal!important;}
 }
 @media(max-width:560px){
   html body main h1{font-size:clamp(2.15rem,4.8vw,2.75rem)!important;}
   html body main h2{font-size:clamp(1.55rem,3.2vw,2rem)!important;}
-  html body .site-footer :is(.footer-grid,.footer-bottom){grid-template-columns:1fr!important;}
-  html body .site-footer .footer-legal-list{min-width:0;}
-  html body .site-footer .footer-legal-list li>strong{white-space:normal;}
   html body .quote-deep-details>section.pricing-licensing-clarity,
   html body .quote-deep-details>section.quote-legal-bridge{padding-top:30px!important;padding-bottom:36px!important;}
   html body .quote-deep-details .pricing-licensing-clarity .section-head{margin-bottom:28px!important;}
