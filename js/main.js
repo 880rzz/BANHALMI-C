@@ -52,28 +52,7 @@
     }
   });
 
-
-
-
-
   // Production audit: accessible Services submenu and gallery lightbox.
-
-  // Footer groups are disclosures on compact screens and full information
-  // columns on desktop. Keeping the source of truth here prevents a later
-  // script from silently hiding the desktop footer content.
-  var footerAccordions = Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion"));
-  if (footerAccordions.length) {
-    var footerDesktopQuery = window.matchMedia("(min-width: 1180px)");
-    var syncFooterAccordions = function () {
-      footerAccordions.forEach(function (details) { details.open = footerDesktopQuery.matches; });
-    };
-    syncFooterAccordions();
-    if (typeof footerDesktopQuery.addEventListener === "function") {
-      footerDesktopQuery.addEventListener("change", syncFooterAccordions);
-    } else if (typeof footerDesktopQuery.addListener === "function") {
-      footerDesktopQuery.addListener(syncFooterAccordions);
-    }
-  }
 
   // Scroll reveal (respects reduced motion)
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

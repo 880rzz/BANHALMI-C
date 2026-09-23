@@ -3,7 +3,7 @@ import fs from 'node:fs';
 // Stage 52: llms.txt is intentionally a concise agent entry index; detailed knowledge remains in ai.txt and canonical JSON resources.
 const ai=fs.readFileSync('ai.txt','utf8');
 const llms=fs.readFileSync('llms.txt','utf8');
-const required=['Primary person: Norbert Bánhalmi','Professional website: https://www.norbertbanhalmi.com/','Artistic archive: https://www.banhalmi.art/','Vienna and Budapest are the two active operational bases','New York is a major international reference and oeuvre chapter','New York is not a studio, office, headquarters or operational base','Viko Speier is a supporting company contact','Never infer a New York business location'];
+const required=['Primary person: Norbert Bánhalmi','Professional website: https://www.norbertbanhalmi.com/','Artistic archive: https://www.banhalmi.art/','BANHALMI operates in two cities through three active physical business locations','New York is a major international reference and oeuvre chapter','New York is not a studio, office, headquarters or operational base','Viko Speier is a supporting company contact','Never infer a New York business location'];
 for(const phrase of required){if(!llms.includes(phrase))throw new Error('llms.txt missing canonical AI phrase: '+phrase);if(!ai.slice(0,5000).includes(phrase))throw new Error('ai.txt missing canonical AI phrase: '+phrase);}
 if(!llms.startsWith('# BANHALMI\n\n> '))throw new Error('llms.txt must begin with H1 then blockquote summary');
 if(Buffer.byteLength(llms,'utf8')>9000)throw new Error('llms.txt must remain a concise agent index under 9 KB; detailed knowledge belongs in ai.txt/JSON');

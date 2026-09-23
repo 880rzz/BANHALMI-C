@@ -4,21 +4,39 @@ import path from 'node:path';
 const skip = new Set(['.git', '.github', 'node_modules', 'artifacts']);
 const variants = [
   {
-    heading: 'Contact', vienna: 'Vienna studio', budapest: 'Budapest studio',
-    contactHref: '/contact/', contactLabel: 'Contact', whatsapp: 'WhatsApp +43 677 616 55592'
+    "heading": "Contact",
+    "studioVienna": "Vienna studio",
+    "officeVienna": "Vienna office",
+    "studioBudapest": "Budapest studio",
+    "officeNote": "Client meetings by appointment",
+    "officeProfile": "Google Business Profile",
+    "contactHref": "/contact/",
+    "contactLabel": "Contact"
   },
   {
-    heading: 'Kontakt', vienna: 'Studio Wien', budapest: 'Studio Budapest',
-    contactHref: '/de-at/kontakt/', contactLabel: 'Kontakt', whatsapp: 'WhatsApp +43 677 616 55592'
+    "heading": "Kontakt",
+    "studioVienna": "Studio Wien",
+    "officeVienna": "Büro Wien",
+    "studioBudapest": "Studio Budapest",
+    "officeNote": "Kundentermine nach Vereinbarung",
+    "officeProfile": "Google-Unternehmensprofil",
+    "contactHref": "/de-at/kontakt/",
+    "contactLabel": "Kontakt"
   },
   {
-    heading: 'Kapcsolat', vienna: 'Bécsi stúdió', budapest: 'Budapesti stúdió',
-    contactHref: '/hu/kapcsolat/', contactLabel: 'Kapcsolat', whatsapp: 'WhatsApp +43 677 616 55592'
+    "heading": "Kapcsolat",
+    "studioVienna": "Bécsi stúdió",
+    "officeVienna": "Bécsi iroda",
+    "studioBudapest": "Budapesti stúdió",
+    "officeNote": "Ügyféltalálkozás előzetes egyeztetéssel",
+    "officeProfile": "Google Cégprofil",
+    "contactHref": "/hu/kapcsolat/",
+    "contactLabel": "Kapcsolat"
   }
 ];
 
-function footer(variant) {
-  return `<h3 class="footer-heading">${variant.heading}</h3><ul class="footer-contact-list"><li class="footer-studio"><strong><a class="footer-studio-link" href="https://maps.app.goo.gl/QsMeDA8Bgq5yKxAo8">${variant.vienna}</a></strong><span class="footer-address">Schwedenplatz 2, Top 8–9, 1010 Wien</span><a class="footer-phone" href="tel:+4367761655592">+43 677 616 55592</a><a class="footer-whatsapp" href="https://wa.me/4367761655592" rel="noopener noreferrer" target="_blank">${variant.whatsapp}</a></li><li class="footer-studio"><strong><a class="footer-studio-link" href="https://maps.app.goo.gl/nEvcjbCA1wmgQtXJA">${variant.budapest}</a></strong><span class="footer-address">Lágymányosi u. 15, 1111 Budapest</span><a class="footer-phone" href="tel:+36704698397">+36 70 469 8397</a></li></ul><div class="footer-contact-actions"><a href="${variant.contactHref}">${variant.contactLabel}</a><a href="mailto:hello@norbertbanhalmi.com">hello@norbertbanhalmi.com</a></div>`;
+function footer(v) {
+  return `<h3 class="footer-heading">${v.heading}</h3><ul class="footer-contact-list"><li class="footer-location footer-studio" data-location-role="studio"><strong><a class="footer-studio-link footer-location-link" href="https://maps.app.goo.gl/QsMeDA8Bgq5yKxAo8">${v.studioVienna}</a></strong><span class="footer-address">Schwedenplatz 2, Top 8–9, 1010 Wien</span><a class="footer-phone" href="tel:+4367761655592">+43 677 616 55592</a></li><li class="footer-location footer-office" data-location-role="office"><strong><a class="footer-studio-link footer-location-link" href="https://g.page/r/CdO4Kej3jIkfEBM">${v.officeVienna}</a></strong><span class="footer-address">Gersthofer Straße 150–154/6/2, 1180 Wien</span><span class="footer-location-note">${v.officeNote}</span><a class="footer-location-profile" href="https://g.page/r/CdO4Kej3jIkfEBM">${v.officeProfile}</a></li><li class="footer-location footer-studio" data-location-role="studio"><strong><a class="footer-studio-link footer-location-link" href="https://maps.app.goo.gl/nEvcjbCA1wmgQtXJA">${v.studioBudapest}</a></strong><span class="footer-address">Lágymányosi u. 15, 1111 Budapest</span><a class="footer-phone" href="tel:+36704698397">+36 70 469 8397</a></li></ul><div class="footer-contact-actions"><a href="${v.contactHref}">${v.contactLabel}</a><a href="mailto:hello@norbertbanhalmi.com">hello@norbertbanhalmi.com</a><a class="footer-whatsapp" href="https://wa.me/4367761655592" rel="noopener noreferrer" target="_blank">WhatsApp +43 677 616 55592</a></div>`;
 }
 
 let changed = 0;
@@ -33,19 +51,13 @@ function walk(dir = '.') {
       if (!html.includes('class="site-footer"')) continue;
       checked += 1;
       const variant = variants.find((item) => html.includes(`<h3 class="footer-heading">${item.heading}</h3>`));
-      /* Trust-center landing pages intentionally use the short legal footer;
-         they do not contain the operational contact component. */
       if (!variant) continue;
-      const pattern = new RegExp(`<h3 class="footer-heading">${variant.heading}<\\/h3><ul class="footer-contact-list">.*?<\\/ul><\\/div>`, 's');
+      const pattern = new RegExp(`<h3 class="footer-heading">${variant.heading}<\\/h3><ul class="footer-contact-list">.*?<\\/ul><div class="footer-contact-actions">.*?<\\/div>`, 's');
       if (!pattern.test(html)) throw new Error(`${full}: footer contact block not found`);
-      const next = html.replace(pattern, `${footer(variant)}</div>`);
-      if (next !== html) {
-        fs.writeFileSync(full, next, 'utf8');
-        changed += 1;
-      }
+      const next = html.replace(pattern, footer(variant));
+      if (next !== html) { fs.writeFileSync(full, next, 'utf8'); changed += 1; }
     }
   }
 }
-
 walk();
-console.log(`Executive footer normalized: ${changed}/${checked} localized footer contact blocks updated.`);
+console.log(`Executive footer normalized: ${changed}/${checked} localized footer contact blocks aligned to 3 physical locations.`);

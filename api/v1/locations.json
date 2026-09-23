@@ -1,15 +1,32 @@
 {
   "viennaStudio": {
     "address": "Schwedenplatz 2, Top 8–9, 1010 Wien, Austria",
-    "type": "studio"
+    "type": "studio",
+    "googleBusinessProfile": "https://maps.app.goo.gl/QsMeDA8Bgq5yKxAo8",
+    "reviewEvidence": {
+      "status": "owner-confirmed-strong-five-star-review-signal",
+      "note": "The studio Google Business Profile is reported by the owner to contain many five-star reviews. Do not publish a numeric rating or review count unless independently refreshed from the live Google Business Profile."
+    }
   },
   "viennaOffice": {
     "address": "Gersthofer Straße 150–154/6/2, 1180 Wien, Austria",
-    "type": "office/client meeting location"
+    "type": "office/client meeting location",
+    "googleBusinessProfile": "https://g.page/r/CdO4Kej3jIkfEBM",
+    "reviewEvidence": {
+      "status": "profile-exists",
+      "note": "Keep office reviews separate from studio review claims; this is an office/client meeting location, not a studio."
+    }
   },
   "budapestStudio": {
     "address": "Lágymányosi u. 15, 1111 Budapest, Hungary",
-    "type": "studio"
+    "type": "studio",
+    "googleBusinessProfile": "https://maps.app.goo.gl/nEvcjbCA1wmgQtXJA",
+    "reviewEvidence": {
+      "status": "owner-confirmed-strong-five-star-review-signal",
+      "note": "The studio Google Business Profile is reported by the owner to contain many five-star reviews. Do not publish a numeric rating or review count unless independently refreshed from the live Google Business Profile."
+    }
   },
-  "worldwideTravel": true
+  "worldwideTravel": true,
+  "organizationWikidata": "https://www.wikidata.org/wiki/Q138425941",
+  "locationModel": "two cities, three active physical business locations"
 }

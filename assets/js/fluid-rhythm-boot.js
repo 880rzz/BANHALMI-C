@@ -21,21 +21,4 @@
     typeScript.setAttribute('data-typography-integrity','');
     document.head.appendChild(typeScript);
   }
-
-  /* Runtime owns disclosure state only. Pixel geometry belongs to committed stylesheets. */
-  var query = window.matchMedia('(min-width:1180px)');
-  var groups = Array.prototype.slice.call(document.querySelectorAll('details.footer-accordion'));
-  function syncFooterGroups(){
-    groups.forEach(function(details){
-      var compact = !query.matches;
-      details.open = query.matches;
-      var list = details.querySelector('ul');
-      if (list) list.hidden = compact;
-    });
-  }
-  if (groups.length) {
-    syncFooterGroups();
-    if (typeof query.addEventListener === 'function') query.addEventListener('change', syncFooterGroups);
-    else if (typeof query.addListener === 'function') query.addListener(syncFooterGroups);
-  }
 })();

@@ -17,6 +17,10 @@ for(const name of await readdir(dir)){
   for(const forbidden of [/npm\s+run\s+fix:/i,/npm\s+run\s+sync:/i,/sync-sitemap-lastmod\.mjs/i,/\s--write(?:\s|$)/i]){
     if(forbidden.test(text)) errors.push(name+': permanent workflow invokes a source-mutating maintenance command: '+forbidden);
   }
+
+  for(const footerMutator of ['restore-production-design-authority.mjs','harden-production-artifact.mjs','optimize-production-artifact.mjs','normalize-executive-footer.mjs']){
+    if(text.includes(footerMutator)) errors.push(name+': permanent workflow must not invoke legacy footer/source mutator: '+footerMutator);
+  }
 }
 
 const packageText=await readFile(path.resolve(import.meta.dirname,'../package.json'),'utf8');

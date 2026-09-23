@@ -51,7 +51,7 @@ for(const id of implementationIds){const pos=ai.indexOf(`<!-- ${id}:START -->`);
 const full=fs.readFileSync('llms-full.txt','utf8');for(const id of implementationIds)if(!full.includes(`<!-- ${id}:START -->`))throw new Error(`llms-full.txt: required implementation block ${id} is missing`);
 const llms=fs.readFileSync('llms.txt','utf8');
 if(!llms.includes('[AI reference](https://www.norbertbanhalmi.com/ai.txt)'))throw new Error('llms.txt: detailed AI reference route missing');
-if(!llms.includes('Vienna and Budapest are two active operational bases'))throw new Error('llms.txt: operational geography missing');
+if(!llms.includes('BANHALMI operates in two cities through three active physical business locations'))throw new Error('llms.txt: three-location operational geography missing');
 if(!llms.includes('New York is a major international reference and oeuvre chapter'))throw new Error('llms.txt: New York oeuvre rule missing');
 if(/<!--/.test(llms))throw new Error('llms.txt: internal implementation markers must not return to the concise index');
 

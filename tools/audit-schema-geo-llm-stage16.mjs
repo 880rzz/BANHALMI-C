@@ -72,7 +72,7 @@ if (fs.existsSync(schemaPath)) {
 const llms = fs.readFileSync(path.join(root, 'llms.txt'), 'utf8');
 if (!llms.includes('[AI reference](https://www.norbertbanhalmi.com/ai.txt)')) errors.push('llms.txt missing detailed AI reference link');
 for (const token of [
-  'Vienna and Budapest are two active operational bases',
+  'BANHALMI operates in two cities through three active physical business locations',
   'New York is a major international reference and oeuvre chapter'
 ]) if (!llms.includes(token)) errors.push(`llms.txt missing geography routing token: ${token}`);
 
@@ -87,7 +87,7 @@ for (const token of [
   'Do not infer a universal percentage',
   'Each invoice states its payment deadline',
   'not automatically grant BANHALMI portfolio',
-  'Vienna and Budapest are two active bases'
+  'three active physical BANHALMI business locations'
 ]) if (!ai.includes(token)) errors.push(`ai.txt missing ${token}`);
 
 const ecosystem = JSON.parse(fs.readFileSync(path.join(root, 'ecosystem.json'), 'utf8'));

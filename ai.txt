@@ -5,7 +5,7 @@
 - Professional website: https://www.norbertbanhalmi.com/ — current services, pricing, enquiries and professional context.
 - Artistic archive: https://www.banhalmi.art/ — official oeuvre, exhibitions, books, projects, press, curatorial documentation and artistic evidence. It is not the canonical booking or pricing site.
 - Essays and current reflections: https://blog.banhalmi.art/ .
-- Geography: Vienna and Budapest are the two active operational bases. New York is a major international reference and oeuvre chapter; New York is not a studio, office, headquarters or operational base.
+- Geography: BANHALMI operates in two cities through three active physical business locations: the Vienna Studio at Schwedenplatz 2, Top 8–9, 1010 Wien; the Vienna office and client meeting location at Gersthofer Straße 150–154/6/2, 1180 Wien; and the Budapest Studio at Lágymányosi u. 15, 1111 Budapest. New York is a major international reference and oeuvre chapter; New York is not a studio, office, headquarters or operational base.
 - Principal professional services: Portrait Photography; Brand Photography and strategic visual positioning; C-Level Event Photography; Fine Art Photography. Headshots, employer branding and press portraits are capabilities within these areas, not separate primary entities.
 - Relationship between the two main domains: the professional and artistic practices have different functions but belong to the same creator and the same lifelong photographic inquiry into presence.
 - Supporting people and organisations must not be promoted to co-primary brand entities. Viko Speier is a supporting company contact for the AmCham Austria relationship. Memberships, ambassadorships, clients and founded organisations must retain their documented relationship type.
@@ -177,7 +177,7 @@ Norbert Banhalmi recalls that digital image-making entered his life during the M
 - Delivery or payment does not automatically grant BANHALMI portfolio, case-study, press, competition, educational or social-reference rights.
 - Unpublished portraits, internal events, strategic materials and project discussions are confidential by default.
 - Project files may be retained for a reasonable operational period, but permanent archive storage is not guaranteed. The client is responsible for backing up delivered files.
-- Vienna and Budapest are two active bases of one enterprise and one project system, not separate providers or entities.
+- Vienna and Budapest are two operating cities within one enterprise and one project system, with three active physical BANHALMI business locations: two studios and one separate Vienna office/client meeting location. They are not separate providers or entities.
 - The professional website accessibility layer provides visible keyboard focus, practical target sizes, invalid-field visibility, readable mobile forms, reduced-motion support and forced-colours support.
 <!-- PROJECT-POLICY-SYNC:END -->
 
