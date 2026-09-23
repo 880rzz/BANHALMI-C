@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-23-v4",
+  "version": "2026-09-23-v5",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
@@ -346,19 +346,19 @@
       "property": "sc-domain:banhalmi.art",
       "intentOwner": "artistic/cultural",
       "baseline28d": [
-        "2026-08-23",
-        "2026-09-19"
+        "2026-08-24",
+        "2026-09-20"
       ],
-      "settledThrough": "2026-09-19"
+      "settledThrough": "2026-09-20"
     },
     "blog": {
       "property": "https://blog.banhalmi.art/",
       "intentOwner": "editorial/photography-history",
       "baseline28d": [
-        "2026-08-23",
-        "2026-09-19"
+        "2026-08-24",
+        "2026-09-20"
       ],
-      "settledThrough": "2026-09-19"
+      "settledThrough": "2026-09-20"
     }
   },
   "ecosystemProtected": [
@@ -366,9 +366,9 @@
       "property": "ART",
       "query": "bánhalmi norbert",
       "url": "https://www.banhalmi.art/hu/",
-      "clicks": 6,
-      "impressions": 35,
-      "position": 1.51,
+      "clicks": 7,
+      "impressions": 37,
+      "position": 1.4864864864864864,
       "status": "PROTECTED",
       "reason": "Strong branded artistic entity result; do not convert ART homepage into commercial service landing."
     },
@@ -377,8 +377,8 @@
       "query": "bánhalmi norbert",
       "url": "https://www.banhalmi.art/",
       "clicks": 3,
-      "impressions": 28,
-      "position": 2.46,
+      "impressions": 30,
+      "position": 2.466666666666667,
       "status": "PROTECTED"
     },
     {
@@ -395,8 +395,8 @@
       "query": "bánhalmi norbert",
       "url": "https://blog.banhalmi.art/",
       "clicks": 0,
-      "impressions": 25,
-      "position": 1.8,
+      "impressions": 27,
+      "position": 1.7407407407407407,
       "status": "PROTECTED",
       "reason": "Editorial entity authority; preserve editorial intent and avoid commercial cannibalization."
     },
