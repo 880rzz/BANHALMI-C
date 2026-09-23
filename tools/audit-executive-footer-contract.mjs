@@ -20,7 +20,7 @@ const styles = `${site}\n${fluid}`;
 for (const selector of ['.footer-contact-list .footer-location','.footer-contact-actions','.footer-location-link']) {
   if (!styles.includes(selector)) errors.push(`canonical executive footer selector missing: ${selector}`);
 }
-if (!fluid.includes('FOOTER-THREE-LOCATION-V36-20260923')) errors.push('three-location canonical footer authority missing');
+if (!fluid.includes('FOOTER-SINGLE-CANONICAL-V39-20260923')) errors.push('three-location canonical footer authority missing');
 if (!fluid.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important')) errors.push('desktop three-location grid missing');
 if (!fluid.includes('grid-column:1 / span 6!important') || !fluid.includes('grid-column:1 / span 4!important')) errors.push('desktop contact span contracts missing');
 
