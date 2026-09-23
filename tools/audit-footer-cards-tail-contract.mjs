@@ -2,69 +2,52 @@ import fs from 'node:fs';
 
 const failures=[];
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
+const site=fs.readFileSync('assets/css/site.css','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const main=fs.readFileSync('assets/js/main.js','utf8');
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
+const legacyMain=fs.readFileSync('js/main.js','utf8');
 const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
+const restore=fs.readFileSync('tools/restore-production-design-authority.mjs','utf8');
+const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
 const footer=authority.layout?.footer||{};
 const flow=authority.layout?.documentFlow||{};
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
-must(Number(footer.desktopColumns)===12,'wide desktop footer must use the approved 12-track grid');
-must(Number(footer.desktopContentRows)===2,'desktop footer content must remain exactly two rows');
-must(Number(footer.desktopContactColumns)===3,'desktop contact area must expose exactly three physical business-location columns');
-must(Number(footer.physicalBusinessLocationCount)===3,'footer physical business-location count must be 3');
+must(footer.canonicalGeometryAuthority==='assets/css/fluid-4k-rhythm.css','footer geometry authority must be fluid-4k-rhythm.css');
+must(footer.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V39-20260923','footer canonical marker drifted');
+must(footer.singleGeometryAuthorityRequired===true,'single footer geometry authority lock missing');
+must(footer.legacyFooterMutatorsDisabled===true,'legacy footer mutator lock missing');
+must(footer.runtimeDisclosureAuthority==='assets/js/main.js'&&Number(footer.runtimeDisclosureAuthorityCount)===1,'footer disclosure runtime must have exactly one owner');
+must(Number(footer.physicalBusinessLocationCount)===3,'footer must expose exactly three physical business locations');
 must(JSON.stringify(footer.locationRoles)===JSON.stringify(['vienna-studio','vienna-office','budapest-studio']),'footer location roles drifted');
-must(Array.isArray(footer.desktopTopRowGroups)&&footer.desktopTopRowGroups.join('|')==='brand|services|archive|profile','desktop footer first-row group order changed');
-must(Array.isArray(footer.desktopBottomRowGroups)&&footer.desktopBottomRowGroups.join('|')==='contact|social|memberships|legal','desktop footer second-row group order changed');
-must(footer.desktopNoMidWordBreaks===true,'desktop footer must prohibit ordinary mid-word breaking');
-must(Number(footer.desktopMinPx)===1180,'desktop footer breakpoint changed');
-must(Number(footer.wideDesktopMinPx)===1440,'wide-desktop footer breakpoint must remain 1440px');
-must(Number(footer.desktopMaxContentPx)===1440,'desktop footer content width changed');
-must(Number(footer.smallDesktopMinPx)===1180&&Number(footer.smallDesktopMaxPx)===1439,'small-desktop footer range changed');
-must(Number(footer.smallDesktopColumns)===8,'small-desktop footer must use the approved 8-track grid');
-must(Number(footer.smallDesktopContentRows)===2,'small-desktop footer must remain two rows');
-must(footer.smallDesktopOverflowGuard===true,'small-desktop overflow guard must stay enabled');
-must(flow.layoutMode==='flex','document flow must use the final flex footer model');
-must(flow.documentBackground==='#ffffff','document floor must remain white outside the intrinsic dark footer');
-must(Number(flow.footerAfterDocumentGapMaxPx)===2,'footer-after-document overhang tolerance changed');
-must(Number(flow.footerMaxViewportFractionOnTabletDesktop)<=0.82,'desktop footer viewport fraction became too permissive');
-must(Number(flow.footerAbsoluteMaxPx)<=760,'desktop footer absolute maximum became too permissive');
+must(Number(footer.desktopColumns)===12&&Number(footer.smallDesktopColumns)===8&&Number(footer.tabletColumns)===6,'responsive footer grid authority drifted');
+must(Number(footer.desktopContentRows)===2&&Number(footer.smallDesktopContentRows)===2,'desktop footer must remain two rows');
+must(flow.layoutMode==='flex'&&flow.documentBackground==='#ffffff','document/footer flow contract drifted');
+must(Number(flow.footerAbsoluteMaxPx)<=760,'footer absolute height guard became too permissive');
 
-must(fluid.includes('FOOTER-TWO-ROW-V29-20260917'),'two-row footer v29 wide-desktop canonical marker missing');
-const v29=fluid.split('FOOTER-TWO-ROW-V29-20260917')[1]||'';
-must(/grid-template-columns:repeat\(12,minmax\(0,1fr\)\)!important/.test(v29),'v29 wide-desktop footer 12-track grid missing');
-must(/grid-template-rows:auto auto!important/.test(v29),'v29 desktop footer must have exactly two content rows');
-must(v29.includes('nth-of-type(1){grid-column:4 / span 2!important;grid-row:1!important;}'),'services placement changed');
-must(v29.includes('nth-of-type(2){grid-column:6 / span 2!important;grid-row:1!important;}'),'archive placement changed');
-must(v29.includes('nth-of-type(3){grid-column:8 / span 3!important;grid-row:1!important;}'),'profile placement changed');
-must(v29.includes('nth-of-type(4){grid-column:6 / span 2!important;grid-row:2!important;}'),'social placement changed');
-must(v29.includes('nth-of-type(5){grid-column:8 / span 3!important;grid-row:2!important;}'),'memberships placement changed');
-must(v29.includes('grid-column:1 / span 5!important')&&v29.includes('grid-column:11 / span 2!important'),'contact/legal second-row placement changed');
-must(fluid.includes('FOOTER-THREE-LOCATION-V36-20260923'),'three-location final footer authority marker missing');
-const v36=fluid.split('FOOTER-THREE-LOCATION-V36-20260923')[1]||'';
-must(v36.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'desktop three-location split missing');
+must((fluid.match(/FOOTER-SINGLE-CANONICAL-V39-20260923/g)||[]).length===1,'canonical footer authority must occur exactly once');
+for(const stale of ['FOOTER-RESTORE-V24','VISUAL-REPAIR-V27','FOOTER-TWO-ROW-V29','FOOTER-GEOMETRY-V32','FOOTER-SINGLE-AUTHORITY-20260918','FOOTER-ROOT-CAUSE-FINAL-CLOSURE','FINAL-FOOTER-MEGA-AUTHORITY','FOOTER-RENDER-STABILITY','FOOTER-MENU-HARMONY-CLOSURE','FOOTER-THREE-LOCATION-V36','HU-TABLET-FOOTER-DENSITY-V38']){
+  must(!fluid.includes(stale),`stale footer authority returned: ${stale}`);
+}
+must(!/\.site-footer\b|\.footer-[A-Za-z0-9_-]+\b|\.banhalmi-ecosystem\b/.test(site),'site.css must not own footer geometry or footer component selectors');
+must(fluid.includes('@media (min-width:1440px)')&&fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'wide desktop 12-track footer missing');
+must(fluid.includes('@media (min-width:1180px) and (max-width:1439px)')&&fluid.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'small desktop 8-track footer missing');
+must(fluid.includes('@media (max-width:1179px)')&&fluid.includes('grid-template-columns:repeat(6,minmax(0,1fr))!important'),'compact six-track footer missing');
+must((fluid.match(/grid-template-columns:repeat\(3,minmax\(0,1fr\)\)!important/g)||[]).length>=2,'three-location desktop contact columns missing');
+must(fluid.includes('details.footer-accordion>ul')&&fluid.includes('visibility:hidden!important'),'compact initial disclosure collapse guard missing');
+must(fluid.includes('overflow-x:clip!important')&&fluid.includes('overflow-wrap:anywhere!important'),'footer containment fallback missing');
 
-must(fluid.includes('FOOTER-SINGLE-AUTHORITY-20260918'),'single footer authority marker missing from canonical fluid CSS');
-const footerV32=fluid.split('FOOTER-SINGLE-AUTHORITY-20260918')[1]||'';
-must(footerV32.includes('@media (min-width:1180px) and (max-width:1439px)'),'small-desktop footer media range missing');
-must(footerV32.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'small-desktop 8-track geometry missing');
-must(footerV32.includes('grid-template-rows:auto auto!important'),'small-desktop two-row geometry missing');
-must(v36.includes('grid-column:1 / span 4!important')&&v36.includes('grid-column:7 / span 2!important'),'small-desktop three-location contact/legal placement missing');
-must(footerV32.includes('inline-size:min(100%,calc(100vw - 64px))!important'),'small-desktop footer safe viewport width missing');
-must(footerV32.includes('overflow-x:clip!important'),'small-desktop footer overflow containment missing');
-must(footerV32.includes('min-inline-size:0!important'),'small-desktop intrinsic-width reset missing');
-must(footerV32.includes('overflow-wrap:anywhere!important'),'unbreakable legal/contact token fallback missing');
-
-must(!boot.includes('footer-geometry-v32.css'),'duplicate footer stylesheet runtime loader must remain removed');
-must(!fs.existsSync('assets/css/footer-geometry-v32.css'),'duplicate footer geometry stylesheet must remain removed');
-must(!boot.includes('style.textContent'),'runtime geometry injection must not return');
-must(!hardener.includes('footer-geometry-v32.css'),'production hardener must not rewrite footer v32 geometry');
-must((fluid.match(/min-height:24px!important/g)||[]).length>=2,'compact footer contact actions must retain at least 24px height');
-must(!fluid.includes('min-height:22px!important'),'compact footer must not regress below 24px');
+must(/footerAccordions/.test(main)&&/style\.setProperty\("display"/.test(main),'assets/js/main.js must own disclosure state and explicit list visibility');
+must(!/footerAccordions|syncFooterGroups|syncFooterAccordions/.test(boot),'fluid rhythm boot must not own footer disclosure state');
+must(!/footerAccordions|syncFooterGroups|syncFooterAccordions/.test(legacyMain),'legacy js/main.js must not own footer disclosure state');
+must(!/compactFooterReplacement|smallDesktopFooter|LIVE-PIXEL-GEOMETRY-V21-SMALL-DESKTOP/.test(hardener),'production hardener must not rewrite footer geometry');
+must(!/const footerRules=|site-footer.*grid-template-columns/.test(restore),'design restore compiler must not generate footer geometry');
+must(!/data-footer-compact-authority|compactCss|details\.footer-accordion>ul/.test(optimizer),'optimizer must not inject footer CSS/runtime authority');
 
 if(failures.length){
-  console.error(`BANHALMI footer/card/tail contract failed (${failures.length}):`);
+  console.error(`BANHALMI single-footer-authority contract failed (${failures.length}):`);
   failures.forEach(f=>console.error(`- ${f}`));
   process.exit(1);
 }
-console.log('BANHALMI footer/card/tail contract passed: canonical fluid CSS owns 3-location overflow-safe footer geometry for 1180-1439px and 1440px+ while preserving the two-row information architecture.');
+console.log('BANHALMI footer contract passed: one committed CSS geometry authority, one disclosure runtime, three physical locations, and zero legacy footer mutators.');
