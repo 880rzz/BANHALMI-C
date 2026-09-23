@@ -70,7 +70,7 @@
       "smallDesktopMinPx": 1180,
       "smallDesktopMaxPx": 1439,
       "smallDesktopColumns": 8,
-      "smallDesktopContentRows": 3,
+      "smallDesktopContentRows": 2,
       "smallDesktopSideInsetPx": 32,
       "smallDesktopTopRowGroups": [
         "brand",
