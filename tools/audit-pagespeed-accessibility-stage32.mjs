@@ -21,7 +21,7 @@ for(const token of ['.lang-switch a','.site-footer a','.banhalmi-ecosystem a','m
 
 if(!llms.startsWith('# BANHALMI\n\n>')) errors.push('llms.txt must begin with H1 then blockquote summary for agent discovery');
 for(const token of [
-  'Vienna and Budapest are the two active operational bases',
+  'BANHALMI operates in two cities through three active physical business locations',
   'New York is a major international reference and oeuvre chapter',
   'New York is not a studio, office, headquarters or operational base'
 ]){
