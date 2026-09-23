@@ -4,9 +4,8 @@
     "type": "studio",
     "googleBusinessProfile": "https://maps.app.goo.gl/QsMeDA8Bgq5yKxAo8",
     "reviewEvidence": {
-      "source": "Google/Trustindex public readback",
-      "status": "publicly-verified",
-      "summary": "5.0 public aggregate rating observed; review count is externally aggregated and should be treated as time-sensitive."
+      "status": "owner-confirmed-strong-five-star-review-signal",
+      "note": "The studio Google Business Profile is reported by the owner to contain many five-star reviews. Do not publish a numeric rating or review count unless independently refreshed from the live Google Business Profile."
     }
   },
   "viennaOffice": {
@@ -24,7 +23,7 @@
     "googleBusinessProfile": "https://maps.app.goo.gl/nEvcjbCA1wmgQtXJA",
     "reviewEvidence": {
       "status": "owner-confirmed-strong-five-star-review-signal",
-      "note": "Do not publish a numeric rating or review count unless independently refreshed from the live Google Business Profile."
+      "note": "The studio Google Business Profile is reported by the owner to contain many five-star reviews. Do not publish a numeric rating or review count unless independently refreshed from the live Google Business Profile."
     }
   },
   "worldwideTravel": true,
