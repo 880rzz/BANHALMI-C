@@ -5,6 +5,7 @@ const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'))
 const audit=fs.readFileSync('tools/audit-all-pages-design.mjs','utf8');
 const restore=fs.readFileSync('tools/restore-production-design-authority.mjs','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const site=fs.readFileSync('assets/css/site.css','utf8');
 const menuCore=fs.readFileSync('assets/js/mega-menu.js','utf8');
 const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
