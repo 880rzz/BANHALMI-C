@@ -11,7 +11,9 @@ const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
 must(Number(footer.desktopColumns)===12,'wide desktop footer must use the approved 12-track grid');
 must(Number(footer.desktopContentRows)===2,'desktop footer content must remain exactly two rows');
-must(Number(footer.desktopContactColumns)===2,'desktop contact area must keep Vienna and Budapest as two separate studio columns');
+must(Number(footer.desktopContactColumns)===3,'desktop contact area must expose exactly three physical business-location columns');
+must(Number(footer.physicalBusinessLocationCount)===3,'footer physical business-location count must be 3');
+must(JSON.stringify(footer.locationRoles)===JSON.stringify(['vienna-studio','vienna-office','budapest-studio']),'footer location roles drifted');
 must(Array.isArray(footer.desktopTopRowGroups)&&footer.desktopTopRowGroups.join('|')==='brand|services|archive|profile','desktop footer first-row group order changed');
 must(Array.isArray(footer.desktopBottomRowGroups)&&footer.desktopBottomRowGroups.join('|')==='contact|social|memberships|legal','desktop footer second-row group order changed');
 must(footer.desktopNoMidWordBreaks===true,'desktop footer must prohibit ordinary mid-word breaking');
@@ -38,14 +40,16 @@ must(v29.includes('nth-of-type(3){grid-column:8 / span 3!important;grid-row:1!im
 must(v29.includes('nth-of-type(4){grid-column:6 / span 2!important;grid-row:2!important;}'),'social placement changed');
 must(v29.includes('nth-of-type(5){grid-column:8 / span 3!important;grid-row:2!important;}'),'memberships placement changed');
 must(v29.includes('grid-column:1 / span 5!important')&&v29.includes('grid-column:11 / span 2!important'),'contact/legal second-row placement changed');
-must(v29.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'),'desktop contact studio split missing');
+must(fluid.includes('FOOTER-THREE-LOCATION-V36-20260923'),'three-location final footer authority marker missing');
+const v36=fluid.split('FOOTER-THREE-LOCATION-V36-20260923')[1]||'';
+must(v36.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'desktop three-location split missing');
 
 must(fluid.includes('FOOTER-SINGLE-AUTHORITY-20260918'),'single footer authority marker missing from canonical fluid CSS');
 const footerV32=fluid.split('FOOTER-SINGLE-AUTHORITY-20260918')[1]||'';
 must(footerV32.includes('@media (min-width:1180px) and (max-width:1439px)'),'small-desktop footer media range missing');
 must(footerV32.includes('grid-template-columns:repeat(8,minmax(0,1fr))!important'),'small-desktop 8-track geometry missing');
 must(footerV32.includes('grid-template-rows:auto auto!important'),'small-desktop two-row geometry missing');
-must(footerV32.includes('grid-column:1 / span 3!important')&&footerV32.includes('grid-column:7 / span 2!important'),'small-desktop contact/legal placement missing');
+must(v36.includes('grid-column:1 / span 4!important')&&v36.includes('grid-column:7 / span 2!important'),'small-desktop three-location contact/legal placement missing');
 must(footerV32.includes('inline-size:min(100%,calc(100vw - 64px))!important'),'small-desktop footer safe viewport width missing');
 must(footerV32.includes('overflow-x:clip!important'),'small-desktop footer overflow containment missing');
 must(footerV32.includes('min-inline-size:0!important'),'small-desktop intrinsic-width reset missing');
@@ -63,4 +67,4 @@ if(failures.length){
   failures.forEach(f=>console.error(`- ${f}`));
   process.exit(1);
 }
-console.log('BANHALMI footer/card/tail contract passed: canonical fluid CSS owns both 1180-1439px overflow-safe 8-track geometry and 1440px+ two-row 12-track geometry; no duplicate runtime footer stylesheet exists.');
+console.log('BANHALMI footer/card/tail contract passed: canonical fluid CSS owns 3-location overflow-safe footer geometry for 1180-1439px and 1440px+ while preserving the two-row information architecture.');
