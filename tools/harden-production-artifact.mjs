@@ -133,27 +133,16 @@ for (const file of walkHtml(root)) {
 generateMachineProjections(root);
 applyLlmCanonicalOverlay(root);
 
-/* LIVE-PIXEL-GEOMETRY-V20: compile the compact footer into the canonical
-   production stylesheet instead of adding a late runtime patch. */
+/* Footer geometry is immutable source authority. Hardening may verify it but must never rewrite it. */
 const fluidCssPath = path.join(root, 'assets/css/fluid-4k-rhythm.css');
 if (!fs.existsSync(fluidCssPath)) throw new Error('Production artifact lost assets/css/fluid-4k-rhythm.css during hardening.');
 let fluidCss = fs.readFileSync(fluidCssPath, 'utf8');
-const compactFooterPattern = /@media \(min-width:621px\) and \(max-width:1179px\)\{html body \.site-footer\{padding-top:24px!important;padding-bottom:18px!important\}html body \.site-footer \.footer-grid\{grid-template-columns:repeat\(6,minmax\(0,1fr\)\)!important;column-gap:14px!important;row-gap:14px!important;align-items:start!important\}html body \.site-footer \.footer-grid>div:first-child\{grid-column:span 2!important\}html body \.site-footer \.footer-grid>details\.footer-accordion\{grid-column:span 1!important\}html body \.site-footer \.footer-grid>div:has\(\.footer-contact-list\)\{grid-column:span 3!important\}html body \.site-footer \.footer-grid>div:has\(\.footer-legal-list\)\{grid-column:span 2!important\}html body \.site-footer \.footer-brand-col \.footer-entity\{font-size:\.76rem!important;line-height:1\.35!important;margin-top:8px!important;margin-bottom:8px!important\}html body \.site-footer \.footer-wko-profile img\{width:auto!important;max-width:120px!important;height:auto!important\}html body \.site-footer \.footer-bottom\{margin-top:14px!important;padding-top:10px!important\}html body \.site-footer \.banhalmi-ecosystem,html body \.banhalmi-ecosystem\{margin-top:8px!important;padding-top:8px!important\}\}/;
-const compactFooterReplacement = '@media (min-width:621px) and (max-width:1179px){html body .site-footer{padding-top:14px!important;padding-bottom:10px!important}html body .site-footer .footer-grid{grid-template-columns:repeat(6,minmax(0,1fr))!important;column-gap:12px!important;row-gap:8px!important;align-items:start!important}html body .site-footer .footer-grid>div:first-child{grid-column:span 2!important}html body .site-footer .footer-grid>details.footer-accordion{grid-column:span 1!important}html body .site-footer .footer-grid>div:has(.footer-contact-list){grid-column:span 3!important}html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:span 2!important}html body .site-footer .footer-brand-col .footer-entity{font-size:.76rem!important;line-height:1.3!important;margin-top:5px!important;margin-bottom:5px!important}html body .site-footer .footer-wko-profile img{width:auto!important;max-width:112px!important;height:auto!important}html body .site-footer .footer-bottom{margin-top:8px!important;padding-top:6px!important}html body .site-footer .banhalmi-ecosystem,html body .banhalmi-ecosystem{margin-top:4px!important;padding-top:4px!important}}';
-if (!compactFooterPattern.test(fluidCss)) throw new Error('BANHALMI compact footer v19 source block missing from production artifact.');
-fluidCss = fluidCss.replace(compactFooterPattern, compactFooterReplacement);
+if ((fluidCss.match(/FOOTER-SINGLE-CANONICAL-V39-20260923/g)||[]).length !== 1) throw new Error('BANHALMI canonical footer authority missing or duplicated during hardening.');
 
 const heroSignatureWhite = 'html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-signature-line{position:absolute;left:clamp(30px,3vw,56px);bottom:clamp(28px,3vw,52px);z-index:3;max-width:34ch!important;margin:0!important;color:#fff;';
 const heroSignatureGold = 'html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-signature-line{position:absolute;left:clamp(30px,3vw,56px);bottom:clamp(28px,3vw,52px);z-index:3;max-width:34ch!important;margin:0!important;color:#B79C44;';
 if (!fluidCss.includes(heroSignatureWhite)) throw new Error('BANHALMI hero image slogan white-color source token missing.');
 fluidCss = fluidCss.replace(heroSignatureWhite, heroSignatureGold);
-
-/* LIVE-PIXEL-GEOMETRY-V21: 1180–1439 is a small-desktop class, not wide desktop.
-   Keep all footer information and the three visual bands, but remove the wide-screen
-   vertical rhythm that caused German wrapping to push the footer above 54% of the viewport. */
-const smallDesktopFooter = '@media (min-width:1180px) and (max-width:1439px){html body .site-footer{padding-top:14px!important;padding-bottom:8px!important}html body .site-footer .footer-grid{column-gap:12px!important;row-gap:0!important}html body .site-footer .footer-bottom{margin-top:8px!important;padding-top:6px!important}html body .site-footer .banhalmi-ecosystem,html body .banhalmi-ecosystem{margin-top:4px!important;padding-top:4px!important}html body .site-footer .footer-heading{line-height:1.18!important}html body .site-footer .footer-brand-col .footer-entity{margin-top:5px!important;margin-bottom:5px!important}}';
-if (fluidCss.includes('LIVE-PIXEL-GEOMETRY-V21-SMALL-DESKTOP')) throw new Error('Small-desktop footer v21 already compiled unexpectedly.');
-fluidCss += `\n/* LIVE-PIXEL-GEOMETRY-V21-SMALL-DESKTOP */\n${smallDesktopFooter}\n`;
 fs.writeFileSync(fluidCssPath, fluidCss, 'utf8');
 
 const siteCssPath = path.join(root, 'assets/css/site.css');
@@ -220,4 +209,4 @@ for (const [rel, token] of [
   if (!fs.readFileSync(full, 'utf8').includes(token)) throw new Error(`${rel}: protected current LLM state missing ${token}`);
 }
 
-console.log(`Production surface hardened: ${forbidden.length} repository-only paths excluded; ${required.length} public contracts present; ${skipLinksAdded} missing skip links, ${buttonTypesAdded} non-form button types and ${vikoRelationshipFixes} Viko employment/Vienna relationship fragments normalized; protected LLM overlay applied; canonical quote spacing verified; compact footer v20 compiled; small-desktop footer v21 compiled; hero image slogan gold restored.`);
+console.log(`Production surface hardened: ${forbidden.length} repository-only paths excluded; ${required.length} public contracts present; ${skipLinksAdded} missing skip links, ${buttonTypesAdded} non-form button types and ${vikoRelationshipFixes} Viko employment/Vienna relationship fragments normalized; protected LLM overlay applied; canonical quote spacing verified; canonical footer authority preserved without geometry mutation; hero image slogan gold restored.`);
