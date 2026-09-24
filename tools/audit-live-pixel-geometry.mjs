@@ -96,7 +96,11 @@ for(const vp of viewports){
     if(!result.footer) issues.push('footer missing');
     else {
       const allowed=Math.min(Number(vp.footerMaxPx||footerAbsolute),footerAbsolute,height*footerFraction);
-      if(result.footer.height>allowed+2) issues.push(`footer ${result.footer.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);\n      const tailGap=result.document.scrollHeight-result.footer.bottom;\n      if(tailGap>2) issues.push(`white document tail after footer ${tailGap.toFixed(1)}px > 2px`);\n      const horizontalOverflow=result.document.scrollWidth-result.document.clientWidth;\n      if(horizontalOverflow>1) issues.push(`document horizontal overflow ${horizontalOverflow.toFixed(1)}px > 1px`);
+      if(result.footer.height>allowed+2) issues.push(`footer ${result.footer.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
+      const tailGap=result.document.scrollHeight-result.footer.bottom;
+      if(tailGap>2) issues.push(`white document tail after footer ${tailGap.toFixed(1)}px > 2px`);
+      const horizontalOverflow=result.document.scrollWidth-result.document.clientWidth;
+      if(horizontalOverflow>1) issues.push(`document horizontal overflow ${horizontalOverflow.toFixed(1)}px > 1px`);
     }
     if(result.reviews&&(result.reviews.paddingTop>reviewsPaddingMax+1||result.reviews.paddingBottom>reviewsPaddingMax+1)) issues.push(`reviews padding ${result.reviews.paddingTop.toFixed(1)}/${result.reviews.paddingBottom.toFixed(1)}px > ${reviewsPaddingMax}px`);
     if(target.kind==='home'){
