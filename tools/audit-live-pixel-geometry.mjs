@@ -72,7 +72,7 @@ for(const vp of viewports){
       const rect=el=>{const r=el.getBoundingClientRect();return {top:r.top+scrollY,left:r.left,width:r.width,height:r.height,bottom:r.bottom+scrollY,right:r.right}};
       const footer=document.querySelector('.site-footer');
       const reviews=document.querySelector('main .reviews-drawer-section');
-      const data={footer:footer&&isVisible(footer)?rect(footer):null,reviews:null,hero:null,cards:[],gallery:null,mega:null};
+      const data={footer:footer&&isVisible(footer)?rect(footer):null,reviews:null,hero:null,cards:[],gallery:null,mega:null,document:{scrollHeight:document.documentElement.scrollHeight,scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth}};
       if(reviews&&isVisible(reviews)){const s=getComputedStyle(reviews);data.reviews={...rect(reviews),paddingTop:px(s.paddingTop),paddingBottom:px(s.paddingBottom)}}
       if(kind==='home'){
         const main=document.querySelector('main[data-homepage-redesign="stage76"]');
@@ -96,7 +96,7 @@ for(const vp of viewports){
     if(!result.footer) issues.push('footer missing');
     else {
       const allowed=Math.min(Number(vp.footerMaxPx||footerAbsolute),footerAbsolute,height*footerFraction);
-      if(result.footer.height>allowed+2) issues.push(`footer ${result.footer.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);
+      if(result.footer.height>allowed+2) issues.push(`footer ${result.footer.height.toFixed(1)}px > ${allowed.toFixed(1)}px`);\n      const tailGap=result.document.scrollHeight-result.footer.bottom;\n      if(tailGap>2) issues.push(`white document tail after footer ${tailGap.toFixed(1)}px > 2px`);\n      const horizontalOverflow=result.document.scrollWidth-result.document.clientWidth;\n      if(horizontalOverflow>1) issues.push(`document horizontal overflow ${horizontalOverflow.toFixed(1)}px > 1px`);
     }
     if(result.reviews&&(result.reviews.paddingTop>reviewsPaddingMax+1||result.reviews.paddingBottom>reviewsPaddingMax+1)) issues.push(`reviews padding ${result.reviews.paddingTop.toFixed(1)}/${result.reviews.paddingBottom.toFixed(1)}px > ${reviewsPaddingMax}px`);
     if(target.kind==='home'){
@@ -160,7 +160,7 @@ for(const vp of viewports){
   await context.close();
 }
 await browser.close();
-const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-V20',designVersion:authority.version,base,viewports,pages,reports,failures};
+const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-V21',designVersion:authority.version,base,viewports,pages,reports,failures};
 fs.writeFileSync(path.join(outDir,'report.json'),JSON.stringify(report,null,2));
 if(failures.length){
   console.error(`BANHALMI live pixel geometry failed (${failures.length} page/viewport combinations):`);
