@@ -32,7 +32,7 @@ must(Number(authority.layout?.footer?.compactDesktopColumns)===2,'BANHALMI compa
 must(Number(authority.layout?.footer?.compactDesktopMinPx)===721,'BANHALMI compact desktop footer must begin at 721px');
 must(Number(authority.layout?.footer?.tabletColumns)===2,'BANHALMI tablet footer must remain two-column compact geometry');
 must(Number(authority.layout?.footer?.mobileColumns)===1,'BANHALMI mobile footer must remain single-column geometry');
-must(Number(authority.layout?.footer?.paddingTopPx)===46&&Number(authority.layout?.footer?.paddingBottomPx)===26,'BANHALMI footer padding authority changed');
+must(Number(authority.layout?.footer?.paddingTopPx)===32&&Number(authority.layout?.footer?.paddingBottomPx)===20,'BANHALMI footer padding authority changed');
 must(Number(authority.layout?.footer?.tabletGapPx)===28,'BANHALMI tablet footer gap authority changed');
 must(authority.navigation?.activeState==='text-only','BANHALMI active navigation must remain text-only');
 must(authority.navigation?.activeFill==='none'&&authority.navigation?.activeBorder==='none'&&authority.navigation?.activeBoxShadow==='none','BANHALMI active navigation may not regain box styling');
