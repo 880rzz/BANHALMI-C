@@ -3,7 +3,7 @@
   "@type": "CreativeWork",
   "@id": "https://www.norbertbanhalmi.com/knowledge-core.json",
   "name": "BANHALMI canonical professional knowledge core",
-  "version": "2026-08-26-v8",
+  "version": "2026-09-24-v9",
   "machineEntryPriority": [
     "https://www.norbertbanhalmi.com/ai-entry.json",
     "https://www.norbertbanhalmi.com/knowledge-core.json",
