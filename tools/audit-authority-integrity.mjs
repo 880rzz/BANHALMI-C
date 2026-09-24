@@ -94,6 +94,12 @@ if (ecoViennaStudio?.role !== 'studio') fail('ecosystem.json Vienna studio role 
 if (ecoViennaOffice?.role !== 'office-client-meeting-location' || ecoViennaOffice?.isStudio !== false) fail('ecosystem.json Gersthofer office semantics drift');
 if (ecoBudapestStudio?.role !== 'studio') fail('ecosystem.json Budapest studio role drift');
 
+const entityGraph = readJson('entity-graph.json');
+const entityGraphIds = asArray(entityGraph.dataFeedElement).map((entry) => entry?.['@id']).filter(Boolean);
+for (const required of [VIENNA_STUDIO_ID, VIENNA_OFFICE_ID, BUDAPEST_STUDIO_ID]) {
+  if (!entityGraphIds.includes(required)) fail(`entity-graph.json missing canonical location node ${required}`);
+}
+
 const hipstudioAuthority = readJson('hipstudio-authority.json');
 if (hipstudioAuthority.entity?.wikidataId !== 'Q138482177') fail('hipstudio-authority Wikidata drift');
 if (hipstudioAuthority.founderRelationship?.founder?.wikidata !== 'https://www.wikidata.org/wiki/Q56391118') fail('hipstudio-authority founder Person drift');
