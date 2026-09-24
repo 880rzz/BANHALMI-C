@@ -87,7 +87,7 @@
         var list = details.querySelector("ul");
         if (list) {
           list.hidden = compact;
-          list.style.setProperty("display", compact ? "none" : "block", "important");
+          list.style.setProperty("display", compact ? "none" : "grid", "important");
         }
       });
     };
@@ -98,7 +98,7 @@
           var list = details.querySelector("ul");
           if (list) {
             list.hidden = !details.open;
-            list.style.setProperty("display", details.open ? "block" : "none", "important");
+            list.style.setProperty("display", details.open ? "grid" : "none", "important");
           }
         });
       });
