@@ -2,6 +2,20 @@
 (function () {
   "use strict";
 
+  // Footer state bootstrap must run before any other interaction code.
+  // Source markup stays open for no-JS desktop fallback, but compact/tablet
+  // layouts must never depend on later runtime branches reaching the footer.
+  (function primeFooterDisclosureState(){
+    var compact = !window.matchMedia("(min-width: 1180px)").matches;
+    Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion")).forEach(function(details){
+      details.open = !compact;
+      var list = details.querySelector("ul");
+      if (!list) return;
+      list.hidden = compact;
+      list.style.setProperty("display", compact ? "none" : "grid", "important");
+    });
+  })();
+
   // Mobile menu
   var nav = document.querySelector(".nav");
   var btn = document.querySelector(".menu-btn");
