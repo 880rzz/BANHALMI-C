@@ -114,12 +114,18 @@
   "studios": [
     {
       "@id": "https://www.norbertbanhalmi.com/#vienna-studio",
-      "role": "headquarters",
+      "role": "studio",
       "market": "Austria"
     },
     {
+      "@id": "https://www.norbertbanhalmi.com/#vienna-gersthofer-office",
+      "role": "office-client-meeting-location",
+      "market": "Austria",
+      "isStudio": false
+    },
+    {
       "@id": "https://www.norbertbanhalmi.com/#budapest-studio",
-      "role": "operational-base",
+      "role": "studio",
       "market": "Hungary"
     }
   ],

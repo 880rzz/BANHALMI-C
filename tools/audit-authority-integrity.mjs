@@ -24,6 +24,9 @@ const CENTRAL_ID = 'https://www.kozpontiszovetseg.at/#organization';
 const BMI_ID = 'https://www.magyariskola.at/#school';
 const VIPACH_ID = 'https://www.vipach.at/#organization';
 const HIPSTUDIO_ID = 'https://www.hipstudio.hu/#organization';
+const VIENNA_STUDIO_ID = 'https://www.norbertbanhalmi.com/#vienna-studio';
+const VIENNA_OFFICE_ID = 'https://www.norbertbanhalmi.com/#vienna-gersthofer-office';
+const BUDAPEST_STUDIO_ID = 'https://www.norbertbanhalmi.com/#budapest-studio';
 
 const authority = readJson('person-authority.jsonld');
 const graph = asArray(authority['@graph']);
@@ -68,6 +71,28 @@ if (!hipstudioNode) fail('HIPStudio Organization node missing from person-author
 if (hipstudioNode.sameAs !== 'https://www.wikidata.org/wiki/Q138482177') fail('HIPStudio Wikidata identity drift');
 if (hipstudioNode.founder?.['@id'] !== PERSON_ID) fail('HIPStudio founder must remain Bánhalmi Norbert');
 if (hipstudioNode.foundingDate !== '2006-03-15') fail('HIPStudio operational founding date drift');
+
+const personWorkLocations = asArray(person.workLocation).map((entry) => entry?.['@id']).filter(Boolean);
+for (const required of [VIENNA_STUDIO_ID, VIENNA_OFFICE_ID, BUDAPEST_STUDIO_ID]) {
+  if (!personWorkLocations.includes(required)) fail(`Person workLocation missing ${required}`);
+}
+const companyLocations = asArray(company.location).map((entry) => entry?.['@id']).filter(Boolean);
+for (const required of [VIENNA_STUDIO_ID, VIENNA_OFFICE_ID, BUDAPEST_STUDIO_ID]) {
+  if (!companyLocations.includes(required)) fail(`Organization location missing ${required}`);
+}
+const viennaOfficeNode = graph.find((node) => node?.['@id'] === VIENNA_OFFICE_ID);
+if (!viennaOfficeNode) fail('Gersthofer office Place node missing from person-authority.jsonld');
+if (viennaOfficeNode.address?.streetAddress !== 'Gersthofer Straße 150–154/6/2' || viennaOfficeNode.address?.postalCode !== '1180') fail('Gersthofer office Place address drift');
+if (!String(viennaOfficeNode.description || '').toLowerCase().includes('not a photography studio')) fail('Gersthofer office Place must remain explicitly non-studio');
+
+const ecosystem = readJson('ecosystem.json');
+const ecosystemLocations = asArray(ecosystem.studios);
+const ecoViennaStudio = ecosystemLocations.find((entry) => entry?.['@id'] === VIENNA_STUDIO_ID);
+const ecoViennaOffice = ecosystemLocations.find((entry) => entry?.['@id'] === VIENNA_OFFICE_ID);
+const ecoBudapestStudio = ecosystemLocations.find((entry) => entry?.['@id'] === BUDAPEST_STUDIO_ID);
+if (ecoViennaStudio?.role !== 'studio') fail('ecosystem.json Vienna studio role drift');
+if (ecoViennaOffice?.role !== 'office-client-meeting-location' || ecoViennaOffice?.isStudio !== false) fail('ecosystem.json Gersthofer office semantics drift');
+if (ecoBudapestStudio?.role !== 'studio') fail('ecosystem.json Budapest studio role drift');
 
 const hipstudioAuthority = readJson('hipstudio-authority.json');
 if (hipstudioAuthority.entity?.wikidataId !== 'Q138482177') fail('hipstudio-authority Wikidata drift');

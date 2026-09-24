@@ -5,7 +5,12 @@
       "@type": "Person",
       "@id": "https://www.norbertbanhalmi.com/about/",
       "name": "Bánhalmi Norbert",
-      "alternateName": ["Norbert Bánhalmi", "Norbert Banhalmi", "Norbert BANHALMI", "BANHALMI"],
+      "alternateName": [
+        "Norbert Bánhalmi",
+        "Norbert Banhalmi",
+        "Norbert BANHALMI",
+        "BANHALMI"
+      ],
       "url": "https://www.norbertbanhalmi.com/about/",
       "sameAs": [
         "https://www.wikidata.org/wiki/Q56391118",
@@ -17,11 +22,19 @@
           "name": "Rólunk.at – Bánhalmi Norbert sajtóarchívum",
           "url": "https://rolunk.at/tag/banhalmi-norbert/"
         },
-        {"@id": "https://www.banhalmi.art/#website"},
-        {"@id": "https://blog.banhalmi.art/#website"},
-        {"@id": "https://www.norbertbanhalmi.com/hipstudio-authority.json"}
+        {
+          "@id": "https://www.banhalmi.art/#website"
+        },
+        {
+          "@id": "https://blog.banhalmi.art/#website"
+        },
+        {
+          "@id": "https://www.norbertbanhalmi.com/hipstudio-authority.json"
+        }
       ],
-      "worksFor": {"@id": "https://www.norbertbanhalmi.com/#organization"},
+      "worksFor": {
+        "@id": "https://www.norbertbanhalmi.com/#organization"
+      },
       "affiliation": [
         {
           "@type": "Organization",
@@ -50,6 +63,17 @@
           "sameAs": "https://www.wikidata.org/wiki/Q138482177",
           "description": "Bánhalmi Norbert founded HIPStudio. This historical founder relationship does not imply current ownership; HIPStudio is a distinct entity from BANHALMI / Banhalmi Norbert e.U."
         }
+      ],
+      "workLocation": [
+        {
+          "@id": "https://www.norbertbanhalmi.com/#vienna-studio"
+        },
+        {
+          "@id": "https://www.norbertbanhalmi.com/#vienna-gersthofer-office"
+        },
+        {
+          "@id": "https://www.norbertbanhalmi.com/#budapest-studio"
+        }
       ]
     },
     {
@@ -57,7 +81,20 @@
       "@id": "https://www.norbertbanhalmi.com/#organization",
       "name": "Banhalmi Norbert e.U.",
       "sameAs": "https://www.wikidata.org/wiki/Q138425941",
-      "founder": {"@id": "https://www.norbertbanhalmi.com/about/"}
+      "founder": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "location": [
+        {
+          "@id": "https://www.norbertbanhalmi.com/#vienna-studio"
+        },
+        {
+          "@id": "https://www.norbertbanhalmi.com/#vienna-gersthofer-office"
+        },
+        {
+          "@id": "https://www.norbertbanhalmi.com/#budapest-studio"
+        }
+      ]
     },
     {
       "@type": "Organization",
@@ -65,32 +102,57 @@
       "name": "HIPStudio",
       "url": "https://www.hipstudio.hu/",
       "sameAs": "https://www.wikidata.org/wiki/Q138482177",
-      "founder": {"@id": "https://www.norbertbanhalmi.com/about/"},
+      "founder": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
       "foundingDate": "2006-03-15",
       "description": "Distinct Budapest visual-communications entity founded by Bánhalmi Norbert; founder status is historical identity evidence and does not imply current ownership."
+    },
+    {
+      "@type": "Place",
+      "@id": "https://www.norbertbanhalmi.com/#vienna-gersthofer-office",
+      "name": "BANHALMI Vienna Office — Gersthofer Straße",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gersthofer Straße 150–154/6/2",
+        "postalCode": "1180",
+        "addressLocality": "Wien",
+        "addressCountry": "AT"
+      },
+      "description": "Active office and client meeting location; not a photography studio."
     },
     {
       "@type": "WebSite",
       "@id": "https://www.norbertbanhalmi.com/#website",
       "url": "https://www.norbertbanhalmi.com/",
       "name": "BANHALMI",
-      "about": {"@id": "https://www.norbertbanhalmi.com/about/"},
-      "publisher": {"@id": "https://www.norbertbanhalmi.com/#organization"}
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "publisher": {
+        "@id": "https://www.norbertbanhalmi.com/#organization"
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://www.banhalmi.art/#website",
       "url": "https://www.banhalmi.art/",
       "name": "BANHALMI ART",
-      "about": {"@id": "https://www.norbertbanhalmi.com/about/"}
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      }
     },
     {
       "@type": "WebSite",
       "@id": "https://blog.banhalmi.art/#website",
       "url": "https://blog.banhalmi.art/",
       "name": "BANHALMI Blog",
-      "about": {"@id": "https://www.norbertbanhalmi.com/about/"},
-      "publisher": {"@id": "https://www.norbertbanhalmi.com/#organization"}
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "publisher": {
+        "@id": "https://www.norbertbanhalmi.com/#organization"
+      }
     }
   ]
 }
