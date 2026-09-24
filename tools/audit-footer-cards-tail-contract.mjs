@@ -23,7 +23,7 @@ must(Number(footer.physicalBusinessLocationCount)===3,'footer must expose exactl
 must(JSON.stringify(footer.locationRoles)===JSON.stringify(['vienna-studio','vienna-office','budapest-studio']),'footer location roles drifted');
 must(Number(footer.desktopColumns)===12&&Number(footer.smallDesktopColumns)===12&&Number(footer.tabletColumns)===2,'responsive footer grid authority drifted');
 must(Number(footer.desktopContentRows)===2&&Number(footer.smallDesktopContentRows)===2,'desktop and small-desktop footer must remain two rows');
-must(flow.layoutMode==='grid'&&flow.documentBackground==='#ffffff','document/footer flow contract drifted');
+must(flow.layoutMode==='flex'&&flow.documentBackground==='#ffffff','document/footer flow contract drifted');
 must(Number(flow.footerAbsoluteMaxPx)<=760,'footer absolute height guard became too permissive');
 
 must((fluid.match(/FOOTER-SINGLE-CANONICAL-V41-20260924/g)||[]).length===1,'canonical footer authority must occur exactly once');
