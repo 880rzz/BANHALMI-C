@@ -114,6 +114,14 @@ for (const required of ['American Chamber of Commerce in Austria','WKO Wien / Wi
   if (!entityCompanyMembershipNames.includes(required)) fail(`entity.jsonld Organization missing professional membership: ${required}`);
 }
 
+const institutionalRelations = readJson('institutional-relations.jsonld');
+const institutionalGraph = asArray(institutionalRelations['@graph']);
+const institutionalVipach = institutionalGraph.find((node) => node?.['@id'] === VIPACH_ID);
+if (!institutionalVipach) fail('institutional-relations.jsonld missing VIPACH node');
+if (institutionalVipach.parentOrganization?.['@id'] === BMI_ID) fail('VIPACH BMI heritage must not be serialized as current parentOrganization');
+if (institutionalVipach.memberOf?.['@id'] === CENTRAL_ID) fail('VIPACH public framework context must not be serialized as memberOf without authoritative legal evidence');
+if (!/heritage/i.test(String(institutionalVipach.description || '')) || !/framework/i.test(String(institutionalVipach.description || ''))) fail('VIPACH node missing heritage/framework relationship semantics');
+
 const hipstudioAuthority = readJson('hipstudio-authority.json');
 if (hipstudioAuthority.entity?.wikidataId !== 'Q138482177') fail('hipstudio-authority Wikidata drift');
 if (hipstudioAuthority.founderRelationship?.founder?.wikidata !== 'https://www.wikidata.org/wiki/Q56391118') fail('hipstudio-authority founder Person drift');
