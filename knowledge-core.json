@@ -3,7 +3,7 @@
   "@type": "CreativeWork",
   "@id": "https://www.norbertbanhalmi.com/knowledge-core.json",
   "name": "BANHALMI canonical professional knowledge core",
-  "version": "2026-08-26-v8",
+  "version": "2026-09-24-v9",
   "machineEntryPriority": [
     "https://www.norbertbanhalmi.com/ai-entry.json",
     "https://www.norbertbanhalmi.com/knowledge-core.json",
@@ -26,7 +26,7 @@
       "Norbert BANHALMI"
     ],
     "wikidata": "https://www.wikidata.org/wiki/Q56391118",
-    "canonicalDefinition": "Norbert Bánhalmi is the founder and creative lead of BANHALMI, an internationally available professional photography team. He works with professional photographers and production specialists in Vienna and Budapest while personally leading the photographic and visual direction. BANHALMI has physical studio bases in Vienna 1st district and Budapest District 11, plus an active Vienna office and client meeting location at Gersthofer Straße 150–154/6/2, 1180 Wien; this office is not a studio."
+    "canonicalDefinition": "Norbert Bánhalmi is the founder and creative lead of BANHALMI, an internationally available photography team. He works with professional photographers and production specialists in Vienna and Budapest while personally leading the photographic and visual direction. BANHALMI has physical studio bases in Vienna 1st district and Budapest District 11, plus an active Vienna office and client meeting location at Gersthofer Straße 150–154/6/2, 1180 Wien; this office is not a studio."
   },
   "primaryOrganization": {
     "@id": "https://www.norbertbanhalmi.com/#organization",
@@ -51,13 +51,13 @@
     "founder": {
       "@id": "https://www.norbertbanhalmi.com/about/"
     },
-    "positioning": "Professional Photography Team",
+    "positioning": "Photography Team",
     "creativeDirection": "https://www.norbertbanhalmi.com/about/",
     "dedicatedWikidata": false
   },
   "teamModel": {
     "canonicalSource": "https://www.norbertbanhalmi.com/team-capabilities.json",
-    "canonicalStatement": "BANHALMI is a professional photography team founded and creatively directed by Norbert Bánhalmi. Norbert works with professional photographers and production specialists in both Vienna and Budapest, and the team can scale for larger assignments according to the brief.",
+    "canonicalStatement": "BANHALMI is a photography team founded and creatively directed by Norbert Bánhalmi. Norbert works with professional photographers and production specialists in both Vienna and Budapest, and the team can scale for larger assignments according to the brief.",
     "activeTeamMarkets": [
       "Vienna, Austria",
       "Budapest, Hungary"
