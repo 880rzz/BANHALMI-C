@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-23-v6",
+  "version": "2026-09-24-v7",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
@@ -612,5 +612,227 @@
       },
       "rule": "Broad organisational/corporate visual-system intent belongs to Brand Photography. Leadership/team headshot intent belongs to Portrait. Event-specific corporate intent belongs to Event Photography. Do not create a generic corporate doorway page absent stronger city/language demand."
     }
-  ]
+  ],
+  "legacyAuthorityTransfer": {
+    "settledThrough": "2026-09-21",
+    "purpose": "Historical ART commercial-query authority recovery into current canonical Professional owners without changing measurement-locked service-page copy.",
+    "rows": [
+      {
+        "query": "headshot fotózás",
+        "intent": "commercial portrait/headshot",
+        "historicalOwner": "https://www.banhalmi.art/headshot-fotozas",
+        "historicalEvidence": {
+          "period": "2025-09-01..2026-06-30",
+          "clicks": 10,
+          "impressions": 583,
+          "position": 7.67,
+          "secondaryOwner": "https://www.banhalmi.art/service-page/headshot",
+          "secondaryClicks": 4,
+          "secondaryImpressions": 191,
+          "secondaryPosition": 15.94
+        },
+        "recentResidual": {
+          "period": "2026-07-01..2026-09-21",
+          "artPrimaryImpressions": 43,
+          "artPrimaryPosition": 10.88,
+          "artSecondaryImpressions": 10,
+          "artSecondaryPosition": 23.8
+        },
+        "canonicalOwner": "https://www.norbertbanhalmi.com/hu/portre/",
+        "receiverEvidence": {
+          "period": "2026-07-01..2026-09-21",
+          "clicks": 0,
+          "impressions": 9,
+          "position": 11.89
+        },
+        "authorityAction": "RECOVER + TRANSFER",
+        "status": "MÉRÉS ALATT"
+      },
+      {
+        "query": "headshot fotózás budapest",
+        "intent": "commercial portrait/headshot Budapest",
+        "historicalOwner": "https://www.banhalmi.art/headshot-fotozas",
+        "historicalEvidence": {
+          "period": "2025-09-01..2026-06-30",
+          "clicks": 6,
+          "impressions": 353,
+          "position": 5.48,
+          "secondaryOwner": "https://www.banhalmi.art/service-page/headshot",
+          "secondaryClicks": 0,
+          "secondaryImpressions": 47,
+          "secondaryPosition": 14.02
+        },
+        "recentResidual": {
+          "period": "2026-07-01..2026-09-21",
+          "artPrimaryImpressions": 24,
+          "artPrimaryPosition": 4.46,
+          "artSecondaryImpressions": 4,
+          "artSecondaryPosition": 11.5
+        },
+        "canonicalOwner": "https://www.norbertbanhalmi.com/hu/portre/",
+        "receiverEvidence": {
+          "period": "2026-07-01..2026-09-21",
+          "clicks": 0,
+          "impressions": 3,
+          "position": 10.67
+        },
+        "authorityAction": "RECOVER + TRANSFER",
+        "status": "MÉRÉS ALATT"
+      },
+      {
+        "query": "portfolio fotózás",
+        "intent": "commercial portfolio/brand",
+        "historicalOwner": "https://www.banhalmi.art/portfolio-fotozas",
+        "historicalEvidence": {
+          "period": "2025-09-01..2026-06-30",
+          "clicks": 1,
+          "impressions": 57,
+          "position": 7.19
+        },
+        "recentResidual": {
+          "period": "2026-07-01..2026-09-21",
+          "clicks": 0,
+          "impressions": 6,
+          "position": 5.5
+        },
+        "canonicalOwner": "https://www.norbertbanhalmi.com/hu/brand/",
+        "receiverEvidence": {
+          "period": "2026-07-01..2026-09-21",
+          "rows": 0
+        },
+        "authorityAction": "RECOVER + TRANSFER",
+        "status": "MÉRÉS ALATT",
+        "note": "Receiver is indexed/PASS but has no exact-query GSC row yet; do not rewrite measured Brand copy."
+      },
+      {
+        "query": "fotós budapest",
+        "intent": "generic professional photographer Budapest",
+        "historicalOwner": "ART homepage variants",
+        "historicalEvidence": {
+          "period": "2025-09-01..2026-06-30",
+          "www": {
+            "clicks": 14,
+            "impressions": 424,
+            "position": 9.43
+          },
+          "apex": {
+            "clicks": 9,
+            "impressions": 447,
+            "position": 2.74
+          }
+        },
+        "recentResidual": {
+          "period": "2026-07-01..2026-09-21",
+          "artApexImpressions": 15,
+          "artApexPosition": 3.67,
+          "artWwwImpressions": 3,
+          "artWwwPosition": 15.33
+        },
+        "canonicalOwner": "https://www.norbertbanhalmi.com/",
+        "receiverEvidence": {
+          "period": "2026-07-01..2026-09-21",
+          "homepageImpressions": 50,
+          "homepagePosition": 3.24,
+          "huGbpEntryImpressions": 7,
+          "huGbpEntryPosition": 1.57
+        },
+        "authorityAction": "PROTECT CURRENT PROFESSIONAL OWNER",
+        "status": "MÉRÉS ALATT"
+      },
+      {
+        "query": "profi fotós budapest",
+        "intent": "generic professional photographer Budapest",
+        "historicalOwner": "ART homepage variants",
+        "historicalEvidence": {
+          "period": "2025-09-01..2026-06-30",
+          "apex": {
+            "clicks": 3,
+            "impressions": 349,
+            "position": 4.07
+          },
+          "www": {
+            "clicks": 1,
+            "impressions": 313,
+            "position": 7.07
+          }
+        },
+        "recentResidual": {
+          "period": "2026-07-01..2026-09-21",
+          "artApexImpressions": 20,
+          "artApexPosition": 4.1,
+          "artWwwImpressions": 16,
+          "artWwwPosition": 8.31
+        },
+        "canonicalOwner": "https://www.norbertbanhalmi.com/",
+        "receiverEvidence": {
+          "period": "2026-07-01..2026-09-21",
+          "homepageImpressions": 87,
+          "homepagePosition": 4.74,
+          "huGbpEntryImpressions": 9,
+          "huGbpEntryPosition": 5.56
+        },
+        "authorityAction": "PROTECT / STRIKING DISTANCE",
+        "status": "MÉRÉS ALATT"
+      },
+      {
+        "query": "művészi aktfotózás",
+        "intent": "artistic nude / fine-art authority",
+        "historicalOwner": "https://www.banhalmi.art/muveszi-aktfotozas",
+        "historicalEvidence": {
+          "period": "2025-09-01..2026-06-30",
+          "clicks": 3,
+          "impressions": 130,
+          "position": 2.58
+        },
+        "recentArtEvidence": {
+          "period": "2026-07-01..2026-09-21",
+          "tagNoSlash": {
+            "clicks": 2,
+            "impressions": 13,
+            "position": 5.85
+          },
+          "tagSlash": {
+            "clicks": 1,
+            "impressions": 11,
+            "position": 4.91
+          },
+          "legacyRoute": {
+            "clicks": 0,
+            "impressions": 3,
+            "position": 1.67
+          }
+        },
+        "canonicalOwner": "BANHALMI ART artistic authority; Professional fine-art page is supporting commercial route",
+        "professionalSupport": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "authorityAction": "PROTECT ART / DO NOT COMMERCIALIZE EDITORIAL AUTHORITY",
+        "status": "MÉRÉS ALATT",
+        "note": "GSC URL Inspection reports the legacy artistic-nude route as Page with redirect."
+      },
+      {
+        "query": "rendezvényfotózás",
+        "intent": "commercial event photography",
+        "historicalOwner": "ART homepage",
+        "historicalEvidence": {
+          "period": "2025-09-01..2026-06-30",
+          "clicks": 0,
+          "impressions": 19,
+          "position": 11.68
+        },
+        "recentEvidence": {
+          "period": "2026-07-01..2026-09-21",
+          "artRows": 0,
+          "professionalRows": 0
+        },
+        "canonicalOwner": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "authorityAction": "TRANSFER ROUTE PRESENT; INSUFFICIENT EXACT-QUERY SAMPLE",
+        "status": "MÉRÉS ALATT"
+      }
+    ],
+    "guardrails": [
+      "Do not strengthen legacy ART commercial URLs.",
+      "Do not rewrite title/H1/body copy on measurement-locked Professional service pages without new P0/P1 evidence.",
+      "Preserve ART ownership for artistic/oeuvre intent and Blog ownership for editorial/history intent.",
+      "Use GSC URL Inspection and query/page trends to confirm transfer; historical rows are not current-state proof."
+    ]
+  }
 }
