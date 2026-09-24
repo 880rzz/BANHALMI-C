@@ -100,6 +100,20 @@ for (const required of [VIENNA_STUDIO_ID, VIENNA_OFFICE_ID, BUDAPEST_STUDIO_ID])
   if (!entityGraphIds.includes(required)) fail(`entity-graph.json missing canonical location node ${required}`);
 }
 
+const entityGraphDoc = readJson('entity.jsonld');
+const entityGraphNodes = asArray(entityGraphDoc['@graph']);
+const entityPerson = entityGraphNodes.find((node) => node?.['@id'] === PERSON_ID);
+const entityCompany = entityGraphNodes.find((node) => node?.['@id'] === COMPANY_ID);
+const entityPersonMembershipNames = asArray(entityPerson?.memberOf).map((entry) => entry?.name).filter(Boolean);
+for (const forbidden of ['AmCham Austria','WKO Wien — Landesinnung der Berufsfotografie']) {
+  if (entityPersonMembershipNames.includes(forbidden)) fail(`entity.jsonld misattributes organization membership to Person: ${forbidden}`);
+}
+if (!entityPersonMembershipNames.includes('Magyar Fotóművészek Világszövetsége')) fail('entity.jsonld missing personal MFVS membership');
+const entityCompanyMembershipNames = asArray(entityCompany?.memberOf).map((entry) => entry?.name || entry?.alternateName).filter(Boolean);
+for (const required of ['American Chamber of Commerce in Austria','WKO Wien / Wirtschaftskammer Wien','Landesinnung / Bundesinnung der Berufsfotografie']) {
+  if (!entityCompanyMembershipNames.includes(required)) fail(`entity.jsonld Organization missing professional membership: ${required}`);
+}
+
 const hipstudioAuthority = readJson('hipstudio-authority.json');
 if (hipstudioAuthority.entity?.wikidataId !== 'Q138482177') fail('hipstudio-authority Wikidata drift');
 if (hipstudioAuthority.founderRelationship?.founder?.wikidata !== 'https://www.wikidata.org/wiki/Q56391118') fail('hipstudio-authority founder Person drift');
