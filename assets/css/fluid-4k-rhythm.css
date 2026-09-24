@@ -1488,6 +1488,21 @@ html body details.review-drawer[open]>summary::after{
 html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
   background:#fff!important;
 }
+/* V41 document-flow closure: the base stylesheet still carries the historical flex compatibility target.
+   The committed responsive authority uses grid so main and footer remain in one deterministic document flow. */
+html body{
+  min-height:100vh!important;
+  min-height:100dvh!important;
+  display:grid!important;
+  grid-template-rows:auto minmax(0,1fr) auto!important;
+}
+html body>main,
+html body>#main{
+  width:100%!important;
+  min-width:0!important;
+  min-height:0!important;
+}
+
 /* FOOTER-SINGLE-CANONICAL-V41-20260924
    Sole responsive footer geometry authority.
    One footer composition for every EN / HU / DE route.
