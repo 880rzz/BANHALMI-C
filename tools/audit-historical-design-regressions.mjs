@@ -28,12 +28,12 @@ must(Number(authority.layout?.footer?.desktopContactColumns)===3,'BANHALMI deskt
 must(Number(authority.layout?.footer?.physicalBusinessLocationCount)===3,'BANHALMI footer must expose exactly three active physical business locations');
 must(authority.layout?.footer?.desktopNoMidWordBreaks===true,'BANHALMI desktop footer must prohibit mid-word breaks');
 must(fluid.includes('HOMEPAGE-WHITE-SWEEP-V37-20260923')&&fluid.includes('html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after')&&fluid.includes('background:#fff!important;'),'BANHALMI homepage hero gold sweep floor must remain white on EN/HU/DE homepages');
-must(Number(authority.layout?.footer?.compactDesktopColumns)===2,'BANHALMI compact desktop footer must remain two-column geometry');
+must(Number(authority.layout?.footer?.compactDesktopColumns)===12,'BANHALMI compact desktop footer must remain 12-track geometry');
 must(Number(authority.layout?.footer?.compactDesktopMinPx)===721,'BANHALMI compact desktop footer must begin at 721px');
-must(Number(authority.layout?.footer?.tabletColumns)===2,'BANHALMI tablet footer must remain two-column compact geometry');
+must(Number(authority.layout?.footer?.tabletColumns)===12,'BANHALMI tablet footer must remain 12-track compact geometry');
 must(Number(authority.layout?.footer?.mobileColumns)===1,'BANHALMI mobile footer must remain single-column geometry');
 must(Number(authority.layout?.footer?.paddingTopPx)===32&&Number(authority.layout?.footer?.paddingBottomPx)===20,'BANHALMI footer padding authority changed');
-must(Number(authority.layout?.footer?.tabletGapPx)===28,'BANHALMI tablet footer gap authority changed');
+must(Number(authority.layout?.footer?.tabletGapPx)===14,'BANHALMI tablet footer gap authority changed');
 must(authority.navigation?.activeState==='text-only','BANHALMI active navigation must remain text-only');
 must(authority.navigation?.activeFill==='none'&&authority.navigation?.activeBorder==='none'&&authority.navigation?.activeBoxShadow==='none','BANHALMI active navigation may not regain box styling');
 const mega=authority.navigation?.megaMenu||{};
