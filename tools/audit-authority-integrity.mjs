@@ -100,6 +100,28 @@ for (const required of [VIENNA_STUDIO_ID, VIENNA_OFFICE_ID, BUDAPEST_STUDIO_ID])
   if (!entityGraphIds.includes(required)) fail(`entity-graph.json missing canonical location node ${required}`);
 }
 
+const entityGraphDoc = readJson('entity.jsonld');
+const entitySchemaGraph = asArray(entityGraphDoc['@graph']);
+const entityPerson = entitySchemaGraph.find((node) => node?.['@id'] === PERSON_ID);
+const entityCompany = entitySchemaGraph.find((node) => node?.['@id'] === COMPANY_ID);
+const personMembershipNames = asArray(entityPerson?.memberOf).map((entry) => entry?.name).filter(Boolean);
+for (const forbidden of ['AmCham Austria','WKO Wien — Landesinnung der Berufsfotografie','American Chamber of Commerce in Austria / AmCham Austria','WKO Wien / Wirtschaftskammer Wien','Landesinnung / Bundesinnung der Berufsfotografie']) {
+  if (personMembershipNames.includes(forbidden)) fail(`professional organization membership misattributed to Person: ${forbidden}`);
+}
+if (!personMembershipNames.includes('Magyar Fotóművészek Világszövetsége')) fail('MFVS personal membership missing from entity.jsonld');
+const companyMembershipNames = asArray(entityCompany?.memberOf).map((entry) => entry?.name).filter(Boolean);
+for (const required of ['American Chamber of Commerce in Austria / AmCham Austria','WKO Wien / Wirtschaftskammer Wien','Landesinnung / Bundesinnung der Berufsfotografie']) {
+  if (!companyMembershipNames.includes(required)) fail(`canonical Organization missing professional membership: ${required}`);
+}
+
+const institutionalRelations = readJson('institutional-relations.jsonld');
+const institutionalGraph = asArray(institutionalRelations['@graph']);
+const institutionalVipach = institutionalGraph.find((node) => node?.['@id'] === VIPACH_ID);
+if (!institutionalVipach) fail('institutional-relations.jsonld missing VIPACH node');
+if (institutionalVipach.parentOrganization?.['@id'] === BMI_ID) fail('VIPACH BMI heritage must not be serialized as current parentOrganization');
+if (institutionalVipach.memberOf?.['@id'] === CENTRAL_ID) fail('VIPACH public framework context must not be serialized as current memberOf');
+if (!String(institutionalVipach.description || '').toLowerCase().includes('heritage') || !String(institutionalVipach.description || '').toLowerCase().includes('framework')) fail('VIPACH node missing heritage/framework semantics');
+
 const hipstudioAuthority = readJson('hipstudio-authority.json');
 if (hipstudioAuthority.entity?.wikidataId !== 'Q138482177') fail('hipstudio-authority Wikidata drift');
 if (hipstudioAuthority.founderRelationship?.founder?.wikidata !== 'https://www.wikidata.org/wiki/Q56391118') fail('hipstudio-authority founder Person drift');
