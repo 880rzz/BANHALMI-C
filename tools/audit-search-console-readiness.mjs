@@ -15,6 +15,10 @@ req(core.brand?.positioning==='Photography Team','Canonical brand positioning is
 req(!(JSON.stringify(core).includes('"positioning":"Professional Photography Team"')),'Retired brand positioning remains in canonical machine core');
 req(overlay.forbiddenBrandValues?.includes('Professional Photography Team'),'Overlay no longer forbids retired brand positioning');
 req(ai?.identity?.brand?.positioning==='Photography Team','Committed AI entry still contains retired brand positioning');
+req(!fs.readFileSync('knowledge-core.json','utf8').includes('"positioning": "Professional Photography Team"'),'knowledge-core.json still contains retired team positioning');
+req(!fs.readFileSync('ai.txt','utf8').includes('Professional Photography Team'),'ai.txt still contains retired team descriptor');
+req(!fs.readFileSync('llms.txt','utf8').includes('Professional Photography Team'),'llms.txt still contains retired team descriptor');
+req(!fs.readFileSync('tools/generate-machine-projections.mjs','utf8').includes('Professional Photography Team'),'machine projection generator can regenerate retired team descriptor');
 req(!/<lastmod>/.test(sitemap),'Source sitemap must remain a lastmod-free template; production lastmod is Git-history rendered');
 req(pages.includes('git archive --format=tar HEAD'),'Production deploy must build an immutable committed artifact');
 req(pages.includes('test -s _site/sitemap.xml'),'Production deploy must verify the committed sitemap exists');
