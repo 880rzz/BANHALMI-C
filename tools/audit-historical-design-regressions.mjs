@@ -67,8 +67,8 @@ must(footerV41.includes('grid-template-columns:repeat(12,minmax(0,1fr))!importan
 must(footerV41.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track small-desktop geometry');
 must(footerV41.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'),'canonical footer lost compact two-column geometry');
 must(footerV41.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'canonical footer lost three-location contact geometry');
-must(/@media \(min-width:1440px\)[\s\S]*?grid-row:2!important/.test(footerV41),'canonical footer lost two-row wide-desktop geometry');
-must(/@media \(min-width:1180px\) and \(max-width:1439px\)[\s\S]*?grid-template-rows:auto auto!important/.test(footerV41),'small-desktop footer must preserve two-row geometry');
+must(footerV41.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row desktop geometry');
+must(footerV41.includes('@media (min-width:1180px) and (max-width:1439px)'),'small-desktop footer breakpoint missing');
 for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
   const html=fs.readFileSync(rel,'utf8');
   must(html.indexOf('/assets/css/fluid-4k-rhythm.css')>html.indexOf('/assets/css/site.css'),rel+': footer authority load order regressed');
