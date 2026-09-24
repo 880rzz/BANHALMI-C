@@ -4,7 +4,7 @@
   "@id": "https://www.norbertbanhalmi.com/entity-graph.json",
   "name": "BANHALMI canonical entity graph",
   "url": "https://www.norbertbanhalmi.com/entity-graph.json",
-  "dateModified": "2026-07-17T17:00:00+02:00",
+  "dateModified": "2026-09-24T08:43:00+02:00",
   "inLanguage": [
     "en",
     "hu-HU",
@@ -109,6 +109,9 @@
     },
     {
       "@id": "https://www.norbertbanhalmi.com/#budapest-studio"
+    },
+    {
+      "@id": "https://www.norbertbanhalmi.com/#vienna-gersthofer-office"
     },
     {
       "@id": "https://www.wikidata.org/wiki/Q138413481"
