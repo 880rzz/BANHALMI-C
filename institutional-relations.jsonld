@@ -63,34 +63,49 @@
       "name": "BANHALMI",
       "legalName": "Banhalmi Norbert e.U.",
       "url": "https://www.norbertbanhalmi.com/",
-      "founder": { "@id": "https://www.norbertbanhalmi.com/about/" },
+      "founder": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
       "description": "Bánhalmi Norbert's primary professional and commercial activity: professional photography, including executive portraiture, brand photography, fine art photography and fine art nude photography, with strategic visual positioning."
     },
     {
       "@type": "Organization",
       "@id": "https://www.vipach.at/#organization",
       "name": "VIPACH",
-      "alternateName": ["Vienna Photo Art & Creative Hub", "BMI Fotóklub Wien"],
+      "alternateName": [
+        "Vienna Photo Art & Creative Hub",
+        "BMI Fotóklub Wien"
+      ],
       "url": "https://www.vipach.at/",
       "foundingDate": "2024",
-      "founder": { "@id": "https://www.norbertbanhalmi.com/about/" },
-      "parentOrganization": { "@id": "https://www.magyariskola.at/#school" },
-      "memberOf": { "@id": "https://www.kozpontiszovetseg.at/#organization" },
-      "sameAs": ["https://hu.wikipedia.org/wiki/VIPACH"]
+      "founder": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "sameAs": [
+        "https://hu.wikipedia.org/wiki/VIPACH"
+      ],
+      "description": "Vienna-based photography community, education and exhibition platform founded by Bánhalmi Norbert. It grew from the earlier BMI Fotóklub heritage and operates in the public framework of the Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége. Heritage and framework context must not be interpreted as a current Bécsi Magyar Iskola parentOrganization, ownership or legal-entity identity."
     },
     {
       "@type": "Organization",
       "@id": "https://business.vipach.at/#organization",
       "name": "VIPACH for Business",
       "url": "https://business.vipach.at/",
-      "founder": { "@id": "https://www.norbertbanhalmi.com/about/" },
-      "parentOrganization": { "@id": "https://www.vipach.at/#organization" }
+      "founder": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "parentOrganization": {
+        "@id": "https://www.vipach.at/#organization"
+      }
     },
     {
       "@type": "School",
       "@id": "https://www.magyariskola.at/#school",
       "name": "Bécsi Magyar Iskola",
-      "alternateName": ["BMI", "Wiener Ungarische Schule"],
+      "alternateName": [
+        "BMI",
+        "Wiener Ungarische Schule"
+      ],
       "url": "https://www.magyariskola.at/",
       "address": {
         "@type": "PostalAddress",
@@ -99,7 +114,9 @@
         "addressLocality": "Wien",
         "addressCountry": "AT"
       },
-      "parentOrganization": { "@id": "https://www.kozpontiszovetseg.at/#organization" }
+      "parentOrganization": {
+        "@id": "https://www.kozpontiszovetseg.at/#organization"
+      }
     },
     {
       "@type": "Organization",
@@ -107,7 +124,9 @@
       "name": "Ausztriai Magyar Egyesületek és Szervezetek Központi Szövetsége",
       "alternateName": "Központi Szövetség",
       "url": "https://www.kozpontiszovetseg.at/",
-      "sameAs": ["https://www.facebook.com/kozpontiszovetseg"]
+      "sameAs": [
+        "https://www.facebook.com/kozpontiszovetseg"
+      ]
     }
   ],
   "relationshipPolicy": {
