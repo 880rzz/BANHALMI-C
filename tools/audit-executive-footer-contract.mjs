@@ -22,7 +22,7 @@ for (const selector of ['.footer-contact-list .footer-location','.footer-contact
 }
 if (!fluid.includes('FOOTER-SINGLE-CANONICAL-V41-20260924')) errors.push('three-location canonical footer authority missing');
 if (!fluid.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important')) errors.push('desktop three-location grid missing');
-if (!/grid-column:1\s*\/\s*span\s*7!important/.test(fluid) || !/grid-column:1\s*\/\s*span\s*4!important/.test(fluid)) errors.push('desktop contact span contracts missing');
+if (!/grid-column:1\s*\/\s*span\s*7!important/.test(fluid) || !/grid-column:8\s*\/\s*span\s*3!important/.test(fluid)) errors.push('desktop contact/trust span contracts missing');
 
 let footers = 0;
 for (const page of pages) {
