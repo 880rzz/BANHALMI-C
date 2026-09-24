@@ -163,6 +163,35 @@ for(const vp of viewports){
   }
   await context.close();
 }
+const compactFooterSmokeViewports=[{width:768,height:1024},{width:820,height:1180},{width:1024,height:1366}];
+const compactFooterSmokePages=pages.filter(p=>p.kind==='home');
+for(const vp of compactFooterSmokeViewports){
+  const context=await browser.newContext({viewport:vp,deviceScaleFactor:1});
+  for(const target of compactFooterSmokePages){
+    const page=await context.newPage();
+    await page.goto(new URL(target.pathname,base).href,{waitUntil:'networkidle',timeout:45000});
+    const state=await page.evaluate(()=>{
+      const footer=document.querySelector('.site-footer');
+      const fr=footer?.getBoundingClientRect();
+      const accordions=[...document.querySelectorAll('details.footer-accordion')].map(d=>{
+        const ul=d.querySelector('ul'),ur=ul?.getBoundingClientRect(),dr=d.getBoundingClientRect();
+        return {label:d.querySelector('summary')?.textContent?.trim()||'',open:d.open,hidden:Boolean(ul?.hidden),display:ul?getComputedStyle(ul).display:null,ulHeight:ur?.height||0,detailsHeight:dr.height};
+      });
+      const blocks=[...document.querySelectorAll('.site-footer .footer-grid>*')].map(el=>{const r=el.getBoundingClientRect();return {name:el.matches('details')?(el.querySelector('summary')?.textContent?.trim()||'details'):(el.querySelector('.footer-heading')?.textContent?.trim()||el.className||el.tagName),left:r.left,right:r.right,top:r.top,bottom:r.bottom,height:r.height}});
+      const overlaps=[];for(let i=0;i<blocks.length;i++)for(let j=i+1;j<blocks.length;j++){const a=blocks[i],b=blocks[j],x=Math.min(a.right,b.right)-Math.max(a.left,b.left),y=Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top);if(x>2&&y>2)overlaps.push({a:a.name,b:b.name,x,y});}
+      return {footerHeight:fr?.height||0,accordions,blocks,overlaps};
+    });
+    const compactIssues=[];
+    if(state.footerHeight>footerAbsolute+2) compactIssues.push(`compact footer ${state.footerHeight.toFixed(1)}px > ${footerAbsolute}px; accordions=${state.accordions.map(a=>`${a.label}:${a.open?'open':'closed'}/${a.display}/${a.ulHeight.toFixed(0)}`).join(',')}`);
+    for(const o of state.overlaps) compactIssues.push(`compact footer overlap ${o.a} ↔ ${o.b} ${o.x.toFixed(1)}x${o.y.toFixed(1)}px`);
+    const slug=`${vp.width}x${vp.height}-${target.lang}-compact-footer`;
+    await page.screenshot({path:path.join(outDir,`${slug}.png`),fullPage:true});
+    reports.push({viewport:vp,...target,kind:'compact-footer-smoke',geometry:state,issues:compactIssues});
+    if(compactIssues.length) failures.push(`${slug}: ${compactIssues.join(' | ')}`);
+    await page.close();
+  }
+  await context.close();
+}
 await browser.close();
 const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-V21',designVersion:authority.version,base,viewports,pages,reports,failures};
 fs.writeFileSync(path.join(outDir,'report.json'),JSON.stringify(report,null,2));
