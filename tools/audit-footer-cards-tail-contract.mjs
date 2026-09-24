@@ -21,7 +21,7 @@ must(footer.legacyFooterMutatorsDisabled===true,'legacy footer mutator lock miss
 must(footer.runtimeDisclosureAuthority==='assets/js/main.js'&&Number(footer.runtimeDisclosureAuthorityCount)===1,'footer disclosure runtime must have exactly one owner');
 must(Number(footer.physicalBusinessLocationCount)===3,'footer must expose exactly three physical business locations');
 must(JSON.stringify(footer.locationRoles)===JSON.stringify(['vienna-studio','vienna-office','budapest-studio']),'footer location roles drifted');
-must(Number(footer.desktopColumns)===12&&Number(footer.smallDesktopColumns)===12&&Number(footer.tabletColumns)===2,'responsive footer grid authority drifted');
+must(Number(footer.desktopColumns)===12&&Number(footer.smallDesktopColumns)===12&&Number(footer.tabletColumns)===12,'responsive footer grid authority drifted');
 must(Number(footer.desktopContentRows)===2&&Number(footer.smallDesktopContentRows)===2,'desktop and small-desktop footer must remain two rows');
 must(flow.layoutMode==='flex'&&flow.documentBackground==='#ffffff','document/footer flow contract drifted');
 must(Number(flow.footerAbsoluteMaxPx)<=760,'footer absolute height guard became too permissive');
@@ -38,7 +38,7 @@ for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/inde
 }
 must(fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'desktop 12-track footer missing');
 must(fluid.includes('@media (min-width:1180px) and (max-width:1439px)')&&fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'small desktop 12-track footer missing');
-must(fluid.includes('@media (max-width:1179px)')&&fluid.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'),'compact two-column footer missing');
+must(fluid.includes('@media (min-width:721px) and (max-width:1179px)')&&fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'compact 12-track footer missing');
 must((fluid.match(/grid-template-columns:repeat\(3,minmax\(0,1fr\)\)!important/g)||[]).length>=2,'three-location desktop contact columns missing');
 must(fluid.includes('details.footer-accordion>ul')&&fluid.includes('visibility:hidden!important'),'compact initial disclosure collapse guard missing');
 must(fluid.includes('overflow-x:clip!important')&&fluid.includes('overflow-wrap:anywhere!important')&&fluid.includes('margin:0!important'),'footer containment/tail fallback missing');
