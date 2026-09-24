@@ -1851,7 +1851,8 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
     border-top:1px solid rgba(255,255,255,.12)!important;
     padding-top:18px!important;
   }
-  html body .site-footer details.footer-accordion>ul{
+  html body .site-footer details.footer-accordion>ul,
+  html body .site-footer details.footer-accordion[open]>ul{
     display:none!important;
     block-size:0!important;
     min-block-size:0!important;
