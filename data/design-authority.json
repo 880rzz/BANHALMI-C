@@ -124,7 +124,7 @@
       "runtimeDisclosureAuthorityCount": 1
     },
     "documentFlow": {
-      "layoutMode": "grid",
+      "layoutMode": "flex",
       "documentBackground": "#ffffff",
       "footerAfterDocumentGapMaxPx": 2,
       "mainToFooterOverlapTolerancePx": 2,
