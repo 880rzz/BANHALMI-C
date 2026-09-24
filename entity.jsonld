@@ -56,16 +56,6 @@
       "memberOf": [
         {
           "@type": "Organization",
-          "name": "AmCham Austria",
-          "url": "https://amcham.at/"
-        },
-        {
-          "@type": "Organization",
-          "name": "WKO Wien — Landesinnung der Berufsfotografie",
-          "url": "https://www.wko.at/wien/gewerbe-handwerk/berufsfotografie"
-        },
-        {
-          "@type": "Organization",
           "name": "Magyar Fotóművészek Világszövetsége",
           "url": "https://www.mfvsz.com/"
         }
@@ -188,7 +178,25 @@
           "German",
           "Hungarian"
         ]
-      }
+      },
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "American Chamber of Commerce in Austria",
+          "alternateName": "AmCham Austria",
+          "url": "https://amcham.at/"
+        },
+        {
+          "@type": "Organization",
+          "name": "WKO Wien / Wirtschaftskammer Wien",
+          "url": "https://www.wko.at/wien/"
+        },
+        {
+          "@type": "Organization",
+          "name": "Landesinnung / Bundesinnung der Berufsfotografie",
+          "url": "https://www.wko.at/oe/gewerbe-handwerk/berufsfotografie/start"
+        }
+      ]
     },
     {
       "@type": "Brand",
