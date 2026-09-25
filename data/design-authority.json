@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-25-v42-mobile-production-contract",
+  "version": "2026-09-25-v43-footer-native-disclosure-curved-hero",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -125,7 +125,13 @@
       "mobileMaxPx": 720,
       "mobileTopLevelFullWidth": true,
       "mobileResetExplicitGridPlacement": true,
-      "mobileNoCharacterBreaks": true
+      "mobileNoCharacterBreaks": true,
+      "runtimeDisclosureMode": "explicit-open-state-compact-desktop-forced-open",
+      "compactNativeDisclosureRequired": false,
+      "compactInteractiveDisclosureRequired": true,
+      "inlineVisibilityMutationAllowed": false,
+      "wideDesktopLegalSingleLineMinPx": 1440,
+      "cookieSettingsStaysWithLegalLinks": true
     },
     "documentFlow": {
       "layoutMode": "flex",
@@ -133,7 +139,9 @@
       "footerAfterDocumentGapMaxPx": 2,
       "mainToFooterOverlapTolerancePx": 2,
       "footerMaxViewportFractionOnTabletDesktop": 0.82,
-      "footerAbsoluteMaxPx": 760
+      "footerAbsoluteMaxPx": 760,
+      "rootOverscrollBackground": "#1d232d",
+      "rootOverscrollMatchesFooter": true
     },
     "quote": {
       "categoryCardHeight": "intrinsic",
@@ -205,8 +213,11 @@
       ],
       "desktopLayout": "stacked",
       "mobileGoldRuleAtImageEdge": true,
-      "mobileGoldRuleHeightPx": 4,
-      "mobileHeroClosureGapMaxPx": 2
+      "mobileGoldRuleHeightPx": 64,
+      "mobileHeroClosureGapMaxPx": 2,
+      "mobileGoldRuleShape": "curved-sweep",
+      "mobileGoldRuleBottomPx": -28,
+      "mobileGoldRuleBorderTopPx": 4
     },
     "homepageHeroMaxViewportFraction": 0.92,
     "sameRowCardHeightTolerancePx": 2,

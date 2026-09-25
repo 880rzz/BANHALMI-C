@@ -21,7 +21,9 @@ must(Number(authority.responsive?.touchTargetPx)===44,'BANHALMI canonical touch 
 must(Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDesktop)<=0.82,'BANHALMI footer viewport threshold became too permissive');
 must(Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx)<=760,'BANHALMI desktop footer absolute maximum became too permissive');
 must(authority.layout?.documentFlow?.layoutMode==='flex','BANHALMI document flow must preserve the canonical flex document model');
-must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI document floor must remain white to prevent dark tail exposure outside the intrinsic footer');
+must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI body/content document background must remain white');
+must(authority.layout?.documentFlow?.rootOverscrollBackground==='#1d232d'&&authority.layout?.documentFlow?.rootOverscrollMatchesFooter===true,'Safari root overscroll floor must match the footer instead of exposing a white band');
+must(fluid.includes('html{background:#1d232d!important;}'),'canonical CSS must keep the Safari root overscroll floor dark');
 must(Number(authority.layout?.footer?.desktopColumns)===12,'BANHALMI desktop footer must use the approved 12-track grid');
 must(Number(authority.layout?.footer?.desktopContentRows)===2,'BANHALMI desktop footer content must remain exactly two rows');
 must(Number(authority.layout?.footer?.desktopContactColumns)===3,'BANHALMI desktop footer must keep Vienna studio, Vienna office and Budapest studio in three explicit contact columns');
@@ -77,7 +79,10 @@ must(footerV41.includes('@media (max-width:720px)'),'canonical mobile footer bre
 must(footerV41.includes('grid-template-columns:minmax(0,1fr)!important'),'canonical mobile one-column footer missing');
 must(footerV41.includes('grid-column:1 / -1!important'),'canonical mobile full-width placement missing');
 must(footerV41.includes('grid-row:auto!important'),'canonical mobile grid-row reset missing');
-must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V42-20260925'),'mobile homepage hero edge contract missing');
+must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V43-20260925'),'mobile curved homepage hero edge contract missing');
+must(authority.visualGeometry?.homepageHeroMedia?.mobileGoldRuleShape==='curved-sweep','mobile hero must preserve curved gold sweep');
+must(authority.layout?.footer?.compactInteractiveDisclosureRequired===true,'compact footer must preserve interactive disclosure');
+must(authority.layout?.footer?.inlineVisibilityMutationAllowed===false,'compact footer must not regain inline visibility mutation');
 for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
   const html=fs.readFileSync(rel,'utf8');
   must(html.indexOf('/assets/css/fluid-4k-rhythm.css')>html.indexOf('/assets/css/site.css'),rel+': footer authority load order regressed');

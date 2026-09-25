@@ -1372,7 +1372,7 @@ html body .bn-mega-item{
    Canonical effects only: no new runtime geometry injection. */
 
 
-html{background:#fff!important;}
+html{background:#1d232d!important;}
 html body{
   min-height:100vh!important;
   min-height:100dvh!important;
@@ -1489,15 +1489,31 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure:
   background:#fff!important;
 }
 
-/* HOMEPAGE-MOBILE-HERO-EDGE-V42-20260925 */
+/* HOMEPAGE-MOBILE-HERO-EDGE-V43-20260925
+   Keep the original BANHALMI curved gold sweep while removing the legacy
+   figure-flow gap below the hero. The curve belongs to the image edge; the
+   following content section begins immediately after the figure. */
 @media (max-width:720px){
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
-  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{margin-bottom:0!important;padding-bottom:0!important;}
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    margin-bottom:0!important;
+    padding-bottom:0!important;
+  }
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{margin-top:0!important;}
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
-    left:0!important;right:0!important;bottom:0!important;width:100%!important;height:4px!important;
-    background:#B79C44!important;border:0!important;border-radius:0!important;transform:none!important;
+    left:-14%!important;
+    right:auto!important;
+    bottom:-28px!important;
+    width:128%!important;
+    height:64px!important;
+    background:#fff!important;
+    border-top:4px solid #B79C44!important;
+    border-right:0!important;
+    border-bottom:0!important;
+    border-left:0!important;
+    border-radius:50% 50% 0 0 / 34% 34% 0 0!important;
+    transform:translateZ(0)!important;
   }
 }
 /* V41 document-flow closure: one canonical flex flow from source through production.
@@ -1770,6 +1786,34 @@ html body .site-footer .footer-cookie-settings{
   background:none!important;
   border:0!important;
 }
+@media (min-width:1440px){
+  html body .site-footer .footer-bottom{
+    grid-template-columns:max-content minmax(0,1fr)!important;
+    column-gap:24px!important;
+  }
+  html body .site-footer .footer-bottom>span:last-child{
+    flex-wrap:nowrap!important;
+    justify-content:flex-end!important;
+    gap:0 8px!important;
+    white-space:nowrap!important;
+  }
+  html body .site-footer .footer-cookie-settings{
+    flex:0 0 auto!important;
+    white-space:nowrap!important;
+  }
+}
+@media (min-width:1180px) and (max-width:1439px){
+  html body .site-footer .footer-bottom{
+    grid-template-columns:1fr!important;
+    row-gap:6px!important;
+  }
+  html body .site-footer .footer-bottom>span:first-child,
+  html body .site-footer .footer-bottom>span:last-child{
+    justify-self:start!important;
+    justify-content:flex-start!important;
+    text-align:left!important;
+  }
+}
 
 html body .site-footer .banhalmi-ecosystem{
   inline-size:100%!important;
@@ -1868,8 +1912,7 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
     border-top:1px solid rgba(255,255,255,.12)!important;
     padding-top:18px!important;
   }
-  html body .site-footer details.footer-accordion>ul,
-  html body .site-footer details.footer-accordion[open]>ul{
+  html body .site-footer details.footer-accordion:not([open])>ul{
     display:none!important;
     block-size:0!important;
     min-block-size:0!important;
@@ -1878,6 +1921,16 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
     padding:0!important;
     overflow:hidden!important;
     visibility:hidden!important;
+  }
+  html body .site-footer details.footer-accordion[open]>ul{
+    display:grid!important;
+    block-size:auto!important;
+    min-block-size:0!important;
+    max-block-size:none!important;
+    margin:4px 0 0!important;
+    padding:0 0 12px!important;
+    overflow:visible!important;
+    visibility:visible!important;
   }
   html body .site-footer .footer-contact-list{grid-template-columns:repeat(3,minmax(0,1fr))!important;}
   html body .site-footer .footer-bottom{
