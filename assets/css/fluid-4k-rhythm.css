@@ -1786,6 +1786,34 @@ html body .site-footer .footer-cookie-settings{
   background:none!important;
   border:0!important;
 }
+@media (min-width:1440px){
+  html body .site-footer .footer-bottom{
+    grid-template-columns:max-content minmax(0,1fr)!important;
+    column-gap:24px!important;
+  }
+  html body .site-footer .footer-bottom>span:last-child{
+    flex-wrap:nowrap!important;
+    justify-content:flex-end!important;
+    gap:0 8px!important;
+    white-space:nowrap!important;
+  }
+  html body .site-footer .footer-cookie-settings{
+    flex:0 0 auto!important;
+    white-space:nowrap!important;
+  }
+}
+@media (min-width:1180px) and (max-width:1439px){
+  html body .site-footer .footer-bottom{
+    grid-template-columns:1fr!important;
+    row-gap:6px!important;
+  }
+  html body .site-footer .footer-bottom>span:first-child,
+  html body .site-footer .footer-bottom>span:last-child{
+    justify-self:start!important;
+    justify-content:flex-start!important;
+    text-align:left!important;
+  }
+}
 
 html body .site-footer .banhalmi-ecosystem{
   inline-size:100%!important;
