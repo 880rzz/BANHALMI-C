@@ -25,7 +25,7 @@ function audit(file) {
   if (/rel="preload"[^>]*as="style"[^>]*href="\/assets\/css\/site\.css/i.test(html)) failures.push(`${rel}: site.css must not be preloaded as a deferred stylesheet`);
   if (html.includes('class="site-footer"')) {
     const accordions = html.match(/<details\b[^>]*class="[^"]*footer-accordion[^"]*"[^>]*>/gi) || [];
-    for (const tag of accordions) if (!/\bopen(?:\s|=|>)/i.test(tag)) failures.push(`${rel}: desktop footer accordion lacks a stable source-open state`);
+    for (const tag of accordions) if (/\bopen(?:\s|=|>)/i.test(tag)) failures.push(`${rel}: footer accordion must default closed in source markup; desktop runtime owns open state`);
   }
 }
 
