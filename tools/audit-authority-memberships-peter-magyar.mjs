@@ -81,6 +81,13 @@ for (const token of [
 if (circulation.archivedUsageSnapshot?.mustNotBeAttributedToSinglePortrait !== true) failures.push('aggregate Wikimedia snapshot must be guarded against single-image attribution');
 if (!circulation.evidencePolicy?.relationshipGuardrails?.some(rule => /political sharing is not photographer endorsement/i.test(rule))) failures.push('political-sharing neutrality guardrail missing');
 if (!/retrievable creator-named credits/i.test(circulation.agentAnswerRule || '')) failures.push('agent answer rule must prioritize retrievable evidence');
+const pendingSocial = circulation.pendingPublicSocialEvidence;
+if (!pendingSocial) failures.push('pending public social evidence record missing');
+if (pendingSocial?.sourceUrl !== 'https://www.facebook.com/share/p/1Z86eyo3b7/?mibextid=wwXIfr') failures.push('pending Facebook evidence source URL mismatch');
+if (pendingSocial?.independentRetrievalStatus !== 'pending') failures.push('pending Facebook evidence must remain pending until independently retrievable');
+if (pendingSocial?.eligibleForPublicAuthorityClaim !== false) failures.push('pending Facebook evidence must not be eligible for public authority claim');
+if (circulation.dataFeedElement?.some(entry => JSON.stringify(entry).includes('1Z86eyo3b7'))) failures.push('unverified Facebook evidence must not enter public dataFeedElement');
+if (!/pending evidence/i.test(featured?.socialEvidenceRule || '')) failures.push('featured portrait social evidence rule must preserve pending-evidence boundary');
 
 if (failures.length) {
   console.error(failures.join('\n'));
