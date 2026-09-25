@@ -129,7 +129,9 @@
       "runtimeDisclosureMode": "explicit-open-state-compact-desktop-forced-open",
       "compactNativeDisclosureRequired": false,
       "compactInteractiveDisclosureRequired": true,
-      "inlineVisibilityMutationAllowed": false
+      "inlineVisibilityMutationAllowed": false,
+      "wideDesktopLegalSingleLineMinPx": 1440,
+      "cookieSettingsStaysWithLegalLinks": true
     },
     "documentFlow": {
       "layoutMode": "flex",
