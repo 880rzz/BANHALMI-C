@@ -109,13 +109,22 @@
     footerAccordions.forEach(function (details) {
       var summary = details.querySelector("summary");
       if (!summary) return;
+      details.setAttribute("data-footer-disclosure-runtime", "v43");
+      summary.setAttribute("aria-expanded", details.open ? "true" : "false");
       summary.addEventListener("click", function (event) {
-        event.preventDefault();
         if (footerDesktopQuery.matches) {
+          event.preventDefault();
           details.open = true;
+          summary.setAttribute("aria-expanded", "true");
           return;
         }
-        details.open = !details.open;
+        var nextOpen = !details.open;
+        event.preventDefault();
+        window.requestAnimationFrame(function () {
+          details.open = nextOpen;
+          summary.setAttribute("aria-expanded", nextOpen ? "true" : "false");
+          details.setAttribute("data-footer-disclosure-last-action", nextOpen ? "open" : "close");
+        });
       });
     });
     syncFooterAccordions();
