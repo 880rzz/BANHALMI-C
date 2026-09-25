@@ -21,7 +21,9 @@ must(Number(authority.responsive?.touchTargetPx)===44,'BANHALMI canonical touch 
 must(Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDesktop)<=0.82,'BANHALMI footer viewport threshold became too permissive');
 must(Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx)<=760,'BANHALMI desktop footer absolute maximum became too permissive');
 must(authority.layout?.documentFlow?.layoutMode==='flex','BANHALMI document flow must preserve the canonical flex document model');
-must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI document floor must remain white to prevent dark tail exposure outside the intrinsic footer');
+must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI body/content document background must remain white');
+must(authority.layout?.documentFlow?.rootOverscrollBackground==='#1d232d'&&authority.layout?.documentFlow?.rootOverscrollMatchesFooter===true,'Safari root overscroll floor must match the footer instead of exposing a white band');
+must(fluid.includes('html{background:#1d232d!important;}'),'canonical CSS must keep the Safari root overscroll floor dark');
 must(Number(authority.layout?.footer?.desktopColumns)===12,'BANHALMI desktop footer must use the approved 12-track grid');
 must(Number(authority.layout?.footer?.desktopContentRows)===2,'BANHALMI desktop footer content must remain exactly two rows');
 must(Number(authority.layout?.footer?.desktopContactColumns)===3,'BANHALMI desktop footer must keep Vienna studio, Vienna office and Budapest studio in three explicit contact columns');
