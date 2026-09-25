@@ -43,7 +43,10 @@ must((fluid.match(/grid-template-columns:repeat\(3,minmax\(0,1fr\)\)!important/g
 must(fluid.includes('details.footer-accordion>ul')&&fluid.includes('visibility:hidden!important'),'compact initial disclosure collapse guard missing');
 must(fluid.includes('overflow-x:clip!important')&&fluid.includes('overflow-wrap:anywhere!important')&&fluid.includes('margin:0!important'),'footer containment/tail fallback missing');
 
-must(/footerAccordions/.test(main)&&/style\.setProperty\("display"/.test(main),'assets/js/main.js must own disclosure state and explicit list visibility');
+must(/footerAccordions/.test(main),'assets/js/main.js must own footer desktop-open synchronization');
+must(!/style\.setProperty\("display".*footer|footer[\s\S]{0,1200}style\.setProperty\("display"/.test(main),'footer runtime must not override native details visibility with inline display');
+must(main.includes('list.style.removeProperty("display")'),'footer runtime must clear stale inline display authority');
+must(footer.compactNativeDisclosureRequired===true&&footer.runtimeDisclosureMode==='native-details-compact-desktop-forced-open','compact footer must use native details disclosure');
 must(main.includes('data-artineris-participation')&&main.includes('budapest.artineris.com/en/artists/?codice=FMRAXT'),'shared footer must expose verified Budapest Artineris artist participation');
 must(!/footerAccordions|syncFooterGroups|syncFooterAccordions/.test(boot),'fluid rhythm boot must not own footer disclosure state');
 must(!/footerAccordions|syncFooterGroups|syncFooterAccordions/.test(legacyMain),'legacy js/main.js must not own footer disclosure state');
