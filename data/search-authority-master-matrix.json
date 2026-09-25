@@ -1,9 +1,9 @@
 {
-  "version": "2026-09-24-v7",
+  "version": "2026-09-25-v8-final-completion",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
-    "settledThrough": "2026-09-20",
+    "settledThrough": "2026-09-22",
     "baseline28d": [
       "2026-08-24",
       "2026-09-20"
@@ -317,7 +317,7 @@
     {
       "market": "HU-VIE",
       "status": "INPUT-NEM-ELÉRHETŐ",
-      "note": "No sufficiently supported city-intent sample isolated yet."
+      "note": "Full available historical GSC window checked through 2026-09-22; no sufficiently supported strict HU + Bécs/Vienna commercial sample. Final status: INPUT-NEM-ELÉRHETŐ."
     },
     {
       "market": "EN-BUD",
@@ -337,7 +337,7 @@
     {
       "market": "DE-BUD",
       "status": "INPUT-NEM-ELÉRHETŐ",
-      "note": "No sufficiently supported German Budapest commercial sample isolated yet."
+      "note": "Full available historical GSC window checked through 2026-09-22; no sufficiently supported strict DE + Budapest commercial sample. Final status: INPUT-NEM-ELÉRHETŐ."
     },
     {
       "market": "DE-VIE",
@@ -834,5 +834,35 @@
       "Preserve ART ownership for artistic/oeuvre intent and Blog ownership for editorial/history intent.",
       "Use GSC URL Inspection and query/page trends to confirm transfer; historical rows are not current-state proof."
     ]
+  },
+  "finalCompletion": {
+    "status": "MÉRÉS ALATT",
+    "report": "/docs/BANHALMI_SEARCH_AUTHORITY_AI_VISIBILITY_FINAL_COMPLETION_2026-09-25.md",
+    "conversion": {
+      "status": "INPUT-NEM-ELÉRHETŐ",
+      "range": [
+        "2026-08-25",
+        "2026-09-22"
+      ],
+      "reason": "GA4 session_start is configured as a key event while generate_lead, qualify_lead and purchase are 0; no trustworthy lead-to-revenue dataset is available."
+    },
+    "aiVisibility": {
+      "status": "MÉRÉS ALATT",
+      "range": [
+        "2026-08-25",
+        "2026-09-22"
+      ],
+      "observedAssistantTraffic": {
+        "assistant": "ChatGPT",
+        "sessions": 21,
+        "engagementRate": 0.7619047619047619
+      },
+      "note": "Observed referral traffic is evidence of assistant-origin sessions, not proof of recommendation rank or answer share."
+    },
+    "submissionReadiness": {
+      "google": "FÜGGŐ",
+      "bing": "FÜGGŐ",
+      "reason": "Wait for Professional V43 production verification before canonical sitemap resubmission. Bing Webmaster API is not configured in GSC Wizard."
+    }
   }
 }
