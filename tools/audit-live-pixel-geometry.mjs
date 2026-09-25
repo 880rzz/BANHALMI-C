@@ -102,7 +102,7 @@ for(const vp of viewports){
           const d=document.querySelector('.site-footer details.footer-accordion');
           const ul=d?.querySelector('ul');
           const r=ul?.getBoundingClientRect();
-          return d&&ul?{open:d.open,hidden:Boolean(ul.hidden),display:getComputedStyle(ul).display,height:r?.height||0}:null;
+          return d&&ul?{open:d.open,hidden:Boolean(ul.hidden),display:getComputedStyle(ul).display,height:r?.height||0,runtime:d.getAttribute('data-footer-disclosure-runtime'),lastAction:d.getAttribute('data-footer-disclosure-last-action'),ariaExpanded:d.querySelector('summary')?.getAttribute('aria-expanded')||null}:null;
         });
         if(disclosure?.open) await summary.click();
       }
@@ -244,7 +244,7 @@ for(const width of requiredResponsiveWidths){
           const d=document.querySelector('.site-footer details.footer-accordion');
           const ul=d?.querySelector('ul');
           const r=ul?.getBoundingClientRect();
-          return d&&ul?{open:d.open,hidden:Boolean(ul.hidden),display:getComputedStyle(ul).display,height:r?.height||0}:null;
+          return d&&ul?{open:d.open,hidden:Boolean(ul.hidden),display:getComputedStyle(ul).display,height:r?.height||0,runtime:d.getAttribute('data-footer-disclosure-runtime'),lastAction:d.getAttribute('data-footer-disclosure-last-action'),ariaExpanded:d.querySelector('summary')?.getAttribute('aria-expanded')||null}:null;
         });
         if(disclosure?.open) await summary.click();
       }
@@ -254,7 +254,7 @@ for(const width of requiredResponsiveWidths){
     if(state.footerTail!=null&&state.footerTail>2) issues.push(`footer tail ${state.footerTail.toFixed(1)}px > 2px`);
     for(const x of state.intersections) issues.push(`footer block intersection ${x.a} ↔ ${x.b} ${x.x.toFixed(1)}x${x.y.toFixed(1)}px`);
     if(state.summaries.some(h=>h<43.5)) issues.push('footer accordion touch target below 44px');
-    if(width<1180&&(!disclosure||!disclosure.open||disclosure.hidden||disclosure.display==='none'||disclosure.height<1)) issues.push('footer native accordion does not open interactively');
+    if(width<1180&&(!disclosure||disclosure.runtime!=='v43'||disclosure.lastAction!=='open'||disclosure.ariaExpanded!=='true'||!disclosure.open||disclosure.hidden||disclosure.display==='none'||disclosure.height<1)) issues.push('footer accordion interaction failed: '+JSON.stringify(disclosure));
     if(width<=720){
       const tracks=state.gridTemplateColumns.trim().split(/\s+/).filter(Boolean);
       if(tracks.length!==1) issues.push(`mobile footer computed ${tracks.length} columns: ${state.gridTemplateColumns}`);
