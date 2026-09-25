@@ -14,7 +14,7 @@ must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260925-mobile-v42'),'ren
 must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260925-mobile-v42'),'production artifact must parser-discover the same canonical geometry CSS token');
 must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
 must(mainRuntime.includes('window.matchMedia("(min-width: 1180px)")'),'desktop footer disclosure breakpoint missing from canonical runtime');
-must(mainRuntime.includes('details.open = !compact;')&&mainRuntime.includes('list.style.setProperty("display", compact ? "none" : "grid", "important")'),'footer disclosure state must track viewport while preserving canonical CSS grid geometry');
+must(mainRuntime.includes('if (footerDesktopQuery.matches) details.open = true;')&&mainRuntime.includes('list.style.removeProperty("display")'),'footer disclosure state must preserve native compact interaction and desktop-open state');
 must(!boot.includes('style.textContent'),'runtime must not inject layout CSS');
 must(!boot.includes('--desktop-hero-min'),'runtime must not own hero geometry');
 must(!boot.includes('object-position:center 30%'),'runtime must not own image crop geometry');
@@ -36,7 +36,7 @@ must(heroAuthority.desktopMinPx===1180,'design authority desktop hero breakpoint
 must(heroAuthority.tabletHeightVw===39.5604,'design authority tablet hero height mismatch');
 must(heroAuthority.desktopHeight==='clamp(600px,42.8vw,720px)','design authority desktop hero height mismatch');
 must(fluid.includes('FINAL-LAYOUT-RUNTIME-CLOSURE-20260921'),'final hero/footer runtime closure marker missing');
-must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V42-20260925'),'mobile homepage hero edge contract missing');
+must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V43-20260925'),'mobile curved homepage hero edge contract missing');
 must(fluid.includes('height:clamp(600px,42.8vw,720px)!important'),'final desktop hero crop geometry missing');
 must(heroAuthority.shortDesktopHeightPx===561,'design authority short-height desktop hero mismatch');
 must(heroAuthority.desktopLayout==='stacked'&&heroAuthority.copyPanelMatchesMediaHeight===false,'design authority must keep the desktop homepage hero stacked with independent copy height');
