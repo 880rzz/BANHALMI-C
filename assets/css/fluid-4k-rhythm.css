@@ -1489,15 +1489,31 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure:
   background:#fff!important;
 }
 
-/* HOMEPAGE-MOBILE-HERO-EDGE-V42-20260925 */
+/* HOMEPAGE-MOBILE-HERO-EDGE-V43-20260925
+   Keep the original BANHALMI curved gold sweep while removing the legacy
+   figure-flow gap below the hero. The curve belongs to the image edge; the
+   following content section begins immediately after the figure. */
 @media (max-width:720px){
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
-  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{margin-bottom:0!important;padding-bottom:0!important;}
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{
+    margin-bottom:0!important;
+    padding-bottom:0!important;
+  }
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{margin-top:0!important;}
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
-    left:0!important;right:0!important;bottom:0!important;width:100%!important;height:4px!important;
-    background:#B79C44!important;border:0!important;border-radius:0!important;transform:none!important;
+    left:-14%!important;
+    right:auto!important;
+    bottom:-28px!important;
+    width:128%!important;
+    height:64px!important;
+    background:#fff!important;
+    border-top:4px solid #B79C44!important;
+    border-right:0!important;
+    border-bottom:0!important;
+    border-left:0!important;
+    border-radius:50% 50% 0 0 / 34% 34% 0 0!important;
+    transform:translateZ(0)!important;
   }
 }
 /* V41 document-flow closure: one canonical flex flow from source through production.
