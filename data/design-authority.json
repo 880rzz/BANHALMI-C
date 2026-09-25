@@ -126,8 +126,10 @@
       "mobileTopLevelFullWidth": true,
       "mobileResetExplicitGridPlacement": true,
       "mobileNoCharacterBreaks": true,
-      "runtimeDisclosureMode": "native-details-compact-desktop-forced-open",
-      "compactNativeDisclosureRequired": true
+      "runtimeDisclosureMode": "explicit-open-state-compact-desktop-forced-open",
+      "compactNativeDisclosureRequired": false,
+      "compactInteractiveDisclosureRequired": true,
+      "inlineVisibilityMutationAllowed": false
     },
     "documentFlow": {
       "layoutMode": "flex",
