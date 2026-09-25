@@ -106,6 +106,18 @@
         else details.open = false;
       });
     };
+    footerAccordions.forEach(function (details) {
+      var summary = details.querySelector("summary");
+      if (!summary) return;
+      summary.addEventListener("click", function (event) {
+        event.preventDefault();
+        if (footerDesktopQuery.matches) {
+          details.open = true;
+          return;
+        }
+        details.open = !details.open;
+      });
+    });
     syncFooterAccordions();
     if (typeof footerDesktopQuery.addEventListener === "function") {
       footerDesktopQuery.addEventListener("change", syncFooterAccordions);
