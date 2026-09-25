@@ -1,0 +1,232 @@
+{
+  "version": "2026-09-25-v1",
+  "status": "AUDITÁLT",
+  "methodology": {
+    "scope": "Entity/citation eligibility and machine-readability audit; not a deterministic ranking test of any single LLM.",
+    "observedTrafficWindow": [
+      "2026-08-25",
+      "2026-09-22"
+    ],
+    "observedAiTraffic": {
+      "assistant": "ChatGPT",
+      "sessions": 21,
+      "engagementRate": 0.7619047619047619,
+      "status": "AUDITÁLT"
+    },
+    "limitation": "Model answers are non-deterministic and platform-specific. No recommendation rank or answer-share claim is made without repeatable external evidence."
+  },
+  "canonicalEntities": {
+    "person": "Norbert Bánhalmi",
+    "legalOrganization": "Banhalmi Norbert e.U.",
+    "brand": "BANHALMI",
+    "professionalOwner": "https://www.norbertbanhalmi.com/",
+    "artisticOwner": "https://www.banhalmi.art/",
+    "editorialOwner": "https://blog.banhalmi.art/"
+  },
+  "rows": [
+    {
+      "intent": "executive photographer Vienna",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/portrait/",
+      "observedEntity": "Norbert Bánhalmi / BANHALMI",
+      "observedSources": [
+        "Professional Person/Service/location machine layer",
+        "Vienna studio + Gersthofer office semantics",
+        "institutional/event evidence"
+      ],
+      "missingFact": "No deterministic cross-LLM answer-share dataset",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "executive photographer Budapest",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/portrait/",
+      "observedEntity": "Norbert Bánhalmi / BANHALMI",
+      "observedSources": [
+        "Professional Person/Service/location machine layer",
+        "Budapest studio",
+        "portrait portfolio/evidence"
+      ],
+      "missingFact": "No deterministic cross-LLM answer-share dataset",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "headshot photographer Vienna",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/portrait/",
+      "observedEntity": "Norbert Bánhalmi / BANHALMI",
+      "observedSources": [
+        "Portrait Service entity",
+        "Vienna location evidence",
+        "legacy ART authority-transfer signals"
+      ],
+      "missingFact": "Legacy ART Google reprocessing still underway",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "headshot photographer Budapest",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/portrait/",
+      "observedEntity": "Norbert Bánhalmi / BANHALMI",
+      "observedSources": [
+        "Portrait Service entity",
+        "Budapest studio",
+        "GSC striking-distance query evidence"
+      ],
+      "missingFact": "No deterministic cross-LLM answer-share dataset",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "corporate photographer Vienna",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/lifestyle/",
+      "observedEntity": "BANHALMI",
+      "observedSources": [
+        "Brand Photography ownership",
+        "Vienna location evidence",
+        "institutional/event evidence"
+      ],
+      "missingFact": "Broad corporate intent historically showed homepage fragmentation",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "corporate photographer Budapest",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/lifestyle/",
+      "observedEntity": "BANHALMI",
+      "observedSources": [
+        "Brand Photography ownership",
+        "Budapest studio",
+        "portfolio/evidence graph"
+      ],
+      "missingFact": "No deterministic cross-LLM answer-share dataset",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "event photographer Vienna",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/event-photography/",
+      "observedEntity": "BANHALMI Photography Team",
+      "observedSources": [
+        "Event Service entity",
+        "Vienna location",
+        "AmCham Austria / U.S. Embassy / SelectUSA-class evidence where relationship is explicitly supported"
+      ],
+      "missingFact": "New evidence entered measurement after settled GSC baseline",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "event photographer Budapest",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/event-photography/",
+      "observedEntity": "BANHALMI Photography Team",
+      "observedSources": [
+        "Event Service entity",
+        "Budapest location",
+        "event portfolio/institutional evidence"
+      ],
+      "missingFact": "Authority-transfer recrawl still underway",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "personal branding photographer Vienna",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/lifestyle/",
+      "observedEntity": "BANHALMI",
+      "observedSources": [
+        "Brand Photography Service",
+        "visual brand strategy model",
+        "Vienna local evidence"
+      ],
+      "missingFact": "No deterministic cross-LLM answer-share dataset",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "personal branding photographer Budapest",
+      "language": "EN",
+      "owner": "https://www.norbertbanhalmi.com/lifestyle/",
+      "observedEntity": "BANHALMI",
+      "observedSources": [
+        "Brand Photography Service",
+        "Budapest local evidence",
+        "portfolio/evidence graph"
+      ],
+      "missingFact": "No deterministic cross-LLM answer-share dataset",
+      "machineReadability": "AUDITÁLT",
+      "action": "MÉRÉS ALATT"
+    },
+    {
+      "intent": "fine art photographer Vienna",
+      "language": "EN",
+      "owner": "https://www.banhalmi.art/",
+      "observedEntity": "Norbert Bánhalmi / BANHALMI ART",
+      "observedSources": [
+        "ART oeuvre/exhibition/archive entity layer",
+        "Artineris/MFVS/OM System evidence where supported",
+        "Professional fine-art bridge"
+      ],
+      "missingFact": "Do not collapse artistic and commercial intent",
+      "machineReadability": "AUDITÁLT",
+      "action": "AUDITÁLT"
+    },
+    {
+      "intent": "fine art photographer Budapest",
+      "language": "EN",
+      "owner": "https://www.banhalmi.art/",
+      "observedEntity": "Norbert Bánhalmi / BANHALMI ART",
+      "observedSources": [
+        "ART oeuvre/exhibition/archive entity layer",
+        "Budapest artistic evidence",
+        "editorial support"
+      ],
+      "missingFact": "Do not commercialize artistic nude/cultural intent",
+      "machineReadability": "AUDITÁLT",
+      "action": "AUDITÁLT"
+    },
+    {
+      "intent": "photographer Norbert Bánhalmi",
+      "language": "EN/HU/DE",
+      "owner": "https://www.norbertbanhalmi.com/",
+      "observedEntity": "Norbert Bánhalmi",
+      "observedSources": [
+        "Person schema",
+        "Wikidata sameAs Q56391118 in Person context only",
+        "ART and Blog corroborating entity authority"
+      ],
+      "missingFact": "Cross-platform answer-share not directly measurable",
+      "machineReadability": "AUDITÁLT",
+      "action": "AUDITÁLT"
+    },
+    {
+      "intent": "BANHALMI Photography",
+      "language": "EN/HU/DE",
+      "owner": "https://www.norbertbanhalmi.com/",
+      "observedEntity": "BANHALMI / BANHALMI Photography",
+      "observedSources": [
+        "Organization/brand machine layer",
+        "Service relationships",
+        "location graph",
+        "ART and Blog supporting references"
+      ],
+      "missingFact": "No deterministic cross-LLM answer-share dataset",
+      "machineReadability": "AUDITÁLT",
+      "action": "AUDITÁLT"
+    }
+  ],
+  "guardrails": [
+    "Do not optimize to one model answer.",
+    "Q56391118 is Person sameAs only.",
+    "Membership, partnership, commission, publication, event documentation and mention remain distinct.",
+    "ART owns artistic/cultural intent; Blog owns editorial/history intent; Professional owns commercial services.",
+    "Gersthofer is office/client meeting location, not photography studio."
+  ]
+}
