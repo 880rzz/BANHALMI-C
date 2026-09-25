@@ -40,7 +40,7 @@ must(fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),
 must(fluid.includes('@media (min-width:1180px) and (max-width:1439px)')&&fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'small desktop 12-track footer missing');
 must(fluid.includes('@media (min-width:721px) and (max-width:1179px)')&&fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'compact 12-track footer missing');
 must((fluid.match(/grid-template-columns:repeat\(3,minmax\(0,1fr\)\)!important/g)||[]).length>=2,'three-location desktop contact columns missing');
-must(fluid.includes('details.footer-accordion>ul')&&fluid.includes('visibility:hidden!important'),'compact initial disclosure collapse guard missing');
+must(fluid.includes('details.footer-accordion:not([open])>ul')&&fluid.includes('details.footer-accordion[open]>ul')&&fluid.includes('visibility:hidden!important')&&fluid.includes('visibility:visible!important'),'compact footer must hide only closed disclosures and reveal open disclosures');
 must(fluid.includes('overflow-x:clip!important')&&fluid.includes('overflow-wrap:anywhere!important')&&fluid.includes('margin:0!important'),'footer containment/tail fallback missing');
 
 must(/footerAccordions/.test(main),'assets/js/main.js must own footer desktop-open synchronization');
