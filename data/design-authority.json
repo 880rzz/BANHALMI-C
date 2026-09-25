@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-24-v41-unified-footer",
+  "version": "2026-09-25-v42-mobile-production-contract",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -116,12 +116,16 @@
         "vienna-office",
         "budapest-studio"
       ],
-      "canonicalFinalMarker": "FOOTER-SINGLE-CANONICAL-V41-20260924",
+      "canonicalFinalMarker": "FOOTER-SINGLE-CANONICAL-V42-20260925",
       "desktopInternalLocationDivider": true,
       "singleGeometryAuthorityRequired": true,
       "legacyFooterMutatorsDisabled": true,
       "runtimeDisclosureAuthority": "assets/js/main.js",
-      "runtimeDisclosureAuthorityCount": 1
+      "runtimeDisclosureAuthorityCount": 1,
+      "mobileMaxPx": 720,
+      "mobileTopLevelFullWidth": true,
+      "mobileResetExplicitGridPlacement": true,
+      "mobileNoCharacterBreaks": true
     },
     "documentFlow": {
       "layoutMode": "flex",
@@ -199,7 +203,10 @@
         "de-at/index.html",
         "hu/index.html"
       ],
-      "desktopLayout": "stacked"
+      "desktopLayout": "stacked",
+      "mobileGoldRuleAtImageEdge": true,
+      "mobileGoldRuleHeightPx": 4,
+      "mobileHeroClosureGapMaxPx": 2
     },
     "homepageHeroMaxViewportFraction": 0.92,
     "sameRowCardHeightTolerancePx": 2,
@@ -207,7 +214,27 @@
     "sectionStartToHeadingMaxPx": 180,
     "megaMenuFirstContentMaxPx": 72,
     "megaMenuBottomWhitespaceMaxPx": 44,
-    "runtimeGeometryOverridesAllowed": false
+    "runtimeGeometryOverridesAllowed": false,
+    "mobileProductionViewports": [
+      375,
+      390,
+      393,
+      414,
+      430,
+      621,
+      720,
+      721,
+      768,
+      820,
+      1024,
+      1179,
+      1180,
+      1280,
+      1440,
+      1920,
+      2560,
+      3840
+    ]
   },
   "navigation": {
     "activeState": "text-only",
