@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-25-v43-footer-native-disclosure-curved-hero",
+  "version": "2026-09-25-v44-mobile-hero-desktop-footer",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -216,7 +216,7 @@
       "mobileGoldRuleHeightPx": 64,
       "mobileHeroClosureGapMaxPx": 2,
       "mobileGoldRuleShape": "curved-sweep",
-      "mobileGoldRuleBottomPx": -28,
+      "mobileGoldRuleBottomPx": -40,
       "mobileGoldRuleBorderTopPx": 4
     },
     "homepageHeroMaxViewportFraction": 0.92,
