@@ -60,6 +60,17 @@ Remediation is already in the measurement window; no new copy churn.
 
 ## 9. Authority-transfer status
 Status: MÉRÉS ALATT
+
+Google URL Inspection evidence collected 2026-09-25:
+- Professional /hu/portre/: PASS — Submitted and indexed; last crawl 2026-09-24T23:05:21Z.
+- Professional /hu/brand/: PASS — Submitted and indexed; last crawl 2026-07-24T17:13:37Z.
+- Professional /hu/rendezvenyfotozas/: PASS — Submitted and indexed; last crawl 2026-09-05T18:38:37Z.
+- ART /headshot-fotozas: Google stored state NEUTRAL / 404, last crawl 2026-08-01T18:04:07Z.
+- ART /portfolio-fotozas: NEUTRAL / Crawled - currently not indexed, last crawl 2026-08-07T03:54:15Z.
+- ART /rendezvenyfotozas: PASS / Submitted and indexed, last crawl 2026-06-30T03:12:42Z.
+- ART /muveszi-aktfotozas: NEUTRAL / Page with redirect, last crawl 2026-09-13T10:47:14Z.
+
+The ART production deployment dated 2026-09-25 explicitly exact-live tested both slashless and trailing-slash headshot/portfolio/event migration stubs against the custom domain. Therefore the older Google inspection states are recrawl/reprocessing lag, not evidence that current production still serves the old state.
 Legacy ART commercial authority map is recorded in data/search-authority-master-matrix.json.
 Canonical receiving owners:
 - Headshot → /hu/portre/
@@ -76,6 +87,8 @@ Safe opportunity: reinforce verifiable local/service/entity evidence and interna
 
 ## 11. LLM / AI visibility matrix
 Status: AUDITÁLT / MÉRÉS ALATT
+
+Machine-readable matrix: data/llm-ai-visibility-matrix.json
 Machine-readability inputs audited: Person, Organization, Service, Location, evidence graph, sameAs, artistic/editorial support.
 GA4 evidence for 2026-08-25..2026-09-22: ChatGPT referred 21 sessions with 76.19% engagement rate. This is observed traffic, not a claim of ranking or recommendation quality.
 Google AI Overviews/AI Mode cannot be isolated from ordinary Google organic in this dataset.
