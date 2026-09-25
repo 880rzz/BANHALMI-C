@@ -77,7 +77,9 @@ must(footerV41.includes('@media (max-width:720px)'),'canonical mobile footer bre
 must(footerV41.includes('grid-template-columns:minmax(0,1fr)!important'),'canonical mobile one-column footer missing');
 must(footerV41.includes('grid-column:1 / -1!important'),'canonical mobile full-width placement missing');
 must(footerV41.includes('grid-row:auto!important'),'canonical mobile grid-row reset missing');
-must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V42-20260925'),'mobile homepage hero edge contract missing');
+must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V43-20260925'),'mobile curved homepage hero edge contract missing');
+must(authority.visualGeometry?.homepageHeroMedia?.mobileGoldRuleShape==='curved-sweep','mobile hero must preserve curved gold sweep');
+must(authority.layout?.footer?.compactNativeDisclosureRequired===true,'compact footer must preserve native details interaction');
 for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
   const html=fs.readFileSync(rel,'utf8');
   must(html.indexOf('/assets/css/fluid-4k-rhythm.css')>html.indexOf('/assets/css/site.css'),rel+': footer authority load order regressed');
