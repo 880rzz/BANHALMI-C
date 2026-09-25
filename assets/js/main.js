@@ -2,17 +2,18 @@
 (function () {
   "use strict";
 
-  // Footer state bootstrap must run before any other interaction code.
-  // Source markup stays open for no-JS desktop fallback, but compact/tablet
-  // layouts must never depend on later runtime branches reaching the footer.
+  // Footer disclosure bootstrap.
+  // Compact/tablet layouts use native <details> interaction. Desktop keeps
+  // all groups open. Do not duplicate native disclosure state with hidden or
+  // inline display styles: Safari must be able to toggle the summary itself.
   (function primeFooterDisclosureState(){
-    var compact = !window.matchMedia("(min-width: 1180px)").matches;
+    var desktop = window.matchMedia("(min-width: 1180px)").matches;
     Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion")).forEach(function(details){
-      details.open = !compact;
+      details.open = desktop;
       var list = details.querySelector("ul");
       if (!list) return;
-      list.hidden = compact;
-      list.style.setProperty("display", compact ? "none" : "grid", "important");
+      list.hidden = false;
+      list.style.removeProperty("display");
     });
   })();
 
@@ -96,27 +97,15 @@
     var footerDesktopQuery = window.matchMedia("(min-width: 1180px)");
     var syncFooterAccordions = function () {
       footerAccordions.forEach(function (details) {
-        var compact = !footerDesktopQuery.matches;
-        details.open = !compact;
         var list = details.querySelector("ul");
         if (list) {
-          list.hidden = compact;
-          list.style.setProperty("display", compact ? "none" : "grid", "important");
+          list.hidden = false;
+          list.style.removeProperty("display");
         }
+        if (footerDesktopQuery.matches) details.open = true;
+        else details.open = false;
       });
     };
-    footerAccordions.forEach(function (details) {
-      var summary = details.querySelector("summary");
-      if (summary) summary.addEventListener("click", function () {
-        window.requestAnimationFrame(function () {
-          var list = details.querySelector("ul");
-          if (list) {
-            list.hidden = !details.open;
-            list.style.setProperty("display", details.open ? "grid" : "none", "important");
-          }
-        });
-      });
-    });
     syncFooterAccordions();
     if (typeof footerDesktopQuery.addEventListener === "function") {
       footerDesktopQuery.addEventListener("change", syncFooterAccordions);
