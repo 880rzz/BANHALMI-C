@@ -232,7 +232,10 @@ for(const width of requiredResponsiveWidths){
         const visual=document.querySelector('main[data-homepage-redesign="stage76"]>.hero-visual-only'),figure=visual?.querySelector('.hero-figure'),copy=document.querySelector('main[data-homepage-redesign="stage76"]>.hero-copy-only');
         if(visual&&figure&&copy){const vr=rect(visual),fg=rect(figure),cr=rect(copy),ps=getComputedStyle(figure,'::after');hero={figureToCopyGap:cr.top-fg.bottom,visualToFigureGap:vr.bottom-fg.bottom,pseudoBottom:parseFloat(ps.bottom)||0,pseudoHeight:parseFloat(ps.height)||0,pseudoBackground:ps.backgroundColor,pseudoBorderTopWidth:parseFloat(ps.borderTopWidth)||0,pseudoBorderTopColor:ps.borderTopColor,pseudoBorderRadius:ps.borderTopLeftRadius};}
       }
-      return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,scrollHeight:document.documentElement.scrollHeight,footer:fr,grid:gr,brand:br,entity:er,blocks,intersections,gridTemplateColumns:grid?getComputedStyle(grid).gridTemplateColumns:'',entityWordBreak:es?.wordBreak||'',entityOverflowWrap:es?.overflowWrap||'',summaries:[...(footer?.querySelectorAll('details.footer-accordion>summary')||[])].filter(visible).map(el=>rect(el).height),footerTail:fr?document.documentElement.scrollHeight-fr.bottom:null,hero};
+      const footerBottom=footer?.querySelector('.footer-bottom');
+      const legalControls=footerBottom?[...footerBottom.querySelectorAll(':scope>span:last-child a,:scope>span:last-child button')].filter(visible).map(el=>({tag:el.tagName,label:el.textContent?.trim()||'',...rect(el)})):[];
+      const legalLineTops=[...new Set(legalControls.map(x=>Math.round(x.top)))];
+      return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,scrollHeight:document.documentElement.scrollHeight,footer:fr,grid:gr,brand:br,entity:er,blocks,intersections,gridTemplateColumns:grid?getComputedStyle(grid).gridTemplateColumns:'',entityWordBreak:es?.wordBreak||'',entityOverflowWrap:es?.overflowWrap||'',summaries:[...(footer?.querySelectorAll('details.footer-accordion>summary')||[])].filter(visible).map(el=>rect(el).height),footerTail:fr?document.documentElement.scrollHeight-fr.bottom:null,rootBackground:getComputedStyle(document.documentElement).backgroundColor,legalControls,legalLineCount:legalLineTops.length,hero};
     },{kind:target.kind});
     let disclosure=null;
     if(width<1180){
@@ -254,6 +257,9 @@ for(const width of requiredResponsiveWidths){
     if(state.footerTail!=null&&state.footerTail>2) issues.push(`footer tail ${state.footerTail.toFixed(1)}px > 2px`);
     for(const x of state.intersections) issues.push(`footer block intersection ${x.a} ↔ ${x.b} ${x.x.toFixed(1)}x${x.y.toFixed(1)}px`);
     if(state.summaries.some(h=>h<43.5)) issues.push('footer accordion touch target below 44px');
+    if(width>=1440&&state.legalLineCount!==1) issues.push(`desktop legal controls wrap to ${state.legalLineCount} lines`);
+    if(width>=1440&&!state.legalControls.some(x=>/cookie|süti/i.test(x.label))) issues.push('desktop cookie settings control missing from legal row');
+    if(width>=1180&&state.rootBackground!=='rgb(29, 35, 45)') issues.push(`Safari root overscroll background ${state.rootBackground} does not match footer`);
     if(width<1180&&(!disclosure||disclosure.runtime!=='v43'||disclosure.lastAction!=='open'||disclosure.ariaExpanded!=='true'||!disclosure.open||disclosure.hidden||disclosure.display==='none'||disclosure.height<1)) issues.push('footer accordion interaction failed: '+JSON.stringify(disclosure));
     if(width<=720){
       const tracks=state.gridTemplateColumns.trim().split(/\s+/).filter(Boolean);
