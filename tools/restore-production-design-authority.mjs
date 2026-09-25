@@ -49,8 +49,8 @@ function compileDesign(css){
 
   let compiled=before+c+after;
   compiled=replaceOne(compiled,/html\{min-height:100%;background:#202530!important\}/,`html{min-height:100%;background:${flow.documentBackground||'#ffffff'}!important}`,'document background floor');
-  compiled=replaceOne(compiled,/body\{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column\}/,`body{min-height:100vh;min-height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--bg,#fff)}`,'document layout mode');
-  compiled=replaceOne(compiled,/body>main,#main\{flex:1 0 auto;width:100%;min-width:0\}/,'body>main,#main{width:100%;min-width:0;min-height:0}','main normal-flow contract');
+  compiled=replaceOne(compiled,/body\{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column\}/,`body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--bg,#fff)}`,'document layout mode');
+  compiled=replaceOne(compiled,/body>main,#main\{flex:1 0 auto;width:100%;min-width:0\}/,'body>main,#main{flex:1 0 auto;width:100%;min-width:0;min-height:0}','main normal-flow contract');
   return compiled;
 }
 
@@ -88,8 +88,8 @@ for(const required of [
   `html body .bn-mega-panel{width:min(${Number(design.navigation?.megaMenu?.panelMaxPx||1440)}px,100%)!important`,
   'html body .bn-mega-link:focus-visible,html body .bn-mega-link.active,html body .bn-mega-link[aria-current="page"]{text-decoration-line:underline!important',
   `html{min-height:100%;background:${design.layout.documentFlow.documentBackground}!important}`,
-  'body{min-height:100vh;min-height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;background:var(--bg,#fff)}',
-  'body>main,#main{width:100%;min-width:0;min-height:0}',
+  'body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--bg,#fff)}',
+  'body>main,#main{flex:1 0 auto;width:100%;min-width:0;min-height:0}',
   'body>.site-footer,.site-footer{width:100%;min-height:0}'
 ]) if(!finalCss.includes(required)) throw new Error(`BANHALMI compiled design token missing: ${required}`);
 for(const rel of quotePages){const full=path.join(siteRoot,rel);if(!fs.existsSync(full)||!fs.readFileSync(full,'utf8').includes('/assets/js/private-event-quote.js')) throw new Error(`BANHALMI private-event quote adapter missing from ${rel}.`);}

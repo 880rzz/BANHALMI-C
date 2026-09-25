@@ -14,7 +14,7 @@ must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-
 must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'production artifact must parser-discover the same canonical geometry CSS token');
 must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
 must(mainRuntime.includes('window.matchMedia("(min-width: 1180px)")'),'desktop footer disclosure breakpoint missing from canonical runtime');
-must(mainRuntime.includes('details.open = !compact;')&&mainRuntime.includes('list.style.setProperty("display", compact ? "none" : "block", "important")'),'footer disclosure state must track viewport in canonical runtime');
+must(mainRuntime.includes('details.open = !compact;')&&mainRuntime.includes('list.style.setProperty("display", compact ? "none" : "grid", "important")'),'footer disclosure state must track viewport while preserving canonical CSS grid geometry');
 must(!boot.includes('style.textContent'),'runtime must not inject layout CSS');
 must(!boot.includes('--desktop-hero-min'),'runtime must not own hero geometry');
 must(!boot.includes('object-position:center 30%'),'runtime must not own image crop geometry');
