@@ -1870,6 +1870,12 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
   html body .site-footer .footer-bottom>span:last-child{justify-content:flex-start!important;}
 }
 
+@media (min-width:721px) and (max-width:899px){
+  html body:not(:has(.quote-summary-card)) .site-footer{
+    padding-bottom:0!important;
+  }
+}
+
 @media (min-width:721px) and (max-width:1179px){
   html body .site-footer>.wrap{
     inline-size:min(calc(100% - 40px),1040px)!important;
