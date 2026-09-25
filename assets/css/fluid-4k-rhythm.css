@@ -1372,7 +1372,7 @@ html body .bn-mega-item{
    Canonical effects only: no new runtime geometry injection. */
 
 
-html{background:#fff!important;}
+html{background:#1d232d!important;}
 html body{
   min-height:100vh!important;
   min-height:100dvh!important;
