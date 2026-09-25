@@ -234,6 +234,21 @@ for(const width of requiredResponsiveWidths){
       }
       return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,scrollHeight:document.documentElement.scrollHeight,footer:fr,grid:gr,brand:br,entity:er,blocks,intersections,gridTemplateColumns:grid?getComputedStyle(grid).gridTemplateColumns:'',entityWordBreak:es?.wordBreak||'',entityOverflowWrap:es?.overflowWrap||'',summaries:[...(footer?.querySelectorAll('details.footer-accordion>summary')||[])].filter(visible).map(el=>rect(el).height),footerTail:fr?document.documentElement.scrollHeight-fr.bottom:null,hero};
     },{kind:target.kind});
+    let disclosure=null;
+    if(width<1180){
+      const summary=page.locator('.site-footer details.footer-accordion summary').first();
+      if(await summary.count()){
+        await summary.click();
+        await page.waitForTimeout(50);
+        disclosure=await page.evaluate(()=>{
+          const d=document.querySelector('.site-footer details.footer-accordion');
+          const ul=d?.querySelector('ul');
+          const r=ul?.getBoundingClientRect();
+          return d&&ul?{open:d.open,hidden:Boolean(ul.hidden),display:getComputedStyle(ul).display,height:r?.height||0}:null;
+        });
+        if(disclosure?.open) await summary.click();
+      }
+    }
     const issues=[];
     if(state.scrollWidth>state.clientWidth+1) issues.push(`horizontal overflow ${(state.scrollWidth-state.clientWidth).toFixed(1)}px`);
     if(state.footerTail!=null&&state.footerTail>2) issues.push(`footer tail ${state.footerTail.toFixed(1)}px > 2px`);
