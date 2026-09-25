@@ -30,6 +30,9 @@ for(const width of widths){
   for(const file of contentFiles){
     const rel=path.relative(siteDir,file).replaceAll('\\','/');
     await page.goto(urlFor(file),{waitUntil:'networkidle'});
+    if(width>=768&&width<1180){
+      await page.waitForFunction(()=>[...document.querySelectorAll('details.footer-accordion')].every(d=>{const ul=d.querySelector('ul');return !ul||getComputedStyle(ul).display==='none'||ul.hidden;}),null,{timeout:1500}).catch(()=>{});
+    }
     const r=await page.evaluate(({pageMaxPx,structuredMaxPx,structuredBreakpointPx,structuredSelector,touchTargetPx})=>{
       const visible=el=>{if(!el)return false;const s=getComputedStyle(el),b=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&Number(s.opacity)!==0&&b.width>0&&b.height>0};
       const de=document.documentElement,body=document.body,bodyStyle=getComputedStyle(body),header=document.querySelector('.site-header'),main=document.querySelector('main'),footer=document.querySelector('.site-footer');
@@ -55,7 +58,8 @@ for(const width of widths){
         const x=Math.min(a.right,b.right)-Math.max(a.left,b.left),y=Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top);
         if(x>2&&y>2)footerOverlaps.push({a:a.cls||a.tag,b:b.cls||b.tag,x,y});
       }
-      return {overflow:de.scrollWidth-de.clientWidth,headerHeight:visible(header)?header.getBoundingClientRect().height:0,surfaces,wraps,homepageSplit,splitHero,info,bodyDisplay:bodyStyle.display,htmlBackground:getComputedStyle(de).backgroundColor,mainRight:mainBox?.right??0,footerRight:footerBox?.right??0,footerLeft:footerBox?.left??0,footerTop:footerBox?.top??null,mainBottom:mainBox?.bottom??null,rawAfterFooter,unreservedAfterFooter,media,touch,activeNav,footerHeight:footerBox?.height??0,footerOverlaps};
+      const footerAccordionState=[...document.querySelectorAll('details.footer-accordion')].map(d=>{const ul=d.querySelector('ul'),r=d.getBoundingClientRect(),ur=ul?.getBoundingClientRect();return {label:d.querySelector('summary')?.textContent?.trim()||'',open:d.open,hidden:Boolean(ul?.hidden),display:ul?getComputedStyle(ul).display:null,detailsHeight:r.height,ulHeight:ur?.height||0};});
+      return {overflow:de.scrollWidth-de.clientWidth,headerHeight:visible(header)?header.getBoundingClientRect().height:0,surfaces,wraps,homepageSplit,splitHero,info,bodyDisplay:bodyStyle.display,htmlBackground:getComputedStyle(de).backgroundColor,mainRight:mainBox?.right??0,footerRight:footerBox?.right??0,footerLeft:footerBox?.left??0,footerTop:footerBox?.top??null,mainBottom:mainBox?.bottom??null,rawAfterFooter,unreservedAfterFooter,media,touch,activeNav,footerHeight:footerBox?.height??0,footerOverlaps,footerBlocks,footerAccordionState};
     },{pageMaxPx,structuredMaxPx,structuredBreakpointPx,structuredSelector,touchTargetPx});
     if(r.overflow>1)failures.push(`${rel} @${width}x${height}: document horizontal overflow ${r.overflow}px`);
     if(r.headerHeight&&(r.headerHeight<48||r.headerHeight>110))failures.push(`${rel} @${width}x${height}: header height ${r.headerHeight.toFixed(1)}px`);
@@ -65,7 +69,11 @@ for(const width of widths){
     if(r.footerRight>width+2||r.footerLeft<-2)failures.push(`${rel} @${width}x${height}: footer escapes viewport [${r.footerLeft.toFixed(1)},${r.footerRight.toFixed(1)}]`);
     if(r.footerTop!=null&&r.mainBottom!=null&&r.footerTop<r.mainBottom-Number(flow.mainToFooterOverlapTolerancePx||2))failures.push(`${rel} @${width}x${height}: footer overlaps main content by ${(r.mainBottom-r.footerTop).toFixed(1)}px`);
     if(r.unreservedAfterFooter!=null&&r.unreservedAfterFooter>Number(flow.footerAfterDocumentGapMaxPx||2))failures.push(`${rel} @${width}x${height}: ${r.unreservedAfterFooter.toFixed(1)}px unreserved document overhang remains after footer`);
-    if(r.footerHeight>footerAbsoluteMaxPx&&width>=768)failures.push(`${rel} @${width}x${height}: footer occupies ${(r.footerHeight/height*100).toFixed(0)}% of viewport (${r.footerHeight.toFixed(1)}px > ${footerAbsoluteMaxPx}px contract)`);
+    if(r.footerHeight>footerAbsoluteMaxPx&&width>=768){
+      const state=(r.footerAccordionState||[]).map(a=>`${a.label}:${a.open?'open':'closed'}/${a.display}/${a.ulHeight.toFixed(0)}`).join(',');
+      const blocks=(r.footerBlocks||[]).map(b=>`${b.cls||b.tag}:${(b.bottom-b.top).toFixed(0)}`).join(',');
+      failures.push(`${rel} @${width}x${height}: footer occupies ${(r.footerHeight/height*100).toFixed(0)}% of viewport (${r.footerHeight.toFixed(1)}px > ${footerAbsoluteMaxPx}px contract); accordions=[${state}] blocks=[${blocks}]`);
+    }
     for(const o of r.footerOverlaps||[])failures.push(`${rel} @${width}x${height}: footer blocks overlap (${o.a} ↔ ${o.b}, ${o.x.toFixed(1)}x${o.y.toFixed(1)}px)`);
     for(const w of r.wraps){if(w.axis)failures.push(`${rel} @${width}x${height}: wrapper not centered ${w.left.toFixed(1)}/${w.right.toFixed(1)}`);else failures.push(`${rel} @${width}x${height}: ${w.isStructured?'structured ':''}.wrap exceeds canonical max ${w.allowedMax}px (${w.width.toFixed(1)}px)`);}
     if(r.homepageSplit){
