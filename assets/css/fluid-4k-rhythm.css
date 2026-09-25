@@ -1538,6 +1538,13 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure:
    suppress disclosure affordances, and keep the legal/trust/cookie controls
    on one stable row without allowing route content to widen the document. */
 @media (min-width:1180px){
+  html,
+  html body{
+    overscroll-behavior-y:none!important;
+  }
+  html body{
+    padding-bottom:0!important;
+  }
   html body .site-footer .footer-accordion>summary{
     cursor:default!important;
     pointer-events:none!important;
