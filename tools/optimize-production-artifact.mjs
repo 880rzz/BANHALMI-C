@@ -23,7 +23,7 @@ const quotePdfScriptRe = /<script([^>]*?)src="(\/assets\/js\/quote-pdf\.js[^\"]*
 
 const synchronousStyle = '<link rel="stylesheet" href="$1"/>';
 const deferredSiteStyleRe = /<link rel="preload" as="style" href="(\/assets\/css\/site\.css[^"]*)"\/><link rel="stylesheet" href="\1" media="print" onload="this\.media='all';this\.onload=null"\/><noscript><link rel="stylesheet" href="\1"\/><\/noscript>/g;
-const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28';
+const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20260925-mobile-v42';
 const fluidRhythmStyle = `<link rel="stylesheet" href="${fluidRhythmHref}" data-fluid-4k-rhythm=""/>`;
 const fluidRhythmLinkRe = /<link\s+rel="stylesheet"\s+href="\/assets\/css\/fluid-4k-rhythm\.css[^\"]*"\s+data-fluid-4k-rhythm=""\s*\/>/g;
 
