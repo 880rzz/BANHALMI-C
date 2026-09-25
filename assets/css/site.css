@@ -3897,7 +3897,7 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
   .quote-summary-card .eyebrow{margin:0!important;font-size:.72rem;line-height:1.15;white-space:normal}
   .quote-summary-card .quote-total{margin:0!important;font-size:clamp(1.05rem,5vw,1.38rem)!important;line-height:1.1;white-space:nowrap;text-align:right}
   .quote-summary-card dl,.quote-summary-card>p{display:none!important}
-  .site-footer{padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+  body:has(.quote-summary-card) .site-footer{padding-bottom:calc(82px + env(safe-area-inset-bottom))}
   .quote-decision-guide{padding:14px 15px;font-size:.9rem}
 }
 @media (max-width:360px){
