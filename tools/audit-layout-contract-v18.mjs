@@ -10,8 +10,8 @@ const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
-must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'render-stability cache token missing');
-must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260921-render-stability-v28'),'production artifact must parser-discover the same canonical geometry CSS token');
+must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260925-mobile-v42'),'render-stability cache token missing');
+must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260925-mobile-v42'),'production artifact must parser-discover the same canonical geometry CSS token');
 must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
 must(mainRuntime.includes('window.matchMedia("(min-width: 1180px)")'),'desktop footer disclosure breakpoint missing from canonical runtime');
 must(mainRuntime.includes('details.open = !compact;')&&mainRuntime.includes('list.style.setProperty("display", compact ? "none" : "grid", "important")'),'footer disclosure state must track viewport while preserving canonical CSS grid geometry');
@@ -36,6 +36,7 @@ must(heroAuthority.desktopMinPx===1180,'design authority desktop hero breakpoint
 must(heroAuthority.tabletHeightVw===39.5604,'design authority tablet hero height mismatch');
 must(heroAuthority.desktopHeight==='clamp(600px,42.8vw,720px)','design authority desktop hero height mismatch');
 must(fluid.includes('FINAL-LAYOUT-RUNTIME-CLOSURE-20260921'),'final hero/footer runtime closure marker missing');
+must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V42-20260925'),'mobile homepage hero edge contract missing');
 must(fluid.includes('height:clamp(600px,42.8vw,720px)!important'),'final desktop hero crop geometry missing');
 must(heroAuthority.shortDesktopHeightPx===561,'design authority short-height desktop hero mismatch');
 must(heroAuthority.desktopLayout==='stacked'&&heroAuthority.copyPanelMatchesMediaHeight===false,'design authority must keep the desktop homepage hero stacked with independent copy height');

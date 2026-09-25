@@ -1488,6 +1488,18 @@ html body details.review-drawer[open]>summary::after{
 html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
   background:#fff!important;
 }
+
+/* HOMEPAGE-MOBILE-HERO-EDGE-V42-20260925 */
+@media (max-width:720px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only>.wrap,
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{margin-bottom:0!important;padding-bottom:0!important;}
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure{margin-top:0!important;}
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
+    left:0!important;right:0!important;bottom:0!important;width:100%!important;height:4px!important;
+    background:#B79C44!important;border:0!important;border-radius:0!important;transform:none!important;
+  }
+}
 /* V41 document-flow closure: one canonical flex flow from source through production.
    Main owns remaining viewport space; the footer stays intrinsic and cannot leave an unreserved tail. */
 html body{
@@ -1508,7 +1520,7 @@ html body .site-footer{
   flex:0 0 auto!important;
 }
 
-/* FOOTER-SINGLE-CANONICAL-V41-20260924
+/* FOOTER-SINGLE-CANONICAL-V42-20260925
    Sole responsive footer geometry authority.
    One footer composition for every EN / HU / DE route.
    No route-specific footer geometry and no runtime geometry mutation. */
@@ -1552,14 +1564,19 @@ html body .site-footer .footer-grid>details{
   max-inline-size:100%!important;
   margin:0!important;
 }
-html body .site-footer .footer-brand-col{grid-column:1 / span 3!important;grid-row:1!important;}
-html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(1){grid-column:4 / span 2!important;grid-row:1!important;}
-html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(2){grid-column:6 / span 2!important;grid-row:1!important;}
-html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){grid-column:8 / span 2!important;grid-row:1!important;}
-html body .site-footer .footer-grid>details.footer-accordion[data-social-footer]{grid-column:10 / span 3!important;grid-row:1!important;}
-html body .site-footer .footer-grid>div:has(.footer-contact-list){grid-column:1 / span 7!important;grid-row:2!important;}
-html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]{grid-column:8 / span 3!important;grid-row:2!important;}
-html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:11 / span 2!important;grid-row:2!important;}
+/* Explicit placement is tablet/desktop-only. Keeping these rules out of
+   <=720px prevents high-specificity nth-of-type selectors from creating
+   implicit desktop tracks inside the one-column mobile grid. */
+@media (min-width:721px){
+  html body .site-footer .footer-brand-col{grid-column:1 / span 3!important;grid-row:1!important;}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(1){grid-column:4 / span 2!important;grid-row:1!important;}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(2){grid-column:6 / span 2!important;grid-row:1!important;}
+  html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(3){grid-column:8 / span 2!important;grid-row:1!important;}
+  html body .site-footer .footer-grid>details.footer-accordion[data-social-footer]{grid-column:10 / span 3!important;grid-row:1!important;}
+  html body .site-footer .footer-grid>div:has(.footer-contact-list){grid-column:1 / span 7!important;grid-row:2!important;}
+  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]{grid-column:8 / span 3!important;grid-row:2!important;}
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){grid-column:11 / span 2!important;grid-row:2!important;}
+}
 
 html body .site-footer .footer-grid>div:has(.footer-contact-list),
 html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer],
@@ -1982,11 +1999,49 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
 }
 
 @media (max-width:720px){
-  html body .site-footer>.wrap{inline-size:calc(100% - 36px)!important;padding-top:30px!important;}
-  html body .site-footer .footer-grid{grid-template-columns:1fr!important;row-gap:16px!important;}
-  html body .site-footer .footer-grid>*{grid-column:1!important;}
+  html body .site-footer>.wrap{
+    inline-size:calc(100% - 36px)!important;
+    max-inline-size:calc(100% - 36px)!important;
+    min-inline-size:0!important;
+    padding:30px 0 20px!important;
+  }
+  html body .site-footer .footer-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-rows:none!important;
+    grid-auto-flow:row!important;
+    grid-auto-rows:auto!important;
+    column-gap:0!important;
+    row-gap:16px!important;
+    inline-size:100%!important;
+    max-inline-size:100%!important;
+    min-inline-size:0!important;
+  }
+  html body .site-footer .footer-grid>*,
+  html body .site-footer .footer-brand-col,
+  html body .site-footer .footer-grid>details.footer-accordion,
+  html body .site-footer .footer-grid>div:has(.footer-contact-list),
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    grid-column:1 / -1!important;
+    grid-row:auto!important;
+    inline-size:100%!important;
+    width:100%!important;
+    max-inline-size:100%!important;
+    min-inline-size:0!important;
+    justify-self:stretch!important;
+  }
+  html body .site-footer .footer-entity{
+    inline-size:100%!important;
+    max-inline-size:none!important;
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+    hyphens:none!important;
+  }
+  html body .site-footer .footer-accordion>summary{inline-size:100%!important;min-block-size:44px!important;}
   html body .site-footer .footer-contact-list{
-    grid-template-columns:1fr!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    inline-size:100%!important;
+    max-inline-size:100%!important;
     border-bottom:0!important;
   }
   html body .site-footer .footer-contact-list .footer-location,
@@ -1995,22 +2050,11 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
     border-left:0!important;
     border-bottom:1px solid rgba(255,255,255,.12)!important;
   }
-  html body .site-footer .footer-contact-actions{gap:6px 16px!important;}
+  html body .site-footer .footer-contact-actions{gap:6px 16px!important;inline-size:100%!important;}
+  html body .site-footer .footer-legal-list{inline-size:100%!important;}
   html body .site-footer .footer-legal-list li{grid-template-columns:68px minmax(0,1fr)!important;}
-  html body .site-footer .banhalmi-ecosystem{
-    grid-template-columns:1fr!important;
-    padding-inline:18px!important;
-  }
-  html body .site-footer .banhalmi-ecosystem a{
-    justify-content:flex-start!important;
-    text-align:left!important;
-  }
-  html body .site-footer .banhalmi-ecosystem a+a::before{
-    left:0!important;
-    right:0!important;
-    top:0!important;
-    bottom:auto!important;
-    width:auto!important;
-    height:1px!important;
-  }
+  html body .site-footer .footer-bottom{grid-template-columns:minmax(0,1fr)!important;inline-size:100%!important;}
+  html body .site-footer .banhalmi-ecosystem{grid-template-columns:minmax(0,1fr)!important;padding-inline:18px!important;}
+  html body .site-footer .banhalmi-ecosystem a{justify-content:flex-start!important;text-align:left!important;}
+  html body .site-footer .banhalmi-ecosystem a+a::before{left:0!important;right:0!important;top:0!important;bottom:auto!important;width:auto!important;height:1px!important;}
 }

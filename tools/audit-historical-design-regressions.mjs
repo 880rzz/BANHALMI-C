@@ -32,6 +32,10 @@ must(Number(authority.layout?.footer?.compactDesktopColumns)===12,'BANHALMI comp
 must(Number(authority.layout?.footer?.compactDesktopMinPx)===721,'BANHALMI compact desktop footer must begin at 721px');
 must(Number(authority.layout?.footer?.tabletColumns)===12,'BANHALMI tablet footer must remain 12-track compact geometry');
 must(Number(authority.layout?.footer?.mobileColumns)===1,'BANHALMI mobile footer must remain single-column geometry');
+must(Number(authority.layout?.footer?.mobileMaxPx)===720,'BANHALMI mobile footer breakpoint must end at 720px');
+must(authority.layout?.footer?.mobileTopLevelFullWidth===true,'BANHALMI mobile footer blocks must remain full-width');
+must(authority.layout?.footer?.mobileResetExplicitGridPlacement===true,'BANHALMI mobile footer must reset explicit grid placement');
+must(authority.layout?.footer?.mobileNoCharacterBreaks===true,'BANHALMI mobile footer must prohibit character wrapping');
 must(Number(authority.layout?.footer?.paddingTopPx)===32&&Number(authority.layout?.footer?.paddingBottomPx)===20,'BANHALMI footer padding authority changed');
 must(Number(authority.layout?.footer?.tabletGapPx)===14,'BANHALMI tablet footer gap authority changed');
 must(authority.navigation?.activeState==='text-only','BANHALMI active navigation must remain text-only');
@@ -60,15 +64,20 @@ must(audit.includes("fs.readFileSync('data/design-authority.json','utf8')"),'des
 must(restore.includes('data/design-authority.json'),'production compiler must read canonical design authority');
 must(restore.includes('html body .site-header a{min-height:${touch}px!important'),'production compiler lost 44px header-link closure');
 must(restore.includes('background:transparent!important;border:0!important;box-shadow:none!important;border-radius:${Number(nav.activeRadiusPx||0)}px!important'),'production compiler lost text-only active-navigation closure');
-must(authority.layout?.footer?.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V41-20260924','canonical footer marker drifted');
-must((fluid.match(/FOOTER-SINGLE-CANONICAL-V41-20260924/g)||[]).length===1,'canonical footer authority must occur exactly once');
-const footerV41=fluid.split('FOOTER-SINGLE-CANONICAL-V41-20260924')[1]||'';
+must(authority.layout?.footer?.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V42-20260925','canonical footer marker drifted');
+must((fluid.match(/FOOTER-SINGLE-CANONICAL-V42-20260925/g)||[]).length===1,'canonical footer authority must occur exactly once');
+const footerV41=fluid.split('FOOTER-SINGLE-CANONICAL-V42-20260925')[1]||'';
 must(footerV41.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track wide-desktop geometry');
 must(footerV41.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track small-desktop geometry');
 must(footerV41.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'),'canonical footer lost compact two-column geometry');
 must(footerV41.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'canonical footer lost three-location contact geometry');
 must(footerV41.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row desktop geometry');
 must(footerV41.includes('@media (min-width:1180px) and (max-width:1439px)'),'small-desktop footer breakpoint missing');
+must(footerV41.includes('@media (max-width:720px)'),'canonical mobile footer breakpoint missing');
+must(footerV41.includes('grid-template-columns:minmax(0,1fr)!important'),'canonical mobile one-column footer missing');
+must(footerV41.includes('grid-column:1 / -1!important'),'canonical mobile full-width placement missing');
+must(footerV41.includes('grid-row:auto!important'),'canonical mobile grid-row reset missing');
+must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V42-20260925'),'mobile homepage hero edge contract missing');
 for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
   const html=fs.readFileSync(rel,'utf8');
   must(html.indexOf('/assets/css/fluid-4k-rhythm.css')>html.indexOf('/assets/css/site.css'),rel+': footer authority load order regressed');

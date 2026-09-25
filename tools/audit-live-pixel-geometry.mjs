@@ -192,8 +192,69 @@ for(const vp of compactFooterSmokeViewports){
   }
   await context.close();
 }
+
+const responsiveWidths=authority.visualGeometry?.mobileProductionViewports||[];
+const requiredResponsiveWidths=[375,390,393,414,430,621,720,721,768,820,1024,1179,1180,1280,1440,1920,2560,3840];
+for(const w of requiredResponsiveWidths) if(!responsiveWidths.map(Number).includes(w)) failures.push(`responsive authority missing ${w}px`);
+const responsiveHeight=w=>w<=430?844:w<=720?932:w<=820?1180:w<=1179?1366:w<=1440?900:w<=1920?1080:w<=2560?1440:2160;
+for(const width of requiredResponsiveWidths){
+  const height=responsiveHeight(width);
+  const context=await browser.newContext({viewport:{width,height},deviceScaleFactor:1});
+  for(const target of pages){
+    const page=await context.newPage();
+    try{await page.goto(new URL(target.pathname,base).href,{waitUntil:'networkidle',timeout:45000});}
+    catch(error){failures.push(`${width}x${height} ${target.pathname}: responsive navigation ${error.message}`);await page.close();continue;}
+    const state=await page.evaluate(({kind})=>{
+      const visible=el=>{if(!el)return false;const s=getComputedStyle(el),r=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&r.width>0&&r.height>0};
+      const rect=el=>{const r=el.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top+scrollY,bottom:r.bottom+scrollY,width:r.width,height:r.height}};
+      const footer=document.querySelector('.site-footer'),grid=footer?.querySelector('.footer-grid'),brand=footer?.querySelector('.footer-brand-col'),entity=footer?.querySelector('.footer-entity');
+      const blocks=grid?[...grid.children].filter(visible).map(el=>({name:el.matches('details')?(el.querySelector('summary')?.textContent?.trim()||'details'):(el.querySelector('.footer-heading')?.textContent?.trim()||el.className||el.tagName),...rect(el)})):[];
+      const intersections=[];
+      for(let i=0;i<blocks.length;i++)for(let j=i+1;j<blocks.length;j++){const a=blocks[i],b=blocks[j],x=Math.min(a.right,b.right)-Math.max(a.left,b.left),y=Math.min(a.bottom,b.bottom)-Math.max(a.top,b.top);if(x>1&&y>1)intersections.push({a:a.name,b:b.name,x,y});}
+      const fr=footer?rect(footer):null,gr=grid?rect(grid):null,br=brand?rect(brand):null,er=entity?rect(entity):null,es=entity?getComputedStyle(entity):null;
+      let hero=null;
+      if(kind==='home'){
+        const visual=document.querySelector('main[data-homepage-redesign="stage76"]>.hero-visual-only'),figure=visual?.querySelector('.hero-figure'),copy=document.querySelector('main[data-homepage-redesign="stage76"]>.hero-copy-only');
+        if(visual&&figure&&copy){const vr=rect(visual),fg=rect(figure),cr=rect(copy),ps=getComputedStyle(figure,'::after');hero={figureToCopyGap:cr.top-fg.bottom,visualToFigureGap:vr.bottom-fg.bottom,pseudoBottom:parseFloat(ps.bottom)||0,pseudoHeight:parseFloat(ps.height)||0,pseudoBackground:ps.backgroundColor};}
+      }
+      return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,scrollHeight:document.documentElement.scrollHeight,footer:fr,grid:gr,brand:br,entity:er,blocks,intersections,gridTemplateColumns:grid?getComputedStyle(grid).gridTemplateColumns:'',entityWordBreak:es?.wordBreak||'',entityOverflowWrap:es?.overflowWrap||'',summaries:[...(footer?.querySelectorAll('details.footer-accordion>summary')||[])].filter(visible).map(el=>rect(el).height),footerTail:fr?document.documentElement.scrollHeight-fr.bottom:null,hero};
+    },{kind:target.kind});
+    const issues=[];
+    if(state.scrollWidth>state.clientWidth+1) issues.push(`horizontal overflow ${(state.scrollWidth-state.clientWidth).toFixed(1)}px`);
+    if(state.footerTail!=null&&state.footerTail>2) issues.push(`footer tail ${state.footerTail.toFixed(1)}px > 2px`);
+    for(const x of state.intersections) issues.push(`footer block intersection ${x.a} ↔ ${x.b} ${x.x.toFixed(1)}x${x.y.toFixed(1)}px`);
+    if(state.summaries.some(h=>h<43.5)) issues.push('footer accordion touch target below 44px');
+    if(width<=720){
+      const tracks=state.gridTemplateColumns.trim().split(/\s+/).filter(Boolean);
+      if(tracks.length!==1) issues.push(`mobile footer computed ${tracks.length} columns: ${state.gridTemplateColumns}`);
+      if(state.grid&&state.brand&&state.brand.width<state.grid.width-2) issues.push(`mobile brand width ${state.brand.width.toFixed(1)} < grid ${state.grid.width.toFixed(1)}`);
+      if(state.grid) for(const b of state.blocks) if(b.width<state.grid.width-2) issues.push(`mobile block ${b.name} width ${b.width.toFixed(1)} < grid ${state.grid.width.toFixed(1)}`);
+      if(state.entity&&state.grid&&state.entity.width<Math.max(180,state.grid.width*.75)) issues.push(`mobile entity width ${state.entity.width.toFixed(1)} implausibly narrow`);
+      if(state.entityWordBreak!=='normal') issues.push(`mobile entity word-break=${state.entityWordBreak}`);
+      if(!['normal',''].includes(state.entityOverflowWrap)) issues.push(`mobile entity overflow-wrap=${state.entityOverflowWrap}`);
+      if(target.kind==='home'){
+        if(!state.hero) issues.push('mobile homepage hero geometry missing');
+        else{
+          const maxGap=Number(authority.visualGeometry?.homepageHeroMedia?.mobileHeroClosureGapMaxPx||2),rule=Number(authority.visualGeometry?.homepageHeroMedia?.mobileGoldRuleHeightPx||4);
+          if(Math.abs(state.hero.figureToCopyGap)>maxGap) issues.push(`mobile hero figure-copy gap ${state.hero.figureToCopyGap.toFixed(1)}px`);
+          if(Math.abs(state.hero.visualToFigureGap)>maxGap) issues.push(`mobile hero visual-figure gap ${state.hero.visualToFigureGap.toFixed(1)}px`);
+          if(Math.abs(state.hero.pseudoBottom)>.5) issues.push(`mobile gold bottom ${state.hero.pseudoBottom.toFixed(1)}px`);
+          if(Math.abs(state.hero.pseudoHeight-rule)>.5) issues.push(`mobile gold height ${state.hero.pseudoHeight.toFixed(1)}px`);
+          if(state.hero.pseudoBackground!=='rgb(183, 156, 68)') issues.push(`mobile gold background ${state.hero.pseudoBackground}`);
+        }
+      }
+    }
+    const slug=`${width}x${height}-${target.lang}-${target.kind}-responsive-v42`;
+    if(issues.length){await page.screenshot({path:path.join(outDir,`${slug}-FAIL.png`),fullPage:true});failures.push(`${slug}: ${issues.join(' | ')}`);}
+    else if(width<=430&&target.kind==='home') await page.screenshot({path:path.join(outDir,`${slug}.png`),fullPage:true});
+    reports.push({viewport:{width,height},...target,kind:'production-responsive-v42',geometry:state,issues});
+    await page.close();
+  }
+  await context.close();
+}
+
 await browser.close();
-const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-V21',designVersion:authority.version,base,viewports,pages,reports,failures};
+const report={contract:'BANHALMI-LIVE-PIXEL-GEOMETRY-V42',designVersion:authority.version,base,viewports,pages,reports,failures};
 fs.writeFileSync(path.join(outDir,'report.json'),JSON.stringify(report,null,2));
 if(failures.length){
   console.error(`BANHALMI live pixel geometry failed (${failures.length} page/viewport combinations):`);
