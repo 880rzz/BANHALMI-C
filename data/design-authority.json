@@ -116,7 +116,7 @@
         "vienna-office",
         "budapest-studio"
       ],
-      "canonicalFinalMarker": "FOOTER-SINGLE-CANONICAL-V42-20260925",
+      "canonicalFinalMarker": "FOOTER-SINGLE-CANONICAL-V43-20260926",
       "desktopInternalLocationDivider": true,
       "singleGeometryAuthorityRequired": true,
       "legacyFooterMutatorsDisabled": true,
@@ -140,8 +140,8 @@
       "mainToFooterOverlapTolerancePx": 2,
       "footerMaxViewportFractionOnTabletDesktop": 0.82,
       "footerAbsoluteMaxPx": 760,
-      "rootOverscrollBackground": "#1d232d",
-      "rootOverscrollMatchesFooter": true
+      "rootOverscrollBackground": "#ffffff",
+      "rootOverscrollMatchesFooter": false
     },
     "quote": {
       "categoryCardHeight": "intrinsic",
