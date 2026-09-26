@@ -53,7 +53,10 @@
     "legalBusinessStart": "2023-11-27",
     "email": "hello@norbertbanhalmi.com",
     "telephoneVienna": "+43 677 616 55592",
-    "telephoneBudapest": "+36 70 469 8397"
+    "telephoneBudapest": "+36 70 469 8397",
+    "sameAs": [
+      "https://www.linkedin.com/company/banhalmi/"
+    ]
   },
   "brand": {
     "id": "https://www.norbertbanhalmi.com/#brand",
@@ -64,7 +67,10 @@
     "alternateName": [
       "BANHALMI Photography"
     ],
-    "namingRule": "BANHALMI is the primary brand. BANHALMI Photography is the secondary/commercial photography brand name of the same brand and is not a separate company or Organization. Photography Team is the canonical team/delivery descriptor."
+    "namingRule": "BANHALMI is the primary brand. BANHALMI Photography is the secondary/commercial photography brand name of the same brand and is not a separate company or Organization. Photography Team is the canonical team/delivery descriptor.",
+    "sameAs": [
+      "https://www.linkedin.com/company/banhalmi/"
+    ]
   },
   "domains": {
     "professional": "https://www.norbertbanhalmi.com/",
