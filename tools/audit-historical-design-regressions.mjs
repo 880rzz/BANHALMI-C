@@ -22,8 +22,8 @@ must(Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDes
 must(Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx)<=760,'BANHALMI desktop footer absolute maximum became too permissive');
 must(authority.layout?.documentFlow?.layoutMode==='flex','BANHALMI document flow must preserve the canonical flex document model');
 must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI body/content document background must remain white');
-must(authority.layout?.documentFlow?.rootOverscrollBackground==='#1d232d'&&authority.layout?.documentFlow?.rootOverscrollMatchesFooter===true,'Safari root overscroll floor must match the footer instead of exposing a white band');
-must(fluid.includes('html{background:#1d232d!important;}'),'canonical CSS must keep the Safari root overscroll floor dark');
+must(authority.layout?.documentFlow?.rootOverscrollBackground==='#ffffff'&&authority.layout?.documentFlow?.rootOverscrollMatchesFooter===false,'Safari root overscroll floor must stay white so the footer surface ends with the footer');
+must(fluid.includes('html{background:#fff!important;}')&&fluid.includes('html body{background:#fff!important;}'),'canonical footer authority must keep the document/root floor white');
 must(Number(authority.layout?.footer?.desktopColumns)===12,'BANHALMI desktop footer must use the approved 12-track grid');
 must(Number(authority.layout?.footer?.desktopContentRows)===2,'BANHALMI desktop footer content must remain exactly two rows');
 must(Number(authority.layout?.footer?.desktopContactColumns)===3,'BANHALMI desktop footer must keep Vienna studio, Vienna office and Budapest studio in three explicit contact columns');
@@ -66,19 +66,19 @@ must(audit.includes("fs.readFileSync('data/design-authority.json','utf8')"),'des
 must(restore.includes('data/design-authority.json'),'production compiler must read canonical design authority');
 must(restore.includes('html body .site-header a{min-height:${touch}px!important'),'production compiler lost 44px header-link closure');
 must(restore.includes('background:transparent!important;border:0!important;box-shadow:none!important;border-radius:${Number(nav.activeRadiusPx||0)}px!important'),'production compiler lost text-only active-navigation closure');
-must(authority.layout?.footer?.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V42-20260925','canonical footer marker drifted');
-must((fluid.match(/FOOTER-SINGLE-CANONICAL-V42-20260925/g)||[]).length===1,'canonical footer authority must occur exactly once');
-const footerV41=fluid.split('FOOTER-SINGLE-CANONICAL-V42-20260925')[1]||'';
-must(footerV41.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track wide-desktop geometry');
-must(footerV41.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track small-desktop geometry');
-must(footerV41.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'),'canonical footer lost compact two-column geometry');
-must(footerV41.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'canonical footer lost three-location contact geometry');
-must(footerV41.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row desktop geometry');
-must(footerV41.includes('@media (min-width:1180px) and (max-width:1439px)'),'small-desktop footer breakpoint missing');
-must(footerV41.includes('@media (max-width:720px)'),'canonical mobile footer breakpoint missing');
-must(footerV41.includes('grid-template-columns:minmax(0,1fr)!important'),'canonical mobile one-column footer missing');
-must(footerV41.includes('grid-column:1 / -1!important'),'canonical mobile full-width placement missing');
-must(footerV41.includes('grid-row:auto!important'),'canonical mobile grid-row reset missing');
+must(authority.layout?.footer?.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V43-20260926','canonical footer marker drifted');
+must((fluid.match(/FOOTER-SINGLE-CANONICAL-V43-20260926/g)||[]).length===1,'canonical footer authority must occur exactly once');
+const footerV43=fluid.split('FOOTER-SINGLE-CANONICAL-V43-20260926')[1]||'';
+must(footerV43.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track wide-desktop geometry');
+must(footerV43.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'canonical footer lost 12-track small-desktop geometry');
+must(footerV43.includes('grid-template-columns:repeat(2,minmax(0,1fr))!important'),'canonical footer lost compact two-column geometry');
+must(footerV43.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'canonical footer lost three-location contact geometry');
+must(footerV43.includes('grid-template-rows:auto auto!important'),'canonical footer lost two-row desktop geometry');
+must(footerV43.includes('@media (min-width:1180px) and (max-width:1439px)'),'small-desktop footer breakpoint missing');
+must(footerV43.includes('@media (max-width:720px)'),'canonical mobile footer breakpoint missing');
+must(footerV43.includes('grid-template-columns:minmax(0,1fr)!important'),'canonical mobile one-column footer missing');
+must(footerV43.includes('grid-column:1 / -1!important'),'canonical mobile full-width placement missing');
+must(footerV43.includes('grid-row:auto!important'),'canonical mobile grid-row reset missing');
 must(fluid.includes('HOMEPAGE-MOBILE-HERO-EDGE-V43-20260925'),'mobile curved homepage hero edge contract missing');
 must(authority.visualGeometry?.homepageHeroMedia?.mobileGoldRuleShape==='curved-sweep','mobile hero must preserve curved gold sweep');
 must(authority.layout?.footer?.compactInteractiveDisclosureRequired===true,'compact footer must preserve interactive disclosure');
@@ -111,4 +111,4 @@ must(!audit.includes('pageMaxPx=1200'),'stale 1200px canvas may not return to ex
 must(!audit.includes('pageMaxPx=1500'),'stale 1500px canvas may not return to exhaustive audit');
 
 if(failures.length){console.error(`BANHALMI historical design regression guard failed (${failures.length}):`);for(const f of failures)console.error(`- ${f}`);process.exit(1)}
-console.log('BANHALMI historical design regression guard passed: canonical canvases, V41 unified responsive footer authority, text-first v31 menu geometry, 1440/1920/2560/4K pixel gates and overflow protections are locked.');
+console.log('BANHALMI historical design regression guard passed: canonical canvases, V43 unified responsive footer authority, text-first v31 menu geometry, 1440/1920/2560/4K pixel gates and overflow protections are locked.');
