@@ -235,7 +235,10 @@ for(const width of requiredResponsiveWidths){
       const footerBottom=footer?.querySelector('.footer-bottom');
       const legalControls=footerBottom?[...footerBottom.querySelectorAll(':scope>span:last-child a,:scope>span:last-child button')].filter(visible).map(el=>({tag:el.tagName,label:el.textContent?.trim()||'',...rect(el)})):[];
       const legalLineTops=[...new Set(legalControls.map(x=>Math.round(x.top)))];
-      return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,scrollHeight:document.documentElement.scrollHeight,footer:fr,grid:gr,brand:br,entity:er,blocks,intersections,gridTemplateColumns:grid?getComputedStyle(grid).gridTemplateColumns:'',entityWordBreak:es?.wordBreak||'',entityOverflowWrap:es?.overflowWrap||'',summaries:[...(footer?.querySelectorAll('details.footer-accordion>summary')||[])].filter(visible).map(el=>rect(el).height),footerTail:fr?document.documentElement.scrollHeight-fr.bottom:null,rootBackground:getComputedStyle(document.documentElement).backgroundColor,legalControls,legalLineCount:legalLineTops.length,hero};
+      const secondRowNames=['Contact','Memberships','Legal'];
+      const secondRowBlocks=blocks.filter(x=>secondRowNames.includes(x.name));
+      const legalValues=[...(footer?.querySelectorAll('.footer-legal-list strong')||[])].filter(visible).map(el=>{const r=el.getBoundingClientRect(),s=getComputedStyle(el);return {text:el.textContent?.trim()||'',height:r.height,lineHeight:parseFloat(s.lineHeight)||0,scrollWidth:el.scrollWidth,clientWidth:el.clientWidth};});
+      return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,scrollHeight:document.documentElement.scrollHeight,footer:fr,grid:gr,brand:br,entity:er,blocks,intersections,gridTemplateColumns:grid?getComputedStyle(grid).gridTemplateColumns:'',entityWordBreak:es?.wordBreak||'',entityOverflowWrap:es?.overflowWrap||'',summaries:[...(footer?.querySelectorAll('details.footer-accordion>summary')||[])].filter(visible).map(el=>rect(el).height),footerTail:fr?document.documentElement.scrollHeight-fr.bottom:null,rootBackground:getComputedStyle(document.documentElement).backgroundColor,legalControls,legalLineCount:legalLineTops.length,secondRowBlocks,legalValues,hero};
     },{kind:target.kind});
     let disclosure=null;
     if(width<1180){
@@ -259,6 +262,8 @@ for(const width of requiredResponsiveWidths){
     if(state.summaries.some(h=>h<43.5)) issues.push('footer accordion touch target below 44px');
     if(width>=1440&&state.legalLineCount!==1) issues.push(`desktop legal controls wrap to ${state.legalLineCount} lines`);
     if(width>=1440&&!state.legalControls.some(x=>/cookie|süti/i.test(x.label))) issues.push('desktop cookie settings control missing from legal row');
+    if(width>=1180&&state.secondRowBlocks.length===3){const tops=state.secondRowBlocks.map(x=>Math.round(x.top));if(Math.max(...tops)-Math.min(...tops)>2) issues.push('desktop Contact/Memberships/Legal row is not top-aligned: '+JSON.stringify(tops));}
+    if(width>=1180&&state.legalValues.some(x=>x.lineHeight>0&&x.height>x.lineHeight*1.55)) issues.push('desktop legal identifier wrapped to multiple lines');
     if(width>=1180&&state.rootBackground!=='rgb(29, 35, 45)') issues.push(`Safari root overscroll background ${state.rootBackground} does not match footer`);
     if(width<1180&&(!disclosure||disclosure.runtime!=='v43'||disclosure.lastAction!=='open'||disclosure.ariaExpanded!=='true'||!disclosure.open||disclosure.hidden||disclosure.display==='none'||disclosure.height<1)) issues.push('footer accordion interaction failed: '+JSON.stringify(disclosure));
     if(width<=720){
