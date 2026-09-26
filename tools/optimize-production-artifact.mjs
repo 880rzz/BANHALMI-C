@@ -17,6 +17,7 @@ walk(root);
 
 const stylesheetRe = /<link rel="stylesheet" href="(\/assets\/css\/site\.css[^\"]*)"\s*\/>/g;
 const mainScriptRe = /<script defer="" src="\/assets\/js\/main\.js\?v=20260926-contact-dock-v1"><\/script>/g;
+const mainScriptSrcRe = /(\/assets\/js\/main\.js\?v=)[^\"]+/g;
 const quoteMainScriptRe = /<script[^>]*\bsrc="(\/assets\/js\/main\.js\?v=[^\"]+)"[^>]*><\/script>/g;
 const megaMenuScriptRe = /<script data-banhalmi-mega-menu="" defer="" src="\/assets\/js\/mega-menu\.js\?v=[^\"]+"><\/script>/g;
 const quotePdfScriptRe = /<script([^>]*?)src="(\/assets\/js\/quote-pdf\.js[^\"]*)"([^>]*)><\/script>/g;
@@ -73,6 +74,9 @@ for (const file of htmlFiles) {
 
   html = renderExecutivePositioningCopy(rel, html);
 
+  // Canonicalize the shared runtime cache key on every page before page-specific transformations.
+  html = html.replace(mainScriptSrcRe, function(_match, prefix){ return prefix + '20260926-contact-dock-v1'; });
+
   /* Layout CSS is intentionally render-blocking. Deferring the canonical
      stylesheet painted service pages without their base geometry and then
      reflowed the entire document when media changed from print to all. */
@@ -113,6 +117,7 @@ for (const file of htmlFiles) {
     html = html.replace(/aria-label="Studio Budapest" class="map-card-link"/g, 'aria-label="Maps – Studio Budapest" class="map-card-link"');
   }
 
+  if (/\/assets\/js\/main\.js\?v=(?!20260926-contact-dock-v1)[^\"']+/.test(html)) throw new Error(`Non-canonical main.js cache token remained in ${rel}`);
   fs.writeFileSync(file, html);
 }
 
