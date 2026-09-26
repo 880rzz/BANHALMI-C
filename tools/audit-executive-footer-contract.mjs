@@ -29,8 +29,14 @@ for (const page of pages) {
   const html = fs.readFileSync(page, 'utf8');
   if (!html.includes('class="footer-contact-list"')) continue;
   footers += 1;
-  for (const token of ['data-location-role="studio"','data-location-role="office"','Schwedenplatz 2, Top 8–9, 1010 Wien','Gersthofer Straße 150–154/6/2, 1180 Wien','Lágymányosi u. 15, 1111 Budapest','https://g.page/r/CdO4Kej3jIkfEBM','https://wa.me/4367761655592','class="footer-contact-actions"']) {
+  for (const token of ['data-location-role="studio"','data-location-role="office"','Schwedenplatz 2, Top 8–9, 1010 Wien','Gersthofer Straße 150–154/6/2, 1180 Wien','Lágymányosi u. 15, 1111 Budapest','https://g.page/r/CdO4Kej3jIkfEBM','class="footer-contact-actions"']) {
     if (!html.includes(token)) errors.push(`${page}: missing executive footer contract ${token}`);
+  }
+  const isHu = /^hu[\\/]/.test(page);
+  const expectedViennaHref = isHu ? '+4367761655592' : '+4367764733262';
+  const expectedViennaDisplay = isHu ? '+43 677 616 55592' : '+43 677 647 332 62';
+  for (const token of [`tel:${expectedViennaHref}`, `https://wa.me/${expectedViennaHref.slice(1)}`, expectedViennaDisplay]) {
+    if (!html.includes(token)) errors.push(`${page}: missing locale-specific Vienna contact ${token}`);
   }
   const locationCount=(html.match(/class="footer-location /g)||[]).length;
   const studioCount=(html.match(/data-location-role="studio"/g)||[]).length;
