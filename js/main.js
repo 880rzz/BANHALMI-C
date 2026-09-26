@@ -1171,67 +1171,95 @@
 })();
 
 
-/* EXECUTIVE-WHATSAPP-CONTACT-V1:START */
+/* BANHALMI-CONTACT-DOCK-V1:START */
 (function () {
   "use strict";
+  if (!document.querySelector("main") || document.querySelector(".banhalmi-contact-dock")) return;
 
   var root = document.documentElement;
   var lang = String(root.lang || "en").toLowerCase();
   var locale = lang.indexOf("hu") === 0 ? "hu" : (lang.indexOf("de") === 0 ? "de" : "en");
   var copy = {
     en: {
-      label: "Contact Norbert Bánhalmi on WhatsApp",
-      title: "WhatsApp contact",
-      message: "Hello Norbert, I am contacting you from the BANHALMI website regarding a photography project."
+      contact:"Contact", close:"Close contact panel", email:"Email", whatsapp:"WhatsApp",
+      phone:"Call", studios:"Studios", budapest:"Budapest studio", vienna:"Vienna studio", directions:"Directions",
+      wa:"Hello Norbert, I am contacting you from the BANHALMI website regarding a photography project."
     },
     de: {
-      label: "Norbert Bánhalmi über WhatsApp kontaktieren",
-      title: "Kontakt über WhatsApp",
-      message: "Hallo Norbert, ich kontaktiere Sie über die BANHALMI Website wegen eines Fotoprojekts."
+      contact:"Kontakt", close:"Kontaktfenster schließen", email:"E-Mail", whatsapp:"WhatsApp",
+      phone:"Anrufen", studios:"Studios", budapest:"Studio Budapest", vienna:"Studio Wien", directions:"Route",
+      wa:"Hallo Norbert, ich kontaktiere Sie über die BANHALMI Website wegen eines Fotoprojekts."
     },
     hu: {
-      label: "Kapcsolatfelvétel Bánhalmi Norberttel WhatsAppon",
-      title: "WhatsApp kapcsolat",
-      message: "Kedves Norbert, a BANHALMI weboldalról keresem egy fotózással kapcsolatban."
+      contact:"Kapcsolat", close:"Kapcsolati panel bezárása", email:"E-mail", whatsapp:"WhatsApp",
+      phone:"Hívás", studios:"Stúdiók", budapest:"Budapesti stúdió", vienna:"Bécsi stúdió", directions:"Útvonal",
+      wa:"Kedves Norbert, a BANHALMI weboldalról keresem egy fotózással kapcsolatban."
     }
   }[locale];
 
+  var style = document.createElement("style");
+  style.textContent = [
+    ".banhalmi-contact-dock{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:2147483000;font-family:inherit;color:#111}",
+    ".banhalmi-contact-trigger{min-height:48px;padding:0 18px;border:1px solid rgba(17,17,17,.16);border-radius:999px;background:#111;color:#fff;font:600 14px/1 inherit;letter-spacing:.02em;box-shadow:0 10px 30px rgba(0,0,0,.16);cursor:pointer}",
+    ".banhalmi-contact-panel{position:absolute;right:0;bottom:60px;width:min(340px,calc(100vw - 32px));max-height:min(620px,calc(100vh - 110px));overflow:auto;padding:18px;border:1px solid rgba(17,17,17,.12);border-radius:18px;background:rgba(255,255,255,.985);box-shadow:0 24px 70px rgba(0,0,0,.20);backdrop-filter:blur(16px)}",
+    ".banhalmi-contact-panel[hidden]{display:none}",
+    ".banhalmi-contact-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}",
+    ".banhalmi-contact-head strong{font-size:16px;letter-spacing:.01em}",
+    ".banhalmi-contact-close{width:44px;height:44px;border:0;border-radius:50%;background:transparent;font-size:24px;cursor:pointer}",
+    ".banhalmi-contact-list{display:grid;gap:8px}",
+    ".banhalmi-contact-action,.banhalmi-contact-studio{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:11px 12px;border:1px solid rgba(17,17,17,.10);border-radius:12px;color:inherit;text-decoration:none;background:#fff}",
+    ".banhalmi-contact-action strong,.banhalmi-contact-studio strong{font-size:14px}",
+    ".banhalmi-contact-action span,.banhalmi-contact-studio span{font-size:12px;color:#666;text-align:right}",
+    ".banhalmi-contact-sep{height:1px;background:rgba(17,17,17,.10);margin:14px 0}",
+    ".banhalmi-contact-label{margin:0 0 8px;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#777}",
+    ".banhalmi-contact-action:focus-visible,.banhalmi-contact-studio:focus-visible,.banhalmi-contact-trigger:focus-visible,.banhalmi-contact-close:focus-visible{outline:2px solid #9b7a34;outline-offset:3px}",
+    "@media(max-width:640px){.banhalmi-contact-dock{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom))}.banhalmi-contact-trigger{margin-left:auto;display:block}.banhalmi-contact-panel{position:fixed;left:0;right:0;bottom:0;width:auto;max-height:70vh;border-radius:20px 20px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));box-shadow:0 -20px 60px rgba(0,0,0,.22)}}",
+    "@media(prefers-reduced-motion:no-preference){.banhalmi-contact-panel{animation:banhalmiDockIn .16s ease-out}@keyframes banhalmiDockIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}}"
+  ].join("");
+  document.head.appendChild(style);
+
+  var wrap = document.createElement("div");
+  wrap.className = "banhalmi-contact-dock";
+  wrap.innerHTML =
+    '<div class="banhalmi-contact-panel" id="banhalmi-contact-panel" hidden role="dialog" aria-modal="false" aria-labelledby="banhalmi-contact-title">'+
+      '<div class="banhalmi-contact-head"><strong id="banhalmi-contact-title">'+copy.contact+'</strong><button class="banhalmi-contact-close" type="button" aria-label="'+copy.close+'">×</button></div>'+
+      '<div class="banhalmi-contact-list">'+
+        '<a class="banhalmi-contact-action" href="https://wa.me/4367761655592?text='+encodeURIComponent(copy.wa)+'" target="_blank" rel="noopener noreferrer"><strong>'+copy.whatsapp+'</strong><span>+43 677 616 55592</span></a>'+
+        '<a class="banhalmi-contact-action" href="mailto:hello@norbertbanhalmi.com"><strong>'+copy.email+'</strong><span>hello@norbertbanhalmi.com</span></a>'+
+        '<a class="banhalmi-contact-action" href="tel:+4367761655592"><strong>'+copy.phone+' · Wien</strong><span>+43 677 616 55592</span></a>'+
+        '<a class="banhalmi-contact-action" href="tel:+36704698397"><strong>'+copy.phone+' · Budapest</strong><span>+36 70 469 8397</span></a>'+
+      '</div>'+
+      '<div class="banhalmi-contact-sep"></div><p class="banhalmi-contact-label">'+copy.studios+'</p>'+
+      '<div class="banhalmi-contact-list">'+
+        '<a class="banhalmi-contact-studio" href="https://maps.app.goo.gl/QsMeDA8Bgq5yKxAo8" target="_blank" rel="noopener noreferrer"><strong>'+copy.vienna+'</strong><span>Schwedenplatz 2, Top 8–9<br>1010 Wien · '+copy.directions+' ↗</span></a>'+
+        '<a class="banhalmi-contact-studio" href="https://maps.app.goo.gl/nEvcjbCA1wmgQtXJA" target="_blank" rel="noopener noreferrer"><strong>'+copy.budapest+'</strong><span>Lágymányosi u. 15.<br>1111 Budapest · '+copy.directions+' ↗</span></a>'+
+      '</div>'+
+    '</div>'+
+    '<button class="banhalmi-contact-trigger" type="button" aria-expanded="false" aria-controls="banhalmi-contact-panel">'+copy.contact+'</button>';
+
+  var panel = wrap.querySelector(".banhalmi-contact-panel");
+  var trigger = wrap.querySelector(".banhalmi-contact-trigger");
+  var close = wrap.querySelector(".banhalmi-contact-close");
+  function setOpen(open) {
+    panel.hidden = !open;
+    trigger.setAttribute("aria-expanded", String(open));
+    if (open) close.focus({preventScroll:true});
+  }
+  trigger.addEventListener("click", function(){ setOpen(panel.hidden); });
+  close.addEventListener("click", function(){ setOpen(false); trigger.focus({preventScroll:true}); });
+  document.addEventListener("keydown", function(e){ if(e.key==="Escape" && !panel.hidden){setOpen(false);trigger.focus({preventScroll:true});} });
+  document.addEventListener("click", function(e){ if(!panel.hidden && !wrap.contains(e.target)) setOpen(false); });
+
   var cookieBar = document.querySelector(".cookie");
-  function cookieIsVisible() {
-    return !!(cookieBar && cookieBar.classList.contains("show"));
+  function syncCookie() {
+    var covered = !!(cookieBar && cookieBar.classList.contains("show"));
+    wrap.style.visibility = covered ? "hidden" : "";
+    wrap.style.pointerEvents = covered ? "none" : "";
+    if (covered && !panel.hidden) setOpen(false);
   }
-  function syncContactVisibility(contact) {
-    if (!contact) return;
-    var covered = cookieIsVisible();
-    contact.style.visibility = covered ? "hidden" : "";
-    contact.style.pointerEvents = covered ? "none" : "";
-    if (covered) contact.setAttribute("aria-hidden", "true");
-    else contact.removeAttribute("aria-hidden");
-  }
-
-  var link = document.querySelector(".whatsapp-contact");
-  if (!link && document.querySelector("main")) {
-    link = document.createElement("a");
-    link.className = "whatsapp-contact";
-    link.href = "https://wa.me/4367761655592?text=" + encodeURIComponent(copy.message);
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.setAttribute("aria-label", copy.label);
-    link.title = copy.title;
-    link.setAttribute("data-contact-channel", "whatsapp");
-    link.innerHTML = '<svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><path d="M16.04 3A12.9 12.9 0 0 0 5 22.58L3.3 29l6.57-1.72A12.93 12.93 0 1 0 16.04 3Zm0 23.52c-1.9 0-3.75-.51-5.37-1.47l-.39-.23-3.9 1.02 1.04-3.8-.25-.4A10.58 10.58 0 1 1 16.04 26.52Zm5.8-7.92c-.32-.16-1.88-.93-2.17-1.03-.29-.11-.5-.16-.71.16-.21.31-.82 1.03-1 1.24-.19.21-.37.24-.69.08-.32-.16-1.34-.49-2.55-1.57a9.55 9.55 0 0 1-1.76-2.19c-.18-.32-.02-.49.14-.65.14-.14.32-.37.47-.55.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.71-1.72-.98-2.36-.26-.62-.52-.54-.71-.55h-.61c-.21 0-.55.08-.84.4-.29.31-1.11 1.08-1.11 2.64s1.14 3.07 1.29 3.28c.16.21 2.23 3.41 5.41 4.78.76.33 1.35.52 1.81.67.76.24 1.45.21 2 .13.61-.09 1.88-.77 2.15-1.51.26-.74.26-1.37.18-1.5-.08-.13-.29-.21-.61-.37Z"/></svg>';
-    // Resolve consent state before insertion so first paint never sees a
-    // visible control that immediately moves or disappears.
-    syncContactVisibility(link);
-    document.body.appendChild(link);
-  } else {
-    syncContactVisibility(link);
-  }
-
-  if (cookieBar && link) {
-    new MutationObserver(function () {
-      syncContactVisibility(link);
-    }).observe(cookieBar, {attributes:true, attributeFilter:["class"]});
-  }
+  if (cookieBar) new MutationObserver(syncCookie).observe(cookieBar,{attributes:true,attributeFilter:["class"]});
+  syncCookie();
+  document.body.appendChild(wrap);
 })();
-/* EXECUTIVE-WHATSAPP-CONTACT-V1:END */
+ /* BANHALMI-CONTACT-DOCK-V1:END */
+
