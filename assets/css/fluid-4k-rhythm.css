@@ -1595,6 +1595,9 @@ html body .site-footer{
   flex:0 0 auto!important;
 }
 
+html{background:#fff!important;}
+html body{background:#fff!important;}
+
 /* FOOTER-SINGLE-CANONICAL-V43-20260926
    Sole responsive footer geometry authority.
    One footer composition for every EN / HU / DE route.
