@@ -2170,3 +2170,6 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
   html body .site-footer .banhalmi-ecosystem a{justify-content:flex-start!important;text-align:left!important;}
   html body .site-footer .banhalmi-ecosystem a+a::before{left:0!important;right:0!important;top:0!important;bottom:auto!important;width:auto!important;height:1px!important;}
 }
+
+/* MOBILE-QUOTE-FOOTER-FLOW-V44-20260926 */
+@media (max-width:900px){html body:has([data-smart-quote]){padding-bottom:0!important}html body main:has([data-smart-quote]){padding-bottom:112px!important}html body:has([data-smart-quote]) .site-footer{position:relative!important;z-index:91!important}}

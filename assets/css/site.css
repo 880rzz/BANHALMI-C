@@ -2365,11 +2365,7 @@ box-shadow:0 18px 48px rgba(0,0,0,.10);
 }
 
 @media (max-width:900px){
-  /* Keep the mobile quote summary persistent without extending the document
-     after the footer. Reserve its clearance inside main and let the footer
-     paint above the fixed estimate when the user reaches the site footer. */
-  main:has([data-smart-quote]){padding-bottom:112px;}
-  body:has([data-smart-quote]) .site-footer{position:relative;z-index:91;}
+  body:has([data-smart-quote]){padding-bottom:112px;}
   .smart-quote-layout .quote-summary-card{
     position:fixed;
     left:12px;
