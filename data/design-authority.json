@@ -140,8 +140,8 @@
       "mainToFooterOverlapTolerancePx": 2,
       "footerMaxViewportFractionOnTabletDesktop": 0.82,
       "footerAbsoluteMaxPx": 760,
-      "rootOverscrollBackground": "#1d232d",
-      "rootOverscrollMatchesFooter": true
+      "rootOverscrollBackground": "#ffffff",
+      "rootOverscrollMatchesFooter": false
     },
     "quote": {
       "categoryCardHeight": "intrinsic",
