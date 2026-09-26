@@ -163,7 +163,8 @@
         "https://www.wikidata.org/wiki/Q138425941",
         "https://firmen.wko.at/norbert-banhalmi-visuelle-strategische-partnerschaft-f%C3%BCr-f%C3%BChrungskr%C3%A4fte/wien/?firmaid=12bd142c-5fcf-4457-9a90-47fbff162b40",
         "https://www.banhalmi.at/",
-        "https://www.banhalminorbert.hu/"
+        "https://www.banhalminorbert.hu/",
+        "https://www.linkedin.com/company/banhalmi/"
       ],
       "logo": {
         "@id": "https://www.norbertbanhalmi.com/#logo"
@@ -208,7 +209,10 @@
       "founder": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "description": "BANHALMI is a professional photography team and brand founded and creatively directed by Norbert Banhalmi. It provides executive portraiture, professional headshots, brand photography, C-level event photography, fine-art photography and strategic visual positioning through Norbert-led, project-specific teams."
+      "description": "BANHALMI is a professional photography team and brand founded and creatively directed by Norbert Banhalmi. It provides executive portraiture, professional headshots, brand photography, C-level event photography, fine-art photography and strategic visual positioning through Norbert-led, project-specific teams.",
+      "sameAs": [
+        "https://www.linkedin.com/company/banhalmi/"
+      ]
     },
     {
       "@type": "WebSite",
