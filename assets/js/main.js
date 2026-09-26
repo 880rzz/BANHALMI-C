@@ -1278,26 +1278,6 @@
     }
   }[locale];
 
-  var style = document.createElement("style");
-  style.textContent = [
-    ".banhalmi-contact-dock{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:2147483000;font-family:inherit;color:#111}",
-    ".banhalmi-contact-trigger{min-height:48px;padding:0 18px;border:1px solid rgba(17,17,17,.16);border-radius:999px;background:#111;color:#fff;font:600 14px/1 inherit;letter-spacing:.02em;box-shadow:0 10px 30px rgba(0,0,0,.16);cursor:pointer}",
-    ".banhalmi-contact-panel{position:absolute;right:0;bottom:60px;width:min(340px,calc(100vw - 32px));max-height:min(620px,calc(100vh - 110px));overflow:auto;padding:18px;border:1px solid rgba(17,17,17,.12);border-radius:18px;background:rgba(255,255,255,.985);box-shadow:0 24px 70px rgba(0,0,0,.20);backdrop-filter:blur(16px)}",
-    ".banhalmi-contact-panel[hidden]{display:none}",
-    ".banhalmi-contact-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}",
-    ".banhalmi-contact-head strong{font-size:16px;letter-spacing:.01em}",
-    ".banhalmi-contact-close{width:44px;height:44px;border:0;border-radius:50%;background:transparent;font-size:24px;cursor:pointer}",
-    ".banhalmi-contact-list{display:grid;gap:8px}",
-    ".banhalmi-contact-action,.banhalmi-contact-studio{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:11px 12px;border:1px solid rgba(17,17,17,.10);border-radius:12px;color:inherit;text-decoration:none;background:#fff}",
-    ".banhalmi-contact-action strong,.banhalmi-contact-studio strong{font-size:14px}",
-    ".banhalmi-contact-action span,.banhalmi-contact-studio span{font-size:12px;color:#666;text-align:right}",
-    ".banhalmi-contact-sep{height:1px;background:rgba(17,17,17,.10);margin:14px 0}",
-    ".banhalmi-contact-label{margin:0 0 8px;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#777}",
-    ".banhalmi-contact-action:focus-visible,.banhalmi-contact-studio:focus-visible,.banhalmi-contact-trigger:focus-visible,.banhalmi-contact-close:focus-visible{outline:2px solid #9b7a34;outline-offset:3px}",
-    "@media(max-width:640px){.banhalmi-contact-dock{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom))}.banhalmi-contact-trigger{margin-left:auto;display:block}.banhalmi-contact-panel{position:fixed;left:0;right:0;bottom:0;width:auto;max-height:70vh;border-radius:20px 20px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));box-shadow:0 -20px 60px rgba(0,0,0,.22)}}",
-    "@media(prefers-reduced-motion:no-preference){.banhalmi-contact-panel{animation:banhalmiDockIn .16s ease-out}@keyframes banhalmiDockIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}}"
-  ].join("");
-  document.head.appendChild(style);
 
   var wrap = document.createElement("div");
   wrap.className = "banhalmi-contact-dock";
