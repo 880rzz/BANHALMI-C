@@ -1671,6 +1671,7 @@ html body .site-footer .footer-entity{
   color:#9fa7b3!important;
   font-size:.82rem!important;
   line-height:1.48!important;
+  overflow-wrap:anywhere!important;
 }
 html body .site-footer .footer-wko-profile{
   display:inline-flex!important;
