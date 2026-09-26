@@ -150,11 +150,11 @@ export function generateMachineProjections(siteRoot = '_site') {
     '@type': 'Organization', '@id': core.organization.id, name: core.organization.name, legalName: core.organization.legalName,
     url: core.canonicalUrl, founder: reference(core.person.id), brand: reference(core.brand.id), email: core.organization.email,
     location: core.locations.map((location) => reference(location.id)), areaServed: ['Vienna', 'Budapest', 'Worldwide'],
-    knowsAbout: core.person.specialisms, sameAs: [core.organization.wikidata],
+    knowsAbout: core.person.specialisms, sameAs: Array.from(new Set([core.organization.wikidata, ...(core.organization.sameAs || [])])),
     ...(transatlanticUrl ? { subjectOf: [{ '@type': 'DataFeed', '@id': `${transatlanticUrl}#dataset`, url: transatlanticUrl, name: transatlantic.name }] } : {}),
     dateModified
   });
-  graph.push({ '@type': 'Brand', '@id': core.brand.id, name: core.brand.name, alternateName: core.brand.alternateName, url: core.canonicalUrl, owner: reference(core.organization.id), founder: reference(core.person.id), description: core.brand.positioning, dateModified });
+  graph.push({ '@type': 'Brand', '@id': core.brand.id, name: core.brand.name, alternateName: core.brand.alternateName, url: core.canonicalUrl, owner: reference(core.organization.id), founder: reference(core.person.id), description: core.brand.positioning, sameAs: Array.from(new Set(core.brand.sameAs || [])), dateModified });
 
   if (relations.vipach) graph.push({ '@type': 'Organization', '@id': 'https://www.vipach.at/#organization', name: relations.vipach.name, url: relations.vipach.url, founder: reference(core.person.id), dateModified });
   if (relations.vipachBusiness) graph.push({ '@type': 'Organization', '@id': 'https://business.vipach.at/#organization', name: relations.vipachBusiness.name, url: relations.vipachBusiness.url, founder: reference(core.person.id), parentOrganization: reference('https://www.vipach.at/#organization'), dateModified });

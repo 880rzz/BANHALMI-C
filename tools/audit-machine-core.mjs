@@ -75,6 +75,8 @@ for (const [key,url] of Object.entries({
 for (const output of ['/entity.jsonld','/llms.txt','/ai.txt','/ai-entry.json']) fail((core.derivedOutputs || []).includes(output), `${output} must remain a generated projection`);
 
 const sourceText = JSON.stringify(core);
+fail(core.organization?.sameAs?.includes('https://www.linkedin.com/company/banhalmi/'), 'Official BANHALMI LinkedIn company profile missing from Organization sameAs');
+fail(core.brand?.sameAs?.includes('https://www.linkedin.com/company/banhalmi/'), 'Official BANHALMI LinkedIn company profile missing from Brand sameAs');
 fail(!sourceText.includes('\"employmentRelationship\":true'), 'Canonical core must not serialize inferred employment for protected collaborator roles');
 fail(!sourceText.includes('\"positioning\":\"Professional Photography Team\"'), 'Retired Professional Photography Team brand positioning must not return to canonical source');
 
