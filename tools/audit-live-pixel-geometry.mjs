@@ -259,7 +259,7 @@ for(const width of requiredResponsiveWidths){
     if(state.summaries.some(h=>h<43.5)) issues.push('footer accordion touch target below 44px');
     if(width>=1440&&state.legalLineCount!==1) issues.push(`desktop legal controls wrap to ${state.legalLineCount} lines`);
     if(width>=1440&&!state.legalControls.some(x=>/cookie|süti/i.test(x.label))) issues.push('desktop cookie settings control missing from legal row');
-    if(width>=1180&&state.rootBackground!=='rgb(29, 35, 45)') issues.push(`Safari root overscroll background ${state.rootBackground} does not match footer`);
+    if(width>=1180&&state.rootBackground!=='rgb(255, 255, 255)') issues.push(`Safari root overscroll background ${state.rootBackground} does not match canonical white document floor`);
     if(width<1180&&(!disclosure||disclosure.runtime!=='v43'||disclosure.lastAction!=='open'||disclosure.ariaExpanded!=='true'||!disclosure.open||disclosure.hidden||disclosure.display==='none'||disclosure.height<1)) issues.push('footer accordion interaction failed: '+JSON.stringify(disclosure));
     if(width<=720){
       const tracks=state.gridTemplateColumns.trim().split(/\s+/).filter(Boolean);
