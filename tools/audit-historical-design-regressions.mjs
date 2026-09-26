@@ -23,7 +23,7 @@ must(Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx)<=760,'BANHALMI 
 must(authority.layout?.documentFlow?.layoutMode==='flex','BANHALMI document flow must preserve the canonical flex document model');
 must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI body/content document background must remain white');
 must(authority.layout?.documentFlow?.rootOverscrollBackground==='#ffffff'&&authority.layout?.documentFlow?.rootOverscrollMatchesFooter===false,'Safari root overscroll floor must stay white so the footer surface ends with the footer');
-must(site.includes('html{min-height:100%;background:#fff!important}'),'canonical CSS must keep the document/root floor white');
+must(fluid.includes('html{background:#fff!important;}')&&fluid.includes('html body{background:#fff!important;}'),'canonical footer authority must keep the document/root floor white');
 must(Number(authority.layout?.footer?.desktopColumns)===12,'BANHALMI desktop footer must use the approved 12-track grid');
 must(Number(authority.layout?.footer?.desktopContentRows)===2,'BANHALMI desktop footer content must remain exactly two rows');
 must(Number(authority.layout?.footer?.desktopContactColumns)===3,'BANHALMI desktop footer must keep Vienna studio, Vienna office and Budapest studio in three explicit contact columns');
