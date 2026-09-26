@@ -16,7 +16,7 @@ function walk(dir) {
 walk(root);
 
 const stylesheetRe = /<link rel="stylesheet" href="(\/assets\/css\/site\.css[^\"]*)"\s*\/>/g;
-const mainScriptRe = /<script defer="" src="\/assets\/js\/main\.js\?v=20260808-mobile100-v2"><\/script>/g;
+const mainScriptRe = /<script defer="" src="\/assets\/js\/main\.js\?v=20260926-contact-dock-v1"><\/script>/g;
 const quoteMainScriptRe = /<script[^>]*\bsrc="(\/assets\/js\/main\.js\?v=[^\"]+)"[^>]*><\/script>/g;
 const megaMenuScriptRe = /<script data-banhalmi-mega-menu="" defer="" src="\/assets\/js\/mega-menu\.js\?v=[^\"]+"><\/script>/g;
 const quotePdfScriptRe = /<script([^>]*?)src="(\/assets\/js\/quote-pdf\.js[^\"]*)"([^>]*)><\/script>/g;
@@ -54,7 +54,7 @@ function renderExecutivePositioningCopy(rel, html) {
 
 const homeMegaMenuLoader = `<script data-banhalmi-mega-menu="" defer src="/assets/js/mega-menu.js?v=20260921-single-stage-v1"></script>`;
 
-const homeRuntimeLoader = `<script defer src="/assets/js/main.js?v=20260808-mobile100-v2"></script>`;
+const homeRuntimeLoader = `<script defer src="/assets/js/main.js?v=20260926-contact-dock-v1"></script>`;
 
 function quoteRuntimeLoader(src) {
   const runtimeControls = '.menu-btn,[data-cookie-settings],.info-tip[data-tooltip]';
