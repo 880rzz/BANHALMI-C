@@ -35,7 +35,7 @@ fail(!registry?.flickrArchive?.creator, 'Team-level Flickr archive must not defi
 fail(!/Bánhalmi Norbert|Norbert Bánhalmi/i.test(registry?.flickrArchive?.attribution || ''), 'Team-level Flickr archive attribution must remain BANHALMI Photography / Photography Team, not individual Norbert authorship');
 
 const records = Array.isArray(registry?.records) ? registry.records : [];
-fail(records.length >= 11, 'External evidence registry lost owner-supplied LinkedIn records');
+fail(records.length >= 12, 'External evidence registry lost owner-supplied LinkedIn records');
 
 const ids = new Set(records.map((record) => record.id));
 fail(ids.size === records.length, 'External evidence record IDs must be unique');
@@ -77,6 +77,17 @@ fail(cybersecurity.capabilities.includes('Institutional / Diplomatic Event Photo
 fail(/© BANHALMI Photography/.test(cybersecurity.creditContext || ''), 'AmCham cybersecurity institutional BANHALMI credit missing');
 fail(/Verified 2026-09-23/.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity public-readback timestamp missing');
 fail(/not treated as an independent institutional endorsement/i.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity Flickr independence boundary missing');
+fail(cybersecurity.officialGallery === 'https://amcham.at/galleries/amcham-special-talks-cybersecurity-breakfast/', 'AmCham cybersecurity official gallery URL drift');
+fail(cybersecurity.officialGalleryEvidenceStatus === 'owner-supplied-official-organizational-gallery-url', 'AmCham cybersecurity official gallery evidence-status drift');
+
+const techStudy = records.find((record) => record.id === 'linkedin-amcham-austria-us-technology-economic-ties-7509254328193298432');
+fail(Boolean(techStudy), 'Latest AmCham Austria U.S. technology/economic-ties evidence record missing');
+fail(techStudy.url === 'https://www.linkedin.com/posts/amcham-austria_us-technology-companies-are-playing-a-key-activity-7509254328193298432-R-Ni', 'Latest AmCham LinkedIn publication URL drift');
+fail(techStudy.eventArchive === 'https://www.flickr.com/photos/vipach/albums/72177720335829969', 'Latest AmCham Flickr archive URL drift');
+fail(techStudy.photographer === 'Norbert Bánhalmi', 'Latest AmCham photographer attribution drift');
+fail(techStudy.evidenceStatus === 'publicly-verified-institutional-linkedin-photo-credit-plus-owner-supplied-flickr-event-archive', 'Latest AmCham evidence status drift');
+fail(/Photos: Norbert Banhalmi/.test(techStudy.creditContext || ''), 'Latest AmCham explicit photographer credit missing');
+fail(/Verified 2026-09-26/.test(techStudy.publicReadback || ''), 'Latest AmCham public-readback timestamp missing');
 
 fail(team?.externalPhotographyEvidence === registry['@id'], 'Team contract must link canonical external evidence registry');
 fail(team?.serviceLinks?.externalPhotographyEvidence === registry['@id'], 'Team service links must expose external evidence registry');
