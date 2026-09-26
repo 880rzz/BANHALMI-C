@@ -26,7 +26,7 @@ if (!/grid-column:1\s*\/\s*span\s*6!important/.test(fluid) || !/grid-column:7\s*
 
 if (!/footer-legal-list li\>strong\{[\s\S]*?white-space:nowrap!important/.test(fluid)) errors.push('desktop legal identifiers must remain on one line');
 if (!fluid.includes('.footer-bottom>span:last-child>a,')) errors.push('footer-bottom desktop links must share the canonical inline-flex target contract');
-if (!/html\{min-height:100%;background:#fff!important\}/.test(site)) errors.push('document floor must stay white so footer background cannot extend beyond the footer');
+if (!fluid.includes('html{background:#fff!important;}') || !fluid.includes('html body{background:#fff!important;}')) errors.push('document floor must stay white so footer background cannot extend beyond the footer');
 
 let footers = 0;
 for (const page of pages) {
