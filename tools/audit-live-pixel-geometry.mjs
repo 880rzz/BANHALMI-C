@@ -264,7 +264,7 @@ for(const width of requiredResponsiveWidths){
     if(width>=1440&&!state.legalControls.some(x=>/cookie|süti/i.test(x.label))) issues.push('desktop cookie settings control missing from legal row');
     if(width>=1180&&state.secondRowBlocks.length===3){const tops=state.secondRowBlocks.map(x=>Math.round(x.top));if(Math.max(...tops)-Math.min(...tops)>2) issues.push('desktop Contact/Memberships/Legal row is not top-aligned: '+JSON.stringify(tops));}
     if(width>=1180&&state.legalValues.some(x=>x.lineHeight>0&&x.height>x.lineHeight*1.55)) issues.push('desktop legal identifier wrapped to multiple lines');
-    if(width>=1180&&state.rootBackground!=='rgb(29, 35, 45)') issues.push(`Safari root overscroll background ${state.rootBackground} does not match footer`);
+    if(width>=1180&&state.rootBackground!=='rgb(255, 255, 255)') issues.push(`desktop root document floor ${state.rootBackground} must remain white after footer`);
     if(width<1180&&(!disclosure||disclosure.runtime!=='v43'||disclosure.lastAction!=='open'||disclosure.ariaExpanded!=='true'||!disclosure.open||disclosure.hidden||disclosure.display==='none'||disclosure.height<1)) issues.push('footer accordion interaction failed: '+JSON.stringify(disclosure));
     if(width<=720){
       const tracks=state.gridTemplateColumns.trim().split(/\s+/).filter(Boolean);
