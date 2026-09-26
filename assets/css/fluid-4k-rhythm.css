@@ -2171,5 +2171,56 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
   html body .site-footer .banhalmi-ecosystem a+a::before{left:0!important;right:0!important;top:0!important;bottom:auto!important;width:auto!important;height:1px!important;}
 }
 
+/* DESKTOP-FOOTER-ROW-ALIGNMENT-V45-20260926
+   Keep Contact, Memberships and Legal on one visual row and keep every
+   trust/legal/cookie control on one baseline at desktop widths. */
+@media (min-width:1180px){
+  html body .site-footer .footer-grid>div:has(.footer-contact-list){
+    grid-column:1 / span 6!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]{
+    grid-column:7 / span 3!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    grid-column:10 / span 3!important;
+    grid-row:2!important;
+  }
+  html body .site-footer .footer-legal-list li{
+    grid-template-columns:max-content minmax(0,1fr)!important;
+    column-gap:12px!important;
+  }
+  html body .site-footer .footer-legal-list li>strong{
+    white-space:nowrap!important;
+    overflow-wrap:normal!important;
+  }
+  html body .site-footer .footer-bottom{
+    grid-template-columns:max-content minmax(0,1fr)!important;
+    align-items:baseline!important;
+    gap:0 18px!important;
+    font-size:.70rem!important;
+  }
+  html body .site-footer .footer-bottom>span:last-child{
+    display:flex!important;
+    flex-wrap:nowrap!important;
+    align-items:baseline!important;
+    justify-content:flex-end!important;
+    gap:0 8px!important;
+    min-width:0!important;
+    white-space:nowrap!important;
+  }
+  html body .site-footer .footer-cookie-settings{
+    display:inline!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:0!important;
+    margin:0!important;
+    line-height:inherit!important;
+    vertical-align:baseline!important;
+    align-self:baseline!important;
+  }
+}
+
 /* MOBILE-QUOTE-FOOTER-FLOW-V44-20260926 */
 @media (max-width:900px){html body:has([data-smart-quote]){padding-bottom:0!important}html body main:has([data-smart-quote]){padding-bottom:112px!important}html body:has([data-smart-quote]) .site-footer{position:relative!important;z-index:91!important}}
