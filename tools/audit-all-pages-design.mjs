@@ -64,7 +64,7 @@ for(const width of widths){
     if(r.overflow>1)failures.push(`${rel} @${width}x${height}: document horizontal overflow ${r.overflow}px`);
     if(r.headerHeight&&(r.headerHeight<48||r.headerHeight>110))failures.push(`${rel} @${width}x${height}: header height ${r.headerHeight.toFixed(1)}px`);
     if(flow.layoutMode&&r.bodyDisplay!==flow.layoutMode)failures.push(`${rel} @${width}x${height}: body document flow is ${r.bodyDisplay}, expected ${flow.layoutMode}`);
-    if(flow.rootOverscrollBackground&&r.htmlBackground!==flow.rootOverscrollBackground.replace('#1d232d','rgb(29, 35, 45)'))failures.push(`${rel} @${width}x${height}: html root overscroll floor rendered ${r.htmlBackground}, expected ${flow.rootOverscrollBackground}`);
+    if(flow.rootOverscrollBackground){const expectedRoot=flow.rootOverscrollBackground.toLowerCase()==='#ffffff'?'rgb(255, 255, 255)':flow.rootOverscrollBackground.toLowerCase()==='#1d232d'?'rgb(29, 35, 45)':flow.rootOverscrollBackground;if(r.htmlBackground!==expectedRoot)failures.push(`${rel} @${width}x${height}: html root overscroll floor rendered ${r.htmlBackground}, expected ${flow.rootOverscrollBackground}`);}
     if(r.mainRight>width+2)failures.push(`${rel} @${width}x${height}: main escapes viewport (${r.mainRight.toFixed(1)}px)`);
     if(r.footerRight>width+2||r.footerLeft<-2)failures.push(`${rel} @${width}x${height}: footer escapes viewport [${r.footerLeft.toFixed(1)},${r.footerRight.toFixed(1)}]`);
     if(r.footerTop!=null&&r.mainBottom!=null&&r.footerTop<r.mainBottom-Number(flow.mainToFooterOverlapTolerancePx||2))failures.push(`${rel} @${width}x${height}: footer overlaps main content by ${(r.mainBottom-r.footerTop).toFixed(1)}px`);
