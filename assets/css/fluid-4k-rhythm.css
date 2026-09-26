@@ -1504,7 +1504,7 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure:
   html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure::after{
     left:-14%!important;
     right:auto!important;
-    bottom:-28px!important;
+    bottom:-40px!important;
     width:128%!important;
     height:64px!important;
     background:#fff!important;
@@ -1516,6 +1516,65 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure:
     transform:translateZ(0)!important;
   }
 }
+/* HOMEPAGE-MOBILE-HERO-POLISH-V44-20260925
+   User-verified mobile correction: keep the identity mark quiet, move the gold
+   sweep lower in the artwork, and remove the oversized white handoff before
+   the homepage positioning copy. */
+@media (max-width:720px){
+  html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signature-line{
+    top:56%!important;
+    width:min(68%,480px)!important;
+    color:#6f4f0f!important;
+    text-shadow:none!important;
+    opacity:.92!important;
+  }
+  html body main[data-homepage-redesign="stage76"]>.hero-copy-only{
+    padding-top:clamp(24px,7vw,36px)!important;
+  }
+}
+
+/* DESKTOP-FOOTER-POLISH-V44-20260925
+   Desktop is an information footer, not an accordion. Keep every group open,
+   suppress disclosure affordances, and keep the legal/trust/cookie controls
+   on one stable row without allowing route content to widen the document. */
+@media (min-width:1180px){
+  html,
+  html body{
+    overscroll-behavior-y:none!important;
+  }
+  html body{
+    padding-bottom:0!important;
+  }
+  html body .site-footer .footer-accordion>summary{
+    cursor:default!important;
+    pointer-events:none!important;
+  }
+  html body .site-footer .footer-accordion>summary::after{
+    content:none!important;
+    display:none!important;
+  }
+  html body .site-footer details.footer-accordion>ul{
+    display:grid!important;
+    block-size:auto!important;
+    max-block-size:none!important;
+    visibility:visible!important;
+    overflow:visible!important;
+  }
+  html body .site-footer .footer-bottom{
+    grid-template-columns:max-content minmax(0,1fr)!important;
+    column-gap:24px!important;
+  }
+  html body .site-footer .footer-bottom>span:last-child{
+    flex-wrap:nowrap!important;
+    justify-content:flex-end!important;
+    white-space:nowrap!important;
+  }
+  html body .site-footer .footer-cookie-settings{
+    flex:0 0 auto!important;
+    white-space:nowrap!important;
+  }
+}
+
 /* V41 document-flow closure: one canonical flex flow from source through production.
    Main owns remaining viewport space; the footer stays intrinsic and cannot leave an unreserved tail. */
 html body{
@@ -2111,3 +2170,6 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
   html body .site-footer .banhalmi-ecosystem a{justify-content:flex-start!important;text-align:left!important;}
   html body .site-footer .banhalmi-ecosystem a+a::before{left:0!important;right:0!important;top:0!important;bottom:auto!important;width:auto!important;height:1px!important;}
 }
+
+/* MOBILE-QUOTE-FOOTER-FLOW-V44-20260926 */
+@media (max-width:900px){html body:has([data-smart-quote]){padding-bottom:0!important}html body main:has([data-smart-quote]){padding-bottom:112px!important}html body:has([data-smart-quote]) .site-footer{position:relative!important;z-index:91!important}}
