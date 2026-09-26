@@ -4307,7 +4307,7 @@ html body .site-footer,html body .site-footer .wrap{min-height:0!important;}
 .banhalmi-contact-sep{height:1px;background:rgba(17,17,17,.10);margin:14px 0}
 .banhalmi-contact-label{margin:0 0 8px;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#777}
 .banhalmi-contact-action:focus-visible,.banhalmi-contact-studio:focus-visible,.banhalmi-contact-trigger:focus-visible,.banhalmi-contact-close:focus-visible{outline:2px solid #9b7a34;outline-offset:3px}
-@media(max-width:640px){.banhalmi-contact-dock{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom))}.banhalmi-contact-trigger{margin-left:auto;display:block}.banhalmi-contact-panel{position:fixed;left:0;right:0;bottom:0;width:auto;max-height:70vh;border-radius:20px 20px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom));box-shadow:0 -20px 60px rgba(0,0,0,.22)}}
+@media(max-width:640px){.banhalmi-contact-dock{left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom))}.banhalmi-contact-trigger{position:relative;z-index:2;margin-left:auto;display:block}.banhalmi-contact-panel{position:fixed;z-index:1;left:12px;right:12px;bottom:calc(max(12px,env(safe-area-inset-bottom)) + 60px);width:auto;max-height:min(62vh,calc(100dvh - 120px));border-radius:20px;padding:20px 18px;box-shadow:0 -12px 50px rgba(0,0,0,.20)}}
 @media(prefers-reduced-motion:no-preference){.banhalmi-contact-panel{animation:banhalmiDockIn .16s ease-out}@keyframes banhalmiDockIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}}
 /* BANHALMI-CONTACT-DOCK-V1:END */
 
