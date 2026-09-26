@@ -141,7 +141,9 @@
       "footerMaxViewportFractionOnTabletDesktop": 0.82,
       "footerAbsoluteMaxPx": 760,
       "rootOverscrollBackground": "#1d232d",
-      "rootOverscrollMatchesFooter": true
+      "rootOverscrollMatchesFooter": true,
+      "desktopRootOverscrollBackground": "#ffffff",
+      "desktopRootOverscrollMatchesFooter": false
     },
     "quote": {
       "categoryCardHeight": "intrinsic",
