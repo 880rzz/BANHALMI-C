@@ -22,8 +22,10 @@ must(Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDes
 must(Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx)<=760,'BANHALMI desktop footer absolute maximum became too permissive');
 must(authority.layout?.documentFlow?.layoutMode==='flex','BANHALMI document flow must preserve the canonical flex document model');
 must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI body/content document background must remain white');
-must(authority.layout?.documentFlow?.rootOverscrollBackground==='#1d232d'&&authority.layout?.documentFlow?.rootOverscrollMatchesFooter===true,'Safari root overscroll floor must match the footer instead of exposing a white band');
-must(fluid.includes('html{background:#1d232d!important;}'),'canonical CSS must keep the Safari root overscroll floor dark');
+must(authority.layout?.documentFlow?.rootOverscrollBackground==='#1d232d','compact/mobile root overscroll floor must remain dark');
+must(authority.layout?.documentFlow?.desktopRootOverscrollBackground==='#ffffff'&&authority.layout?.documentFlow?.desktopRootOverscrollMatchesFooter===false,'desktop root document floor must remain white so footer background cannot visually extend past its intrinsic box');
+must(fluid.includes('html{background:#1d232d!important;}'),'canonical CSS must keep the compact/mobile root overscroll floor dark');
+must(fluid.includes('@media (min-width:1180px)')&&fluid.includes('background:#fff!important;'),'canonical CSS must restore a white desktop root document floor');
 must(Number(authority.layout?.footer?.desktopColumns)===12,'BANHALMI desktop footer must use the approved 12-track grid');
 must(Number(authority.layout?.footer?.desktopContentRows)===2,'BANHALMI desktop footer content must remain exactly two rows');
 must(Number(authority.layout?.footer?.desktopContactColumns)===3,'BANHALMI desktop footer must keep Vienna studio, Vienna office and Budapest studio in three explicit contact columns');
