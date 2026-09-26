@@ -3345,8 +3345,8 @@ body>.site-footer{margin-top:auto;width:100%}
 
 
 /* STAGE48-LAYOUT-CACHE-CONTRACT:START */
-/* Safari-safe document floor + verified trust-card rhythm. */
-html{min-height:100%;background:#202530!important}
+/* Safari-safe document floor: the document itself stays white; only the footer owns the dark surface. */
+html{min-height:100%;background:#fff!important}
 body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
 body>main,#main{flex:1 0 auto;width:100%;min-width:0}
 body>.site-footer,.site-footer{flex:0 0 auto;width:100%}
