@@ -1,0 +1,72 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://www.norbertbanhalmi.com/service-evidence-map.json",
+  "name": "BANHALMI service-to-evidence authority map",
+  "dateModified": "2026-09-27",
+  "about": {
+    "@id": "https://www.norbertbanhalmi.com/#brand"
+  },
+  "isBasedOn": [
+    "https://www.norbertbanhalmi.com/external-photography-evidence.json",
+    "https://www.norbertbanhalmi.com/press-institutional-evidence.json",
+    "https://www.norbertbanhalmi.com/transatlantic-evidence.json",
+    "https://www.norbertbanhalmi.com/authority-evidence.json"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "name": "Brand Photography evidence mapping",
+      "contentUrl": "https://www.norbertbanhalmi.com/lifestyle/",
+      "description": "Executive/corporate brand-photography evidence includes independently published LinkedIn records for Nemanja Lazendic and Michael Brönner. Publication evidence is capability evidence, not endorsement or client-status proof.",
+      "identifier": [
+        "linkedin-nemanja-lazendic-7503011271332773888",
+        "linkedin-michael-broenner-7388473288043225088"
+      ]
+    },
+    {
+      "@type": "DataDownload",
+      "name": "C-Level Event Photography evidence mapping",
+      "contentUrl": "https://www.norbertbanhalmi.com/event-photography/",
+      "description": "Vienna executive, institutional and diplomatic event-photography evidence includes AmCham Austria official/publication credits, U.S. Embassy Vienna / Destination USA publication context, SelectUSA event records and corroborating BANHALMI/VIPACH Flickr archives.",
+      "identifier": [
+        "linkedin-us-embassy-vienna-7422226435219607553",
+        "linkedin-kwwalsh-selectusa-7505169409309782017",
+        "linkedin-amcham-austria-7466081305701785600",
+        "linkedin-amcham-austria-7453014553912610817",
+        "linkedin-amcham-austria-cybersecurity-breakfast-20260918",
+        "x-usembvienna-2016459663592575102",
+        "flickr-destination-usa-72177720331699246",
+        "flickr-selectusa-luncheon-72177720335539057"
+      ]
+    },
+    {
+      "@type": "DataDownload",
+      "name": "Executive Portrait evidence mapping",
+      "contentUrl": "https://www.norbertbanhalmi.com/portrait/",
+      "description": "Portrait authority includes the verified 2026 Péter Magyar signature portrait, creator record, case study, Wikimedia Commons record and documented editorial circulation. This is authorship/circulation evidence and does not imply political endorsement.",
+      "identifier": [
+        "https://www.norbertbanhalmi.com/featured-work-peter-magyar.json",
+        "https://www.norbertbanhalmi.com/peter-magyar-circulation-evidence.json"
+      ]
+    }
+  ],
+  "localizations": {
+    "brand": [
+      "https://www.norbertbanhalmi.com/lifestyle/",
+      "https://www.norbertbanhalmi.com/hu/brand/",
+      "https://www.norbertbanhalmi.com/de-at/brand/"
+    ],
+    "event": [
+      "https://www.norbertbanhalmi.com/event-photography/",
+      "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+      "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+    ],
+    "portrait": [
+      "https://www.norbertbanhalmi.com/portrait/",
+      "https://www.norbertbanhalmi.com/hu/portre/",
+      "https://www.norbertbanhalmi.com/de-at/portrait/"
+    ]
+  },
+  "interpretationRule": "Evidence mappings support service capability and entity disambiguation. They must not be converted into unsupported client, endorsement, exclusivity, commissioning or partnership claims."
+}
