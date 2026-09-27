@@ -2237,3 +2237,21 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
     min-height:48px!important;
   }
 }
+
+/* WEBKIT-SR-ONLY-FLOW-CLOSURE-V46-20260927
+   Safari must not use multicolumn static positions of visually-hidden captions
+   to extend document scroll height beyond the footer. */
+html body .sr-only{
+  position:absolute!important;
+  top:0!important;
+  left:0!important;
+  width:1px!important;
+  height:1px!important;
+  margin:-1px!important;
+  padding:0!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  clip-path:inset(50%)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
