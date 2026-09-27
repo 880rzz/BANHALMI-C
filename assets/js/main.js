@@ -1252,12 +1252,12 @@
 })();
 
 
-/* BANHALMI-CONTACT-DOCK-V1:START */
+/* BANHALMI-CONTACT-DOCK-V2:START */
 (function () {
   "use strict";
   if (!document.querySelector("main") || document.querySelector(".banhalmi-contact-dock")) return;
 
-  var root = document.documentElement;
+  var root = document.documentElement;\n  var ua = String(navigator.userAgent || "");\n  var vendor = String(navigator.vendor || "");\n  var desktopSafari = /Safari\\//.test(ua) && /Apple Computer/.test(vendor) && !/(Chrome|Chromium|CriOS|Edg|OPR|FxiOS)/.test(ua);\n  if (desktopSafari) root.classList.add("banhalmi-desktop-safari");
   var lang = String(root.lang || "en").toLowerCase();
   var locale = lang.indexOf("hu") === 0 ? "hu" : (lang.indexOf("de") === 0 ? "de" : "en");
   var copy = {
@@ -1323,5 +1323,5 @@
   syncCookie();
   document.body.appendChild(wrap);
 })();
- /* BANHALMI-CONTACT-DOCK-V1:END */
+ /* BANHALMI-CONTACT-DOCK-V2:END */
 
