@@ -25,6 +25,14 @@ must(Number(footer.desktopColumns)===12&&Number(footer.smallDesktopColumns)===12
 must(Number(footer.desktopContentRows)===2&&Number(footer.smallDesktopContentRows)===2,'desktop and small-desktop footer must remain two rows');
 must(flow.layoutMode==='flex'&&flow.documentBackground==='#ffffff','document/footer flow contract drifted');
 must(Number(flow.footerAbsoluteMaxPx)<=760,'footer absolute height guard became too permissive');
+must(flow.safariDesktopScrollContainer==='body'&&flow.safariDesktopRootOverflow==='hidden','Safari desktop scroll containment contract missing');
+must(Number(flow.safariDesktopFooterTailMaxPx)<=2,'Safari desktop footer-tail guard became too permissive');
+must(authority.layout?.contactDock?.version==='V2'&&authority.layout?.contactDock?.runtimeAuthority==='assets/js/main.js','Contact Dock V2 authority drifted');
+must(main.includes('BANHALMI-CONTACT-DOCK-V2:START')&&main.includes('banhalmi-desktop-safari'),'canonical main runtime must own Contact Dock V2 and Safari root detection');
+must(site.includes('BANHALMI-CONTACT-DOCK-V2:START'),'canonical site CSS must own Contact Dock V2 styles');
+must(!legacyMain.includes('BANHALMI-CONTACT-DOCK-V1:START')&&!legacyMain.includes('BANHALMI-CONTACT-DOCK-V2:START'),'legacy js/main.js must not own any Contact Dock runtime');
+must(fluid.includes('SAFARI-DESKTOP-ROOT-SCROLL-CLOSURE-V46-20260927'),'Safari desktop footer root closure missing');
+
 
 must((fluid.match(/FOOTER-SINGLE-CANONICAL-V43-20260926/g)||[]).length===1,'canonical footer authority must occur exactly once');
 for(const stale of ['FOOTER-RESTORE-V24','VISUAL-REPAIR-V27','FOOTER-TWO-ROW-V29','FOOTER-GEOMETRY-V32','FOOTER-SINGLE-AUTHORITY-20260918','FOOTER-ROOT-CAUSE-FINAL-CLOSURE','FINAL-FOOTER-MEGA-AUTHORITY','FOOTER-RENDER-STABILITY','FOOTER-MENU-HARMONY-CLOSURE','FOOTER-THREE-LOCATION-V36','HU-TABLET-FOOTER-DENSITY-V38']){
