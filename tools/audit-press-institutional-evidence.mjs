@@ -31,6 +31,18 @@ requireContract(/does not mean official government photographer|does not mean of
 const feb=evidence.find(item=>item.id==='amcham-talks-february-2026');
 requireContract(feb?.officialCredit==='© banhalmi.at – (AmCham Austria Member)','Verified AmCham February credit drift');
 
+const newAmcham=evidence.find(item=>item.id==='flickr-amcham-reference-72177720335829969');
+requireContract(newAmcham?.flickrAlbum==='https://www.flickr.com/photos/vipach/albums/72177720335829969','New AmCham Flickr reference missing');
+requireContract(newAmcham?.evidenceStatus==='owner-confirmed-amcham-event-reference-public-metadata-pending','New AmCham Flickr verification boundary drift');
+requireContract(/do not infer/i.test(newAmcham?.guardrail||''),'New AmCham Flickr guardrail missing');
+
+for(const id of ['flickr-event-candidate-72177720335859544','flickr-event-candidate-72177720335803138']){
+  const item=evidence.find(entry=>entry.id===id);
+  requireContract(Boolean(item),`Flickr evidence candidate missing: ${id}`);
+  requireContract(item.evidenceStatus==='owner-supplied-url-public-metadata-pending',`Flickr candidate verification boundary drift: ${id}`);
+  requireContract(/do not assign/i.test(item.guardrail||''),`Flickr candidate relationship guardrail missing: ${id}`);
+}
+
 requireContract(team?.pressInstitutionalEvidence===ID,'Team contract must link press/institutional evidence');
 requireContract(team?.serviceLinks?.pressInstitutionalEvidence===ID,'Team serviceLinks must expose press/institutional evidence');
 requireContract(JSON.stringify(team).includes('Bécsi Napló'),'Team answer contract lost Bécsi Napló evidence');
