@@ -2182,3 +2182,58 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
 
 /* MOBILE-QUOTE-FOOTER-FLOW-V44-20260926 */
 @media (max-width:900px){html body:has([data-smart-quote]){padding-bottom:0!important}html body main:has([data-smart-quote]){padding-bottom:112px!important}html body:has([data-smart-quote]) .site-footer{position:relative!important;z-index:91!important}}
+
+
+/* FOOTER-SAFARI-CLOSURE-V46-20260927
+   Desktop second-row groups share one physical top edge and heading box.
+   This is intentionally global: homepage, Portrait, Brand, Event and every
+   EN/HU/DE route use the same footer geometry. */
+@media (min-width:1180px){
+  html body .site-footer .footer-grid>div:has(.footer-contact-list),
+  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer],
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    border-top:1px solid rgba(255,255,255,.12)!important;
+    padding-top:0!important;
+    align-self:start!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-contact-list)>.footer-heading,
+  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer]>summary,
+  html body .site-footer .footer-grid>div:has(.footer-legal-list)>.footer-heading{
+    display:flex!important;
+    align-items:center!important;
+    min-height:44px!important;
+    margin:0 0 8px!important;
+    padding:0!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-contact-list)>.footer-contact-list{
+    border-top:0!important;
+  }
+  html body{padding-bottom:0!important;margin-bottom:0!important;}
+  html body>.site-footer{margin-bottom:0!important;}
+}
+@media (max-width:720px){
+  html body>.banhalmi-contact-dock{
+    position:fixed!important;
+    right:max(16px,env(safe-area-inset-right))!important;
+    bottom:max(16px,env(safe-area-inset-bottom))!important;
+    left:auto!important;
+    z-index:2147483000!important;
+  }
+  html body>.banhalmi-contact-dock .banhalmi-contact-panel{
+    position:fixed!important;
+    left:16px!important;
+    right:16px!important;
+    bottom:calc(max(16px,env(safe-area-inset-bottom)) + 64px)!important;
+    width:auto!important;
+    max-width:none!important;
+    max-height:min(66dvh,620px)!important;
+    padding:18px!important;
+    border-radius:22px!important;
+    overflow:auto!important;
+    overscroll-behavior:contain!important;
+  }
+  html body>.banhalmi-contact-dock .banhalmi-contact-trigger{
+    min-width:104px!important;
+    min-height:48px!important;
+  }
+}
