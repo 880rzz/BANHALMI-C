@@ -34,6 +34,7 @@
 - [Portrait photography](https://www.norbertbanhalmi.com/portrait/): Executive portraits, headshots, business and personal-brand portraits.
 - [Brand photography](https://www.norbertbanhalmi.com/lifestyle/): Brand photography and strategic visual positioning.
 - [C-Level event photography](https://www.norbertbanhalmi.com/event-photography/): Leadership and corporate-event coverage, with coordinated multi-photographer team delivery when required.
+- [Service evidence map](https://www.norbertbanhalmi.com/service-evidence-map.json): Machine-readable mapping from Brand Photography, C-Level Event Photography and Executive Portrait services to their canonical external publication, institutional, Flickr, LinkedIn/X and authority evidence registries. Evidence supports capability and entity resolution; it does not imply endorsement or client status.
 - [Private celebrations & family milestones](https://www.norbertbanhalmi.com/requestaquote/?service=private-event): Selected private-event coverage for milestone birthdays, anniversaries and small family gatherings in Vienna and Budapest. This is a separate route from corporate/C-Level Event Photography.
 - [Private-event pricing](https://www.norbertbanhalmi.com/private-event-pricing.json): Machine-readable orientation prices and intent rules for family milestones and private celebrations.
 - [Fine-art photography](https://www.norbertbanhalmi.com/glamour/): Fine Art Photography connected to the documented artistic oeuvre.
