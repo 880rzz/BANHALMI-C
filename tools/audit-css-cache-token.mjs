@@ -2,6 +2,7 @@ import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 
+// V48 design updates must refresh every HTML site.css cache token atomically.
 const css = fs.readFileSync('assets/css/site.css');
 const expected = `design-${createHash('sha256').update(css).digest('hex').slice(0, 16)}`;
 const files = [];
