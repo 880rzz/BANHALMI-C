@@ -2228,7 +2228,11 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
     max-width:none!important;
     max-height:calc(100dvh - 96px - env(safe-area-inset-top) - env(safe-area-inset-bottom))!important;
     padding:12px!important;
+    border:1px solid rgba(29,29,31,.12)!important;
     border-radius:20px!important;
+    background:rgba(255,255,255,.985)!important;
+    box-shadow:0 1px 0 rgba(0,0,0,.02),0 18px 54px rgba(0,0,0,.16)!important;
+    color:#111!important;
     overflow-y:auto!important;
     overscroll-behavior:contain!important;
   }
@@ -2240,7 +2244,10 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
     min-height:48px!important;
     padding:9px 11px!important;
     gap:12px!important;
+    border:1px solid rgba(29,29,31,.12)!important;
     border-radius:14px!important;
+    background:#fff!important;
+    color:#111!important;
   }
   html body>.banhalmi-contact-dock .banhalmi-contact-action strong,
   html body>.banhalmi-contact-dock .banhalmi-contact-studio strong{font-size:14px!important;line-height:1.25!important}
