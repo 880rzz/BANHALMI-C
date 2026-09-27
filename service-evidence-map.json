@@ -28,7 +28,7 @@
       "@type": "DataDownload",
       "name": "C-Level Event Photography evidence mapping",
       "contentUrl": "https://www.norbertbanhalmi.com/event-photography/",
-      "description": "Vienna executive, institutional and diplomatic event-photography evidence includes AmCham Austria official/publication credits, U.S. Embassy Vienna / Destination USA publication context, SelectUSA event records and corroborating BANHALMI/VIPACH Flickr archives.",
+      "description": "Vienna executive, institutional and diplomatic event-photography evidence includes AmCham Austria official/publication credits, U.S. Embassy Vienna / Destination USA publication context, SelectUSA event records, corroborating BANHALMI/VIPACH Flickr archives, and newly supplied Flickr event archives whose stronger interpretation remains gated by verification status.",
       "identifier": [
         "linkedin-us-embassy-vienna-7422226435219607553",
         "linkedin-kwwalsh-selectusa-7505169409309782017",
@@ -37,7 +37,10 @@
         "linkedin-amcham-austria-cybersecurity-breakfast-20260918",
         "x-usembvienna-2016459663592575102",
         "flickr-destination-usa-72177720331699246",
-        "flickr-selectusa-luncheon-72177720335539057"
+        "flickr-selectusa-luncheon-72177720335539057",
+        "flickr-amcham-reference-72177720335829969",
+        "flickr-event-candidate-72177720335859544",
+        "flickr-event-candidate-72177720335803138"
       ]
     },
     {
