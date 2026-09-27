@@ -1598,6 +1598,52 @@ html body .site-footer{
 html{background:#fff!important;}
 html body{background:#fff!important;}
 
+/* SAFARI-DESKTOP-ROOT-SCROLL-CLOSURE-V46-20260927
+   Safari can expose the root canvas below an otherwise gap-free footer.
+   Keep the root fixed and make body the desktop scroll container only in
+   genuine Safari; Chromium/Firefox retain the canonical document flow. */
+@media (min-width:1180px){
+  html.banhalmi-desktop-safari{
+    height:100%!important;
+    min-height:100%!important;
+    overflow:hidden!important;
+    background:#fff!important;
+  }
+  html.banhalmi-desktop-safari body{
+    height:100%!important;
+    min-height:100%!important;
+    overflow-y:auto!important;
+    overflow-x:clip!important;
+    overscroll-behavior-y:none!important;
+    -webkit-overflow-scrolling:auto!important;
+    background:#fff!important;
+  }
+
+  html body .site-footer :is(
+    .footer-grid>div:has(.footer-contact-list)>.footer-heading,
+    details.footer-accordion[data-memberships-footer]>summary,
+    .footer-grid>div:has(.footer-legal-list)>.footer-heading
+  ){
+    display:block!important;
+    min-height:0!important;
+    min-block-size:0!important;
+    height:auto!important;
+    padding:0!important;
+    margin:0 0 13px!important;
+    line-height:1.2!important;
+    align-items:initial!important;
+  }
+  html body .site-footer details.footer-accordion[data-memberships-footer]>summary{
+    pointer-events:none!important;
+    cursor:default!important;
+  }
+  html body .site-footer .footer-grid>div:has(.footer-contact-list),
+  html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer],
+  html body .site-footer .footer-grid>div:has(.footer-legal-list){
+    align-self:start!important;
+  }
+}
+
 /* FOOTER-SINGLE-CANONICAL-V43-20260926
    Sole responsive footer geometry authority.
    One footer composition for every EN / HU / DE route.
