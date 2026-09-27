@@ -2214,24 +2214,40 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
 @media (max-width:720px){
   html body>.banhalmi-contact-dock{
     position:fixed!important;
-    right:max(16px,env(safe-area-inset-right))!important;
-    bottom:max(16px,env(safe-area-inset-bottom))!important;
+    right:max(12px,env(safe-area-inset-right))!important;
+    bottom:max(12px,env(safe-area-inset-bottom))!important;
     left:auto!important;
     z-index:2147483000!important;
   }
   html body>.banhalmi-contact-dock .banhalmi-contact-panel{
     position:fixed!important;
-    left:16px!important;
-    right:16px!important;
-    bottom:calc(max(16px,env(safe-area-inset-bottom)) + 64px)!important;
+    left:12px!important;
+    right:12px!important;
+    bottom:calc(max(12px,env(safe-area-inset-bottom)) + 60px)!important;
     width:auto!important;
     max-width:none!important;
-    max-height:min(66dvh,620px)!important;
-    padding:18px!important;
-    border-radius:22px!important;
-    overflow:auto!important;
+    max-height:calc(100dvh - 96px - env(safe-area-inset-top) - env(safe-area-inset-bottom))!important;
+    padding:12px!important;
+    border-radius:20px!important;
+    overflow-y:auto!important;
     overscroll-behavior:contain!important;
   }
+  html body>.banhalmi-contact-dock .banhalmi-contact-head{margin-bottom:8px!important}
+  html body>.banhalmi-contact-dock .banhalmi-contact-head strong{font-size:18px!important;line-height:1.15!important}
+  html body>.banhalmi-contact-dock .banhalmi-contact-list{gap:6px!important}
+  html body>.banhalmi-contact-dock .banhalmi-contact-action,
+  html body>.banhalmi-contact-dock .banhalmi-contact-studio{
+    min-height:48px!important;
+    padding:9px 11px!important;
+    gap:12px!important;
+    border-radius:14px!important;
+  }
+  html body>.banhalmi-contact-dock .banhalmi-contact-action strong,
+  html body>.banhalmi-contact-dock .banhalmi-contact-studio strong{font-size:14px!important;line-height:1.25!important}
+  html body>.banhalmi-contact-dock .banhalmi-contact-action span,
+  html body>.banhalmi-contact-dock .banhalmi-contact-studio span{font-size:12px!important;line-height:1.3!important}
+  html body>.banhalmi-contact-dock .banhalmi-contact-sep{margin:10px 0 8px!important}
+  html body>.banhalmi-contact-dock .banhalmi-contact-label{margin:0 0 6px!important}
   html body>.banhalmi-contact-dock .banhalmi-contact-trigger{
     min-width:104px!important;
     min-height:48px!important;
