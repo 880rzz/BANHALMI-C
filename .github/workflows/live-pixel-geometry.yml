@@ -30,7 +30,7 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install --with-deps chromium webkit
       - name: Verify source authority contracts
         run: |
           set -euo pipefail
@@ -69,6 +69,10 @@ jobs:
           AUDIT_SITE_DIR: _site
           AUDIT_PATHS: "/,/portrait/,/lifestyle/,/hu/,/hu/portre/,/hu/brand/,/de-at/,/de-at/portrait/,/de-at/brand/"
         run: node tools/audit-browser-layout.mjs
+      - name: Run Safari/WebKit footer and Contact regression
+        env:
+          AUDIT_BASE_URL: http://127.0.0.1:4173
+        run: node tools/audit-webkit-footer-contact.mjs
       - name: Upload visual evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -77,5 +81,6 @@ jobs:
           path: |
             artifacts/live-pixel-geometry/
             artifacts/browser-layout/
+            artifacts/webkit-footer-contact/
           if-no-files-found: warn
           retention-days: 14
