@@ -141,7 +141,10 @@
       "footerMaxViewportFractionOnTabletDesktop": 0.82,
       "footerAbsoluteMaxPx": 760,
       "rootOverscrollBackground": "#ffffff",
-      "rootOverscrollMatchesFooter": false
+      "rootOverscrollMatchesFooter": false,
+      "safariDesktopScrollContainer": "body",
+      "safariDesktopRootOverflow": "hidden",
+      "safariDesktopFooterTailMaxPx": 2
     },
     "quote": {
       "categoryCardHeight": "intrinsic",
@@ -151,6 +154,14 @@
     "sectionSpacing": {
       "cardGapMinPx": 20,
       "cardGapMaxPx": 28
+    },
+    "contactDock": {
+      "version": "V2",
+      "runtimeAuthority": "assets/js/main.js",
+      "styleAuthority": "assets/css/site.css",
+      "legacyRuntimeDisabled": "js/main.js",
+      "mobileTriggerRemainsVisibleWhenOpen": true,
+      "mobilePanelPlacement": "above-trigger"
     }
   },
   "responsive": {
