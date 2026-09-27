@@ -22,6 +22,12 @@ must(Number(authority.layout?.documentFlow?.footerMaxViewportFractionOnTabletDes
 must(Number(authority.layout?.documentFlow?.footerAbsoluteMaxPx)<=760,'BANHALMI desktop footer absolute maximum became too permissive');
 must(authority.layout?.documentFlow?.layoutMode==='flex','BANHALMI document flow must preserve the canonical flex document model');
 must(authority.layout?.documentFlow?.documentBackground==='#ffffff','BANHALMI body/content document background must remain white');
+must(authority.layout?.documentFlow?.safariDesktopScrollContainer==='body'&&authority.layout?.documentFlow?.safariDesktopRootOverflow==='hidden','Safari desktop scroll ownership must remain on body with root overflow hidden');
+must(authority.layout?.contactDock?.version==='V2','Contact Dock V2 contract regressed');
+must(mainRuntime.includes('BANHALMI-CONTACT-DOCK-V2:START'),'canonical Contact Dock V2 runtime missing');
+must(site.includes('BANHALMI-CONTACT-DOCK-V2:START'),'canonical Contact Dock V2 CSS missing');
+must(!legacyRuntime.includes('BANHALMI-CONTACT-DOCK-V1:START')&&!legacyRuntime.includes('BANHALMI-CONTACT-DOCK-V2:START'),'legacy Contact Dock runtime returned');
+must(fluid.includes('SAFARI-DESKTOP-ROOT-SCROLL-CLOSURE-V46-20260927'),'Safari desktop root-scroll closure missing');
 must(authority.layout?.documentFlow?.rootOverscrollBackground==='#ffffff'&&authority.layout?.documentFlow?.rootOverscrollMatchesFooter===false,'Safari root overscroll floor must stay white so the footer surface ends with the footer');
 must(fluid.includes('html{background:#fff!important;}')&&fluid.includes('html body{background:#fff!important;}'),'canonical footer authority must keep the document/root floor white');
 must(Number(authority.layout?.footer?.desktopColumns)===12,'BANHALMI desktop footer must use the approved 12-track grid');
