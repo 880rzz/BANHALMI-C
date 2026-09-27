@@ -93,7 +93,7 @@ jobs:
           # Semantic machine/evidence assertions are enforced by the source contract audits above.
           # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
       - name: Install Chromium audit runtime
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install --with-deps chromium webkit
       - name: Run exhaustive browser QA
         shell: bash
         run: |
@@ -126,6 +126,7 @@ jobs:
           echo "Static audit server ready; running all page audits."
           npm run test:e2e
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-browser-layout.mjs
+          AUDIT_BASE_URL=http://127.0.0.1:4173 node tools/audit-webkit-footer-contact.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-first-principles-layout.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-all-pages-design.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-apple-visual-quality.mjs
@@ -213,7 +214,7 @@ jobs:
       - name: Install live audit runtime
         run: |
           npm ci
-          npx playwright install --with-deps chromium
+          npx playwright install --with-deps chromium webkit
       - name: Verify critical production routes and HU Impresszum
         shell: bash
         run: |
@@ -230,6 +231,10 @@ jobs:
           LIVE_PIXEL_BASE_URL: https://www.norbertbanhalmi.com
           FOOTER_RELEASE_ONLY: '1'
         run: node tools/audit-live-pixel-geometry.mjs
+      - name: Run exact-live Safari/WebKit footer and Contact audit
+        env:
+          AUDIT_BASE_URL: https://www.norbertbanhalmi.com
+        run: node tools/audit-webkit-footer-contact.mjs
       - name: Run exact live mobile Lighthouse 100 gate
         run: |
           rm -rf artifacts/lighthouse-production-mobile
@@ -249,5 +254,6 @@ jobs:
             artifacts/live-pixel-geometry
             artifacts/lighthouse-production-mobile
             artifacts/lighthouse-production-desktop
+            artifacts/webkit-footer-contact
           if-no-files-found: error
           retention-days: 14
