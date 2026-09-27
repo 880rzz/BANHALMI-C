@@ -92,8 +92,8 @@ jobs:
           test -s _site/llm-canonical-overlay.json
           # Semantic machine/evidence assertions are enforced by the source contract audits above.
           # Artifact preparation verifies byte identity and required public files only; it must not duplicate stale copy contracts.
-      - name: Install Chromium audit runtime
-        run: npx playwright install --with-deps chromium
+      - name: Install Chromium and WebKit audit runtimes
+        run: npx playwright install --with-deps chromium webkit
       - name: Run exhaustive browser QA
         shell: bash
         run: |
@@ -131,6 +131,7 @@ jobs:
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-apple-visual-quality.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-expanded-state-responsive.mjs
           FOOTER_RELEASE_ONLY=1 LIVE_PIXEL_BASE_URL=http://127.0.0.1:4173 node tools/audit-live-pixel-geometry.mjs
+          AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-webkit-footer-tail.mjs
           kill $SERVER_PID || true
           trap - EXIT
       - name: Run mobile Lighthouse strict 100 gate
@@ -213,7 +214,7 @@ jobs:
       - name: Install live audit runtime
         run: |
           npm ci
-          npx playwright install --with-deps chromium
+          npx playwright install --with-deps chromium webkit
       - name: Verify critical production routes and HU Impresszum
         shell: bash
         run: |
@@ -230,6 +231,11 @@ jobs:
           LIVE_PIXEL_BASE_URL: https://www.norbertbanhalmi.com
           FOOTER_RELEASE_ONLY: '1'
         run: node tools/audit-live-pixel-geometry.mjs
+      - name: Run exact-live Safari/WebKit footer-tail audit
+        env:
+          AUDIT_BASE_URL: https://www.norbertbanhalmi.com
+          AUDIT_SITE_DIR: .
+        run: node tools/audit-webkit-footer-tail.mjs
       - name: Run exact live mobile Lighthouse 100 gate
         run: |
           rm -rf artifacts/lighthouse-production-mobile
