@@ -2848,9 +2848,9 @@
     },
     {
       "id": "szamalk-photography-internship-mentorship",
-      "title": "SZÁMALK-Szalézi photography student professional internship testimony",
+      "title": "Hogyan leszek fotós?",
       "publisher": "SZÁMALK-Szalézi Technikum és Szakgimnázium",
-      "url": "https://www.szamalk-szalezi.hu/",
+      "url": "https://www.szamalk-szalezi.hu/hogyan-leszek-fotos/",
       "evidenceKind": "educational institution student testimony / professional internship evidence",
       "verificationStatus": "LIVE-VERIFIED",
       "evidenceType": [
@@ -2869,10 +2869,14 @@
       "serviceRelevance": [
         "generalAuthority"
       ],
-      "context": "On the school's current site, photography student Darida Andrea states that she completed her summer professional internship with professional photographer Bánhalmi Norbert and received useful practical advice from him.",
-      "evidenceSummary": "External educational-institution evidence for professional photography mentorship and practical training activity.",
+      "context": "On the SZÁMALK-Szalézi school's published student story, photography student Darida Andrea states that she completed her summer professional internship with professional photographer Bánhalmi Norbert, who recommended Luminar 2018 and gave her practical advice on post-production and photography. The school thanks Bánhalmi for his help, and the student describes progressing to organizing her own exhibition by the end of the internship.",
+      "evidenceSummary": "Educational-institution publication documenting a professional photography internship, practical mentoring and the student's progression toward an exhibition.",
       "sourceStrength": "medium-high",
-      "guardrail": "Use as mentorship/internship authority only. This is a student testimonial hosted by the educational institution, not an employment relationship with the school, formal faculty appointment, endorsement of commercial services or evidence of current teaching status."
+      "guardrail": "Use as mentorship/internship authority only. This is a student testimonial hosted by the educational institution, not an employment relationship with the school, formal faculty appointment, endorsement of commercial services or evidence of current teaching status.",
+      "datePublished": "2018",
+      "corroboratingUrls": [
+        "https://www.szamalk-szalezi.hu/nyari-promo/"
+      ]
     },
     {
       "id": "stihon-horizont-photography-community-2026",
