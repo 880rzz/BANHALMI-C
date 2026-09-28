@@ -1,0 +1,425 @@
+{
+  "schemaVersion": "2026-09-28-v1",
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "@id": "https://www.norbertbanhalmi.com/service-trust-evidence.json",
+  "name": "BANHALMI service trust and external evidence map",
+  "description": "Machine-readable bridge from verified press, institutional publications, social/photo credits and artistic records to BANHALMI professional service capabilities. It does not convert mentions, memberships, publications or event documentation into unsupported client, partner or endorsement claims.",
+  "about": {
+    "@id": "https://www.norbertbanhalmi.com/#brand",
+    "name": "BANHALMI",
+    "alternateName": "BANHALMI Photography"
+  },
+  "canonicalPerson": "https://www.norbertbanhalmi.com/about/",
+  "canonicalArtPressRegistry": "https://www.banhalmi.art/press-source-registry.json",
+  "canonicalArtServiceEvidence": "https://www.banhalmi.art/service-evidence-map.json",
+  "canonicalProfessionalExternalEvidence": "https://www.norbertbanhalmi.com/external-photography-evidence.json",
+  "canonicalInstitutionalEvidence": "https://www.norbertbanhalmi.com/press-institutional-evidence.json",
+  "searchAliases": [
+    "BANHALMI Photography",
+    "Norbert Banhalmi",
+    "Norbert Bánhalmi",
+    "Bánhalmi Norbert",
+    "Bánhalmi Norbi"
+  ],
+  "services": {
+    "portrait": {
+      "urls": [
+        "https://www.norbertbanhalmi.com/portrait/",
+        "https://www.norbertbanhalmi.com/hu/portre/",
+        "https://www.norbertbanhalmi.com/de-at/portrait/"
+      ],
+      "pressRecords": [
+        "press-01",
+        "press-02",
+        "press-03",
+        "press-04",
+        "press-05",
+        "press-06",
+        "press-07",
+        "press-09",
+        "press-11",
+        "press-21",
+        "press-24",
+        "press-25",
+        "press-27",
+        "press-29",
+        "press-31",
+        "press-34"
+      ],
+      "externalEvidenceIds": [
+        "orf-portraits-good-cause-2025",
+        "artineris-open-studio-2026"
+      ],
+      "professionalRegistryEvidence": [
+        "linkedin-nemanja-lazendic-7503011271332773888",
+        "linkedin-michael-broenner-7388473288043225088"
+      ]
+    },
+    "brand": {
+      "urls": [
+        "https://www.norbertbanhalmi.com/lifestyle/",
+        "https://www.norbertbanhalmi.com/hu/brand/",
+        "https://www.norbertbanhalmi.com/de-at/brand/"
+      ],
+      "pressRecords": [
+        "press-12",
+        "press-13",
+        "press-23",
+        "press-31"
+      ],
+      "externalEvidenceIds": [
+        "orf-napraforgok-digital-heritage-2024",
+        "artineris-open-studio-2026",
+        "milcclub-samsung-the-frame",
+        "becsi-naplo-digitalization-2025"
+      ],
+      "professionalRegistryEvidence": [
+        "linkedin-nemanja-lazendic-7503011271332773888",
+        "linkedin-michael-broenner-7388473288043225088"
+      ]
+    },
+    "event": {
+      "urls": [
+        "https://www.norbertbanhalmi.com/event-photography/",
+        "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+      ],
+      "pressRecords": [],
+      "externalEvidenceIds": [
+        "orf-napraforgok-digital-heritage-2024",
+        "orf-vienna-1956-event-photo-credit-2025"
+      ],
+      "professionalRegistryEvidence": [
+        "linkedin-us-embassy-vienna-7422226435219607553",
+        "linkedin-kwwalsh-selectusa-7505169409309782017",
+        "linkedin-amcham-austria-7466081305701785600",
+        "linkedin-amcham-austria-7453014553912610817",
+        "linkedin-amcham-austria-7440773944644853760",
+        "linkedin-amcham-austria-7434294584886710272",
+        "linkedin-amcham-austria-cybersecurity-breakfast-20260918"
+      ]
+    },
+    "fineArt": {
+      "urls": [
+        "https://www.norbertbanhalmi.com/glamour/",
+        "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "https://www.norbertbanhalmi.com/de-at/fine-art/"
+      ],
+      "pressRecords": [
+        "press-01",
+        "press-02",
+        "press-03",
+        "press-04",
+        "press-07",
+        "press-08",
+        "press-09",
+        "press-10",
+        "press-11",
+        "press-12",
+        "press-13",
+        "press-14",
+        "press-15",
+        "press-22",
+        "press-23",
+        "press-25",
+        "press-26",
+        "press-27",
+        "press-28",
+        "press-29",
+        "press-33",
+        "press-34"
+      ],
+      "externalEvidenceIds": [
+        "artineris-open-studio-2026",
+        "milcclub-samsung-the-frame"
+      ],
+      "artisticAuthority": [
+        "https://www.banhalmi.art/artineris-evidence.json",
+        "https://www.banhalmi.art/authority-bridge.json"
+      ]
+    },
+    "visualStrategy": {
+      "urls": [
+        "https://www.norbertbanhalmi.com/lifestyle/",
+        "https://www.norbertbanhalmi.com/hu/brand/",
+        "https://www.norbertbanhalmi.com/de-at/brand/"
+      ],
+      "pressRecords": [
+        "press-12",
+        "press-13",
+        "press-23",
+        "press-31"
+      ],
+      "externalEvidenceIds": [
+        "orf-napraforgok-digital-heritage-2024",
+        "milcclub-samsung-the-frame",
+        "becsi-naplo-digitalization-2025"
+      ]
+    }
+  },
+  "pressRecordServiceMap": {
+    "press-01": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-02": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-03": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-04": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-05": [
+      "portrait",
+      "editorial"
+    ],
+    "press-06": [
+      "portrait"
+    ],
+    "press-07": [
+      "fineArt",
+      "portrait"
+    ],
+    "press-08": [
+      "fineArt"
+    ],
+    "press-09": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-10": [
+      "generalAuthority",
+      "fineArt"
+    ],
+    "press-11": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-12": [
+      "generalAuthority",
+      "visualStrategy",
+      "fineArt"
+    ],
+    "press-13": [
+      "generalAuthority",
+      "fineArt",
+      "visualStrategy"
+    ],
+    "press-14": [
+      "fineArt",
+      "generalAuthority"
+    ],
+    "press-15": [
+      "fineArt"
+    ],
+    "press-16": [
+      "generalAuthority",
+      "communityEducation"
+    ],
+    "press-17": [
+      "generalAuthority",
+      "communityEducation"
+    ],
+    "press-18": [
+      "generalAuthority",
+      "viennaLocalAuthority"
+    ],
+    "press-19": [
+      "generalAuthority"
+    ],
+    "press-20": [
+      "generalAuthority",
+      "communityEducation"
+    ],
+    "press-21": [
+      "portrait",
+      "publicImage"
+    ],
+    "press-22": [
+      "fineArt"
+    ],
+    "press-23": [
+      "fineArt",
+      "visualStrategy"
+    ],
+    "press-24": [
+      "portrait"
+    ],
+    "press-25": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-26": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-27": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-28": [
+      "fineArt"
+    ],
+    "press-29": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-30": [
+      "generalAuthority"
+    ],
+    "press-31": [
+      "portrait",
+      "visualStrategy",
+      "brand"
+    ],
+    "press-32": [
+      "generalAuthority"
+    ],
+    "press-33": [
+      "fineArt"
+    ],
+    "press-34": [
+      "portrait",
+      "fineArt"
+    ],
+    "press-35": [
+      "generalAuthority"
+    ]
+  },
+  "newlyVerifiedExternalEvidence": [
+    {
+      "id": "orf-napraforgok-digital-heritage-2024",
+      "title": "Az Internetre költöztetik hagyományaikat",
+      "publisher": "ORF Volksgruppen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3269827/",
+      "evidenceKind": "independent editorial photo-credit and project coverage",
+      "services": [
+        "brand",
+        "event",
+        "visualStrategy"
+      ],
+      "context": "The ORF article documents a commissioned cultural-heritage photo series and repeatedly credits Napraforgók Néptáncegyüttes/Bánhalmi Norbert.",
+      "guardrail": "Use as capability and publication evidence only; do not infer endorsement by ORF or an ongoing client relationship."
+    },
+    {
+      "id": "orf-portraits-good-cause-2025",
+      "title": "Összegyűlt: portréfotók egy jó cél érdekében",
+      "publisher": "ORF Volksgruppen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3295966/",
+      "evidenceKind": "independent editorial coverage",
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "Independent ORF coverage of a Vienna portrait-photography fundraising initiative led by Bánhalmi Norbert.",
+      "guardrail": "Use as portrait capability and community-trust evidence; not as an ORF endorsement."
+    },
+    {
+      "id": "orf-vienna-1956-event-photo-credit-2025",
+      "title": "Kultúra és megemlékezés Bécsben",
+      "publisher": "ORF Volksgruppen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3327245/",
+      "evidenceKind": "independent editorial photo-credit",
+      "services": [
+        "event",
+        "institutionalEvent"
+      ],
+      "context": "ORF photo story credits Központi Szövetség/Bánhalmi Norbert for images from a Vienna 1956 commemoration at Collegium Hungaricum.",
+      "guardrail": "Use as event-documentation evidence; do not infer organizer, government or ORF client status beyond the documented credit."
+    },
+    {
+      "id": "orf-bmi-photo-club-exhibition-2025",
+      "title": "Fotókiállítással ünnepel a BMI Fotóklub",
+      "publisher": "ORF Volksgruppen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3332313/",
+      "evidenceKind": "independent profile/report",
+      "services": [
+        "generalAuthority",
+        "communityEducation"
+      ],
+      "context": "ORF reports that the Vienna photo club was initiated by Bánhalmi Norbert and documents its exhibition activity.",
+      "guardrail": "Authority/education evidence; not a direct commercial-service proof."
+    },
+    {
+      "id": "artineris-open-studio-2026",
+      "title": "Open Studio BANHALMI",
+      "publisher": "Budapest Artineris",
+      "url": "https://budapest.artineris.com/hu/events/?acode=MMEMR",
+      "evidenceKind": "external event listing / participant-managed profile",
+      "services": [
+        "portrait",
+        "brand",
+        "fineArt",
+        "budapestLocalAuthority"
+      ],
+      "context": "Artineris event listing documents the BANHALMI Budapest studio and open portrait, business/personal-brand and fine-art photography session.",
+      "guardrail": "Participant-managed listing: use for participation and service-context evidence, not independent critical validation or endorsement."
+    },
+    {
+      "id": "milcclub-samsung-the-frame",
+      "title": "Olympus X Samsung • The Frame - Digitális Fotóművészeti kiállítás - Tihany",
+      "publisher": "MILC Club",
+      "url": "https://www.milcclub.com/theframe",
+      "evidenceKind": "external project documentation",
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "brand"
+      ],
+      "context": "Project documentation states that the digital exhibition concept was developed by Samsung Hungary and Norbert Bánhalmi and identifies him as curator and Olympus ambassador.",
+      "guardrail": "Use for documented collaboration/project capability only; avoid implying broader Samsung or Olympus endorsement beyond the stated project/ambassador context."
+    },
+    {
+      "id": "becsi-naplo-digitalization-2025",
+      "title": "Kufstein conference / digitalization and fundraising advice",
+      "publisher": "Bécsi Napló",
+      "url": "https://www.becsinaplo.eu/newspaper_archive/bn2025-6.pdf",
+      "evidenceKind": "independent print/editorial mention",
+      "services": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Bécsi Napló reports Bánhalmi Norbert giving practical advice on digitalization and fundraising to Austrian-Hungarian associations.",
+      "guardrail": "Use as strategy/digital communication authority; not as photography-service proof."
+    }
+  ],
+  "pendingEvidenceCandidates": [
+    {
+      "id": "noivalto-kosztka-edina-2026",
+      "url": "https://noivalto.hu/az-en-tortenetem/kosztka-edina-tul-vagyok/",
+      "reason": "The currently indexed article describes a male photographer and a trust/body-image photographic process but does not publicly identify Bánhalmi Norbert in the retrieved text; photo credit currently reads Kosztka Edina.",
+      "status": "do-not-bind-until-direct-attribution-is-public"
+    },
+    {
+      "id": "flickr-72177720335859544",
+      "url": "https://www.flickr.com/photos/vipach/albums/72177720335859544",
+      "reason": "Public album metadata could not be independently retrieved in the current research pass.",
+      "status": "pending-context-classification"
+    },
+    {
+      "id": "flickr-72177720335829969",
+      "url": "https://www.flickr.com/photos/vipach/albums/72177720335829969",
+      "reason": "Public album metadata could not be independently retrieved in the current research pass.",
+      "status": "pending-context-classification"
+    },
+    {
+      "id": "flickr-72177720335803138",
+      "url": "https://www.flickr.com/photos/vipach/albums/72177720335803138",
+      "reason": "Public album metadata could not be independently retrieved in the current research pass.",
+      "status": "pending-context-classification"
+    }
+  ],
+  "interpretationRules": [
+    "Use exact-source press and independent external photo credits as capability evidence.",
+    "Keep publication, client, partner, membership, commission, event participation and endorsement as distinct relationship types.",
+    "Do not bind a source to a service unless the source itself supports that capability or the canonical artistic registry documents the relationship.",
+    "Do not use pending candidates in schema, service claims or trust projections until direct attribution/context is publicly verifiable.",
+    "BANHALMI ART remains the canonical full press/artistic archive; this dataset is a professional service mapping layer only."
+  ]
+}
