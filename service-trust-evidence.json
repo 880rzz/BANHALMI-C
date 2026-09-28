@@ -544,6 +544,131 @@
       "context": "Origo publishes an image with source credit Bánhalmi Norbert in an editorial sports article.",
       "evidenceSummary": "Independent editorial image-use credit demonstrates external publication of Bánhalmi Norbert photography.",
       "guardrail": "Publication/photo-credit evidence only; no subject client or endorsement claim."
+    },
+    {
+      "id": "jazzy-dr-jazzy-2024",
+      "title": "Bánhalmi Norbert fotóművész",
+      "publisher": "90.9 Jazzy / Dr. Jazzy",
+      "url": "https://jazzy.hu/adasok/banhalmi-norbert-fotomuvesz",
+      "corroboratingUrls": [
+        "https://podiverzum.hu/podcast/90-9-jazzy-dr-jazzy/banhalmi-norbert-fotomuvesz-2684b15a"
+      ],
+      "evidenceKind": "radio interview / independent media appearance",
+      "classification": [
+        "independent interview",
+        "portrait/fine-art sensitivity",
+        "education"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "A 2024-09-21 Dr. Jazzy interview discusses Bánhalmi Norbert's youth photo/film-therapy education plans, work with breast-cancer survivors and the sensitivity of his photographic process.",
+      "evidenceSummary": "Independent radio/podcast appearance documenting photographic method, portrait sensitivity and artistic-social projects.",
+      "guardrail": "Interview/authority evidence only; do not treat therapeutic wording as a medical or clinical qualification."
+    },
+    {
+      "id": "tripont-rgb-portrait",
+      "title": "RGB fotózás az új trend?",
+      "publisher": "Tripont Foto Video",
+      "url": "https://www.tripont.hu/rgb-fotozas-az-uj-trend--b1051.html",
+      "evidenceKind": "external professional photography publication / subject account",
+      "classification": [
+        "professional photography publication",
+        "creative portrait",
+        "lighting expertise"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "brand"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "brand"
+      ],
+      "context": "Tripont publishes a first-person account of a creative RGB portrait session with Bánhalmi Norbert, describing the process and resulting images.",
+      "evidenceSummary": "External specialist-photography publication supports creative portrait, lighting and directed-session capability.",
+      "guardrail": "Use as professional capability/publication evidence; the subject's praise is testimonial context, not an institutional endorsement by Tripont."
+    },
+    {
+      "id": "milcclub-dancepartner-2020",
+      "title": "Amikor csak egy \"táncpartnered\" van egész estére",
+      "publisher": "Olympus MILC Club",
+      "url": "https://www.milcclub.com/post/amikor-csak-egy-t%C3%A1ncpartnered-van-eg%C3%A9sz-est%C3%A9re",
+      "evidenceKind": "signed professional technical article",
+      "classification": [
+        "professional publication",
+        "event photography technique",
+        "portrait/model photography"
+      ],
+      "services": [
+        "event",
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "event",
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "Signed Bánhalmi Norbert technical article discusses live-event shooting constraints and model/portrait work with Olympus equipment.",
+      "evidenceSummary": "Professional specialist publication demonstrates authored expertise in live-event and portrait photography.",
+      "guardrail": "Authored expertise evidence; not independent evaluation of service quality."
+    },
+    {
+      "id": "fotosviadal-speaker-2021",
+      "title": "Fotósviadal Hétvége 2021 — modellfotózás előadás",
+      "publisher": "Fotósviadal",
+      "url": "https://fotosviadal.hu/fotosviadal-hetvege-2021/",
+      "evidenceKind": "external event programme / speaker listing",
+      "classification": [
+        "industry education",
+        "model/portrait photography",
+        "speaker evidence"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "The official Fotósviadal programme lists Bánhalmi Norbert as the speaker for a model-photography lecture.",
+      "evidenceSummary": "Independent industry-event listing supports teaching/expertise in model and portrait photography.",
+      "guardrail": "Speaker/expertise evidence only; not a client or endorsement claim."
+    },
+    {
+      "id": "trustindex-google-reviews-2026",
+      "title": "Bánhalmi Norbert — aggregated Google reviews",
+      "publisher": "Trustindex",
+      "url": "https://www.trustindex.io/reviews/banhalmi.art",
+      "evidenceKind": "third-party review aggregation",
+      "classification": [
+        "customer review aggregation",
+        "service trust"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "Trustindex aggregates Google reviews for the Bánhalmi Norbert photography profile, including recent reviews describing CV portrait and professional portrait experiences.",
+      "evidenceSummary": "Third-party aggregation of customer reviews provides service-experience trust evidence; live counts/ratings are dynamic and must not be hard-coded without fresh readback.",
+      "guardrail": "Do not treat the aggregator as an editorial endorsement; individual reviews are customer testimony and totals are time-sensitive."
     }
   ],
   "pendingEvidenceCandidates": [
