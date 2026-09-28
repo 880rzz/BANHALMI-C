@@ -275,7 +275,8 @@
         "orf-bmi-fotoklub-leader-2025",
         "hungary-foundation-milestones56-newyork-2016",
         "google-alert-kiskegyed-magyar-peter-2026",
-        "veszpremkukac-digital-illusions-2023"
+        "veszpremkukac-digital-illusions-2023",
+        "stihon-horizont-photography-community-2026"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -341,7 +342,8 @@
         "rolunk-bmi-crowdfunding-visual-communication-2026",
         "orf-becsi-szelet-founder-2023",
         "orf-bmi-fotoklub-leader-2025",
-        "veszpremkukac-digital-illusions-2023"
+        "veszpremkukac-digital-illusions-2023",
+        "stihon-horizont-photography-community-2026"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -2799,6 +2801,43 @@
       "evidenceSummary": "External educational-institution evidence for professional photography mentorship and practical training activity.",
       "sourceStrength": "medium-high",
       "guardrail": "Use as mentorship/internship authority only. This is a student testimonial hosted by the educational institution, not an employment relationship with the school, formal faculty appointment, endorsement of commercial services or evidence of current teaching status."
+    },
+    {
+      "id": "stihon-horizont-photography-community-2026",
+      "title": "Amikor a fotográfia közösséget teremt",
+      "publisher": "Nyugat-európai Horizont / StiHon",
+      "url": "https://www.stihon.eu/wp-content/uploads/2026/01/Horizont.03.Web_.pdf",
+      "datePublished": "2026-01-29",
+      "evidenceKind": "independent diaspora-magazine profile / interview",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "photography community leadership",
+        "Vienna",
+        "VIPACH",
+        "photography education",
+        "digital heritage",
+        "AI-assisted cultural project",
+        "New York historical context"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "The third issue of Nyugat-európai Horizont, published by StiHon, carries a multi-page profile/interview with Bánhalmi Norbert. It documents the BMI Fotóklub/VIPACH community, exhibitions, photography education, the '56 a Jövő Szemével' digital heritage project and historical New York context.",
+      "evidenceSummary": "Independent cross-border Hungarian-community publication evidence for photography education, community-building, visual/digital project leadership and Vienna-based cultural activity.",
+      "sourceStrength": "medium-high",
+      "guardrail": "Use the publication as interview/profile and project evidence. Career history, rankings, qualifications, ambassador timelines and therapeutic/transgenerational interpretations stated in the article remain attributed claims unless separately corroborated. Do not convert them into medical, psychological or institutional endorsements."
     }
   ],
   "pendingEvidenceCandidates": [
