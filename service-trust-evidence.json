@@ -107,7 +107,8 @@
         "yt-awakening-reflection",
         "yt-world-of-woman-interview",
         "yt-complete-playlists",
-        "moka-podcast-106-2022"
+        "moka-podcast-106-2022",
+        "yt-pannon-fotosviadal-jury-profile-2021"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
@@ -306,7 +307,8 @@
         "yt-world-of-woman-interview",
         "yt-complete-playlists",
         "moka-podcast-106-2022",
-        "moka-podcast-309-2026"
+        "moka-podcast-309-2026",
+        "yt-pannon-fotosviadal-jury-profile-2021"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
@@ -366,7 +368,8 @@
         "yt-retouching-cover-ideals",
         "yt-complete-playlists",
         "moka-podcast-309-2026",
-        "yt-samsung-s22-ultra-training-series-2022"
+        "yt-samsung-s22-ultra-training-series-2022",
+        "yt-pannon-fotosviadal-jury-profile-2021"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76",
@@ -4201,6 +4204,29 @@
         "https://youtu.be/BhcItsyOi5c"
       ],
       "guardrail": "Do not treat first-party YouTube publication as independent editorial authority. Do not infer Samsung employment, ambassadorship or exclusivity. Use together with the private corporate provenance record `samsung-galaxy-s22-ultra-test-2022`; do not double-count the series and the relationship record as separate independent endorsements."
+    },
+    {
+      "id": "yt-pannon-fotosviadal-jury-profile-2021",
+      "title": "Bemutatkozik az V. Budapesti Fotósviadal zsűrije: Bánhalmi Norbert",
+      "publisher": "Pannon Fényképészkör Egyesület",
+      "url": "https://www.youtube.com/watch?v=r0pJ8t4PZ7k",
+      "datePublished": "2021-05-03",
+      "services": [
+        "portrait",
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "kind": "association jury-profile video / professional biography",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE",
+        "INTERVIEW",
+        "SECONDARY-MENTION"
+      ],
+      "sourceStrength": "medium-high",
+      "context": "The official Pannon Fényképészkör YouTube channel introduces Bánhalmi Norbert as a jury member for the V. Budapesti Fotósviadal and summarizes his artistic-nude, New York, Rege Galéria and Olympus professional background. The description also states that from January 2021 he was responsible for Olympus Hungary marketing and communication strategy.",
+      "guardrail": "Use the jury role as direct association evidence. Treat biographical, diploma, ambassador and Olympus marketing/communications statements as attributed association-profile claims and corroboration only unless independently confirmed by stronger sources. Do not infer employment, exclusivity or current Olympus/OM SYSTEM corporate responsibility from this video alone."
     }
   ],
   "historicalResearchCandidates": [
@@ -4455,7 +4481,8 @@
         "trip-magazin-76",
         "pannon-fenykepeszkor-honorary-member-profile-2026",
         "milcclub-om-system-ambassadors-current",
-        "milcclub-most-vagy-soha-organizer-2020"
+        "milcclub-most-vagy-soha-organizer-2020",
+        "yt-pannon-fotosviadal-jury-profile-2021"
       ],
       "guardrails": [
         "Preserve source-specific dates and organization names.",
