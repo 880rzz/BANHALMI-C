@@ -81,7 +81,8 @@
         "mandiner-milestones56-newyork-2024",
         "magyarjelen-magyar-peter-wikimedia-photo-credit-2026",
         "maszol-liptak-photo-reuse-2023",
-        "mandiner-milestones56-series-2016"
+        "mandiner-milestones56-series-2016",
+        "rolunk-profile-possible-is-just-a-word-2025"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -139,14 +140,16 @@
         "vehir-ai-illusions-2023",
         "art-to-go-olympus-starbucks-2021",
         "kreativ-young-lions-speier-mentor-2024",
-        "amcham-team-portrait-credit"
+        "amcham-team-portrait-credit",
+        "rolunk-profile-possible-is-just-a-word-2025"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
         "linkedin-michael-broenner-7388473288043225088"
       ],
       "relationshipEvidenceIds": [
-        "bridges-japan-times-olympus-ambassador-2021"
+        "bridges-japan-times-olympus-ambassador-2021",
+        "wko-vienna-professional-photography-current"
       ],
       "movingImageEvidenceIds": [
         "yt-m1-kunszt-portrait-psychology",
@@ -177,7 +180,9 @@
         "turizmus-wiener-kaiser-wiesn-credit-2026",
         "turizmusonline-wiener-kaiser-wiesn-credit-2026",
         "honvedelem-hososz-event-credit-2026",
-        "orf-fenymanok-event-photo-credit-2025"
+        "orf-fenymanok-event-photo-credit-2025",
+        "rolunk-profile-possible-is-just-a-word-2025",
+        "rolunk-bmi-crowdfunding-visual-communication-2026"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -255,14 +260,16 @@
         "milcclub-journey-to-earth-center-2020",
         "mandiner-milestones56-newyork-2024",
         "veol-rege-curation-koreny-2020",
-        "mandiner-milestones56-series-2016"
+        "mandiner-milestones56-series-2016",
+        "rolunk-bmi-fotoklub-vipach-2026"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
         "https://www.banhalmi.art/authority-bridge.json"
       ],
       "relationshipEvidenceIds": [
-        "bridges-japan-times-olympus-ambassador-2021"
+        "bridges-japan-times-olympus-ambassador-2021",
+        "mfvsz-membership-reference"
       ],
       "movingImageEvidenceIds": [
         "yt-echo-awakening",
@@ -313,10 +320,15 @@
         "linkedin-banhalmi-company-profile",
         "origo-gastro-photo-contest-2017",
         "orf-bmi-mentorprogram-2025",
-        "veol-rege-curation-koreny-2020"
+        "veol-rege-curation-koreny-2020",
+        "rolunk-profile-possible-is-just-a-word-2025",
+        "rolunk-bmi-fotoklub-vipach-2026",
+        "rolunk-digital-community-strategy-2026",
+        "rolunk-bmi-crowdfunding-visual-communication-2026"
       ],
       "relationshipEvidenceIds": [
-        "bridges-japan-times-olympus-ambassador-2021"
+        "bridges-japan-times-olympus-ambassador-2021",
+        "wko-vienna-professional-photography-current"
       ],
       "movingImageEvidenceIds": [
         "yt-petofi-digital-exhibition",
@@ -1943,6 +1955,146 @@
       "evidenceSummary": "A multi-article independent editorial series provides strong contemporaneous corroboration of the New York portrait/exhibition project, beyond later retrospectives.",
       "sourceStrength": "high",
       "guardrail": "Treat as historical New York portrait/exhibition and cultural-project evidence. Do not infer a current New York studio, an ongoing consular commission, or endorsement by the publisher/consulate beyond the documented project support."
+    },
+    {
+      "id": "rolunk-profile-possible-is-just-a-word-2025",
+      "title": "„A lehetetlen csupán egy szó”",
+      "publisher": "Rólunk.at",
+      "url": "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
+      "datePublished": "2025-01-20",
+      "evidenceKind": "independent long-form profile",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "Vienna authority",
+        "photography career",
+        "marketing and communications",
+        "community education",
+        "event and commercial photography history"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "event",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "brand",
+        "event",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Rólunk.at profiles Bánhalmi Norbert in Vienna as a photographer and the Central Association's marketing/communications staff member, and documents his role teaching creative photography at the Vienna Hungarian School while recounting earlier professional photography and event/commercial work.",
+      "evidenceSummary": "Independent Austrian-Hungarian editorial profile supporting Vienna-based photography, communication, education and broader professional-history authority.",
+      "sourceStrength": "high",
+      "guardrail": "Use documented roles and attributed career history as profile/interview evidence. Do not treat every autobiographical career detail as independently institutionally verified unless separately corroborated."
+    },
+    {
+      "id": "rolunk-bmi-fotoklub-vipach-2026",
+      "title": "Egyéves a BMI Fotóklub – hogyan teremt közösséget a művészet",
+      "publisher": "Rólunk.at",
+      "url": "https://rolunk.at/kultura/egyeves-a-bmi-fotoklub-hogyan-teremt-kozosseget-a-muveszet/",
+      "datePublished": "2026",
+      "evidenceKind": "independent editorial community/project coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "community photography education",
+        "VIPACH",
+        "Vienna",
+        "founder role",
+        "creative community"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Rólunk.at documents Bánhalmi Norbert as founder of the BMI Fotóklub, describes the community's exhibitions and education activity, and records the transition toward the Vienna Photo Art & Creative Hub / VIPACH identity.",
+      "evidenceSummary": "Independent coverage for Vienna-based photography-community leadership, education and creative-platform development.",
+      "sourceStrength": "high",
+      "guardrail": "Use as founder/community/project evidence. Do not infer independent endorsement of commercial BANHALMI services or ownership beyond the documented project role."
+    },
+    {
+      "id": "rolunk-digital-community-strategy-2026",
+      "title": "„A fiataloknak ma már bizonyíték kell” – egy bécsi kreatív közösség új generációt épít",
+      "publisher": "Rólunk.at",
+      "url": "https://rolunk.at/aktualis/a-fiataloknak-ma-mar-bizonyitek-kell-egy-becsi-kreativ-kozosseg-uj-generaciot-epit/",
+      "datePublished": "2026-06-10",
+      "evidenceKind": "independent editorial interview / digital strategy project coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "digital identity",
+        "AI/LLM visibility",
+        "community strategy",
+        "education",
+        "visual communication",
+        "Vienna"
+      ],
+      "services": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Rólunk.at identifies Bánhalmi Norbert as photographer and marketer and documents his work around digital identity, AI-assisted content/visibility, structured information, youth education and community digital infrastructure in Vienna.",
+      "evidenceSummary": "Independent editorial evidence for contemporary digital-identity and communication-strategy work beyond photography alone.",
+      "sourceStrength": "high",
+      "guardrail": "Use only for documented digital/visual communication, education and community-strategy authority. Do not project the article's broader social or political context into a political endorsement or campaign relationship."
+    },
+    {
+      "id": "rolunk-bmi-crowdfunding-visual-communication-2026",
+      "title": "„Sokan mondják, hogy a magyarok nem összetartóak, szeretném bebizonyítani, hogy ez nem így van”",
+      "publisher": "Rólunk.at",
+      "url": "https://rolunk.at/magazin/sokan-mondjak-hogy-a-magyarok-nem-osszetartoak-szeretnem-bebizonyitani-hogy-ez-nem-igy-van/",
+      "datePublished": "2026",
+      "evidenceKind": "independent editorial project coverage / photo credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PHOTO-CREDIT",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "crowdfunding communication",
+        "community campaign",
+        "photo credit",
+        "Vienna"
+      ],
+      "services": [
+        "visualStrategy",
+        "event",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "visualStrategy",
+        "event",
+        "generalAuthority"
+      ],
+      "context": "Rólunk.at documents Bánhalmi Norbert's marketing role in BMI crowdfunding initiatives and credits multiple campaign/event images to him.",
+      "evidenceSummary": "Independent evidence linking visual communication, community campaign strategy and event/editorial photography.",
+      "sourceStrength": "high",
+      "guardrail": "Use as documented project/marketing/photo-credit evidence only; do not infer fundraising ownership, institutional endorsement or commercial client status beyond the described BMI role."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -2339,6 +2491,43 @@
       ],
       "context": "The currently live MILC Club page titled 'Hivatalos magyarországi nagykövetek | OM System' lists Bánhalmi Norbert among the official Hungarian ambassadors and describes him as a photographer / VIPACH founder.",
       "guardrail": "Use as a current public ambassador listing, not as proof of employment, exclusivity, corporate office, contractual scope or endorsement of every BANHALMI service. Preserve the distinction between the current OM SYSTEM listing and historical Olympus/OM Digital Solutions evidence."
+    },
+    {
+      "id": "wko-vienna-professional-photography-current",
+      "title": "Norbert Banhalmi | WKO Firmen A-Z",
+      "publisher": "Wirtschaftskammer Österreich / WKO Firmen A-Z",
+      "url": "https://firmen.wko.at/norbert-banhalmi-visuelle-strategische-partnerschaft-f%C3%BCr-f%C3%BChrungskr%C3%A4fte/wien/?firmaid=12bd142c-5fcf-4457-9a90-47fbff162b40",
+      "relationshipType": "official Austrian business/professional registration",
+      "subjectOrganization": "Norbert Banhalmi e.U. / WKO Vienna",
+      "person": "Norbert Bánhalmi",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceStrength": "high",
+      "sourceQuality": "official Austrian chamber business directory",
+      "services": [
+        "portrait",
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "The current WKO Firmen A-Z profile documents Norbert Banhalmi's Austrian professional-photography registration, Vienna business presence and positioning around visual strategic partnership for executives.",
+      "guardrail": "Use as official business/professional registration evidence, not editorial endorsement or quality assessment. Treat self-authored descriptive profile copy separately from chamber-verified registration data."
+    },
+    {
+      "id": "mfvsz-membership-reference",
+      "title": "Magyar Fotóművészek Világszövetsége – Bánhalmi Norbert membership reference",
+      "publisher": "Magyar Fotóművészek Világszövetsége",
+      "url": "https://mfvsz.com/hu/tagsag/uj-tagok/825",
+      "relationshipType": "photographic-art association membership",
+      "person": "Norbert Bánhalmi",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "evidenceStrength": "medium-high",
+      "sourceQuality": "institutional membership reference",
+      "services": [
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "The exact MFVSZ membership URL is preserved in the ART master source database and is also used as the reference for the World Association of Hungarian Photographers membership statement in Wikidata.",
+      "guardrail": "Treat as membership evidence, not award or endorsement. Direct live page retrieval currently fails, so do not label LIVE-VERIFIED until the institutional page is directly readable again."
     }
   ],
   "movingImageEvidence": [
