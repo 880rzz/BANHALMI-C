@@ -5707,6 +5707,94 @@
         "Add explicit old-URL -> best-current-destination redirects ahead of the generic path-preserving fallback.",
         "Regression-test HTTP status, redirect chain, final canonical, hreflang and indexability."
       ]
+    },
+    "postMigrationUrlEvidence2017": {
+      "provenanceClass": "PRIVATE-MIGRATION-PROVENANCE",
+      "publicExposure": false,
+      "status": "URL-SET-VERIFIED-ON-NORBERTBANHALMI.COM_OLD-DOMAIN-PATH-PARITY-NOT-YET-PROVEN",
+      "context": "A contemporaneous February 2017 SEO migration worksheet verifies the following norbertbanhalmi.com URLs and target keyword intents immediately after the historical domain transition. This does not by itself prove that identical paths existed on banhalminorbert.hu, so old-domain redirect rules must not be created from path parity alone.",
+      "urls": [
+        {
+          "url": "https://www.norbertbanhalmi.com/",
+          "historicalIntent": [
+            "profi fotós"
+          ],
+          "currentBestDestination": "https://www.norbertbanhalmi.com/hu/",
+          "mappingStatus": "SEMANTIC-CURRENT-ROOT"
+        },
+        {
+          "url": "https://www.norbertbanhalmi.com/cvfotozas",
+          "historicalIntent": [
+            "önéletrajz fotózás",
+            "cv fotó készítése",
+            "cv fotózás",
+            "portré fotózás"
+          ],
+          "currentBestDestination": "https://www.norbertbanhalmi.com/hu/portre/",
+          "mappingStatus": "HIGH-CONFIDENCE-SEMANTIC-MAP"
+        },
+        {
+          "url": "https://www.norbertbanhalmi.com/portfoliofotozas",
+          "historicalIntent": [
+            "portfólió fotózás",
+            "portfólió készítés",
+            "műtermi fotózás",
+            "divat fotózás"
+          ],
+          "currentBestDestination": "https://www.norbertbanhalmi.com/hu/portre/",
+          "mappingStatus": "PARTIAL-SEMANTIC-MAP",
+          "guardrail": "Current portrait page covers professional portrait/headshot intent, but old model/fashion portfolio scope was broader. Do not claim exact service equivalence."
+        },
+        {
+          "url": "https://www.norbertbanhalmi.com/gyermekfotozas",
+          "historicalIntent": [
+            "családi fotózás",
+            "baba fotózás",
+            "gyermek fotózás"
+          ],
+          "currentBestDestination": null,
+          "mappingStatus": "NO-DIRECT-CURRENT-SERVICE-EQUIVALENT",
+          "guardrail": "Do not redirect to a current paid service page until service ownership/current offering is explicitly confirmed. Historical/archive destination may be preferable."
+        },
+        {
+          "url": "https://www.norbertbanhalmi.com/fotostanfolyam",
+          "historicalIntent": [
+            "fényképész",
+            "fotós tanfolyam",
+            "fotós képzés"
+          ],
+          "currentBestDestination": null,
+          "mappingStatus": "NO-DIRECT-CURRENT-SERVICE-EQUIVALENT",
+          "guardrail": "Education/training is not a current core Professional service in the canonical service set; consider historical/editorial destination only after exact legacy content recovery."
+        },
+        {
+          "url": "https://www.norbertbanhalmi.com/photogallery",
+          "historicalIntent": [
+            "kreatív fotózás",
+            "portfolio/gallery"
+          ],
+          "currentBestDestination": "https://www.norbertbanhalmi.com/hu/archivum/",
+          "mappingStatus": "MEDIUM-CONFIDENCE-HISTORICAL-MAP",
+          "guardrail": "Use archive only if recovered legacy content proves this was a broad historical gallery rather than a transactional service landing."
+        },
+        {
+          "url": "https://www.norbertbanhalmi.com/vendegkonyvem",
+          "historicalIntent": [
+            "vendégkönyv",
+            "legjobb fotós",
+            "reviews/testimonials"
+          ],
+          "currentBestDestination": "https://www.norbertbanhalmi.com/hu/bizalom/",
+          "mappingStatus": "HIGH-CONFIDENCE-FUNCTIONAL-MAP",
+          "guardrail": "Map functionally to current Trust Center only after verifying the legacy page was primarily reviews/testimonials."
+        }
+      ],
+      "requiredBeforeRedirectImplementation": [
+        "Prove exact historical banhalminorbert.hu path or backlink for each candidate.",
+        "Verify no conflicting current route or stronger ART/editorial destination.",
+        "Use explicit host+path redirect before generic path-preserving fallback.",
+        "Test final status, single-hop behavior, canonical, hreflang and indexability."
+      ]
     }
   },
   "historicalProfessionalUrlInventory": {
