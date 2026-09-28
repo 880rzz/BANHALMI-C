@@ -283,7 +283,8 @@
         "stihon-horizont-photography-community-2026",
         "fotoshow-artistic-nude-workshop-2019",
         "milcclub-most-vagy-soha-organizer-2020",
-        "veol-rege60-digital-exhibition-2021"
+        "veol-rege60-digital-exhibition-2021",
+        "veol-rege-digital-exhibition-2021"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -352,7 +353,8 @@
         "veszpremkukac-digital-illusions-2023",
         "stihon-horizont-photography-community-2026",
         "milcclub-most-vagy-soha-organizer-2020",
-        "veol-rege60-digital-exhibition-2021"
+        "veol-rege60-digital-exhibition-2021",
+        "veol-rege-digital-exhibition-2021"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -547,7 +549,10 @@
         "PROFESSIONAL-PUBLICATION"
       ],
       "sourceStrength": "high",
-      "evidenceSummary": "Independent ORF coverage documents a Vienna portrait-photography fundraising initiative led by Bánhalmi Norbert."
+      "evidenceSummary": "Independent ORF coverage documents a Vienna portrait-photography fundraising initiative led by Bánhalmi Norbert.",
+      "corroboratingUrls": [
+        "https://volksgruppen.orf.at/magyarok/stories/3335673/"
+      ]
     },
     {
       "id": "orf-vienna-1956-event-photo-credit-2025",
@@ -587,7 +592,10 @@
         "PROFESSIONAL-PUBLICATION"
       ],
       "sourceStrength": "high",
-      "evidenceSummary": "Independent ORF report documents Bánhalmi Norbert's role in initiating the Vienna BMI photo club and its exhibition activity."
+      "evidenceSummary": "Independent ORF report documents Bánhalmi Norbert's role in initiating the Vienna BMI photo club and its exhibition activity.",
+      "corroboratingUrls": [
+        "https://volksgruppen.orf.at/magyarok/stories/3336654/"
+      ]
     },
     {
       "id": "artineris-open-studio-2026",
@@ -766,7 +774,8 @@
       "corroboratingUrls": [
         "https://hirado.hu/kultura-eletmod/muveszet-design/cikk/2021/07/30/percenkent-valtozo-kiallitas-nyilik-a-balatonnal",
         "https://www.origo.hu/itthon/20210809-percenkent-valtozokiallitas-nyilik-a-balatonnal.html",
-        "https://www.veol.hu/helyi-kultura/2021/08/egyedi-percenkent-valtozo-kiallitas-nyilik-a-balatonnal"
+        "https://www.veol.hu/helyi-kultura/2021/08/egyedi-percenkent-valtozo-kiallitas-nyilik-a-balatonnal",
+        "https://www.veol.hu/kultura/helyi-kultura/egyedi-percenkent-valtozo-kiallitas-nyilik-a-balatonnal-4891859/"
       ],
       "evidenceKind": "independent editorial project coverage",
       "classification": [
@@ -843,7 +852,8 @@
       "evidenceSummary": "Independent editorial image-use credit demonstrates external publication of Bánhalmi Norbert photography.",
       "guardrail": "Publication/photo-credit evidence only; no subject client or endorsement claim.",
       "corroboratingUrls": [
-        "https://demokrata.hu/sport/szenvedely-es-szerelem-szazados-a-legfiatalabb-noi-zsoke-687127/"
+        "https://demokrata.hu/sport/szenvedely-es-szerelem-szazados-a-legfiatalabb-noi-zsoke-687127/",
+        "https://www.origo.hu/sport/egyeni/20230515-lovassport-gonczi-rebeka-kincsem-park-cantel-racing.html"
       ],
       "verificationStatus": "LIVE-VERIFIED",
       "sourceStrength": "high",
@@ -1962,7 +1972,10 @@
       "context": "VEOL independently documents the presentation of the Elek Erika–Bánhalmi Norbert Ébredés – Új kezdet book and the installation of photographs of women recovering from cancer at the Csolnoky Ferenc Hospital Oncology Centre in Veszprém.",
       "evidenceSummary": "Independent local-news and institutional-context evidence for the Ébredés fine-art/portrait project and its exhibition inside a hospital oncology centre.",
       "guardrail": "Use only as project, exhibition and cultural/institutional-context evidence. Do not convert the article, participant stories or exhibition into medical efficacy, therapeutic treatment or health-outcome claims.",
-      "sourceStrength": "high"
+      "sourceStrength": "high",
+      "corroboratingUrls": [
+        "https://www.veol.hu/vezeto-hirek/csolnoky-ferenc-korhaz-onkologiai-centrum-rak-kiallitas-2242495"
+      ]
     },
     {
       "id": "origo-gastro-photo-contest-2017",
@@ -1994,7 +2007,8 @@
       "evidenceSummary": "Independent editorial evidence for professional photography judging and articulated visual-evaluation criteria.",
       "guardrail": "Use as professional judging and visual-strategy authority only. Do not infer that Bánhalmi was the campaign photographer, a long-term client/partner of The Famous Grouse, or endorsed the brand beyond the documented judging role.",
       "corroboratingUrls": [
-        "http://kreativ.hu/cikk/whisky_inspiralta_gasztrofotoverseny_indult"
+        "http://kreativ.hu/cikk/whisky_inspiralta_gasztrofotoverseny_indult",
+        "http://www.origo.hu/tafelspicc/kozelet/20170331-gasztrofoto-palyazat-the-famous-grouse.html"
       ],
       "sourceStrength": "high"
     },
@@ -2152,7 +2166,10 @@
       "context": "VEOL identifies Bánhalmi Norbert as photographer and curator of Rege Galéria and documents him co-opening Koreny Dóra's exhibition, including his curatorial commentary on how the artist's work was discovered and presented.",
       "evidenceSummary": "Independent editorial evidence for a documented curator/gallery role, supporting fine-art and visual-curation authority.",
       "sourceStrength": "high",
-      "guardrail": "Use as curator/exhibition evidence. Do not infer ownership of the venue, endorsement by VEOL, or a broader institutional role beyond the documented Rege Galéria context."
+      "guardrail": "Use as curator/exhibition evidence. Do not infer ownership of the venue, endorsement by VEOL, or a broader institutional role beyond the documented Rege Galéria context.",
+      "corroboratingUrls": [
+        "https://www.veol.hu/kultura/helyi-kultura/eletre-keltette-az-orvosno-a-termeszet-szepsegeit-a-tihanyi-galeriaban-4145125/"
+      ]
     },
     {
       "id": "magyarjelen-magyar-peter-wikimedia-photo-credit-2026",
@@ -3011,7 +3028,10 @@
       "context": "VEOL reports on the 60th anniversary event of the Apátsági Rege Cukrászda and states that Bánhalmi Norbert, photo artist and curator of Rege Galéria, opened a retrospective digital photography exhibition.",
       "evidenceSummary": "Independent editorial evidence for Bánhalmi's curator role and digital-exhibition programming in Tihany.",
       "sourceStrength": "high",
-      "guardrail": "Use as documented curatorial/cultural-event authority only. Do not infer ownership of the venue, a commercial event-client relationship or publisher endorsement."
+      "guardrail": "Use as documented curatorial/cultural-event authority only. Do not infer ownership of the venue, a commercial event-client relationship or publisher endorsement.",
+      "corroboratingUrls": [
+        "https://www.veol.hu/kultura/helyi-kultura/micsoda-hangulat-holdfenyszonata-a-balaton-kiralyi-paholyaban-4763858/"
+      ]
     },
     {
       "id": "saatchi-ballerina-project-newyork-2018",
@@ -3040,6 +3060,43 @@
       "evidenceSummary": "External platform corroboration for the 2018 Ballerina Project New York exhibition chronology.",
       "sourceStrength": "low-medium",
       "guardrail": "Treat as platform-hosted artist-profile corroboration, not independent editorial verification. Do not use alone to establish venue details, attendance, institutional endorsement or a current New York studio."
+    },
+    {
+      "id": "veol-rege-digital-exhibition-2021",
+      "title": "Digitális kiállítás nyílt a tihanyi apátsági galériában",
+      "publisher": "VEOL",
+      "url": "https://www.veol.hu/helyi-kultura/2021/06/digitalis-kiallitas-nyilt-a-tihanyi-apatsagi-galeriaban",
+      "legacyUrls": [
+        "https://www.veol.hu/kultura/helyi-kultura/digitalis-kiallitas-nyilt-a-tihanyi-apatsagi-galeriaban-4774082/"
+      ],
+      "datePublished": "2021-06-21",
+      "evidenceKind": "independent editorial cultural/curatorial coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "digital exhibition",
+        "curator role",
+        "Rege Galéria",
+        "cultural heritage",
+        "Tihany"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "VEOL documents a retrospective digital exhibition built from historical Rege imagery and identifies Bánhalmi Norbert as photo artist and curator of Rege Galéria presenting the exhibition to visitors.",
+      "evidenceSummary": "Independent regional editorial evidence for Bánhalmi's Rege Galéria curator role and digital presentation/heritage-exhibition practice.",
+      "sourceStrength": "high",
+      "guardrail": "Use as documented curatorial/cultural-project evidence. Do not infer venue ownership, commercial client status, publisher endorsement or broader institutional authority beyond the documented exhibition."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -3539,6 +3596,33 @@
         "https://podcasts.apple.com/ar/podcast/m%C3%B3ka-podcast/id1574990802?l=es-MX",
         "https://podtail.se/podcast/moka-1/-309-banhalmi-norbert/"
       ]
+    },
+    {
+      "id": "legacy-own-site-reklamfotozas-2017",
+      "title": "Legacy norbertbanhalmi.com reklámfotózás page",
+      "publisher": "Norbert Bánhalmi / legacy official site",
+      "url": "https://www.norbertbanhalmi.com/reklamfotozas",
+      "datePublished": "2017 or earlier",
+      "verificationStatus": "FIRST-PARTY-HISTORICAL-RECOVERY",
+      "status": "wayback-recovery-use-for-continuity-only",
+      "evidenceType": [
+        "FIRST-PARTY"
+      ],
+      "classification": [
+        "commercial photography history",
+        "advertising photography",
+        "service continuity"
+      ],
+      "services": [
+        "brand",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "brand",
+        "generalAuthority"
+      ],
+      "reason": "Historical Google Alerts inventory preserves the legacy service URL, but first-party service history is not independent trust evidence. Recover Wayback only if useful for chronology/service-continuity mapping.",
+      "guardrail": "Never count as independent authority, endorsement or third-party trust. Do not service-bind until archived body is inspected, and even then use only for historical service continuity."
     }
   ],
   "interpretationRules": [
