@@ -739,6 +739,64 @@
       ]
     },
     {
+      "source": "/reklamfotozas",
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ],
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/reklamfotozas/",
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ],
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/reklamfotozas",
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ],
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/reklamfotozas/",
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ],
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/reklamfotozas",
+      "destination": "/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/ebredes",
+      "destination": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "destination": "https://www.norbertbanhalmi.com/de-at/",
       "permanent": true,
@@ -2856,6 +2914,16 @@
     {
       "source": "/reklam-fotozas",
       "destination": "/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/aktfotozas",
+      "destination": "/hu/muveszi-fotografia/",
+      "permanent": true
+    },
+    {
+      "source": "/fotozas-arak",
+      "destination": "/hu/ajanlatkeres/",
       "permanent": true
     },
     {

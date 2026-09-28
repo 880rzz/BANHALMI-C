@@ -20,7 +20,11 @@ const staticRedirects = {
   'oneletrajz-cv-fotozas': 'https://www.norbertbanhalmi.com/hu/portre/',
   'portfolio-fotozas': 'https://www.norbertbanhalmi.com/hu/portre/',
   'muveszi-aktfotozas': 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/',
+  'aktfotozas': 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/',
   'reklam-fotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
+  'reklamfotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
+  'fotozas-arak': 'https://www.norbertbanhalmi.com/hu/ajanlatkeres/',
+  'ebredes': 'https://www.banhalmi.art/hu/exhibitions/ebredes.html',
   'post/amikor-csak-egy-táncpartnered-van-egész-estére': 'https://blog.banhalmi.art/post/amikor-csak-egy-táncpartnered-van-egész-estére',
   'blog/tags/filter-nélkül-a-testem-története': 'https://blog.banhalmi.art/blog'
 };
@@ -84,7 +88,14 @@ const aliasContracts = [
       '/privacy-policy/': '/hu/adatvedelem/',
       '/terms-conditions/': '/hu/aszf/',
       '/event-photography/': '/hu/rendezvenyfotozas/',
-      '/about/': '/hu/eletmu/'
+      '/about/': '/hu/eletmu/',
+      '/oneletrajz-cv-fotozas/': '/hu/portre/',
+      '/portfolio-fotozas/': '/hu/portre/',
+      '/muveszi-aktfotozas/': '/hu/muveszi-fotografia/',
+      '/aktfotozas/': '/hu/muveszi-fotografia/',
+      '/reklam-fotozas/': '/hu/brand/',
+      '/reklamfotozas/': '/hu/brand/',
+      '/fotozas-arak/': '/hu/ajanlatkeres/'
     }
   },
   {

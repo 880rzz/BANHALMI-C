@@ -15,7 +15,29 @@ function redirectTarget(request) {
     return null;
   }
 
-  const cleanPath = incoming.pathname.replace(/^\/+/, '');
+  let cleanPath = incoming.pathname;
+  while (cleanPath.startsWith('/')) cleanPath = cleanPath.slice(1);
+
+  if (host.includes('banhalminorbert.hu') || host.includes('banhalmi-hu-redirect')) {
+    let normalizedPath = cleanPath ? '/' + cleanPath : '/';
+    while (normalizedPath.length > 1 && normalizedPath.endsWith('/')) normalizedPath = normalizedPath.slice(0, -1);
+    const historicalHuTargets = new Map([
+      ['/oneletrajz-cv-fotozas', 'https://www.norbertbanhalmi.com/hu/portre/'],
+      ['/portfolio-fotozas', 'https://www.norbertbanhalmi.com/hu/portre/'],
+      ['/muveszi-aktfotozas', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/'],
+      ['/aktfotozas', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/'],
+      ['/reklam-fotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
+      ['/reklamfotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
+      ['/fotozas-arak', 'https://www.norbertbanhalmi.com/hu/ajanlatkeres/']
+    ]);
+    const historicalTarget = historicalHuTargets.get(normalizedPath);
+    if (historicalTarget) {
+      const target = new URL(historicalTarget);
+      target.search = incoming.search;
+      return target;
+    }
+  }
+
   const target = new URL(cleanPath, languageBase);
   target.search = incoming.search;
   return target;
