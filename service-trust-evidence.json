@@ -3623,6 +3623,41 @@
       ],
       "reason": "Historical Google Alerts inventory preserves the legacy service URL, but first-party service history is not independent trust evidence. Recover Wayback only if useful for chronology/service-continuity mapping.",
       "guardrail": "Never count as independent authority, endorsement or third-party trust. Do not service-bind until archived body is inspected, and even then use only for historical service continuity."
+    },
+    {
+      "id": "vehir-photo-contest-rege-transition-2022",
+      "title": "Amatőr és tapasztalt fotósok mérték össze tudásukat",
+      "publisher": "VEHIR",
+      "url": "https://vehir.hu/cikk/65514-amator-es-tapasztalt-fotosok-mertek-ossze-tudasukat",
+      "datePublished": "2022-08-08",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "archive-reference-verified-body-unavailable",
+      "evidenceType": [
+        "SECONDARY-MENTION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "photography competition",
+        "Rege Galéria transition",
+        "photography community"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "Contemporaneous Google Alert dated 2022-08-08 preserves the exact VEHIR title and URL.",
+        "The preserved snippet names Ruppert Tamás as chief organizer and Bánhalmi Norbert as photo artist and states that they jointly announced a future change involving Rege Galéria."
+      ],
+      "sourceStrength": "medium historical provenance",
+      "reason": "Exact publisher URL/title and the Bánhalmi/Rege context are historically preserved, but the original article body is not currently retrievable. Keep unbound until direct/archived body recovery.",
+      "guardrail": "Do not infer the exact governance/ownership/transfer arrangement of Rege Galéria from the snippet alone. Do not service-bind or treat as a completed institutional relationship until the full article body is recovered."
     }
   ],
   "interpretationRules": [
