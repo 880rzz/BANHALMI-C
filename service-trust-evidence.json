@@ -2341,6 +2341,58 @@
       "evidenceSummary": "Independent institutional evidence for the New York Mérföldkövek portrait/oral-history exhibition and Bánhalmi's documented role in its production.",
       "sourceStrength": "high",
       "guardrail": "Use as historical New York project/exhibition evidence only. Do not infer a current New York studio, ongoing institutional commission, or endorsement beyond the documented project."
+    },
+    {
+      "id": "turul-fotozas-award-profile",
+      "title": "Bánhalmi Norbert | Executive portré és Művészeti fotográfia",
+      "publisher": "Turul Fotózás",
+      "url": "https://www.fotozasturul.eu/profile-64-banhalmi-norbert-executive-portre-es-muveszeti-fotografia",
+      "evidenceKind": "commercial ranking/award profile",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "award/ranking profile",
+        "review aggregation",
+        "Budapest photography profile"
+      ],
+      "services": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "context": "Turul Fotózás maintains a current business profile and displays award badges for multiple years, including 2021, 2022, 2024 and 2025.",
+      "evidenceSummary": "External commercial ranking/profile evidence documenting recurring inclusion in the Turul photography ranking.",
+      "sourceStrength": "low-medium",
+      "guardrail": "Commercial ranking/profile only. Do not equate award badges, aggregate ratings or platform copy with independent editorial assessment, institutional recognition or service-quality proof. Do not hard-code dynamic rating/review counts."
+    },
+    {
+      "id": "top100-hungary-profile-2022",
+      "title": "Bánhalmi Norbert | Executive portré és Művészeti fotográfia",
+      "publisher": "TOP 100 of HUNGARY",
+      "url": "https://www.top100ofhungary.eu/company/197578/banhalmi-norbert-executive-portre-es-muveszeti-fotografia",
+      "datePublished": "2022",
+      "evidenceKind": "commercial ranking/profile",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "commercial ranking",
+        "photography business profile"
+      ],
+      "services": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "context": "TOP 100 of HUNGARY maintains a 2022 photography-business ranking/profile for Bánhalmi Norbert.",
+      "evidenceSummary": "External commercial ranking/profile reference useful for historical business-presence documentation.",
+      "sourceStrength": "low-medium",
+      "guardrail": "Commercial ranking/profile only. Do not treat platform scores or descriptive copy as independent editorial or institutional endorsement, and do not hard-code dynamic rating values."
     }
   ],
   "pendingEvidenceCandidates": [
