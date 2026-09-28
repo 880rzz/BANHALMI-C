@@ -3505,8 +3505,8 @@
       "title": "Apple workshop / official store demo clips — research lead",
       "publisher": "Unknown / Apple-related workshop context",
       "url": "",
-      "verificationStatus": "UNVERIFIED-FIRST-PARTY-LEAD",
-      "status": "external-source-recovery-required",
+      "verificationStatus": "SECONDARY-INTERVIEW-CORROBORATED",
+      "status": "direct-apple-source-recovery-required",
       "evidenceType": [
         "FIRST-PARTY",
         "UNVERIFIED"
@@ -3527,10 +3527,16 @@
       ],
       "provenance": [
         "A 2023-01-30 sent pitch to iSTYLE states that videos made at Apple workshops in the previous year were included among official store demo snippets.",
-        "The same message preserves a Facebook video link as a lead, but no Apple/iSTYLE/retail official page has yet been independently recovered."
+        "The same message preserves a Facebook video link as a lead, but no Apple/iSTYLE/retail official page has yet been independently recovered.",
+        "MÓKA Podcast #309 (2026) publicly timestamps and discusses the New York Apple Store workshop story, iPhone video creation and Apple reaction as an interview topic.",
+        "A MÓKA short indexed as 'APPLE FELHASZNÁLTA A VIDEÓMAT' repeats the claim that permission paperwork was signed for educational/promotional use of video snippets."
       ],
-      "reason": "Potentially valuable technology/visual-workflow authority, but currently supported only by first-party correspondence.",
-      "guardrail": "Do not service-bind and do not claim Apple endorsement, employment, partnership or official Apple creator status until a direct Apple/iSTYLE/store source or archived official page is recovered."
+      "reason": "The Apple Store/workshop story is now publicly corroborated by an independent podcast interview, but still lacks a direct Apple/iSTYLE/store archive or document. Keep unbound pending direct corporate/institutional source recovery.",
+      "guardrail": "Treat as attributed interview history only. Do not claim Apple endorsement, official creator status, employment, partnership or VIP relationship as independently verified until direct Apple evidence is recovered.",
+      "corroboratingUrls": [
+        "https://podcasts.apple.com/ar/podcast/m%C3%B3ka-podcast/id1574990802?l=es-MX",
+        "https://podtail.se/podcast/moka-1/-309-banhalmi-norbert/"
+      ]
     }
   ],
   "interpretationRules": [
@@ -4057,7 +4063,9 @@
       "publisher": "MÓKA Podcast",
       "url": "https://mokapodcast.libsyn.com/2026/04",
       "corroboratingUrls": [
-        "https://podcasts.apple.com/gb/podcast/m%C3%B3ka-podcast/id1574990802"
+        "https://podcasts.apple.com/gb/podcast/m%C3%B3ka-podcast/id1574990802",
+        "https://podcasts.apple.com/ar/podcast/m%C3%B3ka-podcast/id1574990802?l=es-MX",
+        "https://podtail.se/podcast/moka-1/-309-banhalmi-norbert/"
       ],
       "datePublished": "2026-04-05",
       "services": [
