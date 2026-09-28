@@ -3544,12 +3544,18 @@
       "sourceStrength": "high-provenance-private",
       "corroboratingUrls": [
         "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
-        "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
-        "https://youtube.com/playlist?list=PLwsdxt-KFeDiXfxb2_mKQLcaNhQAvxUQW"
+        "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/"
       ],
       "guardrail": "Private historical provenance. Do not expose the private attachment or correspondence. Scope the 'official photographer' claim specifically to Coke Club cultural and music festivals in 2008–2012. Do not generalize this to being the official photographer of The Coca-Cola Company/Coca-Cola Hungary overall, a current relationship, employment, endorsement, exclusivity, or authorship of Coca-Cola brand strategy. The press-communication statement supports Brand/Visual Strategy context only at communication-production level.",
       "privateProvenance": true,
-      "publicSummaryAllowed": "A historical Coca-Cola Hungary reference verifies that Norbert Bánhalmi worked as official photographer at Coke Club cultural and music festivals between 2008 and 2012 and produced photo/video material supporting press communication."
+      "publicSummaryAllowed": "A historical Coca-Cola Hungary reference verifies that Norbert Bánhalmi worked as official photographer at Coke Club cultural and music festivals between 2008 and 2012 and produced photo/video material supporting press communication.",
+      "publicProjectIdentityCorroboration": [
+        "https://24.hu/kultura/2012/04/25/iden-mar-nem-lesz-coke-club/",
+        "https://www.origo.hu/utazas/2012/06/a-siofoki-coke-club-utodja"
+      ],
+      "unverifiedPublicOutput": [
+        "https://youtube.com/playlist?list=PLwsdxt-KFeDiXfxb2_mKQLcaNhQAvxUQW"
+      ]
     }
   ],
   "pendingEvidenceCandidates": [
@@ -5140,7 +5146,7 @@
       ]
     },
     "cokeClubHistoricalAuthority": {
-      "status": "VERIFIED-PRIMARY-DOCUMENT-WITH-EXTERNAL-CORROBORATION",
+      "status": "PRIVATE-PRIMARY-VERIFIED-WITH-PUBLIC-PROJECT-IDENTITY-CORROBORATION",
       "scope": "Coke Club / Coca-Cola Hungary historical event and communication work, 2008–2012",
       "evidenceIds": [
         "coca-cola-coke-club-reference-2008-2012"
@@ -5150,7 +5156,14 @@
         "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
         "https://youtube.com/playlist?list=PLwsdxt-KFeDiXfxb2_mKQLcaNhQAvxUQW"
       ],
-      "guardrail": "Historical Coke Club scope only. Do not infer a current Coca-Cola relationship or company-wide official-photographer status."
+      "guardrail": "Historical Coke Club scope only. The signed recommendation is private primary provenance. Public news independently verifies Coke Club's Coca-Cola Hungary project identity but does not name Bánhalmi. The YouTube playlist remains unverified until uploader, dates, descriptions and credits can be inspected. Do not infer a current Coca-Cola relationship or company-wide official-photographer status.",
+      "publicProjectIdentityCorroboration": [
+        "https://24.hu/kultura/2012/04/25/iden-mar-nem-lesz-coke-club/",
+        "https://www.origo.hu/utazas/2012/06/a-siofoki-coke-club-utodja"
+      ],
+      "unverifiedPublicOutput": [
+        "https://youtube.com/playlist?list=PLwsdxt-KFeDiXfxb2_mKQLcaNhQAvxUQW"
+      ]
     }
   },
   "archiveVerifiedEvidence": [
@@ -5540,5 +5553,150 @@
       "scope": "BANHALMI ART press-source-registry.json",
       "result": "All press registry records are represented in the Professional trust graph directly, via press IDs/service registry links, or as canonical/corroborating evidence. Alternate historical URLs are preserved without creating duplicate authority points."
     }
+  },
+  "historicalDomainContinuity": {
+    "status": "EVIDENCE-BASED-TEMPORAL-MAP",
+    "lastChecked": "2026-09-28",
+    "person": "Norbert Bánhalmi",
+    "guardrail": "This timeline records documented domain/brand use and continuity. It does not assert that HIPStudio, BANHALMI, Banhalmi Norbert e.U., banhalminorbert.hu, norbertbanhalmi.com and BANHALMI ART are the same legal entity.",
+    "nodes": [
+      {
+        "historicalDomain": "hipstudio.hu",
+        "historicalBrand": "HIPStudio",
+        "period": "2006–historical founder/professional period; current related-party site continues separately",
+        "role": "historical professional studio/communication organisation",
+        "relationship": "founder/professional relationship",
+        "currentEntityContinuation": "Person-level professional experience continues into BANHALMI; HIPStudio remains a distinct current entity",
+        "verificationStatus": "RELATED-PARTY-PLUS-SECONDARY-VERIFIED",
+        "dateEvidence": {
+          "currentHipstudioClaim": "2006-02-27",
+          "externalDirectoryClaim": "2006-03-15",
+          "status": "SOURCE-DATE-CONFLICT-UNRESOLVED"
+        },
+        "guardrail": "Do not conflate HIPStudio with current BANHALMI or transfer current HIPStudio clients to BANHALMI."
+      },
+      {
+        "historicalDomain": "banhalminorbert.hu",
+        "historicalBrand": "Bánhalmi Norbert personal/professional domain",
+        "period": "documented by 2016; active as a secondary domain in 2017; Search Console property documented in 2018; cancellation/expiry process documented in 2022; reacquired/registered again in 2026",
+        "role": "historical Hungarian secondary/personal professional domain; current Hungarian-language entry domain",
+        "relationship": "historical domain alias and Hungarian market entry",
+        "currentEntityContinuation": "https://www.norbertbanhalmi.com/hu/",
+        "verificationStatus": "PRIVATE-ADMINISTRATIVE-PROVENANCE-VERIFIED",
+        "sourceStrength": "high-provenance-private",
+        "publicSummaryAllowed": "banhalminorbert.hu has documented historical use as a secondary Hungarian professional domain and is now used as the Hungarian entry domain.",
+        "guardrail": "Do not describe the domain as an uninterrupted primary professional website across the entire period; evidence shows overlap with norbertbanhalmi.com and a later interruption before 2026 reactivation."
+      },
+      {
+        "historicalDomain": "norbertbanhalmi.com",
+        "historicalBrand": "Norbert Bánhalmi personal/professional international site",
+        "period": "documented in professional signatures by 2016 and in detailed SERP monitoring in 2020–2021; current canonical Professional system",
+        "role": "personal/professional photography site evolving into the canonical international Professional/service authority layer",
+        "relationship": "direct Person/professional continuity",
+        "currentEntityContinuation": "https://www.norbertbanhalmi.com/",
+        "verificationStatus": "PRIVATE-HISTORICAL-SEO-PROVENANCE-PLUS-LIVE-VERIFIED",
+        "sourceStrength": "high-provenance-private/current-live",
+        "guardrail": "Historical service URLs and rankings prove historical site/service presence, not current service availability or unchanged positioning."
+      },
+      {
+        "historicalDomain": "banhalmi.art",
+        "historicalBrand": "BANHALMI ART",
+        "period": "current artistic/oeuvre authority layer",
+        "role": "artistic archive, exhibitions, books, fine-art and cultural authority",
+        "relationship": "parallel artistic trajectory of the same Person",
+        "currentEntityContinuation": "https://www.banhalmi.art/",
+        "verificationStatus": "LIVE-VERIFIED",
+        "guardrail": "Do not convert BANHALMI ART into a commercial clone of the Professional site."
+      }
+    ]
+  },
+  "historicalProfessionalUrlInventory": {
+    "status": "PARTIAL-RECOVERY-VERIFIED",
+    "source": "SERPROBOT historical ranking report generated 2021-01-12 for www.norbertbanhalmi.com, covering 2020-12-12 through 2021-01-11",
+    "verificationStatus": "PRIVATE-HISTORICAL-SEO-PROVENANCE-VERIFIED",
+    "sourceStrength": "high-provenance-private",
+    "guardrail": "Ranking reports verify historical URLs, monitored queries and observed ranking snapshots. They are not independent editorial authority and do not prove current ranking or current service availability.",
+    "urls": [
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/portfolio-fotozas",
+        "historicalIntent": "portfolio photography",
+        "historicalService": "portrait/portfolio",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/portre/",
+        "redirectStatus": "PRESERVED",
+        "action": "keep permanent semantic redirect"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/oneletrajz-cv-fotozas",
+        "historicalIntent": "CV/resume portrait photography",
+        "historicalService": "portrait/CV",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/portre/",
+        "redirectStatus": "PRESERVED",
+        "action": "keep permanent semantic redirect"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/reklamfotozas",
+        "historicalIntent": "advertising/commercial photography",
+        "historicalService": "brand/commercial",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/brand/",
+        "redirectStatus": "REQUIRED",
+        "action": "add permanent semantic redirect; do not send to homepage"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/muveszi-aktfotozas",
+        "historicalIntent": "artistic nude photography",
+        "historicalService": "fineArt",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "redirectStatus": "PRESERVED",
+        "action": "keep current professional fine-art bridge and ART archive references"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/aktfotozas",
+        "historicalIntent": "nude photography",
+        "historicalService": "fineArt/portrait",
+        "currentDestination": null,
+        "redirectStatus": "RECOVERED-NOT-YET-MAPPED",
+        "action": "map only after historical page intent is recovered; avoid automatic homepage redirect"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/ebredes",
+        "historicalIntent": "Ébredés / Awakening project",
+        "historicalService": "fineArt/historical project",
+        "currentDestination": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+        "redirectStatus": "REQUIRED",
+        "action": "preserve as artistic historical authority on BANHALMI ART"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/fotopszichologia",
+        "historicalIntent": "photography/portrait psychology",
+        "historicalService": "portrait/generalAuthority",
+        "currentDestination": null,
+        "redirectStatus": "RECOVERED-NOT-YET-MAPPED",
+        "action": "recover page body before redirect mapping; no therapeutic claim"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/fotozas-arak",
+        "historicalIntent": "photography pricing",
+        "historicalService": "commercial/general",
+        "currentDestination": null,
+        "redirectStatus": "RECOVERED-NOT-YET-MAPPED",
+        "action": "map only to a current pricing/quote resource if intent remains equivalent"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/csaladi-fotozas",
+        "historicalIntent": "family photography",
+        "historicalService": "historical consumer photography",
+        "currentDestination": null,
+        "redirectStatus": "RECOVERED-NOT-YET-MAPPED",
+        "action": "do not imply this is a current core service without current service evidence"
+      },
+      {
+        "historicalUrl": "https://www.norbertbanhalmi.com/eskuvoi-fotozas-tihany",
+        "historicalIntent": "wedding photography in Tihany",
+        "historicalService": "historical wedding photography",
+        "currentDestination": null,
+        "redirectStatus": "RECOVERED-NOT-YET-MAPPED",
+        "action": "do not imply current wedding-photography offering without current service evidence"
+      }
+    ]
   }
 }
