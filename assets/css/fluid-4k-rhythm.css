@@ -1279,27 +1279,133 @@ html body .bn-mega-item{
 
 
 @media (min-width:1180px){
-
+  /* ART-DESKTOP-MENU-PARITY-V47-20260928
+     Visual contract follows banhalmi.art: fixed header remains visible,
+     dark contents-page overlay, three equal columns, gold hierarchy,
+     quiet descriptions and hairline separators. Professional IA is unchanged. */
   html body .bn-mega-menu{
+    position:fixed!important;
+    inset:var(--header-h,56px) 0 0!important;
+    width:100vw!important;
+    height:calc(100dvh - var(--header-h,56px))!important;
+    min-height:0!important;
+    max-height:calc(100dvh - var(--header-h,56px))!important;
     display:block!important;
-    padding-block:clamp(24px,5vh,64px)!important;
     box-sizing:border-box!important;
+    padding:0!important;
+    background:#202530!important;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
   }
   html body .bn-mega-panel{
-    min-height:0!important;
+    width:100%!important;
+    max-width:none!important;
+    min-height:100%!important;
     height:auto!important;
-    display:block!important;
-    padding:clamp(32px,4vh,48px) 0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-start!important;
+    padding:clamp(54px,7vh,78px) clamp(48px,4vw,64px) 28px!important;
+    overflow:visible!important;
   }
+  html body .bn-mega-intro{display:none!important;}
   html body .bn-mega-grid{
     width:100%!important;
-    margin-block:0!important;
-  }
-  html body .bn-mega-grid{
+    max-width:none!important;
+    display:grid!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:clamp(40px,4vw,72px)!important;
+    margin:0!important;
+    padding:0!important;
     align-items:start!important;
+    align-content:start!important;
   }
+  html body .bn-mega-column{
+    min-width:0!important;
+    padding:0!important;
+    border:0!important;
+  }
+  html body .bn-mega-section-head{
+    margin:0 0 20px!important;
+    padding:0 0 14px!important;
+    border:0!important;
+    border-bottom:1px solid rgba(183,156,68,.28)!important;
+  }
+  html body .bn-mega-section-head>span{
+    color:#D3B85A!important;
+    font-size:.66rem!important;
+    font-weight:500!important;
+    line-height:1.2!important;
+    letter-spacing:.24em!important;
+    text-transform:uppercase!important;
+  }
+  html body .bn-mega-section-head p{display:none!important;}
+  html body .bn-mega-item,
+  html body .bn-mega-service,
+  html body .bn-mega-footer .bn-mega-item{
+    margin:0!important;
+    padding:14px 0 13px!important;
+    border:0!important;
+    border-bottom:1px solid rgba(255,255,255,.11)!important;
+    background:transparent!important;
+  }
+  html body .bn-mega-column .bn-mega-item:first-of-type{padding-top:0!important;}
+  html body .bn-mega-link,
+  html body .bn-mega-service .bn-mega-link,
+  html body .bn-mega-footer .bn-mega-link{
+    display:inline-flex!important;
+    align-items:center!important;
+    min-height:32px!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:0!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    color:#D3B85A!important;
+    font-size:clamp(1.08rem,1.35vw,1.32rem)!important;
+    font-weight:500!important;
+    line-height:1.15!important;
+    letter-spacing:-.018em!important;
+    text-decoration:none!important;
+    transform:none!important;
+  }
+  html body .bn-mega-link:hover,
+  html body .bn-mega-link:focus-visible{color:#F5F5F7!important;}
+  html body .bn-mega-link.active,
+  html body .bn-mega-link[aria-current="page"]{
+    color:#D3B85A!important;
+    text-decoration-line:underline!important;
+    text-decoration-thickness:1px!important;
+    text-underline-offset:.22em!important;
+  }
+  html body .bn-mega-desc,
+  html body .bn-mega-footer .bn-mega-desc{
+    display:block!important;
+    max-width:48ch!important;
+    margin:.28rem 0 0!important;
+    color:rgba(242,241,239,.68)!important;
+    font-size:clamp(.78rem,.86vw,.92rem)!important;
+    font-weight:400!important;
+    line-height:1.52!important;
+    letter-spacing:0!important;
+  }
+  html body .bn-mega-footer{
+    display:block!important;
+    min-width:0!important;
+    padding:0!important;
+    border:0!important;
+  }
+  html body .bn-mega-cta,
+  html body .bn-mega-art{
+    margin:0!important;
+    padding:14px 0 13px!important;
+    border:0!important;
+    border-bottom:1px solid rgba(255,255,255,.11)!important;
+    border-radius:0!important;
+    background:transparent!important;
+  }
+  html body .bn-mega-pricing .bn-mega-link{color:#D3B85A!important;}
 }
-
 @media (max-width:1179px){
   html body .bn-mega-menu{
     position:fixed!important;
