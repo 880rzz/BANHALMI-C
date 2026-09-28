@@ -5710,7 +5710,37 @@
         "domain": "banhalminorbert.hu",
         "targetBase": "https://www.norbertbanhalmi.com/hu/",
         "implementation": "host-aware 308 path-preserving redirect",
-        "risk": "Historical slugs that do not have equivalent current /hu/ paths may resolve to a non-equivalent destination or 404 unless explicitly mapped."
+        "risk": "Known high-confidence legacy service/pricing routes now have explicit semantic mappings; unknown historical paths still require recovery and must not be guessed.",
+        "explicitHistoricalMappings": [
+          {
+            "path": "/oneletrajz-cv-fotozas",
+            "target": "https://www.norbertbanhalmi.com/hu/portre/"
+          },
+          {
+            "path": "/portfolio-fotozas",
+            "target": "https://www.norbertbanhalmi.com/hu/portre/"
+          },
+          {
+            "path": "/muveszi-aktfotozas",
+            "target": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/"
+          },
+          {
+            "path": "/aktfotozas",
+            "target": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/"
+          },
+          {
+            "path": "/reklam-fotozas",
+            "target": "https://www.norbertbanhalmi.com/hu/brand/"
+          },
+          {
+            "path": "/reklamfotozas",
+            "target": "https://www.norbertbanhalmi.com/hu/brand/"
+          },
+          {
+            "path": "/fotozas-arak",
+            "target": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/"
+          }
+        ]
       },
       "austrianEntry": {
         "domain": "banhalmi.at",
@@ -5860,9 +5890,10 @@
         "historicalUrl": "https://www.norbertbanhalmi.com/aktfotozas",
         "historicalIntent": "nude photography",
         "historicalService": "fineArt/portrait",
-        "currentDestination": null,
-        "redirectStatus": "RECOVERED-NOT-YET-MAPPED",
-        "action": "map only after historical page intent is recovered; avoid automatic homepage redirect"
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "redirectStatus": "PRESERVED",
+        "action": "keep permanent semantic redirect to the current Fine Art Photography service layer; preserve historical artistic context separately in BANHALMI ART",
+        "guardrail": "The redirect preserves historical artistic-nude intent. It does not imply therapeutic efficacy or collapse the artistic oeuvre into the commercial service layer."
       },
       {
         "historicalUrl": "https://www.norbertbanhalmi.com/ebredes",
@@ -5884,9 +5915,10 @@
         "historicalUrl": "https://www.norbertbanhalmi.com/fotozas-arak",
         "historicalIntent": "photography pricing",
         "historicalService": "commercial/general",
-        "currentDestination": null,
-        "redirectStatus": "RECOVERED-NOT-YET-MAPPED",
-        "action": "map only to a current pricing/quote resource if intent remains equivalent"
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+        "redirectStatus": "PRESERVED",
+        "action": "keep permanent functional redirect to the current Hungarian pricing and quote interface; current pricing.json and the live calculator remain authoritative",
+        "guardrail": "Do not reuse historical prices. Redirect preserves pricing/quote intent only; current machine-readable pricing and final written offer control."
       },
       {
         "historicalUrl": "https://www.norbertbanhalmi.com/csaladi-fotozas",
@@ -6276,6 +6308,41 @@
         "canonicalCurrentPage": "https://www.banhalmi.art/",
         "authorityRisk": "HIGH if commercial intent is duplicated or artistic pages are redirected to Professional homepage",
         "requiredAction": "Keep artistic authority separate and connect only through justified entity/evidence relationships."
+      },
+      {
+        "historicalDomain": "norbertbanhalmi.com",
+        "historicalUrl": "https://www.norbertbanhalmi.com/aktfotozas",
+        "period": "historical professional/fine-art URL recovered in 2020–2021 SEO corpus",
+        "entity": "Norbert Bánhalmi / artistic-professional practice",
+        "serviceIntent": "artistic nude photography",
+        "externalBacklinksEvidence": [
+          "2021 SERPROBOT historical URL corpus",
+          "current Professional Fine Art service layer",
+          "BANHALMI ART artistic authority graph"
+        ],
+        "archiveStatus": "HISTORICAL-URL-RECOVERED",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "redirectStatus": "PERMANENT SEMANTIC REDIRECT ADDED ON TRUST BRANCH",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "authorityRisk": "MEDIUM-HIGH if artistic history is converted into therapeutic or purely commercial claims",
+        "requiredAction": "Protect redirect in regression tests; keep detailed artistic evidence on BANHALMI ART and use the Professional page only for current service intent."
+      },
+      {
+        "historicalDomain": "norbertbanhalmi.com",
+        "historicalUrl": "https://www.norbertbanhalmi.com/fotozas-arak",
+        "period": "historical pricing/quote URL recovered in 2020–2021 SEO corpus",
+        "entity": "Norbert Bánhalmi professional site",
+        "serviceIntent": "photography pricing and quote enquiry",
+        "externalBacklinksEvidence": [
+          "2021 SERPROBOT historical URL corpus",
+          "current pricing.json and HU quote calculator"
+        ],
+        "archiveStatus": "HISTORICAL-URL-RECOVERED + CURRENT-FUNCTIONAL-EQUIVALENT",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+        "redirectStatus": "PERMANENT FUNCTIONAL REDIRECT ADDED ON TRUST BRANCH",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
+        "authorityRisk": "HIGH if obsolete historical prices are surfaced as current",
+        "requiredAction": "Preserve pricing intent but never carry historical price figures forward; current pricing.json and final written offer control."
       }
     ]
   }
