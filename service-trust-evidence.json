@@ -94,6 +94,9 @@
         "yt-awakening-reflection",
         "yt-world-of-woman-interview",
         "yt-complete-playlists"
+      ],
+      "archivedEvidenceIds": [
+        "trip-magazin-76"
       ]
     },
     "brand": {
@@ -143,6 +146,9 @@
         "yt-m1-kunszt-portrait-psychology",
         "yt-retouching-cover-ideals",
         "yt-complete-playlists"
+      ],
+      "archivedEvidenceIds": [
+        "trip-magazin-76"
       ]
     },
     "event": {
@@ -255,6 +261,9 @@
         "yt-awakening-reflection",
         "yt-world-of-woman-interview",
         "yt-complete-playlists"
+      ],
+      "archivedEvidenceIds": [
+        "trip-magazin-76"
       ]
     },
     "visualStrategy": {
@@ -293,6 +302,9 @@
         "yt-petofi-digital-exhibition",
         "yt-retouching-cover-ideals",
         "yt-complete-playlists"
+      ],
+      "archivedEvidenceIds": [
+        "trip-magazin-76"
       ]
     }
   },
@@ -2199,7 +2211,34 @@
         "teaching",
         "historical Olympus Hungary ambassadorship"
       ],
-      "evidenceSummary": "Two-page specialist-photography interview documenting Bánhalmi Norbert's artistic-nude and sensitive-portrait philosophy, the Ébredés project, A Nő világa, New York history, commercial photography background, teaching ambitions and his then-new Olympus Hungary ambassador role."
+      "evidenceSummary": "Two-page specialist-photography interview documenting Bánhalmi Norbert's artistic-nude and sensitive-portrait philosophy, the Ébredés project, A Nő világa, New York history, commercial photography background, teaching ambitions and his then-new Olympus Hungary ambassador role.",
+      "graphRelations": {
+        "person": "https://www.norbertbanhalmi.com/about/",
+        "publisher": "Tripont Foto Video Magazin",
+        "project": [
+          "Ébredés – Az új kezdet!",
+          "A Nő világa"
+        ],
+        "locations": [
+          "Budapest",
+          "New York (historical context)"
+        ],
+        "services": [
+          "portrait",
+          "brand",
+          "fineArt",
+          "visualStrategy",
+          "generalAuthority"
+        ],
+        "date": "2018",
+        "evidenceType": [
+          "INTERVIEW",
+          "PROFESSIONAL-PUBLICATION",
+          "AMBASSADORSHIP",
+          "PROJECT-COVERAGE"
+        ],
+        "verificationStatus": "ARCHIVE-VERIFIED"
+      }
     },
     {
       "id": "istyle-magazin-historical",
