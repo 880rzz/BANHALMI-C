@@ -88,7 +88,14 @@ const aliasContracts = [
       '/privacy-policy/': '/hu/adatvedelem/',
       '/terms-conditions/': '/hu/aszf/',
       '/event-photography/': '/hu/rendezvenyfotozas/',
-      '/about/': '/hu/eletmu/'
+      '/about/': '/hu/eletmu/',
+      '/oneletrajz-cv-fotozas/': '/hu/portre/',
+      '/portfolio-fotozas/': '/hu/portre/',
+      '/muveszi-aktfotozas/': '/hu/muveszi-fotografia/',
+      '/aktfotozas/': '/hu/muveszi-fotografia/',
+      '/reklam-fotozas/': '/hu/brand/',
+      '/reklamfotozas/': '/hu/brand/',
+      '/fotozas-arak/': '/hu/ajanlatkeres/'
     }
   },
   {
