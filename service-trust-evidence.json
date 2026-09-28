@@ -5712,5 +5712,164 @@
         "action": "do not imply current wedding-photography offering without current service evidence"
       }
     ]
+  },
+  "hipStudioHistoricalUrlInventory": {
+    "status": "HISTORICAL-SEARCH-CONSOLE-VERIFIED",
+    "lastChecked": "2026-09-28",
+    "historicalDomain": "hipstudio.hu",
+    "historicalBrand": "HIPStudio",
+    "verificationStatus": "PRIVATE-HISTORICAL-SEARCH-CONSOLE-PROVENANCE-VERIFIED",
+    "sourceStrength": "high-provenance-private",
+    "period": "2019–2022 verified search-performance period",
+    "relationship": "related-party historical professional organisation",
+    "evidenceSummary": "Contemporaneous Google Search Console monthly reports preserve exact HIPStudio URLs, search demand and click activity, proving that portrait/CV, portfolio, artistic nude, event photography and short-film service pages were active search surfaces during the documented period.",
+    "guardrail": "Search Console reports prove historical URL/service presence and search performance, not independent editorial endorsement. They do not transfer HIPStudio's current clients, legal identity or present services to BANHALMI. Historical service continuity may be attached only to Norbert Bánhalmi's documented professional history where separate authorship/role evidence exists.",
+    "urls": [
+      {
+        "historicalUrl": "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
+        "period": "2019-12..2022-01 and beyond",
+        "historicalIntent": "artistic nude photography in Budapest",
+        "historicalService": "fineArt / artistic nude",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
+        "searchEvidence": [
+          "2019-12 report: 62 web clicks, top HIPStudio page",
+          "2020-08 report: 61 web clicks, top HIPStudio page",
+          "2021-02 report: 80 web clicks, top HIPStudio page",
+          "2022-01 report: 96 web clicks, top HIPStudio page"
+        ],
+        "currentDestination": null,
+        "redirectStatus": "RELATED-PARTY-CURRENT-STATE-SEPARATE",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "authorityRisk": "MEDIUM-HIGH if HIPStudio entity/service history is conflated with current BANHALMI",
+        "requiredAction": "Preserve as HIPStudio historical service evidence; use only documented Person-level continuity and keep artistic authority linked semantically to current Professional/ART layers."
+      },
+      {
+        "historicalUrl": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+        "period": "2019-12..2022-01 and current",
+        "historicalIntent": "CV / business portrait photography in Budapest",
+        "historicalService": "portrait / CV / business portrait",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED-AND-CURRENT-LIVE",
+        "searchEvidence": [
+          "2019-12 report: 21 web clicks",
+          "2020-01 report: 46 web clicks, top HIPStudio page",
+          "2020-10 report: 73 web clicks, top HIPStudio page",
+          "2022-01 report: 90 web clicks"
+        ],
+        "currentDestination": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+        "redirectStatus": "NO-REDIRECT-RELATED-PARTY-LIVE",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/portre/",
+        "authorityRisk": "HIGH if current HIPStudio service is represented as BANHALMI ownership/client authority",
+        "requiredAction": "Keep current HIPStudio separate; use historical founder/professional continuity only. Current page explicitly separates HIPStudio, Speier Viktória and BANHALMI entities."
+      },
+      {
+        "historicalUrl": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+        "period": "verified by 2020-10",
+        "historicalIntent": "portfolio photography in Budapest",
+        "historicalService": "portrait / portfolio",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
+        "searchEvidence": [
+          "2020-10 report: 41 web clicks and +6 month-over-month"
+        ],
+        "currentDestination": null,
+        "redirectStatus": "CURRENT-STATE-NOT-ASSERTED",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/portre/",
+        "authorityRisk": "MEDIUM",
+        "requiredAction": "Retain as historical portfolio/portrait capability; do not infer current HIPStudio ownership or current BANHALMI client continuity."
+      },
+      {
+        "historicalUrl": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+        "period": "verified by 2020-01 and 2020-08",
+        "historicalIntent": "event photography in Budapest",
+        "historicalService": "event photography",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
+        "searchEvidence": [
+          "2020-01 report: +10 web clicks month-over-month",
+          "2020-08 report: +3 web clicks month-over-month"
+        ],
+        "currentDestination": null,
+        "redirectStatus": "CURRENT-STATE-NOT-ASSERTED",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "authorityRisk": "HIGH if HIPStudio event/client history is projected as current BANHALMI client list",
+        "requiredAction": "Use only as historical service continuity together with separately verified Bánhalmi/HIPStudio role evidence."
+      },
+      {
+        "historicalUrl": "https://www.hipstudio.hu/rovidfilm-keszites",
+        "period": "verified by 2020-01..2022-01",
+        "historicalIntent": "short-film / moving-image production",
+        "historicalService": "video / commercial communication",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
+        "searchEvidence": [
+          "2020-01 report: 27 web clicks",
+          "2020-08 report: 29 web clicks",
+          "2021-02 report: 50 web clicks",
+          "2022-01 report: 30 web clicks"
+        ],
+        "currentDestination": null,
+        "redirectStatus": "CURRENT-STATE-NOT-ASSERTED",
+        "canonicalCurrentPage": null,
+        "authorityRisk": "MEDIUM-HIGH",
+        "requiredAction": "Preserve as HIPStudio moving-image/commercial-production history; do not automatically map to current BANHALMI Visual Strategy without project-level semantic evidence."
+      },
+      {
+        "historicalUrl": "https://www.hipstudio.hu/selfbranding",
+        "period": "verified by 2019-12",
+        "historicalIntent": "self branding / personal brand communication",
+        "historicalService": "personal branding / communication",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
+        "searchEvidence": [
+          "2019-12 report: +1 web click month-over-month"
+        ],
+        "currentDestination": null,
+        "redirectStatus": "CURRENT-STATE-NOT-ASSERTED",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/brand/",
+        "authorityRisk": "MEDIUM-HIGH semantic overreach risk",
+        "requiredAction": "Use as historical HIPStudio topic/service evidence only; do not equate old self-branding work with current Visual Brand Strategy without direct Bánhalmi authorship/project evidence."
+      },
+      {
+        "historicalUrl": "https://www.hipstudio.hu/webdesign",
+        "period": "verified by 2021-02",
+        "historicalIntent": "web design",
+        "historicalService": "digital communication / web design",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
+        "searchEvidence": [
+          "2021-02 report: +2 web clicks month-over-month"
+        ],
+        "currentDestination": null,
+        "redirectStatus": "CURRENT-STATE-NOT-ASSERTED",
+        "canonicalCurrentPage": null,
+        "authorityRisk": "HIGH if treated as current BANHALMI photography service",
+        "requiredAction": "Keep HIPStudio-only historical evidence unless a separate Person-level role source justifies inclusion."
+      },
+      {
+        "historicalUrl": "https://www.hipstudio.hu/copywriter",
+        "period": "verified by 2021-02",
+        "historicalIntent": "copywriting",
+        "historicalService": "creative communication / copywriting",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
+        "searchEvidence": [
+          "2021-02 report: +2 web clicks month-over-month"
+        ],
+        "currentDestination": null,
+        "redirectStatus": "CURRENT-STATE-NOT-ASSERTED",
+        "canonicalCurrentPage": null,
+        "authorityRisk": "HIGH if projected as current BANHALMI capability without attribution",
+        "requiredAction": "Keep HIPStudio-only historical evidence; no current service binding."
+      },
+      {
+        "historicalUrl": "https://www.hipstudio.hu/karrier",
+        "period": "verified by 2021-02",
+        "historicalIntent": "career/recruitment",
+        "historicalService": "organisation/recruitment",
+        "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
+        "searchEvidence": [
+          "2021-02 report: +1 web click month-over-month"
+        ],
+        "currentDestination": null,
+        "redirectStatus": "CURRENT-STATE-NOT-ASSERTED",
+        "canonicalCurrentPage": null,
+        "authorityRisk": "LOW authority value / high irrelevance to current services",
+        "requiredAction": "Retain only for organisational history; DO-NOT-BIND to BANHALMI services."
+      }
+    ]
   }
 }
