@@ -614,7 +614,13 @@
       "corroboration": [
         "Contemporaneous 2021 first-party correspondence with Samsung Electronics Hungary corroborates Samsung participation, The Frame display provision, logistics, naming/brand-book review and exhibition planning for the Tihany digital photography project."
       ],
-      "relationshipEvidence": "FIRST-PARTY-CORRESPONDENCE-CORROBORATED"
+      "relationshipEvidence": "FIRST-PARTY-CORRESPONDENCE-CORROBORATED",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "becsi-naplo-digitalization-2025",
@@ -627,7 +633,13 @@
         "generalAuthority"
       ],
       "context": "Bécsi Napló reports Bánhalmi Norbert giving practical advice on digitalization and fundraising to Austrian-Hungarian associations.",
-      "guardrail": "Use as strategy/digital communication authority; not as photography-service proof."
+      "guardrail": "Use as strategy/digital communication authority; not as photography-service proof.",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "SECONDARY-MENTION"
+      ]
     },
     {
       "id": "amcham-team-portrait-credit",
@@ -705,7 +717,12 @@
         "visualStrategy"
       ],
       "context": "The official BANHALMI Photography LinkedIn company page describes the professional service scope and publishes event/portrait case context, including SelectUSA, AmCham and The Recursive cover usage.",
-      "guardrail": "Treat as first-party context only; external validation must come from the linked independent publisher, institutional post or credited use."
+      "guardrail": "Treat as first-party context only; external validation must come from the linked independent publisher, institutional post or credited use.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "low-independent-authority",
+      "evidenceType": [
+        "FIRST-PARTY"
+      ]
     },
     {
       "id": "jazzy-dr-jazzy-banhalmi-2024",
@@ -720,7 +737,13 @@
         "generalAuthority"
       ],
       "context": "The 30-minute 2024 interview discusses Bánhalmi's photography, work with breast-cancer survivors, sensitivity in the photographic process, exhibitions and a Vienna youth photo/film education initiative.",
-      "guardrail": "Use as editorial/interview evidence of artistic, portrait and educational practice; not as a client or endorsement claim."
+      "guardrail": "Use as editorial/interview evidence of artistic, portrait and educational practice; not as a client or endorsement claim.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "kultura-hirado-origo-the-frame-2021",
@@ -753,7 +776,13 @@
       ],
       "context": "Independent cultural/news coverage documents The Frame concept attributed to Bánhalmi Norbert, the digital exhibition format and contemporary professional context; the coverage also reports his Budapest photography role with the Dutch national team during UEFA EURO 2020/2021.",
       "evidenceSummary": "Independent cultural/news coverage documents The Frame concept attributed to Bánhalmi Norbert, the digital exhibition format and professional context, with multiple independent/syndicated sources.",
-      "guardrail": "Use the project and published biographical statements as editorial evidence. Do not expand the reported Dutch-team role beyond what the sources explicitly state."
+      "guardrail": "Use the project and published biographical statements as editorial evidence. Do not expand the reported Dutch-team role beyond what the sources explicitly state.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "blikk-raba-timea-portrait-2024",
@@ -773,7 +802,13 @@
       ],
       "context": "Blikk reports that Rába Tímea sat for a portrait series by photographer Bánhalmi Norbert.",
       "evidenceSummary": "Independent editorial coverage directly names Bánhalmi Norbert as the photographer of a portrait series featuring Rába Tímea.",
-      "guardrail": "Portrait capability evidence only; do not infer endorsement or ongoing client relationship."
+      "guardrail": "Portrait capability evidence only; do not infer endorsement or ongoing client relationship.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PHOTO-CREDIT"
+      ]
     },
     {
       "id": "origo-gonczi-rebeka-photo-credit-2023",
@@ -796,6 +831,12 @@
       "guardrail": "Publication/photo-credit evidence only; no subject client or endorsement claim.",
       "corroboratingUrls": [
         "https://demokrata.hu/sport/szenvedely-es-szerelem-szazados-a-legfiatalabb-noi-zsoke-687127/"
+      ],
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
       ]
     },
     {
@@ -886,7 +927,13 @@
       ],
       "context": "Signed Bánhalmi Norbert technical article discusses live-event shooting constraints and model/portrait work with Olympus equipment.",
       "evidenceSummary": "Professional specialist publication demonstrates authored expertise in live-event and portrait photography.",
-      "guardrail": "Authored expertise evidence; not independent evaluation of service quality."
+      "guardrail": "Authored expertise evidence; not independent evaluation of service quality.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "FIRST-PARTY"
+      ]
     },
     {
       "id": "fotosviadal-speaker-2021",
@@ -939,7 +986,12 @@
       ],
       "context": "Trustindex aggregates Google reviews for the Bánhalmi Norbert photography profile, including recent reviews describing CV portrait and professional portrait experiences.",
       "evidenceSummary": "Third-party aggregation of customer reviews provides service-experience trust evidence; live counts/ratings are dynamic and must not be hard-coded without fresh readback.",
-      "guardrail": "Do not treat the aggregator as an editorial endorsement; individual reviews are customer testimony and totals are time-sensitive."
+      "guardrail": "Do not treat the aggregator as an editorial endorsement; individual reviews are customer testimony and totals are time-sensitive.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "low-medium",
+      "evidenceType": [
+        "SECONDARY-MENTION"
+      ]
     },
     {
       "id": "vienna-family-network-business-member-2026",
@@ -964,7 +1016,12 @@
       ],
       "context": "Vienna Family Network lists Norbert Banhalmi/BANHALMI as a business member specialising in executive and leadership portrait photography and strategic visual positioning.",
       "evidenceSummary": "External Vienna business-network listing directly aligns the BANHALMI entity with executive portrait and visual-brand positioning services.",
-      "guardrail": "Membership/directory evidence only; do not infer endorsement by Vienna Family Network."
+      "guardrail": "Membership/directory evidence only; do not infer endorsement by Vienna Family Network.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE"
+      ]
     },
     {
       "id": "everness-speaker-workshop-2026",
@@ -1017,7 +1074,12 @@
       ],
       "context": "Third-party directory/review aggregator lists the Budapest photography studio and customer reviews. The live review corpus includes customer accounts explicitly discussing artistic-nude sessions, preparation, trust and the photographic experience.",
       "evidenceSummary": "Additional external review aggregation supports local service trust. Counts and ratings are dynamic and must not be hard-coded without current readback.",
-      "guardrail": "Aggregator/customer-review evidence, not independent editorial endorsement. Individual artistic-nude accounts are customer testimony, not clinical or independent editorial evidence."
+      "guardrail": "Aggregator/customer-review evidence, not independent editorial endorsement. Individual artistic-nude accounts are customer testimony, not clinical or independent editorial evidence.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "low-medium",
+      "evidenceType": [
+        "SECONDARY-MENTION"
+      ]
     },
     {
       "id": "rege-galeria-founder-curator",
@@ -1042,7 +1104,13 @@
       ],
       "context": "Rege Galéria identifies Bánhalmi Norbert as founder, curator and photo artist.",
       "evidenceSummary": "Institutional role evidence supports curatorial, exhibition and visual-strategy authority.",
-      "guardrail": "Use the documented role as stated; do not infer ownership or unrelated commercial endorsement."
+      "guardrail": "Use the documented role as stated; do not infer ownership or unrelated commercial endorsement.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "low-independent-authority",
+      "evidenceType": [
+        "RELATED-PARTY",
+        "INSTITUTIONAL-EVIDENCE"
+      ]
     },
     {
       "id": "hipstudio-historical-profile",
@@ -1089,7 +1157,13 @@
       ],
       "context": "HIPStudio's current site states that the communication/creative brand was founded by Bánhalmi Norbert in 2006 and documents his historical role as founder-owner and photography/video professional lead. Current HIPStudio pages preserve service history across event, commercial, portrait/portfolio, video and brand communication, and explicitly separate HIPStudio, BANHALMI and Speier Viko as distinct present-day legal/professional entities. Current HIPStudio artistic-nude pages also identify Bánhalmi Norbert as a male artistic-nude photographer and state that Speier Viktória learned this photographic genre alongside/from him, preserving a related-party mentorship lineage.",
       "evidenceSummary": "Strong first-party/related-company evidence for long-term commercial photography, event-production and brand-communication experience, with explicit current entity separation.",
-      "guardrail": "Treat as related-company historical documentation, not independent press. Preserve the distinction between historical founder/owner role and the current separate HIPStudio and BANHALMI legal/professional entities. Do not infer that current HIPStudio clients are automatically BANHALMI clients. The artistic-nude mentorship statement is related-party evidence and must not be elevated to independent editorial validation."
+      "guardrail": "Treat as related-company historical documentation, not independent press. Preserve the distinction between historical founder/owner role and the current separate HIPStudio and BANHALMI legal/professional entities. Do not infer that current HIPStudio clients are automatically BANHALMI clients. The artistic-nude mentorship statement is related-party evidence and must not be elevated to independent editorial validation.",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "sourceStrength": "low-independent-authority",
+      "evidenceType": [
+        "RELATED-PARTY",
+        "FIRST-PARTY"
+      ]
     },
     {
       "id": "tinkmara-new-york-women-exhibition-2014",
@@ -1117,7 +1191,8 @@
       "evidenceSummary": "Strong international editorial evidence for New York exhibition history, portrait practice and cross-border artistic authority.",
       "guardrail": "Use as 2014 exhibition/interview evidence. Do not infer a permanent New York studio, current New York service location or institutional endorsement by the Hungarian House beyond the documented exhibition.",
       "verificationStatus": "LIVE-VERIFIED",
-      "evidenceType": "INTERVIEW"
+      "evidenceType": "INTERVIEW",
+      "sourceStrength": "high"
     },
     {
       "id": "zarido-artist-behind-business-1-2021",
@@ -1143,7 +1218,8 @@
       "evidenceSummary": "Independent specialist-photography interview supporting long-term professional experience, marketing background, event-documentation practice and New York exhibition history.",
       "guardrail": "Use as historical professional/interview evidence; quoted career claims should remain attributed to the interview where not independently corroborated.",
       "verificationStatus": "LIVE-VERIFIED",
-      "evidenceType": "INTERVIEW"
+      "evidenceType": "INTERVIEW",
+      "sourceStrength": "medium-high"
     },
     {
       "id": "zarido-artist-behind-business-2-2021",
@@ -1166,7 +1242,8 @@
       "evidenceSummary": "Specialist-photography editorial context for portrait and fine-art practice.",
       "guardrail": "Use as editorial/profile evidence; do not transform subjective interview framing into clinical or therapeutic claims.",
       "verificationStatus": "LIVE-VERIFIED",
-      "evidenceType": "INTERVIEW"
+      "evidenceType": "INTERVIEW",
+      "sourceStrength": "medium-high"
     },
     {
       "id": "zarido-artist-behind-business-3-ambassador-2021",
@@ -1190,7 +1267,8 @@
       "evidenceSummary": "Strong external corroboration of historical Olympus brand-ambassador and marketing/communications activity.",
       "guardrail": "Historical role evidence only; do not imply current Olympus/OM SYSTEM employment, exclusivity or endorsement without current verification.",
       "verificationStatus": "LIVE-VERIFIED",
-      "evidenceType": "INTERVIEW"
+      "evidenceType": "INTERVIEW",
+      "sourceStrength": "medium-high"
     },
     {
       "id": "zarido-the-frame-2021",
@@ -1213,7 +1291,13 @@
       ],
       "context": "Záridő independently covered the The Frame digital photography exhibition in Tihany, identifying Bánhalmi Norbert as curator and Olympus Hungary marketer and describing the digital exhibition concept using Samsung The Frame displays.",
       "evidenceSummary": "External specialist-media evidence for curatorial innovation, exhibition strategy and visual-communication work.",
-      "guardrail": "Use for the documented project and historical roles only; do not infer broader Samsung or Olympus endorsement beyond the project/context."
+      "guardrail": "Use for the documented project and historical roles only; do not infer broader Samsung or Olympus endorsement beyond the project/context.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "nlc-fifty-shades-of-woman-2015",
@@ -1236,7 +1320,8 @@
       "evidenceSummary": "Strong independent editorial evidence for portrait methodology, women/identity work and continuity between Budapest/Hungary and New York artistic projects.",
       "guardrail": "Use as editorial coverage and quoted photographic-method evidence; avoid overstating NLC as an endorsement.",
       "verificationStatus": "LIVE-VERIFIED",
-      "evidenceType": "PROJECT-COVERAGE"
+      "evidenceType": "PROJECT-COVERAGE",
+      "sourceStrength": "high"
     },
     {
       "id": "she-awakening-body-trust-cluster-2017",
@@ -1269,7 +1354,8 @@
       "serviceRelevance": [
         "generalAuthority"
       ],
-      "aggregateOnly": true
+      "aggregateOnly": true,
+      "sourceStrength": "high"
     },
     {
       "id": "turizmus-wiener-kaiser-wiesn-credit-2026",
@@ -1317,7 +1403,13 @@
       ],
       "context": "Turizmus Online publishes imagery from the Wiener Kaiser Wiesn with explicit Fotó: Bánhalmi Norbert credit.",
       "evidenceSummary": "Independent tourism-industry publication evidence for event/editorial photography in Vienna.",
-      "guardrail": "Publication/photo-credit evidence; not proof of a direct contract with every organization mentioned in the article."
+      "guardrail": "Publication/photo-credit evidence; not proof of a direct contract with every organization mentioned in the article.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "honvedelem-hososz-event-credit-2026",
@@ -1364,7 +1456,13 @@
       ],
       "context": "Kiskegyed's 2025 interview covers Bánhalmi's career, New York exhibition history, portrait/fine-art practice and historical Olympus/OM SYSTEM ambassador role.",
       "evidenceSummary": "Broad independent career-profile evidence spanning international exhibition, portrait practice and brand-ambassador history.",
-      "guardrail": "Interview contains first-person career statements; keep them attributed where independent corroboration is not available. Do not treat subjective claims such as 'world-famous' as an objective system label."
+      "guardrail": "Interview contains first-person career statements; keep them attributed where independent corroboration is not available. Do not treat subjective claims such as 'world-famous' as an objective system label.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "vehir-mas-kepp-mas-2024",
@@ -1385,7 +1483,13 @@
       ],
       "context": "VEHIR reports that Bánhalmi Norbert was commissioned to create the photographs for the MÁS/KÉPp/MÁS project with families and children with disabilities.",
       "evidenceSummary": "Independent editorial evidence for sensitive, socially focused portrait/fine-art project work.",
-      "guardrail": "Use as project/portrait evidence; avoid therapeutic or medical-effect claims."
+      "guardrail": "Use as project/portrait evidence; avoid therapeutic or medical-effect claims.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "glamour-raba-timea-photo-credit-2024",
@@ -1464,7 +1568,13 @@
       ],
       "context": "W by Roadster credits the article photography of Bánhalmi Kata to Bánhalmi Norbert.",
       "evidenceSummary": "Independent contemporary editorial photo credit supporting portrait and personal-brand imagery.",
-      "guardrail": "Photo-credit evidence only; do not infer endorsement or recurring publication relationship."
+      "guardrail": "Photo-credit evidence only; do not infer endorsement or recurring publication relationship.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ]
     },
     {
       "id": "vehir-ai-illusions-2023",
@@ -1491,6 +1601,12 @@
       "corroboratingUrls": [
         "https://veszpremkukac.hu/kiallitas-az-internet-hazugsagai/",
         "https://likebalaton.hu/telepules/tihany/programok/digitalis-illuziok-a-valosag-hamis-arcai-generativ-art-kiallitas-289762/"
+      ],
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
       ]
     },
     {
@@ -1512,7 +1628,13 @@
       ],
       "context": "BitcoinBázis profiles Bánhalmi Norbert's fine-art/artistic-nude work in an NFT/digital-art context.",
       "evidenceSummary": "Independent specialist-media evidence for digital-art experimentation and fine-art photography.",
-      "guardrail": "Use for artistic/digital-innovation context only; do not imply investment expertise or financial endorsement."
+      "guardrail": "Use for artistic/digital-innovation context only; do not imply investment expertise or financial endorsement.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "art-to-go-olympus-starbucks-2021",
@@ -1543,6 +1665,12 @@
       "corroboration": [
         "Záridő's 2021 specialist-photography feature independently describes Bánhalmi Norbert as the originator of the project concept, Olympus ambassador and Olympus marketing adviser, and documents Starbucks/Olympus/HPIX participation.",
         "A contemporaneous Google Alert dated 2021-10-07 preserves the Metropol article title/URL and snippet identifying Bánhalmi Norbert as Olympus ambassador in the Művészet Elvitelre fundraising project."
+      ],
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "SECONDARY-MENTION"
       ]
     },
     {
@@ -1566,7 +1694,8 @@
       ],
       "context": "SHE.hu interview directly identifies Bánhalmi Norbert and documents his subject-led portrait process, pre-shoot conversation, comfort-building and an example of a CV portrait.",
       "evidenceSummary": "Independent editorial interview supporting portrait-process expertise and sensitive subject direction.",
-      "guardrail": "Use as editorial evidence for photographic process and portrait capability. Do not turn subjective claims about confidence or life effects into therapeutic, psychological or medical efficacy claims."
+      "guardrail": "Use as editorial evidence for photographic process and portrait capability. Do not turn subjective claims about confidence or life effects into therapeutic, psychological or medical efficacy claims.",
+      "sourceStrength": "high"
     },
     {
       "id": "she-awakening-project-coverage-2017",
@@ -1590,7 +1719,8 @@
       ],
       "context": "SHE.hu directly names Bánhalmi Norbert and documents the Ébredés - az Új kezdet! exhibition, its artistic-nude photographs and the related book/project context.",
       "evidenceSummary": "Independent project coverage for fine-art, artistic-nude and exhibition authority.",
-      "guardrail": "Use for the documented artistic project and photographic authorship. Medical, causal or therapeutic assertions in participant/editorial narrative are not BANHALMI service claims."
+      "guardrail": "Use for the documented artistic project and photographic authorship. Medical, causal or therapeutic assertions in participant/editorial narrative are not BANHALMI service claims.",
+      "sourceStrength": "high"
     },
     {
       "id": "she-artistic-nude-participant-account-2017",
@@ -1613,7 +1743,8 @@
       ],
       "context": "A SHE.hu first-person participant account documents the experience of being photographed for the Ébredés project and refers directly to Norbert during the image-review process.",
       "evidenceSummary": "Published participant evidence for sensitive photographic process and artistic-nude project context.",
-      "guardrail": "Participant testimony is subjective experience, not clinical evidence. Do not repeat or imply therapeutic efficacy."
+      "guardrail": "Participant testimony is subjective experience, not clinical evidence. Do not repeat or imply therapeutic efficacy.",
+      "sourceStrength": "medium-high"
     },
     {
       "id": "she-chemo-sex-project-coverage-2017",
@@ -1637,7 +1768,8 @@
       ],
       "context": "SHE.hu coverage explicitly identifies the Ébredés project and Bánhalmi Norbert in the context of artistic-nude photographs of women affected by cancer and the exhibition.",
       "evidenceSummary": "Independent editorial evidence for the fine-art project, exhibition and sensitive photographic subject matter.",
-      "guardrail": "Use only for the documented project and editorial context; do not infer medical benefit or therapeutic outcome."
+      "guardrail": "Use only for the documented project and editorial context; do not infer medical benefit or therapeutic outcome.",
+      "sourceStrength": "high"
     },
     {
       "id": "she-awakening-reception-2017",
@@ -1659,7 +1791,8 @@
       ],
       "context": "SHE.hu follow-up coverage discusses the Ébredés project and its human stories as part of the exhibition/publication cycle.",
       "evidenceSummary": "Additional independent editorial footprint for the longevity and public reception of the Ébredés project.",
-      "guardrail": "Use as project-reception evidence only; no medical or therapeutic efficacy claim."
+      "guardrail": "Use as project-reception evidence only; no medical or therapeutic efficacy claim.",
+      "sourceStrength": "high"
     },
     {
       "id": "kreativ-young-lions-speier-mentor-2024",
@@ -1683,7 +1816,8 @@
       ],
       "context": "Kreatív Online quotes strategist and photographer Speier Vikó stating that, with Bánhalmi Norbert's mentoring, she began building her personal brand in 2018 and planned her first exhibition campaign.",
       "evidenceSummary": "Independent trade-publication evidence that a third-party creative professional attributes early personal-brand and campaign development to Bánhalmi Norbert's mentoring.",
-      "guardrail": "Treat as a third-party attributed mentoring relationship and professional-authority signal. Do not convert it into an employment, agency-client, formal consultancy or endorsement claim."
+      "guardrail": "Treat as a third-party attributed mentoring relationship and professional-authority signal. Do not convert it into an employment, agency-client, formal consultancy or endorsement claim.",
+      "sourceStrength": "high"
     },
     {
       "id": "milcclub-now-or-never-model-workshop-2020",
@@ -1715,7 +1849,8 @@
       ],
       "context": "Olympus MILC Club's 2020 editorial coverage explicitly identifies Bánhalmi Norbert as a professional photographer and Olympus ambassador, documents his model-photography presentation/workshop and describes his portrait approach around self-image and photographer responsibility.",
       "evidenceSummary": "Live specialist-brand-community coverage corroborates the historical Olympus ambassadorship and public teaching/expertise in model and portrait photography.",
-      "guardrail": "Historical ambassadorship and workshop evidence only. Do not imply current Olympus/OM SYSTEM employment, exclusivity, clinical/therapeutic qualification or broader endorsement."
+      "guardrail": "Historical ambassadorship and workshop evidence only. Do not imply current Olympus/OM SYSTEM employment, exclusivity, clinical/therapeutic qualification or broader endorsement.",
+      "sourceStrength": "medium-high"
     },
     {
       "id": "milcclub-journey-to-earth-center-2020",
@@ -1744,7 +1879,8 @@
       ],
       "context": "A signed Bánhalmi Norbert article on Olympus MILC Club documents a cave-photography field test/project and links its accompanying video, providing authored specialist-photography evidence.",
       "evidenceSummary": "Live signed specialist publication supports technical/creative photography expertise and historical participation in the Olympus photography community.",
-      "guardrail": "Authored/first-party expertise hosted by the specialist community; do not treat it as independent evaluation of service quality or as proof of current ambassadorship by itself."
+      "guardrail": "Authored/first-party expertise hosted by the specialist community; do not treat it as independent evaluation of service quality or as proof of current ambassadorship by itself.",
+      "sourceStrength": "medium-high"
     },
     {
       "id": "tixa-besmart-visual-message-workshop-2017",
@@ -1778,7 +1914,8 @@
       ],
       "context": "The public 2017 workshop programme names Bánhalmi Norbert as the speaker and explicitly connects his teaching to profile/CV imagery, visual communication and sensitive artistic-nude/portfolio photography.",
       "evidenceSummary": "External programme evidence for public teaching authority spanning portrait, visual-message strategy and artistic-nude photography.",
-      "guardrail": "Speaker/programme evidence only; do not transform promotional wording into independent critical assessment or therapeutic claims."
+      "guardrail": "Speaker/programme evidence only; do not transform promotional wording into independent critical assessment or therapeutic claims.",
+      "sourceStrength": "medium-high"
     },
     {
       "id": "veol-awakening-oncology-exhibition-2018",
@@ -1811,7 +1948,8 @@
       ],
       "context": "VEOL independently documents the presentation of the Elek Erika–Bánhalmi Norbert Ébredés – Új kezdet book and the installation of photographs of women recovering from cancer at the Csolnoky Ferenc Hospital Oncology Centre in Veszprém.",
       "evidenceSummary": "Independent local-news and institutional-context evidence for the Ébredés fine-art/portrait project and its exhibition inside a hospital oncology centre.",
-      "guardrail": "Use only as project, exhibition and cultural/institutional-context evidence. Do not convert the article, participant stories or exhibition into medical efficacy, therapeutic treatment or health-outcome claims."
+      "guardrail": "Use only as project, exhibition and cultural/institutional-context evidence. Do not convert the article, participant stories or exhibition into medical efficacy, therapeutic treatment or health-outcome claims.",
+      "sourceStrength": "high"
     },
     {
       "id": "origo-gastro-photo-contest-2017",
@@ -1844,7 +1982,8 @@
       "guardrail": "Use as professional judging and visual-strategy authority only. Do not infer that Bánhalmi was the campaign photographer, a long-term client/partner of The Famous Grouse, or endorsed the brand beyond the documented judging role.",
       "corroboratingUrls": [
         "http://kreativ.hu/cikk/whisky_inspiralta_gasztrofotoverseny_indult"
-      ]
+      ],
+      "sourceStrength": "high"
     },
     {
       "id": "orf-bmi-mentorprogram-2025",
