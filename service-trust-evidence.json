@@ -3236,8 +3236,14 @@
     },
     {
       "id": "istyle-magazine-historical-articles",
-      "reason": "User reports historical iSTYLE.hu / iSTYLE Magazin articles. No stable indexed URL or existing canonical registry entry has yet been recovered.",
-      "status": "historical-source-recovery-required"
+      "reason": "The recovered iSTYLE correspondence proves a pitch/proposal only, not publication. Keep iSTYLE separate from iMagazin. The old iMagazin article is independently ARCHIVE-VERIFIED from a preserved full PDF.",
+      "status": "no-publication-yet-proven",
+      "verificationStatus": "HISTORICAL-SOURCE-RECOVERY-REQUIRED",
+      "provenance": [
+        "A 2023-01-30 sent email to bolt@istyle.hu proposes future photography/mobile-imaging educational articles and cites an older iMagazin article as a prior example.",
+        "No iSTYLE publication URL, editor acceptance, byline, archive snapshot or publication confirmation has yet been recovered."
+      ],
+      "guardrail": "Do not merge iSTYLE and iMagazin into one publisher/entity relationship without separate evidence. Do not treat the 2023 outreach as a published article, partnership or endorsement."
     },
     {
       "id": "google-alert-eszakhirnok-she-republication-2026",
@@ -3491,6 +3497,72 @@
       ],
       "reason": "The Google Alert was triggered in the same alert digest as Rege Galéria items, but no source evidence currently connects this article to Bánhalmi Norbert.",
       "guardrail": "Do not bind or count as authority evidence unless the original article or archived copy later reveals a direct Bánhalmi attribution."
+    },
+    {
+      "id": "apple-workshop-demo-clips-2022",
+      "title": "Apple workshop / official store demo clips — research lead",
+      "publisher": "Unknown / Apple-related workshop context",
+      "url": "",
+      "verificationStatus": "UNVERIFIED-FIRST-PARTY-LEAD",
+      "status": "external-source-recovery-required",
+      "evidenceType": [
+        "FIRST-PARTY",
+        "UNVERIFIED"
+      ],
+      "classification": [
+        "Apple workshop",
+        "mobile photography",
+        "video/demo content",
+        "technology authority"
+      ],
+      "services": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "A 2023-01-30 sent pitch to iSTYLE states that videos made at Apple workshops in the previous year were included among official store demo snippets.",
+        "The same message preserves a Facebook video link as a lead, but no Apple/iSTYLE/retail official page has yet been independently recovered."
+      ],
+      "reason": "Potentially valuable technology/visual-workflow authority, but currently supported only by first-party correspondence.",
+      "guardrail": "Do not service-bind and do not claim Apple endorsement, employment, partnership or official Apple creator status until a direct Apple/iSTYLE/store source or archived official page is recovered."
+    },
+    {
+      "id": "samsung-galaxy-s22-ultra-test-2022",
+      "title": "Samsung Galaxy S22 Ultra photography/video testing — research lead",
+      "publisher": "Unknown / Samsung-related test context",
+      "url": "",
+      "verificationStatus": "UNVERIFIED-FIRST-PARTY-LEAD",
+      "status": "external-source-recovery-required",
+      "evidenceType": [
+        "FIRST-PARTY",
+        "UNVERIFIED"
+      ],
+      "classification": [
+        "Samsung Galaxy S22 Ultra",
+        "mobile photography testing",
+        "technology workflow",
+        "video education"
+      ],
+      "services": [
+        "visualStrategy",
+        "brand",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "visualStrategy",
+        "brand",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "A 2023-01-30 sent pitch to iSTYLE states that Bánhalmi Norbert had been asked to test the Samsung Galaxy S22 Ultra and create videos about recommended usage.",
+        "Separate 2021-2022 Samsung correspondence already corroborates other Samsung/The Frame projects, but not yet this S22 Ultra testing claim."
+      ],
+      "reason": "Potentially useful technology/brand evidence, but no public Samsung or independent source has yet been recovered for this specific S22 Ultra testing activity.",
+      "guardrail": "Do not service-bind and do not infer Samsung ambassadorship, employment or endorsement from the first-party claim. Keep separate from the independently documented Samsung × The Frame project."
     }
   ],
   "interpretationRules": [
