@@ -3191,7 +3191,7 @@
       "id": "tripont-problog-3182-archived",
       "url": "https://web.archive.org/web/20181107032149/http://www.tripont.hu/problog/3182/a_legkisebbel_a_nagyok_kozott",
       "reason": "Exact Wayback URL is preserved in the canonical ART master-source database, and contemporaneous Gmail independently preserves the original Tripont URL/title. Article body still requires direct archive recovery before service-authority projection.",
-      "status": "archive-body-verification-required",
+      "status": "final-published-url-verified-body-recovery-required",
       "canonicalArtSourceId": "wikipedia-source-039",
       "canonicalArtCatalogueNumber": "BAS-0004",
       "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
@@ -3201,23 +3201,38 @@
         "BANHALMI ART master source database",
         "2023 Gmail correspondence preserves the original Tripont URL/title",
         "Contemporaneous 2018-09-09 Gmail message preserves and shares the exact original Tripont Problog URL and article title 'A legkisebbel a nagyok között'.",
-        "A 2018-07-31 pre-publication message preserves draft URL 3180 'A legolcsóbb MILC-cel a profik közt'; correspondence on 2018-08-02 confirms the final published article moved to URL 3182 'A legkisebbel a nagyok között'."
+        "A 2018-07-31 pre-publication message preserves draft URL 3180 'A legolcsóbb MILC-cel a profik közt'; correspondence on 2018-08-02 confirms the final published article moved to URL 3182 'A legkisebbel a nagyok között'.",
+        "Contemporaneous 2018-07-31 Tripont editor correspondence preserves pre-publication draft URL 3180.",
+        "Contemporaneous 2018-08-02 correspondence explicitly states that Tripont chose the longer version, changed the title, and that the final article was published at URL 3182 'A legkisebbel a nagyok között'.",
+        "A later 2018-09-09 email independently re-shares the same 3182 final article URL/title."
       ],
       "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
-      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
-      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "verificationStatus": "CONTEMPORANEOUS-FINAL-PUBLISHER-URL-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "FIRST-PARTY"
+      ],
       "titleRecoveredFromSlug": "A legkisebbel a nagyok között",
       "services": [
         "portrait",
         "generalAuthority"
       ],
-      "guardrail": "Exact archived Tripont source is canonically catalogued and the historical title/URL is independently preserved in Gmail, but the article body still requires archive verification before article-specific claims.",
+      "guardrail": "Do not label full ARCHIVE-VERIFIED until the final published body is recovered. Use only as historical professional-publication provenance; do not infer current Olympus/OM SYSTEM employment, exclusivity or endorsement.",
       "supersededDraftUrls": [
         "http://www.tripont.hu/problog/3180/a_legolcsobb_milccel_a_profik_kozt"
       ],
       "sameStoryAliases": [
         "tripont-problog-3180-draft"
-      ]
+      ],
+      "datePublished": "2018-08-02",
+      "classification": [
+        "MILC/micro-four-thirds professional workflow",
+        "Olympus system",
+        "professional photography",
+        "Tripont editorial publication"
+      ],
+      "sourceStrength": "high historical provenance",
+      "evidenceSummary": "Contemporaneous publisher/editor correspondence verifies the editorial workflow and exact final published Tripont URL/title. The final article body itself is still unavailable in the current environment."
     },
     {
       "id": "istyle-magazine-historical-articles",
