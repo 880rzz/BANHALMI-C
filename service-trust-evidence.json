@@ -877,14 +877,27 @@
     },
     {
       "id": "hipstudio-historical-profile",
-      "title": "HIPStudio company profile — Bánhalmi Norbert",
+      "title": "HIPStudio — founder and historical professional role",
       "publisher": "HIPStudio",
-      "url": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
-      "evidenceKind": "related-company historical professional profile",
+      "url": "https://www.hipstudio.hu/kapcsolat",
+      "corroboratingUrls": [
+        "https://www.hipstudio.hu/impresszum",
+        "https://www.hipstudio.hu/",
+        "https://www.hipstudio.hu/_files/ugd/b0aee1_6a982328d7fb44948c05188d2cd35bec.pdf",
+        "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+        "https://www.hipstudio.hu/reklam-fotozas-budapest",
+        "https://www.hipstudio.hu/portfolio-fotozas-budapest"
+      ],
+      "evidenceKind": "related-company founder and historical professional-role documentation",
       "classification": [
-        "historical professional role",
-        "event advertising portrait experience",
-        "personal branding education"
+        "founder",
+        "former owner/professional lead",
+        "brand communication",
+        "event photography",
+        "commercial photography",
+        "portrait/portfolio photography",
+        "video/content production",
+        "Budapest professional history"
       ],
       "services": [
         "portrait",
@@ -900,9 +913,9 @@
         "visualStrategy",
         "generalAuthority"
       ],
-      "context": "HIPStudio profile identifies Bánhalmi Norbert as founder-owner and photography/video professional lead, describing experience across event, advertising, portrait and portfolio photography and personal-brand education.",
-      "evidenceSummary": "Useful historical professional-role evidence, but it is a related-company source rather than independent press.",
-      "guardrail": "Treat as first-party/related-company historical documentation, not independent third-party validation."
+      "context": "HIPStudio's current site states that the communication/creative brand was founded by Bánhalmi Norbert in 2006 and documents his historical role as founder-owner and photography/video professional lead. Current HIPStudio pages preserve service history across event, commercial, portrait/portfolio, video and brand communication, and explicitly separate HIPStudio, BANHALMI and Speier Viko as distinct present-day legal/professional entities.",
+      "evidenceSummary": "Strong first-party/related-company evidence for long-term commercial photography, event-production and brand-communication experience, with explicit current entity separation.",
+      "guardrail": "Treat as related-company historical documentation, not independent press. Preserve the distinction between historical founder/owner role and the current separate HIPStudio and BANHALMI legal/professional entities. Do not infer that current HIPStudio clients are automatically BANHALMI clients."
     },
     {
       "id": "tinkmara-new-york-women-exhibition-2014",
