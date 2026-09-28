@@ -158,7 +158,8 @@
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
-        "wko-vienna-professional-photography-current"
+        "wko-vienna-professional-photography-current",
+        "samsung-galaxy-s22-ultra-test-2022"
       ],
       "movingImageEvidenceIds": [
         "yt-m1-kunszt-portrait-psychology",
@@ -354,7 +355,8 @@
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
-        "wko-vienna-professional-photography-current"
+        "wko-vienna-professional-photography-current",
+        "samsung-galaxy-s22-ultra-test-2022"
       ],
       "movingImageEvidenceIds": [
         "yt-petofi-digital-exhibition",
@@ -3529,40 +3531,6 @@
       ],
       "reason": "Potentially valuable technology/visual-workflow authority, but currently supported only by first-party correspondence.",
       "guardrail": "Do not service-bind and do not claim Apple endorsement, employment, partnership or official Apple creator status until a direct Apple/iSTYLE/store source or archived official page is recovered."
-    },
-    {
-      "id": "samsung-galaxy-s22-ultra-test-2022",
-      "title": "Samsung Galaxy S22 Ultra photography/video testing — research lead",
-      "publisher": "Unknown / Samsung-related test context",
-      "url": "",
-      "verificationStatus": "UNVERIFIED-FIRST-PARTY-LEAD",
-      "status": "external-source-recovery-required",
-      "evidenceType": [
-        "FIRST-PARTY",
-        "UNVERIFIED"
-      ],
-      "classification": [
-        "Samsung Galaxy S22 Ultra",
-        "mobile photography testing",
-        "technology workflow",
-        "video education"
-      ],
-      "services": [
-        "visualStrategy",
-        "brand",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "visualStrategy",
-        "brand",
-        "generalAuthority"
-      ],
-      "provenance": [
-        "A 2023-01-30 sent pitch to iSTYLE states that Bánhalmi Norbert had been asked to test the Samsung Galaxy S22 Ultra and create videos about recommended usage.",
-        "Separate 2021-2022 Samsung correspondence already corroborates other Samsung/The Frame projects, but not yet this S22 Ultra testing claim."
-      ],
-      "reason": "Potentially useful technology/brand evidence, but no public Samsung or independent source has yet been recovered for this specific S22 Ultra testing activity.",
-      "guardrail": "Do not service-bind and do not infer Samsung ambassadorship, employment or endorsement from the first-party claim. Keep separate from the independently documented Samsung × The Frame project."
     }
   ],
   "interpretationRules": [
@@ -3759,6 +3727,45 @@
       ],
       "context": "The exact MFVSZ membership URL is preserved in the ART master source database and is also used as the reference for the World Association of Hungarian Photographers membership statement in Wikidata.",
       "guardrail": "Treat as membership evidence, not award or endorsement. Direct live page retrieval currently fails, so do not label LIVE-VERIFIED until the institutional page is directly readable again."
+    },
+    {
+      "id": "samsung-galaxy-s22-ultra-test-2022",
+      "title": "Samsung Galaxy S22 Ultra photography training/content project",
+      "publisher": "Samsung Electronics Hungary / Samsung partner project correspondence",
+      "relationshipType": "verified private corporate content/training collaboration",
+      "subjectOrganization": "Samsung Electronics Hungary",
+      "person": "Norbert Bánhalmi",
+      "verificationStatus": "PRIVATE-CORPORATE-CORRESPONDENCE-VERIFIED",
+      "evidenceStrength": "high-provenance-private",
+      "sourceQuality": "direct corporate correspondence from samsung.com / partner.samsung.com",
+      "evidenceType": [
+        "RELATED-PARTY",
+        "PROJECT-COVERAGE",
+        "INSTITUTIONAL-EVIDENCE"
+      ],
+      "classification": [
+        "mobile photography training",
+        "Samsung Galaxy S22 Ultra",
+        "retail staff education",
+        "content production",
+        "creative testing",
+        "sponsored content compliance"
+      ],
+      "services": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Direct 2022 correspondence with Samsung Electronics Hungary and Samsung partner addresses documents a planned and executed programme in which Bánhalmi Norbert created ten photography-training/tutorial videos for Samsung retail staff around the Galaxy S22 Ultra. Samsung communication staff reviewed the videos, provided brand/legal guidance, supplied the device and required sponsored-content disclosures for public-facing material.",
+      "evidenceSummary": "Direct corporate provenance for a Samsung mobile-photography education/content project, supporting brand-content and visual-communication authority.",
+      "privateProvenance": true,
+      "publicSummaryAllowed": "A 2022 Samsung Electronics Hungary project involved Bánhalmi Norbert producing photography-training/tutorial content around the Galaxy S22 Ultra; private corporate correspondence verifies the project.",
+      "guardrail": "Do not expose private correspondence, personal contact details, attachments or internal briefs. Do not infer Samsung employment, ambassadorship, exclusivity or broad endorsement. Distinguish this S22 Ultra training/content project from the separately documented Samsung × The Frame exhibition collaboration."
     }
   ],
   "movingImageEvidence": [
