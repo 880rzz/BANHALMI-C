@@ -3509,13 +3509,14 @@
     {
       "id": "coca-cola-coke-club-reference-2008-2012",
       "title": "Personal Recommendation — Coke Club official photographer, 2008–2012",
-      "publisher": "The Coca-Cola Company / Coca-Cola Hungary historical reference document",
-      "datePublished": "2018-05-28",
-      "evidenceKind": "signed historical corporate reference / primary document",
-      "verificationStatus": "ARCHIVE-VERIFIED",
+      "publisher": "Coca-Cola Hungary historical reference document",
+      "datePublished": "2013-05-28",
+      "evidenceKind": "signed historical corporate reference / private primary document",
+      "verificationStatus": "PRIVATE-CORPORATE-CORRESPONDENCE-VERIFIED",
       "evidenceType": [
         "INSTITUTIONAL-EVIDENCE",
-        "PROJECT-COVERAGE"
+        "PROJECT-COVERAGE",
+        "RELATED-PARTY"
       ],
       "classification": [
         "Coke Club",
@@ -3538,15 +3539,17 @@
         "visualStrategy",
         "generalAuthority"
       ],
-      "context": "A signed Coca-Cola-branded recommendation dated 28 May 2018 from Attila Fulop, identified in the letter as former PR Manager of Coca-Cola Hungary, states that Norbert Banhalmi worked as the official photographer at Coke Club cultural and music festivals between 2008 and 2012. It further states that his photos and videos supported Coca-Cola Hungary press communication.",
-      "evidenceSummary": "Primary historical corporate-reference evidence for multi-year Coke Club event photography and photo/video communication work connected to Coca-Cola Hungary.",
-      "sourceStrength": "high-primary-document",
+      "context": "A signed Coca-Cola-branded historical recommendation dated 28 May 2013 states that Norbert Banhalmi worked as the official photographer at Coke Club cultural and music festivals between 2008 and 2012 and that his photos and videos supported Coca-Cola Hungary press communication. The document was recovered from contemporaneous private records and visually verified.",
+      "evidenceSummary": "Direct private corporate provenance for multi-year Coke Club event photography and photo/video communication work connected to Coca-Cola Hungary.",
+      "sourceStrength": "high-provenance-private",
       "corroboratingUrls": [
         "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
         "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
         "https://youtube.com/playlist?list=PLwsdxt-KFeDiXfxb2_mKQLcaNhQAvxUQW"
       ],
-      "guardrail": "Scope the 'official photographer' claim specifically to the Coke Club cultural and music festivals in 2008–2012 as stated in the signed historical recommendation. Do not generalize this to being the official photographer of The Coca-Cola Company/Coca-Cola Hungary overall, a current relationship, employment, endorsement, exclusivity, or authorship of Coca-Cola brand strategy. The press-communication statement supports Brand/Visual Strategy context only at communication-production level."
+      "guardrail": "Private historical provenance. Do not expose the private attachment or correspondence. Scope the 'official photographer' claim specifically to Coke Club cultural and music festivals in 2008–2012. Do not generalize this to being the official photographer of The Coca-Cola Company/Coca-Cola Hungary overall, a current relationship, employment, endorsement, exclusivity, or authorship of Coca-Cola brand strategy. The press-communication statement supports Brand/Visual Strategy context only at communication-production level.",
+      "privateProvenance": true,
+      "publicSummaryAllowed": "A historical Coca-Cola Hungary reference verifies that Norbert Bánhalmi worked as official photographer at Coke Club cultural and music festivals between 2008 and 2012 and produced photo/video material supporting press communication."
     }
   ],
   "pendingEvidenceCandidates": [
