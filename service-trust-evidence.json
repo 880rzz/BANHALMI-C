@@ -67,6 +67,19 @@
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
         "linkedin-michael-broenner-7388473288043225088"
+      ],
+      "movingImageEvidenceIds": [
+        "yt-echo-awakening",
+        "yt-m1-kunszt-portrait-psychology",
+        "yt-petofi-i-became-a-father",
+        "yt-petofi-world-of-woman",
+        "yt-fifty-shades-woman",
+        "yt-awakening-interview-2",
+        "yt-milestones56-newyork",
+        "yt-retouching-cover-ideals",
+        "yt-awakening-reflection",
+        "yt-world-of-woman-interview",
+        "yt-complete-playlists"
       ]
     },
     "brand": {
@@ -99,6 +112,11 @@
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
+      ],
+      "movingImageEvidenceIds": [
+        "yt-m1-kunszt-portrait-psychology",
+        "yt-retouching-cover-ideals",
+        "yt-complete-playlists"
       ]
     },
     "event": {
@@ -125,6 +143,9 @@
         "linkedin-amcham-austria-7440773944644853760",
         "linkedin-amcham-austria-7434294584886710272",
         "linkedin-amcham-austria-cybersecurity-breakfast-20260918"
+      ],
+      "movingImageEvidenceIds": [
+        "yt-complete-playlists"
       ]
     },
     "fineArt": {
@@ -175,6 +196,18 @@
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
+      ],
+      "movingImageEvidenceIds": [
+        "yt-echo-awakening",
+        "yt-petofi-digital-exhibition",
+        "yt-petofi-i-became-a-father",
+        "yt-petofi-world-of-woman",
+        "yt-fifty-shades-woman",
+        "yt-awakening-interview-2",
+        "yt-milestones56-newyork",
+        "yt-awakening-reflection",
+        "yt-world-of-woman-interview",
+        "yt-complete-playlists"
       ]
     },
     "visualStrategy": {
@@ -200,6 +233,11 @@
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
+      ],
+      "movingImageEvidenceIds": [
+        "yt-petofi-digital-exhibition",
+        "yt-retouching-cover-ideals",
+        "yt-complete-playlists"
       ]
     }
   },
@@ -1012,6 +1050,169 @@
       "evidenceStrength": "high",
       "sourceQuality": "external international business/editorial profile",
       "guardrail": "Use specifically as historical Olympus/OM Digital Solutions ambassadorship and documented marketing/communications contribution. Do not imply current employment, exclusive representation, ownership, or present-day OM SYSTEM endorsement unless separately verified."
+    }
+  ],
+  "movingImageEvidence": [
+    {
+      "id": "yt-echo-awakening",
+      "title": "Awakening—The New Beginning! exhibition interview",
+      "publisher": "ECHO TV",
+      "url": "https://youtu.be/XI5WavAwFOY",
+      "services": [
+        "portrait",
+        "fineArt"
+      ],
+      "kind": "television interview / exhibition coverage",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-petofi-digital-exhibition",
+      "title": "Digital photography exhibition in Tihany",
+      "publisher": "Petőfi TV",
+      "url": "https://www.youtube.com/watch?v=cv4ylqkvNo4",
+      "services": [
+        "fineArt",
+        "visualStrategy"
+      ],
+      "kind": "television report / curatorial innovation",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-m1-kunszt-portrait-psychology",
+      "title": "Portrait photography and the psychology behind it",
+      "publisher": "M1 Kunszt",
+      "url": "https://www.youtube.com/watch?v=Fv3J_l8Mp_I",
+      "services": [
+        "portrait",
+        "brand"
+      ],
+      "kind": "television interview / portrait expertise",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-petofi-i-became-a-father",
+      "title": "I Became a Father",
+      "publisher": "Petőfi TV",
+      "url": "https://www.youtube.com/watch?v=dDfbT7JlDi4",
+      "services": [
+        "portrait",
+        "fineArt"
+      ],
+      "kind": "television report / social project",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-petofi-world-of-woman",
+      "title": "The World of Woman",
+      "publisher": "Petőfi TV",
+      "url": "https://www.youtube.com/watch?v=cuPzuMSXxMc",
+      "services": [
+        "portrait",
+        "fineArt"
+      ],
+      "kind": "television report / book and exhibition",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-fifty-shades-woman",
+      "title": "Fifty Shades of Woman — exhibition film",
+      "publisher": "YouTube verified archive",
+      "url": "https://www.youtube.com/watch?v=AfK29ELPWBY",
+      "services": [
+        "fineArt",
+        "portrait"
+      ],
+      "kind": "exhibition film",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-awakening-interview-2",
+      "title": "Awakening — The New Beginning! — exhibition interview",
+      "publisher": "YouTube verified archive",
+      "url": "https://www.youtube.com/watch?v=rkSlrX6kEyg",
+      "services": [
+        "portrait",
+        "fineArt"
+      ],
+      "kind": "exhibition interview",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-milestones56-newyork",
+      "title": "Milestones ’56 — portraits and life stories",
+      "publisher": "YouTube verified archive",
+      "url": "https://www.youtube.com/watch?v=Q9vXitVpo7Y",
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "kind": "New York portrait/exhibition documentary",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-retouching-cover-ideals",
+      "title": "Retouched cover photographs and impossible ideals",
+      "publisher": "YouTube verified archive",
+      "url": "https://www.youtube.com/watch?v=nyKyRWrtn7Q",
+      "services": [
+        "brand",
+        "visualStrategy",
+        "portrait"
+      ],
+      "kind": "visual culture / retouching discussion",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-budapest-photo-contest",
+      "title": "The fourth Budapest photography contest — report",
+      "publisher": "YouTube verified archive",
+      "url": "https://www.youtube.com/watch?v=ch66zZp4--w",
+      "services": [
+        "generalAuthority"
+      ],
+      "kind": "professional/public report",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-awakening-reflection",
+      "title": "Awakening — a twenty-year artistic reflection",
+      "publisher": "YouTube verified archive",
+      "url": "https://www.youtube.com/watch?v=npJ6YeYxQ64",
+      "services": [
+        "fineArt",
+        "portrait"
+      ],
+      "kind": "retrospective artistic interview",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-world-of-woman-interview",
+      "title": "Everything that can happen to a woman — interview",
+      "publisher": "Mindennap Könyv / YouTube",
+      "url": "https://www.youtube.com/watch?v=ZzZj0ompifI",
+      "services": [
+        "fineArt",
+        "portrait"
+      ],
+      "kind": "book/interview",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-complete-playlists",
+      "title": "Complete YouTube playlists",
+      "publisher": "Official BANHALMI YouTube archive",
+      "url": "https://www.youtube.com/@norbert.banhalmi/playlists",
+      "services": [
+        "portrait",
+        "brand",
+        "event",
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "kind": "official moving-image archive",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
     }
   ]
 }
