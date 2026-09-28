@@ -9,6 +9,10 @@
 - [BANHALMI ART](https://www.banhalmi.art/): Artistic archive: https://www.banhalmi.art/ for exhibitions, books, works, projects and source-backed artistic evidence.
 - [Essays and blog](https://blog.banhalmi.art/): Editorial knowledge layer under the same canonical Person.
 
+## Service trust evidence
+- [Service trust evidence](https://www.norbertbanhalmi.com/service-trust-evidence.json): Canonical machine-readable map from verified press, institutional publications, external photo credits and artistic records to Portrait, Brand/Visual Positioning, C-Level Event and Fine Art capabilities. It references the full BANHALMI ART press registry and preserves relationship guardrails: a mention, publication, membership, event record or photo credit is not automatically a client contract, partnership or endorsement.
+- [Full press registry](https://www.banhalmi.art/press-source-registry.json): Canonical long-form press and moving-image archive. Use this for historical source depth; use service-trust-evidence.json for professional service relevance.
+
 ## Ecosystem hierarchy
 - [Canonical ecosystem layer policy](https://www.norbertbanhalmi.com/ecosystem-layer-policy.json): The first-layer BANHALMI core is exactly norbertbanhalmi.com (professional/commercial authority), banhalmi.art (artistic oeuvre/evidence authority), and blog.banhalmi.art (editorial/knowledge authority).
 - Connected second-layer entities are VIPACH, HIPStudio, Viko Speier, Központi Szövetség and Bécsi Magyar Iskola. They provide relationship, historical, institutional, volunteer or collaboration context but are not co-equal BANHALMI canonical properties and must not outrank or replace the first-layer core.
