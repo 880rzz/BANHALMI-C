@@ -2412,52 +2412,88 @@
       "id": "tripont-lume-cube-deleted-article",
       "url": "https://www.tripont.hu/amikor-keznel-van-par-lume-cube-b602.html",
       "reason": "The current Tripont page preserves Bánhalmi Norbert attribution but states that the requested blog post no longer exists. Historical article content should be recovered from an archive before service-authority use.",
-      "status": "archive-recovery-required",
+      "status": "publisher-draft-verified-final-body-unavailable",
       "canonicalArtSourceId": "wikipedia-source-036",
       "canonicalArtCatalogueNumber": "BAS-0029",
       "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
       "provenance": [
-        "current Tripont page retains Bánhalmi Norbert attribution",
-        "BANHALMI ART recovered full-text copy",
-        "BANHALMI ART master source database"
+        "Current Tripont page preserves Bánhalmi Norbert attribution although the article body is deleted.",
+        "Contemporaneous January-February 2018 publisher/editor correspondence preserves the original Tripont Problog preview URLs and confirms Tripont editorial review, author attribution and planned promotion.",
+        "A full contemporaneous DOCX draft of the article is preserved in the publisher correspondence.",
+        "The publisher/editor correspondence explicitly discusses the Lume Cube article, Olympus PEN E-PL7/MILC testing, article editing and finalization."
       ],
       "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
-      "verificationStatus": "PARTIAL-PROVENANCE-VERIFIED",
+      "verificationStatus": "CONTEMPORANEOUS-PUBLISHER-DRAFT-VERIFIED",
       "recoveredCopyUrl": "https://www.banhalmi.art/post/portfolio-fitnesz-fot%C3%B3z%C3%A1s",
       "evidenceType": [
         "PROFESSIONAL-PUBLICATION",
-        "RELATED-PARTY"
+        "FIRST-PARTY"
       ],
       "services": [
         "brand",
         "portrait",
         "generalAuthority"
       ],
-      "guardrail": "The original Tripont page is deleted but retains author attribution; a full-text related-party recovery copy exists on BANHALMI ART. Use for provenance/history, not as equivalent to an independently readable original Tripont body."
+      "guardrail": "Do not label ARCHIVE-VERIFIED until the exact final published body is recovered. The preserved draft contains first-person psychological/therapeutic language; do not convert those statements into clinical, medical or therapeutic efficacy claims. Do not expose private correspondence or personal details.",
+      "datePublished": "2018-01/02",
+      "publisher": "Tripont Foto Video / Problog",
+      "originalProblogUrls": [
+        "http://www.tripont.hu/problog/2921/amikor_keznel_van_par_lume_cube",
+        "http://www.tripont.hu/problog/2922/amikor_keznel_van_par_lume_cube"
+      ],
+      "classification": [
+        "Lume Cube",
+        "Olympus PEN E-PL7",
+        "MILC photography",
+        "creative lighting",
+        "artistic nude experimentation",
+        "professional photography workflow"
+      ],
+      "sourceStrength": "medium-high historical provenance",
+      "evidenceSummary": "Strong contemporaneous publisher-side provenance for a Tripont professional article connecting creative lighting, MILC/Olympus equipment testing and Bánhalmi's photographic approach. The exact final published body is not currently retrievable."
     },
     {
       "id": "tripont-problog-2950-archived",
       "url": "https://web.archive.org/web/20180217103411/http://www.tripont.hu/problog/2950/aktfozoas_otthon_a_furdoszobaban",
       "reason": "Exact Wayback URL is preserved in the canonical ART master-source database, but archive body was not retrievable in the current research environment for content-level verification.",
-      "status": "archive-body-verification-required",
+      "status": "publisher-edited-version-verified-final-body-unavailable",
       "canonicalArtSourceId": "wikipedia-source-038",
       "canonicalArtCatalogueNumber": "BAS-0001",
       "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
       "sourceType": "ArchivedArticle",
       "provenance": [
         "current-hungarian-wikipedia",
-        "BANHALMI ART master source database"
+        "BANHALMI ART master source database",
+        "Contemporaneous February 2018 correspondence from the Tripont editor preserves the publisher-side URL '.../2950/a_muveszi_akt_pszichologiaja' and states that the text was streamlined into a blog post.",
+        "The same correspondence records Bánhalmi's review/approval of the edited article.",
+        "The full author DOCX used in the editorial process is preserved in the contemporaneous correspondence."
       ],
       "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
-      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
-      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "verificationStatus": "CONTEMPORANEOUS-PUBLISHER-DRAFT-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "FIRST-PARTY"
+      ],
       "titleRecoveredFromSlug": "Aktfotózás otthon a fürdőszobában",
       "services": [
         "portrait",
         "fineArt",
         "generalAuthority"
       ],
-      "guardrail": "Exact archived Tripont source is canonically catalogued, but archive body remains unreadable in the current environment. Do not make article-specific claims until body verification succeeds."
+      "guardrail": "Do not label full ARCHIVE-VERIFIED until the exact final published body is recovered. Treat psychological and emotional claims as attributed photographic philosophy, never as medical or therapeutic efficacy.",
+      "alternateHistoricalUrls": [
+        "http://www.tripont.hu/problog/2950/a_muveszi_akt_pszichologiaja",
+        "http://www.tripont.hu/problog/2950/aktfozoas_otthon_a_furdoszobaban"
+      ],
+      "classification": [
+        "artistic nude photography",
+        "sensitive portrait process",
+        "photographic trust",
+        "MILC/Olympus technical experimentation",
+        "Tripont editorial publication"
+      ],
+      "sourceStrength": "medium-high historical provenance",
+      "evidenceSummary": "Publisher-side editorial correspondence and preserved source text verify the substance and editorial workflow of the Tripont article on artistic nude photography, trust and photographic process, while the exact final published body remains unavailable."
     },
     {
       "id": "tripont-problog-3032-new-york-archived",
@@ -2499,7 +2535,8 @@
         "current-hungarian-wikipedia",
         "BANHALMI ART master source database",
         "2023 Gmail correspondence preserves the original Tripont URL/title",
-        "Contemporaneous 2018-09-09 Gmail message preserves and shares the exact original Tripont Problog URL and article title 'A legkisebbel a nagyok között'."
+        "Contemporaneous 2018-09-09 Gmail message preserves and shares the exact original Tripont Problog URL and article title 'A legkisebbel a nagyok között'.",
+        "A 2018-07-31 pre-publication message preserves draft URL 3180 'A legolcsóbb MILC-cel a profik közt'; correspondence on 2018-08-02 confirms the final published article moved to URL 3182 'A legkisebbel a nagyok között'."
       ],
       "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
       "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
@@ -2509,7 +2546,13 @@
         "portrait",
         "generalAuthority"
       ],
-      "guardrail": "Exact archived Tripont source is canonically catalogued and the historical title/URL is independently preserved in Gmail, but the article body still requires archive verification before article-specific claims."
+      "guardrail": "Exact archived Tripont source is canonically catalogued and the historical title/URL is independently preserved in Gmail, but the article body still requires archive verification before article-specific claims.",
+      "supersededDraftUrls": [
+        "http://www.tripont.hu/problog/3180/a_legolcsobb_milccel_a_profik_kozt"
+      ],
+      "sameStoryAliases": [
+        "tripont-problog-3180-draft"
+      ]
     },
     {
       "id": "istyle-magazine-historical-articles",
@@ -3344,5 +3387,17 @@
       "confidential attachments",
       "unpublished private claims"
     ]
+  },
+  "historicalAliasMap": {
+    "tripont-problog-2921-2922": {
+      "canonicalEvidenceId": "tripont-lume-cube-deleted-article",
+      "relationship": "publisher preview / pseudonym variant of same Lume Cube story",
+      "doNotCountAsIndependentEvidence": true
+    },
+    "tripont-problog-3180": {
+      "canonicalEvidenceId": "tripont-problog-3182-archived",
+      "relationship": "superseded pre-publication draft URL",
+      "doNotCountAsIndependentEvidence": true
+    }
   }
 }
