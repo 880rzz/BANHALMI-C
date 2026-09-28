@@ -3744,6 +3744,47 @@
         "result": "explicit Bánhalmi Norbert photography credit present in current accessible PDF"
       },
       "evidenceSummary": "Current Gramofon 2024 summer issue explicitly credits Bánhalmi Norbert for the Zádory Édua cover photograph and identifies Bánhalmi Norbert photographs in the related interview."
+    },
+    {
+      "id": "bme-vik-university-magazine-photo-credit",
+      "title": "BME VIK institutional publications — photography credit",
+      "publisher": "Budapesti Műszaki és Gazdaságtudományi Egyetem — Villamosmérnöki és Informatikai Kar",
+      "url": "https://www.vik.bme.hu/document/1295/original/bme_lanyok_napja_2017_webre.pdf",
+      "verificationStatus": "LIVE-VERIFIED",
+      "status": "official-current-pdf-text-verified",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE",
+        "PHOTO-CREDIT"
+      ],
+      "classification": [
+        "university publication photography",
+        "institutional photography"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "BME VIK's indexed official PDF identifies the publication as the faculty's university magazine and lists Bánhalmi Norbert among the photographers in the imprint.",
+        "Direct PDF retrieval returned an access/fetch error in the current verification pass, so visual page verification remains open."
+      ],
+      "sourceStrength": "high",
+      "guardrail": "Shared institutional publication photo-credit only. It proves credited photography contribution to BME VIK publications, not authorship of every image, employment, exclusivity, endorsement or a continuing institutional client relationship.",
+      "corroboratingUrls": [
+        "https://www.vik.bme.hu/document/3822/original/VIK_II_63.pdf"
+      ],
+      "evidenceSummary": "Current official BME VIK PDF (2017/18 Hölgyválasz special issue) lists Bánhalmi Norbert among the publication photographers; a later BME VIK university magazine PDF also lists him among photographers.",
+      "directVerification": {
+        "checkedAt": "2026-09-28",
+        "method": "current official BME VIK PDF text/body inspection",
+        "result": "publication imprint explicitly lists 'Fotó: Bánhalmi Norbert' among shared photography credits"
+      }
     }
   ],
   "pendingEvidenceCandidates": [
@@ -4325,39 +4366,6 @@
       ],
       "reason": "Preserve the distinction between a real external Tamron publication/project and an unproven Tripont publication proposal.",
       "guardrail": "DO NOT BIND as Tripont press evidence unless an actual Tripont publication URL or archived final body is recovered."
-    },
-    {
-      "id": "bme-vik-university-magazine-photo-credit",
-      "title": "BME VIK Egyetemi Magazin — photography credit",
-      "publisher": "Budapesti Műszaki és Gazdaságtudományi Egyetem — Villamosmérnöki és Informatikai Kar",
-      "url": "https://www.vik.bme.hu/document/3822/original/VIK_II_63.pdf",
-      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
-      "status": "official-pdf-indexed-credit-direct-pdf-fetch-failed",
-      "evidenceType": [
-        "INSTITUTIONAL-EVIDENCE",
-        "PHOTO-CREDIT"
-      ],
-      "classification": [
-        "university publication photography",
-        "institutional photography"
-      ],
-      "services": [
-        "portrait",
-        "brand",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "portrait",
-        "brand",
-        "generalAuthority"
-      ],
-      "provenance": [
-        "BME VIK's indexed official PDF identifies the publication as the faculty's university magazine and lists Bánhalmi Norbert among the photographers in the imprint.",
-        "Direct PDF retrieval returned an access/fetch error in the current verification pass, so visual page verification remains open."
-      ],
-      "sourceStrength": "high historical provenance",
-      "reason": "Exact official institutional PDF and explicit photography credit are indexed, but direct PDF page retrieval did not succeed in this pass. Keep unbound until direct body/page verification succeeds.",
-      "guardrail": "Shared institutional photo-credit only. Do not infer authorship of every image, employment, exclusivity or endorsement."
     }
   ],
   "interpretationRules": [
