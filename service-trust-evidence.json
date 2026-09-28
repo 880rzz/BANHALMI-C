@@ -3663,10 +3663,30 @@
     {
       "id": "flickr-72177720335859544",
       "url": "https://www.flickr.com/photos/vipach/albums/72177720335859544",
-      "reason": "Exact Flickr album URL remains known, but current search/open attempts did not return reliable album metadata or independently verifiable event context. Keep unbound.",
-      "status": "pending-context-classification",
+      "reason": "Event identity and album delivery are privately verified, but public Flickr metadata/credit remains inaccessible. Keep unbound until direct public metadata is recovered.",
+      "status": "private-project-provenance-verified-public-metadata-pending",
       "lastChecked": "2026-09-28",
-      "guardrail": "Do not infer event/client/service context from neighboring VIPACH albums or album numbering. Bind only after exact album title/description/date/context is retrieved."
+      "guardrail": "Do not expose private correspondence. Do not treat private feedback as a public testimonial. Do not service-bind or present the album as public institutional evidence until exact public album metadata/credit is retrievable.",
+      "title": "Vienna cultural concert event — Flickr album 72177720335859544",
+      "dateRange": "2026-09-24 event; album shared 2026-09-27",
+      "evidenceKind": "private project provenance with unresolved public album metadata",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PRIVATE-PROVENANCE",
+        "UNVERIFIED-PUBLICATION-METADATA"
+      ],
+      "classification": [
+        "Vienna cultural event",
+        "concert photography",
+        "Haus der Musik"
+      ],
+      "verificationStatus": "PRIVATE-PROJECT-PROVENANCE-VERIFIED_PUBLIC-FLICKR-METADATA-PENDING",
+      "sourceStrength": "private-project-provenance",
+      "location": "Haus der Musik, Vienna, Austria",
+      "services": [],
+      "serviceRelevance": [],
+      "context": "The event identity and delivery of the exact Flickr album are privately verified. Public Flickr title/description/credit metadata remains inaccessible in the current research environment.",
+      "evidenceSummary": "Project identity and delivery are privately verified; public Flickr metadata remains unresolved, so this record is not a public service-authority point."
     },
     {
       "id": "tripont-lume-cube-deleted-article",
