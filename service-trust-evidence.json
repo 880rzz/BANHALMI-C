@@ -83,7 +83,10 @@
         "maszol-liptak-photo-reuse-2023",
         "mandiner-milestones56-series-2016",
         "rolunk-profile-possible-is-just-a-word-2025",
-        "mindennapkonyv-world-of-woman-2018"
+        "mindennapkonyv-world-of-woman-2018",
+        "sota-peter-magyar-photo-credit-2026",
+        "americanthinker-peter-magyar-photo-credit-2026",
+        "hungaryreport-peter-magyar-photo-credit-2026"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -2211,6 +2214,96 @@
       "evidenceSummary": "Independent broadcaster evidence for photography education, mentoring and community leadership in Vienna.",
       "sourceStrength": "high",
       "guardrail": "Use as education/community leadership evidence. Do not infer commercial client relationships from the club's cultural/event assignments."
+    },
+    {
+      "id": "sota-peter-magyar-photo-credit-2026",
+      "title": "SOTA — editorial reuse of Bánhalmi portrait",
+      "publisher": "SOTA",
+      "url": "https://sotaproject.com/news/111746",
+      "datePublished": "2026-04-13",
+      "evidenceKind": "international editorial image reuse / explicit photo credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "international editorial circulation",
+        "Wikimedia Commons reuse",
+        "portrait"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "SOTA uses a Wikimedia Commons portrait and explicitly credits 'Norbert Banhalmi / Wikimedia commons'.",
+      "evidenceSummary": "International editorial reuse and attribution of a Bánhalmi portrait image.",
+      "sourceStrength": "medium",
+      "guardrail": "Photo-credit/circulation evidence only. Do not infer commission, client relationship, political affiliation, endorsement, or participation in the article's editorial position."
+    },
+    {
+      "id": "americanthinker-peter-magyar-photo-credit-2026",
+      "title": "American Thinker — Wikimedia portrait reuse",
+      "publisher": "American Thinker",
+      "url": "https://www.americanthinker.com/articles/2026/03/peter_magyar_globalists_chosen_puppet_in_the_assault_on_trump_s_strongest_european_ally.html",
+      "datePublished": "2026-03-27",
+      "evidenceKind": "international editorial image reuse / explicit photo credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "international editorial circulation",
+        "Wikimedia Commons reuse",
+        "portrait"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "American Thinker uses a Wikimedia Commons image explicitly credited to Norbert Bánhalmi under CC BY-SA 4.0.",
+      "evidenceSummary": "International editorial circulation and attribution of a Bánhalmi portrait image.",
+      "sourceStrength": "medium",
+      "guardrail": "Photo-credit/circulation evidence only. Do not infer commission, client relationship, political affiliation, endorsement, or agreement with the publication's editorial claims."
+    },
+    {
+      "id": "hungaryreport-peter-magyar-photo-credit-2026",
+      "title": "The Hungary Report — Wikimedia portrait reuse",
+      "publisher": "The Hungary Report",
+      "url": "https://www.thehungaryreport.com/p/opinion-the-end-of-the-strongman",
+      "datePublished": "2026-03-30",
+      "evidenceKind": "international editorial image reuse / explicit photo credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "international editorial circulation",
+        "Wikimedia Commons reuse",
+        "portrait"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "The Hungary Report uses a photograph of Péter Magyar and credits it to Norbert Bánhalmi via Wikimedia Commons under CC BY-SA 4.0.",
+      "evidenceSummary": "International editorial circulation and attribution of a Bánhalmi portrait image.",
+      "sourceStrength": "medium",
+      "guardrail": "Photo-credit/circulation evidence only. Do not infer commission, client relationship, political affiliation, endorsement, or agreement with the article's political analysis."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -3126,6 +3219,23 @@
             "pannon-fenykepeszkor-honorary-member-profile-2026"
           ]
         }
+      ]
+    },
+    "internationalEditorialPhotoCirculation": {
+      "id": "international-editorial-photo-circulation",
+      "name": "International editorial photo circulation",
+      "status": "VERIFIED-MULTI-SOURCE",
+      "evidenceIds": [
+        "magyarjelen-magyar-peter-wikimedia-photo-credit-2026",
+        "maszol-liptak-photo-reuse-2023",
+        "sota-peter-magyar-photo-credit-2026",
+        "americanthinker-peter-magyar-photo-credit-2026",
+        "hungaryreport-peter-magyar-photo-credit-2026"
+      ],
+      "scope": "Editorial reuse and attribution of authored photographs across external publications.",
+      "guardrails": [
+        "Photo credit is not a client relationship, commission, partnership, political affiliation or endorsement.",
+        "Editorial positions of republishers are not attributed to the photographer."
       ]
     }
   },
