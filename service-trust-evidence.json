@@ -159,8 +159,7 @@
         "rolunk-profile-possible-is-just-a-word-2025",
         "milcclub-most-vagy-soha-organizer-2020",
         "tamron-new-york-ballerina-project-2018",
-        "bme-vik-holgyvalasz-photo-credit-2017",
-        "coca-cola-coke-club-reference-2008-2012"
+        "bme-vik-holgyvalasz-photo-credit-2017"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -205,8 +204,7 @@
         "rolunk-profile-possible-is-just-a-word-2025",
         "rolunk-bmi-crowdfunding-visual-communication-2026",
         "orf-becsi-szelet-founder-2023",
-        "babafoto-exhibition-hipstudio-2010",
-        "coca-cola-coke-club-reference-2008-2012"
+        "babafoto-exhibition-hipstudio-2010"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -376,8 +374,7 @@
         "veol-rege-digital-exhibition-2021",
         "verocei-tukor-curator-opening-2024",
         "verocei-tukor-digital-exhibition-project-2022",
-        "verocei-tukor-curatorial-evidence-2024",
-        "coca-cola-coke-club-reference-2008-2012"
+        "verocei-tukor-curatorial-evidence-2024"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -1194,7 +1191,8 @@
         "portrait/portfolio photography",
         "video/content production",
         "Budapest professional history",
-        "artistic nude photography mentorship/history"
+        "artistic nude photography mentorship/history",
+        "Coke Club historical event video production"
       ],
       "services": [
         "portrait",
@@ -3522,15 +3520,15 @@
     },
     {
       "id": "coca-cola-coke-club-reference-2008-2012",
-      "title": "Personal Recommendation — Coke Club official photographer, 2008–2012",
-      "publisher": "Coca-Cola Hungary historical reference document",
+      "title": "Private historical Coke Club reference — authentication pending",
+      "publisher": "Private historical reference document",
       "datePublished": "2013-05-28",
-      "evidenceKind": "signed historical corporate reference / private primary document",
-      "verificationStatus": "PRIVATE-CORPORATE-CORRESPONDENCE-VERIFIED",
+      "evidenceKind": "private historical reference document",
+      "verificationStatus": "PRIVATE-PROVENANCE-AUTHENTICATION-PENDING",
       "evidenceType": [
-        "INSTITUTIONAL-EVIDENCE",
         "PROJECT-COVERAGE",
-        "RELATED-PARTY"
+        "PRIVATE-PROVENANCE",
+        "UNVERIFIED"
       ],
       "classification": [
         "Coke Club",
@@ -3541,28 +3539,18 @@
         "press communication",
         "photo and video production"
       ],
-      "services": [
-        "event",
-        "brand",
-        "visualStrategy",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "event",
-        "brand",
-        "visualStrategy",
-        "generalAuthority"
-      ],
-      "context": "A signed Coca-Cola-branded historical recommendation dated 28 May 2013 states that Norbert Banhalmi worked as the official photographer at Coke Club cultural and music festivals between 2008 and 2012 and that his photos and videos supported Coca-Cola Hungary press communication. The document was recovered from contemporaneous private records and visually verified.",
-      "evidenceSummary": "Direct private corporate provenance for multi-year Coke Club event photography and photo/video communication work connected to Coca-Cola Hungary.",
-      "sourceStrength": "high-provenance-private",
+      "services": [],
+      "serviceRelevance": [],
+      "context": "A private historical reference document contains detailed claims about Coke Club photography and photo/video communication work. The document has been visually recovered, but its corporate authenticity has not been independently authenticated. Public sources separately corroborate the historical Coke Club project and Bánhalmi's involvement at a narrower level.",
+      "evidenceSummary": "Preserved as private provenance only; not an authenticated corporate citation and not a service authority point.",
+      "sourceStrength": "private-authentication-pending",
       "corroboratingUrls": [
         "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
         "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/"
       ],
-      "guardrail": "Private historical provenance. Do not expose the private attachment or correspondence. Scope the 'official photographer' claim specifically to Coke Club cultural and music festivals in 2008–2012. Do not generalize this to being the official photographer of The Coca-Cola Company/Coca-Cola Hungary overall, a current relationship, employment, endorsement, exclusivity, or authorship of Coca-Cola brand strategy. The press-communication statement supports Brand/Visual Strategy context only at communication-production level.",
+      "guardrail": "Do not expose the private document. Do not present its exact corporate claims as verified facts until independently authenticated. Publicly rely only on separately verified historical Coke Club evidence. Do not infer a current Coca-Cola relationship, endorsement, employment, exclusivity or company-wide official-photographer status.",
       "privateProvenance": true,
-      "publicSummaryAllowed": "A historical Coca-Cola Hungary reference verifies that Norbert Bánhalmi worked as official photographer at Coke Club cultural and music festivals between 2008 and 2012 and produced photo/video material supporting press communication.",
+      "publicSummaryAllowed": "Historical Coke Club involvement is supported by separate public evidence; exact claims in the private reference remain authentication-pending.",
       "publicProjectIdentityCorroboration": [
         "https://24.hu/kultura/2012/04/25/iden-mar-nem-lesz-coke-club/",
         "https://www.origo.hu/utazas/2012/06/a-siofoki-coke-club-utodja"
@@ -5160,7 +5148,7 @@
       ]
     },
     "cokeClubHistoricalAuthority": {
-      "status": "PRIVATE-PRIMARY-VERIFIED-WITH-PUBLIC-PROJECT-IDENTITY-CORROBORATION",
+      "status": "PUBLIC-HISTORICAL-INVOLVEMENT-CORROBORATED_PRIVATE-REFERENCE-AUTHENTICATION-PENDING",
       "scope": "Coke Club / Coca-Cola Hungary historical event and communication work, 2008–2012",
       "evidenceIds": [
         "coca-cola-coke-club-reference-2008-2012"
@@ -5170,7 +5158,7 @@
         "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
         "https://youtube.com/playlist?list=PLwsdxt-KFeDiXfxb2_mKQLcaNhQAvxUQW"
       ],
-      "guardrail": "Historical Coke Club scope only. The signed recommendation is private primary provenance. Public news independently verifies Coke Club's Coca-Cola Hungary project identity but does not name Bánhalmi. The YouTube playlist remains unverified until uploader, dates, descriptions and credits can be inspected. Do not infer a current Coca-Cola relationship or company-wide official-photographer status.",
+      "guardrail": "Use public/related-party sources for the historical Coke Club involvement. Keep the private reference unbound until independently authenticated. Do not infer a current Coca-Cola relationship or company-wide official-photographer status.",
       "publicProjectIdentityCorroboration": [
         "https://24.hu/kultura/2012/04/25/iden-mar-nem-lesz-coke-club/",
         "https://www.origo.hu/utazas/2012/06/a-siofoki-coke-club-utodja"
