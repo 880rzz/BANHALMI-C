@@ -1653,16 +1653,19 @@
         "fine-art photography",
         "NFT",
         "digital art",
-        "artistic nude"
+        "artistic nude",
+        "New York historical project",
+        "The Men's Dream",
+        "charity auction/exhibition context"
       ],
       "services": [
         "fineArt",
         "visualStrategy",
         "generalAuthority"
       ],
-      "context": "BitcoinBázis profiles Bánhalmi Norbert's fine-art/artistic-nude work in an NFT/digital-art context.",
-      "evidenceSummary": "Independent specialist-media evidence for digital-art experimentation and fine-art photography.",
-      "guardrail": "Use for artistic/digital-innovation context only; do not imply investment expertise or financial endorsement.",
+      "context": "BitcoinBázis profiles Bánhalmi Norbert's fine-art/artistic-nude work in an NFT/digital-art context and states that The Men's Dream collection was to be presented and auctioned in New York.",
+      "evidenceSummary": "Independent specialist-media evidence for artistic-nude/digital-art experimentation and the New York presentation/auction context of The Men's Dream.",
+      "guardrail": "Use for documented artistic/digital-innovation and historical New York project context only. Do not imply investment expertise, financial endorsement, guaranteed auction outcome, current New York studio or financial-product advice.",
       "verificationStatus": "LIVE-VERIFIED",
       "sourceStrength": "medium-high",
       "evidenceType": [
@@ -4601,7 +4604,8 @@
         "hungary-foundation-milestones56-newyork-2016",
         "imagazin-ipad-photo-postproduction-2016",
         "saatchi-ballerina-project-newyork-2018",
-        "tamron-new-york-ballerina-project-2018"
+        "tamron-new-york-ballerina-project-2018",
+        "bitcoinbazis-nft-art-2022"
       ],
       "guardrails": [
         "Historical New York project/exhibition context only.",
