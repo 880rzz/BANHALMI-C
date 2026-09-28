@@ -91,7 +91,8 @@
         "google-alert-kiskegyed-magyar-peter-2026",
         "fotoshow-artistic-nude-workshop-2019",
         "tamron-new-york-ballerina-project-2018",
-        "oszk-szosszenetek-book-photo-credit-2017"
+        "oszk-szosszenetek-book-photo-credit-2017",
+        "weltwoche-peter-magyar-photo-credit-2026"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -3269,6 +3270,40 @@
       "evidenceSummary": "Independent archived print corroboration for Bánhalmi-led digital exhibition/project activity in Tihany.",
       "sourceStrength": "medium",
       "guardrail": "Treat as participant/artist testimony about the project, not as independent critical assessment, ownership evidence or endorsement."
+    },
+    {
+      "id": "weltwoche-peter-magyar-photo-credit-2026",
+      "title": "Ein talentierter Schlawiner",
+      "publisher": "Die Weltwoche",
+      "url": "https://weltwoche.ch/story/ein-talentierter-schlawiner/",
+      "datePublished": "2026-04-01",
+      "evidenceKind": "international editorial image reuse / explicit photo credit",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "international editorial circulation",
+        "portrait",
+        "Swiss media"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "A user-preserved PDF of the Die Weltwoche article was visually verified. The lead portrait of Péter Magyar carries the explicit credit 'Norbert Banhalmi' immediately beneath the image.",
+      "evidenceSummary": "International Swiss editorial publication and explicit attribution of a Bánhalmi portrait.",
+      "sourceStrength": "high",
+      "provenance": [
+        "Original saved PDF of the article 'Ein talentierter Schlawiner' dated 2026-04-01 was recovered from contemporaneous Gmail correspondence.",
+        "Visual inspection of the PDF confirms the lead portrait caption and the separate credit line 'Norbert Banhalmi'."
+      ],
+      "guardrail": "Photo-credit/circulation evidence only. Do not infer a commission, client relationship, political affiliation, political support, endorsement, editorial agreement or relationship with the photographed political figure or the publisher."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -4804,7 +4839,8 @@
         "sota-peter-magyar-photo-credit-2026",
         "americanthinker-peter-magyar-photo-credit-2026",
         "hungaryreport-peter-magyar-photo-credit-2026",
-        "google-alert-kiskegyed-magyar-peter-2026"
+        "google-alert-kiskegyed-magyar-peter-2026",
+        "weltwoche-peter-magyar-photo-credit-2026"
       ],
       "scope": "Editorial reuse and attribution of authored photographs across external publications.",
       "guardrails": [
