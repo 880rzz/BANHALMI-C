@@ -468,6 +468,78 @@
       ],
       "context": "The 30-minute 2024 interview discusses Bánhalmi's photography, work with breast-cancer survivors, sensitivity in the photographic process, exhibitions and a Vienna youth photo/film education initiative.",
       "guardrail": "Use as editorial/interview evidence of artistic, portrait and educational practice; not as a client or endorsement claim."
+    },
+    {
+      "id": "kultura-hirado-origo-the-frame-2021",
+      "title": "The Frame digital photography exhibition coverage",
+      "publisher": "kultura.hu / Híradó / Origo",
+      "url": "https://kultura.hu/percenkent-valtozo-kiallitas-nyilik-a-balatonnal/",
+      "corroboratingUrls": [
+        "https://hirado.hu/kultura-eletmod/muveszet-design/cikk/2021/07/30/percenkent-valtozo-kiallitas-nyilik-a-balatonnal",
+        "https://www.origo.hu/itthon/20210809-percenkent-valtozokiallitas-nyilik-a-balatonnal.html"
+      ],
+      "evidenceKind": "independent editorial project coverage",
+      "classification": [
+        "independent editorial project coverage",
+        "digital exhibition",
+        "curatorial and visual strategy",
+        "professional biography"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "brand",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "Independent cultural/news coverage documents The Frame concept attributed to Bánhalmi Norbert, the digital exhibition format and contemporary professional context; the coverage also reports his Budapest photography role with the Dutch national team during UEFA EURO 2020/2021.",
+      "evidenceSummary": "Independent cultural/news coverage documents The Frame concept attributed to Bánhalmi Norbert, the digital exhibition format and professional context, with multiple independent/syndicated sources.",
+      "guardrail": "Use the project and published biographical statements as editorial evidence. Do not expand the reported Dutch-team role beyond what the sources explicitly state."
+    },
+    {
+      "id": "blikk-raba-timea-portrait-2024",
+      "title": "Mi lett vele? Így él most Rába Tímea",
+      "publisher": "Blikk",
+      "url": "https://www.blikk.hu/sztarvilag/hazai-sztarok/raba-timea-napjainkban-szepsegverseny/he2xs0b",
+      "evidenceKind": "independent editorial portrait-project coverage",
+      "classification": [
+        "independent editorial coverage",
+        "portrait photography"
+      ],
+      "services": [
+        "portrait"
+      ],
+      "serviceRelevance": [
+        "portrait"
+      ],
+      "context": "Blikk reports that Rába Tímea sat for a portrait series by photographer Bánhalmi Norbert.",
+      "evidenceSummary": "Independent editorial coverage directly names Bánhalmi Norbert as the photographer of a portrait series featuring Rába Tímea.",
+      "guardrail": "Portrait capability evidence only; do not infer endorsement or ongoing client relationship."
+    },
+    {
+      "id": "origo-gonczi-rebeka-photo-credit-2023",
+      "title": "Horrorbalesete után történelmi sikert ért el a magyar zsokélány",
+      "publisher": "Origo / MTI",
+      "url": "https://www.origo.hu/sport/sport-egyeni/2023/05/lovassport-gonczi-rebeka-kincsem-park-cantel-racing",
+      "evidenceKind": "editorial image reuse / photo credit",
+      "classification": [
+        "editorial photo credit",
+        "sports/publication evidence"
+      ],
+      "services": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "context": "Origo publishes an image with source credit Bánhalmi Norbert in an editorial sports article.",
+      "evidenceSummary": "Independent editorial image-use credit demonstrates external publication of Bánhalmi Norbert photography.",
+      "guardrail": "Publication/photo-credit evidence only; no subject client or endorsement claim."
     }
   ],
   "pendingEvidenceCandidates": [
