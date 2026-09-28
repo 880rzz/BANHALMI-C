@@ -2709,7 +2709,7 @@
         "visualStrategy",
         "generalAuthority"
       ],
-      "guardrail": "Treat as an archived first-person professional publication hosted/editorially framed by iMagazin, not an independent review of service quality. Do not conflate iMagazin with iSTYLE Magazin unless publisher ownership/relationship is separately verified. New York references are historical project context only, not current New York studio evidence.",
+      "guardrail": "Treat as an archived first-person professional publication hosted by iMagazin, with the publication's historical iSTYLE operation independently corroborated. This supports an iSTYLE-connected magazine publication context, not an iSTYLE endorsement, employment relationship, ambassadorship or independent review of service quality. New York references remain historical project context only.",
       "datePublished": "2016-04-14",
       "classification": [
         "mobile photo post-production",
@@ -2732,7 +2732,21 @@
       ],
       "context": "A preserved 12-page PDF of the published iMagazin article was visually verified. iMagazin's editorial introduction identifies Bánhalmi Norbert as a photographer and says he explains how he obtained his first iPad and how Apple's tablet supports his photographic work. The article is first-person, includes Bánhalmi photo credits, documents professional mobile post-production/workflow, and gives historical context about his 2014 New York Hungarian House portrait exhibition.",
       "evidenceSummary": "Archived full-content evidence for professional mobile-imaging workflow, technology adoption and historical New York photography context. The article ends with the explicit byline 'Bánhalmi Norbert fotográfus'.",
-      "sourceStrength": "medium-high"
+      "sourceStrength": "medium-high",
+      "publisherRelationship": {
+        "publication": "iMagazin",
+        "operator": "iSTYLE",
+        "verificationStatus": "LIVE-VERIFIED-RELATIONSHIP",
+        "corroboratingUrls": [
+          "https://oander.hu/munka/imagazin/",
+          "https://oander.hu/munka/igy-keszult-az-imagazin/"
+        ],
+        "context": "Independent OANDER case studies state that iMagazin was launched for iSTYLE in 2014 and describe it as an iSTYLE-operated Apple news/magazine site."
+      },
+      "corroboratingUrls": [
+        "https://oander.hu/munka/imagazin/",
+        "https://oander.hu/munka/igy-keszult-az-imagazin/"
+      ]
     },
     {
       "id": "google-alert-kiskegyed-magyar-peter-2026",
