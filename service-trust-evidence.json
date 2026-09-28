@@ -51,7 +51,8 @@
         "orf-portraits-good-cause-2025",
         "artineris-open-studio-2026",
         "amcham-team-portrait-credit",
-        "linkedin-banhalmi-company-profile"
+        "linkedin-banhalmi-company-profile",
+        "jazzy-dr-jazzy-banhalmi-2024"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -139,7 +140,8 @@
       ],
       "externalEvidenceIds": [
         "artineris-open-studio-2026",
-        "milcclub-samsung-the-frame"
+        "milcclub-samsung-the-frame",
+        "jazzy-dr-jazzy-banhalmi-2024"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -451,6 +453,21 @@
       ],
       "context": "The official BANHALMI Photography LinkedIn company page describes the professional service scope and publishes event/portrait case context, including SelectUSA, AmCham and The Recursive cover usage.",
       "guardrail": "Treat as first-party context only; external validation must come from the linked independent publisher, institutional post or credited use."
+    },
+    {
+      "id": "jazzy-dr-jazzy-banhalmi-2024",
+      "title": "Bánhalmi Norbert fotóművész — Dr. Jazzy",
+      "publisher": "90.9 Jazzy / Podiverzum",
+      "url": "https://podiverzum.hu/podcast/90-9-jazzy-dr-jazzy/banhalmi-norbert-fotomuvesz-2684b15a",
+      "evidenceKind": "independent broadcast interview archive",
+      "services": [
+        "fineArt",
+        "portrait",
+        "communityEducation",
+        "generalAuthority"
+      ],
+      "context": "The 30-minute 2024 interview discusses Bánhalmi's photography, work with breast-cancer survivors, sensitivity in the photographic process, exhibitions and a Vienna youth photo/film education initiative.",
+      "guardrail": "Use as editorial/interview evidence of artistic, portrait and educational practice; not as a client or endorsement claim."
     }
   ],
   "pendingEvidenceCandidates": [
