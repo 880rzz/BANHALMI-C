@@ -127,7 +127,8 @@
         "story-raba-timea-portrait-series-2024",
         "roadster-banhami-kata-photo-credit-2026",
         "vehir-ai-illusions-2023",
-        "art-to-go-olympus-starbucks-2021"
+        "art-to-go-olympus-starbucks-2021",
+        "kreativ-young-lions-speier-mentor-2024"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -275,7 +276,8 @@
         "zarido-the-frame-2021",
         "vehir-ai-illusions-2023",
         "bitcoinbazis-nft-art-2022",
-        "art-to-go-olympus-starbucks-2021"
+        "art-to-go-olympus-starbucks-2021",
+        "kreativ-young-lions-speier-mentor-2024"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
@@ -1447,6 +1449,30 @@
       "context": "SHE.hu follow-up coverage discusses the Ébredés project and its human stories as part of the exhibition/publication cycle.",
       "evidenceSummary": "Additional independent editorial footprint for the longevity and public reception of the Ébredés project.",
       "guardrail": "Use as project-reception evidence only; no medical or therapeutic efficacy claim."
+    },
+    {
+      "id": "kreativ-young-lions-speier-mentor-2024",
+      "title": "Young Lions: „Minél több olyan kezdeményezésre lenne szükség, ahol a friss arcok lehetőséget kapnak a szakmában”",
+      "publisher": "Kreatív Online",
+      "url": "https://kreativ.hu/cikk/young-lions-speier-viktoria-czebe-adel",
+      "datePublished": "2024-08-29",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "SECONDARY-MENTION",
+      "evidenceKind": "independent trade-publication interview with third-party attribution",
+      "classification": [
+        "mentoring",
+        "personal brand development",
+        "photography marketing",
+        "creative-industry authority"
+      ],
+      "services": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Kreatív Online quotes strategist and photographer Speier Vikó stating that, with Bánhalmi Norbert's mentoring, she began building her personal brand in 2018 and planned her first exhibition campaign.",
+      "evidenceSummary": "Independent trade-publication evidence that a third-party creative professional attributes early personal-brand and campaign development to Bánhalmi Norbert's mentoring.",
+      "guardrail": "Treat as a third-party attributed mentoring relationship and professional-authority signal. Do not convert it into an employment, agency-client, formal consultancy or endorsement claim."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -1518,6 +1544,66 @@
         "generalAuthority"
       ],
       "guardrail": "Do not bind to services or claim iSTYLE publication until an archived/public copy verifies authorship, content and publisher identity."
+    },
+    {
+      "id": "pixinfo-olympus-ambassadors-3-2020",
+      "publisher": "Pixinfo",
+      "url": "https://pixinfo.com/hirek/2020/04/30/digitalis-elmeny-olympus-nagykovetekkel-3/",
+      "title": "Digitális élmény Olympus nagykövetekkel #3",
+      "reason": "Google Alerts preserves the exact Pixinfo URL and identifies an Olympus Hungary online programme featuring Olympus ambassadors, but the source page was not directly retrievable in the current verification environment.",
+      "status": "archive-recovery-required",
+      "verificationStatus": "UNVERIFIED",
+      "evidenceType": "AMBASSADORSHIP",
+      "services": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "guardrail": "Potential historical ambassadorship corroboration only. Do not bind until the source body or an archived snapshot directly identifies Bánhalmi Norbert and his role."
+    },
+    {
+      "id": "atv-jakupcsek-plus-2019",
+      "publisher": "ATV",
+      "url": "http://www.atv.hu/videok/video-20190527-jakupcsek-plusz-2-resz-2019-05-30",
+      "title": "Jakupcsek plusz - 2. rész 2019.05.30.",
+      "reason": "Google Alerts preserves the original ATV video URL and snippet naming Bánhalmi Norbert among programme guests, but the historical ATV page is not currently retrievable.",
+      "status": "archive-recovery-required",
+      "verificationStatus": "UNVERIFIED",
+      "evidenceType": "INTERVIEW",
+      "services": [
+        "generalAuthority"
+      ],
+      "guardrail": "Do not promote to broadcast/interview authority until the programme page, video metadata or archive snapshot verifies the appearance and context."
+    },
+    {
+      "id": "kreativ-whisky-gastro-photo-contest-2017",
+      "publisher": "Kreatív Online",
+      "url": "http://kreativ.hu/cikk/whisky_inspiralta_gasztrofotoverseny_indult",
+      "title": "Whisky inspirálta gasztrofotóverseny indult",
+      "reason": "Google Alerts preserves the historical Kreatív URL and snippet indicating Bánhalmi Norbert as a professional-photographer judge in an Instagram food-photography competition, but the original article is not directly retrievable.",
+      "status": "archive-recovery-required",
+      "verificationStatus": "UNVERIFIED",
+      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "services": [
+        "generalAuthority",
+        "brand"
+      ],
+      "guardrail": "Potential judging/professional-recognition evidence only; do not imply brand endorsement, campaign client status or partnership until source content is recovered."
+    },
+    {
+      "id": "origo-gastro-photo-contest-2017",
+      "publisher": "Origo / Tafelspicc",
+      "url": "http://www.origo.hu/tafelspicc/kozelet/20170331-gasztrofoto-palyazat-the-famous-grouse.html",
+      "title": "Főzünk, fotózunk, megosztunk, aztán eszünk",
+      "reason": "Google Alerts preserves the original Origo URL and snippet indicating that Bánhalmi Norbert and Péter Anna evaluated submitted images, but the historical page is not directly retrievable.",
+      "status": "archive-recovery-required",
+      "verificationStatus": "UNVERIFIED",
+      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "services": [
+        "generalAuthority",
+        "brand"
+      ],
+      "guardrail": "Potential professional judging evidence only; do not infer a client, ambassador, sponsorship or endorsement relationship."
     }
   ],
   "interpretationRules": [
