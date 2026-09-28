@@ -3529,7 +3529,7 @@
       "url": "https://www.vik.bme.hu/document/1295/original/bme_lanyok_napja_2017_webre.pdf",
       "datePublished": "2017",
       "evidenceKind": "official university publication / photography credit",
-      "verificationStatus": "ARCHIVE-VERIFIED",
+      "verificationStatus": "LIVE-VERIFIED",
       "evidenceType": [
         "INSTITUTIONAL-EVIDENCE",
         "PHOTO-CREDIT",
@@ -3551,9 +3551,18 @@
         "generalAuthority"
       ],
       "context": "The official BME VIK 2017/18 Hölgyválasz publication is directly readable as a 17-page PDF. Its imprint identifies the publisher as BME VIK and explicitly lists Bánhalmi Norbert among the credited photographers.",
-      "evidenceSummary": "Official university publication evidence for credited institutional/editorial photography.",
+      "evidenceSummary": "Current official BME VIK 2017/18 Hölgyválasz PDF explicitly lists Bánhalmi Norbert among the publication photographers; a later BME VIK university magazine PDF independently repeats a Bánhalmi photography credit.",
       "sourceStrength": "high",
-      "guardrail": "Use as institutional publication/photo-credit evidence only. The shared credit line does not establish authorship of every image in the issue, a BME employment relationship, exclusivity or institutional endorsement of BANHALMI services."
+      "guardrail": "Use as institutional publication/photo-credit evidence only. The shared credit line does not establish authorship of every image in the issue, a BME employment relationship, exclusivity or institutional endorsement of BANHALMI services.",
+      "status": "official-current-pdf-text-verified",
+      "corroboratingUrls": [
+        "https://www.vik.bme.hu/document/3822/original/VIK_II_63.pdf"
+      ],
+      "directVerification": {
+        "checkedAt": "2026-09-28",
+        "method": "current official BME VIK PDF text/body inspection",
+        "result": "publication imprint explicitly lists 'Fotó: Bánhalmi Norbert' among shared photography credits"
+      }
     },
     {
       "id": "kanadai-magyar-hirlap-milestones56-2016",
@@ -3744,47 +3753,6 @@
         "result": "explicit Bánhalmi Norbert photography credit present in current accessible PDF"
       },
       "evidenceSummary": "Current Gramofon 2024 summer issue explicitly credits Bánhalmi Norbert for the Zádory Édua cover photograph and identifies Bánhalmi Norbert photographs in the related interview."
-    },
-    {
-      "id": "bme-vik-university-magazine-photo-credit",
-      "title": "BME VIK institutional publications — photography credit",
-      "publisher": "Budapesti Műszaki és Gazdaságtudományi Egyetem — Villamosmérnöki és Informatikai Kar",
-      "url": "https://www.vik.bme.hu/document/1295/original/bme_lanyok_napja_2017_webre.pdf",
-      "verificationStatus": "LIVE-VERIFIED",
-      "status": "official-current-pdf-text-verified",
-      "evidenceType": [
-        "INSTITUTIONAL-EVIDENCE",
-        "PHOTO-CREDIT"
-      ],
-      "classification": [
-        "university publication photography",
-        "institutional photography"
-      ],
-      "services": [
-        "portrait",
-        "brand",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "portrait",
-        "brand",
-        "generalAuthority"
-      ],
-      "provenance": [
-        "BME VIK's indexed official PDF identifies the publication as the faculty's university magazine and lists Bánhalmi Norbert among the photographers in the imprint.",
-        "Direct PDF retrieval returned an access/fetch error in the current verification pass, so visual page verification remains open."
-      ],
-      "sourceStrength": "high",
-      "guardrail": "Shared institutional publication photo-credit only. It proves credited photography contribution to BME VIK publications, not authorship of every image, employment, exclusivity, endorsement or a continuing institutional client relationship.",
-      "corroboratingUrls": [
-        "https://www.vik.bme.hu/document/3822/original/VIK_II_63.pdf"
-      ],
-      "evidenceSummary": "Current official BME VIK PDF (2017/18 Hölgyválasz special issue) lists Bánhalmi Norbert among the publication photographers; a later BME VIK university magazine PDF also lists him among photographers.",
-      "directVerification": {
-        "checkedAt": "2026-09-28",
-        "method": "current official BME VIK PDF text/body inspection",
-        "result": "publication imprint explicitly lists 'Fotó: Bánhalmi Norbert' among shared photography credits"
-      }
     }
   ],
   "pendingEvidenceCandidates": [
@@ -3795,7 +3763,9 @@
       "status": "do-not-bind-until-direct-attribution-is-public",
       "lastChecked": "2026-09-28",
       "verificationStatus": "DO-NOT-BIND",
-      "guardrail": "Do not bind to Bánhalmi, Portrait, Fine Art or any trust cluster until the live public article explicitly names Bánhalmi Norbert in the photographer/creative role or another authoritative source proves the attribution."
+      "guardrail": "Do not bind to Bánhalmi, Portrait, Fine Art or any trust cluster until the live public article explicitly names Bánhalmi Norbert in the photographer/creative role or another authoritative source proves the attribution.",
+      "services": [],
+      "serviceRelevance": []
     },
     {
       "id": "flickr-72177720335859544",
@@ -3846,11 +3816,7 @@
         "PROFESSIONAL-PUBLICATION",
         "FIRST-PARTY"
       ],
-      "services": [
-        "brand",
-        "portrait",
-        "generalAuthority"
-      ],
+      "services": [],
       "guardrail": "Do not label ARCHIVE-VERIFIED until the exact final published body is recovered. The preserved draft contains first-person psychological/therapeutic language; do not convert those statements into clinical, medical or therapeutic efficacy claims. Do not expose private correspondence or personal details.",
       "datePublished": "2018-01/02",
       "publisher": "Tripont Foto Video / Problog",
@@ -3876,7 +3842,13 @@
           "preserved opening excerpt",
           "confirmation that the former blog article existed but is now deleted"
         ]
-      }
+      },
+      "expectedServiceRelevance": [
+        "brand",
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": []
     },
     {
       "id": "tripont-problog-2950-archived",
@@ -3901,11 +3873,7 @@
         "FIRST-PARTY"
       ],
       "titleRecoveredFromSlug": "Aktfotózás otthon a fürdőszobában",
-      "services": [
-        "portrait",
-        "fineArt",
-        "generalAuthority"
-      ],
+      "services": [],
       "guardrail": "Do not label full ARCHIVE-VERIFIED until the exact final published body is recovered. Treat psychological and emotional claims as attributed photographic philosophy, never as medical or therapeutic efficacy.",
       "alternateHistoricalUrls": [
         "http://www.tripont.hu/problog/2950/a_muveszi_akt_pszichologiaja",
@@ -3919,7 +3887,13 @@
         "Tripont editorial publication"
       ],
       "sourceStrength": "medium-high historical provenance",
-      "evidenceSummary": "Publisher-side editorial correspondence and preserved source text verify the substance and editorial workflow of the Tripont article on artistic nude photography, trust and photographic process, while the exact final published body remains unavailable."
+      "evidenceSummary": "Publisher-side editorial correspondence and preserved source text verify the substance and editorial workflow of the Tripont article on artistic nude photography, trust and photographic process, while the exact final published body remains unavailable.",
+      "expectedServiceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": []
     },
     {
       "id": "tripont-problog-3032-new-york-archived",
@@ -3943,18 +3917,20 @@
         "FIRST-PARTY"
       ],
       "titleRecoveredFromSlug": "Egy kezdő fotós New Yorkban",
-      "services": [
-        "portrait",
-        "fineArt",
-        "generalAuthority"
-      ],
+      "services": [],
       "historicalCluster": [
         "New York"
       ],
       "guardrail": "Historical New York professional/publication evidence only. Do not infer a current New York studio, U.S. employment, immigration/work status or current U.S. client base. Do not mark full ARCHIVE-VERIFIED until the exact final archived body is recovered.",
       "datePublished": "2018-03",
       "sourceStrength": "medium-high historical provenance",
-      "evidenceSummary": "Publisher-side editorial correspondence verifies that Tripont edited and prepared the New York article at the exact 3032 URL. The exact archived final body remains unavailable in the current environment."
+      "evidenceSummary": "Publisher-side editorial correspondence verifies that Tripont edited and prepared the New York article at the exact 3032 URL. The exact archived final body remains unavailable in the current environment.",
+      "expectedServiceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": []
     },
     {
       "id": "tripont-problog-3182-archived",
@@ -3982,10 +3958,7 @@
         "FIRST-PARTY"
       ],
       "titleRecoveredFromSlug": "A legkisebbel a nagyok között",
-      "services": [
-        "portrait",
-        "generalAuthority"
-      ],
+      "services": [],
       "guardrail": "Do not label full ARCHIVE-VERIFIED until the final published body is recovered. Use only as historical professional-publication provenance; do not infer current Olympus/OM SYSTEM employment, exclusivity or endorsement.",
       "supersededDraftUrls": [
         "http://www.tripont.hu/problog/3180/a_legolcsobb_milccel_a_profik_kozt"
@@ -4001,13 +3974,20 @@
         "Tripont editorial publication"
       ],
       "sourceStrength": "high historical provenance",
-      "evidenceSummary": "Contemporaneous publisher/editor correspondence verifies the editorial workflow and exact final published Tripont URL/title. The final article body itself is still unavailable in the current environment."
+      "evidenceSummary": "Contemporaneous publisher/editor correspondence verifies the editorial workflow and exact final published Tripont URL/title. The final article body itself is still unavailable in the current environment.",
+      "expectedServiceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": []
     },
     {
       "id": "google-alert-eszakhirnok-she-republication-2026",
       "url": "https://www.eszakhirnok.com/2026/03/17/az-elso-es-utolso-aktfotozasom-nem-levetkozni-volt-nehez/",
       "reason": "Current page is a republication of a SHE.hu first-person article. Treat the original SHE source as canonical; keep this as secondary republication evidence only.",
-      "status": "secondary-republication"
+      "status": "secondary-republication",
+      "services": [],
+      "serviceRelevance": []
     },
     {
       "id": "pixinfo-olympus-ambassadors-3-2020",
@@ -4021,11 +4001,7 @@
         "PROFESSIONAL-PUBLICATION",
         "SECONDARY-MENTION"
       ],
-      "services": [
-        "brand",
-        "visualStrategy",
-        "generalAuthority"
-      ],
+      "services": [],
       "guardrail": "Use only as archive-reference corroboration of the historical Olympus ambassador/programme context until the original or archived Pixinfo body is recovered. Do not infer current employment or exclusivity.",
       "datePublished": "2020-04-30",
       "classification": [
@@ -4037,7 +4013,13 @@
         "Exact Pixinfo URL preserved in two contemporaneous Google Alerts dated 2020-05-01.",
         "Google Alerts preserves the title 'Digitális élmény Olympus nagykövetekkel #3'.",
         "The preserved snippet states that the live online talk series was organized by Olympus Hungary and that Bánhalmi Norbert, professional photographer, was the featured presenter."
-      ]
+      ],
+      "expectedServiceRelevance": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": []
     },
     {
       "id": "atv-jakupcsek-plus-2019",
@@ -4051,9 +4033,7 @@
         "INTERVIEW",
         "SECONDARY-MENTION"
       ],
-      "services": [
-        "generalAuthority"
-      ],
+      "services": [],
       "guardrail": "Do not infer the episode topic, claims made in the programme, or endorsement beyond the documented guest appearance until the broadcast is recovered.",
       "datePublished": "2019-05-30",
       "classification": [
@@ -4065,7 +4045,11 @@
         "Exact ATV legacy video URL preserved in a contemporaneous Google Alert dated 2019-05-31.",
         "The preserved alert identifies the programme as Jakupcsek plusz, episode 2, 2019-05-30.",
         "The preserved snippet names Bánhalmi Norbert among the programme guests."
-      ]
+      ],
+      "expectedServiceRelevance": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": []
     },
     {
       "id": "kreativ-whisky-gastro-photo-contest-2017",
@@ -4079,10 +4063,7 @@
         "PROFESSIONAL-PUBLICATION",
         "SECONDARY-MENTION"
       ],
-      "services": [
-        "generalAuthority",
-        "brand"
-      ],
+      "services": [],
       "guardrail": "Do not double-count with ORIGO. Use only as corroboration of the documented judging role; do not infer a client, ambassador, partnership or endorsement relationship with The Famous Grouse or Kreatív.",
       "datePublished": "2017-03-28",
       "classification": [
@@ -4096,7 +4077,12 @@
         "Contemporaneous Google Alert dated 2017-03-28 preserves the exact Kreatív Online title and original URL.",
         "The preserved snippet explicitly states that Instagram submissions were evaluated by professional photographer Bánhalmi Norbert and food blogger Péter Anna.",
         "A contemporaneous sent email on 2017-03-27 independently preserves the same Kreatív article URL."
-      ]
+      ],
+      "expectedServiceRelevance": [
+        "generalAuthority",
+        "brand"
+      ],
+      "serviceRelevance": []
     },
     {
       "id": "tripont-olympus-workshop-event-2018",
@@ -4117,16 +4103,8 @@
         "artistic nude",
         "camera/lens demonstration"
       ],
-      "services": [
-        "portrait",
-        "fineArt",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "portrait",
-        "fineArt",
-        "generalAuthority"
-      ],
+      "services": [],
+      "serviceRelevance": [],
       "provenance": [
         "Contemporaneous 2018-08-01 Tripont editor correspondence preserves the exact event URL.",
         "The same thread records that Olympus would bring lenses and camera bodies for the event and asks Bánhalmi for workshop topics.",
@@ -4134,7 +4112,12 @@
       ],
       "evidenceSummary": "Strong contemporaneous publisher-side evidence of a Tripont/Olympus educational event involving Bánhalmi, but the public event page body still requires archive recovery.",
       "sourceStrength": "medium-high historical provenance",
-      "guardrail": "Do not service-bind until the public/archived event page is recovered. Private correspondence establishes provenance only; do not expose contact details or infer Olympus employment/exclusivity."
+      "guardrail": "Do not service-bind until the public/archived event page is recovered. Private correspondence establishes provenance only; do not expose contact details or infer Olympus employment/exclusivity.",
+      "expectedServiceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ]
     },
     {
       "id": "demokrata-gonczi-rebeka-photo-credit-2023",
@@ -4159,7 +4142,9 @@
         "The preserved snippet explicitly contains the credit 'Fotó: BNDK Photo/Bánhalmi Norbert'."
       ],
       "reason": "Exact publisher URL and photo credit are preserved historically, but the article body is not currently retrievable. Retain as corroborating photo-credit evidence without service binding until direct/archived body recovery.",
-      "guardrail": "Photo-credit evidence only. Do not infer a client relationship, endorsement or exclusive relationship with the subject or publisher."
+      "guardrail": "Photo-credit evidence only. Do not infer a client relationship, endorsement or exclusive relationship with the subject or publisher.",
+      "services": [],
+      "serviceRelevance": []
     },
     {
       "id": "vehir-photographers-competition-rege-2022",
@@ -4179,23 +4164,20 @@
         "Pannon Fényképészkör",
         "curatorial/gallery collaboration"
       ],
-      "services": [
-        "fineArt",
-        "visualStrategy",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "fineArt",
-        "visualStrategy",
-        "generalAuthority"
-      ],
+      "services": [],
+      "serviceRelevance": [],
       "provenance": [
         "Contemporaneous Google Alert dated 2022-08-08 preserves the exact VEHIR title and URL.",
         "The preserved snippet explicitly names Ruppert Tamás as chief organizer and Bánhalmi Norbert as photo artist, and states that they jointly announced a future Rege Galéria / Pannon collaboration."
       ],
       "reason": "Exact source, date and role snippet are historically preserved, but the article body is not currently retrievable. Keep unbound until direct/archive body recovery.",
       "sourceStrength": "medium-high historical provenance",
-      "guardrail": "Do not service-bind until the original/archived article body is recovered. Do not infer ownership, endorsement or a broader institutional role beyond the preserved announcement."
+      "guardrail": "Do not service-bind until the original/archived article body is recovered. Do not infer ownership, endorsement or a broader institutional role beyond the preserved announcement.",
+      "expectedServiceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ]
     },
     {
       "id": "veol-bernat-sara-curator-2020",
@@ -4215,23 +4197,20 @@
         "young artist exhibition",
         "Rege Galéria"
       ],
-      "services": [
-        "fineArt",
-        "visualStrategy",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "fineArt",
-        "visualStrategy",
-        "generalAuthority"
-      ],
+      "services": [],
+      "serviceRelevance": [],
       "provenance": [
         "Contemporaneous Google Alert dated 2020-09-18 preserves the exact VEOL/Napló Online title and URL.",
         "The preserved snippet explicitly states: 'A tárlat kurátora Bánhalmi Norbert, a galéria művészeti vezetője.'"
       ],
       "reason": "The curator/artistic-director role is preserved in a contemporaneous publisher snippet, but the article body is not currently retrievable. Keep unbound until direct/archive body recovery.",
       "sourceStrength": "high historical provenance",
-      "guardrail": "Do not service-bind until the original/archived body is recovered. Use only as curator/gallery leadership evidence, not ownership or publisher endorsement."
+      "guardrail": "Do not service-bind until the original/archived body is recovered. Use only as curator/gallery leadership evidence, not ownership or publisher endorsement.",
+      "expectedServiceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ]
     },
     {
       "id": "magyar-nemzet-samu-day-2023",
@@ -4273,14 +4252,8 @@
         "video/demo content",
         "technology authority"
       ],
-      "services": [
-        "visualStrategy",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "visualStrategy",
-        "generalAuthority"
-      ],
+      "services": [],
+      "serviceRelevance": [],
       "provenance": [
         "A 2023-01-30 sent pitch to iSTYLE states that videos made at Apple workshops in the previous year were included among official store demo snippets.",
         "The same message preserves a Facebook video link as a lead, but no Apple/iSTYLE/retail official page has yet been independently recovered.",
@@ -4292,6 +4265,10 @@
       "corroboratingUrls": [
         "https://podcasts.apple.com/ar/podcast/m%C3%B3ka-podcast/id1574990802?l=es-MX",
         "https://podtail.se/podcast/moka-1/-309-banhalmi-norbert/"
+      ],
+      "expectedServiceRelevance": [
+        "visualStrategy",
+        "generalAuthority"
       ]
     },
     {
@@ -4310,16 +4287,14 @@
         "advertising photography",
         "service continuity"
       ],
-      "services": [
-        "brand",
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "brand",
-        "generalAuthority"
-      ],
+      "services": [],
+      "serviceRelevance": [],
       "reason": "Historical Google Alerts inventory preserves the legacy service URL, but first-party service history is not independent trust evidence. Recover Wayback only if useful for chronology/service-continuity mapping.",
-      "guardrail": "Never count as independent authority, endorsement or third-party trust. Do not service-bind until archived body is inspected, and even then use only for historical service continuity."
+      "guardrail": "Never count as independent authority, endorsement or third-party trust. Do not service-bind until archived body is inspected, and even then use only for historical service continuity.",
+      "expectedServiceRelevance": [
+        "brand",
+        "generalAuthority"
+      ]
     },
     {
       "id": "tripont-unpublished-smoke-laser-nanlite-pitch-2021",
@@ -4342,7 +4317,8 @@
         "Bánhalmi's reply offered a revised smoke/laser article and a future Nanlite artistic-nude test as possible content ideas."
       ],
       "reason": "Publisher correspondence directly confirms non-publication. Preserve only as negative provenance so it is never misclassified as press evidence.",
-      "guardrail": "DO NOT BIND. This is an unpublished proposal/pitch, not a publication, partnership, review, product endorsement or editorial evidence."
+      "guardrail": "DO NOT BIND. This is an unpublished proposal/pitch, not a publication, partnership, review, product endorsement or editorial evidence.",
+      "serviceRelevance": []
     },
     {
       "id": "tripont-ballerina-new-york-proposal-2018",
@@ -4365,7 +4341,8 @@
         "The underlying Ballerina Project itself is independently corroborated by TAMRON Hungary's 2018 published field article."
       ],
       "reason": "Preserve the distinction between a real external Tamron publication/project and an unproven Tripont publication proposal.",
-      "guardrail": "DO NOT BIND as Tripont press evidence unless an actual Tripont publication URL or archived final body is recovered."
+      "guardrail": "DO NOT BIND as Tripont press evidence unless an actual Tripont publication URL or archived final body is recovered.",
+      "serviceRelevance": []
     }
   ],
   "interpretationRules": [
@@ -5352,6 +5329,11 @@
     "istyle-magazine-historical-articles": {
       "canonicalEvidenceId": "istyle-magazin-historical",
       "relationship": "duplicate historical recovery candidate consolidated after iMagazin/iSTYLE operator relationship was independently verified",
+      "doNotCountAsIndependentEvidence": true
+    },
+    "bme-vik-university-magazine-photo-credit": {
+      "canonicalEvidenceId": "bme-vik-holgyvalasz-photo-credit-2017",
+      "relationship": "duplicate institutional photo-credit record consolidated after direct official PDF verification",
       "doNotCountAsIndependentEvidence": true
     }
   },
