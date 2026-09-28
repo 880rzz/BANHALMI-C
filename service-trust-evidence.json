@@ -66,7 +66,12 @@
         "zarido-artist-behind-business-1-2021",
         "zarido-artist-behind-business-2-2021",
         "nlc-fifty-shades-of-woman-2015",
-        "she-awakening-body-trust-cluster-2017"
+        "she-awakening-body-trust-cluster-2017",
+        "kiskegyed-life-profile-2025",
+        "vehir-mas-kepp-mas-2024",
+        "glamour-raba-timea-photo-credit-2024",
+        "story-raba-timea-portrait-series-2024",
+        "roadster-banhami-kata-photo-credit-2026"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -111,7 +116,13 @@
         "hipstudio-historical-profile",
         "zarido-artist-behind-business-1-2021",
         "zarido-artist-behind-business-3-ambassador-2021",
-        "zarido-the-frame-2021"
+        "zarido-the-frame-2021",
+        "turizmus-wiener-kaiser-wiesn-credit-2026",
+        "turizmusonline-wiener-kaiser-wiesn-credit-2026",
+        "kiskegyed-life-profile-2025",
+        "glamour-raba-timea-photo-credit-2024",
+        "story-raba-timea-portrait-series-2024",
+        "roadster-banhami-kata-photo-credit-2026"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -141,7 +152,10 @@
         "linkedin-banhalmi-company-profile",
         "milcclub-dancepartner-2020",
         "hipstudio-historical-profile",
-        "zarido-artist-behind-business-1-2021"
+        "zarido-artist-behind-business-1-2021",
+        "turizmus-wiener-kaiser-wiesn-credit-2026",
+        "turizmusonline-wiener-kaiser-wiesn-credit-2026",
+        "honvedelem-hososz-event-credit-2026"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -201,7 +215,9 @@
         "zarido-artist-behind-business-3-ambassador-2021",
         "zarido-the-frame-2021",
         "nlc-fifty-shades-of-woman-2015",
-        "she-awakening-body-trust-cluster-2017"
+        "she-awakening-body-trust-cluster-2017",
+        "kiskegyed-life-profile-2025",
+        "vehir-mas-kepp-mas-2024"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -1038,6 +1054,170 @@
       "context": "SHE.hu maintains a Bánhalmi Norbert topic cluster containing multiple articles on the Ébredés project, artistic nude photography, body confidence, trust and the participant experience of being photographed.",
       "evidenceSummary": "Multi-article editorial cluster provides stronger cumulative evidence than a single mention for portrait sensitivity, trust-based photographic process and artistic-nude/fine-art practice.",
       "guardrail": "Do not frame participant experiences as medical or therapeutic efficacy; preserve them as personal testimony and editorial context."
+    },
+    {
+      "id": "turizmus-wiener-kaiser-wiesn-credit-2026",
+      "title": "A balatoni lángos és az osztrák sör randevúzik Bécsben",
+      "publisher": "Turizmus.com",
+      "url": "https://turizmus.com/cikk/business-travel/becs-visitbalaton365-wiener-kaiser-wiesn-balatoni-langos-osztrak-vienna-design-week",
+      "evidenceKind": "independent editorial photo credit",
+      "classification": [
+        "event photography",
+        "Vienna",
+        "business travel",
+        "brand activation"
+      ],
+      "services": [
+        "event",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "Turizmus.com uses multiple Bánhalmi Norbert photographs from the Wiener Kaiser Wiesn opening and explicitly credits the photographer in captions.",
+      "evidenceSummary": "Independent editorial reuse and repeated photo credit support live-event, editorial and brand-activation photography capability in Vienna.",
+      "guardrail": "Photo-credit evidence only; do not infer organizer/client status from publication use alone."
+    },
+    {
+      "id": "turizmusonline-wiener-kaiser-wiesn-credit-2026",
+      "title": "Amikor a Balaton Bécsig ér – videóval",
+      "publisher": "Turizmus Online",
+      "url": "https://turizmusonline.hu/cikkek/kulfold/amikor-a-balaton-becsig-er-.html",
+      "evidenceKind": "independent editorial photo credit",
+      "classification": [
+        "event photography",
+        "Vienna",
+        "tourism",
+        "editorial"
+      ],
+      "services": [
+        "event",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "Turizmus Online publishes imagery from the Wiener Kaiser Wiesn with explicit Fotó: Bánhalmi Norbert credit.",
+      "evidenceSummary": "Independent tourism-industry publication evidence for event/editorial photography in Vienna.",
+      "guardrail": "Publication/photo-credit evidence; not proof of a direct contract with every organization mentioned in the article."
+    },
+    {
+      "id": "honvedelem-hososz-event-credit-2026",
+      "title": "Ismét tekert a sereg",
+      "publisher": "Honvédelem.hu",
+      "url": "https://honvedelem.hu/hirek/ismet-tekert-a-sereg.html",
+      "evidenceKind": "official institutional editorial photo credit",
+      "classification": [
+        "institutional event photography",
+        "sports event",
+        "Hungarian Defence Forces context"
+      ],
+      "services": [
+        "event",
+        "generalAuthority"
+      ],
+      "context": "Honvédelem.hu credits the article photography as Bánhalmi Norbert (HOSOSZ) and maintains a dedicated photographer tag page for the credited material.",
+      "evidenceSummary": "Strong institutional editorial credit for event/documentary photography.",
+      "guardrail": "Use as documented HOSOSZ/photography credit; do not infer military employment in 2026 or broader Ministry endorsement."
+    },
+    {
+      "id": "kiskegyed-life-profile-2025",
+      "title": "Szeretném szebbé tenni az emberek életét",
+      "publisher": "Kiskegyed",
+      "url": "https://www.kiskegyed.hu/kepernyo/sulyos-baleset-vilaghiru-magyar-fotomuvesz/1dl719d",
+      "evidenceKind": "independent long-form interview",
+      "classification": [
+        "career profile",
+        "New York exhibition",
+        "Olympus/OM SYSTEM ambassadorship",
+        "portrait and fine-art practice"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "Kiskegyed's 2025 interview covers Bánhalmi's career, New York exhibition history, portrait/fine-art practice and historical Olympus/OM SYSTEM ambassador role.",
+      "evidenceSummary": "Broad independent career-profile evidence spanning international exhibition, portrait practice and brand-ambassador history.",
+      "guardrail": "Interview contains first-person career statements; keep them attributed where independent corroboration is not available. Do not treat subjective claims such as 'world-famous' as an objective system label."
+    },
+    {
+      "id": "vehir-mas-kepp-mas-2024",
+      "title": "Mindenki másképpen más",
+      "publisher": "VEHIR",
+      "url": "https://vehir.hu/cikk/76376-mindenki-maskeppen-mas",
+      "evidenceKind": "independent project coverage",
+      "classification": [
+        "fine-art portrait",
+        "social-impact project",
+        "family portrait",
+        "inclusive representation"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "VEHIR reports that Bánhalmi Norbert was commissioned to create the photographs for the MÁS/KÉPp/MÁS project with families and children with disabilities.",
+      "evidenceSummary": "Independent editorial evidence for sensitive, socially focused portrait/fine-art project work.",
+      "guardrail": "Use as project/portrait evidence; avoid therapeutic or medical-effect claims."
+    },
+    {
+      "id": "glamour-raba-timea-photo-credit-2024",
+      "title": "Rába Timi: Egy 50 éves nő is megállja a helyét a munkaerőpiacon",
+      "publisher": "Glamour Hungary",
+      "url": "https://www.glamour.hu/sztarhirek/raba-timi-interju-karrier-csalad/pbsyz0x",
+      "evidenceKind": "national editorial portrait photo credit",
+      "classification": [
+        "editorial portrait",
+        "public figure portrait",
+        "women/identity"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "Glamour credits multiple Rába Tímea editorial portraits to Bánhalmi Norbert.",
+      "evidenceSummary": "National lifestyle-magazine photo credit supports editorial/public-figure portrait capability.",
+      "guardrail": "Editorial photo-credit evidence only; do not infer a continuing Glamour staff or exclusive photographer role."
+    },
+    {
+      "id": "story-raba-timea-portrait-series-2024",
+      "title": "Rába Tímea: Ma már egyáltalán nem értem, mi bajom volt magammal",
+      "publisher": "Story",
+      "url": "https://story.hu/cimlapsztori/2024/03/22/raba-timea-onbizalomhiany-anyasag-modell-szepsegkiralyno/",
+      "evidenceKind": "national editorial portrait coverage and image credit",
+      "classification": [
+        "portrait series",
+        "public figure",
+        "age/identity"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "Story explicitly states that Rába Tímea stood in front of Bánhalmi Norbert's camera for an age/identity portrait series and credits the featured images to him.",
+      "evidenceSummary": "Independent editorial context directly documents a public-figure portrait session and image usage.",
+      "guardrail": "Use as portrait/editorial evidence only; do not infer endorsement by the publication or subject beyond the documented session."
+    },
+    {
+      "id": "roadster-banhami-kata-photo-credit-2026",
+      "title": "Indul az év legfontosabb podcastje, amit nem szabad kihagynod",
+      "publisher": "W by Roadster",
+      "url": "https://w.roadster.hu/culture/indul-az-ev-legfontosabb-podcastje-amit-nem-szabad-kihagynod",
+      "evidenceKind": "editorial portrait/photo credit",
+      "classification": [
+        "editorial portrait",
+        "media personality",
+        "brand image"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "W by Roadster credits the article photography of Bánhalmi Kata to Bánhalmi Norbert.",
+      "evidenceSummary": "Independent contemporary editorial photo credit supporting portrait and personal-brand imagery.",
+      "guardrail": "Photo-credit evidence only; do not infer endorsement or recurring publication relationship."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -1081,6 +1261,18 @@
       "id": "istyle-magazine-historical-articles",
       "reason": "User reports historical iSTYLE.hu / iSTYLE Magazin articles. No stable indexed URL or existing canonical registry entry has yet been recovered.",
       "status": "historical-source-recovery-required"
+    },
+    {
+      "id": "google-alert-kiskegyed-magyar-peter-2026",
+      "url": "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw",
+      "reason": "Google Alerts confirms a Bánhalmi-related result, but direct page retrieval was not available in this pass. Verify article body/photo attribution before authority projection.",
+      "status": "direct-page-verification-required"
+    },
+    {
+      "id": "google-alert-eszakhirnok-she-republication-2026",
+      "url": "https://www.eszakhirnok.com/2026/03/17/az-elso-es-utolso-aktfotozasom-nem-levetkozni-volt-nehez/",
+      "reason": "Current page is a republication of a SHE.hu first-person article. Treat the original SHE source as canonical; keep this as secondary republication evidence only.",
+      "status": "secondary-republication"
     }
   ],
   "interpretationRules": [
