@@ -66,7 +66,10 @@
         "zarido-artist-behind-business-1-2021",
         "zarido-artist-behind-business-2-2021",
         "nlc-fifty-shades-of-woman-2015",
-        "she-awakening-body-trust-cluster-2017",
+        "she-portrait-trust-interview-2017",
+        "she-awakening-project-coverage-2017",
+        "she-artistic-nude-participant-account-2017",
+        "she-chemo-sex-project-coverage-2017",
         "kiskegyed-life-profile-2025",
         "vehir-mas-kepp-mas-2024",
         "glamour-raba-timea-photo-credit-2024",
@@ -217,7 +220,10 @@
         "zarido-artist-behind-business-3-ambassador-2021",
         "zarido-the-frame-2021",
         "nlc-fifty-shades-of-woman-2015",
-        "she-awakening-body-trust-cluster-2017",
+        "she-awakening-project-coverage-2017",
+        "she-artistic-nude-participant-account-2017",
+        "she-chemo-sex-project-coverage-2017",
+        "she-awakening-reception-2017",
         "kiskegyed-life-profile-2025",
         "vehir-mas-kepp-mas-2024",
         "vehir-ai-illusions-2023",
@@ -941,7 +947,9 @@
       ],
       "context": "Independent New York-based Hungarian-language interview documenting the December 2014 'Magyar nők New Yorkban' exhibition at the Hungarian House in New York, including the portrait concept, production process, participant context and the photographer's own account of the project.",
       "evidenceSummary": "Strong international editorial evidence for New York exhibition history, portrait practice and cross-border artistic authority.",
-      "guardrail": "Use as 2014 exhibition/interview evidence. Do not infer a permanent New York studio, current New York service location or institutional endorsement by the Hungarian House beyond the documented exhibition."
+      "guardrail": "Use as 2014 exhibition/interview evidence. Do not infer a permanent New York studio, current New York service location or institutional endorsement by the Hungarian House beyond the documented exhibition.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "INTERVIEW"
     },
     {
       "id": "zarido-artist-behind-business-1-2021",
@@ -965,7 +973,9 @@
       ],
       "context": "Záridő's first long-form interview installment documents Bánhalmi Norbert's professional path from military/event documentation through commercial and marketing work to New York exhibitions and international assignments.",
       "evidenceSummary": "Independent specialist-photography interview supporting long-term professional experience, marketing background, event-documentation practice and New York exhibition history.",
-      "guardrail": "Use as historical professional/interview evidence; quoted career claims should remain attributed to the interview where not independently corroborated."
+      "guardrail": "Use as historical professional/interview evidence; quoted career claims should remain attributed to the interview where not independently corroborated.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "INTERVIEW"
     },
     {
       "id": "zarido-artist-behind-business-2-2021",
@@ -986,7 +996,9 @@
       ],
       "context": "The second Záridő installment focuses on Bánhalmi's portrait and artistic practice around women, identity and emotionally sensitive photographic work.",
       "evidenceSummary": "Specialist-photography editorial context for portrait and fine-art practice.",
-      "guardrail": "Use as editorial/profile evidence; do not transform subjective interview framing into clinical or therapeutic claims."
+      "guardrail": "Use as editorial/profile evidence; do not transform subjective interview framing into clinical or therapeutic claims.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "INTERVIEW"
     },
     {
       "id": "zarido-artist-behind-business-3-ambassador-2021",
@@ -1008,7 +1020,9 @@
       ],
       "context": "Záridő states that Bánhalmi Norbert was both ambassador and marketer for an international photography brand and discusses his marketing ideas and communications role around the Olympus transition period.",
       "evidenceSummary": "Strong external corroboration of historical Olympus brand-ambassador and marketing/communications activity.",
-      "guardrail": "Historical role evidence only; do not imply current Olympus/OM SYSTEM employment, exclusivity or endorsement without current verification."
+      "guardrail": "Historical role evidence only; do not imply current Olympus/OM SYSTEM employment, exclusivity or endorsement without current verification.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "INTERVIEW"
     },
     {
       "id": "zarido-the-frame-2021",
@@ -1052,14 +1066,16 @@
       ],
       "context": "NLC independently profiled Bánhalmi Norbert's 'A nő ötven árnyalata' photographic series, describing his trust-based portrait process and noting the continuity with an earlier New York series.",
       "evidenceSummary": "Strong independent editorial evidence for portrait methodology, women/identity work and continuity between Budapest/Hungary and New York artistic projects.",
-      "guardrail": "Use as editorial coverage and quoted photographic-method evidence; avoid overstating NLC as an endorsement."
+      "guardrail": "Use as editorial coverage and quoted photographic-method evidence; avoid overstating NLC as an endorsement.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "PROJECT-COVERAGE"
     },
     {
       "id": "she-awakening-body-trust-cluster-2017",
       "title": "SHE.hu — Ébredés / body-confidence editorial cluster",
       "publisher": "SHE.hu",
       "url": "https://she.life.hu/cimke/banhalmi-norbert",
-      "evidenceKind": "multi-article independent editorial cluster",
+      "evidenceKind": "editorial cluster index",
       "classification": [
         "portrait",
         "artistic nude",
@@ -1074,7 +1090,16 @@
       ],
       "context": "SHE.hu maintains a Bánhalmi Norbert topic cluster containing multiple articles on the Ébredés project, artistic nude photography, body confidence, trust and the participant experience of being photographed.",
       "evidenceSummary": "Multi-article editorial cluster provides stronger cumulative evidence than a single mention for portrait sensitivity, trust-based photographic process and artistic-nude/fine-art practice.",
-      "guardrail": "Do not frame participant experiences as medical or therapeutic efficacy; preserve them as personal testimony and editorial context."
+      "guardrail": "Aggregate discovery/index record only. Treat the five constituent SHE articles as distinct evidence records; do not convert participant experiences into medical or therapeutic efficacy claims.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "PROJECT-COVERAGE",
+      "constituentEvidenceIds": [
+        "she-portrait-trust-interview-2017",
+        "she-awakening-project-coverage-2017",
+        "she-artistic-nude-participant-account-2017",
+        "she-chemo-sex-project-coverage-2017",
+        "she-awakening-reception-2017"
+      ]
     },
     {
       "id": "turizmus-wiener-kaiser-wiesn-credit-2026",
@@ -1306,6 +1331,122 @@
       "context": "Coverage identifies Bánhalmi Norbert as Olympus ambassador and documents the Művészet Elvitelre project with Starbucks Hungary, artists and the Hungarian Children's Rescue Foundation.",
       "evidenceSummary": "External project evidence for historical brand ambassadorship, art-project development and CSR-oriented visual initiative.",
       "guardrail": "Use only for the documented project and historical ambassador role; distinguish project partnership from broad corporate endorsement."
+    },
+    {
+      "id": "she-portrait-trust-interview-2017",
+      "title": "A férfi, aki a külsődet nézi, de a lelkedet látja",
+      "publisher": "SHE.hu",
+      "url": "https://she.life.hu/nofilter/2017/03/banhalmi-norbert-profi-fotos-interju-modell-belso-szepseg-szepnek-latni-magad",
+      "datePublished": "2017-03-10",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "INTERVIEW",
+      "evidenceKind": "independent editorial interview",
+      "classification": [
+        "portrait",
+        "sensitive portrait process",
+        "CV portrait",
+        "trust-based photographic process"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "SHE.hu interview directly identifies Bánhalmi Norbert and documents his subject-led portrait process, pre-shoot conversation, comfort-building and an example of a CV portrait.",
+      "evidenceSummary": "Independent editorial interview supporting portrait-process expertise and sensitive subject direction.",
+      "guardrail": "Use as editorial evidence for photographic process and portrait capability. Do not turn subjective claims about confidence or life effects into therapeutic, psychological or medical efficacy claims."
+    },
+    {
+      "id": "she-awakening-project-coverage-2017",
+      "title": "Meztelen test. Rák. Nők. - Egy igazán emberi projekt története",
+      "publisher": "SHE.hu",
+      "url": "https://she.life.hu/nofilter/2017/04/ebredes-rak-nok-akt-banhalmi-norbert-foto-kiallitas",
+      "datePublished": "2017-04-23",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "PROJECT-COVERAGE",
+      "evidenceKind": "independent editorial exhibition/project coverage",
+      "classification": [
+        "fine-art photography",
+        "artistic nude",
+        "exhibition",
+        "Ébredés project"
+      ],
+      "services": [
+        "fineArt",
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "SHE.hu directly names Bánhalmi Norbert and documents the Ébredés - az Új kezdet! exhibition, its artistic-nude photographs and the related book/project context.",
+      "evidenceSummary": "Independent project coverage for fine-art, artistic-nude and exhibition authority.",
+      "guardrail": "Use for the documented artistic project and photographic authorship. Medical, causal or therapeutic assertions in participant/editorial narrative are not BANHALMI service claims."
+    },
+    {
+      "id": "she-artistic-nude-participant-account-2017",
+      "title": "Az első és utolsó aktfotózásom - Nem levetkőzni volt nehéz",
+      "publisher": "SHE.hu",
+      "url": "https://she.life.hu/nofilter/2017/04/aktfotozas-elmeny-onbizalom-mellrak-tulelo-melleltavolito-mutet",
+      "datePublished": "2017-04-28",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "PROJECT-COVERAGE",
+      "evidenceKind": "published participant first-person account",
+      "classification": [
+        "artistic nude",
+        "participant experience",
+        "sensitive portrait process",
+        "Ébredés project"
+      ],
+      "services": [
+        "fineArt",
+        "portrait"
+      ],
+      "context": "A SHE.hu first-person participant account documents the experience of being photographed for the Ébredés project and refers directly to Norbert during the image-review process.",
+      "evidenceSummary": "Published participant evidence for sensitive photographic process and artistic-nude project context.",
+      "guardrail": "Participant testimony is subjective experience, not clinical evidence. Do not repeat or imply therapeutic efficacy."
+    },
+    {
+      "id": "she-chemo-sex-project-coverage-2017",
+      "title": "Kemoterápia és szex - amire még gondolni is tabu",
+      "publisher": "SHE.hu",
+      "url": "https://she.life.hu/nofilter/2017/05/ebredes-nok-rak-aktfotozas-szex-tabu-tema-fotokiallitas-banhalmi-norbert",
+      "datePublished": "2017-05-01",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "PROJECT-COVERAGE",
+      "evidenceKind": "independent editorial exhibition/project coverage",
+      "classification": [
+        "fine-art photography",
+        "artistic nude",
+        "exhibition",
+        "Ébredés project"
+      ],
+      "services": [
+        "fineArt",
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "SHE.hu coverage explicitly identifies the Ébredés project and Bánhalmi Norbert in the context of artistic-nude photographs of women affected by cancer and the exhibition.",
+      "evidenceSummary": "Independent editorial evidence for the fine-art project, exhibition and sensitive photographic subject matter.",
+      "guardrail": "Use only for the documented project and editorial context; do not infer medical benefit or therapeutic outcome."
+    },
+    {
+      "id": "she-awakening-reception-2017",
+      "title": "Sikítva menekülnék el, ha meghallom, hogy: rák",
+      "publisher": "SHE.hu",
+      "url": "https://she.life.hu/herself/2017/05/rak-betegseg-megelese-kiallitas-ebredes-az-uj-kezdet-emberi-tortenetek",
+      "datePublished": "2017-05",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": "PROJECT-COVERAGE",
+      "evidenceKind": "editorial project reception / participant-story coverage",
+      "classification": [
+        "Ébredés project",
+        "exhibition reception",
+        "human stories"
+      ],
+      "services": [
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "SHE.hu follow-up coverage discusses the Ébredés project and its human stories as part of the exhibition/publication cycle.",
+      "evidenceSummary": "Additional independent editorial footprint for the longevity and public reception of the Ébredés project.",
+      "guardrail": "Use as project-reception evidence only; no medical or therapeutic efficacy claim."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -1361,6 +1502,22 @@
       "url": "https://www.eszakhirnok.com/2026/03/17/az-elso-es-utolso-aktfotozasom-nem-levetkozni-volt-nehez/",
       "reason": "Current page is a republication of a SHE.hu first-person article. Treat the original SHE source as canonical; keep this as secondary republication evidence only.",
       "status": "secondary-republication"
+    },
+    {
+      "id": "imagazin-ipad-photo-postproduction-2016",
+      "publisher": "iMagazin",
+      "url": "http://imagazin.hu/fotos-utomunkara-ipad-lehetseges/",
+      "title": "Fotós utómunkára iPad? Lehetséges!",
+      "reason": "A 2016 Gmail correspondence preserves the exact historical iMagazin article URL and identifies it as an existing article, but the public page is no longer directly retrievable in the current verification pass. iMagazin must not be conflated with iSTYLE Magazin without independent publisher relationship evidence.",
+      "status": "archive-recovery-required",
+      "verificationStatus": "UNVERIFIED",
+      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "services": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "guardrail": "Do not bind to services or claim iSTYLE publication until an archived/public copy verifies authorship, content and publisher identity."
     }
   ],
   "interpretationRules": [
@@ -1668,20 +1825,6 @@
     }
   ],
   "historicalResearchCandidates": [
-    {
-      "id": "nlc-woman-fifty-shades-2015",
-      "publisher": "Nők Lapja Café / NLC",
-      "url": "https://nlc.hu/foto/20150306/a-no-otven-arnyalata-foto/",
-      "title": "A nő ötven árnyalata",
-      "year": 2015,
-      "status": "source-url-recovered-live-content-readback-pending",
-      "services": [
-        "portrait",
-        "fineArt"
-      ],
-      "evidenceKind": "editorial exhibition coverage",
-      "guardrail": "Do not promote to LIVE-VERIFIED until the original NLC content is directly readable or archived content is recovered."
-    },
     {
       "id": "trip-magazin-76",
       "publisher": "Tripont / Trip Magazin",
