@@ -12,7 +12,7 @@
   html body main .hero.service-hero.service-editorial-hero>.wrap>*:not(.service-hero-image){grid-column:1!important}
   html body main .hero.service-hero.service-editorial-hero>.wrap>.service-hero-image{grid-column:2!important;grid-row:1 / span 8!important;align-self:center!important;margin:0!important;aspect-ratio:16 / 10!important;overflow:hidden!important}
   html body main .hero.service-hero.service-editorial-hero>.wrap>.service-hero-image img{width:100%!important;height:100%!important;object-fit:cover!important}
-  html body main .collage-gallery{column-count:4!important;column-gap:18px!important}
+  html body main .collage-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(.8rem,1.35vw,1.45rem)!important;column-count:auto!important;column-gap:normal!important;align-items:start!important}
   html body .site-footer{padding-top:28px!important;padding-bottom:18px!important}
   html body .site-footer .footer-grid{grid-template-columns:minmax(0,2fr) repeat(3,minmax(0,1fr))!important;grid-template-rows:auto!important;grid-auto-flow:row!important;column-gap:18px!important;row-gap:32px!important;align-items:start!important}
   html body .site-footer .footer-grid>div:first-child{grid-column:span 2!important}
@@ -24,8 +24,6 @@
   html body main .reviews-drawer-section{padding-top:clamp(52px,4vw,68px)!important;padding-bottom:clamp(52px,4vw,68px)!important}
 }
 
-@media (min-width:1600px){html body main .collage-gallery{column-count:5!important}}
-@media (min-width:2200px){html body main .collage-gallery{column-count:6!important}}
 
 
 /* FINAL-LAYOUT-CONTRACT-20260919: service hero rhythm and gallery breathing */
