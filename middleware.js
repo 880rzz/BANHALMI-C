@@ -15,7 +15,21 @@ function redirectTarget(request) {
     return null;
   }
 
-  const cleanPath = incoming.pathname.replace(/^\/+/, '');
+  const cleanPath = incoming.pathname.replace(/^\\/+/, '');
+
+  if (host.includes('banhalminorbert.hu') || host.includes('banhalmi-hu-redirect')) {
+    const normalizedPath = ('/' + cleanPath).replace(/\\/+$/, '') || '/';
+    const historicalHuTargets = new Map([
+      ['/reklamfotozas', 'https://www.norbertbanhalmi.com/hu/brand/']
+    ]);
+    const historicalTarget = historicalHuTargets.get(normalizedPath);
+    if (historicalTarget) {
+      const target = new URL(historicalTarget);
+      target.search = incoming.search;
+      return target;
+    }
+  }
+
   const target = new URL(cleanPath, languageBase);
   target.search = incoming.search;
   return target;
