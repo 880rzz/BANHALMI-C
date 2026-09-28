@@ -542,7 +542,11 @@
         "brand"
       ],
       "context": "Project documentation states that the digital exhibition concept was developed by Samsung Hungary and Norbert Bánhalmi and identifies him as curator and Olympus ambassador.",
-      "guardrail": "Use for documented collaboration/project capability only; avoid implying broader Samsung or Olympus endorsement beyond the stated project/ambassador context."
+      "guardrail": "Use for documented collaboration/project capability only; avoid implying broader Samsung or Olympus endorsement beyond the stated project/ambassador context. Private correspondence is used only as non-public provenance corroboration; do not expose personal contact details or infer a broader Samsung endorsement/ambassadorship.",
+      "corroboration": [
+        "Contemporaneous 2021 first-party correspondence with Samsung Electronics Hungary corroborates Samsung participation, The Frame display provision, logistics, naming/brand-book review and exhibition planning for the Tihany digital photography project."
+      ],
+      "relationshipEvidence": "FIRST-PARTY-CORRESPONDENCE-CORROBORATED"
     },
     {
       "id": "becsi-naplo-digitalization-2025",
@@ -2739,5 +2743,15 @@
   },
   "archiveVerifiedEvidence": [
     "trip-magazin-76"
-  ]
+  ],
+  "privateProvenancePolicy": {
+    "policy": "Private correspondence may corroborate provenance internally, but public machine-readable output must not expose personal email addresses, phone numbers, private attachments, confidential details or unsupported relationship claims.",
+    "allowedPublicSummary": "A generalized statement that contemporaneous first-party correspondence corroborates a documented public project/relationship.",
+    "prohibited": [
+      "personal contact details",
+      "private message bodies",
+      "confidential attachments",
+      "unpublished private claims"
+    ]
+  }
 }
