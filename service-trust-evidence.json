@@ -5557,72 +5557,67 @@
     }
   },
   "historicalDomainContinuity": {
-    "status": "EVIDENCE-BASED-TEMPORAL-MAP",
+    "status": "PARTIAL-FORENSIC-RECONSTRUCTION",
     "lastChecked": "2026-09-28",
     "person": "Norbert Bánhalmi",
-    "guardrail": "This timeline records documented domain/brand use and continuity. It does not assert that HIPStudio, BANHALMI, Banhalmi Norbert e.U., banhalminorbert.hu, norbertbanhalmi.com and BANHALMI ART are the same legal entity.",
-    "nodes": [
+    "professionalTimeline": [
       {
-        "historicalDomain": "hipstudio.hu",
         "historicalBrand": "HIPStudio",
-        "period": "2006–historical founder/professional period; current related-party site continues separately",
-        "role": "historical professional studio/communication organisation",
-        "relationship": "founder/professional relationship",
-        "currentEntityContinuation": "Person-level professional experience continues into BANHALMI; HIPStudio remains a distinct current entity",
-        "verificationStatus": "RELATED-PARTY-PLUS-SECONDARY-VERIFIED",
-        "dateEvidence": {
-          "currentHipstudioClaim": "2006-02-27",
-          "externalDirectoryClaim": "2006-03-15",
-          "status": "SOURCE-DATE-CONFLICT-UNRESOLVED"
-        },
-        "guardrail": "Do not conflate HIPStudio with current BANHALMI or transfer current HIPStudio clients to BANHALMI."
+        "historicalDomain": "hipstudio.hu",
+        "period": "2006 onward; founder/professional period predates current separate entity structure",
+        "relationship": "historical founder/professional organization; related-party continuity only",
+        "supportedServices": [
+          "portrait",
+          "brand",
+          "event",
+          "visualStrategy",
+          "fineArt",
+          "generalAuthority"
+        ],
+        "currentEntityContinuation": "Person-level professional experience continues into BANHALMI; HIPStudio remains a separate related-party entity",
+        "guardrail": "Do not conflate HIPStudio with BANHALMI or current Banhalmi Norbert e.U."
       },
       {
+        "historicalBrand": "Bánhalmi Norbert personal professional site",
         "historicalDomain": "banhalminorbert.hu",
-        "historicalBrand": "Bánhalmi Norbert personal/professional domain",
-        "period": "documented by 2016; active as a secondary domain in 2017; Search Console property documented in 2018; cancellation/expiry process documented in 2022; reacquired/registered again in 2026",
-        "role": "historical Hungarian secondary/personal professional domain; current Hungarian-language entry domain",
-        "relationship": "historical domain alias and Hungarian market entry",
-        "currentEntityContinuation": "https://www.norbertbanhalmi.com/hu/",
-        "verificationStatus": "PRIVATE-ADMINISTRATIVE-PROVENANCE-VERIFIED",
-        "sourceStrength": "high-provenance-private",
-        "publicSummaryAllowed": "banhalminorbert.hu has documented historical use as a secondary Hungarian professional domain and is now used as the Hungarian entry domain.",
-        "guardrail": "Do not describe the domain as an uninterrupted primary professional website across the entire period; evidence shows overlap with norbertbanhalmi.com and a later interruption before 2026 reactivation."
+        "period": "documented as primary professional web identity by 2015; documented as secondary/redirect domain by 2017",
+        "relationship": "historical personal/professional domain continuity",
+        "currentEntityContinuation": "norbertbanhalmi.com is the canonical Professional system; banhalminorbert.hu is the Hungarian entry domain",
+        "evidenceSummary": "Private historical correspondence establishes use of banhalminorbert.hu as a professional web address in 2015, transition to norbertbanhalmi.com by early 2017, and active backlink migration from the old domain to the new canonical domain in February 2017.",
+        "guardrail": "Private correspondence is provenance only and must not be exposed. Exact historical URL inventory remains incomplete."
       },
       {
+        "historicalBrand": "BANHALMI",
         "historicalDomain": "norbertbanhalmi.com",
-        "historicalBrand": "Norbert Bánhalmi personal/professional international site",
-        "period": "documented in professional signatures by 2016 and in detailed SERP monitoring in 2020–2021; current canonical Professional system",
-        "role": "personal/professional photography site evolving into the canonical international Professional/service authority layer",
-        "relationship": "direct Person/professional continuity",
-        "currentEntityContinuation": "https://www.norbertbanhalmi.com/",
-        "verificationStatus": "PRIVATE-HISTORICAL-SEO-PROVENANCE-PLUS-LIVE-VERIFIED",
-        "sourceStrength": "high-provenance-private/current-live",
-        "guardrail": "Historical service URLs and rankings prove historical site/service presence, not current service availability or unchanged positioning."
-      },
-      {
-        "historicalDomain": "banhalmi.at",
-        "historicalBrand": "BANHALMI Austrian/German-language entry domain",
-        "period": "Search Console ownership verified by 2025-11-19; current DE-AT entry domain",
-        "role": "Austrian/German-language market-routing domain",
-        "relationship": "current market entry/redirect layer to canonical Professional DE-AT site",
-        "currentEntityContinuation": "https://www.norbertbanhalmi.com/de-at/",
-        "verificationStatus": "PRIVATE-ADMINISTRATIVE-PROVENANCE-PLUS-LIVE-CONFIG-VERIFIED",
-        "sourceStrength": "high-provenance-private/current-config",
-        "publicSummaryAllowed": "banhalmi.at is used as the German-language/Austrian entry domain for the canonical BANHALMI Professional system.",
-        "guardrail": "No evidence found in the authorized historical mailbox for pre-2025 use. Do not manufacture an older Austrian domain lineage or treat banhalmi.at as a separate competing Professional site."
-      },
-      {
-        "historicalDomain": "banhalmi.art",
-        "historicalBrand": "BANHALMI ART",
-        "period": "current artistic/oeuvre authority layer",
-        "role": "artistic archive, exhibitions, books, fine-art and cultural authority",
-        "relationship": "parallel artistic trajectory of the same Person",
-        "currentEntityContinuation": "https://www.banhalmi.art/",
-        "verificationStatus": "LIVE-VERIFIED",
-        "guardrail": "Do not convert BANHALMI ART into a commercial clone of the Professional site."
+        "period": "documented canonical professional domain from 2017 onward",
+        "relationship": "current canonical professional/service authority",
+        "currentEntityContinuation": "BANHALMI / Banhalmi Norbert e.U.",
+        "guardrail": "Current service/canonical authority layer; artistic oeuvre remains separate on banhalmi.art."
       }
-    ]
+    ],
+    "currentRouting": {
+      "hungarianEntry": {
+        "domain": "banhalminorbert.hu",
+        "targetBase": "https://www.norbertbanhalmi.com/hu/",
+        "implementation": "host-aware 308 path-preserving redirect",
+        "risk": "Historical slugs that do not have equivalent current /hu/ paths may resolve to a non-equivalent destination or 404 unless explicitly mapped."
+      },
+      "austrianEntry": {
+        "domain": "banhalmi.at",
+        "targetBase": "https://www.norbertbanhalmi.com/de-at/",
+        "implementation": "host-aware 308 path-preserving redirect"
+      }
+    },
+    "authorityPreservationRisk": {
+      "status": "OPEN-P1-HISTORICAL-URL-MAPPING",
+      "reason": "The redirect layer preserves the incoming path generically. A full old banhalminorbert.hu URL inventory has not yet been recovered, so legacy service/article URLs cannot yet be proven to land on their semantically best current destination.",
+      "requiredAction": [
+        "Recover historical banhalminorbert.hu URL inventory from archives, legacy backlinks, old correspondence and any historical GSC/export data.",
+        "Classify each old URL by intent/service/artistic context.",
+        "Add explicit old-URL -> best-current-destination redirects ahead of the generic path-preserving fallback.",
+        "Regression-test HTTP status, redirect chain, final canonical, hreflang and indexability."
+      ]
+    }
   },
   "historicalProfessionalUrlInventory": {
     "status": "PARTIAL-RECOVERY-VERIFIED",
