@@ -2873,14 +2873,19 @@
     {
       "id": "noivalto-kosztka-edina-2026",
       "url": "https://noivalto.hu/az-en-tortenetem/kosztka-edina-tul-vagyok/",
-      "reason": "The currently indexed article describes a male photographer and a trust/body-image photographic process but does not publicly identify Bánhalmi Norbert in the retrieved text; photo credit currently reads Kosztka Edina.",
-      "status": "do-not-bind-until-direct-attribution-is-public"
+      "reason": "Direct live re-check on 2026-09-28 still shows no public Bánhalmi Norbert attribution. The article describes a photographer but does not name him, and the visible credit line reads 'Fotók: Kosztka Edina'.",
+      "status": "do-not-bind-until-direct-attribution-is-public",
+      "lastChecked": "2026-09-28",
+      "verificationStatus": "DO-NOT-BIND",
+      "guardrail": "Do not bind to Bánhalmi, Portrait, Fine Art or any trust cluster until the live public article explicitly names Bánhalmi Norbert in the photographer/creative role or another authoritative source proves the attribution."
     },
     {
       "id": "flickr-72177720335859544",
       "url": "https://www.flickr.com/photos/vipach/albums/72177720335859544",
-      "reason": "Public album metadata could not be independently retrieved in the current research pass.",
-      "status": "pending-context-classification"
+      "reason": "Exact Flickr album URL remains known, but current search/open attempts did not return reliable album metadata or independently verifiable event context. Keep unbound.",
+      "status": "pending-context-classification",
+      "lastChecked": "2026-09-28",
+      "guardrail": "Do not infer event/client/service context from neighboring VIPACH albums or album numbering. Bind only after exact album title/description/date/context is retrieved."
     },
     {
       "id": "tripont-lume-cube-deleted-article",
