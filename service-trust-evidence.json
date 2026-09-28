@@ -3425,6 +3425,29 @@
       "reason": "The curator/artistic-director role is preserved in a contemporaneous publisher snippet, but the article body is not currently retrievable. Keep unbound until direct/archive body recovery.",
       "sourceStrength": "high historical provenance",
       "guardrail": "Do not service-bind until the original/archived body is recovered. Use only as curator/gallery leadership evidence, not ownership or publisher endorsement."
+    },
+    {
+      "id": "magyar-nemzet-samu-day-2023",
+      "title": "Samu-nap Vértesszőlősön",
+      "publisher": "Magyar Nemzet",
+      "url": "https://magyarnemzet.hu/kulturnemzet/regeszet/samu-nap-vertesszoloson",
+      "datePublished": "2023-08-18",
+      "verificationStatus": "DO-NOT-BIND",
+      "status": "no-direct-banhalmi-attribution-found",
+      "evidenceType": [
+        "UNVERIFIED"
+      ],
+      "classification": [
+        "google-alert false-positive / unrelated context"
+      ],
+      "services": [],
+      "serviceRelevance": [],
+      "provenance": [
+        "Contemporaneous Google Alert preserved the exact Magyar Nemzet URL/title but did not contain any Bánhalmi attribution.",
+        "Targeted re-search on 2026-09-28 did not surface a Bánhalmi photo credit, role or mention for this article."
+      ],
+      "reason": "The Google Alert was triggered in the same alert digest as Rege Galéria items, but no source evidence currently connects this article to Bánhalmi Norbert.",
+      "guardrail": "Do not bind or count as authority evidence unless the original article or archived copy later reveals a direct Bánhalmi attribution."
     }
   ],
   "interpretationRules": [
