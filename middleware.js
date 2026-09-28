@@ -15,47 +15,10 @@ function redirectTarget(request) {
     return null;
   }
 
-  const cleanPath = incoming.pathname.replace(new RegExp('^/+'), '');
+  const cleanPath = incoming.pathname.split('/').filter(Boolean).join('/');
 
   if (host.includes('banhalminorbert.hu') || host.includes('banhalmi-hu-redirect')) {
-    const normalizedPath = ('/' + cleanPath).replace(new RegExp('/+ || '/';
-    const historicalHuTargets = new Map([
-      ['/reklamfotozas', 'https://www.norbertbanhalmi.com/hu/brand/']
-    ]);
-    const historicalTarget = historicalHuTargets.get(normalizedPath);
-    if (historicalTarget) {
-      const target = new URL(historicalTarget);
-      target.search = incoming.search;
-      return target;
-    }
-  }
-
-  const target = new URL(cleanPath, languageBase);
-  target.search = incoming.search;
-  return target;
-}
-
-export default function middleware(request) {
-  const target = redirectTarget(request);
-  if (!target) {
-    return new Response('Unknown redirect host', {
-      status: 404,
-      headers: {
-        'content-type': 'text/plain; charset=utf-8',
-        'x-robots-tag': 'noindex'
-      }
-    });
-  }
-
-  return new Response(null, {
-    status: 308,
-    headers: {
-      Location: target.href,
-      'Cache-Control': 'public, max-age=0, s-maxage=86400'
-    }
-  });
-}
-), '') || '/';
+    const normalizedPath = cleanPath ? '/' + cleanPath : '/';
     const historicalHuTargets = new Map([
       ['/reklamfotozas', 'https://www.norbertbanhalmi.com/hu/brand/']
     ]);
