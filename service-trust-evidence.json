@@ -1553,25 +1553,103 @@
       "id": "tripont-lume-cube-deleted-article",
       "url": "https://www.tripont.hu/amikor-keznel-van-par-lume-cube-b602.html",
       "reason": "The current Tripont page preserves Bánhalmi Norbert attribution but states that the requested blog post no longer exists. Historical article content should be recovered from an archive before service-authority use.",
-      "status": "archive-recovery-required"
+      "status": "archive-recovery-required",
+      "canonicalArtSourceId": "wikipedia-source-036",
+      "canonicalArtCatalogueNumber": "BAS-0029",
+      "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
+      "provenance": [
+        "current Tripont page retains Bánhalmi Norbert attribution",
+        "BANHALMI ART recovered full-text copy",
+        "BANHALMI ART master source database"
+      ],
+      "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
+      "verificationStatus": "PARTIAL-PROVENANCE-VERIFIED",
+      "recoveredCopyUrl": "https://www.banhalmi.art/post/portfolio-fitnesz-fot%C3%B3z%C3%A1s",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "RELATED-PARTY"
+      ],
+      "services": [
+        "brand",
+        "portrait",
+        "generalAuthority"
+      ],
+      "guardrail": "The original Tripont page is deleted but retains author attribution; a full-text related-party recovery copy exists on BANHALMI ART. Use for provenance/history, not as equivalent to an independently readable original Tripont body."
     },
     {
       "id": "tripont-problog-2950-archived",
       "url": "https://web.archive.org/web/20180217103411/http://www.tripont.hu/problog/2950/aktfozoas_otthon_a_furdoszobaban",
       "reason": "Exact Wayback URL is preserved in the canonical ART master-source database, but archive body was not retrievable in the current research environment for content-level verification.",
-      "status": "archive-body-verification-required"
+      "status": "archive-body-verification-required",
+      "canonicalArtSourceId": "wikipedia-source-038",
+      "canonicalArtCatalogueNumber": "BAS-0001",
+      "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
+      "sourceType": "ArchivedArticle",
+      "provenance": [
+        "current-hungarian-wikipedia",
+        "BANHALMI ART master source database"
+      ],
+      "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "titleRecoveredFromSlug": "Aktfotózás otthon a fürdőszobában",
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "guardrail": "Exact archived Tripont source is canonically catalogued, but archive body remains unreadable in the current environment. Do not make article-specific claims until body verification succeeds."
     },
     {
       "id": "tripont-problog-3032-new-york-archived",
       "url": "https://web.archive.org/web/20180621233214/http://www.tripont.hu/problog/3032/egy_kezdo_fotos_new_yorkban",
       "reason": "Exact Wayback URL is preserved in the canonical ART master-source database; title indicates New York photography context, but archive body requires direct verification before service-authority projection.",
-      "status": "archive-body-verification-required"
+      "status": "archive-body-verification-required",
+      "canonicalArtSourceId": "wikipedia-source-037",
+      "canonicalArtCatalogueNumber": "BAS-0003",
+      "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
+      "sourceType": "ArchivedArticle",
+      "provenance": [
+        "current-hungarian-wikipedia",
+        "BANHALMI ART master source database"
+      ],
+      "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "titleRecoveredFromSlug": "Egy kezdő fotós New Yorkban",
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "historicalCluster": [
+        "New York"
+      ],
+      "guardrail": "Exact archived Tripont source is canonically catalogued. Title supports New York context only; do not infer a New York studio or article-specific facts until archive body verification succeeds."
     },
     {
       "id": "tripont-problog-3182-archived",
       "url": "https://web.archive.org/web/20181107032149/http://www.tripont.hu/problog/3182/a_legkisebbel_a_nagyok_kozott",
       "reason": "Exact Wayback URL is preserved in the canonical ART master-source database, but archive body was not retrievable in the current research environment.",
-      "status": "archive-body-verification-required"
+      "status": "archive-body-verification-required",
+      "canonicalArtSourceId": "wikipedia-source-039",
+      "canonicalArtCatalogueNumber": "BAS-0004",
+      "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
+      "sourceType": "ArchivedArticle",
+      "provenance": [
+        "current-hungarian-wikipedia",
+        "BANHALMI ART master source database",
+        "2023 Gmail correspondence preserves the original Tripont URL/title"
+      ],
+      "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "titleRecoveredFromSlug": "A legkisebbel a nagyok között",
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "guardrail": "Exact archived Tripont source is canonically catalogued and the historical title/URL is independently preserved in Gmail, but the article body still requires archive verification before article-specific claims."
     },
     {
       "id": "istyle-magazine-historical-articles",
@@ -2012,5 +2090,11 @@
       "guardrail": "No reliable indexed Bánhalmi article recovered in the current public search pass; do not bind until live or archive evidence is found."
     }
   ],
-  "updatedAt": "2026-09-28"
+  "updatedAt": "2026-09-28",
+  "historicalRecoveryPolicy": {
+    "tripont": {
+      "priority": "P1",
+      "policy": "Preserve exact original/Wayback URLs, canonical ART source IDs, recovered copies and corroborating correspondence. Promote to ARCHIVE-VERIFIED only after archived body inspection; do not collapse recovered first-party copies into independent publisher evidence."
+    }
+  }
 }
