@@ -2074,8 +2074,21 @@
         "portrait"
       ],
       "evidenceKind": "specialist photography magazine archive",
-      "corroboration": "Wikidata Q56391118 currently cites this Issuu issue for fine-art photography.",
-      "guardrail": "Extract the actual article/pages before making article-specific claims."
+      "corroboration": [
+        "Wikidata Q56391118 cites this Issuu issue for fine-art photography.",
+        "VIPACH press archive identifies the 2018 Tripont Magazin appearance as a professional interview with Bánhalmi Norbert about artistic nude photography.",
+        "BANHALMI ART master-source database retains the Issuu reference as part of the historical source backbone."
+      ],
+      "guardrail": "Strong historical source reference, but do not make article-specific claims or mark ARCHIVE-VERIFIED until the actual interview pages/body are directly inspected.",
+      "title": "Tripont Magazin — szakmai interjú Bánhalmi Norberttel a művészi aktfotózásról",
+      "year": 2018,
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
+      "canonicalCluster": "artistic-nude-sensitive-portrait-authority"
     },
     {
       "id": "istyle-magazin-historical",
@@ -2095,6 +2108,62 @@
     "tripont": {
       "priority": "P1",
       "policy": "Preserve exact original/Wayback URLs, canonical ART source IDs, recovered copies and corroborating correspondence. Promote to ARCHIVE-VERIFIED only after archived body inspection; do not collapse recovered first-party copies into independent publisher evidence."
+    }
+  },
+  "trustClusters": {
+    "artisticNudeSensitivePortrait": {
+      "id": "artistic-nude-sensitive-portrait-authority",
+      "name": "Artistic nude and sensitive portrait authority",
+      "status": "MIXED-VERIFIED",
+      "intentOwnership": "BANHALMI ART primary; Professional uses only capability/trust bridge where relevant",
+      "topics": [
+        "artistic nude photography",
+        "fine-art portraiture",
+        "body image",
+        "self-perception",
+        "trust-based photographic process",
+        "sensitive portrait process",
+        "women and identity",
+        "exhibition and book projects"
+      ],
+      "evidenceIds": [
+        "nlc-fifty-shades-of-woman-2015",
+        "she-portrait-trust-interview-2017",
+        "she-awakening-project-coverage-2017",
+        "she-artistic-nude-participant-account-2017",
+        "she-chemo-sex-project-coverage-2017",
+        "she-awakening-reception-2017",
+        "zarido-artist-behind-business-2-2021",
+        "kiskegyed-life-profile-2025",
+        "jazzy-dr-jazzy-2024"
+      ],
+      "historicalPriorityEvidence": [
+        {
+          "id": "trip-magazin-76",
+          "role": "deep specialist interview on artistic nude photography",
+          "status": "ARCHIVE-REFERENCE-VERIFIED-CONTENT-EXTRACTION-PENDING",
+          "url": "https://issuu.com/tripont/docs/issue_trip_magazin/76",
+          "corroboration": [
+            "BANHALMI ART master source database catalogues the Issuu issue",
+            "Wikidata Q56391118 cites the same Issuu document for fine-art photography",
+            "VIPACH press archive identifies a 2018 Tripont Magazin professional interview with Norbert Bánhalmi about artistic nude photography"
+          ]
+        }
+      ],
+      "machineUse": [
+        "entity resolution",
+        "E-E-A-T evidence",
+        "AI Trust",
+        "LLM retrieval",
+        "GEO",
+        "service capability corroboration"
+      ],
+      "guardrails": [
+        "Do not convert participant testimony into medical, psychological or therapeutic efficacy claims.",
+        "Keep artistic nude/fine-art authority distinct from erotic-service positioning.",
+        "Do not treat related-party archives or customer reviews as equivalent to independent editorial evidence.",
+        "Do not promote Trip Magazin to ARCHIVE-VERIFIED until the magazine pages/body are directly inspected."
+      ]
     }
   }
 }
