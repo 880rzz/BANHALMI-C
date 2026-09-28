@@ -74,7 +74,8 @@
         "vehir-mas-kepp-mas-2024",
         "glamour-raba-timea-photo-credit-2024",
         "story-raba-timea-portrait-series-2024",
-        "roadster-banhami-kata-photo-credit-2026"
+        "roadster-banhami-kata-photo-credit-2026",
+        "tixa-besmart-visual-message-workshop-2017"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -229,7 +230,10 @@
         "vehir-mas-kepp-mas-2024",
         "vehir-ai-illusions-2023",
         "bitcoinbazis-nft-art-2022",
-        "art-to-go-olympus-starbucks-2021"
+        "art-to-go-olympus-starbucks-2021",
+        "tixa-besmart-visual-message-workshop-2017",
+        "magyarvelemeny-review-aggregation",
+        "hipstudio-historical-profile"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -277,7 +281,8 @@
         "vehir-ai-illusions-2023",
         "bitcoinbazis-nft-art-2022",
         "art-to-go-olympus-starbucks-2021",
-        "kreativ-young-lions-speier-mentor-2024"
+        "kreativ-young-lions-speier-mentor-2024",
+        "tixa-besmart-visual-message-workshop-2017"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
@@ -848,15 +853,17 @@
       ],
       "services": [
         "portrait",
-        "generalAuthority"
+        "generalAuthority",
+        "fineArt"
       ],
       "serviceRelevance": [
         "portrait",
-        "generalAuthority"
+        "generalAuthority",
+        "fineArt"
       ],
-      "context": "Third-party directory/review aggregator lists the Budapest photography studio and customer reviews.",
+      "context": "Third-party directory/review aggregator lists the Budapest photography studio and customer reviews. The live review corpus includes customer accounts explicitly discussing artistic-nude sessions, preparation, trust and the photographic experience.",
       "evidenceSummary": "Additional external review aggregation supports local service trust. Counts and ratings are dynamic and must not be hard-coded without current readback.",
-      "guardrail": "Aggregator/customer-review evidence, not independent editorial endorsement."
+      "guardrail": "Aggregator/customer-review evidence, not independent editorial endorsement. Individual artistic-nude accounts are customer testimony, not clinical or independent editorial evidence."
     },
     {
       "id": "rege-galeria-founder-curator",
@@ -894,7 +901,9 @@
         "https://www.hipstudio.hu/_files/ugd/b0aee1_6a982328d7fb44948c05188d2cd35bec.pdf",
         "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
         "https://www.hipstudio.hu/reklam-fotozas-budapest",
-        "https://www.hipstudio.hu/portfolio-fotozas-budapest"
+        "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+        "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
+        "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas"
       ],
       "evidenceKind": "related-company founder and historical professional-role documentation",
       "classification": [
@@ -905,25 +914,28 @@
         "commercial photography",
         "portrait/portfolio photography",
         "video/content production",
-        "Budapest professional history"
+        "Budapest professional history",
+        "artistic nude photography mentorship/history"
       ],
       "services": [
         "portrait",
         "brand",
         "event",
         "visualStrategy",
-        "generalAuthority"
+        "generalAuthority",
+        "fineArt"
       ],
       "serviceRelevance": [
         "portrait",
         "brand",
         "event",
         "visualStrategy",
-        "generalAuthority"
+        "generalAuthority",
+        "fineArt"
       ],
-      "context": "HIPStudio's current site states that the communication/creative brand was founded by Bánhalmi Norbert in 2006 and documents his historical role as founder-owner and photography/video professional lead. Current HIPStudio pages preserve service history across event, commercial, portrait/portfolio, video and brand communication, and explicitly separate HIPStudio, BANHALMI and Speier Viko as distinct present-day legal/professional entities.",
+      "context": "HIPStudio's current site states that the communication/creative brand was founded by Bánhalmi Norbert in 2006 and documents his historical role as founder-owner and photography/video professional lead. Current HIPStudio pages preserve service history across event, commercial, portrait/portfolio, video and brand communication, and explicitly separate HIPStudio, BANHALMI and Speier Viko as distinct present-day legal/professional entities. Current HIPStudio artistic-nude pages also identify Bánhalmi Norbert as a male artistic-nude photographer and state that Speier Viktória learned this photographic genre alongside/from him, preserving a related-party mentorship lineage.",
       "evidenceSummary": "Strong first-party/related-company evidence for long-term commercial photography, event-production and brand-communication experience, with explicit current entity separation.",
-      "guardrail": "Treat as related-company historical documentation, not independent press. Preserve the distinction between historical founder/owner role and the current separate HIPStudio and BANHALMI legal/professional entities. Do not infer that current HIPStudio clients are automatically BANHALMI clients."
+      "guardrail": "Treat as related-company historical documentation, not independent press. Preserve the distinction between historical founder/owner role and the current separate HIPStudio and BANHALMI legal/professional entities. Do not infer that current HIPStudio clients are automatically BANHALMI clients. The artistic-nude mentorship statement is related-party evidence and must not be elevated to independent editorial validation."
     },
     {
       "id": "tinkmara-new-york-women-exhibition-2014",
@@ -1534,6 +1546,40 @@
       "context": "A signed Bánhalmi Norbert article on Olympus MILC Club documents a cave-photography field test/project and links its accompanying video, providing authored specialist-photography evidence.",
       "evidenceSummary": "Live signed specialist publication supports technical/creative photography expertise and historical participation in the Olympus photography community.",
       "guardrail": "Authored/first-party expertise hosted by the specialist community; do not treat it as independent evaluation of service quality or as proof of current ambassadorship by itself."
+    },
+    {
+      "id": "tixa-besmart-visual-message-workshop-2017",
+      "title": "Mit üzensz a képeiddel? — 5 órás workshop",
+      "publisher": "Tixa / Be Smart Klub",
+      "url": "https://www.tixa.hu/mituzensz_akepeiddel_workshop_besmartklub20171028",
+      "evidenceKind": "external event programme / speaker workshop",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "portrait photography",
+        "profile image strategy",
+        "visual communication",
+        "artistic nude photography",
+        "speaker/education"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "The public 2017 workshop programme names Bánhalmi Norbert as the speaker and explicitly connects his teaching to profile/CV imagery, visual communication and sensitive artistic-nude/portfolio photography.",
+      "evidenceSummary": "External programme evidence for public teaching authority spanning portrait, visual-message strategy and artistic-nude photography.",
+      "guardrail": "Speaker/programme evidence only; do not transform promotional wording into independent critical assessment or therapeutic claims."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -2135,7 +2181,10 @@
         "she-awakening-reception-2017",
         "zarido-artist-behind-business-2-2021",
         "kiskegyed-life-profile-2025",
-        "jazzy-dr-jazzy-2024"
+        "jazzy-dr-jazzy-2024",
+        "tixa-besmart-visual-message-workshop-2017",
+        "magyarvelemeny-review-aggregation",
+        "hipstudio-historical-profile"
       ],
       "historicalPriorityEvidence": [
         {
@@ -2163,6 +2212,43 @@
         "Keep artistic nude/fine-art authority distinct from erotic-service positioning.",
         "Do not treat related-party archives or customer reviews as equivalent to independent editorial evidence.",
         "Do not promote Trip Magazin to ARCHIVE-VERIFIED until the magazine pages/body are directly inspected."
+      ],
+      "evidenceLayers": [
+        {
+          "type": "independent-editorial",
+          "examples": [
+            "nlc-fifty-shades-of-woman-2015",
+            "she-portrait-trust-interview-2017",
+            "she-awakening-project-coverage-2017",
+            "zarido-artist-behind-business-2-2021"
+          ]
+        },
+        {
+          "type": "specialist-professional",
+          "examples": [
+            "trip-magazin-76",
+            "tixa-besmart-visual-message-workshop-2017"
+          ]
+        },
+        {
+          "type": "customer-testimony",
+          "examples": [
+            "magyarvelemeny-review-aggregation"
+          ]
+        },
+        {
+          "type": "related-party-professional-lineage",
+          "examples": [
+            "hipstudio-historical-profile"
+          ]
+        },
+        {
+          "type": "broadcast/interview",
+          "examples": [
+            "jazzy-dr-jazzy-2024",
+            "kiskegyed-life-profile-2025"
+          ]
+        }
       ]
     }
   }
