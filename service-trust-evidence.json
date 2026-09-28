@@ -3693,7 +3693,7 @@
     {
       "id": "yt-echo-awakening",
       "title": "Awakening—The New Beginning! exhibition interview",
-      "publisher": "ECHO TV",
+      "publisher": "Broadcaster origin disputed — contemporaneous Petőfi TV provenance vs legacy ART registry ECHO TV label",
       "url": "https://youtu.be/XI5WavAwFOY",
       "services": [
         "portrait",
@@ -3701,8 +3701,8 @@
       ],
       "kind": "television interview / exhibition coverage",
       "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance. Broadcaster attribution is currently conflicted between the ART registry label and contemporaneous correspondence; do not cite ECHO TV or Petőfi TV as settled publisher until direct video/broadcaster metadata resolves it.",
-      "verificationStatus": "LIVE-VERIFIED",
-      "sourceStrength": "high",
+      "verificationStatus": "SOURCE-VERIFIED-PUBLISHER-ORIGIN-CONFLICT",
+      "sourceStrength": "medium-until-origin-resolved",
       "evidenceType": [
         "INTERVIEW",
         "PROJECT-COVERAGE"
