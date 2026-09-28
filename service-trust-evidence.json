@@ -49,7 +49,9 @@
       ],
       "externalEvidenceIds": [
         "orf-portraits-good-cause-2025",
-        "artineris-open-studio-2026"
+        "artineris-open-studio-2026",
+        "amcham-team-portrait-credit",
+        "linkedin-banhalmi-company-profile"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -72,7 +74,9 @@
         "orf-napraforgok-digital-heritage-2024",
         "artineris-open-studio-2026",
         "milcclub-samsung-the-frame",
-        "becsi-naplo-digitalization-2025"
+        "becsi-naplo-digitalization-2025",
+        "flickr-wiener-kaiser-wiesn-20260924",
+        "linkedin-banhalmi-company-profile"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -88,7 +92,10 @@
       "pressRecords": [],
       "externalEvidenceIds": [
         "orf-napraforgok-digital-heritage-2024",
-        "orf-vienna-1956-event-photo-credit-2025"
+        "orf-vienna-1956-event-photo-credit-2025",
+        "flickr-amcham-business-breakfast-20260925",
+        "flickr-wiener-kaiser-wiesn-20260924",
+        "linkedin-banhalmi-company-profile"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -387,6 +394,63 @@
       ],
       "context": "Bécsi Napló reports Bánhalmi Norbert giving practical advice on digitalization and fundraising to Austrian-Hungarian associations.",
       "guardrail": "Use as strategy/digital communication authority; not as photography-service proof."
+    },
+    {
+      "id": "amcham-team-portrait-credit",
+      "title": "AmCham Austria Team — Botond R. Pap portrait credit",
+      "publisher": "AmCham Austria",
+      "url": "https://amcham.at/amcham-team/",
+      "evidenceKind": "official organizational portrait photo credit",
+      "services": [
+        "portrait",
+        "brand",
+        "corporatePortrait"
+      ],
+      "context": "AmCham Austria's official team page visibly credits Norbert Banhalmi for the portrait of its Office & Event Manager, providing direct third-party executive/team portrait evidence.",
+      "guardrail": "Use as portrait/corporate-image capability evidence only; do not infer an exclusive photographer role or broader endorsement."
+    },
+    {
+      "id": "flickr-amcham-business-breakfast-20260925",
+      "title": "AmCham Talks: Business Breakfast – U.S.–Austria Trade Relations",
+      "publisher": "VIPACH / Flickr event archive",
+      "url": "https://www.flickr.com/photos/vipach/albums/72177720335829969",
+      "evidenceKind": "public event archive with explicit photographer credit",
+      "services": [
+        "event",
+        "institutionalEvent",
+        "corporateEvent"
+      ],
+      "context": "Publicly indexed Flickr album documents the 25 September 2026 AmCham Austria Business Breakfast at Hilton Vienna Plaza and explicitly credits Photography: Norbert Bánhalmi / BANHALMI Photography.",
+      "guardrail": "Use as event-photography capability and archive evidence; it does not by itself establish an AmCham client contract, endorsement or exclusivity."
+    },
+    {
+      "id": "flickr-wiener-kaiser-wiesn-20260924",
+      "title": "Wiener Kaiser Wiesn 2026 – Opening Day & Hungarian Lángos at the Wiesn Dorf",
+      "publisher": "VIPACH / Flickr event archive",
+      "url": "https://www.flickr.com/photos/vipach/albums/72177720335803138",
+      "evidenceKind": "public event/editorial archive with explicit photographer credit",
+      "services": [
+        "event",
+        "brand",
+        "editorial"
+      ],
+      "context": "Public Flickr album documents the 2026 Wiener Kaiser Wiesn opening-day atmosphere and Hungarian food stand, with explicit Photography: Norbert Bánhalmi / BANHALMI Photography credit and press/editorial reuse terms.",
+      "guardrail": "Use as event, editorial and brand-activation photography evidence; do not infer organizer endorsement or a broader commercial relationship."
+    },
+    {
+      "id": "linkedin-banhalmi-company-profile",
+      "title": "BANHALMI Photography LinkedIn company profile and updates",
+      "publisher": "LinkedIn",
+      "url": "https://www.linkedin.com/company/banhalmi/",
+      "evidenceKind": "brand-owned professional profile with externally referential updates",
+      "services": [
+        "portrait",
+        "brand",
+        "event",
+        "visualStrategy"
+      ],
+      "context": "The official BANHALMI Photography LinkedIn company page describes the professional service scope and publishes event/portrait case context, including SelectUSA, AmCham and The Recursive cover usage.",
+      "guardrail": "Treat as first-party context only; external validation must come from the linked independent publisher, institutional post or credited use."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -399,18 +463,6 @@
     {
       "id": "flickr-72177720335859544",
       "url": "https://www.flickr.com/photos/vipach/albums/72177720335859544",
-      "reason": "Public album metadata could not be independently retrieved in the current research pass.",
-      "status": "pending-context-classification"
-    },
-    {
-      "id": "flickr-72177720335829969",
-      "url": "https://www.flickr.com/photos/vipach/albums/72177720335829969",
-      "reason": "Public album metadata could not be independently retrieved in the current research pass.",
-      "status": "pending-context-classification"
-    },
-    {
-      "id": "flickr-72177720335803138",
-      "url": "https://www.flickr.com/photos/vipach/albums/72177720335803138",
       "reason": "Public album metadata could not be independently retrieved in the current research pass.",
       "status": "pending-context-classification"
     }
