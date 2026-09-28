@@ -94,7 +94,8 @@
         "oszk-szosszenetek-book-photo-credit-2017",
         "weltwoche-peter-magyar-photo-credit-2026",
         "babafoto-exhibition-hipstudio-2010",
-        "bme-vik-holgyvalasz-photo-credit-2017"
+        "bme-vik-holgyvalasz-photo-credit-2017",
+        "noi-egeszseg-magazin-awakening-2017"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -298,7 +299,8 @@
         "oszk-szosszenetek-book-photo-credit-2017",
         "verocei-tukor-curator-opening-2024",
         "verocei-tukor-digital-exhibition-project-2022",
-        "verocei-tukor-curatorial-evidence-2024"
+        "verocei-tukor-curatorial-evidence-2024",
+        "noi-egeszseg-magazin-awakening-2017"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -3458,6 +3460,48 @@
       "sameProjectAs": "mandiner-milestones56-series-2016",
       "authorityCounting": "corroborating-same-project",
       "guardrail": "Use only to corroborate Bánhalmi's documented participation in the historical New York project. Do not use or adopt the article's political framing, claims about interview subjects, or editorial opinions as BANHALMI authority evidence; do not infer political affiliation or endorsement."
+    },
+    {
+      "id": "noi-egeszseg-magazin-awakening-2017",
+      "title": "Női Egészség Magazin — Ébredés: erőt meríteni és erőt adni másoknak",
+      "publisher": "Női Egészség Magazin / Ars Hilaris Kft.",
+      "datePublished": "2017-10",
+      "evidenceKind": "archived project-partner magazine feature / photo credit / first-hand project account",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PHOTO-CREDIT",
+        "RELATED-PARTY",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "Ébredés – Az új kezdet",
+        "artistic nude photography",
+        "sensitive portrait process",
+        "book and exhibition",
+        "project origin",
+        "women and identity"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "The preserved 15-page October 2017 Női Egészség Magazin issue was visually verified. Its imprint lists Bánhalmi Norbert among the photographers; the Ébredés feature repeatedly credits photographs to him; and Elek Erika's first-hand 'Így történt' account describes finding Bánhalmi, his prior concept around post-cancer portrait work, his return from the New York 1956 project, and credits his drive as a major factor in creating the Ébredés exhibition and book within roughly five months.",
+      "evidenceSummary": "Archived related-party/project-partner magazine evidence for Bánhalmi's photography, project-development contribution and the Ébredés book/exhibition, with direct image credits and a first-hand project-origin account.",
+      "sourceStrength": "medium-high",
+      "provenance": [
+        "Preserved 15-page Női Egészség Magazin PDF dated October 2017 from contemporaneous correspondence.",
+        "Visual verification of the imprint shows Női Egészség Magazin, Ars Hilaris Kft., ISSN 2560-0788 and Bánhalmi Norbert among credited photographers.",
+        "Visual verification of the Ébredés feature shows multiple explicit 'fotó: Bánhalmi Norbert' credits.",
+        "The published 'Így történt' section by Elek Erika gives a first-hand project-origin account and names Bánhalmi's contribution to creating the exhibition and book."
+      ],
+      "guardrail": "This is project-partner/related-party documentation, not independent editorial endorsement. Use it as first-hand project provenance, publication/photo-credit and artistic/portrait authority evidence. Do not convert participant or editorial statements about illness, body image, psychology, recovery or personal transformation into medical, psychological or therapeutic efficacy claims. Do not expose private correspondence used to recover the PDF."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -4874,7 +4918,8 @@
         "hipstudio-historical-profile",
         "veol-awakening-oncology-exhibition-2018",
         "moka-podcast-106-2022",
-        "fotoshow-artistic-nude-workshop-2019"
+        "fotoshow-artistic-nude-workshop-2019",
+        "noi-egeszseg-magazin-awakening-2017"
       ],
       "historicalPriorityEvidence": [
         {
@@ -4952,6 +4997,12 @@
             "jazzy-dr-jazzy-2024",
             "kiskegyed-life-profile-2025",
             "moka-podcast-106-2022"
+          ]
+        },
+        {
+          "type": "related-party/project-partner",
+          "examples": [
+            "noi-egeszseg-magazin-awakening-2017"
           ]
         }
       ]
