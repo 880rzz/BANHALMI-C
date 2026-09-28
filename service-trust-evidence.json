@@ -2499,18 +2499,23 @@
       "id": "tripont-problog-3032-new-york-archived",
       "url": "https://web.archive.org/web/20180621233214/http://www.tripont.hu/problog/3032/egy_kezdo_fotos_new_yorkban",
       "reason": "Exact Wayback URL is preserved in the canonical ART master-source database; title indicates New York photography context, but archive body requires direct verification before service-authority projection.",
-      "status": "archive-body-verification-required",
+      "status": "publisher-edited-version-verified-final-body-unavailable",
       "canonicalArtSourceId": "wikipedia-source-037",
       "canonicalArtCatalogueNumber": "BAS-0003",
       "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
       "sourceType": "ArchivedArticle",
       "provenance": [
         "current-hungarian-wikipedia",
-        "BANHALMI ART master source database"
+        "BANHALMI ART master source database",
+        "Contemporaneous 2018-03-27 and 2018-03-29 emails from the Tripont editor preserve the exact 3032 URL and explicitly describe editorial shortening, copy-editing and finalization of the article.",
+        "The editor describes the piece as a New York story and a narrative of professional milestones and requests additional New York location images for publication."
       ],
       "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
-      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
-      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "verificationStatus": "CONTEMPORANEOUS-PUBLISHER-EDITED-VERSION-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "FIRST-PARTY"
+      ],
       "titleRecoveredFromSlug": "Egy kezdő fotós New Yorkban",
       "services": [
         "portrait",
@@ -2520,7 +2525,10 @@
       "historicalCluster": [
         "New York"
       ],
-      "guardrail": "Exact archived Tripont source is canonically catalogued. Title supports New York context only; do not infer a New York studio or article-specific facts until archive body verification succeeds."
+      "guardrail": "Historical New York professional/publication evidence only. Do not infer a current New York studio, U.S. employment, immigration/work status or current U.S. client base. Do not mark full ARCHIVE-VERIFIED until the exact final archived body is recovered.",
+      "datePublished": "2018-03",
+      "sourceStrength": "medium-high historical provenance",
+      "evidenceSummary": "Publisher-side editorial correspondence verifies that Tripont edited and prepared the New York article at the exact 3032 URL. The exact archived final body remains unavailable in the current environment."
     },
     {
       "id": "tripont-problog-3182-archived",
@@ -2674,6 +2682,44 @@
         "brand"
       ],
       "guardrail": "Potential judging/professional-recognition evidence only; do not imply brand endorsement, campaign client status or partnership until source content is recovered."
+    },
+    {
+      "id": "tripont-olympus-workshop-event-2018",
+      "title": "Tripont / Olympus workshop event — 2018",
+      "publisher": "Tripont Foto Video",
+      "url": "http://www.tripont.hu/esemenyek?hirfolyam_id=175",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "event-page-recovery-required",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "AMBASSADORSHIP"
+      ],
+      "classification": [
+        "Olympus workshop",
+        "photography education",
+        "portrait",
+        "portfolio",
+        "artistic nude",
+        "camera/lens demonstration"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "Contemporaneous 2018-08-01 Tripont editor correspondence preserves the exact event URL.",
+        "The same thread records that Olympus would bring lenses and camera bodies for the event and asks Bánhalmi for workshop topics.",
+        "The proposed programme includes Olympus menu/system guidance, lens selection, RAW workflow, alternative angles, legacy lenses and portrait/portfolio/artistic-nude photography including photographic psychology."
+      ],
+      "evidenceSummary": "Strong contemporaneous publisher-side evidence of a Tripont/Olympus educational event involving Bánhalmi, but the public event page body still requires archive recovery.",
+      "sourceStrength": "medium-high historical provenance",
+      "guardrail": "Do not service-bind until the public/archived event page is recovered. Private correspondence establishes provenance only; do not expose contact details or infer Olympus employment/exclusivity."
     }
   ],
   "interpretationRules": [
