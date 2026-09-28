@@ -1228,8 +1228,98 @@
           "currentHipstudio": "2006-02-27",
           "externalDirectory": "2006-03-15",
           "resolution": "UNRESOLVED-EXACT-DATE; 2006 founding year is corroborated, exact day remains source-conflicted"
+        },
+        "currentEntityContinuation": "Person-level professional experience continues into BANHALMI; HIPStudio remains a separate related-party entity."
+      },
+      "historicalPeriodInventory": [
+        {
+          "period": "2006–2008",
+          "historicalBrand": "HIPStudio",
+          "evidenceSummary": "Founder-era studio/brand formation. Current HIPStudio identifies Bánhalmi Norbert as founder in 2006; a Flúgos Futam participant biography independently of the current HIPStudio site corroborates the 2006 co-founding history at participant/related-party level.",
+          "sourceType": "RELATED-PARTY + PARTICIPANT-BIOGRAPHY",
+          "sourceStrength": "low-independent-authority",
+          "services": [
+            "portrait",
+            "event",
+            "generalAuthority"
+          ],
+          "guardrail": "Founding year is corroborated; exact founding day remains source-conflicted and should not be presented as independently resolved."
+        },
+        {
+          "period": "2009–2012",
+          "historicalBrand": "HIPStudio",
+          "evidenceSummary": "Retrospective HIPStudio company-history material describes the expansion into party/advertising photo-video work and Coke Club event video production, followed by broader event photography/video. Public baby-photo exhibition material from 2010 names Bánhalmi Norbert among HIPStudio photographers and co-organizers.",
+          "sourceType": "RELATED-PARTY + EXTERNAL-PROJECT-MENTION",
+          "sourceStrength": "medium historical corroboration",
+          "services": [
+            "portrait",
+            "event",
+            "brand",
+            "generalAuthority"
+          ],
+          "corroboratingUrls": [
+            "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
+            "https://polgarnoemi-oldala.hupont.hu/85/babafotokiallitas"
+          ],
+          "guardrail": "Do not convert retrospective HIPStudio project/client statements into independent client endorsements. Use external project pages only for the facts they explicitly support."
+        },
+        {
+          "period": "2013–2015",
+          "historicalBrand": "HIPStudio",
+          "evidenceSummary": "HIPStudio retrospective company history states that advertising photography/video and music-video production became the main focus. This period overlaps with Bánhalmi's separate personal professional-domain development.",
+          "sourceType": "RELATED-PARTY-RETROSPECTIVE",
+          "sourceStrength": "low-independent-authority",
+          "services": [
+            "brand",
+            "event",
+            "visualStrategy",
+            "generalAuthority"
+          ],
+          "corroboratingUrls": [
+            "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+          ],
+          "guardrail": "Historical service-continuity evidence only; do not infer that every HIPStudio client/project transfers to BANHALMI."
+        },
+        {
+          "period": "2016–2018",
+          "historicalBrand": "HIPStudio / Bánhalmi personal professional and artistic activity",
+          "evidenceSummary": "HIPStudio retrospective history documents increased artistic/exhibition activity around Bánhalmi, while external/current related pages preserve portrait, portfolio, commercial and artistic-nude lineage. This is a transition period rather than entity identity.",
+          "sourceType": "RELATED-PARTY-RETROSPECTIVE + EXTERNAL-PROJECT-EVIDENCE",
+          "sourceStrength": "medium historical corroboration",
+          "services": [
+            "portrait",
+            "fineArt",
+            "brand",
+            "generalAuthority"
+          ],
+          "corroboratingUrls": [
+            "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
+            "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+            "https://www.hipstudio.hu/muveszi-aktfotozas-budapest"
+          ],
+          "guardrail": "Preserve HIPStudio, personal professional activity and artistic oeuvre as related but distinct layers."
+        },
+        {
+          "period": "2018–2020",
+          "historicalBrand": "HIPStudio",
+          "evidenceSummary": "HIPStudio retrospective history describes expansion toward company content production and communication-agency services. This supports historical visual-communication continuity, but not automatic equivalence with today's BANHALMI Visual Brand Strategy service.",
+          "sourceType": "RELATED-PARTY-RETROSPECTIVE",
+          "sourceStrength": "low-independent-authority",
+          "services": [
+            "brand",
+            "visualStrategy",
+            "event",
+            "generalAuthority"
+          ],
+          "corroboratingUrls": [
+            "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf"
+          ],
+          "guardrail": "Historical communication/content-production evidence may support continuity, but old advertising/content work must not be relabeled as current strategic consulting without separate evidence."
         }
-      }
+      ],
+      "historicalDomain": "hipstudio.hu",
+      "historicalBrand": "HIPStudio",
+      "currentEntityContinuation": "Person-level professional experience continues into BANHALMI; HIPStudio remains a separate related-party entity."
     },
     {
       "id": "tinkmara-new-york-women-exhibition-2014",
