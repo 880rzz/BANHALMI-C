@@ -89,7 +89,8 @@
         "hungaryreport-peter-magyar-photo-credit-2026",
         "hungary-foundation-milestones56-newyork-2016",
         "google-alert-kiskegyed-magyar-peter-2026",
-        "fotoshow-artistic-nude-workshop-2019"
+        "fotoshow-artistic-nude-workshop-2019",
+        "tamron-new-york-ballerina-project-2018"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -151,7 +152,8 @@
         "kreativ-young-lions-speier-mentor-2024",
         "amcham-team-portrait-credit",
         "rolunk-profile-possible-is-just-a-word-2025",
-        "milcclub-most-vagy-soha-organizer-2020"
+        "milcclub-most-vagy-soha-organizer-2020",
+        "tamron-new-york-ballerina-project-2018"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -285,7 +287,8 @@
         "fotoshow-artistic-nude-workshop-2019",
         "milcclub-most-vagy-soha-organizer-2020",
         "veol-rege60-digital-exhibition-2021",
-        "veol-rege-digital-exhibition-2021"
+        "veol-rege-digital-exhibition-2021",
+        "tamron-new-york-ballerina-project-2018"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -3119,6 +3122,43 @@
       "evidenceSummary": "Independent regional editorial evidence for Bánhalmi's Rege Galéria curator role and digital presentation/heritage-exhibition practice.",
       "sourceStrength": "high",
       "guardrail": "Use as documented curatorial/cultural-project evidence. Do not infer venue ownership, commercial client status, publisher endorsement or broader institutional authority beyond the documented exhibition."
+    },
+    {
+      "id": "tamron-new-york-ballerina-project-2018",
+      "title": "New York-i lányok és sok homok – Tamron 24-70 mm G2 teszt élesben",
+      "publisher": "TAMRON Hungary",
+      "url": "https://tamron.hu/2018/06/27/new-york-i-lanyok-es-sok-homok-tamron-24-70-mm-g2-teszt-elesben/",
+      "datePublished": "2018-06-27",
+      "evidenceKind": "brand-hosted professional field article / project documentation",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "New York historical project",
+        "Ballerina Project",
+        "fashion/commercial photography",
+        "portrait/model photography",
+        "lens field test",
+        "exhibition production"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "brand",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "TAMRON Hungary publishes a first-person field article by/about Bánhalmi Norbert, explicitly identifying him as a fashion and advertising photographer and documenting his New York trip to photograph ballerinas in multiple locations while testing the Tamron 24–70 mm G2 lens for material intended for an upcoming exhibition.",
+      "evidenceSummary": "Strong external brand-hosted corroboration for the 2018 New York Ballerina Project, fashion/commercial photography capability and exhibition production.",
+      "sourceStrength": "medium-high",
+      "guardrail": "Use as documented professional publication/project evidence and historical New York context. It is brand-hosted content, not an independent critical review of Bánhalmi's services. Do not infer a formal Tamron ambassadorship, employment, exclusivity or current New York studio."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -3657,6 +3697,29 @@
       ],
       "reason": "Publisher correspondence directly confirms non-publication. Preserve only as negative provenance so it is never misclassified as press evidence.",
       "guardrail": "DO NOT BIND. This is an unpublished proposal/pitch, not a publication, partnership, review, product endorsement or editorial evidence."
+    },
+    {
+      "id": "tripont-ballerina-new-york-proposal-2018",
+      "title": "Tripont Ballerina Project New York article proposal — unpublished/unverified as Tripont publication",
+      "publisher": "Tripont / Computer Emporium",
+      "verificationStatus": "DO-NOT-BIND",
+      "status": "editorial-proposal-no-tripont-publication-url-recovered",
+      "evidenceType": [
+        "FIRST-PARTY"
+      ],
+      "classification": [
+        "New York Ballerina Project",
+        "editorial proposal",
+        "product test idea"
+      ],
+      "services": [],
+      "provenance": [
+        "April 2018 Tripont editorial correspondence discusses a planned New York ballerina photography story and possible Tamron/Olympus product-testing angle.",
+        "No Tripont publication URL or publisher publication confirmation for the Ballerina Project has been recovered.",
+        "The underlying Ballerina Project itself is independently corroborated by TAMRON Hungary's 2018 published field article."
+      ],
+      "reason": "Preserve the distinction between a real external Tamron publication/project and an unproven Tripont publication proposal.",
+      "guardrail": "DO NOT BIND as Tripont press evidence unless an actual Tripont publication URL or archived final body is recovered."
     }
   ],
   "interpretationRules": [
@@ -4503,7 +4566,8 @@
         "mandiner-milestones56-series-2016",
         "hungary-foundation-milestones56-newyork-2016",
         "imagazin-ipad-photo-postproduction-2016",
-        "saatchi-ballerina-project-newyork-2018"
+        "saatchi-ballerina-project-newyork-2018",
+        "tamron-new-york-ballerina-project-2018"
       ],
       "guardrails": [
         "Historical New York project/exhibition context only.",
