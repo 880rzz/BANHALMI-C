@@ -61,7 +61,8 @@
         "trustindex-google-reviews-2026",
         "vienna-family-network-business-member-2026",
         "magyarvelemeny-review-aggregation",
-        "hipstudio-historical-profile"
+        "hipstudio-historical-profile",
+        "tinkmara-new-york-women-exhibition-2014"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -165,7 +166,8 @@
         "tripont-rgb-portrait",
         "fotosviadal-speaker-2021",
         "everness-speaker-workshop-2026",
-        "rege-galeria-founder-curator"
+        "rege-galeria-founder-curator",
+        "tinkmara-new-york-women-exhibition-2014"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -823,6 +825,32 @@
       "context": "HIPStudio profile identifies Bánhalmi Norbert as founder-owner and photography/video professional lead, describing experience across event, advertising, portrait and portfolio photography and personal-brand education.",
       "evidenceSummary": "Useful historical professional-role evidence, but it is a related-company source rather than independent press.",
       "guardrail": "Treat as first-party/related-company historical documentation, not independent third-party validation."
+    },
+    {
+      "id": "tinkmara-new-york-women-exhibition-2014",
+      "title": "Magyar nők New Yorkban – beszélgetés Bánhalmi Norbert fotóművésszel",
+      "publisher": "Tinkmara.com / A Tengerentúlról jelentem",
+      "url": "https://tinkmara.com/2014/12/14/magyar-nok-new-yorkban/",
+      "evidenceKind": "independent editorial interview and exhibition coverage",
+      "classification": [
+        "international editorial profile",
+        "New York exhibition",
+        "portrait practice",
+        "Hungarian House New York"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "Independent New York-based Hungarian-language interview documenting the December 2014 'Magyar nők New Yorkban' exhibition at the Hungarian House in New York, including the portrait concept, production process, participant context and the photographer's own account of the project.",
+      "evidenceSummary": "Strong international editorial evidence for New York exhibition history, portrait practice and cross-border artistic authority.",
+      "guardrail": "Use as 2014 exhibition/interview evidence. Do not infer a permanent New York studio, current New York service location or institutional endorsement by the Hungarian House beyond the documented exhibition."
     }
   ],
   "pendingEvidenceCandidates": [
