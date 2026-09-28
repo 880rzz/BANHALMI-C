@@ -508,7 +508,15 @@
         "visualStrategy"
       ],
       "context": "The ORF article documents a commissioned cultural-heritage photo series and repeatedly credits Napraforgók Néptáncegyüttes/Bánhalmi Norbert.",
-      "guardrail": "Use as capability and publication evidence only; do not infer endorsement by ORF or an ongoing client relationship."
+      "guardrail": "Use as capability and publication evidence only; do not infer endorsement by ORF or an ongoing client relationship.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "sourceStrength": "high",
+      "evidenceSummary": "Independent ORF editorial coverage documents a cultural-heritage photography project and repeated Bánhalmi photo credits."
     },
     {
       "id": "orf-portraits-good-cause-2025",
@@ -521,7 +529,14 @@
         "generalAuthority"
       ],
       "context": "Independent ORF coverage of a Vienna portrait-photography fundraising initiative led by Bánhalmi Norbert.",
-      "guardrail": "Use as portrait capability and community-trust evidence; not as an ORF endorsement."
+      "guardrail": "Use as portrait capability and community-trust evidence; not as an ORF endorsement.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "sourceStrength": "high",
+      "evidenceSummary": "Independent ORF coverage documents a Vienna portrait-photography fundraising initiative led by Bánhalmi Norbert."
     },
     {
       "id": "orf-vienna-1956-event-photo-credit-2025",
@@ -534,7 +549,14 @@
         "institutionalEvent"
       ],
       "context": "ORF photo story credits Központi Szövetség/Bánhalmi Norbert for images from a Vienna 1956 commemoration at Collegium Hungaricum.",
-      "guardrail": "Use as event-documentation evidence; do not infer organizer, government or ORF client status beyond the documented credit."
+      "guardrail": "Use as event-documentation evidence; do not infer organizer, government or ORF client status beyond the documented credit.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "PROJECT-COVERAGE"
+      ],
+      "sourceStrength": "high",
+      "evidenceSummary": "Independent ORF publication provides direct event-photo credit for Bánhalmi Norbert in a Vienna 1956 commemoration context."
     },
     {
       "id": "orf-bmi-photo-club-exhibition-2025",
@@ -547,7 +569,14 @@
         "communityEducation"
       ],
       "context": "ORF reports that the Vienna photo club was initiated by Bánhalmi Norbert and documents its exhibition activity.",
-      "guardrail": "Authority/education evidence; not a direct commercial-service proof."
+      "guardrail": "Authority/education evidence; not a direct commercial-service proof.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "sourceStrength": "high",
+      "evidenceSummary": "Independent ORF report documents Bánhalmi Norbert's role in initiating the Vienna BMI photo club and its exhibition activity."
     },
     {
       "id": "artineris-open-studio-2026",
@@ -562,7 +591,14 @@
         "budapestLocalAuthority"
       ],
       "context": "Artineris event listing documents the BANHALMI Budapest studio and open portrait, business/personal-brand and fine-art photography session.",
-      "guardrail": "Participant-managed listing: use for participation and service-context evidence, not independent critical validation or endorsement."
+      "guardrail": "Participant-managed listing: use for participation and service-context evidence, not independent critical validation or endorsement.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "RELATED-PARTY"
+      ],
+      "sourceStrength": "medium",
+      "evidenceSummary": "Live Artineris event listing documents BANHALMI participation/open-studio activity and the associated portrait, brand and fine-art service context."
     },
     {
       "id": "milcclub-samsung-the-frame",
@@ -607,7 +643,14 @@
         "corporatePortrait"
       ],
       "context": "AmCham Austria's official team page visibly credits Norbert Banhalmi for the portrait of its Office & Event Manager, providing direct third-party executive/team portrait evidence.",
-      "guardrail": "Use as portrait/corporate-image capability evidence only; do not infer an exclusive photographer role or broader endorsement."
+      "guardrail": "Use as portrait/corporate-image capability evidence only; do not infer an exclusive photographer role or broader endorsement.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "INSTITUTIONAL-EVIDENCE"
+      ],
+      "sourceStrength": "high",
+      "evidenceSummary": "AmCham Austria's official team page carries a visible Norbert Banhalmi portrait credit, directly corroborating corporate/team portrait capability."
     },
     {
       "id": "flickr-amcham-business-breakfast-20260925",
@@ -621,7 +664,14 @@
         "corporateEvent"
       ],
       "context": "Publicly indexed Flickr album documents the 25 September 2026 AmCham Austria Business Breakfast at Hilton Vienna Plaza and explicitly credits Photography: Norbert Bánhalmi / BANHALMI Photography.",
-      "guardrail": "Use as event-photography capability and archive evidence; it does not by itself establish an AmCham client contract, endorsement or exclusivity."
+      "guardrail": "Use as event-photography capability and archive evidence; it does not by itself establish an AmCham client contract, endorsement or exclusivity.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "FIRST-PARTY",
+        "PROJECT-COVERAGE"
+      ],
+      "sourceStrength": "low-medium",
+      "evidenceSummary": "Public VIPACH/Flickr event archive explicitly credits Norbert Bánhalmi / BANHALMI Photography for the documented AmCham business breakfast photography."
     },
     {
       "id": "flickr-wiener-kaiser-wiesn-20260924",
@@ -635,7 +685,14 @@
         "editorial"
       ],
       "context": "Public Flickr album documents the 2026 Wiener Kaiser Wiesn opening-day atmosphere and Hungarian food stand, with explicit Photography: Norbert Bánhalmi / BANHALMI Photography credit and press/editorial reuse terms.",
-      "guardrail": "Use as event, editorial and brand-activation photography evidence; do not infer organizer endorsement or a broader commercial relationship."
+      "guardrail": "Use as event, editorial and brand-activation photography evidence; do not infer organizer endorsement or a broader commercial relationship.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "FIRST-PARTY",
+        "PROJECT-COVERAGE"
+      ],
+      "sourceStrength": "low-medium",
+      "evidenceSummary": "Public VIPACH/Flickr archive explicitly credits Norbert Bánhalmi / BANHALMI Photography for Wiener Kaiser Wiesn event/editorial imagery."
     },
     {
       "id": "linkedin-banhalmi-company-profile",
@@ -769,7 +826,13 @@
       ],
       "context": "A 2024-09-21 Dr. Jazzy interview discusses Bánhalmi Norbert's youth photo/film-therapy education plans, work with breast-cancer survivors and the sensitivity of his photographic process.",
       "evidenceSummary": "Independent radio/podcast appearance documenting photographic method, portrait sensitivity and artistic-social projects.",
-      "guardrail": "Interview/authority evidence only; do not treat therapeutic wording as a medical or clinical qualification."
+      "guardrail": "Interview/authority evidence only; do not treat therapeutic wording as a medical or clinical qualification.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "sourceStrength": "high"
     },
     {
       "id": "tripont-rgb-portrait",
@@ -794,7 +857,13 @@
       ],
       "context": "Tripont publishes a first-person account of a creative RGB portrait session with Bánhalmi Norbert, describing the process and resulting images.",
       "evidenceSummary": "External specialist-photography publication supports creative portrait, lighting and directed-session capability.",
-      "guardrail": "Use as professional capability/publication evidence; the subject's praise is testimonial context, not an institutional endorsement by Tripont."
+      "guardrail": "Use as professional capability/publication evidence; the subject's praise is testimonial context, not an institutional endorsement by Tripont.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "sourceStrength": "medium-high"
     },
     {
       "id": "milcclub-dancepartner-2020",
@@ -844,7 +913,13 @@
       ],
       "context": "The official Fotósviadal programme lists Bánhalmi Norbert as the speaker for a model-photography lecture.",
       "evidenceSummary": "Independent industry-event listing supports teaching/expertise in model and portrait photography.",
-      "guardrail": "Speaker/expertise evidence only; not a client or endorsement claim."
+      "guardrail": "Speaker/expertise evidence only; not a client or endorsement claim.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "sourceStrength": "medium-high"
     },
     {
       "id": "trustindex-google-reviews-2026",
@@ -914,7 +989,13 @@
       ],
       "context": "Everness profiles Bánhalmi Norbert as a photo artist and workshop/speaker, referencing exhibition practice and OM SYSTEM ambassadorship.",
       "evidenceSummary": "External event programme supports Fine Art, workshop and public-expertise authority.",
-      "guardrail": "Speaker/profile evidence; do not infer festival endorsement beyond participation."
+      "guardrail": "Speaker/profile evidence; do not infer festival endorsement beyond participation.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "sourceStrength": "medium-high"
     },
     {
       "id": "magyarvelemeny-review-aggregation",
