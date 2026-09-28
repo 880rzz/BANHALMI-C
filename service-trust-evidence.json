@@ -90,7 +90,8 @@
         "hungary-foundation-milestones56-newyork-2016",
         "google-alert-kiskegyed-magyar-peter-2026",
         "fotoshow-artistic-nude-workshop-2019",
-        "tamron-new-york-ballerina-project-2018"
+        "tamron-new-york-ballerina-project-2018",
+        "oszk-szosszenetek-book-photo-credit-2017"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -288,7 +289,8 @@
         "milcclub-most-vagy-soha-organizer-2020",
         "veol-rege60-digital-exhibition-2021",
         "veol-rege-digital-exhibition-2021",
-        "tamron-new-york-ballerina-project-2018"
+        "tamron-new-york-ballerina-project-2018",
+        "oszk-szosszenetek-book-photo-credit-2017"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -3162,6 +3164,39 @@
       "evidenceSummary": "Strong external brand-hosted corroboration for the 2018 New York Ballerina Project, fashion/commercial photography capability and exhibition production.",
       "sourceStrength": "medium-high",
       "guardrail": "Use as documented professional publication/project evidence and historical New York context. It is brand-hosted content, not an independent critical review of Bánhalmi's services. Do not infer a formal Tamron ambassadorship, employment, exclusivity or current New York studio."
+    },
+    {
+      "id": "oszk-szosszenetek-book-photo-credit-2017",
+      "title": "Szösszenetek",
+      "publisher": "Országos Széchényi Könyvtár — Magyar Nemzeti Bibliográfia",
+      "url": "https://epa.oszk.hu/01900/01927/00394/",
+      "datePublished": "2017",
+      "evidenceKind": "national bibliographic record / book photography credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE",
+        "PHOTO-CREDIT",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "book photography",
+        "national bibliography",
+        "publication credit"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "The Hungarian National Bibliography records the 2017 book 'Szösszenetek' by Vincent & Vincent with the explicit credit '[fotók Bánhalmi Norbert]' and ISBN 978-615-00-0053-4.",
+      "evidenceSummary": "Official national bibliographic evidence for credited photography in a published book.",
+      "sourceStrength": "high",
+      "guardrail": "Use as book/publication photography credit only. Do not infer authorship of the text, publisher endorsement or a broader client relationship beyond the documented photo contribution."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -3757,6 +3792,39 @@
       "sourceStrength": "medium historical provenance",
       "reason": "Explicit publication photo credit is preserved in the indexed PDF content, but direct PDF inspection is temporarily unavailable. Keep unbound until direct PDF/page verification succeeds.",
       "guardrail": "Photo-credit evidence only. Do not infer a commission, continuing relationship with MESZK/Hivatásunk, healthcare expertise or endorsement."
+    },
+    {
+      "id": "gramofon-zadory-cover-photo-2024",
+      "title": "Gramofon 2024 nyár — Zádory Édua címlap",
+      "publisher": "Gramofon – Klasszikus és Jazz",
+      "url": "https://epa.oszk.hu/02900/02964/00054/pdf/EPA02964_gramofon_2024_02.pdf",
+      "datePublished": "2024",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "indexed-pdf-credit-verified-direct-screenshot-unavailable",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "cover portrait",
+        "editorial portrait",
+        "music magazine"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "EPA full-text extraction for Gramofon 2024 nyár, XXIX. évfolyam 2. (148.) identifies the issue and states: 'Címlapon: Zádory Édua. Fotó: Bánhalmi Norbert'.",
+        "Direct PDF screenshot retrieval failed with a cache error during the verification pass, so visual page verification remains open."
+      ],
+      "sourceStrength": "medium-high historical provenance",
+      "reason": "Explicit magazine cover-photo credit is present in the indexed publication text, but direct PDF screenshot verification remains unavailable in this pass.",
+      "guardrail": "Photo-credit evidence only. Do not infer recurring Gramofon commission, exclusivity, endorsement or a client relationship with the photographed artist."
     }
   ],
   "interpretationRules": [
