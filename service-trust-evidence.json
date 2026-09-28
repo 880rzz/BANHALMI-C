@@ -3700,12 +3700,22 @@
         "fineArt"
       ],
       "kind": "television interview / exhibition coverage",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance. Broadcaster attribution is currently conflicted between the ART registry label and contemporaneous correspondence; do not cite ECHO TV or Petőfi TV as settled publisher until direct video/broadcaster metadata resolves it.",
       "verificationStatus": "LIVE-VERIFIED",
       "sourceStrength": "high",
       "evidenceType": [
         "INTERVIEW",
         "PROJECT-COVERAGE"
+      ],
+      "publisherVerificationStatus": "CONFLICT-REQUIRES-DIRECT-VIDEO-METADATA",
+      "publisherConflict": {
+        "currentRegistryLabel": "ECHO TV",
+        "contemporaneousEvidence": "Multiple 2017 Gmail messages identify the same YouTube ID XI5WavAwFOY as a Petőfi TV / Én vagyok itt / Ébredés video.",
+        "resolutionRule": "Do not change publisher label in canonical source registries until uploader/channel/program metadata or an archived broadcaster page resolves the conflict."
+      },
+      "provenance": [
+        "2017-05-15 contemporaneous sent email preserves the legacy Petőfi Live URL 'petofilive.hu/video/igazi-tulelok-banhalmi-norbert-fotosorozata/'.",
+        "2018-05-28 contemporaneous email explicitly labels YouTube ID XI5WavAwFOY as 'Petőfi TV ébredés kiállítás'."
       ]
     },
     {
