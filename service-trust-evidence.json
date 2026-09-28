@@ -62,7 +62,11 @@
         "vienna-family-network-business-member-2026",
         "magyarvelemeny-review-aggregation",
         "hipstudio-historical-profile",
-        "tinkmara-new-york-women-exhibition-2014"
+        "tinkmara-new-york-women-exhibition-2014",
+        "zarido-artist-behind-business-1-2021",
+        "zarido-artist-behind-business-2-2021",
+        "nlc-fifty-shades-of-woman-2015",
+        "she-awakening-body-trust-cluster-2017"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -104,7 +108,10 @@
         "kultura-hirado-origo-the-frame-2021",
         "tripont-rgb-portrait",
         "vienna-family-network-business-member-2026",
-        "hipstudio-historical-profile"
+        "hipstudio-historical-profile",
+        "zarido-artist-behind-business-1-2021",
+        "zarido-artist-behind-business-3-ambassador-2021",
+        "zarido-the-frame-2021"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -133,7 +140,8 @@
         "flickr-wiener-kaiser-wiesn-20260924",
         "linkedin-banhalmi-company-profile",
         "milcclub-dancepartner-2020",
-        "hipstudio-historical-profile"
+        "hipstudio-historical-profile",
+        "zarido-artist-behind-business-1-2021"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -188,7 +196,12 @@
         "fotosviadal-speaker-2021",
         "everness-speaker-workshop-2026",
         "rege-galeria-founder-curator",
-        "tinkmara-new-york-women-exhibition-2014"
+        "tinkmara-new-york-women-exhibition-2014",
+        "zarido-artist-behind-business-2-2021",
+        "zarido-artist-behind-business-3-ambassador-2021",
+        "zarido-the-frame-2021",
+        "nlc-fifty-shades-of-woman-2015",
+        "she-awakening-body-trust-cluster-2017"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -229,7 +242,10 @@
         "kultura-hirado-origo-the-frame-2021",
         "vienna-family-network-business-member-2026",
         "rege-galeria-founder-curator",
-        "hipstudio-historical-profile"
+        "hipstudio-historical-profile",
+        "zarido-artist-behind-business-1-2021",
+        "zarido-artist-behind-business-3-ambassador-2021",
+        "zarido-the-frame-2021"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
@@ -889,6 +905,139 @@
       "context": "Independent New York-based Hungarian-language interview documenting the December 2014 'Magyar nők New Yorkban' exhibition at the Hungarian House in New York, including the portrait concept, production process, participant context and the photographer's own account of the project.",
       "evidenceSummary": "Strong international editorial evidence for New York exhibition history, portrait practice and cross-border artistic authority.",
       "guardrail": "Use as 2014 exhibition/interview evidence. Do not infer a permanent New York studio, current New York service location or institutional endorsement by the Hungarian House beyond the documented exhibition."
+    },
+    {
+      "id": "zarido-artist-behind-business-1-2021",
+      "title": "Művész az üzlet mögött 1. rész – New York! Köszönjük, hogy velünk utaztak.",
+      "publisher": "Záridő Magazin",
+      "url": "https://zarido.hu/muvesz-az-uzlet-mogott-1-resz/",
+      "evidenceKind": "independent long-form professional interview",
+      "classification": [
+        "career history",
+        "New York exhibition",
+        "marketing background",
+        "event photography history",
+        "international authority"
+      ],
+      "services": [
+        "portrait",
+        "event",
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Záridő's first long-form interview installment documents Bánhalmi Norbert's professional path from military/event documentation through commercial and marketing work to New York exhibitions and international assignments.",
+      "evidenceSummary": "Independent specialist-photography interview supporting long-term professional experience, marketing background, event-documentation practice and New York exhibition history.",
+      "guardrail": "Use as historical professional/interview evidence; quoted career claims should remain attributed to the interview where not independently corroborated."
+    },
+    {
+      "id": "zarido-artist-behind-business-2-2021",
+      "title": "Művész az üzlet mögött 2. rész – Fókuszban a Női lélek",
+      "publisher": "Záridő Magazin",
+      "url": "https://zarido.hu/muvesz-az-uzlet-mogott-2-resz/",
+      "evidenceKind": "independent specialist-photography interview",
+      "classification": [
+        "portrait practice",
+        "women/identity",
+        "fine-art portraiture",
+        "creative process"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "The second Záridő installment focuses on Bánhalmi's portrait and artistic practice around women, identity and emotionally sensitive photographic work.",
+      "evidenceSummary": "Specialist-photography editorial context for portrait and fine-art practice.",
+      "guardrail": "Use as editorial/profile evidence; do not transform subjective interview framing into clinical or therapeutic claims."
+    },
+    {
+      "id": "zarido-artist-behind-business-3-ambassador-2021",
+      "title": "Művész az üzlet mögött 3. rész – A Nagykövet",
+      "publisher": "Záridő Magazin",
+      "url": "https://zarido.hu/muvesz-az-uzlet-mogott-3-resz-a-nagykovet/",
+      "evidenceKind": "independent specialist-photography interview / relationship evidence",
+      "classification": [
+        "brand ambassador",
+        "marketing",
+        "communications",
+        "photography industry"
+      ],
+      "services": [
+        "brand",
+        "visualStrategy",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "Záridő states that Bánhalmi Norbert was both ambassador and marketer for an international photography brand and discusses his marketing ideas and communications role around the Olympus transition period.",
+      "evidenceSummary": "Strong external corroboration of historical Olympus brand-ambassador and marketing/communications activity.",
+      "guardrail": "Historical role evidence only; do not imply current Olympus/OM SYSTEM employment, exclusivity or endorsement without current verification."
+    },
+    {
+      "id": "zarido-the-frame-2021",
+      "title": "The Frame – Digitális Fotóművészeti Kiállítás Tihanyban",
+      "publisher": "Záridő Magazin",
+      "url": "https://zarido.hu/the-frame-digitalis-fotomuveszeti-kiallitas-tihanyban/",
+      "evidenceKind": "independent project/exhibition coverage",
+      "classification": [
+        "digital exhibition",
+        "curatorial innovation",
+        "visual strategy",
+        "Samsung The Frame",
+        "Olympus marketing context"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "Záridő independently covered the The Frame digital photography exhibition in Tihany, identifying Bánhalmi Norbert as curator and Olympus Hungary marketer and describing the digital exhibition concept using Samsung The Frame displays.",
+      "evidenceSummary": "External specialist-media evidence for curatorial innovation, exhibition strategy and visual-communication work.",
+      "guardrail": "Use for the documented project and historical roles only; do not infer broader Samsung or Olympus endorsement beyond the project/context."
+    },
+    {
+      "id": "nlc-fifty-shades-of-woman-2015",
+      "title": "A nő ötven árnyalata – magyar nőkről készült fotósorozat",
+      "publisher": "Nők Lapja Café / NLC",
+      "url": "https://nlc.hu/foto/20150306/a-no-otven-arnyalata-foto/",
+      "evidenceKind": "independent editorial feature",
+      "classification": [
+        "portrait",
+        "women/identity",
+        "fine-art series",
+        "New York continuity"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "NLC independently profiled Bánhalmi Norbert's 'A nő ötven árnyalata' photographic series, describing his trust-based portrait process and noting the continuity with an earlier New York series.",
+      "evidenceSummary": "Strong independent editorial evidence for portrait methodology, women/identity work and continuity between Budapest/Hungary and New York artistic projects.",
+      "guardrail": "Use as editorial coverage and quoted photographic-method evidence; avoid overstating NLC as an endorsement."
+    },
+    {
+      "id": "she-awakening-body-trust-cluster-2017",
+      "title": "SHE.hu — Ébredés / body-confidence editorial cluster",
+      "publisher": "SHE.hu",
+      "url": "https://she.life.hu/cimke/banhalmi-norbert",
+      "evidenceKind": "multi-article independent editorial cluster",
+      "classification": [
+        "portrait",
+        "artistic nude",
+        "body confidence",
+        "trust process",
+        "fine-art project"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "SHE.hu maintains a Bánhalmi Norbert topic cluster containing multiple articles on the Ébredés project, artistic nude photography, body confidence, trust and the participant experience of being photographed.",
+      "evidenceSummary": "Multi-article editorial cluster provides stronger cumulative evidence than a single mention for portrait sensitivity, trust-based photographic process and artistic-nude/fine-art practice.",
+      "guardrail": "Do not frame participant experiences as medical or therapeutic efficacy; preserve them as personal testimony and editorial context."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -909,6 +1058,29 @@
       "url": "https://www.tripont.hu/amikor-keznel-van-par-lume-cube-b602.html",
       "reason": "The current Tripont page preserves Bánhalmi Norbert attribution but states that the requested blog post no longer exists. Historical article content should be recovered from an archive before service-authority use.",
       "status": "archive-recovery-required"
+    },
+    {
+      "id": "tripont-problog-2950-archived",
+      "url": "https://web.archive.org/web/20180217103411/http://www.tripont.hu/problog/2950/aktfozoas_otthon_a_furdoszobaban",
+      "reason": "Exact Wayback URL is preserved in the canonical ART master-source database, but archive body was not retrievable in the current research environment for content-level verification.",
+      "status": "archive-body-verification-required"
+    },
+    {
+      "id": "tripont-problog-3032-new-york-archived",
+      "url": "https://web.archive.org/web/20180621233214/http://www.tripont.hu/problog/3032/egy_kezdo_fotos_new_yorkban",
+      "reason": "Exact Wayback URL is preserved in the canonical ART master-source database; title indicates New York photography context, but archive body requires direct verification before service-authority projection.",
+      "status": "archive-body-verification-required"
+    },
+    {
+      "id": "tripont-problog-3182-archived",
+      "url": "https://web.archive.org/web/20181107032149/http://www.tripont.hu/problog/3182/a_legkisebbel_a_nagyok_kozott",
+      "reason": "Exact Wayback URL is preserved in the canonical ART master-source database, but archive body was not retrievable in the current research environment.",
+      "status": "archive-body-verification-required"
+    },
+    {
+      "id": "istyle-magazine-historical-articles",
+      "reason": "User reports historical iSTYLE.hu / iSTYLE Magazin articles. No stable indexed URL or existing canonical registry entry has yet been recovered.",
+      "status": "historical-source-recovery-required"
     }
   ],
   "interpretationRules": [
