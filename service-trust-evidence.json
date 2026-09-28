@@ -5720,18 +5720,19 @@
     "historicalBrand": "HIPStudio",
     "verificationStatus": "PRIVATE-HISTORICAL-SEARCH-CONSOLE-PROVENANCE-VERIFIED",
     "sourceStrength": "high-provenance-private",
-    "period": "2019–2022 verified search-performance period",
+    "period": "2018–2022 verified SERP/Search Console period",
     "relationship": "related-party historical professional organisation",
-    "evidenceSummary": "Contemporaneous Google Search Console monthly reports preserve exact HIPStudio URLs, search demand and click activity, proving that portrait/CV, portfolio, artistic nude, event photography and short-film service pages were active search surfaces during the documented period.",
+    "evidenceSummary": "A 2018 SERPROBOT report and 2019–2022 Google Search Console monthly reports preserve exact HIPStudio service URLs, ranked queries and click activity, proving that portrait/CV, portfolio, artistic nude, event photography and moving-image service pages were active search surfaces during the documented period.",
     "guardrail": "Search Console reports prove historical URL/service presence and search performance, not independent editorial endorsement. They do not transfer HIPStudio's current clients, legal identity or present services to BANHALMI. Historical service continuity may be attached only to Norbert Bánhalmi's documented professional history where separate authorship/role evidence exists.",
     "urls": [
       {
         "historicalUrl": "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
-        "period": "2019-12..2022-01 and beyond",
+        "period": "verified by 2018-12-31 SERPROBOT; 2019-12..2022-01 Search Console",
         "historicalIntent": "artistic nude photography in Budapest",
         "historicalService": "fineArt / artistic nude",
         "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
         "searchEvidence": [
+          "2018-12-31 SERPROBOT: query 'művészi aktfotózás' position 5; target URL preserved in report",
           "2019-12 report: 62 web clicks, top HIPStudio page",
           "2020-08 report: 61 web clicks, top HIPStudio page",
           "2021-02 report: 80 web clicks, top HIPStudio page",
@@ -5745,11 +5746,12 @@
       },
       {
         "historicalUrl": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
-        "period": "2019-12..2022-01 and current",
+        "period": "verified by 2018-12-31 SERPROBOT; 2019-12..2022-01 Search Console; current live",
         "historicalIntent": "CV / business portrait photography in Budapest",
         "historicalService": "portrait / CV / business portrait",
         "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED-AND-CURRENT-LIVE",
         "searchEvidence": [
+          "2018-12-31 SERPROBOT: 'cv fotózás' position 5 and 'cv fotózás budapest' position 3; exact target URL preserved",
           "2019-12 report: 21 web clicks",
           "2020-01 report: 46 web clicks, top HIPStudio page",
           "2020-10 report: 73 web clicks, top HIPStudio page",
@@ -5763,11 +5765,12 @@
       },
       {
         "historicalUrl": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
-        "period": "verified by 2020-10",
+        "period": "verified by 2018-12-31 SERPROBOT and 2020-10 Search Console",
         "historicalIntent": "portfolio photography in Budapest",
         "historicalService": "portrait / portfolio",
         "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
         "searchEvidence": [
+          "2018-12-31 SERPROBOT: 'portfólió fotózás' position 11; exact target URL preserved",
           "2020-10 report: 41 web clicks and +6 month-over-month"
         ],
         "currentDestination": null,
@@ -5778,11 +5781,12 @@
       },
       {
         "historicalUrl": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
-        "period": "verified by 2020-01 and 2020-08",
+        "period": "verified by 2018-12-31 SERPROBOT; 2020-01 and 2020-08 Search Console",
         "historicalIntent": "event photography in Budapest",
         "historicalService": "event photography",
         "archiveStatus": "SEARCH-CONSOLE-URL-VERIFIED",
         "searchEvidence": [
+          "2018-12-31 SERPROBOT: 'rendezvényfotózás' position 6 and 'rendezvényfotózás budapest' position 1; exact target URL preserved",
           "2020-01 report: +10 web clicks month-over-month",
           "2020-08 report: +3 web clicks month-over-month"
         ],
@@ -5870,6 +5874,10 @@
         "authorityRisk": "LOW authority value / high irrelevance to current services",
         "requiredAction": "Retain only for organisational history; DO-NOT-BIND to BANHALMI services."
       }
+    ],
+    "sources": [
+      "SERPROBOT project 'Hipstudio Magyar', report generated 2018-12-31 for hipstudio.hu",
+      "Google Search Console monthly performance emails 2019-12 through 2022-01"
     ]
   }
 }
