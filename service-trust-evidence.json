@@ -3720,6 +3720,40 @@
       ],
       "reason": "Preserve the distinction between a real external Tamron publication/project and an unproven Tripont publication proposal.",
       "guardrail": "DO NOT BIND as Tripont press evidence unless an actual Tripont publication URL or archived final body is recovered."
+    },
+    {
+      "id": "hivatasunk-nagy-monika-photo-credit-2021",
+      "title": "Szerelem, szomorúság, Covid",
+      "publisher": "Hivatásunk / Magyar Egészségügyi Szakdolgozói Kamara",
+      "url": "https://epa.oszk.hu/04600/04693/00054/pdf/EPA04693_hivatasunk_2021_3-4.pdf",
+      "datePublished": "2021",
+      "page": 26,
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "search-index-pdf-credit-verified-direct-pdf-temporarily-unavailable",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "editorial portrait credit",
+        "professional publication",
+        "health-sector magazine"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "The indexed EPA/OSZK PDF search result for Hivatásunk 2021/3-4 returns page 26 content and explicitly shows 'A regény szerzőnője, Nagy Mónika — Fotó: Bánhalmi Norbert'.",
+        "Direct PDF retrieval returned a temporary 502 during the verification pass, so the page image/body could not be independently rendered in this pass."
+      ],
+      "sourceStrength": "medium historical provenance",
+      "reason": "Explicit publication photo credit is preserved in the indexed PDF content, but direct PDF inspection is temporarily unavailable. Keep unbound until direct PDF/page verification succeeds.",
+      "guardrail": "Photo-credit evidence only. Do not infer a commission, continuing relationship with MESZK/Hivatásunk, healthcare expertise or endorsement."
     }
   ],
   "interpretationRules": [
