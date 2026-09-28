@@ -928,7 +928,12 @@
         "PROFESSIONAL-PUBLICATION",
         "PROJECT-COVERAGE"
       ],
-      "sourceStrength": "medium-high"
+      "sourceStrength": "medium-high",
+      "legacyUrl": "https://www.tripont.hu/problog/3866/rgb_fotozas_az_uj_trend",
+      "provenance": [
+        "Tripont/Computer Emporium marketing email dated 2021-12-07 explicitly states that Bánhalmi's article was uploaded to Problog and provides the legacy URL /problog/3866/rgb_fotozas_az_uj_trend.",
+        "The current migrated Tripont URL remains live and carries Bánhalmi attribution/content."
+      ]
     },
     {
       "id": "milcclub-dancepartner-2020",
@@ -3629,6 +3634,29 @@
       ],
       "reason": "Historical Google Alerts inventory preserves the legacy service URL, but first-party service history is not independent trust evidence. Recover Wayback only if useful for chronology/service-continuity mapping.",
       "guardrail": "Never count as independent authority, endorsement or third-party trust. Do not service-bind until archived body is inspected, and even then use only for historical service continuity."
+    },
+    {
+      "id": "tripont-unpublished-smoke-laser-nanlite-pitch-2021",
+      "title": "Füst és lézer / Nanlite article proposal — unpublished",
+      "publisher": "Tripont / Computer Emporium",
+      "verificationStatus": "DO-NOT-BIND",
+      "status": "unpublished-proposal-confirmed",
+      "evidenceType": [
+        "FIRST-PARTY"
+      ],
+      "classification": [
+        "unpublished article proposal",
+        "Nanlite",
+        "commercial photography",
+        "artistic nude"
+      ],
+      "services": [],
+      "provenance": [
+        "Tripont marketing correspondence on 2021-10-26 explicitly says the earlier article had not been published and the marketing team did not have the material.",
+        "Bánhalmi's reply offered a revised smoke/laser article and a future Nanlite artistic-nude test as possible content ideas."
+      ],
+      "reason": "Publisher correspondence directly confirms non-publication. Preserve only as negative provenance so it is never misclassified as press evidence.",
+      "guardrail": "DO NOT BIND. This is an unpublished proposal/pitch, not a publication, partnership, review, product endorsement or editorial evidence."
     }
   ],
   "interpretationRules": [
