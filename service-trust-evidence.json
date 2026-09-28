@@ -76,7 +76,8 @@
         "story-raba-timea-portrait-series-2024",
         "roadster-banhami-kata-photo-credit-2026",
         "tixa-besmart-visual-message-workshop-2017",
-        "veol-awakening-oncology-exhibition-2018"
+        "veol-awakening-oncology-exhibition-2018",
+        "milcclub-now-or-never-model-workshop-2020"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -115,7 +116,6 @@
         "orf-napraforgok-digital-heritage-2024",
         "artineris-open-studio-2026",
         "milcclub-samsung-the-frame",
-        "becsi-naplo-digitalization-2025",
         "flickr-wiener-kaiser-wiesn-20260924",
         "linkedin-banhalmi-company-profile",
         "kultura-hirado-origo-the-frame-2021",
@@ -133,7 +133,8 @@
         "roadster-banhami-kata-photo-credit-2026",
         "vehir-ai-illusions-2023",
         "art-to-go-olympus-starbucks-2021",
-        "kreativ-young-lions-speier-mentor-2024"
+        "kreativ-young-lions-speier-mentor-2024",
+        "amcham-team-portrait-credit"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -241,7 +242,9 @@
         "tixa-besmart-visual-message-workshop-2017",
         "magyarvelemeny-review-aggregation",
         "hipstudio-historical-profile",
-        "veol-awakening-oncology-exhibition-2018"
+        "veol-awakening-oncology-exhibition-2018",
+        "milcclub-now-or-never-model-workshop-2020",
+        "milcclub-journey-to-earth-center-2020"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -293,7 +296,8 @@
         "bitcoinbazis-nft-art-2022",
         "art-to-go-olympus-starbucks-2021",
         "kreativ-young-lions-speier-mentor-2024",
-        "tixa-besmart-visual-message-workshop-2017"
+        "tixa-besmart-visual-message-workshop-2017",
+        "linkedin-banhalmi-company-profile"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
@@ -1112,8 +1116,6 @@
         "fine-art project"
       ],
       "services": [
-        "portrait",
-        "fineArt",
         "generalAuthority"
       ],
       "context": "SHE.hu maintains a Bánhalmi Norbert topic cluster containing multiple articles on the Ébredés project, artistic nude photography, body confidence, trust and the participant experience of being photographed.",
@@ -1127,7 +1129,11 @@
         "she-artistic-nude-participant-account-2017",
         "she-chemo-sex-project-coverage-2017",
         "she-awakening-reception-2017"
-      ]
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "aggregateOnly": true
     },
     {
       "id": "turizmus-wiener-kaiser-wiesn-credit-2026",
