@@ -738,7 +738,10 @@
       ],
       "context": "Origo publishes an image with source credit Bánhalmi Norbert in an editorial sports article.",
       "evidenceSummary": "Independent editorial image-use credit demonstrates external publication of Bánhalmi Norbert photography.",
-      "guardrail": "Publication/photo-credit evidence only; no subject client or endorsement claim."
+      "guardrail": "Publication/photo-credit evidence only; no subject client or endorsement claim.",
+      "corroboratingUrls": [
+        "https://demokrata.hu/sport/szenvedely-es-szerelem-szazados-a-legfiatalabb-noi-zsoke-687127/"
+      ]
     },
     {
       "id": "jazzy-dr-jazzy-2024",
@@ -1424,10 +1427,12 @@
       "evidenceSummary": "External project evidence for historical brand ambassadorship, art-project development and CSR-oriented visual initiative.",
       "guardrail": "Use only for the documented project and historical ambassador role; distinguish project partnership from broad corporate endorsement.",
       "corroboratingUrls": [
-        "https://zarido.hu/a-nagy-mentoakcio-muveszet-elvitelre/"
+        "https://zarido.hu/a-nagy-mentoakcio-muveszet-elvitelre/",
+        "https://metropol.hu/aktualis/muveszet-elvitelre-eleteket-menthet-az-uj-muveszeti-projekt-482424/"
       ],
       "corroboration": [
-        "Záridő's 2021 specialist-photography feature independently describes Bánhalmi Norbert as the originator of the project concept, Olympus ambassador and Olympus marketing adviser, and documents Starbucks/Olympus/HPIX participation."
+        "Záridő's 2021 specialist-photography feature independently describes Bánhalmi Norbert as the originator of the project concept, Olympus ambassador and Olympus marketing adviser, and documents Starbucks/Olympus/HPIX participation.",
+        "A contemporaneous Google Alert dated 2021-10-07 preserves the Metropol article title/URL and snippet identifying Bánhalmi Norbert as Olympus ambassador in the Művészet Elvitelre fundraising project."
       ]
     },
     {
@@ -2832,6 +2837,31 @@
       "evidenceSummary": "Strong contemporaneous publisher-side evidence of a Tripont/Olympus educational event involving Bánhalmi, but the public event page body still requires archive recovery.",
       "sourceStrength": "medium-high historical provenance",
       "guardrail": "Do not service-bind until the public/archived event page is recovered. Private correspondence establishes provenance only; do not expose contact details or infer Olympus employment/exclusivity."
+    },
+    {
+      "id": "demokrata-gonczi-rebeka-photo-credit-2023",
+      "title": "Szenvedély és szerelem – százados a legfiatalabb női zsoké",
+      "publisher": "Demokrata",
+      "url": "https://demokrata.hu/sport/szenvedely-es-szerelem-szazados-a-legfiatalabb-noi-zsoke-687127/",
+      "datePublished": "2023-06-05",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "archive-reference-verified-photo-credit",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "editorial photo credit",
+        "sports portrait/editorial publication"
+      ],
+      "sameSubjectAs": "origo-gonczi-rebeka-photo-credit-2023",
+      "doNotCountAsIndependentProject": true,
+      "provenance": [
+        "Contemporaneous Google Alert dated 2023-06-05 preserves the exact Demokrata title and URL.",
+        "The preserved snippet explicitly contains the credit 'Fotó: BNDK Photo/Bánhalmi Norbert'."
+      ],
+      "reason": "Exact publisher URL and photo credit are preserved historically, but the article body is not currently retrievable. Retain as corroborating photo-credit evidence without service binding until direct/archived body recovery.",
+      "guardrail": "Photo-credit evidence only. Do not infer a client relationship, endorsement or exclusive relationship with the subject or publisher."
     }
   ],
   "interpretationRules": [
