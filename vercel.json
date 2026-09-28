@@ -2917,6 +2917,16 @@
       "permanent": true
     },
     {
+      "source": "/aktfotozas",
+      "destination": "/hu/muveszi-fotografia/",
+      "permanent": true
+    },
+    {
+      "source": "/fotozas-arak",
+      "destination": "/hu/ajanlatkeres/",
+      "permanent": true
+    },
+    {
       "source": "/post/amikor-csak-egy-táncpartnered-van-egész-estére",
       "destination": "https://blog.banhalmi.art/post/amikor-csak-egy-táncpartnered-van-egész-estére",
       "permanent": true
