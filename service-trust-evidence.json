@@ -78,7 +78,9 @@
         "tixa-besmart-visual-message-workshop-2017",
         "veol-awakening-oncology-exhibition-2018",
         "milcclub-now-or-never-model-workshop-2020",
-        "mandiner-milestones56-newyork-2024"
+        "mandiner-milestones56-newyork-2024",
+        "magyarjelen-magyar-peter-wikimedia-photo-credit-2026",
+        "maszol-liptak-photo-reuse-2023"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -250,7 +252,8 @@
         "veol-awakening-oncology-exhibition-2018",
         "milcclub-now-or-never-model-workshop-2020",
         "milcclub-journey-to-earth-center-2020",
-        "mandiner-milestones56-newyork-2024"
+        "mandiner-milestones56-newyork-2024",
+        "veol-rege-curation-koreny-2020"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -307,7 +310,8 @@
         "tixa-besmart-visual-message-workshop-2017",
         "linkedin-banhalmi-company-profile",
         "origo-gastro-photo-contest-2017",
-        "orf-bmi-mentorprogram-2025"
+        "orf-bmi-mentorprogram-2025",
+        "veol-rege-curation-koreny-2020"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
@@ -632,7 +636,8 @@
       "url": "https://kultura.hu/percenkent-valtozo-kiallitas-nyilik-a-balatonnal/",
       "corroboratingUrls": [
         "https://hirado.hu/kultura-eletmod/muveszet-design/cikk/2021/07/30/percenkent-valtozo-kiallitas-nyilik-a-balatonnal",
-        "https://www.origo.hu/itthon/20210809-percenkent-valtozokiallitas-nyilik-a-balatonnal.html"
+        "https://www.origo.hu/itthon/20210809-percenkent-valtozokiallitas-nyilik-a-balatonnal.html",
+        "https://www.veol.hu/helyi-kultura/2021/08/egyedi-percenkent-valtozo-kiallitas-nyilik-a-balatonnal"
       ],
       "evidenceKind": "independent editorial project coverage",
       "classification": [
@@ -1331,7 +1336,10 @@
       ],
       "context": "VEHIR documents Bánhalmi Norbert's role in the Digitális Illúziók project, including the deliberate mixing of real and AI-generated images and the exhibition's media-literacy purpose.",
       "evidenceSummary": "Independent evidence for visual-strategy thinking, AI/media-literacy experimentation and curatorial/artistic work.",
-      "guardrail": "Use as documented project/visual-literacy evidence; do not generalize into technical AI credentials beyond the project."
+      "guardrail": "Use as documented project/visual-literacy evidence; do not generalize into technical AI credentials beyond the project.",
+      "corroboratingUrls": [
+        "https://veszpremkukac.hu/kiallitas-az-internet-hazugsagai/"
+      ]
     },
     {
       "id": "bitcoinbazis-nft-art-2022",
@@ -1797,6 +1805,96 @@
       "evidenceSummary": "Useful association-level corroboration for photographic-community standing and the OM SYSTEM relationship claim.",
       "sourceStrength": "medium",
       "guardrail": "Treat membership as membership, not endorsement. Treat the OM SYSTEM ambassador wording as corroborating profile evidence only unless independently confirmed by OM SYSTEM/OM Digital Solutions or other strong sources. Do not use this profile alone to establish a current corporate relationship."
+    },
+    {
+      "id": "veol-rege-curation-koreny-2020",
+      "title": "Életre keltette az orvosnő a természet szépségeit a tihanyi galériában",
+      "publisher": "VEOL",
+      "url": "https://www.veol.hu/helyi-kultura/2020/10/eletre-keltette-az-orvosno-a-termeszet-szepsegeit-a-tihanyi-galeriaban",
+      "datePublished": "2020-10-29",
+      "evidenceKind": "independent editorial coverage of curator role",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "curation",
+        "gallery leadership",
+        "exhibition opening",
+        "fine-art ecosystem"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "VEOL identifies Bánhalmi Norbert as photographer and curator of Rege Galéria and documents him co-opening Koreny Dóra's exhibition, including his curatorial commentary on how the artist's work was discovered and presented.",
+      "evidenceSummary": "Independent editorial evidence for a documented curator/gallery role, supporting fine-art and visual-curation authority.",
+      "sourceStrength": "high",
+      "guardrail": "Use as curator/exhibition evidence. Do not infer ownership of the venue, endorsement by VEOL, or a broader institutional role beyond the documented Rege Galéria context."
+    },
+    {
+      "id": "magyarjelen-magyar-peter-wikimedia-photo-credit-2026",
+      "title": "Tiszavirág-életű lesz a Tisza?",
+      "publisher": "Magyar Jelen",
+      "url": "https://magyarjelen.hu/velemeny/33151-tiszavirag-eletu-lesz-a-tisza",
+      "datePublished": "2026-08-29",
+      "evidenceKind": "editorial image reuse / explicit photo credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "editorial portrait/photo circulation",
+        "Wikimedia Commons reuse"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "Magyar Jelen uses and explicitly credits a Wikimedia Commons image of Magyar Péter to Norbert Bánhalmi / Wikimedia Commons under CC BY-SA 4.0.",
+      "evidenceSummary": "Independent publication evidence of editorial reuse and attribution of a Bánhalmi photograph.",
+      "sourceStrength": "medium",
+      "guardrail": "Photo-credit/reuse evidence only. It does not establish a client relationship, political affiliation, endorsement, commission or relationship with the photographed person or the publisher."
+    },
+    {
+      "id": "maszol-liptak-photo-reuse-2023",
+      "title": "A magyar autonómia esélye",
+      "publisher": "Maszol",
+      "url": "https://maszol.ro/kulfold/A-magyar-autonomia-eselye",
+      "evidenceKind": "secondary editorial image reuse / photo credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "editorial portrait reuse",
+        "historical New York subject"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "Maszol credits an image of Béla Lipták as 'Mandiner/Bánhalmi Norbert', preserving attribution for a photograph connected to Bánhalmi's New York historical portrait work.",
+      "evidenceSummary": "Secondary editorial circulation evidence for a Bánhalmi portrait image.",
+      "sourceStrength": "medium",
+      "guardrail": "Treat as secondary photo-reuse evidence, not a separate commission, partnership or independent verification of the full New York project."
     }
   ],
   "pendingEvidenceCandidates": [
