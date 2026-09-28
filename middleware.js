@@ -22,7 +22,13 @@ function redirectTarget(request) {
     let normalizedPath = cleanPath ? '/' + cleanPath : '/';
     while (normalizedPath.length > 1 && normalizedPath.endsWith('/')) normalizedPath = normalizedPath.slice(0, -1);
     const historicalHuTargets = new Map([
-      ['/reklamfotozas', 'https://www.norbertbanhalmi.com/hu/brand/']
+      ['/oneletrajz-cv-fotozas', 'https://www.norbertbanhalmi.com/hu/portre/'],
+      ['/portfolio-fotozas', 'https://www.norbertbanhalmi.com/hu/portre/'],
+      ['/muveszi-aktfotozas', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/'],
+      ['/aktfotozas', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/'],
+      ['/reklam-fotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
+      ['/reklamfotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
+      ['/fotozas-arak', 'https://www.norbertbanhalmi.com/hu/ajanlatkeres/']
     ]);
     const historicalTarget = historicalHuTargets.get(normalizedPath);
     if (historicalTarget) {
