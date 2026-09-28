@@ -122,7 +122,9 @@
         "kiskegyed-life-profile-2025",
         "glamour-raba-timea-photo-credit-2024",
         "story-raba-timea-portrait-series-2024",
-        "roadster-banhami-kata-photo-credit-2026"
+        "roadster-banhami-kata-photo-credit-2026",
+        "vehir-ai-illusions-2023",
+        "art-to-go-olympus-starbucks-2021"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -217,7 +219,10 @@
         "nlc-fifty-shades-of-woman-2015",
         "she-awakening-body-trust-cluster-2017",
         "kiskegyed-life-profile-2025",
-        "vehir-mas-kepp-mas-2024"
+        "vehir-mas-kepp-mas-2024",
+        "vehir-ai-illusions-2023",
+        "bitcoinbazis-nft-art-2022",
+        "art-to-go-olympus-starbucks-2021"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -261,7 +266,10 @@
         "hipstudio-historical-profile",
         "zarido-artist-behind-business-1-2021",
         "zarido-artist-behind-business-3-ambassador-2021",
-        "zarido-the-frame-2021"
+        "zarido-the-frame-2021",
+        "vehir-ai-illusions-2023",
+        "bitcoinbazis-nft-art-2022",
+        "art-to-go-olympus-starbucks-2021"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
@@ -1218,6 +1226,73 @@
       "context": "W by Roadster credits the article photography of Bánhalmi Kata to Bánhalmi Norbert.",
       "evidenceSummary": "Independent contemporary editorial photo credit supporting portrait and personal-brand imagery.",
       "guardrail": "Photo-credit evidence only; do not infer endorsement or recurring publication relationship."
+    },
+    {
+      "id": "vehir-ai-illusions-2023",
+      "title": "A művészet segítségével leplezik le az AI hazugságait",
+      "publisher": "VEHIR",
+      "url": "https://vehir.hu/cikk/70153-a-muveszet-segitsegevel-leplezik-le-az-ai-hazugsagait",
+      "evidenceKind": "independent exhibition/project coverage",
+      "classification": [
+        "AI literacy",
+        "visual culture",
+        "curation",
+        "digital art",
+        "media literacy"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "VEHIR documents Bánhalmi Norbert's role in the Digitális Illúziók project, including the deliberate mixing of real and AI-generated images and the exhibition's media-literacy purpose.",
+      "evidenceSummary": "Independent evidence for visual-strategy thinking, AI/media-literacy experimentation and curatorial/artistic work.",
+      "guardrail": "Use as documented project/visual-literacy evidence; do not generalize into technical AI credentials beyond the project."
+    },
+    {
+      "id": "bitcoinbazis-nft-art-2022",
+      "title": "A magyar fotóművész, aki az aktfotókat az NFT-k világába invitálta",
+      "publisher": "BitcoinBázis",
+      "url": "https://www.bitcoinbazis.hu/a-magyar-fotomuvesz-aki-az-aktfotokat-az-nft-k-vilagaba-invitalta/",
+      "evidenceKind": "independent technology/art editorial profile",
+      "classification": [
+        "fine-art photography",
+        "NFT",
+        "digital art",
+        "artistic nude"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "BitcoinBázis profiles Bánhalmi Norbert's fine-art/artistic-nude work in an NFT/digital-art context.",
+      "evidenceSummary": "Independent specialist-media evidence for digital-art experimentation and fine-art photography.",
+      "guardrail": "Use for artistic/digital-innovation context only; do not imply investment expertise or financial endorsement."
+    },
+    {
+      "id": "art-to-go-olympus-starbucks-2021",
+      "title": "Életeket menthet az új művészeti projekt",
+      "publisher": "Eseménymenedzser / syndicated project coverage",
+      "url": "https://esemenymenedzser.hu/esemeny/promociok-akciok/eleteket-menthet-az-uj-muveszeti-projekt.html",
+      "evidenceKind": "independent/syndicated project coverage",
+      "classification": [
+        "Olympus ambassador",
+        "Starbucks art project",
+        "CSR",
+        "curation",
+        "art distribution"
+      ],
+      "services": [
+        "fineArt",
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Coverage identifies Bánhalmi Norbert as Olympus ambassador and documents the Művészet Elvitelre project with Starbucks Hungary, artists and the Hungarian Children's Rescue Foundation.",
+      "evidenceSummary": "External project evidence for historical brand ambassadorship, art-project development and CSR-oriented visual initiative.",
+      "guardrail": "Use only for the documented project and historical ambassador role; distinguish project partnership from broad corporate endorsement."
     }
   ],
   "pendingEvidenceCandidates": [
