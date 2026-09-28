@@ -2412,7 +2412,7 @@
       "id": "tripont-lume-cube-deleted-article",
       "url": "https://www.tripont.hu/amikor-keznel-van-par-lume-cube-b602.html",
       "reason": "The current Tripont page preserves Bánhalmi Norbert attribution but states that the requested blog post no longer exists. Historical article content should be recovered from an archive before service-authority use.",
-      "status": "publisher-draft-verified-final-body-unavailable",
+      "status": "partial-live-and-publisher-draft-verified-final-body-unavailable",
       "canonicalArtSourceId": "wikipedia-source-036",
       "canonicalArtCatalogueNumber": "BAS-0029",
       "canonicalArtSourceRegistry": "https://www.banhalmi.art/master-source-database.json",
@@ -2423,7 +2423,7 @@
         "The publisher/editor correspondence explicitly discusses the Lume Cube article, Olympus PEN E-PL7/MILC testing, article editing and finalization."
       ],
       "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
-      "verificationStatus": "CONTEMPORANEOUS-PUBLISHER-DRAFT-VERIFIED",
+      "verificationStatus": "PARTIAL-LIVE-PLUS-CONTEMPORANEOUS-PUBLISHER-DRAFT-VERIFIED",
       "recoveredCopyUrl": "https://www.banhalmi.art/post/portfolio-fitnesz-fot%C3%B3z%C3%A1s",
       "evidenceType": [
         "PROFESSIONAL-PUBLICATION",
@@ -2450,7 +2450,16 @@
         "professional photography workflow"
       ],
       "sourceStrength": "medium-high historical provenance",
-      "evidenceSummary": "Strong contemporaneous publisher-side provenance for a Tripont professional article connecting creative lighting, MILC/Olympus equipment testing and Bánhalmi's photographic approach. The exact final published body is not currently retrievable."
+      "evidenceSummary": "Strong contemporaneous publisher-side provenance for a Tripont professional article connecting creative lighting, MILC/Olympus equipment testing and Bánhalmi's photographic approach. The exact final published body is not currently retrievable.",
+      "currentLiveState": "PARTIAL-LIVE-PRESERVED-EXCERPT",
+      "currentLiveEvidence": {
+        "url": "https://www.tripont.hu/amikor-keznel-van-par-lume-cube-b602.html",
+        "supports": [
+          "Bánhalmi Norbert attribution",
+          "preserved opening excerpt",
+          "confirmation that the former blog article existed but is now deleted"
+        ]
+      }
     },
     {
       "id": "tripont-problog-2950-archived",
