@@ -149,7 +149,8 @@
         "art-to-go-olympus-starbucks-2021",
         "kreativ-young-lions-speier-mentor-2024",
         "amcham-team-portrait-credit",
-        "rolunk-profile-possible-is-just-a-word-2025"
+        "rolunk-profile-possible-is-just-a-word-2025",
+        "milcclub-most-vagy-soha-organizer-2020"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -278,7 +279,8 @@
         "google-alert-kiskegyed-magyar-peter-2026",
         "veszpremkukac-digital-illusions-2023",
         "stihon-horizont-photography-community-2026",
-        "fotoshow-artistic-nude-workshop-2019"
+        "fotoshow-artistic-nude-workshop-2019",
+        "milcclub-most-vagy-soha-organizer-2020"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -345,7 +347,8 @@
         "orf-becsi-szelet-founder-2023",
         "orf-bmi-fotoklub-leader-2025",
         "veszpremkukac-digital-illusions-2023",
-        "stihon-horizont-photography-community-2026"
+        "stihon-horizont-photography-community-2026",
+        "milcclub-most-vagy-soha-organizer-2020"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -2932,6 +2935,43 @@
       "evidenceSummary": "Specialist photography-community evidence for professional jury activity and public/media participation in a photography competition.",
       "sourceStrength": "medium-high",
       "guardrail": "Use as professional jury/public-participation evidence only. Do not infer commercial event-client status, M5 endorsement, employment or a broader institutional relationship from this report."
+    },
+    {
+      "id": "milcclub-most-vagy-soha-organizer-2020",
+      "title": "Olympus Most vagy Soha – fotópályázat és kiállítás 2020",
+      "publisher": "Olympus MILC Club",
+      "url": "https://www.milcclub.com/mostvagysoha",
+      "datePublished": "2020",
+      "evidenceKind": "official project page / organizer relationship evidence",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "AMBASSADORSHIP",
+        "INSTITUTIONAL-EVIDENCE"
+      ],
+      "classification": [
+        "photography competition",
+        "exhibition",
+        "Olympus Hungary collaboration",
+        "project conception",
+        "community photography"
+      ],
+      "services": [
+        "fineArt",
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "The official project page states that the 'Most vagy Soha' competition/exhibition was conceived and organized by Bánhalmi Norbert together with the Olympus Hungarian representation, and documents the exhibition/workshop context.",
+      "evidenceSummary": "Primary project evidence for documented project conception, organization and collaboration with Olympus Hungary in a photography competition/exhibition.",
+      "sourceStrength": "medium-high",
+      "guardrail": "Use for the documented 2020 project and organizer/collaboration relationship only. Do not infer Olympus employment, exclusivity, permanent strategic authority or endorsement of unrelated BANHALMI services."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -4021,7 +4061,8 @@
         "milcclub-now-or-never-model-workshop-2020",
         "trip-magazin-76",
         "pannon-fenykepeszkor-honorary-member-profile-2026",
-        "milcclub-om-system-ambassadors-current"
+        "milcclub-om-system-ambassadors-current",
+        "milcclub-most-vagy-soha-organizer-2020"
       ],
       "guardrails": [
         "Preserve source-specific dates and organization names.",
