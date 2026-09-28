@@ -86,7 +86,8 @@
         "mindennapkonyv-world-of-woman-2018",
         "sota-peter-magyar-photo-credit-2026",
         "americanthinker-peter-magyar-photo-credit-2026",
-        "hungaryreport-peter-magyar-photo-credit-2026"
+        "hungaryreport-peter-magyar-photo-credit-2026",
+        "hungary-foundation-milestones56-newyork-2016"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -269,7 +270,8 @@
         "rolunk-bmi-fotoklub-vipach-2026",
         "mindennapkonyv-world-of-woman-2018",
         "orf-becsi-szelet-founder-2023",
-        "orf-bmi-fotoklub-leader-2025"
+        "orf-bmi-fotoklub-leader-2025",
+        "hungary-foundation-milestones56-newyork-2016"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -2304,6 +2306,41 @@
       "evidenceSummary": "International editorial circulation and attribution of a Bánhalmi portrait image.",
       "sourceStrength": "medium",
       "guardrail": "Photo-credit/circulation evidence only. Do not infer commission, client relationship, political affiliation, endorsement, or agreement with the article's political analysis."
+    },
+    {
+      "id": "hungary-foundation-milestones56-newyork-2016",
+      "title": "Hungarian House of New York Features Milestones, 1956 Immigrant Stories",
+      "publisher": "Hungary Foundation",
+      "url": "https://www.hungaryfoundation.org/milestones-hungarian-house-ny/",
+      "datePublished": "2016",
+      "evidenceKind": "institutional project/exhibition coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "New York historical project",
+        "Mérföldkövek ’56",
+        "Hungarian House New York",
+        "portrait photography",
+        "oral history",
+        "international cultural authority"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "Hungary Foundation documents the Milestones exhibit at the Hungarian House of New York as organized in cooperation with photographer Norbert Bánhalmi and states that the project team recorded 17 biographical interviews and produced 15 photographic portraits of Hungarian 1956 immigrants and freedom fighters.",
+      "evidenceSummary": "Independent institutional evidence for the New York Mérföldkövek portrait/oral-history exhibition and Bánhalmi's documented role in its production.",
+      "sourceStrength": "high",
+      "guardrail": "Use as historical New York project/exhibition evidence only. Do not infer a current New York studio, ongoing institutional commission, or endorsement beyond the documented project."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -3177,11 +3214,15 @@
         "mandiner-milestones56-newyork-2024",
         "yt-milestones56-newyork",
         "trip-magazin-76",
-        "mandiner-milestones56-series-2016"
+        "mandiner-milestones56-series-2016",
+        "hungary-foundation-milestones56-newyork-2016"
       ],
       "guardrails": [
         "Historical New York project/exhibition context only.",
         "Never infer or state a current New York studio without separate dated evidence."
+      ],
+      "corroboratingUrls": [
+        "https://groups.google.com/g/hungarianevents/c/cXYTsqvhz94"
       ]
     },
     "olympusOmHistoricalAuthority": {
