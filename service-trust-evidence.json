@@ -3428,6 +3428,36 @@
       "evidenceSummary": "Official university publication evidence for credited institutional/editorial photography.",
       "sourceStrength": "high",
       "guardrail": "Use as institutional publication/photo-credit evidence only. The shared credit line does not establish authorship of every image in the issue, a BME employment relationship, exclusivity or institutional endorsement of BANHALMI services."
+    },
+    {
+      "id": "kanadai-magyar-hirlap-milestones56-2016",
+      "title": "Kanadai Magyar Hírlap — Mérföldkövek ’56 project mention",
+      "publisher": "Kanadai Magyar Hírlap",
+      "url": "https://www.epa.oszk.hu/00800/00843/00152/",
+      "datePublished": "2016-10",
+      "evidenceKind": "secondary editorial mention of New York field project",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "SECONDARY-MENTION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "New York historical project",
+        "Mérföldkövek ’56",
+        "portrait/oral-history fieldwork"
+      ],
+      "services": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "context": "The EPA-preserved October 2016 issue includes an article that names New York Hungarian House director Ildikó Nagy, photographer Norbert Bánhalmi and journalist Gergely Szilvay as participants in field interviews with 1956 émigrés near New York.",
+      "evidenceSummary": "Secondary contemporaneous corroboration that Bánhalmi participated as photographer in the 2016 New York Mérföldkövek fieldwork.",
+      "sourceStrength": "low-medium",
+      "sameProjectAs": "mandiner-milestones56-series-2016",
+      "authorityCounting": "corroborating-same-project",
+      "guardrail": "Use only to corroborate Bánhalmi's documented participation in the historical New York project. Do not use or adopt the article's political framing, claims about interview subjects, or editorial opinions as BANHALMI authority evidence; do not infer political affiliation or endorsement."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -4940,7 +4970,8 @@
         "imagazin-ipad-photo-postproduction-2016",
         "saatchi-ballerina-project-newyork-2018",
         "tamron-new-york-ballerina-project-2018",
-        "bitcoinbazis-nft-art-2022"
+        "bitcoinbazis-nft-art-2022",
+        "kanadai-magyar-hirlap-milestones56-2016"
       ],
       "guardrails": [
         "Historical New York project/exhibition context only.",
