@@ -293,7 +293,8 @@
         "tamron-new-york-ballerina-project-2018",
         "oszk-szosszenetek-book-photo-credit-2017",
         "verocei-tukor-curator-opening-2024",
-        "verocei-tukor-digital-exhibition-project-2022"
+        "verocei-tukor-digital-exhibition-project-2022",
+        "verocei-tukor-curatorial-evidence-2024"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -366,7 +367,8 @@
         "veol-rege60-digital-exhibition-2021",
         "veol-rege-digital-exhibition-2021",
         "verocei-tukor-curator-opening-2024",
-        "verocei-tukor-digital-exhibition-project-2022"
+        "verocei-tukor-digital-exhibition-project-2022",
+        "verocei-tukor-curatorial-evidence-2024"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -3314,6 +3316,40 @@
         "Visual inspection of the PDF confirms the lead portrait caption and the separate credit line 'Norbert Banhalmi'."
       ],
       "guardrail": "Photo-credit/circulation evidence only. Do not infer a commission, client relationship, political affiliation, political support, endorsement, editorial agreement or relationship with the photographed political figure or the publisher."
+    },
+    {
+      "id": "verocei-tukor-curatorial-evidence-2024",
+      "title": "Legény Enikő verőcei festménykiállítása — kurátori kontextus",
+      "publisher": "Verőcei Tükör",
+      "url": "https://www.xn--verce-69a.hu/wp-content/uploads/2024/06/Verocei-tukor-2024-04-majus.pdf",
+      "datePublished": "2024-05",
+      "evidenceKind": "independent local editorial / print-magazine curatorial coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "curation",
+        "exhibition opening",
+        "Rege Galéria",
+        "artist development",
+        "fine-art ecosystem"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Verőcei Tükör reports that Bánhalmi Norbert, photographer and curator of the Tihany Rege Gallery, opened Legény Enikő's Verőce exhibition. In the same interview, the artist states that her first solo exhibition in Tihany was organized with Bánhalmi's help.",
+      "evidenceSummary": "Independent local-print evidence for Bánhalmi's curator role, exhibition-opening activity and support of an artist's earlier solo exhibition.",
+      "sourceStrength": "medium-high",
+      "guardrail": "Use as documented curatorial/exhibition evidence only. Do not infer commercial representation, ownership of the venue, exclusive artist management or endorsement by the publication."
     }
   ],
   "pendingEvidenceCandidates": [
