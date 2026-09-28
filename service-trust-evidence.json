@@ -2838,6 +2838,35 @@
       "evidenceSummary": "Independent cross-border Hungarian-community publication evidence for photography education, community-building, visual/digital project leadership and Vienna-based cultural activity.",
       "sourceStrength": "medium-high",
       "guardrail": "Use the publication as interview/profile and project evidence. Career history, rankings, qualifications, ambassador timelines and therapeutic/transgenerational interpretations stated in the article remain attributed claims unless separately corroborated. Do not convert them into medical, psychological or institutional endorsements."
+    },
+    {
+      "id": "behance-professional-profile-current",
+      "title": "Norbert Banhalmi — Visual Artist & Executive Portrait Photographer",
+      "publisher": "Behance",
+      "url": "https://www.behance.net/norbertbanhalmi",
+      "evidenceKind": "external platform professional profile",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "FIRST-PARTY",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "professional identity",
+        "Vienna",
+        "executive portrait",
+        "visual art",
+        "portfolio platform"
+      ],
+      "services": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "context": "Behance maintains a current Norbert Banhalmi professional profile, member since 2015, identifying Vienna location, visual-artist/executive-portrait positioning and linking to the BANHALMI web presence.",
+      "evidenceSummary": "Long-lived external platform identity/profile evidence useful for entity continuity and professional presence.",
+      "sourceStrength": "low-independent-authority",
+      "guardrail": "Treat profile biography, workplace and service descriptions as platform-hosted self-profile data, not independent verification of employment, ambassador status, qualifications, awards or client relationships. Suitable for entity resolution, not editorial authority."
     }
   ],
   "pendingEvidenceCandidates": [
