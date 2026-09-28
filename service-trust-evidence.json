@@ -3353,6 +3353,42 @@
       ],
       "reason": "Exact publisher URL and photo credit are preserved historically, but the article body is not currently retrievable. Retain as corroborating photo-credit evidence without service binding until direct/archived body recovery.",
       "guardrail": "Photo-credit evidence only. Do not infer a client relationship, endorsement or exclusive relationship with the subject or publisher."
+    },
+    {
+      "id": "vehir-photographers-competition-rege-2022",
+      "title": "Amatőr és tapasztalt fotósok mérték össze tudásukat",
+      "publisher": "VEHIR",
+      "url": "https://vehir.hu/cikk/65514-amator-es-tapasztalt-fotosok-mertek-ossze-tudasukat",
+      "datePublished": "2022-08-08",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "archive-reference-verified-body-recovery-required",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "photography competition",
+        "Rege Galéria",
+        "Pannon Fényképészkör",
+        "curatorial/gallery collaboration"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "Contemporaneous Google Alert dated 2022-08-08 preserves the exact VEHIR title and URL.",
+        "The preserved snippet explicitly names Ruppert Tamás as chief organizer and Bánhalmi Norbert as photo artist, and states that they jointly announced a future Rege Galéria / Pannon collaboration."
+      ],
+      "reason": "Exact source, date and role snippet are historically preserved, but the article body is not currently retrievable. Keep unbound until direct/archive body recovery.",
+      "sourceStrength": "medium-high historical provenance",
+      "guardrail": "Do not service-bind until the original/archived article body is recovered. Do not infer ownership, endorsement or a broader institutional role beyond the preserved announcement."
     }
   ],
   "interpretationRules": [
