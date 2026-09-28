@@ -5613,6 +5613,18 @@
         "guardrail": "Historical service URLs and rankings prove historical site/service presence, not current service availability or unchanged positioning."
       },
       {
+        "historicalDomain": "banhalmi.at",
+        "historicalBrand": "BANHALMI Austrian/German-language entry domain",
+        "period": "Search Console ownership verified by 2025-11-19; current DE-AT entry domain",
+        "role": "Austrian/German-language market-routing domain",
+        "relationship": "current market entry/redirect layer to canonical Professional DE-AT site",
+        "currentEntityContinuation": "https://www.norbertbanhalmi.com/de-at/",
+        "verificationStatus": "PRIVATE-ADMINISTRATIVE-PROVENANCE-PLUS-LIVE-CONFIG-VERIFIED",
+        "sourceStrength": "high-provenance-private/current-config",
+        "publicSummaryAllowed": "banhalmi.at is used as the German-language/Austrian entry domain for the canonical BANHALMI Professional system.",
+        "guardrail": "No evidence found in the authorized historical mailbox for pre-2025 use. Do not manufacture an older Austrian domain lineage or treat banhalmi.at as a separate competing Professional site."
+      },
+      {
         "historicalDomain": "banhalmi.art",
         "historicalBrand": "BANHALMI ART",
         "period": "current artistic/oeuvre authority layer",
@@ -5878,6 +5890,212 @@
     "sources": [
       "SERPROBOT project 'Hipstudio Magyar', report generated 2018-12-31 for hipstudio.hu",
       "Google Search Console monthly performance emails 2019-12 through 2022-01"
+    ]
+  },
+  "historicalAuthorityPreservationMatrix": {
+    "status": "ACTIVE-PRESERVATION-MATRIX",
+    "lastChecked": "2026-09-28",
+    "guardrail": "Rows preserve historical intent and entity relationships. Redirects are appropriate only where present-day semantic equivalence is strong; otherwise keep historical evidence without forcing a service redirect.",
+    "rows": [
+      {
+        "historicalDomain": "hipstudio.hu",
+        "historicalUrl": "https://www.hipstudio.hu/",
+        "period": "2006–present related-party continuity",
+        "entity": "HIPStudio / Hipstudió Kft. (distinct from BANHALMI)",
+        "serviceIntent": "studio, photography, video and communication organisation",
+        "externalBacklinksEvidence": [
+          "Flúgos Futam founder biography",
+          "Újbuda/ittlakunk HIPStudio profile",
+          "News4Business 2010 project archive"
+        ],
+        "archiveStatus": "RELATED-PARTY-LIVE + EXTERNAL-HISTORICAL-CORROBORATION",
+        "currentDestination": "https://www.hipstudio.hu/",
+        "redirectStatus": "NO REDIRECT — separate current entity",
+        "canonicalCurrentPage": "https://www.hipstudio.hu/",
+        "authorityRisk": "HIGH entity-conflation risk",
+        "requiredAction": "Keep HIPStudio separate; carry only documented Person-level founder/professional/project continuity into BANHALMI evidence graph."
+      },
+      {
+        "historicalDomain": "hipstudio.hu",
+        "historicalUrl": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+        "period": "verified 2018–2022; current live",
+        "entity": "HIPStudio",
+        "serviceIntent": "CV/business portrait",
+        "externalBacklinksEvidence": [
+          "2018 SERPROBOT private SEO provenance",
+          "2019–2022 Google Search Console provenance"
+        ],
+        "archiveStatus": "SEARCH-PROVENANCE-VERIFIED + CURRENT-LIVE",
+        "currentDestination": "https://www.hipstudio.hu/oneletrajz-cv-fotozas-budapest",
+        "redirectStatus": "NO REDIRECT — separate current entity",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/portre/",
+        "authorityRisk": "HIGH if current HIPStudio service is passed off as BANHALMI current service/client evidence",
+        "requiredAction": "Use only as historical professional continuity plus separately documented founder/mentor role."
+      },
+      {
+        "historicalDomain": "hipstudio.hu",
+        "historicalUrl": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+        "period": "verified from 2018; current live",
+        "entity": "HIPStudio",
+        "serviceIntent": "portrait/portfolio",
+        "externalBacklinksEvidence": [
+          "2018 SERPROBOT private SEO provenance",
+          "2020 Google Search Console provenance"
+        ],
+        "archiveStatus": "SEARCH-PROVENANCE-VERIFIED + CURRENT-LIVE",
+        "currentDestination": "https://www.hipstudio.hu/portfolio-fotozas-budapest",
+        "redirectStatus": "NO REDIRECT — separate current entity",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/portre/",
+        "authorityRisk": "MEDIUM-HIGH",
+        "requiredAction": "Preserve historical service continuity without transferring HIPStudio ownership or current client relationships."
+      },
+      {
+        "historicalDomain": "hipstudio.hu",
+        "historicalUrl": "https://www.hipstudio.hu/rendezvenyfotozas-budapest",
+        "period": "verified from 2018",
+        "entity": "HIPStudio",
+        "serviceIntent": "event photography",
+        "externalBacklinksEvidence": [
+          "2018 SERPROBOT private SEO provenance",
+          "2020 Google Search Console provenance"
+        ],
+        "archiveStatus": "SEARCH-PROVENANCE-VERIFIED",
+        "currentDestination": null,
+        "redirectStatus": "CURRENT HIPSTUDIO STATE NOT ASSERTED",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "authorityRisk": "HIGH client/identity projection risk",
+        "requiredAction": "Use only when tied to separately verified Bánhalmi/HIPStudio role or project evidence."
+      },
+      {
+        "historicalDomain": "banhalminorbert.hu",
+        "historicalUrl": "https://banhalminorbert.hu/",
+        "period": "documented by 2016; secondary domain in 2017; GSC property 2018; discontinued 2022; reactivated 2026",
+        "entity": "Norbert Bánhalmi personal/professional domain alias",
+        "serviceIntent": "Hungarian professional entry",
+        "externalBacklinksEvidence": [
+          "private administrative/domain provenance",
+          "historical Search Console property provenance"
+        ],
+        "archiveStatus": "TEMPORAL-DOMAIN-USE-VERIFIED",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/",
+        "redirectStatus": "PERMANENT HU ENTRY ROUTING CONFIGURED",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/",
+        "authorityRisk": "HIGH if described as uninterrupted primary site",
+        "requiredAction": "Preserve HU entry routing and recover specific historical paths/backlinks where evidence exists."
+      },
+      {
+        "historicalDomain": "banhalminorbert.hu",
+        "historicalUrl": "https://banhalminorbert.hu/reklamfotozas",
+        "period": "historical commercial intent; path explicitly known from historical corpus",
+        "entity": "Norbert Bánhalmi professional domain alias",
+        "serviceIntent": "advertising/commercial photography",
+        "externalBacklinksEvidence": [
+          "historical URL corpus / current remediation evidence"
+        ],
+        "archiveStatus": "HISTORICAL-INTENT-VERIFIED",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/brand/",
+        "redirectStatus": "PERMANENT SEMANTIC REDIRECT ADDED ON TRUST BRANCH",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/brand/",
+        "authorityRisk": "HIGH if catch-all sends historical intent to homepage",
+        "requiredAction": "Protect explicit route in redirect regression tests and exact-live verification."
+      },
+      {
+        "historicalDomain": "norbertbanhalmi.com",
+        "historicalUrl": "https://www.norbertbanhalmi.com/reklamfotozas",
+        "period": "verified in 2020–2021 historical SERP report",
+        "entity": "Norbert Bánhalmi professional site",
+        "serviceIntent": "advertising/commercial photography",
+        "externalBacklinksEvidence": [
+          "2021 SERPROBOT historical ranking report"
+        ],
+        "archiveStatus": "PRIVATE-HISTORICAL-SEO-PROVENANCE-VERIFIED",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/brand/",
+        "redirectStatus": "PERMANENT SEMANTIC REDIRECT ADDED ON TRUST BRANCH",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/brand/",
+        "authorityRisk": "HIGH if historical link equity is lost to generic homepage",
+        "requiredAction": "Protect route and exact-live verify 3xx destination."
+      },
+      {
+        "historicalDomain": "norbertbanhalmi.com",
+        "historicalUrl": "https://www.norbertbanhalmi.com/portfolio-fotozas",
+        "period": "verified 2020–2021",
+        "entity": "Norbert Bánhalmi professional site",
+        "serviceIntent": "portfolio photography",
+        "externalBacklinksEvidence": [
+          "2021 SERPROBOT historical ranking report"
+        ],
+        "archiveStatus": "PRIVATE-HISTORICAL-SEO-PROVENANCE-VERIFIED",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/portre/",
+        "redirectStatus": "PRESERVED",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/portre/",
+        "authorityRisk": "LOW-MEDIUM",
+        "requiredAction": "Keep permanent semantic redirect."
+      },
+      {
+        "historicalDomain": "norbertbanhalmi.com",
+        "historicalUrl": "https://www.norbertbanhalmi.com/oneletrajz-cv-fotozas",
+        "period": "verified 2020–2021",
+        "entity": "Norbert Bánhalmi professional site",
+        "serviceIntent": "CV/resume portrait",
+        "externalBacklinksEvidence": [
+          "2021 SERPROBOT historical ranking report"
+        ],
+        "archiveStatus": "PRIVATE-HISTORICAL-SEO-PROVENANCE-VERIFIED",
+        "currentDestination": "https://www.norbertbanhalmi.com/hu/portre/",
+        "redirectStatus": "PRESERVED",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/hu/portre/",
+        "authorityRisk": "LOW-MEDIUM",
+        "requiredAction": "Keep permanent semantic redirect."
+      },
+      {
+        "historicalDomain": "norbertbanhalmi.com",
+        "historicalUrl": "https://www.norbertbanhalmi.com/ebredes",
+        "period": "historical artistic project URL recovered in 2021 SEO corpus",
+        "entity": "Norbert Bánhalmi / artistic practice",
+        "serviceIntent": "Ébredés — az Új kezdet artistic/cultural project",
+        "externalBacklinksEvidence": [
+          "2021 SERPROBOT historical URL corpus",
+          "current BANHALMI ART exhibition archive"
+        ],
+        "archiveStatus": "HISTORICAL-URL-RECOVERED + ART-CURRENT-LIVE",
+        "currentDestination": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+        "redirectStatus": "PERMANENT ART SEMANTIC REDIRECT ADDED ON TRUST BRANCH",
+        "canonicalCurrentPage": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+        "authorityRisk": "HIGH if artistic intent is routed to commercial homepage",
+        "requiredAction": "Protect cross-domain artistic redirect and exact-live verify."
+      },
+      {
+        "historicalDomain": "banhalmi.at",
+        "historicalUrl": "https://banhalmi.at/",
+        "period": "Search Console ownership verified by 2025-11-19; current",
+        "entity": "BANHALMI Austrian/German-language market entry",
+        "serviceIntent": "DE-AT Professional entry",
+        "externalBacklinksEvidence": [
+          "Search Console administrative provenance"
+        ],
+        "archiveStatus": "CURRENT-ENTRY-DOMAIN-VERIFIED",
+        "currentDestination": "https://www.norbertbanhalmi.com/de-at/",
+        "redirectStatus": "PERMANENT DE-AT ROUTING CONFIGURED",
+        "canonicalCurrentPage": "https://www.norbertbanhalmi.com/de-at/",
+        "authorityRisk": "MEDIUM if indexed as a competing clone",
+        "requiredAction": "Maintain redirect-only role; verify no redirect chain, canonical/indexability leakage or old path loss."
+      },
+      {
+        "historicalDomain": "banhalmi.art",
+        "historicalUrl": "https://www.banhalmi.art/",
+        "period": "current artistic/oeuvre layer",
+        "entity": "BANHALMI ART",
+        "serviceIntent": "artistic oeuvre, exhibitions, books, cultural archive",
+        "externalBacklinksEvidence": [
+          "ART press registry and institutional/art evidence graph"
+        ],
+        "archiveStatus": "CURRENT-CANONICAL-ARTISTIC",
+        "currentDestination": "https://www.banhalmi.art/",
+        "redirectStatus": "NO REDIRECT — canonical artistic site",
+        "canonicalCurrentPage": "https://www.banhalmi.art/",
+        "authorityRisk": "HIGH if commercial intent is duplicated or artistic pages are redirected to Professional homepage",
+        "requiredAction": "Keep artistic authority separate and connect only through justified entity/evidence relationships."
+      }
     ]
   }
 }
