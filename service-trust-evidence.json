@@ -94,7 +94,8 @@
         "yt-retouching-cover-ideals",
         "yt-awakening-reflection",
         "yt-world-of-woman-interview",
-        "yt-complete-playlists"
+        "yt-complete-playlists",
+        "moka-podcast-106-2022"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
@@ -146,7 +147,8 @@
       "movingImageEvidenceIds": [
         "yt-m1-kunszt-portrait-psychology",
         "yt-retouching-cover-ideals",
-        "yt-complete-playlists"
+        "yt-complete-playlists",
+        "moka-podcast-106-2022"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
@@ -182,7 +184,8 @@
         "linkedin-amcham-austria-cybersecurity-breakfast-20260918"
       ],
       "movingImageEvidenceIds": [
-        "yt-complete-playlists"
+        "yt-complete-playlists",
+        "moka-podcast-106-2022"
       ]
     },
     "fineArt": {
@@ -263,7 +266,9 @@
         "yt-milestones56-newyork",
         "yt-awakening-reflection",
         "yt-world-of-woman-interview",
-        "yt-complete-playlists"
+        "yt-complete-playlists",
+        "moka-podcast-106-2022",
+        "moka-podcast-309-2026"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
@@ -306,7 +311,8 @@
       "movingImageEvidenceIds": [
         "yt-petofi-digital-exhibition",
         "yt-retouching-cover-ideals",
-        "yt-complete-playlists"
+        "yt-complete-playlists",
+        "moka-podcast-309-2026"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
@@ -2176,6 +2182,43 @@
       "evidenceType": "INTERVIEW",
       "sourceClass": "UNVERIFIED",
       "guardrail": "Keep as a canonical moving-image archive record because it is present in the BANHALMI ART press registry. Do not treat it as independent broadcaster/editorial evidence, endorsement or client evidence until uploader and programme provenance are independently verified."
+    },
+    {
+      "id": "moka-podcast-106-2022",
+      "title": "#106 Bánhalmi Norbert",
+      "publisher": "MÓKA Podcast",
+      "url": "https://mokapodcast.libsyn.com/bnhalmi-norbert",
+      "datePublished": "2022-05-08",
+      "services": [
+        "portrait",
+        "fineArt",
+        "brand",
+        "event",
+        "generalAuthority"
+      ],
+      "kind": "independent podcast profile / career interview",
+      "verificationStatus": "LIVE-VERIFIED",
+      "context": "The official MÓKA Podcast feed profiles Bánhalmi Norbert's photography career and discusses portrait, artistic nude, commercial/event work, New York history, the historical Olympus ambassador role and later professional milestones.",
+      "guardrail": "Use as attributed podcast/profile evidence. Do not treat biographical or client-role claims in the programme description as independently verified institutional facts unless corroborated elsewhere; specifically avoid upgrading Dutch national team, Coca-Cola, military-studio, diploma or ambassador claims solely from this source."
+    },
+    {
+      "id": "moka-podcast-309-2026",
+      "title": "#309 Bánhalmi Norbert",
+      "publisher": "MÓKA Podcast",
+      "url": "https://mokapodcast.libsyn.com/2026/04",
+      "corroboratingUrls": [
+        "https://podcasts.apple.com/gb/podcast/m%C3%B3ka-podcast/id1574990802"
+      ],
+      "datePublished": "2026-04-05",
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "kind": "independent podcast interview / New York and creative-technology discussion",
+      "verificationStatus": "LIVE-VERIFIED",
+      "context": "The official MÓKA Podcast feed and Apple Podcasts document an interview covering Bánhalmi's New York experiences, an Apple Store/iPhone workshop story, creative visual thinking, photography and emotion, NFT/Web3 and digital-art themes.",
+      "guardrail": "Use as interview/creative-authority evidence and historical New York context. Apple Store reactions and other anecdotal claims remain attributed to the interview; do not convert them into an Apple endorsement, employment, partnership or current New York studio claim."
     }
   ],
   "historicalResearchCandidates": [
@@ -2311,7 +2354,8 @@
         "tixa-besmart-visual-message-workshop-2017",
         "magyarvelemeny-review-aggregation",
         "hipstudio-historical-profile",
-        "veol-awakening-oncology-exhibition-2018"
+        "veol-awakening-oncology-exhibition-2018",
+        "moka-podcast-106-2022"
       ],
       "historicalPriorityEvidence": [
         {
@@ -2386,7 +2430,8 @@
           "type": "broadcast/interview",
           "examples": [
             "jazzy-dr-jazzy-2024",
-            "kiskegyed-life-profile-2025"
+            "kiskegyed-life-profile-2025",
+            "moka-podcast-106-2022"
           ]
         }
       ]
