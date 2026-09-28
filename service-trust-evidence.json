@@ -280,7 +280,8 @@
         "veszpremkukac-digital-illusions-2023",
         "stihon-horizont-photography-community-2026",
         "fotoshow-artistic-nude-workshop-2019",
-        "milcclub-most-vagy-soha-organizer-2020"
+        "milcclub-most-vagy-soha-organizer-2020",
+        "veol-rege60-digital-exhibition-2021"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -348,7 +349,8 @@
         "orf-bmi-fotoklub-leader-2025",
         "veszpremkukac-digital-illusions-2023",
         "stihon-horizont-photography-community-2026",
-        "milcclub-most-vagy-soha-organizer-2020"
+        "milcclub-most-vagy-soha-organizer-2020",
+        "veol-rege60-digital-exhibition-2021"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -2972,6 +2974,40 @@
       "evidenceSummary": "Primary project evidence for documented project conception, organization and collaboration with Olympus Hungary in a photography competition/exhibition.",
       "sourceStrength": "medium-high",
       "guardrail": "Use for the documented 2020 project and organizer/collaboration relationship only. Do not infer Olympus employment, exclusivity, permanent strategic authority or endorsement of unrelated BANHALMI services."
+    },
+    {
+      "id": "veol-rege60-digital-exhibition-2021",
+      "title": "Micsoda hangulat! Holdfényszonáta a Balaton királyi páholyában",
+      "publisher": "VEOL",
+      "url": "https://www.veol.hu/helyi-kultura/2021/06/micsoda-hangulat-holdfenyszonata-a-balaton-kiralyi-paholyaban",
+      "datePublished": "2021-06-17",
+      "evidenceKind": "independent editorial cultural-event / curatorial coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "digital photography exhibition",
+        "curator role",
+        "cultural event",
+        "Rege Galéria",
+        "Tihany"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "VEOL reports on the 60th anniversary event of the Apátsági Rege Cukrászda and states that Bánhalmi Norbert, photo artist and curator of Rege Galéria, opened a retrospective digital photography exhibition.",
+      "evidenceSummary": "Independent editorial evidence for Bánhalmi's curator role and digital-exhibition programming in Tihany.",
+      "sourceStrength": "high",
+      "guardrail": "Use as documented curatorial/cultural-event authority only. Do not infer ownership of the venue, a commercial event-client relationship or publisher endorsement."
     }
   ],
   "pendingEvidenceCandidates": [
