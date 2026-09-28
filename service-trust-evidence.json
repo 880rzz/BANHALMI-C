@@ -943,7 +943,8 @@
       "provenance": [
         "Tripont/Computer Emporium marketing email dated 2021-12-07 explicitly states that Bánhalmi's article was uploaded to Problog and provides the legacy URL /problog/3866/rgb_fotozas_az_uj_trend.",
         "The current migrated Tripont URL remains live and carries Bánhalmi attribution/content."
-      ]
+      ],
+      "archiveUrl": "https://web.archive.org/web/20211208095907/https://www.tripont.hu/problog/3866/rgb_fotozas_az_uj_trend"
     },
     {
       "id": "milcclub-dancepartner-2020",
@@ -2622,7 +2623,10 @@
       "context": "The Hungary Report uses a photograph of Péter Magyar and credits it to Norbert Bánhalmi via Wikimedia Commons under CC BY-SA 4.0.",
       "evidenceSummary": "International editorial circulation and attribution of a Bánhalmi portrait image.",
       "sourceStrength": "medium",
-      "guardrail": "Photo-credit/circulation evidence only. Do not infer commission, client relationship, political affiliation, endorsement, or agreement with the article's political analysis."
+      "guardrail": "Photo-credit/circulation evidence only. Do not infer commission, client relationship, political affiliation, endorsement, or agreement with the article's political analysis.",
+      "historicalUrls": [
+        "https://thehungaryreport.com/orban-strongman-spell/"
+      ]
     },
     {
       "id": "hungary-foundation-milestones56-newyork-2016",
@@ -2799,7 +2803,10 @@
       "context": "Kiskegyed publishes a full interview with Bánhalmi Norbert about the international circulation of his portrait photograph and the EUFÓRIA artistic project. The article explicitly credits the discussed photograph to Bánhalmi Norbert and frames the image as part of his portrait/fine-art practice.",
       "evidenceSummary": "Independent national-media interview supporting portrait authority, international image circulation and current fine-art project context.",
       "sourceStrength": "high",
-      "guardrail": "Use strictly as photography/interview/photo-credit evidence. Do not infer a client relationship, commission, endorsement, political affiliation, political support or relationship with the photographed political figure or the publisher. Treat claims about reach and artistic interpretation as attributed interview/editorial statements unless independently corroborated."
+      "guardrail": "Use strictly as photography/interview/photo-credit evidence. Do not infer a client relationship, commission, endorsement, political affiliation, political support or relationship with the photographed political figure or the publisher. Treat claims about reach and artistic interpretation as attributed interview/editorial statements unless independently corroborated.",
+      "corroboratingUrls": [
+        "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg"
+      ]
     },
     {
       "id": "veszpremkukac-digital-illusions-2023",
@@ -2900,7 +2907,10 @@
       "context": "The third issue of Nyugat-európai Horizont, published by StiHon, carries a multi-page profile/interview with Bánhalmi Norbert. It documents the BMI Fotóklub/VIPACH community, exhibitions, photography education, the '56 a Jövő Szemével' digital heritage project and historical New York context.",
       "evidenceSummary": "Independent cross-border Hungarian-community publication evidence for photography education, community-building, visual/digital project leadership and Vienna-based cultural activity.",
       "sourceStrength": "medium-high",
-      "guardrail": "Use the publication as interview/profile and project evidence. Career history, rankings, qualifications, ambassador timelines and therapeutic/transgenerational interpretations stated in the article remain attributed claims unless separately corroborated. Do not convert them into medical, psychological or institutional endorsements."
+      "guardrail": "Use the publication as interview/profile and project evidence. Career history, rankings, qualifications, ambassador timelines and therapeutic/transgenerational interpretations stated in the article remain attributed claims unless separately corroborated. Do not convert them into medical, psychological or institutional endorsements.",
+      "corroboratingUrls": [
+        "https://www.stihon.eu/2026/01/29/itt-a-3-lapszam/"
+      ]
     },
     {
       "id": "behance-professional-profile-current",
@@ -4110,7 +4120,10 @@
         "generalAuthority"
       ],
       "context": "The current WKO Firmen A-Z profile documents Norbert Banhalmi's Austrian professional-photography registration, Vienna business presence and positioning around visual strategic partnership for executives.",
-      "guardrail": "Use as official business/professional registration evidence, not editorial endorsement or quality assessment. Treat self-authored descriptive profile copy separately from chamber-verified registration data."
+      "guardrail": "Use as official business/professional registration evidence, not editorial endorsement or quality assessment. Treat self-authored descriptive profile copy separately from chamber-verified registration data.",
+      "historicalUrls": [
+        "https://firmen.wko.at/norbert-banhalmi-brand-and-event-photographer/wien/?firmaid=12bd142c-5fcf-4457-9a90-47fbff162b40&suchbegriff=banhalmi%20norbert"
+      ]
     },
     {
       "id": "mfvsz-membership-reference",
@@ -4787,7 +4800,8 @@
         "Never infer or state a current New York studio without separate dated evidence."
       ],
       "corroboratingUrls": [
-        "https://groups.google.com/g/hungarianevents/c/cXYTsqvhz94"
+        "https://groups.google.com/g/hungarianevents/c/cXYTsqvhz94",
+        "https://www.magyarforradalom1956.hu/v/merfoldkovek--56-os-portrekepekbol-rendeztek-kiallitast-new-yorkban/"
       ]
     },
     "olympusOmHistoricalAuthority": {
@@ -5229,6 +5243,12 @@
         "Search snippets alone remain archive-reference evidence unless article body or equivalent source content is recovered.",
         "No service binding is permitted for pending/unverified records."
       ]
+    },
+    "artPress35": {
+      "status": "COMPLETE-REPRESENTATION-RECONCILED",
+      "lastChecked": "2026-09-28",
+      "scope": "BANHALMI ART press-source-registry.json",
+      "result": "All press registry records are represented in the Professional trust graph directly, via press IDs/service registry links, or as canonical/corroborating evidence. Alternate historical URLs are preserved without creating duplicate authority points."
     }
   }
 }
