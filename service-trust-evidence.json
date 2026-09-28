@@ -4290,14 +4290,16 @@
     {
       "id": "istyle-magazin-historical",
       "publisher": "iSTYLE Magazin",
-      "status": "archive-research-required",
-      "services": [
+      "status": "historical-source-recovery-required",
+      "evidenceKind": "historical technology/creative publication",
+      "guardrail": "Keep separate from the ARCHIVE-VERIFIED iMagazin article. Do not service-bind until an actual iSTYLE publication is recovered.",
+      "expectedServiceRelevance": [
         "brand",
         "visualStrategy",
         "generalAuthority"
       ],
-      "evidenceKind": "historical technology/creative publication",
-      "guardrail": "No reliable indexed Bánhalmi article recovered in the current public search pass; do not bind until live or archive evidence is found."
+      "verificationStatus": "UNVERIFIED-HISTORICAL-CANDIDATE",
+      "reason": "2023 correspondence proves only an outreach/pitch to iSTYLE and cites a separate older iMagazin publication. No iSTYLE publication URL, byline, accepted article or archive snapshot has been recovered."
     }
   ],
   "updatedAt": "2026-09-28",
@@ -4831,5 +4833,25 @@
         "treatment": "corroborating-same-story-do-not-double-count"
       }
     ]
+  },
+  "crossRegistryIntegrity": {
+    "checkedAt": "2026-09-28",
+    "professionalRegistryFiles": [
+      "external-photography-evidence.json",
+      "press-institutional-evidence.json"
+    ],
+    "referencedIdsVerified": [
+      "linkedin-nemanja-lazendic-7503011271332773888",
+      "linkedin-michael-broenner-7388473288043225088",
+      "linkedin-us-embassy-vienna-7422226435219607553",
+      "linkedin-kwwalsh-selectusa-7505169409309782017",
+      "linkedin-amcham-austria-7466081305701785600",
+      "linkedin-amcham-austria-7453014553912610817",
+      "linkedin-amcham-austria-7440773944644853760",
+      "linkedin-amcham-austria-7434294584886710272",
+      "linkedin-amcham-austria-cybersecurity-breakfast-20260918"
+    ],
+    "unresolvedIds": [],
+    "policy": "professionalRegistryEvidence IDs are resolved against the dedicated Professional evidence registries and are not duplicated into this file."
   }
 }
