@@ -95,6 +95,9 @@
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
         "linkedin-michael-broenner-7388473288043225088"
+      ],
+      "relationshipEvidenceIds": [
+        "bridges-japan-times-olympus-ambassador-2021"
       ]
     },
     "event": {
@@ -167,6 +170,9 @@
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
         "https://www.banhalmi.art/authority-bridge.json"
+      ],
+      "relationshipEvidenceIds": [
+        "bridges-japan-times-olympus-ambassador-2021"
       ]
     },
     "visualStrategy": {
@@ -189,6 +195,9 @@
         "vienna-family-network-business-member-2026",
         "rege-galeria-founder-curator",
         "hipstudio-historical-profile"
+      ],
+      "relationshipEvidenceIds": [
+        "bridges-japan-times-olympus-ambassador-2021"
       ]
     }
   },
@@ -828,6 +837,12 @@
       "url": "https://www.flickr.com/photos/vipach/albums/72177720335859544",
       "reason": "Public album metadata could not be independently retrieved in the current research pass.",
       "status": "pending-context-classification"
+    },
+    {
+      "id": "tripont-lume-cube-deleted-article",
+      "url": "https://www.tripont.hu/amikor-keznel-van-par-lume-cube-b602.html",
+      "reason": "The current Tripont page preserves Bánhalmi Norbert attribution but states that the requested blog post no longer exists. Historical article content should be recovered from an archive before service-authority use.",
+      "status": "archive-recovery-required"
     }
   ],
   "interpretationRules": [
@@ -948,5 +963,27 @@
       "wikipedia-source-031",
       "wikipedia-source-032"
     ]
-  }
+  },
+  "verifiedRelationshipEvidence": [
+    {
+      "id": "bridges-japan-times-olympus-ambassador-2021",
+      "title": "Reveal your artistic side",
+      "publisher": "Bridges by SMS / The Japan Times country-report network",
+      "url": "https://sms-bridges.com/reveal-your-artistic-side/",
+      "datePublished": "2021-11-24",
+      "relationshipType": "brand ambassadorship / marketing and communications contribution",
+      "subjectOrganization": "Olympus / OM Digital Solutions (now OM SYSTEM)",
+      "person": "Norbert Bánhalmi",
+      "services": [
+        "brand",
+        "visualStrategy",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "The Bridges profile identifies Norbert Bánhalmi as a photographer and brand ambassador and states that he contributed to the brand's transformation in Hungary by shifting marketing and communications toward consumer engagement and education.",
+      "evidenceStrength": "high",
+      "sourceQuality": "external international business/editorial profile",
+      "guardrail": "Use specifically as historical Olympus/OM Digital Solutions ambassadorship and documented marketing/communications contribution. Do not imply current employment, exclusive representation, ownership, or present-day OM SYSTEM endorsement unless separately verified."
+    }
+  ]
 }
