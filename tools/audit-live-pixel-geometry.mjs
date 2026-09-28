@@ -86,7 +86,10 @@ for(const vp of viewports){
         const gallery=document.querySelector('main .collage-gallery');
         if(gallery&&isVisible(gallery)){
           const s=getComputedStyle(gallery),r=rect(gallery);
-          data.gallery={...r,columns:Math.round(px(s.columnCount)),imageCount:gallery.querySelectorAll('img').length,className:String(gallery.className||''),columnGap:px(s.columnGap)};
+          const gridColumns=s.display==='grid'
+            ? s.gridTemplateColumns.split(/\s+/).filter(Boolean).length
+            : Math.round(px(s.columnCount));
+          data.gallery={...r,columns:gridColumns,layout:s.display,imageCount:gallery.querySelectorAll('img').length,className:String(gallery.className||''),columnGap:px(s.columnGap)};
         }
       }
       return data;
@@ -140,7 +143,7 @@ for(const vp of viewports){
     }
     if(target.kind==='portrait'){
       if(!result.gallery) issues.push('portrait collage gallery not found');
-      else if(result.gallery.columns<Number(vp.portraitGalleryColumns)) issues.push(`portrait gallery ${result.gallery.columns} columns < ${vp.portraitGalleryColumns}`);
+      else if(result.gallery.columns!==Number(vp.portraitGalleryColumns)) issues.push(`portrait gallery ${result.gallery.columns} columns != ${vp.portraitGalleryColumns}`);
     }
 
     const slug=`${width}x${height}-${target.lang}-${target.kind}`;

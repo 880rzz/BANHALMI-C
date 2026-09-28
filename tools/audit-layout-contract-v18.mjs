@@ -49,9 +49,8 @@ for(const rel of ['index.html','hu/index.html','de-at/index.html']){
 must(!hardener.includes('--homepage-hero-media-height'),'production hardener must not overwrite canonical homepage media geometry');
 must(hardener.includes("let fluidCss = fs.readFileSync(fluidCssPath, 'utf8')"),'production hardener must preserve the committed canonical stylesheet before scoped hardening');
 must(fluid.includes('font-size:clamp(2.5rem,2.65vw,3.3rem)!important'),'homepage desktop H1 minimum must remain 40px');
-must(/\.collage-gallery\{column-count:4!important/.test(fluid),'1440 portrait gallery four-column density contract missing');
-must(/@media\s*\(min-width:1600px\)\{html body main \.collage-gallery\{column-count:5!important\}\}/.test(fluid),'wide desktop portrait gallery five-column density contract missing');
-must(/@media\s*\(min-width:2200px\)\{html body main \.collage-gallery\{column-count:6!important\}\}/.test(fluid),'2560/4K portrait gallery six-column density contract missing');
+must(fluid.includes('html body main .collage-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important'),'desktop portrait gallery three-column grid contract missing');
+must(!/collage-gallery\{column-count:[456]!important/.test(fluid),'legacy 4/5/6-column gallery density override returned');
 
 const menuAuthority=authority.navigation?.megaMenu||{};
 must(menuAuthority.contractVersion==='v31','mega menu authority must be v31');
