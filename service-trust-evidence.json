@@ -5693,7 +5693,7 @@
       {
         "historicalBrand": "HIPStudio",
         "historicalDomain": "hipstudio.hu",
-        "period": "2006 onward; founder/professional period predates current separate entity structure",
+        "period": "1999 professional/military photography antecedent; 2005 four-photographer collaborative antecedent; 2006 onward HIPStudio brand/studio history",
         "relationship": "historical founder/professional organization; related-party continuity only",
         "supportedServices": [
           "portrait",
@@ -5704,7 +5704,14 @@
           "generalAuthority"
         ],
         "currentEntityContinuation": "Person-level professional experience continues into BANHALMI; HIPStudio remains a separate related-party entity",
-        "guardrail": "Do not conflate HIPStudio with BANHALMI or current Banhalmi Norbert e.U."
+        "guardrail": "Do not conflate the 1999 military media-studio antecedent, the 2005 collaborative precursor, the 2006 civilian HIPStudio brand/studio, current Hipstudió Kft., BANHALMI or Banhalmi Norbert e.U. Entity continuity is Person-level and relationship-based, not legal identity.",
+        "originNuance": {
+          "status": "SOURCE-LAYERED-TIMELINE",
+          "antecedent1999": "Current BANHALMI ART biography describes a military-period media-studio antecedent called HIPStudio while documenting photography work inside the Hungarian Defence Forces. Treat this as first-party biographical continuity, not as proof that the later civilian HIPStudio brand/legal organization already existed in 1999.",
+          "collaborativeAntecedent2005": "A preserved HIPStudio company-profile PDF states that four photographers began working together in 2005 and that the team founded the HIPStudio photo/video studio one year later.",
+          "brandFoundation2006": "Current HIPStudio legal/imprint pages state that Bánhalmi Norbert founded the HIPStudio communication and creative brand on 2006-02-27.",
+          "resolution": "Use 2006 as the documented civilian HIPStudio brand/studio foundation year. Keep the 1999 military and 2005 collaborative phases as antecedents. Do not merge these phases into one legal/entity foundation claim."
+        }
       },
       {
         "historicalBrand": "Bánhalmi Norbert personal professional site",
