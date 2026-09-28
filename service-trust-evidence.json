@@ -93,7 +93,8 @@
         "tamron-new-york-ballerina-project-2018",
         "oszk-szosszenetek-book-photo-credit-2017",
         "weltwoche-peter-magyar-photo-credit-2026",
-        "babafoto-exhibition-hipstudio-2010"
+        "babafoto-exhibition-hipstudio-2010",
+        "bme-vik-holgyvalasz-photo-credit-2017"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -156,7 +157,8 @@
         "amcham-team-portrait-credit",
         "rolunk-profile-possible-is-just-a-word-2025",
         "milcclub-most-vagy-soha-organizer-2020",
-        "tamron-new-york-ballerina-project-2018"
+        "tamron-new-york-ballerina-project-2018",
+        "bme-vik-holgyvalasz-photo-credit-2017"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -3393,6 +3395,39 @@
       "evidenceSummary": "Early external-web historical evidence for Bánhalmi's portrait/project/exhibition activity under the HIPStudio context in 2010.",
       "sourceStrength": "low-medium",
       "guardrail": "The News4Business item is a press-release archive and the Hupont page is participant/project-side documentation, not independent editorial evaluation. Use for historical continuity and project existence, not as quality endorsement, institutional validation or proof of current HIPStudio ownership."
+    },
+    {
+      "id": "bme-vik-holgyvalasz-photo-credit-2017",
+      "title": "Hölgyválasz — IMPULZUS különszám lányoknak 2017/18",
+      "publisher": "Budapesti Műszaki és Gazdaságtudományi Egyetem — Villamosmérnöki és Informatikai Kar",
+      "url": "https://www.vik.bme.hu/document/1295/original/bme_lanyok_napja_2017_webre.pdf",
+      "datePublished": "2017",
+      "evidenceKind": "official university publication / photography credit",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE",
+        "PHOTO-CREDIT",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "university publication photography",
+        "institutional photography",
+        "editorial photography"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "The official BME VIK 2017/18 Hölgyválasz publication is directly readable as a 17-page PDF. Its imprint identifies the publisher as BME VIK and explicitly lists Bánhalmi Norbert among the credited photographers.",
+      "evidenceSummary": "Official university publication evidence for credited institutional/editorial photography.",
+      "sourceStrength": "high",
+      "guardrail": "Use as institutional publication/photo-credit evidence only. The shared credit line does not establish authorship of every image in the issue, a BME employment relationship, exclusivity or institutional endorsement of BANHALMI services."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -4021,6 +4056,39 @@
       "sourceStrength": "medium-high historical provenance",
       "reason": "Explicit magazine cover-photo credit is present in the indexed publication text, but direct PDF screenshot verification remains unavailable in this pass.",
       "guardrail": "Photo-credit evidence only. Do not infer recurring Gramofon commission, exclusivity, endorsement or a client relationship with the photographed artist."
+    },
+    {
+      "id": "bme-vik-university-magazine-photo-credit",
+      "title": "BME VIK Egyetemi Magazin — photography credit",
+      "publisher": "Budapesti Műszaki és Gazdaságtudományi Egyetem — Villamosmérnöki és Informatikai Kar",
+      "url": "https://www.vik.bme.hu/document/3822/original/VIK_II_63.pdf",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "official-pdf-indexed-credit-direct-pdf-fetch-failed",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE",
+        "PHOTO-CREDIT"
+      ],
+      "classification": [
+        "university publication photography",
+        "institutional photography"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "brand",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "BME VIK's indexed official PDF identifies the publication as the faculty's university magazine and lists Bánhalmi Norbert among the photographers in the imprint.",
+        "Direct PDF retrieval returned an access/fetch error in the current verification pass, so visual page verification remains open."
+      ],
+      "sourceStrength": "high historical provenance",
+      "reason": "Exact official institutional PDF and explicit photography credit are indexed, but direct PDF page retrieval did not succeed in this pass. Keep unbound until direct body/page verification succeeds.",
+      "guardrail": "Shared institutional photo-credit only. Do not infer authorship of every image, employment, exclusivity or endorsement."
     }
   ],
   "interpretationRules": [
