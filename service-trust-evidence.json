@@ -290,7 +290,9 @@
         "veol-rege60-digital-exhibition-2021",
         "veol-rege-digital-exhibition-2021",
         "tamron-new-york-ballerina-project-2018",
-        "oszk-szosszenetek-book-photo-credit-2017"
+        "oszk-szosszenetek-book-photo-credit-2017",
+        "verocei-tukor-curator-opening-2024",
+        "verocei-tukor-digital-exhibition-project-2022"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -361,7 +363,9 @@
         "stihon-horizont-photography-community-2026",
         "milcclub-most-vagy-soha-organizer-2020",
         "veol-rege60-digital-exhibition-2021",
-        "veol-rege-digital-exhibition-2021"
+        "veol-rege-digital-exhibition-2021",
+        "verocei-tukor-curator-opening-2024",
+        "verocei-tukor-digital-exhibition-project-2022"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -3197,6 +3201,74 @@
       "evidenceSummary": "Official national bibliographic evidence for credited photography in a published book.",
       "sourceStrength": "high",
       "guardrail": "Use as book/publication photography credit only. Do not infer authorship of the text, publisher endorsement or a broader client relationship beyond the documented photo contribution."
+    },
+    {
+      "id": "verocei-tukor-curator-opening-2024",
+      "title": "A természetben vagyok otthon",
+      "publisher": "Verőcei Tükör",
+      "url": "https://epa.oszk.hu/05300/05335/00163/pdf/EPA05335_verocei_tukor_2024_05_majus.pdf",
+      "datePublished": "2024-05",
+      "page": 10,
+      "evidenceKind": "archived local print editorial / curator role",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "curator role",
+        "exhibition opening",
+        "Rege Galéria",
+        "fine-art ecosystem"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "The archived Verőcei Tükör issue states that Legény Enikő's exhibition was opened by Bánhalmi Norbert, identified as photo artist and curator of the Tihany Rege Galéria. The artist also states that her first solo exhibition in Tihany was realized through Bánhalmi Norbert.",
+      "evidenceSummary": "Archived local-print evidence for Bánhalmi's curator/exhibition-opening role and support of artists through the Rege Galéria ecosystem.",
+      "sourceStrength": "medium-high",
+      "guardrail": "Use only as documented curator/exhibition role. Do not infer ownership of the venue, exclusive representation of the artist or publisher endorsement."
+    },
+    {
+      "id": "verocei-tukor-digital-exhibition-project-2022",
+      "title": "Verőcei Tükör — artist interview referencing Bánhalmi digital exhibition project",
+      "publisher": "Verőcei Tükör",
+      "url": "https://epa.oszk.hu/05300/05335/00143/pdf/EPA05335_verocei_tukor_2022_09_szeptember.pdf",
+      "datePublished": "2022-09",
+      "page": 11,
+      "evidenceKind": "archived local print artist interview / project corroboration",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "digital exhibition",
+        "Tihany",
+        "artist support",
+        "curatorial/project development"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "In the archived Verőcei Tükör interview, the artist states that her first solo digital exhibition in Tihany came together through a Bánhalmi Norbert photography project.",
+      "evidenceSummary": "Independent archived print corroboration for Bánhalmi-led digital exhibition/project activity in Tihany.",
+      "sourceStrength": "medium",
+      "guardrail": "Treat as participant/artist testimony about the project, not as independent critical assessment, ownership evidence or endorsement."
     }
   ],
   "pendingEvidenceCandidates": [
