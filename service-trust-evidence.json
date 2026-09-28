@@ -1991,7 +1991,7 @@
     {
       "id": "tripont-problog-3182-archived",
       "url": "https://web.archive.org/web/20181107032149/http://www.tripont.hu/problog/3182/a_legkisebbel_a_nagyok_kozott",
-      "reason": "Exact Wayback URL is preserved in the canonical ART master-source database, but archive body was not retrievable in the current research environment.",
+      "reason": "Exact Wayback URL is preserved in the canonical ART master-source database, and contemporaneous Gmail independently preserves the original Tripont URL/title. Article body still requires direct archive recovery before service-authority projection.",
       "status": "archive-body-verification-required",
       "canonicalArtSourceId": "wikipedia-source-039",
       "canonicalArtCatalogueNumber": "BAS-0004",
@@ -2000,7 +2000,8 @@
       "provenance": [
         "current-hungarian-wikipedia",
         "BANHALMI ART master source database",
-        "2023 Gmail correspondence preserves the original Tripont URL/title"
+        "2023 Gmail correspondence preserves the original Tripont URL/title",
+        "Contemporaneous 2018-09-09 Gmail message preserves and shares the exact original Tripont Problog URL and article title 'A legkisebbel a nagyok között'."
       ],
       "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
       "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
@@ -2034,46 +2035,89 @@
       "publisher": "iMagazin",
       "url": "http://imagazin.hu/fotos-utomunkara-ipad-lehetseges/",
       "title": "Fotós utómunkára iPad? Lehetséges!",
-      "reason": "A 2016 Gmail correspondence preserves the exact historical iMagazin article URL and identifies it as an existing article, but the public page is no longer directly retrievable in the current verification pass. iMagazin must not be conflated with iSTYLE Magazin without independent publisher relationship evidence.",
-      "status": "archive-recovery-required",
-      "verificationStatus": "UNVERIFIED",
-      "evidenceType": "PROFESSIONAL-PUBLICATION",
+      "reason": "The historical publication URL and existence are directly preserved in contemporaneous correspondence, but the public article body is no longer directly retrievable. Treat as historical first-party publication reference, not independent editorial endorsement.",
+      "status": "archive-reference-verified",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "evidenceType": [
+        "FIRST-PARTY",
+        "PROFESSIONAL-PUBLICATION"
+      ],
       "services": [
         "brand",
         "visualStrategy",
         "generalAuthority"
       ],
-      "guardrail": "Do not bind to services or claim iSTYLE publication until an archived/public copy verifies authorship, content and publisher identity."
+      "guardrail": "Do not conflate iMagazin with iSTYLE Magazin unless publisher ownership/relationship is separately verified. Do not bind to Brand/Visual Strategy until article body/authorship is recovered or independently archived.",
+      "datePublished": "2016-04-14",
+      "classification": [
+        "mobile photo post-production",
+        "iPad workflow",
+        "professional imaging",
+        "technology expertise"
+      ],
+      "provenance": [
+        "Exact iMagazin article URL is preserved in contemporaneous 2016 Gmail correspondence.",
+        "Bánhalmi Norbert shared the live article URL on 2016-04-14 in a thread titled 'Apple cikk'.",
+        "The correspondence identifies the article as 'Fotós utómunkára iPad? Lehetséges!' and discusses Photoshop Fix for high-resolution facial retouching."
+      ]
     },
     {
       "id": "pixinfo-olympus-ambassadors-3-2020",
-      "publisher": "Pixinfo",
+      "publisher": "Pixinfo.com",
       "url": "https://pixinfo.com/hirek/2020/04/30/digitalis-elmeny-olympus-nagykovetekkel-3/",
       "title": "Digitális élmény Olympus nagykövetekkel #3",
-      "reason": "Google Alerts preserves the exact Pixinfo URL and identifies an Olympus Hungary online programme featuring Olympus ambassadors, but the source page was not directly retrievable in the current verification environment.",
-      "status": "archive-recovery-required",
-      "verificationStatus": "UNVERIFIED",
-      "evidenceType": "AMBASSADORSHIP",
+      "reason": "Exact historical publisher URL, title, date and programme context are preserved in contemporaneous Google Alerts. Direct article body is still unavailable, so do not promote to LIVE-VERIFIED or service-bound evidence yet.",
+      "status": "archive-reference-verified",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "SECONDARY-MENTION"
+      ],
       "services": [
         "brand",
         "visualStrategy",
         "generalAuthority"
       ],
-      "guardrail": "Potential historical ambassadorship corroboration only. Do not bind until the source body or an archived snapshot directly identifies Bánhalmi Norbert and his role."
+      "guardrail": "Use only as archive-reference corroboration of the historical Olympus ambassador/programme context until the original or archived Pixinfo body is recovered. Do not infer current employment or exclusivity.",
+      "datePublished": "2020-04-30",
+      "classification": [
+        "historical Olympus ambassador programme",
+        "online talk",
+        "professional photography"
+      ],
+      "provenance": [
+        "Exact Pixinfo URL preserved in two contemporaneous Google Alerts dated 2020-05-01.",
+        "Google Alerts preserves the title 'Digitális élmény Olympus nagykövetekkel #3'.",
+        "The preserved snippet states that the live online talk series was organized by Olympus Hungary and that Bánhalmi Norbert, professional photographer, was the featured presenter."
+      ]
     },
     {
       "id": "atv-jakupcsek-plus-2019",
       "publisher": "ATV",
       "url": "http://www.atv.hu/videok/video-20190527-jakupcsek-plusz-2-resz-2019-05-30",
       "title": "Jakupcsek plusz - 2. rész 2019.05.30.",
-      "reason": "Google Alerts preserves the original ATV video URL and snippet naming Bánhalmi Norbert among programme guests, but the historical ATV page is not currently retrievable.",
-      "status": "archive-recovery-required",
-      "verificationStatus": "UNVERIFIED",
-      "evidenceType": "INTERVIEW",
+      "reason": "Broadcast appearance, exact legacy URL, date and guest attribution are preserved in contemporaneous Google Alerts. Original ATV video/page body remains unavailable, so keep this as archive-reference evidence.",
+      "status": "archive-reference-verified",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "evidenceType": [
+        "INTERVIEW",
+        "SECONDARY-MENTION"
+      ],
       "services": [
         "generalAuthority"
       ],
-      "guardrail": "Do not promote to broadcast/interview authority until the programme page, video metadata or archive snapshot verifies the appearance and context."
+      "guardrail": "Do not infer the episode topic, claims made in the programme, or endorsement beyond the documented guest appearance until the broadcast is recovered.",
+      "datePublished": "2019-05-30",
+      "classification": [
+        "broadcast appearance",
+        "talk-show guest",
+        "general authority"
+      ],
+      "provenance": [
+        "Exact ATV legacy video URL preserved in a contemporaneous Google Alert dated 2019-05-31.",
+        "The preserved alert identifies the programme as Jakupcsek plusz, episode 2, 2019-05-30.",
+        "The preserved snippet names Bánhalmi Norbert among the programme guests."
+      ]
     },
     {
       "id": "kreativ-whisky-gastro-photo-contest-2017",
