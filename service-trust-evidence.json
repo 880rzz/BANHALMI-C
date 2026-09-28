@@ -3658,6 +3658,42 @@
       "sourceStrength": "medium historical provenance",
       "reason": "Exact publisher URL/title and the Bánhalmi/Rege context are historically preserved, but the original article body is not currently retrievable. Keep unbound until direct/archived body recovery.",
       "guardrail": "Do not infer the exact governance/ownership/transfer arrangement of Rege Galéria from the snippet alone. Do not service-bind or treat as a completed institutional relationship until the full article body is recovered."
+    },
+    {
+      "id": "veol-bernat-sari-curator-2020",
+      "title": "A tizenhat éves Bernát Sári festményeiből nyílt kiállítás Tihanyban",
+      "publisher": "VEOL / Napló Online",
+      "url": "https://www.veol.hu/kultura/helyi-kultura/a-tizenhat-eves-bernat-sari-festmenyeibol-nyilt-kiallitas-tihanyban-4044884/",
+      "datePublished": "2020-09-18",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "archive-reference-verified-curator-role-body-unavailable",
+      "evidenceType": [
+        "SECONDARY-MENTION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "curation",
+        "Rege Galéria",
+        "youth artist exhibition",
+        "fine-art ecosystem"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "Contemporaneous Google Alert dated 2020-09-18 preserves the exact article title and VEOL/Napló Online source.",
+        "The preserved snippet explicitly states: 'A tárlat kurátora Bánhalmi Norbert'."
+      ],
+      "sourceStrength": "medium historical provenance",
+      "reason": "Exact title/source and curator-role snippet are historically preserved, but the full article body is not currently retrievable.",
+      "guardrail": "Use only as archive-reference evidence of the curator role. Do not service-bind or infer gallery ownership/endorsement until the original or archived article body is recovered."
     }
   ],
   "interpretationRules": [
