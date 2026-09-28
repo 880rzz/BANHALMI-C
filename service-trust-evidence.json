@@ -4523,5 +4523,313 @@
       "relationship": "superseded pre-publication draft URL",
       "doNotCountAsIndependentEvidence": true
     }
+  },
+  "googleAlertsReconciliation": {
+    "name": "Google Alerts historical external URL reconciliation",
+    "generatedAt": "2026-09-28",
+    "totalInputUrls": 42,
+    "reconciledCount": 42,
+    "complete": true,
+    "policy": "Every historical Google Alert URL is retained as a discovery/provenance record and mapped to one canonical evidence record, a corroborating/duplicate relationship, recovery status, or DO-NOT-BIND. Repeated/syndicated URLs never become independent authority merely by repetition.",
+    "entries": [
+      {
+        "n": 1,
+        "url": "https://turizmus.com/cikk/business-travel/becs-visitbalaton365-wiener-kaiser-wiesn-balatoni-langos-osztrak-vienna-design-week",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "turizmus-wiener-kaiser-wiesn-credit-2026",
+        "treatment": "independent-photo-credit/event-evidence"
+      },
+      {
+        "n": 2,
+        "url": "https://turizmusonline.hu/cikkek/kulfold/amikor-a-balaton-becsig-er-.html",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "turizmusonline-wiener-kaiser-wiesn-credit-2026",
+        "treatment": "independent-photo-credit/event-evidence"
+      },
+      {
+        "n": 3,
+        "url": "https://magyarjelen.hu/velemeny/33151-tiszavirag-eletu-lesz-a-tisza",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "magyarjelen-magyar-peter-wikimedia-photo-credit-2026",
+        "treatment": "photo-credit/circulation-only"
+      },
+      {
+        "n": 4,
+        "url": "https://honvedelem.hu/hirek/ismet-tekert-a-sereg.html",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "honvedelem-hososz-event-credit-2026",
+        "treatment": "institutional-event/photo-credit"
+      },
+      {
+        "n": 5,
+        "url": "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "google-alert-kiskegyed-magyar-peter-2026",
+        "treatment": "independent-interview/portrait-circulation"
+      },
+      {
+        "n": 6,
+        "url": "https://www.eszakhirnok.com/2026/03/17/az-elso-es-utolso-aktfotozasom-nem-levetkozni-volt-nehez/",
+        "status": "SECONDARY-REPUBLICATION",
+        "canonicalEvidenceId": "she-artistic-nude-participant-account-2017",
+        "localRecordId": "google-alert-eszakhirnok-she-republication-2026",
+        "treatment": "do-not-double-count"
+      },
+      {
+        "n": 7,
+        "url": "https://w.roadster.hu/culture/indul-az-ev-legfontosabb-podcastje-amit-nem-szabad-kihagynod",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "roadster-banhami-kata-photo-credit-2026",
+        "treatment": "photo-credit/secondary-mention"
+      },
+      {
+        "n": 8,
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3336654/",
+        "status": "LIVE-VERIFIED-SUMMARY",
+        "canonicalEvidenceId": "orf-bmi-photo-club-exhibition-2025",
+        "treatment": "annual-summary-corroboration-do-not-double-count"
+      },
+      {
+        "n": 9,
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3335673/",
+        "status": "LIVE-VERIFIED-SUMMARY",
+        "canonicalEvidenceId": "orf-portraits-good-cause-2025",
+        "treatment": "annual-summary-corroboration-do-not-double-count"
+      },
+      {
+        "n": 10,
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3332313/",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "orf-bmi-photo-club-exhibition-2025",
+        "treatment": "primary-editorial"
+      },
+      {
+        "n": 11,
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3330028/",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "orf-fenymanok-event-photo-credit-2025",
+        "treatment": "event-photo-credit"
+      },
+      {
+        "n": 12,
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3327245/",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "orf-vienna-1956-event-photo-credit-2025",
+        "treatment": "institutional-event/photo-credit"
+      },
+      {
+        "n": 13,
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3300930/",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "orf-bmi-mentorprogram-2025",
+        "treatment": "visual-strategy/education-authority"
+      },
+      {
+        "n": 14,
+        "url": "https://www.kiskegyed.hu/kepernyo/sulyos-baleset-vilaghiru-magyar-fotomuvesz/1dl719d",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "kiskegyed-life-profile-2025",
+        "treatment": "independent-profile/interview"
+      },
+      {
+        "n": 15,
+        "url": "https://volksgruppen.orf.at/magyarok/stories/3295966/",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "orf-portraits-good-cause-2025",
+        "treatment": "portrait/community-trust"
+      },
+      {
+        "n": 16,
+        "url": "https://vehir.hu/cikk/76376-mindenki-maskeppen-mas",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "vehir-mas-kepp-mas-2024",
+        "treatment": "independent-project-coverage"
+      },
+      {
+        "n": 17,
+        "url": "https://mandiner.hu/belfold/2024/10/azt-akartam-hogy-ez-vilagga-menjen-harom-hos-new-york-kornyekerol",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "mandiner-milestones56-newyork-2024",
+        "treatment": "new-york-historical-authority"
+      },
+      {
+        "n": 18,
+        "url": "https://kreativ.hu/cikk/young-lions-speier-viktoria-czebe-adel",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "kreativ-young-lions-speier-mentor-2024",
+        "treatment": "mentor/industry-authority"
+      },
+      {
+        "n": 19,
+        "url": "https://www.glamour.hu/sztarhirek/raba-timi-interju-karrier-csalad/pbsyz0x",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "glamour-raba-timea-photo-credit-2024",
+        "treatment": "editorial-photo-credit"
+      },
+      {
+        "n": 20,
+        "url": "https://story.hu/cimlapsztori/2024/03/22/raba-timea-onbizalomhiany-anyasag-modell-szepsegkiralyno/",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "story-raba-timea-portrait-series-2024",
+        "treatment": "portrait/editorial-authority"
+      },
+      {
+        "n": 21,
+        "url": "https://www.veszpremkukac.hu/kiallitas-az-internet-hazugsagai/",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "veszpremkukac-digital-illusions-2023",
+        "sameProjectAs": "vehir-ai-illusions-2023",
+        "treatment": "independent-same-project-corroboration"
+      },
+      {
+        "n": 22,
+        "url": "https://magyarnemzet.hu/kulturnemzet/regeszet/samu-nap-vertesszoloson",
+        "status": "DO-NOT-BIND",
+        "canonicalEvidenceId": "magyar-nemzet-samu-day-2023",
+        "treatment": "no-banhalmi-attribution-found"
+      },
+      {
+        "n": 23,
+        "url": "https://vehir.hu/cikk/70153-a-muveszet-segitsegevel-leplezik-le-az-ai-hazugsagait",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "vehir-ai-illusions-2023",
+        "treatment": "primary-project-coverage"
+      },
+      {
+        "n": 24,
+        "url": "https://likebalaton.hu/telepules/tihany/programok/digitalis-illuziok-a-valosag-hamis-arcai-generativ-art-kiallitas-289762/",
+        "status": "LIVE-PROGRAM-LISTING",
+        "canonicalEvidenceId": "vehir-ai-illusions-2023",
+        "treatment": "corroboration-do-not-double-count"
+      },
+      {
+        "n": 25,
+        "url": "https://demokrata.hu/sport/szenvedely-es-szerelem-szazados-a-legfiatalabb-noi-zsoke-687127",
+        "status": "ARCHIVE-REFERENCE-VERIFIED",
+        "canonicalEvidenceId": "origo-gonczi-rebeka-photo-credit-2023",
+        "localRecordId": "demokrata-gonczi-rebeka-photo-credit-2023",
+        "treatment": "same-subject-photo-credit-corroboration"
+      },
+      {
+        "n": 26,
+        "url": "https://www.origo.hu/sport/egyeni/20230515-lovassport-gonczi-rebeka-kincsem-park-cantel-racing.html",
+        "status": "LIVE-VERIFIED-LEGACY-URL",
+        "canonicalEvidenceId": "origo-gonczi-rebeka-photo-credit-2023",
+        "treatment": "legacy-url-alias"
+      },
+      {
+        "n": 27,
+        "url": "https://maszol.ro/kulfold/A-magyar-autonomia-eselye",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "maszol-liptak-photo-reuse-2023",
+        "treatment": "secondary-editorial-photo-circulation"
+      },
+      {
+        "n": 28,
+        "url": "https://www.bitcoinbazis.hu/a-magyar-fotomuvesz-aki-az-aktfotokat-az-nft-k-vilagaba-invitalta/",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "bitcoinbazis-nft-art-2022",
+        "treatment": "fine-art/nft-interview"
+      },
+      {
+        "n": 29,
+        "url": "https://vehir.hu/cikk/65514-amator-es-tapasztalt-fotosok-mertek-ossze-tudasukat",
+        "status": "ARCHIVE-REFERENCE-VERIFIED",
+        "canonicalEvidenceId": "vehir-photographers-competition-rege-2022",
+        "treatment": "body-recovery-required"
+      },
+      {
+        "n": 30,
+        "url": "https://metropol.hu/aktualis/muveszet-elvitelre-eleteket-menthet-az-uj-muveszeti-projekt-482424/",
+        "status": "ARCHIVE-REFERENCE-CORROBORATION",
+        "canonicalEvidenceId": "art-to-go-olympus-starbucks-2021",
+        "treatment": "same-project-corroboration"
+      },
+      {
+        "n": 31,
+        "url": "https://www.origo.hu/itthon/20210809-percenkent-valtozokiallitas-nyilik-a-balatonnal.html",
+        "status": "LIVE-VERIFIED",
+        "canonicalEvidenceId": "kultura-hirado-origo-the-frame-2021",
+        "treatment": "syndicated-independent-project-coverage"
+      },
+      {
+        "n": 32,
+        "url": "https://www.veol.hu/kultura/helyi-kultura/egyedi-percenkent-valtozo-kiallitas-nyilik-a-balatonnal-4891859/",
+        "status": "LIVE-VERIFIED-LEGACY-URL",
+        "canonicalEvidenceId": "kultura-hirado-origo-the-frame-2021",
+        "treatment": "same-project-corroboration"
+      },
+      {
+        "n": 33,
+        "url": "https://www.veol.hu/kultura/helyi-kultura/digitalis-kiallitas-nyilt-a-tihanyi-apatsagi-galeriaban-4774082/",
+        "status": "LIVE-VERIFIED-LEGACY-URL",
+        "canonicalEvidenceId": "veol-rege-digital-exhibition-2021",
+        "treatment": "independent-curatorial-coverage"
+      },
+      {
+        "n": 34,
+        "url": "https://www.veol.hu/kultura/helyi-kultura/micsoda-hangulat-holdfenyszonata-a-balaton-kiralyi-paholyaban-4763858/",
+        "status": "LIVE-VERIFIED-LEGACY-URL",
+        "canonicalEvidenceId": "veol-rege60-digital-exhibition-2021",
+        "treatment": "independent-curatorial/event-coverage"
+      },
+      {
+        "n": 35,
+        "url": "https://www.veol.hu/kultura/helyi-kultura/eletre-keltette-az-orvosno-a-termeszet-szepsegeit-a-tihanyi-galeriaban-4145125/",
+        "status": "LIVE-VERIFIED-LEGACY-URL",
+        "canonicalEvidenceId": "veol-rege-curation-koreny-2020",
+        "treatment": "independent-curator-role"
+      },
+      {
+        "n": 36,
+        "url": "https://www.veol.hu/kultura/helyi-kultura/a-tizenhat-eves-bernat-sari-festmenyeibol-nyilt-kiallitas-tihanyban-4044884/",
+        "status": "ARCHIVE-REFERENCE-VERIFIED",
+        "canonicalEvidenceId": "veol-bernat-sara-curator-2020",
+        "treatment": "body-recovery-required"
+      },
+      {
+        "n": 37,
+        "url": "https://pixinfo.com/hirek/2020/04/30/digitalis-elmeny-olympus-nagykovetekkel-3/",
+        "status": "ARCHIVE-REFERENCE-VERIFIED",
+        "canonicalEvidenceId": "pixinfo-olympus-ambassadors-3-2020",
+        "treatment": "body-recovery-required"
+      },
+      {
+        "n": 38,
+        "url": "http://www.atv.hu/videok/video-20190527-jakupcsek-plusz-2-resz-2019-05-30",
+        "status": "ARCHIVE-REFERENCE-VERIFIED",
+        "canonicalEvidenceId": "atv-jakupcsek-plus-2019",
+        "treatment": "broadcast-recovery-required"
+      },
+      {
+        "n": 39,
+        "url": "https://www.veol.hu/vezeto-hirek/csolnoky-ferenc-korhaz-onkologiai-centrum-rak-kiallitas-2242495",
+        "status": "LIVE-VERIFIED-LEGACY-URL",
+        "canonicalEvidenceId": "veol-awakening-oncology-exhibition-2018",
+        "treatment": "independent-project/institutional-context"
+      },
+      {
+        "n": 40,
+        "url": "https://www.norbertbanhalmi.com/reklamfotozas",
+        "status": "FIRST-PARTY-HISTORICAL-RECOVERY",
+        "canonicalEvidenceId": "legacy-own-site-reklamfotozas-2017",
+        "treatment": "service-continuity-only-do-not-count-as-independent-authority"
+      },
+      {
+        "n": 41,
+        "url": "http://www.origo.hu/tafelspicc/kozelet/20170331-gasztrofoto-palyazat-the-famous-grouse.html",
+        "status": "LIVE-VERIFIED-LEGACY-URL",
+        "canonicalEvidenceId": "origo-gastro-photo-contest-2017",
+        "treatment": "professional-jury/visual-strategy"
+      },
+      {
+        "n": 42,
+        "url": "http://kreativ.hu/cikk/whisky_inspiralta_gasztrofotoverseny_indult",
+        "status": "ARCHIVE-REFERENCE-VERIFIED",
+        "canonicalEvidenceId": "origo-gastro-photo-contest-2017",
+        "localRecordId": "kreativ-whisky-gastro-photo-contest-2017",
+        "treatment": "corroborating-same-story-do-not-double-count"
+      }
+    ]
   }
 }
