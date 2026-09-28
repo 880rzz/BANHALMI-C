@@ -4076,12 +4076,19 @@
         "generalAuthority"
       ],
       "kind": "professional/public report",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "guardrail": "Use as moving-image/public-professional evidence for the photography competition and jury/media role. The current YouTube archive is not by itself proof of the original broadcaster/uploader provenance; M5 participation is corroborated by the MILC Club report. Do not infer M5 endorsement or employment.",
       "verificationStatus": "LIVE-VERIFIED",
       "sourceStrength": "medium",
       "evidenceType": [
         "PROJECT-COVERAGE"
-      ]
+      ],
+      "corroboratingUrls": [
+        "https://www.milcclub.com/post/talp-alatt-a-v%C3%A1ros"
+      ],
+      "corroboration": [
+        "Olympus MILC Club's 2020 event report independently documents Bánhalmi Norbert as a professional photographer and jury member at the IV. Budapesti Fotósviadal and captions him giving an M5 television interview about the competition."
+      ],
+      "context": "Archived moving-image material relating to the IV. Budapesti Fotósviadal; independent MILC Club coverage corroborates the documented jury role and M5 television interview."
     },
     {
       "id": "yt-awakening-reflection",
