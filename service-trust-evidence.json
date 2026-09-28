@@ -4863,5 +4863,19 @@
     ],
     "unresolvedIds": [],
     "policy": "professionalRegistryEvidence IDs are resolved against the dedicated Professional evidence registries and are not duplicated into this file."
+  },
+  "reconciliationState": {
+    "googleAlerts42": {
+      "status": "COMPLETE-REPRESENTATION-RECONCILED",
+      "lastChecked": "2026-09-28",
+      "scope": "42 unique external URLs previously recovered from name-specific Google Alerts",
+      "result": "Every URL is represented in the evidence graph as a canonical evidence record, corroborating URL, pending/archive-recovery record, secondary republication or DO-NOT-BIND record.",
+      "policy": [
+        "Representation does not imply equal evidence strength.",
+        "Syndicated/republication URLs do not count as independent authority when they derive from the same underlying story.",
+        "Search snippets alone remain archive-reference evidence unless article body or equivalent source content is recovered.",
+        "No service binding is permitted for pending/unverified records."
+      ]
+    }
   }
 }
