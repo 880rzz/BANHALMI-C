@@ -2149,27 +2149,57 @@
       "id": "trip-magazin-76",
       "publisher": "Tripont / Trip Magazin",
       "url": "https://issuu.com/tripont/docs/issue_trip_magazin/76",
-      "status": "archive-reference-verified-content-extraction-pending",
+      "status": "archive-verified",
       "services": [
         "fineArt",
-        "portrait"
+        "portrait",
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
       ],
-      "evidenceKind": "specialist photography magazine archive",
+      "evidenceKind": "specialist photography magazine deep interview",
       "corroboration": [
         "Wikidata Q56391118 cites this Issuu issue for fine-art photography.",
         "VIPACH press archive identifies the 2018 Tripont Magazin appearance as a professional interview with Bánhalmi Norbert about artistic nude photography.",
         "BANHALMI ART master-source database retains the Issuu reference as part of the historical source backbone."
       ],
-      "guardrail": "Strong historical source reference, but do not make article-specific claims or mark ARCHIVE-VERIFIED until the actual interview pages/body are directly inspected.",
-      "title": "Tripont Magazin — szakmai interjú Bánhalmi Norberttel a művészi aktfotózásról",
+      "guardrail": "Treat interview statements as attributed first-person statements unless independently corroborated. The magazine's editorial framing may be used as publication context. Do not convert historical New York references into a current New York studio claim, or historical Olympus ambassadorship into present-day employment/endorsement. Do not convert psychological/inner-beauty discussion into medical or therapeutic efficacy claims.",
+      "title": "Tripont Foto Video Magazin — Bánhalmi Norbert interjú",
       "year": 2018,
-      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "verificationStatus": "ARCHIVE-VERIFIED",
       "evidenceType": [
         "INTERVIEW",
-        "PROFESSIONAL-PUBLICATION"
+        "PROFESSIONAL-PUBLICATION",
+        "AMBASSADORSHIP",
+        "PROJECT-COVERAGE"
       ],
       "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
-      "canonicalCluster": "artistic-nude-sensitive-portrait-authority"
+      "canonicalCluster": "artistic-nude-sensitive-portrait-authority",
+      "issue": "2018 Autumn-Winter",
+      "pageStart": 76,
+      "pages": 2,
+      "sourceStrength": "high",
+      "sourceQuality": "specialist photography magazine / original archived PDF",
+      "archiveProvenance": [
+        "Original two-page magazine PDF preserved in contemporaneous 2018 publication correspondence",
+        "Exact Issuu issue URL preserved: https://issuu.com/tripont/docs/issue_trip_magazin/76",
+        "Contemporaneous publication correspondence identifies page 76 and the 2018 Autumn-Winter issue",
+        "VIPACH press archive independently catalogues the 2018 Tripont Magazin interview",
+        "Wikidata Q56391118 cites the same Issuu issue for fine-art photography",
+        "BANHALMI ART master-source database retains the issue in the historical source backbone"
+      ],
+      "topics": [
+        "artistic nude photography",
+        "sensitive portrait philosophy",
+        "psychology and inner beauty in photography",
+        "Ébredés – Az új kezdet project",
+        "A Nő világa book",
+        "New York professional history",
+        "commercial/reklám photography",
+        "teaching",
+        "historical Olympus Hungary ambassadorship"
+      ],
+      "evidenceSummary": "Two-page specialist-photography interview documenting Bánhalmi Norbert's artistic-nude and sensitive-portrait philosophy, the Ébredés project, A Nő világa, New York history, commercial photography background, teaching ambitions and his then-new Olympus Hungary ambassador role."
     },
     {
       "id": "istyle-magazin-historical",
@@ -2195,7 +2225,7 @@
     "artisticNudeSensitivePortrait": {
       "id": "artistic-nude-sensitive-portrait-authority",
       "name": "Artistic nude and sensitive portrait authority",
-      "status": "MIXED-VERIFIED",
+      "status": "VERIFIED-MULTI-SOURCE",
       "intentOwnership": "BANHALMI ART primary; Professional uses only capability/trust bridge where relevant",
       "topics": [
         "artistic nude photography",
@@ -2225,13 +2255,25 @@
       "historicalPriorityEvidence": [
         {
           "id": "trip-magazin-76",
-          "role": "deep specialist interview on artistic nude photography",
-          "status": "ARCHIVE-REFERENCE-VERIFIED-CONTENT-EXTRACTION-PENDING",
+          "role": "deep specialist interview on artistic nude, sensitive portrait philosophy and the Ébredés project",
+          "status": "ARCHIVE-VERIFIED",
           "url": "https://issuu.com/tripont/docs/issue_trip_magazin/76",
           "corroboration": [
             "BANHALMI ART master source database catalogues the Issuu issue",
             "Wikidata Q56391118 cites the same Issuu document for fine-art photography",
             "VIPACH press archive identifies a 2018 Tripont Magazin professional interview with Norbert Bánhalmi about artistic nude photography"
+          ],
+          "pageStart": 76,
+          "pages": 2,
+          "issue": "Tripont Foto Video Magazin 2018 Autumn-Winter",
+          "contentVerified": true,
+          "contentHighlights": [
+            "editorial framing links Bánhalmi to a distinctive artistic-nude philosophy",
+            "interview discusses psychology, love and inner beauty as recurring themes in the work",
+            "Ébredés – Az új kezdet is described as an artistic-nude project with women after gynecological cancer surgery",
+            "A Nő világa is discussed as a continuation of the psychological/portrait inquiry",
+            "the interview records the then-new Olympus Hungary ambassador role and teaching plans",
+            "New York appears as historical professional context"
           ]
         }
       ],
@@ -2288,5 +2330,8 @@
         }
       ]
     }
-  }
+  },
+  "archiveVerifiedEvidence": [
+    "trip-magazin-76"
+  ]
 }
