@@ -2632,6 +2632,34 @@
       "evidenceSummary": "Independent corroboration for Bánhalmi's AI-image/visual-literacy exhibition work and visual-communication experimentation.",
       "sourceStrength": "medium-high",
       "guardrail": "Count as an additional independent source for the same underlying exhibition project, not as a separate project. Do not infer AI-safety certification, technical AI expertise beyond the documented artistic experiment, or endorsement by the publisher."
+    },
+    {
+      "id": "szamalk-photography-internship-mentorship",
+      "title": "SZÁMALK-Szalézi photography student professional internship testimony",
+      "publisher": "SZÁMALK-Szalézi Technikum és Szakgimnázium",
+      "url": "https://www.szamalk-szalezi.hu/",
+      "evidenceKind": "educational institution student testimony / professional internship evidence",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE",
+        "SECONDARY-MENTION"
+      ],
+      "classification": [
+        "photography mentorship",
+        "professional internship",
+        "education",
+        "practical training"
+      ],
+      "services": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "context": "On the school's current site, photography student Darida Andrea states that she completed her summer professional internship with professional photographer Bánhalmi Norbert and received useful practical advice from him.",
+      "evidenceSummary": "External educational-institution evidence for professional photography mentorship and practical training activity.",
+      "sourceStrength": "medium-high",
+      "guardrail": "Use as mentorship/internship authority only. This is a student testimonial hosted by the educational institution, not an employment relationship with the school, formal faculty appointment, endorsement of commercial services or evidence of current teaching status."
     }
   ],
   "pendingEvidenceCandidates": [
