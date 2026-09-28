@@ -739,6 +739,54 @@
       ]
     },
     {
+      "source": "/reklamfotozas",
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ],
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/reklamfotozas/",
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "banhalminorbert.hu"
+        }
+      ],
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/reklamfotozas",
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ],
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/reklamfotozas/",
+      "has": [
+        {
+          "type": "header",
+          "key": "Host",
+          "value": "www.banhalminorbert.hu"
+        }
+      ],
+      "destination": "https://www.norbertbanhalmi.com/hu/brand/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "destination": "https://www.norbertbanhalmi.com/de-at/",
       "permanent": true,
