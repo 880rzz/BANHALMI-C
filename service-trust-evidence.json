@@ -3389,6 +3389,42 @@
       "reason": "Exact source, date and role snippet are historically preserved, but the article body is not currently retrievable. Keep unbound until direct/archive body recovery.",
       "sourceStrength": "medium-high historical provenance",
       "guardrail": "Do not service-bind until the original/archived article body is recovered. Do not infer ownership, endorsement or a broader institutional role beyond the preserved announcement."
+    },
+    {
+      "id": "veol-bernat-sara-curator-2020",
+      "title": "A tizenhat éves Bernát Sári festményeiből nyílt kiállítás Tihanyban",
+      "publisher": "Napló Online / VEOL",
+      "url": "https://www.veol.hu/kultura/helyi-kultura/a-tizenhat-eves-bernat-sari-festmenyeibol-nyilt-kiallitas-tihanyban-4044884/",
+      "datePublished": "2020-09-18",
+      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
+      "status": "archive-reference-verified-body-recovery-required",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "curator role",
+        "gallery artistic leadership",
+        "young artist exhibition",
+        "Rege Galéria"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "provenance": [
+        "Contemporaneous Google Alert dated 2020-09-18 preserves the exact VEOL/Napló Online title and URL.",
+        "The preserved snippet explicitly states: 'A tárlat kurátora Bánhalmi Norbert, a galéria művészeti vezetője.'"
+      ],
+      "reason": "The curator/artistic-director role is preserved in a contemporaneous publisher snippet, but the article body is not currently retrievable. Keep unbound until direct/archive body recovery.",
+      "sourceStrength": "high historical provenance",
+      "guardrail": "Do not service-bind until the original/archived body is recovered. Use only as curator/gallery leadership evidence, not ownership or publisher endorsement."
     }
   ],
   "interpretationRules": [
