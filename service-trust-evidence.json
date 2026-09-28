@@ -1473,6 +1473,67 @@
       "context": "Kreatív Online quotes strategist and photographer Speier Vikó stating that, with Bánhalmi Norbert's mentoring, she began building her personal brand in 2018 and planned her first exhibition campaign.",
       "evidenceSummary": "Independent trade-publication evidence that a third-party creative professional attributes early personal-brand and campaign development to Bánhalmi Norbert's mentoring.",
       "guardrail": "Treat as a third-party attributed mentoring relationship and professional-authority signal. Do not convert it into an employment, agency-client, formal consultancy or endorsement claim."
+    },
+    {
+      "id": "milcclub-now-or-never-model-workshop-2020",
+      "title": "Most Vagy Soha fotópályázat és kiállítás — modellfotózás workshop",
+      "publisher": "Olympus MILC Club",
+      "url": "https://www.milcclub.com/post/a-pillanat-ami-majd-lesz-az-most-volt",
+      "evidenceKind": "specialist brand-community editorial / workshop coverage",
+      "classification": [
+        "AMBASSADORSHIP",
+        "PROFESSIONAL-PUBLICATION",
+        "portrait/model photography",
+        "industry education"
+      ],
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "AMBASSADORSHIP",
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "Olympus MILC Club's 2020 editorial coverage explicitly identifies Bánhalmi Norbert as a professional photographer and Olympus ambassador, documents his model-photography presentation/workshop and describes his portrait approach around self-image and photographer responsibility.",
+      "evidenceSummary": "Live specialist-brand-community coverage corroborates the historical Olympus ambassadorship and public teaching/expertise in model and portrait photography.",
+      "guardrail": "Historical ambassadorship and workshop evidence only. Do not imply current Olympus/OM SYSTEM employment, exclusivity, clinical/therapeutic qualification or broader endorsement."
+    },
+    {
+      "id": "milcclub-journey-to-earth-center-2020",
+      "title": "Úton a föld középpontja felé",
+      "publisher": "Olympus MILC Club",
+      "url": "https://www.milcclub.com/post/%C3%BAton-a-f%C3%B6ld-k%C3%B6z%C3%A9ppontja-fel%C3%A9",
+      "evidenceKind": "signed specialist photography publication / field project",
+      "classification": [
+        "PROFESSIONAL-PUBLICATION",
+        "technical photography",
+        "field project",
+        "Olympus community"
+      ],
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "FIRST-PARTY"
+      ],
+      "services": [
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "A signed Bánhalmi Norbert article on Olympus MILC Club documents a cave-photography field test/project and links its accompanying video, providing authored specialist-photography evidence.",
+      "evidenceSummary": "Live signed specialist publication supports technical/creative photography expertise and historical participation in the Olympus photography community.",
+      "guardrail": "Authored/first-party expertise hosted by the specialist community; do not treat it as independent evaluation of service quality or as proof of current ambassadorship by itself."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -1950,5 +2011,6 @@
       "evidenceKind": "historical technology/creative publication",
       "guardrail": "No reliable indexed Bánhalmi article recovered in the current public search pass; do not bind until live or archive evidence is found."
     }
-  ]
+  ],
+  "updatedAt": "2026-09-28"
 }
