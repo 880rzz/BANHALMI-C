@@ -159,7 +159,8 @@
         "rolunk-profile-possible-is-just-a-word-2025",
         "milcclub-most-vagy-soha-organizer-2020",
         "tamron-new-york-ballerina-project-2018",
-        "bme-vik-holgyvalasz-photo-credit-2017"
+        "bme-vik-holgyvalasz-photo-credit-2017",
+        "coca-cola-coke-club-reference-2008-2012"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -204,7 +205,8 @@
         "rolunk-profile-possible-is-just-a-word-2025",
         "rolunk-bmi-crowdfunding-visual-communication-2026",
         "orf-becsi-szelet-founder-2023",
-        "babafoto-exhibition-hipstudio-2010"
+        "babafoto-exhibition-hipstudio-2010",
+        "coca-cola-coke-club-reference-2008-2012"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -374,7 +376,8 @@
         "veol-rege-digital-exhibition-2021",
         "verocei-tukor-curator-opening-2024",
         "verocei-tukor-digital-exhibition-project-2022",
-        "verocei-tukor-curatorial-evidence-2024"
+        "verocei-tukor-curatorial-evidence-2024",
+        "coca-cola-coke-club-reference-2008-2012"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -3502,6 +3505,48 @@
         "The published 'Így történt' section by Elek Erika gives a first-hand project-origin account and names Bánhalmi's contribution to creating the exhibition and book."
       ],
       "guardrail": "This is project-partner/related-party documentation, not independent editorial endorsement. Use it as first-hand project provenance, publication/photo-credit and artistic/portrait authority evidence. Do not convert participant or editorial statements about illness, body image, psychology, recovery or personal transformation into medical, psychological or therapeutic efficacy claims. Do not expose private correspondence used to recover the PDF."
+    },
+    {
+      "id": "coca-cola-coke-club-reference-2008-2012",
+      "title": "Personal Recommendation — Coke Club official photographer, 2008–2012",
+      "publisher": "The Coca-Cola Company / Coca-Cola Hungary historical reference document",
+      "datePublished": "2018-05-28",
+      "evidenceKind": "signed historical corporate reference / primary document",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "Coke Club",
+        "Coca-Cola Hungary",
+        "official event photographer",
+        "cultural festival photography",
+        "music festival photography",
+        "press communication",
+        "photo and video production"
+      ],
+      "services": [
+        "event",
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "event",
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "A signed Coca-Cola-branded recommendation dated 28 May 2018 from Attila Fulop, identified in the letter as former PR Manager of Coca-Cola Hungary, states that Norbert Banhalmi worked as the official photographer at Coke Club cultural and music festivals between 2008 and 2012. It further states that his photos and videos supported Coca-Cola Hungary press communication.",
+      "evidenceSummary": "Primary historical corporate-reference evidence for multi-year Coke Club event photography and photo/video communication work connected to Coca-Cola Hungary.",
+      "sourceStrength": "high-primary-document",
+      "corroboratingUrls": [
+        "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
+        "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
+        "https://youtube.com/playlist?list=PLwsdxt-KFeDiXfxb2_mKQLcaNhQAvxUQW"
+      ],
+      "guardrail": "Scope the 'official photographer' claim specifically to the Coke Club cultural and music festivals in 2008–2012 as stated in the signed historical recommendation. Do not generalize this to being the official photographer of The Coca-Cola Company/Coca-Cola Hungary overall, a current relationship, employment, endorsement, exclusivity, or authorship of Coca-Cola brand strategy. The press-communication statement supports Brand/Visual Strategy context only at communication-production level."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -5090,6 +5135,19 @@
         "Photo credit is not a client relationship, commission, partnership, political affiliation or endorsement.",
         "Editorial positions of republishers are not attributed to the photographer."
       ]
+    },
+    "cokeClubHistoricalAuthority": {
+      "status": "VERIFIED-PRIMARY-DOCUMENT-WITH-EXTERNAL-CORROBORATION",
+      "scope": "Coke Club / Coca-Cola Hungary historical event and communication work, 2008–2012",
+      "evidenceIds": [
+        "coca-cola-coke-club-reference-2008-2012"
+      ],
+      "corroboratingUrls": [
+        "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
+        "https://rolunk.at/magazin/a-lehetetlen-csupan-egy-szo/",
+        "https://youtube.com/playlist?list=PLwsdxt-KFeDiXfxb2_mKQLcaNhQAvxUQW"
+      ],
+      "guardrail": "Historical Coke Club scope only. Do not infer a current Coca-Cola relationship or company-wide official-photographer status."
     }
   },
   "archiveVerifiedEvidence": [
