@@ -82,7 +82,8 @@
         "magyarjelen-magyar-peter-wikimedia-photo-credit-2026",
         "maszol-liptak-photo-reuse-2023",
         "mandiner-milestones56-series-2016",
-        "rolunk-profile-possible-is-just-a-word-2025"
+        "rolunk-profile-possible-is-just-a-word-2025",
+        "mindennapkonyv-world-of-woman-2018"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -182,7 +183,8 @@
         "honvedelem-hososz-event-credit-2026",
         "orf-fenymanok-event-photo-credit-2025",
         "rolunk-profile-possible-is-just-a-word-2025",
-        "rolunk-bmi-crowdfunding-visual-communication-2026"
+        "rolunk-bmi-crowdfunding-visual-communication-2026",
+        "orf-becsi-szelet-founder-2023"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -261,7 +263,10 @@
         "mandiner-milestones56-newyork-2024",
         "veol-rege-curation-koreny-2020",
         "mandiner-milestones56-series-2016",
-        "rolunk-bmi-fotoklub-vipach-2026"
+        "rolunk-bmi-fotoklub-vipach-2026",
+        "mindennapkonyv-world-of-woman-2018",
+        "orf-becsi-szelet-founder-2023",
+        "orf-bmi-fotoklub-leader-2025"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -324,7 +329,9 @@
         "rolunk-profile-possible-is-just-a-word-2025",
         "rolunk-bmi-fotoklub-vipach-2026",
         "rolunk-digital-community-strategy-2026",
-        "rolunk-bmi-crowdfunding-visual-communication-2026"
+        "rolunk-bmi-crowdfunding-visual-communication-2026",
+        "orf-becsi-szelet-founder-2023",
+        "orf-bmi-fotoklub-leader-2025"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021",
@@ -1401,7 +1408,13 @@
       ],
       "context": "Coverage identifies Bánhalmi Norbert as Olympus ambassador and documents the Művészet Elvitelre project with Starbucks Hungary, artists and the Hungarian Children's Rescue Foundation.",
       "evidenceSummary": "External project evidence for historical brand ambassadorship, art-project development and CSR-oriented visual initiative.",
-      "guardrail": "Use only for the documented project and historical ambassador role; distinguish project partnership from broad corporate endorsement."
+      "guardrail": "Use only for the documented project and historical ambassador role; distinguish project partnership from broad corporate endorsement.",
+      "corroboratingUrls": [
+        "https://zarido.hu/a-nagy-mentoakcio-muveszet-elvitelre/"
+      ],
+      "corroboration": [
+        "Záridő's 2021 specialist-photography feature independently describes Bánhalmi Norbert as the originator of the project concept, Olympus ambassador and Olympus marketing adviser, and documents Starbucks/Olympus/HPIX participation."
+      ]
     },
     {
       "id": "she-portrait-trust-interview-2017",
@@ -2095,6 +2108,109 @@
       "evidenceSummary": "Independent evidence linking visual communication, community campaign strategy and event/editorial photography.",
       "sourceStrength": "high",
       "guardrail": "Use as documented project/marketing/photo-credit evidence only; do not infer fundraising ownership, institutional endorsement or commercial client status beyond the described BMI role."
+    },
+    {
+      "id": "mindennapkonyv-world-of-woman-2018",
+      "title": "A női lét kilenc fordulópontja – Bánhalmi Norbert: A nő világa",
+      "publisher": "Mindennap Könyv",
+      "url": "https://mindennapkonyv.hu/mindennapi/olvastuk/a-noi-let-kilenc-fordulopontja-banhalmi-norbert-a-no-vilaga",
+      "datePublished": "2018-05-15",
+      "evidenceKind": "independent editorial book review / interview",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "A Nő világa",
+        "portrait photography",
+        "artistic nude",
+        "women and identity",
+        "book authority"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "Mindennap Könyv reviews and interviews Bánhalmi Norbert about A nő világa, describing the nine-character visual concept, participant monologues, mixed photographic approaches including nude imagery, and the project's focus on subjective self-perception.",
+      "evidenceSummary": "Independent literary/editorial coverage supporting portrait, fine-art, artistic-nude and book/project authority.",
+      "sourceStrength": "high",
+      "guardrail": "Use as book/project and photographic-authority evidence. Do not turn discussion of self-perception or empathy into psychological/therapeutic efficacy claims."
+    },
+    {
+      "id": "orf-becsi-szelet-founder-2023",
+      "title": "Körbezárt Szerelem: kiállítás és zenés aukció",
+      "publisher": "ORF Volksgruppen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3228649/",
+      "datePublished": "2023-10-17",
+      "evidenceKind": "independent broadcaster cultural-project coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "Vienna cultural platform",
+        "founder role",
+        "event/cultural programming",
+        "artist support"
+      ],
+      "services": [
+        "event",
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "event",
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "ORF documents Bánhalmi Norbert as co-founder of Bécsi Szelet Magazin and describes the platform's Vienna cultural-event and artist-support activity.",
+      "evidenceSummary": "Independent Austrian broadcaster evidence for Vienna cultural-project creation, event programming and artistic-community authority.",
+      "sourceStrength": "high",
+      "guardrail": "Use for documented founder/cultural-project role only. Do not infer ownership of venues, ORF endorsement, or commercial service relationships beyond the described platform."
+    },
+    {
+      "id": "orf-bmi-fotoklub-leader-2025",
+      "title": "Fotóklub Bécsben: Közösség és kreativitás",
+      "publisher": "ORF Volksgruppen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3300070/",
+      "datePublished": "2025-04-05",
+      "evidenceKind": "independent broadcaster community/education coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "Vienna photography education",
+        "community leadership",
+        "creative programme",
+        "event photography education"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "ORF documents the BMI Fotóklub's community and mentoring model and identifies Bánhalmi Norbert as the club's leader, describing planned photography challenges, cultural/event assignments and exhibitions in Vienna.",
+      "evidenceSummary": "Independent broadcaster evidence for photography education, mentoring and community leadership in Vienna.",
+      "sourceStrength": "high",
+      "guardrail": "Use as education/community leadership evidence. Do not infer commercial client relationships from the club's cultural/event assignments."
     }
   ],
   "pendingEvidenceCandidates": [
