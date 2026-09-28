@@ -3313,17 +3313,6 @@
       "evidenceSummary": "Contemporaneous publisher/editor correspondence verifies the editorial workflow and exact final published Tripont URL/title. The final article body itself is still unavailable in the current environment."
     },
     {
-      "id": "istyle-magazine-historical-articles",
-      "reason": "The recovered iSTYLE correspondence proves a pitch/proposal only, not publication. Keep iSTYLE separate from iMagazin. The old iMagazin article is independently ARCHIVE-VERIFIED from a preserved full PDF.",
-      "status": "no-publication-yet-proven",
-      "verificationStatus": "HISTORICAL-SOURCE-RECOVERY-REQUIRED",
-      "provenance": [
-        "A 2023-01-30 sent email to bolt@istyle.hu proposes future photography/mobile-imaging educational articles and cites an older iMagazin article as a prior example.",
-        "No iSTYLE publication URL, editor acceptance, byline, archive snapshot or publication confirmation has yet been recovered."
-      ],
-      "guardrail": "Do not merge iSTYLE and iMagazin into one publisher/entity relationship without separate evidence. Do not treat the 2023 outreach as a published article, partnership or endorsement."
-    },
-    {
       "id": "google-alert-eszakhirnok-she-republication-2026",
       "url": "https://www.eszakhirnok.com/2026/03/17/az-elso-es-utolso-aktfotozasom-nem-levetkozni-volt-nehez/",
       "reason": "Current page is a republication of a SHE.hu first-person article. Treat the original SHE source as canonical; keep this as secondary republication evidence only.",
@@ -4329,17 +4318,22 @@
     },
     {
       "id": "istyle-magazin-historical",
-      "publisher": "iSTYLE Magazin",
-      "status": "historical-source-recovery-required",
-      "evidenceKind": "historical technology/creative publication",
-      "guardrail": "Keep separate from the ARCHIVE-VERIFIED iMagazin article. Do not service-bind until an actual iSTYLE publication is recovered.",
+      "publisher": "iMagazin / iSTYLE",
+      "status": "partial-recovery-one-publication-confirmed",
+      "evidenceKind": "historical iSTYLE-operated technology/creative magazine publication",
+      "guardrail": "The recovered 2016 article may be described as an iMagazin publication in an iSTYLE-operated magazine. Do not rebrand it as an istyle.hu article, iSTYLE endorsement, employment or partnership. Continue searching for additional Bánhalmi publications beyond this confirmed article.",
       "expectedServiceRelevance": [
         "brand",
         "visualStrategy",
         "generalAuthority"
       ],
-      "verificationStatus": "UNVERIFIED-HISTORICAL-CANDIDATE",
-      "reason": "2023 correspondence proves only an outreach/pitch to iSTYLE and cites a separate older iMagazin publication. No iSTYLE publication URL, byline, accepted article or archive snapshot has been recovered."
+      "verificationStatus": "PARTIAL-HISTORICAL-RECOVERY",
+      "reason": "One historical publication is fully recovered: the 2016 iMagazin article 'Fotós utómunkára iPad? Lehetséges!'. Independent OANDER case studies document that iMagazin was created for and operated by iSTYLE. The 2023 correspondence remains only a later pitch and does not prove additional publication.",
+      "confirmedEvidenceId": "imagazin-ipad-photo-postproduction-2016",
+      "corroboratingUrls": [
+        "https://oander.hu/munka/imagazin/",
+        "https://oander.hu/munka/igy-keszult-az-imagazin/"
+      ]
     }
   ],
   "updatedAt": "2026-09-28",
@@ -4574,6 +4568,11 @@
     "veol-bernat-sari-curator-2020": {
       "canonicalEvidenceId": "veol-bernat-sara-curator-2020",
       "relationship": "duplicate record created during parallel-agent reconciliation / spelling variant Sara-Sari",
+      "doNotCountAsIndependentEvidence": true
+    },
+    "istyle-magazine-historical-articles": {
+      "canonicalEvidenceId": "istyle-magazin-historical",
+      "relationship": "duplicate historical recovery candidate consolidated after iMagazin/iSTYLE operator relationship was independently verified",
       "doNotCountAsIndependentEvidence": true
     }
   },
