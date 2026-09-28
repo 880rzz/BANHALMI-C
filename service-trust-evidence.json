@@ -87,7 +87,8 @@
         "sota-peter-magyar-photo-credit-2026",
         "americanthinker-peter-magyar-photo-credit-2026",
         "hungaryreport-peter-magyar-photo-credit-2026",
-        "hungary-foundation-milestones56-newyork-2016"
+        "hungary-foundation-milestones56-newyork-2016",
+        "google-alert-kiskegyed-magyar-peter-2026"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -274,7 +275,8 @@
         "mindennapkonyv-world-of-woman-2018",
         "orf-becsi-szelet-founder-2023",
         "orf-bmi-fotoklub-leader-2025",
-        "hungary-foundation-milestones56-newyork-2016"
+        "hungary-foundation-milestones56-newyork-2016",
+        "google-alert-kiskegyed-magyar-peter-2026"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -2441,6 +2443,41 @@
       "context": "A preserved 12-page PDF of the published iMagazin article was visually verified. iMagazin's editorial introduction identifies Bánhalmi Norbert as a photographer and says he explains how he obtained his first iPad and how Apple's tablet supports his photographic work. The article is first-person, includes Bánhalmi photo credits, documents professional mobile post-production/workflow, and gives historical context about his 2014 New York Hungarian House portrait exhibition.",
       "evidenceSummary": "Archived full-content evidence for professional mobile-imaging workflow, technology adoption and historical New York photography context. The article ends with the explicit byline 'Bánhalmi Norbert fotográfus'.",
       "sourceStrength": "medium-high"
+    },
+    {
+      "id": "google-alert-kiskegyed-magyar-peter-2026",
+      "title": "„Elképesztő dolog történt” – Külföldön is hatalmasat ment a Magyar Péterről készült fotó",
+      "publisher": "Kiskegyed",
+      "url": "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw",
+      "datePublished": "2026-05-25",
+      "evidenceKind": "independent editorial interview / portrait circulation coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INTERVIEW",
+        "PHOTO-CREDIT",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "portrait photography",
+        "international editorial circulation",
+        "EUFÓRIA project",
+        "fine-art photography",
+        "photographer profile"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "Kiskegyed publishes a full interview with Bánhalmi Norbert about the international circulation of his portrait photograph and the EUFÓRIA artistic project. The article explicitly credits the discussed photograph to Bánhalmi Norbert and frames the image as part of his portrait/fine-art practice.",
+      "evidenceSummary": "Independent national-media interview supporting portrait authority, international image circulation and current fine-art project context.",
+      "sourceStrength": "high",
+      "guardrail": "Use strictly as photography/interview/photo-credit evidence. Do not infer a client relationship, commission, endorsement, political affiliation, political support or relationship with the photographed political figure or the publisher. Treat claims about reach and artistic interpretation as attributed interview/editorial statements unless independently corroborated."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -2623,12 +2660,6 @@
       "id": "istyle-magazine-historical-articles",
       "reason": "User reports historical iSTYLE.hu / iSTYLE Magazin articles. No stable indexed URL or existing canonical registry entry has yet been recovered.",
       "status": "historical-source-recovery-required"
-    },
-    {
-      "id": "google-alert-kiskegyed-magyar-peter-2026",
-      "url": "https://www.kiskegyed.hu/nepszeru/kulfoldon-is-hatalmasat-ment-a-magyar-peterrol-keszult-foto/gqlpkqw",
-      "reason": "Google Alerts confirms a Bánhalmi-related result, but direct page retrieval was not available in this pass. Verify article body/photo attribution before authority projection.",
-      "status": "direct-page-verification-required"
     },
     {
       "id": "google-alert-eszakhirnok-she-republication-2026",
@@ -3455,7 +3486,8 @@
         "maszol-liptak-photo-reuse-2023",
         "sota-peter-magyar-photo-credit-2026",
         "americanthinker-peter-magyar-photo-credit-2026",
-        "hungaryreport-peter-magyar-photo-credit-2026"
+        "hungaryreport-peter-magyar-photo-credit-2026",
+        "google-alert-kiskegyed-magyar-peter-2026"
       ],
       "scope": "Editorial reuse and attribution of authored photographs across external publications.",
       "guardrails": [
