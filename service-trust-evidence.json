@@ -3279,7 +3279,8 @@
       "context": "The Bridges profile identifies Norbert Bánhalmi as a photographer and brand ambassador and states that he contributed to the brand's transformation in Hungary by shifting marketing and communications toward consumer engagement and education.",
       "evidenceStrength": "high",
       "sourceQuality": "external international business/editorial profile",
-      "guardrail": "Use specifically as historical Olympus/OM Digital Solutions ambassadorship and documented marketing/communications contribution. Do not imply current employment, exclusive representation, ownership, or present-day OM SYSTEM endorsement unless separately verified."
+      "guardrail": "Use specifically as historical Olympus/OM Digital Solutions ambassadorship and documented marketing/communications contribution. Do not imply current employment, exclusive representation, ownership, or present-day OM SYSTEM endorsement unless separately verified.",
+      "verificationStatus": "LIVE-VERIFIED"
     },
     {
       "id": "milcclub-om-system-ambassadors-current",
@@ -3347,7 +3348,13 @@
         "fineArt"
       ],
       "kind": "television interview / exhibition coverage",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROJECT-COVERAGE"
+      ]
     },
     {
       "id": "yt-petofi-digital-exhibition",
@@ -3359,7 +3366,13 @@
         "visualStrategy"
       ],
       "kind": "television report / curatorial innovation",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "yt-m1-kunszt-portrait-psychology",
@@ -3371,7 +3384,13 @@
         "brand"
       ],
       "kind": "television interview / portrait expertise",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "yt-petofi-i-became-a-father",
@@ -3383,7 +3402,13 @@
         "fineArt"
       ],
       "kind": "television report / social project",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "yt-petofi-world-of-woman",
@@ -3395,7 +3420,13 @@
         "fineArt"
       ],
       "kind": "television report / book and exhibition",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "yt-fifty-shades-woman",
@@ -3407,7 +3438,12 @@
         "portrait"
       ],
       "kind": "exhibition film",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium",
+      "evidenceType": [
+        "PROJECT-COVERAGE"
+      ]
     },
     {
       "id": "yt-awakening-interview-2",
@@ -3419,7 +3455,13 @@
         "fineArt"
       ],
       "kind": "exhibition interview",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROJECT-COVERAGE"
+      ]
     },
     {
       "id": "yt-milestones56-newyork",
@@ -3432,7 +3474,12 @@
         "generalAuthority"
       ],
       "kind": "New York portrait/exhibition documentary",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "PROJECT-COVERAGE"
+      ]
     },
     {
       "id": "yt-retouching-cover-ideals",
@@ -3445,7 +3492,13 @@
         "portrait"
       ],
       "kind": "visual culture / retouching discussion",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "yt-budapest-photo-contest",
@@ -3456,7 +3509,12 @@
         "generalAuthority"
       ],
       "kind": "professional/public report",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium",
+      "evidenceType": [
+        "PROJECT-COVERAGE"
+      ]
     },
     {
       "id": "yt-awakening-reflection",
@@ -3468,7 +3526,12 @@
         "portrait"
       ],
       "kind": "retrospective artistic interview",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium",
+      "evidenceType": [
+        "INTERVIEW"
+      ]
     },
     {
       "id": "yt-world-of-woman-interview",
@@ -3480,7 +3543,13 @@
         "portrait"
       ],
       "kind": "book/interview",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "medium-high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROJECT-COVERAGE"
+      ]
     },
     {
       "id": "yt-complete-playlists",
@@ -3496,7 +3565,12 @@
         "generalAuthority"
       ],
       "kind": "official moving-image archive",
-      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+      "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "sourceStrength": "low-independent-authority",
+      "evidenceType": [
+        "FIRST-PARTY"
+      ]
     },
     {
       "id": "yt-person-of-week-schmuck",
@@ -3510,7 +3584,8 @@
       "verificationStatus": "SOURCE-URL-VERIFIED-ORIGIN-UNRESOLVED",
       "evidenceType": "INTERVIEW",
       "sourceClass": "UNVERIFIED",
-      "guardrail": "Keep as a canonical moving-image archive record because it is present in the BANHALMI ART press registry. Do not treat it as independent broadcaster/editorial evidence, endorsement or client evidence until uploader and programme provenance are independently verified."
+      "guardrail": "Keep as a canonical moving-image archive record because it is present in the BANHALMI ART press registry. Do not treat it as independent broadcaster/editorial evidence, endorsement or client evidence until uploader and programme provenance are independently verified.",
+      "sourceStrength": "low-medium"
     },
     {
       "id": "moka-podcast-106-2022",
@@ -3528,7 +3603,12 @@
       "kind": "independent podcast profile / career interview",
       "verificationStatus": "LIVE-VERIFIED",
       "context": "The official MÓKA Podcast feed profiles Bánhalmi Norbert's photography career and discusses portrait, artistic nude, commercial/event work, New York history, the historical Olympus ambassador role and later professional milestones.",
-      "guardrail": "Use as attributed podcast/profile evidence. Do not treat biographical or client-role claims in the programme description as independently verified institutional facts unless corroborated elsewhere; specifically avoid upgrading Dutch national team, Coca-Cola, military-studio, diploma or ambassador claims solely from this source."
+      "guardrail": "Use as attributed podcast/profile evidence. Do not treat biographical or client-role claims in the programme description as independently verified institutional facts unless corroborated elsewhere; specifically avoid upgrading Dutch national team, Coca-Cola, military-studio, diploma or ambassador claims solely from this source.",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     },
     {
       "id": "moka-podcast-309-2026",
@@ -3547,7 +3627,12 @@
       "kind": "independent podcast interview / New York and creative-technology discussion",
       "verificationStatus": "LIVE-VERIFIED",
       "context": "The official MÓKA Podcast feed and Apple Podcasts document an interview covering Bánhalmi's New York experiences, an Apple Store/iPhone workshop story, creative visual thinking, photography and emotion, NFT/Web3 and digital-art themes.",
-      "guardrail": "Use as interview/creative-authority evidence and historical New York context. Apple Store reactions and other anecdotal claims remain attributed to the interview; do not convert them into an Apple endorsement, employment, partnership or current New York studio claim."
+      "guardrail": "Use as interview/creative-authority evidence and historical New York context. Apple Store reactions and other anecdotal claims remain attributed to the interview; do not convert them into an Apple endorsement, employment, partnership or current New York studio claim.",
+      "sourceStrength": "high",
+      "evidenceType": [
+        "INTERVIEW",
+        "PROFESSIONAL-PUBLICATION"
+      ]
     }
   ],
   "historicalResearchCandidates": [
