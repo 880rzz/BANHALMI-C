@@ -297,7 +297,8 @@
         "art-to-go-olympus-starbucks-2021",
         "kreativ-young-lions-speier-mentor-2024",
         "tixa-besmart-visual-message-workshop-2017",
-        "linkedin-banhalmi-company-profile"
+        "linkedin-banhalmi-company-profile",
+        "origo-gastro-photo-contest-2017"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
@@ -1633,6 +1634,36 @@
       "context": "VEOL independently documents the presentation of the Elek Erika–Bánhalmi Norbert Ébredés – Új kezdet book and the installation of photographs of women recovering from cancer at the Csolnoky Ferenc Hospital Oncology Centre in Veszprém.",
       "evidenceSummary": "Independent local-news and institutional-context evidence for the Ébredés fine-art/portrait project and its exhibition inside a hospital oncology centre.",
       "guardrail": "Use only as project, exhibition and cultural/institutional-context evidence. Do not convert the article, participant stories or exhibition into medical efficacy, therapeutic treatment or health-outcome claims."
+    },
+    {
+      "id": "origo-gastro-photo-contest-2017",
+      "title": "Főzünk, fotózunk, megosztunk, aztán eszünk",
+      "publisher": "ORIGO / Táfelspicc",
+      "url": "https://www.origo.hu/tafelspicc/2017/03/gasztrofoto-palyazat-the-famous-grouse",
+      "datePublished": "2017-03-31",
+      "evidenceKind": "independent editorial coverage of professional judging role",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "professional judging",
+        "food photography",
+        "visual evaluation",
+        "brand campaign context"
+      ],
+      "services": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "ORIGO documents that photographer Bánhalmi Norbert and food blogger Péter Anna selected entries in The Famous Grouse Gourmet Pillanatok Instagram food-photography competition. The article also quotes Bánhalmi's visual evaluation criteria, including viewpoint, emotional effect, colour harmony and uniqueness.",
+      "evidenceSummary": "Independent editorial evidence for professional photography judging and articulated visual-evaluation criteria.",
+      "guardrail": "Use as professional judging and visual-strategy authority only. Do not infer that Bánhalmi was the campaign photographer, a long-term client/partner of The Famous Grouse, or endorsed the brand beyond the documented judging role."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -1827,21 +1858,6 @@
         "brand"
       ],
       "guardrail": "Potential judging/professional-recognition evidence only; do not imply brand endorsement, campaign client status or partnership until source content is recovered."
-    },
-    {
-      "id": "origo-gastro-photo-contest-2017",
-      "publisher": "Origo / Tafelspicc",
-      "url": "http://www.origo.hu/tafelspicc/kozelet/20170331-gasztrofoto-palyazat-the-famous-grouse.html",
-      "title": "Főzünk, fotózunk, megosztunk, aztán eszünk",
-      "reason": "Google Alerts preserves the original Origo URL and snippet indicating that Bánhalmi Norbert and Péter Anna evaluated submitted images, but the historical page is not directly retrievable.",
-      "status": "archive-recovery-required",
-      "verificationStatus": "UNVERIFIED",
-      "evidenceType": "PROFESSIONAL-PUBLICATION",
-      "services": [
-        "generalAuthority",
-        "brand"
-      ],
-      "guardrail": "Potential professional judging evidence only; do not infer a client, ambassador, sponsorship or endorsement relationship."
     }
   ],
   "interpretationRules": [
