@@ -1908,6 +1908,20 @@
       ],
       "kind": "official moving-image archive",
       "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
+    },
+    {
+      "id": "yt-person-of-week-schmuck",
+      "title": "Person of the Week — conversation with Andor Schmuck",
+      "publisher": "YouTube archive; uploader/editorial origin unresolved in current verification pass",
+      "url": "https://www.youtube.com/watch?v=zCHkRlv-ZB0",
+      "services": [
+        "generalAuthority"
+      ],
+      "kind": "moving-image interview / public conversation",
+      "verificationStatus": "SOURCE-URL-VERIFIED-ORIGIN-UNRESOLVED",
+      "evidenceType": "INTERVIEW",
+      "sourceClass": "UNVERIFIED",
+      "guardrail": "Keep as a canonical moving-image archive record because it is present in the BANHALMI ART press registry. Do not treat it as independent broadcaster/editorial evidence, endorsement or client evidence until uploader and programme provenance are independently verified."
     }
   ],
   "historicalResearchCandidates": [
