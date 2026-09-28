@@ -352,7 +352,8 @@
         "moka-podcast-309-2026"
       ],
       "archivedEvidenceIds": [
-        "trip-magazin-76"
+        "trip-magazin-76",
+        "imagazin-ipad-photo-postproduction-2016"
       ]
     }
   },
@@ -2396,6 +2397,47 @@
       "evidenceSummary": "External commercial ranking/profile reference useful for historical business-presence documentation.",
       "sourceStrength": "low-medium",
       "guardrail": "Commercial ranking/profile only. Do not treat platform scores or descriptive copy as independent editorial or institutional endorsement, and do not hard-code dynamic rating values."
+    },
+    {
+      "id": "imagazin-ipad-photo-postproduction-2016",
+      "publisher": "iMagazin",
+      "url": "http://imagazin.hu/fotos-utomunkara-ipad-lehetseges/",
+      "title": "Fotós utómunkára iPad? Lehetséges!",
+      "reason": "The historical publication URL and existence are directly preserved in contemporaneous correspondence, but the public article body is no longer directly retrievable. Treat as historical first-party publication reference, not independent editorial endorsement.",
+      "status": "archive-verified",
+      "verificationStatus": "ARCHIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "FIRST-PARTY"
+      ],
+      "services": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "guardrail": "Treat as an archived first-person professional publication hosted/editorially framed by iMagazin, not an independent review of service quality. Do not conflate iMagazin with iSTYLE Magazin unless publisher ownership/relationship is separately verified. New York references are historical project context only, not current New York studio evidence.",
+      "datePublished": "2016-04-14",
+      "classification": [
+        "mobile photo post-production",
+        "iPad workflow",
+        "professional imaging",
+        "technology expertise",
+        "New York historical photography context"
+      ],
+      "provenance": [
+        "User-preserved 12-page PDF capture of the published iMagazin article, visually verified in full on 2026-09-28.",
+        "The PDF contains the title 'Fotós utómunkára iPad? Lehetséges!'.",
+        "The iMagazin editorial introduction explicitly names Bánhalmi Norbert as the photographer whose iPad workflow is being presented.",
+        "The closing page carries the explicit byline 'Bánhalmi Norbert fotográfus'.",
+        "Contemporaneous 2016 Gmail correspondence preserves the exact original iMagazin URL and publication timing."
+      ],
+      "evidenceKind": "archived first-person professional publication / editorially framed guest article",
+      "serviceRelevance": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "A preserved 12-page PDF of the published iMagazin article was visually verified. iMagazin's editorial introduction identifies Bánhalmi Norbert as a photographer and says he explains how he obtained his first iPad and how Apple's tablet supports his photographic work. The article is first-person, includes Bánhalmi photo credits, documents professional mobile post-production/workflow, and gives historical context about his 2014 New York Hungarian House portrait exhibition.",
+      "evidenceSummary": "Archived full-content evidence for professional mobile-imaging workflow, technology adoption and historical New York photography context. The article ends with the explicit byline 'Bánhalmi Norbert fotográfus'.",
+      "sourceStrength": "medium-high"
     }
   ],
   "pendingEvidenceCandidates": [
@@ -2590,37 +2632,6 @@
       "url": "https://www.eszakhirnok.com/2026/03/17/az-elso-es-utolso-aktfotozasom-nem-levetkozni-volt-nehez/",
       "reason": "Current page is a republication of a SHE.hu first-person article. Treat the original SHE source as canonical; keep this as secondary republication evidence only.",
       "status": "secondary-republication"
-    },
-    {
-      "id": "imagazin-ipad-photo-postproduction-2016",
-      "publisher": "iMagazin",
-      "url": "http://imagazin.hu/fotos-utomunkara-ipad-lehetseges/",
-      "title": "Fotós utómunkára iPad? Lehetséges!",
-      "reason": "The historical publication URL and existence are directly preserved in contemporaneous correspondence, but the public article body is no longer directly retrievable. Treat as historical first-party publication reference, not independent editorial endorsement.",
-      "status": "archive-reference-verified",
-      "verificationStatus": "ARCHIVE-REFERENCE-VERIFIED",
-      "evidenceType": [
-        "FIRST-PARTY",
-        "PROFESSIONAL-PUBLICATION"
-      ],
-      "services": [
-        "brand",
-        "visualStrategy",
-        "generalAuthority"
-      ],
-      "guardrail": "Do not conflate iMagazin with iSTYLE Magazin unless publisher ownership/relationship is separately verified. Do not bind to Brand/Visual Strategy until article body/authorship is recovered or independently archived.",
-      "datePublished": "2016-04-14",
-      "classification": [
-        "mobile photo post-production",
-        "iPad workflow",
-        "professional imaging",
-        "technology expertise"
-      ],
-      "provenance": [
-        "Exact iMagazin article URL is preserved in contemporaneous 2016 Gmail correspondence.",
-        "Bánhalmi Norbert shared the live article URL on 2016-04-14 in a thread titled 'Apple cikk'.",
-        "The correspondence identifies the article as 'Fotós utómunkára iPad? Lehetséges!' and discusses Photoshop Fix for high-resolution facial retouching."
-      ]
     },
     {
       "id": "pixinfo-olympus-ambassadors-3-2020",
@@ -3368,7 +3379,8 @@
         "yt-milestones56-newyork",
         "trip-magazin-76",
         "mandiner-milestones56-series-2016",
-        "hungary-foundation-milestones56-newyork-2016"
+        "hungary-foundation-milestones56-newyork-2016",
+        "imagazin-ipad-photo-postproduction-2016"
       ],
       "guardrails": [
         "Historical New York project/exhibition context only.",
