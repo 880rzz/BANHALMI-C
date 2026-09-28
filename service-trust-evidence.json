@@ -77,7 +77,8 @@
         "roadster-banhami-kata-photo-credit-2026",
         "tixa-besmart-visual-message-workshop-2017",
         "veol-awakening-oncology-exhibition-2018",
-        "milcclub-now-or-never-model-workshop-2020"
+        "milcclub-now-or-never-model-workshop-2020",
+        "mandiner-milestones56-newyork-2024"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -172,7 +173,8 @@
         "zarido-artist-behind-business-1-2021",
         "turizmus-wiener-kaiser-wiesn-credit-2026",
         "turizmusonline-wiener-kaiser-wiesn-credit-2026",
-        "honvedelem-hososz-event-credit-2026"
+        "honvedelem-hososz-event-credit-2026",
+        "orf-fenymanok-event-photo-credit-2025"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -247,7 +249,8 @@
         "hipstudio-historical-profile",
         "veol-awakening-oncology-exhibition-2018",
         "milcclub-now-or-never-model-workshop-2020",
-        "milcclub-journey-to-earth-center-2020"
+        "milcclub-journey-to-earth-center-2020",
+        "mandiner-milestones56-newyork-2024"
       ],
       "artisticAuthority": [
         "https://www.banhalmi.art/artineris-evidence.json",
@@ -303,7 +306,8 @@
         "kreativ-young-lions-speier-mentor-2024",
         "tixa-besmart-visual-message-workshop-2017",
         "linkedin-banhalmi-company-profile",
-        "origo-gastro-photo-contest-2017"
+        "origo-gastro-photo-contest-2017",
+        "orf-bmi-mentorprogram-2025"
       ],
       "relationshipEvidenceIds": [
         "bridges-japan-times-olympus-ambassador-2021"
@@ -1670,6 +1674,129 @@
       "context": "ORIGO documents that photographer Bánhalmi Norbert and food blogger Péter Anna selected entries in The Famous Grouse Gourmet Pillanatok Instagram food-photography competition. The article also quotes Bánhalmi's visual evaluation criteria, including viewpoint, emotional effect, colour harmony and uniqueness.",
       "evidenceSummary": "Independent editorial evidence for professional photography judging and articulated visual-evaluation criteria.",
       "guardrail": "Use as professional judging and visual-strategy authority only. Do not infer that Bánhalmi was the campaign photographer, a long-term client/partner of The Famous Grouse, or endorsed the brand beyond the documented judging role."
+    },
+    {
+      "id": "orf-bmi-mentorprogram-2025",
+      "title": "Mentorprogram a Bécsi Magyar Iskolában",
+      "publisher": "ORF Volksgruppen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3300930/",
+      "datePublished": "2025-04-11",
+      "evidenceKind": "independent editorial programme coverage / expert role",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "marketing expert",
+        "visual communication",
+        "business mentoring",
+        "education"
+      ],
+      "services": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "ORF documents a BMI mentor programme and identifies Bánhalmi Norbert as a photographer and marketing specialist among the three permanent experts, with the first session focused on online and offline presence and brand-building.",
+      "evidenceSummary": "Independent Austrian public-broadcaster evidence for marketing/visual-communication expertise and public mentoring activity in Vienna.",
+      "sourceStrength": "high",
+      "guardrail": "Use as documented expert/mentor role and visual-strategy authority. Do not infer a formal ORF, BMI or client endorsement beyond the programme role."
+    },
+    {
+      "id": "orf-fenymanok-event-photo-credit-2025",
+      "title": "Fénymanók ünnepe a Bécsi Magyar Iskolában",
+      "publisher": "ORF Volksgruppen",
+      "url": "https://volksgruppen.orf.at/magyarok/stories/3330028/",
+      "datePublished": "2025-11-14",
+      "evidenceKind": "independent editorial event photo credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "community event photography",
+        "editorial event photo credit",
+        "Vienna"
+      ],
+      "services": [
+        "event",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "event",
+        "generalAuthority"
+      ],
+      "context": "ORF's coverage of the BMI Fénymanók event repeatedly credits imagery to Bánhalmi Norbert/Bécsi Magyar Iskola.",
+      "evidenceSummary": "Independent broadcaster photo-credit evidence for Vienna community/event photography.",
+      "sourceStrength": "high",
+      "guardrail": "Use as event-photo publication evidence only. Do not infer ORF commission, exclusive photographer status, or institutional endorsement."
+    },
+    {
+      "id": "mandiner-milestones56-newyork-2024",
+      "title": "Azt akartam, hogy ez világgá menjen! – három hős New York környékéről",
+      "publisher": "Mandiner",
+      "url": "https://mandiner.hu/belfold/2024/10/azt-akartam-hogy-ez-vilagga-menjen-harom-hos-new-york-kornyekerol",
+      "datePublished": "2024-10-23",
+      "evidenceKind": "independent editorial historical project coverage / photo credit",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROJECT-COVERAGE",
+        "PHOTO-CREDIT",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "New York historical project",
+        "Mérföldkövek ’56",
+        "portrait photography",
+        "Hungarian House New York",
+        "international cultural authority"
+      ],
+      "services": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "Mandiner retrospectively documents the 2016 New York interviews and portraits of 1956 refugees, names Bánhalmi Norbert as the photographer, credits multiple photographs to him, and states that the Hungarian House and Bánhalmi organized the Mérföldkövek exhibition with support from the Hungarian Consulate General in New York.",
+      "evidenceSummary": "Strong independent corroboration of the New York Mérföldkövek portrait/exhibition project and its institutional/cultural context.",
+      "sourceStrength": "high",
+      "guardrail": "Use as historical New York portrait/exhibition authority only. Do not infer a present-day New York studio, continuing consular commission, or endorsement."
+    },
+    {
+      "id": "pannon-fenykepeszkor-honorary-member-profile-2026",
+      "title": "Bánhalmi Norbert – Pannon Fényképészkör Egyesület",
+      "publisher": "Pannon Fényképészkör Egyesület",
+      "url": "https://fenykepeszkor.hu/egyesuleti-tag/banhalmi-norbert/",
+      "evidenceKind": "association member profile / corroborating relationship record",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "INSTITUTIONAL-EVIDENCE"
+      ],
+      "classification": [
+        "honorary membership",
+        "photographic association",
+        "OM SYSTEM ambassador claim",
+        "fine-art/portrait profile"
+      ],
+      "services": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "context": "The association profile presents Bánhalmi Norbert as an honorary member and describes his fine-art, portrait, artistic-nude and curatorial work; it also states an OM SYSTEM ambassador role.",
+      "evidenceSummary": "Useful association-level corroboration for photographic-community standing and the OM SYSTEM relationship claim.",
+      "sourceStrength": "medium",
+      "guardrail": "Treat membership as membership, not endorsement. Treat the OM SYSTEM ambassador wording as corroborating profile evidence only unless independently confirmed by OM SYSTEM/OM Digital Solutions or other strong sources. Do not use this profile alone to establish a current corporate relationship."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -2434,6 +2561,37 @@
             "moka-podcast-106-2022"
           ]
         }
+      ]
+    },
+    "newYorkHistoricalAuthority": {
+      "id": "new-york-historical-authority",
+      "name": "New York historical portrait and exhibition authority",
+      "status": "VERIFIED-MULTI-SOURCE",
+      "evidenceIds": [
+        "tinkmara-new-york-women-exhibition-2014",
+        "mandiner-milestones56-newyork-2024",
+        "yt-milestones56-newyork",
+        "trip-magazin-76"
+      ],
+      "guardrails": [
+        "Historical New York project/exhibition context only.",
+        "Never infer or state a current New York studio without separate dated evidence."
+      ]
+    },
+    "olympusOmHistoricalAuthority": {
+      "id": "olympus-om-historical-authority",
+      "name": "Historical Olympus / OM Digital Solutions / OM SYSTEM relationship authority",
+      "status": "MULTI-SOURCE-WITH-TEMPORAL-GUARDRAIL",
+      "evidenceIds": [
+        "bridges-japan-times-olympus-ambassador-2021",
+        "zarido-artist-behind-business-3-ambassador-2021",
+        "milcclub-now-or-never-model-workshop-2020",
+        "trip-magazin-76",
+        "pannon-fenykepeszkor-honorary-member-profile-2026"
+      ],
+      "guardrails": [
+        "Preserve source-specific dates and organization names.",
+        "Do not collapse historical Olympus, OM Digital Solutions and OM SYSTEM into a timeless employment or exclusive endorsement relationship."
       ]
     }
   },
