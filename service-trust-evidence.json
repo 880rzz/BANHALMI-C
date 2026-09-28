@@ -165,7 +165,8 @@
         "yt-m1-kunszt-portrait-psychology",
         "yt-retouching-cover-ideals",
         "yt-complete-playlists",
-        "moka-podcast-106-2022"
+        "moka-podcast-106-2022",
+        "yt-samsung-s22-ultra-training-series-2022"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
@@ -362,7 +363,8 @@
         "yt-petofi-digital-exhibition",
         "yt-retouching-cover-ideals",
         "yt-complete-playlists",
-        "moka-podcast-309-2026"
+        "moka-podcast-309-2026",
+        "yt-samsung-s22-ultra-training-series-2022"
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76",
@@ -4082,6 +4084,39 @@
         "INTERVIEW",
         "PROFESSIONAL-PUBLICATION"
       ]
+    },
+    {
+      "id": "yt-samsung-s22-ultra-training-series-2022",
+      "title": "Élet a Samsung Galaxy S22 Ultra-val — photography training/test series",
+      "publisher": "Norbert Bánhalmi / YouTube",
+      "url": "https://www.youtube.com/watch?v=4c6FidjvCa0&list=PLwsdxt-KFeDhqj9pZzXuXXRzLTh0NM6jr",
+      "datePublished": "2022-02",
+      "kind": "first-party moving-image project output corroborated by direct Samsung corporate correspondence",
+      "verificationStatus": "FIRST-PARTY-OUTPUT-CORPORATE-PROVENANCE-VERIFIED",
+      "sourceStrength": "medium-high provenance / low independent authority",
+      "evidenceType": [
+        "FIRST-PARTY",
+        "PROJECT-COVERAGE"
+      ],
+      "services": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "A YouTube series documenting Galaxy S22 Ultra photography tests and tutorials. Direct Samsung Electronics Hungary / partner correspondence from 2022 verifies that Bánhalmi Norbert was producing ten photography-training/tutorial videos for Samsung retail staff, that Samsung reviewed the content, supplied the device and issued sponsored-content/legal guidance.",
+      "evidenceSummary": "Preserved public moving-image output linked to a directly verified Samsung corporate training/content project.",
+      "corroboratingUrls": [
+        "https://youtu.be/39fg_bvbCxI",
+        "https://youtu.be/GsuAi-MwSbU",
+        "https://youtu.be/JxRTdmGDGyg",
+        "https://youtu.be/BhcItsyOi5c"
+      ],
+      "guardrail": "Do not treat first-party YouTube publication as independent editorial authority. Do not infer Samsung employment, ambassadorship or exclusivity. Use together with the private corporate provenance record `samsung-galaxy-s22-ultra-test-2022`; do not double-count the series and the relationship record as separate independent endorsements."
     }
   ],
   "historicalResearchCandidates": [
