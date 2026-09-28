@@ -1666,5 +1666,46 @@
       "kind": "official moving-image archive",
       "guardrail": "Use according to documented programme/interview context; distinguish broadcaster/editorial coverage from first-party archive uploads and do not infer endorsement beyond the recorded appearance."
     }
+  ],
+  "historicalResearchCandidates": [
+    {
+      "id": "nlc-woman-fifty-shades-2015",
+      "publisher": "Nők Lapja Café / NLC",
+      "url": "https://nlc.hu/foto/20150306/a-no-otven-arnyalata-foto/",
+      "title": "A nő ötven árnyalata",
+      "year": 2015,
+      "status": "source-url-recovered-live-content-readback-pending",
+      "services": [
+        "portrait",
+        "fineArt"
+      ],
+      "evidenceKind": "editorial exhibition coverage",
+      "guardrail": "Do not promote to LIVE-VERIFIED until the original NLC content is directly readable or archived content is recovered."
+    },
+    {
+      "id": "trip-magazin-76",
+      "publisher": "Tripont / Trip Magazin",
+      "url": "https://issuu.com/tripont/docs/issue_trip_magazin/76",
+      "status": "archive-reference-verified-content-extraction-pending",
+      "services": [
+        "fineArt",
+        "portrait"
+      ],
+      "evidenceKind": "specialist photography magazine archive",
+      "corroboration": "Wikidata Q56391118 currently cites this Issuu issue for fine-art photography.",
+      "guardrail": "Extract the actual article/pages before making article-specific claims."
+    },
+    {
+      "id": "istyle-magazin-historical",
+      "publisher": "iSTYLE Magazin",
+      "status": "archive-research-required",
+      "services": [
+        "brand",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "evidenceKind": "historical technology/creative publication",
+      "guardrail": "No reliable indexed Bánhalmi article recovered in the current public search pass; do not bind until live or archive evidence is found."
+    }
   ]
 }
