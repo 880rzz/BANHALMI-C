@@ -2903,6 +2903,35 @@
       "evidenceSummary": "External industry-event evidence for public teaching/speaker authority in artistic nude/model photography and creative lighting.",
       "sourceStrength": "medium-high",
       "guardrail": "Use as documented programme/speaker evidence. Do not infer organizer endorsement, certification, therapeutic expertise or broader brand ambassadorship beyond what the programme states."
+    },
+    {
+      "id": "milcclub-budapest-fotosviadal-jury-2020",
+      "title": "Talp alatt a város 2020",
+      "publisher": "Olympus MILC Club",
+      "url": "https://www.milcclub.com/post/talp-alatt-a-v%C3%A1ros",
+      "datePublished": "2020-09-20",
+      "evidenceKind": "specialist photography-community event coverage",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PROFESSIONAL-PUBLICATION",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "photography competition jury",
+        "industry participation",
+        "M5 television appearance",
+        "Olympus photography community"
+      ],
+      "services": [
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "generalAuthority"
+      ],
+      "context": "Olympus MILC Club's event report documents Bánhalmi Norbert as a professional photographer and jury member at the IV. Budapesti Fotósviadal and notes his M5 television interview about the competition.",
+      "evidenceSummary": "Specialist photography-community evidence for professional jury activity and public/media participation in a photography competition.",
+      "sourceStrength": "medium-high",
+      "guardrail": "Use as professional jury/public-participation evidence only. Do not infer commercial event-client status, M5 endorsement, employment or a broader institutional relationship from this report."
     }
   ],
   "pendingEvidenceCandidates": [
