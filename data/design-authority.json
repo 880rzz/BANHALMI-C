@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-25-v44-mobile-hero-desktop-footer",
+  "version": "2026-09-28-v45-unified-three-column-galleries",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -165,28 +165,28 @@
         "height": 900,
         "homepageHeroMaxPx": 760,
         "footerMaxPx": 720,
-        "portraitGalleryColumns": 4
+        "portraitGalleryColumns": 3
       },
       {
         "width": 1920,
         "height": 1080,
         "homepageHeroMaxPx": 830,
         "footerMaxPx": 720,
-        "portraitGalleryColumns": 5
+        "portraitGalleryColumns": 3
       },
       {
         "width": 2560,
         "height": 1440,
         "homepageHeroMaxPx": 920,
         "footerMaxPx": 740,
-        "portraitGalleryColumns": 6
+        "portraitGalleryColumns": 3
       },
       {
         "width": 3840,
         "height": 2160,
         "homepageHeroMaxPx": 1080,
         "footerMaxPx": 760,
-        "portraitGalleryColumns": 6
+        "portraitGalleryColumns": 3
       }
     ],
     "homepageHeroMedia": {
@@ -245,7 +245,25 @@
       1920,
       2560,
       3840
-    ]
+    ],
+    "gallery": {
+      "contractVersion": "v45",
+      "desktopMinPx": 1101,
+      "desktopColumns": 3,
+      "layout": "css-grid",
+      "reference": "BANHALMI ART homepage gallery",
+      "gap": "clamp(.8rem,1.35vw,1.45rem)",
+      "appliesTo": [
+        ".gallery",
+        ".pf-grid",
+        ".collage-gallery",
+        ".jony-gallery-grid",
+        ".banhalmi-portrait-gallery-grid",
+        ".service-lower-gallery-grid",
+        ".portrait-reference-gallery",
+        ".portrait-service-gallery"
+      ]
+    }
   },
   "navigation": {
     "activeState": "text-only",
