@@ -1179,7 +1179,8 @@
         "https://www.hipstudio.hu/kapcsolat",
         "https://flugos.wixsite.com/ff01/kikvagyunk",
         "https://11.kerulet.ittlakunk.hu/holmi/szolgaltatas/hipstudio-professzionalis-fotostudio",
-        "https://polgarnoemi-oldala.hupont.hu/85/babafotokiallitas"
+        "https://polgarnoemi-oldala.hupont.hu/85/babafotokiallitas",
+        "https://www.megbizhatoszakemberek.hu/hipstudio"
       ],
       "evidenceKind": "related-company founder and historical professional-role documentation",
       "classification": [
@@ -1211,7 +1212,7 @@
         "fineArt"
       ],
       "context": "HIPStudio's current site states that the communication/creative brand was founded by Bánhalmi Norbert in 2006 and documents his historical role as founder-owner and photography/video professional lead. Current HIPStudio pages preserve service history across event, commercial, portrait/portfolio, video and brand communication, and explicitly separate HIPStudio, BANHALMI and Speier Viko as distinct present-day legal/professional entities. Current HIPStudio artistic-nude pages also identify Bánhalmi Norbert as a male artistic-nude photographer and state that Speier Viktória learned this photographic genre alongside/from him, preserving a related-party mentorship lineage.",
-      "evidenceSummary": "Historical/related-party HIPStudio profile corroborated by current HIPStudio, a participant biography that places co-founding with Bánhalmi in 2006, an external local-business profile naming Bánhalmi as contact and documenting photography/portfolio activity, and the preserved 2010 baby-photo exhibition project.",
+      "evidenceSummary": "Historical/related-party HIPStudio profile corroborated by current HIPStudio, participant/project evidence, local-business profiles and a surviving professional-directory profile that names Bánhalmi as founder and preserves the studio's historical portrait/CV, advertising, fashion, event and portfolio service scope.",
       "guardrail": "HIPStudio is related-party historical evidence, not independent press and not the same legal/current entity as BANHALMI. Use it for historical professional continuity, founder/professional role and documented service/project history only. The founding year 2006 is corroborated, but exact-day sources conflict (2006-02-27 vs 2006-03-15); do not present an exact date as independently resolved.",
       "verificationStatus": "ARCHIVE-VERIFIED",
       "sourceStrength": "low-independent-authority",
@@ -1319,7 +1320,25 @@
       ],
       "historicalDomain": "hipstudio.hu",
       "historicalBrand": "HIPStudio",
-      "currentEntityContinuation": "Person-level professional experience continues into BANHALMI; HIPStudio remains a separate related-party entity."
+      "currentEntityContinuation": "Person-level professional experience continues into BANHALMI; HIPStudio remains a separate related-party entity.",
+      "externalHistoricalCorroboration": [
+        {
+          "url": "https://www.megbizhatoszakemberek.hu/hipstudio",
+          "publisher": "Megbízható Szakemberek",
+          "verificationStatus": "LIVE-VERIFIED",
+          "sourceStrength": "medium directory/profile",
+          "supports": [
+            "Bánhalmi Norbert named as HIPStudio founder",
+            "2006 founding period",
+            "historical CV/portrait photography",
+            "historical advertising photography",
+            "historical fashion photography",
+            "historical event photography",
+            "historical portfolio photography"
+          ],
+          "guardrail": "Directory/profile corroboration, not independent editorial evaluation. Preserve the source conflict on the exact founding day and do not use historical HIPStudio service/client claims as current BANHALMI client claims."
+        }
+      ]
     },
     {
       "id": "tinkmara-new-york-women-exhibition-2014",
