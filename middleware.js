@@ -15,10 +15,12 @@ function redirectTarget(request) {
     return null;
   }
 
-  const cleanPath = incoming.pathname.split('/').filter(Boolean).join('/');
+  let cleanPath = incoming.pathname;
+  while (cleanPath.startsWith('/')) cleanPath = cleanPath.slice(1);
 
   if (host.includes('banhalminorbert.hu') || host.includes('banhalmi-hu-redirect')) {
-    const normalizedPath = cleanPath ? '/' + cleanPath : '/';
+    let normalizedPath = cleanPath ? '/' + cleanPath : '/';
+    while (normalizedPath.length > 1 && normalizedPath.endsWith('/')) normalizedPath = normalizedPath.slice(0, -1);
     const historicalHuTargets = new Map([
       ['/reklamfotozas', 'https://www.norbertbanhalmi.com/hu/brand/']
     ]);
