@@ -92,7 +92,8 @@
         "fotoshow-artistic-nude-workshop-2019",
         "tamron-new-york-ballerina-project-2018",
         "oszk-szosszenetek-book-photo-credit-2017",
-        "weltwoche-peter-magyar-photo-credit-2026"
+        "weltwoche-peter-magyar-photo-credit-2026",
+        "babafoto-exhibition-hipstudio-2010"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -199,7 +200,8 @@
         "orf-fenymanok-event-photo-credit-2025",
         "rolunk-profile-possible-is-just-a-word-2025",
         "rolunk-bmi-crowdfunding-visual-communication-2026",
-        "orf-becsi-szelet-founder-2023"
+        "orf-becsi-szelet-founder-2023",
+        "babafoto-exhibition-hipstudio-2010"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -1169,7 +1171,8 @@
         "https://www.hipstudio.hu/reklam-fotozas-budapest",
         "https://www.hipstudio.hu/portfolio-fotozas-budapest",
         "https://www.hipstudio.hu/muveszi-aktfotozas-budapest",
-        "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas"
+        "https://www.hipstudio.hu/fotozas-arak-idopontfoglalas",
+        "https://www.hipstudio.hu/kapcsolat"
       ],
       "evidenceKind": "related-company founder and historical professional-role documentation",
       "classification": [
@@ -3354,6 +3357,42 @@
       "evidenceSummary": "Independent local-print evidence for Bánhalmi's curator role, exhibition-opening activity and support of an artist's earlier solo exhibition.",
       "sourceStrength": "medium-high",
       "guardrail": "Use as documented curatorial/exhibition evidence only. Do not infer commercial representation, ownership of the venue, exclusive artist management or endorsement by the publication."
+    },
+    {
+      "id": "babafoto-exhibition-hipstudio-2010",
+      "title": "HIPStudio: Baba fotó kiállítás",
+      "publisher": "News4Business / N4B press-release archive",
+      "url": "https://n4b.hu/kozlemenyek/press_release.php?id=8653&lstresults=22&no_results_total=852",
+      "corroboratingUrls": [
+        "https://polgarnoemi-oldala.hupont.hu/85/babafotokiallitas"
+      ],
+      "datePublished": "2010-03-07",
+      "evidenceKind": "archived press release / participant project documentation",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "FIRST-PARTY",
+        "PROJECT-COVERAGE"
+      ],
+      "classification": [
+        "historical portrait project",
+        "baby/family photography",
+        "photography exhibition",
+        "HIPStudio continuity"
+      ],
+      "services": [
+        "portrait",
+        "event",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "event",
+        "generalAuthority"
+      ],
+      "context": "News4Business preserves a 2010 HIPStudio press release describing a planned baby-photography exhibition as a joint initiative of Polgár Noémi and Bánhalmi Norbert. A surviving participant/project page separately names Bánhalmi among the HIPStudio photographers, states that more than 500 photographs were produced, and describes the planned public exhibition.",
+      "evidenceSummary": "Early external-web historical evidence for Bánhalmi's portrait/project/exhibition activity under the HIPStudio context in 2010.",
+      "sourceStrength": "low-medium",
+      "guardrail": "The News4Business item is a press-release archive and the Hupont page is participant/project-side documentation, not independent editorial evaluation. Use for historical continuity and project existence, not as quality endorsement, institutional validation or proof of current HIPStudio ownership."
     }
   ],
   "pendingEvidenceCandidates": [
