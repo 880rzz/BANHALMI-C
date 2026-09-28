@@ -679,6 +679,130 @@
       "context": "Trustindex aggregates Google reviews for the Bánhalmi Norbert photography profile, including recent reviews describing CV portrait and professional portrait experiences.",
       "evidenceSummary": "Third-party aggregation of customer reviews provides service-experience trust evidence; live counts/ratings are dynamic and must not be hard-coded without fresh readback.",
       "guardrail": "Do not treat the aggregator as an editorial endorsement; individual reviews are customer testimony and totals are time-sensitive."
+    },
+    {
+      "id": "vienna-family-network-business-member-2026",
+      "title": "BANHALMI | Executive Portrait & Visual Branding Strategy",
+      "publisher": "Vienna Family Network",
+      "url": "https://viennafamilynetwork.com/business-members/",
+      "evidenceKind": "external business-member directory listing",
+      "classification": [
+        "Vienna local business authority",
+        "executive portrait",
+        "visual positioning"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "visualStrategy"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "brand",
+        "visualStrategy"
+      ],
+      "context": "Vienna Family Network lists Norbert Banhalmi/BANHALMI as a business member specialising in executive and leadership portrait photography and strategic visual positioning.",
+      "evidenceSummary": "External Vienna business-network listing directly aligns the BANHALMI entity with executive portrait and visual-brand positioning services.",
+      "guardrail": "Membership/directory evidence only; do not infer endorsement by Vienna Family Network."
+    },
+    {
+      "id": "everness-speaker-workshop-2026",
+      "title": "Bánhalmi Norbert — fotóművész, előadás/workshop",
+      "publisher": "Everness Fesztivál",
+      "url": "https://everness.hu/fesztival/programok/fellepok/banhalmi-norbert",
+      "evidenceKind": "external festival speaker/workshop profile",
+      "classification": [
+        "fine-art authority",
+        "speaker/workshop",
+        "exhibition history"
+      ],
+      "services": [
+        "fineArt",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "generalAuthority"
+      ],
+      "context": "Everness profiles Bánhalmi Norbert as a photo artist and workshop/speaker, referencing exhibition practice and OM SYSTEM ambassadorship.",
+      "evidenceSummary": "External event programme supports Fine Art, workshop and public-expertise authority.",
+      "guardrail": "Speaker/profile evidence; do not infer festival endorsement beyond participation."
+    },
+    {
+      "id": "magyarvelemeny-review-aggregation",
+      "title": "BÁNHALMI NORBERT photography reviews — Budapest",
+      "publisher": "Magyar Vélemény",
+      "url": "https://magyarvelemeny.com/fenykepesz/budapest/banhalmi-norbert-fotomuvesz-pr/",
+      "evidenceKind": "third-party review aggregation",
+      "classification": [
+        "customer review aggregation",
+        "Budapest local trust"
+      ],
+      "services": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "generalAuthority"
+      ],
+      "context": "Third-party directory/review aggregator lists the Budapest photography studio and customer reviews.",
+      "evidenceSummary": "Additional external review aggregation supports local service trust. Counts and ratings are dynamic and must not be hard-coded without current readback.",
+      "guardrail": "Aggregator/customer-review evidence, not independent editorial endorsement."
+    },
+    {
+      "id": "rege-galeria-founder-curator",
+      "title": "Rege Galéria — kuratórium",
+      "publisher": "Rege Galéria",
+      "url": "https://www.regegaleria.hu/",
+      "evidenceKind": "institutional role profile",
+      "classification": [
+        "founder/curator role",
+        "fine-art curation",
+        "visual exhibition strategy"
+      ],
+      "services": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "fineArt",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "Rege Galéria identifies Bánhalmi Norbert as founder, curator and photo artist.",
+      "evidenceSummary": "Institutional role evidence supports curatorial, exhibition and visual-strategy authority.",
+      "guardrail": "Use the documented role as stated; do not infer ownership or unrelated commercial endorsement."
+    },
+    {
+      "id": "hipstudio-historical-profile",
+      "title": "HIPStudio company profile — Bánhalmi Norbert",
+      "publisher": "HIPStudio",
+      "url": "https://www.hipstudio.hu/_files/ugd/b0aee1_357ff796b7a145d28d1f8f021ad884d5.pdf",
+      "evidenceKind": "related-company historical professional profile",
+      "classification": [
+        "historical professional role",
+        "event advertising portrait experience",
+        "personal branding education"
+      ],
+      "services": [
+        "portrait",
+        "brand",
+        "event",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "portrait",
+        "brand",
+        "event",
+        "visualStrategy",
+        "generalAuthority"
+      ],
+      "context": "HIPStudio profile identifies Bánhalmi Norbert as founder-owner and photography/video professional lead, describing experience across event, advertising, portrait and portfolio photography and personal-brand education.",
+      "evidenceSummary": "Useful historical professional-role evidence, but it is a related-company source rather than independent press.",
+      "guardrail": "Treat as first-party/related-company historical documentation, not independent third-party validation."
     }
   ],
   "pendingEvidenceCandidates": [
