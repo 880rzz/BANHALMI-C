@@ -44,7 +44,7 @@ must(authority.navigation?.activeState==='text-only','BANHALMI active navigation
 must(authority.navigation?.activeFill==='none'&&authority.navigation?.activeBorder==='none'&&authority.navigation?.activeBoxShadow==='none','BANHALMI active navigation may not regain box styling');
 const mega=authority.navigation?.megaMenu||{};
 must(mega.contractVersion==='v31','BANHALMI mega-menu authority must remain v31');
-must(Number(mega.panelMaxPx)===1240,'BANHALMI v31 menu canvas must remain 1240px');
+must(Number(mega.panelMaxPx)===1440,'BANHALMI v31 ART-parity menu canvas must remain 1440px');
 must(mega.desktopOverlayBelowHeader===true&&mega.mobileStartsBelowHeader===true,'BANHALMI menu must stay below the real header');
 must(mega.duplicateBrandIntroHidden===true&&mega.duplicateTailHidden===true,'BANHALMI duplicate menu branding/tail must remain suppressed');
 must(mega.desktopDescriptionsHidden===false&&mega.mobileDescriptionsHidden===true,'BANHALMI desktop menu descriptions must remain visible while mobile stays compact');

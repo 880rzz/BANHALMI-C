@@ -65,7 +65,9 @@ must(menuHarmony.includes('MEGA-MENU-HARMONY-V31-20260917'),'menu harmony styles
 must(menuHarmony.includes('.bn-mega-grid::after{content:none!important;display:none!important;}'),'menu visual/slogan pseudo-tile suppression missing');
 must(menuHarmony.includes('.bn-mega-section-head::after{content:none!important;display:none!important;}'),'non-functional mobile arrows are not explicitly suppressed');
 must(menuHarmony.includes('inset:var(--header-h,72px) 0 auto 0!important'),'desktop menu must start below header');
-must(menuHarmony.includes('grid-template-columns:minmax(0,1.12fr) minmax(0,.9fr) minmax(0,1.08fr)!important'),'desktop text-first three-column menu geometry missing');
+must(menuHarmony.includes('grid-template-columns:repeat(3,minmax(0,1fr))!important'),'desktop ART-parity three-column menu geometry missing');
+must(menuHarmony.includes('html body .bn-mega-desc{')&&menuHarmony.includes('display:block!important'),'desktop menu descriptions must remain visible like BANHALMI ART');
+must(menuHarmony.includes('color:#e3c552!important'),'desktop menu title gold treatment missing');
 must(menuHarmony.includes('inset:var(--header-h,64px) 0 0 0!important'),'mobile menu must start below header');
 must(!menuHarmony.includes('hero-signature-'),'v31 menu must not embed hero media');
 must(!menuHarmony.includes('PHOTOGRAPHY FOR CLEAR COMMUNICATION'),'v31 menu must not embed the homepage slogan');

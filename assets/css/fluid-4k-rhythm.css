@@ -507,17 +507,17 @@ html body .bn-mega-menu .bn-mega-link[aria-current="page"]{
   }
   html body .bn-mega-panel{
     display:block!important;
-    inline-size:min(1240px,calc(100vw - 80px))!important;
-    max-inline-size:1240px!important;
+    inline-size:min(1440px,calc(100vw - 80px))!important;
+    max-inline-size:1440px!important;
     block-size:auto!important;
     min-block-size:0!important;
     margin:0 auto!important;
-    padding:clamp(28px,2.4vw,40px) 0 clamp(30px,2.6vw,44px)!important;
+    padding:clamp(28px,2.4vw,40px) 0 clamp(24px,2vw,36px)!important;
   }
   html body .bn-mega-grid{
     display:grid!important;
-    grid-template-columns:minmax(0,1.12fr) minmax(0,.9fr) minmax(0,1.08fr)!important;
-    gap:0!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:clamp(48px,4.5vw,76px)!important;
     align-items:start!important;
     align-content:start!important;
     padding:0!important;
@@ -526,8 +526,8 @@ html body .bn-mega-menu .bn-mega-link[aria-current="page"]{
   html body .bn-mega-grid::after{content:none!important;display:none!important;}
   html body .bn-mega-column{
     min-inline-size:0!important;
-    padding:0 clamp(28px,3vw,46px)!important;
-    border-left:1px solid rgba(245,245,247,.11)!important;
+    padding:0!important;
+    border-left:0!important;
   }
   html body .bn-mega-column:first-child{padding-left:0!important;border-left:0!important;}
   html body .bn-mega-column:last-child{padding-right:0!important;}
@@ -544,19 +544,28 @@ html body .bn-mega-menu .bn-mega-link[aria-current="page"]{
     letter-spacing:.14em!important;
     text-transform:uppercase!important;
   }
-  html body .bn-mega-item{margin:0!important;padding:0!important;}
-  html body .bn-mega-item+.bn-mega-item{margin-top:10px!important;}
+  html body .bn-mega-item{margin:0!important;padding:0 0 8px!important;border-bottom:1px solid rgba(245,245,247,.12)!important;}
+  html body .bn-mega-item+.bn-mega-item{margin-top:14px!important;}
+  html body .bn-mega-column .bn-mega-item:last-child{padding-bottom:0!important;border-bottom:0!important;}
   html body .bn-mega-link{
     display:inline-flex!important;
     align-items:center!important;
     min-block-size:29px!important;
     padding:0!important;
-    color:#f5f5f7!important;
-    font-size:clamp(.9rem,.8vw,1.02rem)!important;
+    color:#e3c552!important;
+    font-size:clamp(1.08rem,1.05vw,1.3rem)!important;
     line-height:1.3!important;
     letter-spacing:-.01em!important;
   }
-  html body .bn-mega-pricing .bn-mega-link{color:#d1b451!important;}
+  html body .bn-mega-desc{
+    display:block!important;
+    margin:3px 0 0!important;
+    color:#b8c0cf!important;
+    font-size:clamp(.88rem,.78vw,1rem)!important;
+    line-height:1.45!important;
+    max-inline-size:42ch!important;
+  }
+  html body .bn-mega-pricing .bn-mega-link{color:#e3c552!important;}
 }
 
 @media (max-width:860px){
@@ -1289,7 +1298,7 @@ html body .bn-mega-item{
     min-height:0!important;
     height:auto!important;
     display:block!important;
-    padding:clamp(32px,4vh,48px) 0!important;
+    padding:clamp(32px,4vh,48px) 0 20px!important;
   }
   html body .bn-mega-grid{
     width:100%!important;

@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-28-v45-unified-three-column-galleries",
+  "version": "2026-09-29-v46-art-menu-parity",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -273,11 +273,11 @@
     "activeRadiusPx": 0,
     "megaMenu": {
       "background": "#202530",
-      "panelMaxPx": 1240,
+      "panelMaxPx": 1440,
       "desktopSidePaddingPx": 40,
       "desktopTopPaddingPx": 24,
-      "desktopBottomPaddingPx": 36,
-      "desktopColumnGapPx": 0,
+      "desktopBottomPaddingPx": 20,
+      "desktopColumnGapPx": 64,
       "sectionRuleColor": "rgba(183,156,68,.28)",
       "focusStyle": "underline-only",
       "pointerAutofocus": false,
@@ -303,7 +303,8 @@
       "contentVerticallyCentered": true,
       "singleStageRuntime": true,
       "nestedLoaderAllowed": false,
-      "parserDiscoveredOnHome": true
+      "parserDiscoveredOnHome": true,
+      "reference": "BANHALMI ART desktop menu"
     }
   },
   "principles": {
