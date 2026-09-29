@@ -192,6 +192,8 @@ Existing canonical pages are used; no additional service URLs were created. Head
 - Canonical base pricing: https://www.norbertbanhalmi.com/pricing.json — EUR, gross orientation amounts including 20% Austrian VAT unless explicitly stated otherwise.
 - Hungarian fixed-rate pricing view: https://www.norbertbanhalmi.com/pricing-huf.json — HUF calculated at exactly 1 EUR = 400 HUF.
 - AI calculation guide: https://www.norbertbanhalmi.com/pricing-guide.json .
+- Executive pricing architecture: Headshot/CV remains a separate entry-level service. Executive Portrait — Professional Presence starts from EUR 499; Executive Personal Branding — Positioning starts from EUR 790; Executive Visual Library — Communication System is individually scoped. EUR 220/420/690 simple portrait options are not Executive price anchors, and internal EUR 1090/1390 duration components are not fixed public Visual Library tiers.
+- Commercial interpretation: route by communication outcome and scope, not minutes or image count. If less is required, reduce scope rather than automatically discounting the work.
 - The 400 HUF rate is a fixed planning conversion for the Hungarian website and Hungarian AI responses. It is not a live exchange rate.
 - Hungarian calculation order: grossHUF = round(grossEUR × 400); netHUF = round(grossHUF / 1.20); vatHUF = grossHUF - netHUF.
 - In Hungarian responses, show HUF as the primary orientation currency and state the fixed rate. EUR may be shown as the auditable base value.
