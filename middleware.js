@@ -23,7 +23,7 @@ function redirectTarget(request) {
     while (normalizedPath.length > 1 && normalizedPath.endsWith('/')) normalizedPath = normalizedPath.slice(0, -1);
     const historicalHuTargets = new Map([
       ['/oneletrajz-cv-fotozas', 'https://www.norbertbanhalmi.com/hu/portre/'],
-      ['/portfolio-fotozas', 'https://www.norbertbanhalmi.com/hu/portre/'],
+      ['/portfolio-fotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
       ['/muveszi-aktfotozas', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/'],
       ['/aktfotozas', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/'],
       ['/reklam-fotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
