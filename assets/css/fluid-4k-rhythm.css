@@ -33,21 +33,29 @@
 }
 html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!important;}
 
-/* UNIFIED-DESKTOP-GALLERY-GEOMETRY-V45-20260928 */
+/* UNIFIED-GALLERY-GEOMETRY-V47-20260929
+   Canonical gallery spacing authority: every managed gallery uses an exact
+   20px row/column gap at every viewport. Desktop keeps the approved 3-column grid. */
+html body main :is(.gallery,.pf-grid,.collage-gallery,.jony-gallery-grid,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid,.portrait-reference-gallery,.portrait-service-gallery){
+  gap:20px!important;
+  column-gap:20px!important;
+  row-gap:20px!important;
+}
+html body main :is(.pf-grid,.collage-gallery,.jony-gallery-grid)>figure,
+html body main :is(.gallery,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid,.portrait-reference-gallery,.portrait-service-gallery)>figure{
+  margin:0!important;
+}
 @media (min-width:1101px){
   html body main :is(.gallery,.pf-grid,.collage-gallery,.jony-gallery-grid,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid,.portrait-reference-gallery,.portrait-service-gallery){
     display:grid!important;
     grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:clamp(.8rem,1.35vw,1.45rem)!important;
     align-items:start!important;
     columns:auto!important;
     column-count:auto!important;
-    column-gap:normal!important;
   }
   html body main :is(.pf-grid,.collage-gallery,.jony-gallery-grid)>figure,
   html body main :is(.gallery,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid,.portrait-reference-gallery,.portrait-service-gallery)>figure{
     min-width:0!important;
-    margin:0!important;
   }
 }
 
