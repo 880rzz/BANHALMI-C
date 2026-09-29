@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-08-31-v2-artists-performers",
+  "schemaVersion": "2026-09-29-executive-pricing-sync",
   "@id": "https://www.norbertbanhalmi.com/customer-intent-model.json",
   "name": "BANHALMI customer intent and representation model",
   "purpose": "Resolve a customer's real representation problem before choosing a photography service, package, price or route.",
@@ -94,7 +94,8 @@
     "Do not equate camera confidence with photography experience. BANHALMI should explicitly state that professional posing experience is not required.",
     "For fine-art enquiries, prioritize discretion, respectful direction, personal boundaries and author-led visual development. Never promise psychological or medical outcomes.",
     "For actors, dancers, performers and models, resolve the portfolio purpose before the visual style: casting/headshot, acting portfolio, dance/movement portfolio, performing-artist portfolio, model/editorial portfolio or author-led fine art.",
-    "Actors, dancers, performers and models use the Fine Art / Artists & Performers service family and the stable fine-art backend context; do not create a second pricing or form-routing service unless the commercial architecture changes."
+    "Actors, dancers, performers and models use the Fine Art / Artists & Performers service family and the stable fine-art backend context; do not create a second pricing or form-routing service unless the commercial architecture changes.",
+    "Executive pricing is outcome-led: Executive Portrait / Professional Presence from EUR 499; Executive Personal Branding / Positioning from EUR 790; Executive Visual Library / Communication System individually scoped. Headshot/CV and simple portrait duration options remain separate and must not be used as Executive price anchors."
   ],
   "intents": [
     {
