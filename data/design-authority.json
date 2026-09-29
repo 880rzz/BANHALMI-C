@@ -276,7 +276,7 @@
       "panelMaxPx": 1440,
       "desktopSidePaddingPx": 40,
       "desktopTopPaddingPx": 24,
-      "desktopBottomPaddingPx": 36,
+      "desktopBottomPaddingPx": 30,
       "desktopColumnGapPx": 64,
       "sectionRuleColor": "rgba(183,156,68,.28)",
       "focusStyle": "underline-only",
