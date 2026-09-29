@@ -141,7 +141,8 @@
         "extraRetouchedImagePerPersonGrossHUF": 11600,
         "additionalPhotographerGrossHUF": 156000
       },
-      "extraRetouchedImageGrossHUF": 14000
+      "extraRetouchedImageGrossHUF": 14000,
+      "executivePackageRule": "The portrait service page covers Executive intent, but quick30/guided60/guided120 are simple portrait calculator options only. Executive Portrait pricing resolves through publicExecutiveArchitecture.executivePortrait from EUR 499."
     },
     {
       "id": "brand-visual-positioning",
@@ -197,7 +198,8 @@
       "includedRetouchedImages": 3,
       "extraRetouchedImageGrossEUR": 35,
       "includedRetouchedImagesScope": "total per project package",
-      "extraRetouchedImageGrossHUF": 14000
+      "extraRetouchedImageGrossHUF": 14000,
+      "executivePackageRule": "brand60 is the Professional Presence starting component at EUR 499; brand120 is the Positioning starting component at EUR 790; brand180/brand240 are internal scope components only and must not be exposed as fixed Visual Library tiers."
     },
     {
       "id": "fine-art",
