@@ -38,6 +38,7 @@ jobs:
         run: |
           set -euo pipefail
           npm test
+          node tools/audit-single-public-phone.mjs
           node tools/audit-historical-design-regressions.mjs
       - name: Prepare immutable Pages artifact
         shell: bash
