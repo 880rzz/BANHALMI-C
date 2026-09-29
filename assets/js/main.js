@@ -1277,8 +1277,8 @@
       wa:"Kedves Norbert, a BANHALMI weboldalról keresem egy fotózással kapcsolatban."
     }
   }[locale];
-  var viennaPhoneHref = locale === "hu" ? "+4367761655592" : "+4367761655592";
-  var viennaPhoneDisplay = locale === "hu" ? "+43 677 616 55592" : "+43 677 616 55592";
+  var viennaPhoneHref = locale === "hu" ? "+4367761655592" : "+4367764733262";
+  var viennaPhoneDisplay = locale === "hu" ? "+43 677 616 55592" : "+43 677 647 332 62";
 
   var wrap = document.createElement("div");
   wrap.className = "banhalmi-contact-dock";
