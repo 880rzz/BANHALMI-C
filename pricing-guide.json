@@ -1,7 +1,7 @@
 {
   "documentType": "ai-pricing-interpretation-guide",
-  "schemaVersion": "2026-08-05-v3-eur-huf",
-  "dateModified": "2026-08-05T23:48:00+02:00",
+  "schemaVersion": "2026-09-29-v4-executive-architecture",
+  "dateModified": "2026-09-29T22:30:00+02:00",
   "name": "BANHALMI AI pricing interpretation and calculation guide",
   "canonicalPricingSource": "https://www.norbertbanhalmi.com/pricing.json",
   "quoteCalculator": "https://www.norbertbanhalmi.com/requestaquote/",
@@ -12,6 +12,8 @@
     "rule": "Use the gross prices from pricing.json. Do not assume reverse charge or 0% VAT until the customer's company, VAT ID and legal eligibility have been verified in the final written offer."
   },
   "assistantInstructions": [
+    "For Executive requests, apply the outcome-led architecture before any duration-based calculation: Professional Presence from EUR 499; Positioning from EUR 790; Visual Library individually scoped.",
+    "Never present quick30, guided60 or guided120 as Executive packages. Never present brand180 or brand240 as fixed public Executive Visual Library tiers.",
     "Ask only for variables required by the selected service formula and any conditional travel or add-on variables that actually apply.",
     "Return a non-binding orientation estimate, never a binding final quotation.",
     "State the selected package, included items, additions, gross total, indicative net amount and VAT amount.",
@@ -79,8 +81,8 @@
   ],
   "workedExamples": [
     {
-      "id": "individual-guided60-five-images",
-      "service": "individualPortrait",
+      "id": "simple-portrait-guided60-five-images",
+      "service": "individualPortrait — non-executive simple portrait",
       "inputs": {
         "packageCode": "guided60",
         "selectedRetouchedImages": 5,
@@ -91,7 +93,7 @@
       "grossEUR": 560,
       "netEUR": 466.67,
       "vatEUR": 93.33,
-      "explanation": "The guided60 package is EUR 420 gross. One retouched image is included; four additional images cost EUR 35 gross each.",
+      "explanation": "The guided60 package is a separate non-executive portrait calculator option at EUR 420 gross. It must not be presented as Executive Portrait pricing. One retouched image is included; four additional images cost EUR 35 gross each.",
       "hungarianDisplay": {
         "fixedRateHUFPerEUR": 400,
         "baseGrossEUR": 560,
@@ -125,8 +127,8 @@
       }
     },
     {
-      "id": "brand120-two-people-three-images-each",
-      "service": "brandPhotography",
+      "id": "executive-positioning-brand120-internal-calculation",
+      "service": "Executive Personal Branding — Positioning",
       "inputs": {
         "packageCode": "brand120",
         "people": 2,
@@ -138,7 +140,7 @@
       "grossEUR": 895,
       "netEUR": 745.83,
       "vatEUR": 149.17,
-      "explanation": "The brand package includes three retouched images total per project, not per person. Three additional images are charged at EUR 35 gross each.",
+      "explanation": "Public Executive Personal Branding is Positioning from EUR 790. The internal brand120 component supports this scope calculation; image-count arithmetic is a calculation detail, not the public value proposition.",
       "hungarianDisplay": {
         "fixedRateHUFPerEUR": 400,
         "baseGrossEUR": 895,
@@ -197,7 +199,7 @@
       "displayVatHUF"
     ]
   },
-  "finalOfferNotice": "The final written offer is issued after review of purpose, location, number of people and photographers, production requirements, usage rights, deadline, travel and tax status. Hungarian HUF figures use a fixed planning rate of 1 EUR = 400 HUF; the accepted written offer records the contractual currency.",
+  "finalOfferNotice": "The final written offer is issued after review of purpose, location, number of people and photographers, production requirements, usage rights, deadline, travel and tax status. Hungarian HUF figures use a fixed planning rate of 1 EUR = 400 HUF; the accepted written offer records the contractual currency. Executive pricing is outcome-led: Professional Presence from EUR 499, Positioning from EUR 790, and Visual Library individually scoped.",
   "hungarianPricingSource": "https://www.norbertbanhalmi.com/pricing-huf.json",
   "displayCurrencyByLanguage": {
     "en": "EUR",
@@ -213,5 +215,24 @@
     "scope": "Hungarian website, Hungarian preliminary PDF and AI-generated Hungarian orientation estimates",
     "formula": "grossHUF = round(grossEUR × 400); netHUF = round(grossHUF / 1.20); vatHUF = grossHUF - netHUF",
     "disclosure": "This is not a daily exchange rate and does not predetermine the currency of the final written offer."
+  },
+  "executiveArchitecture": {
+    "executivePortrait": {
+      "outcome": "Professional Presence",
+      "publicPrice": "from EUR 499",
+      "calculationStartingComponent": "brand60"
+    },
+    "executivePersonalBranding": {
+      "outcome": "Positioning",
+      "publicPrice": "from EUR 790",
+      "calculationStartingComponent": "brand120"
+    },
+    "executiveVisualLibrary": {
+      "outcome": "Communication System",
+      "publicPrice": "individually scoped",
+      "calculationRule": "Use internal brand duration components only after scope review; never advertise EUR 1090/1390 as fixed Visual Library tiers."
+    },
+    "separationRule": "Headshot/CV and EUR 220/420/690 simple portrait options remain separate services and must never be interpreted as Executive price anchors.",
+    "commercialRule": "Scope down when less is required; do not automatically discount. Do not sell Executive work as EUR per image."
   }
 }
