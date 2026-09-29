@@ -1205,7 +1205,7 @@
     '<div class="banhalmi-contact-panel" id="banhalmi-contact-panel" hidden role="dialog" aria-modal="false" aria-labelledby="banhalmi-contact-title">'+
       '<div class="banhalmi-contact-head"><strong id="banhalmi-contact-title">'+copy.contact+'</strong><button class="banhalmi-contact-close" type="button" aria-label="'+copy.close+'">×</button></div>'+
       '<div class="banhalmi-contact-list">'+
-        '<a class="banhalmi-contact-action" href="https://wa.me/'+viennaPhoneHref.slice(1)+'?text='+encodeURIComponent(copy.wa)+'" target="_blank" rel="noopener noreferrer"><strong>'+copy.whatsapp+'</strong><span>'+viennaPhoneDisplay+'</span></a>'+
+        '<a class="banhalmi-contact-action" href="https://wa.me/'+whatsappHref.slice(1)+'?text='+encodeURIComponent(copy.wa)+'" target="_blank" rel="noopener noreferrer"><strong>'+copy.whatsapp+'</strong><span>'+whatsappDisplay+'</span></a>'+
         '<a class="banhalmi-contact-action" href="mailto:hello@norbertbanhalmi.com"><strong>'+copy.email+'</strong><span>hello@norbertbanhalmi.com</span></a>'+
         '<a class="banhalmi-contact-action" href="tel:'+viennaPhoneHref+'"><strong>'+copy.phone+' · Wien</strong><span>'+viennaPhoneDisplay+'</span></a>'+
         '<a class="banhalmi-contact-action" href="tel:+36704698397"><strong>'+copy.phone+' · Budapest</strong><span>+36 70 469 8397</span></a>'+
