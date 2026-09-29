@@ -4334,3 +4334,9 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 .executive-investment-note p{margin:.25rem 0;max-width:48rem}
 .executive-investment-note strong{font-weight:600;letter-spacing:.01em}
 .executive-investment-note p:last-child{font-size:.94em;line-height:1.55}
+
+.executive-choice-guide{margin:0 0 1.25rem;padding:1rem 0;border-top:1px solid rgba(183,156,68,.42);border-bottom:1px solid rgba(183,156,68,.24)}
+.executive-choice-guide>strong{display:block;margin-bottom:.55rem;font-weight:600}
+.executive-choice-guide ul{margin:.35rem 0 .65rem;padding-left:1.2rem}
+.executive-choice-guide li{margin:.35rem 0;line-height:1.5}
+.executive-choice-guide p{margin:.5rem 0 0;font-size:.94em;line-height:1.55}
