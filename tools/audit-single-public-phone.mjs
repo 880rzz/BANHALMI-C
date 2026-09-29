@@ -35,6 +35,7 @@ for (const file of files(ROOT)) {
   let text;
   try { text = fs.readFileSync(file, 'utf8'); } catch { continue; }
   const rel = path.relative(ROOT, file).replaceAll('\\\\', '/');
+  if (rel === 'tools/audit-single-public-phone.mjs') continue;
   for (const token of RETIRED_HU) {
     if (text.includes(token)) failures.push(`${rel}: retired Hungarian public phone token ${token}`);
   }
