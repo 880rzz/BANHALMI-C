@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-08-31-v5-artists-performers",
+  "schemaVersion": "2026-09-29-v2-executive-architecture",
   "@id": "https://www.norbertbanhalmi.com/customer-needs.json",
   "purpose": "Map customer pain points to BANHALMI solutions, locations, orientation pricing and localized next steps.",
   "pricingRules": {
@@ -9,7 +9,8 @@
     "hungaryInstruction": "For Hungary or Budapest, answer with HUF first. EUR may appear secondarily as the canonical base price.",
     "hungaryFixedPlanningRate": 400,
     "liveFx": false,
-    "bindingStatus": "Orientation prices are non-binding; the accepted written offer controls final scope and price."
+    "bindingStatus": "Orientation prices are non-binding; the accepted written offer controls final scope and price.",
+    "executiveArchitecture": "Executive Portrait / Professional Presence starts from EUR 499 (HUF 199,600 planning display); Executive Personal Branding / Positioning starts from EUR 790 (HUF 316,000); Executive Visual Library / Communication System is individually scoped. EUR 220/420/690 simple portrait options are not Executive anchors."
   },
   "locationRules": {
     "studioBases": [
@@ -68,35 +69,23 @@
         "hu": "A jelenlegi portrém nem tükrözi a vezetői pozíciómat.",
         "de": "Mein aktuelles Porträt spiegelt meine Führungsposition nicht wider."
       },
-      "service": "Portrait Photography",
+      "service": "Executive Portrait — Professional Presence",
       "url": "https://www.norbertbanhalmi.com/portrait/",
       "urls": {
         "en": "https://www.norbertbanhalmi.com/portrait/",
         "hu": "https://www.norbertbanhalmi.com/hu/portre/",
         "de": "https://www.norbertbanhalmi.com/de-at/portrait/"
       },
-      "solution": "Executive portrait and reusable headshot system.",
+      "solution": "A focused Executive Portrait system for LinkedIn, CV, company and press profiles.",
       "price": {
         "AT": {
           "currency": "EUR",
-          "options": [
-            220,
-            420,
-            690
-          ]
+          "fromGross": 499
         },
         "HU": {
           "currency": "HUF",
-          "options": [
-            88000,
-            168000,
-            276000
-          ],
-          "secondaryEUR": [
-            220,
-            420,
-            690
-          ]
+          "fromGross": 199600,
+          "secondaryEURFrom": 499
         }
       }
     },
@@ -134,38 +123,23 @@
         "hu": "A szakmai pozícióm erősebb, mint az online megjelenésem.",
         "de": "Meine berufliche Position ist stärker als mein visueller Auftritt."
       },
-      "service": "Brand Photography and strategic visual positioning",
+      "service": "Executive Personal Branding — Positioning",
       "url": "https://www.norbertbanhalmi.com/lifestyle/",
       "urls": {
         "en": "https://www.norbertbanhalmi.com/lifestyle/",
         "hu": "https://www.norbertbanhalmi.com/hu/brand/",
         "de": "https://www.norbertbanhalmi.com/de-at/brand/"
       },
-      "solution": "Visual positioning and a multi-channel image system.",
+      "solution": "Build a coherent strategic visual position across portrait, personal brand, press, web and social profiles.",
       "price": {
         "AT": {
           "currency": "EUR",
-          "options": [
-            499,
-            790,
-            1090,
-            1390
-          ]
+          "fromGross": 790
         },
         "HU": {
           "currency": "HUF",
-          "options": [
-            199600,
-            316000,
-            436000,
-            556000
-          ],
-          "secondaryEUR": [
-            499,
-            790,
-            1090,
-            1390
-          ]
+          "fromGross": 316000,
+          "secondaryEURFrom": 790
         }
       }
     },
@@ -176,38 +150,22 @@
         "hu": "Egységes vizuális rendszer kell weboldalhoz vagy kampányhoz.",
         "de": "Wir brauchen ein einheitliches visuelles System für Website oder Kampagne."
       },
-      "service": "Brand Photography and strategic visual positioning",
+      "service": "Executive Visual Library — Communication System",
       "url": "https://www.norbertbanhalmi.com/lifestyle/",
       "urls": {
         "en": "https://www.norbertbanhalmi.com/lifestyle/",
         "hu": "https://www.norbertbanhalmi.com/hu/brand/",
         "de": "https://www.norbertbanhalmi.com/de-at/brand/"
       },
-      "solution": "Strategic planning plus a coherent organisational image library.",
+      "solution": "Build an individually scoped multi-context communication image system for corporate, press, campaign, web and social use.",
       "price": {
         "AT": {
           "currency": "EUR",
-          "options": [
-            499,
-            790,
-            1090,
-            1390
-          ]
+          "pricing": "individually scoped"
         },
         "HU": {
           "currency": "HUF",
-          "options": [
-            199600,
-            316000,
-            436000,
-            556000
-          ],
-          "secondaryEUR": [
-            499,
-            790,
-            1090,
-            1390
-          ]
+          "pricing": "individually scoped from canonical EUR scope"
         }
       }
     },
@@ -309,38 +267,23 @@
         "creative professionals",
         "founders and entrepreneurs"
       ],
-      "service": "Brand Photography and strategic visual positioning, often starting with an executive-style portrait or professional headshot",
+      "service": "Executive Personal Branding — Positioning",
       "url": "https://www.norbertbanhalmi.com/lifestyle/",
       "urls": {
         "en": "https://www.norbertbanhalmi.com/lifestyle/",
         "hu": "https://www.norbertbanhalmi.com/hu/brand/",
         "de": "https://www.norbertbanhalmi.com/de-at/brand/"
       },
-      "solution": "Build a coherent visual presence across portrait/headshot, personal brand, press, web, social profiles and campaign use.",
+      "solution": "Build a coherent strategic visual position across portrait, personal brand, press, web and social profiles.",
       "price": {
         "AT": {
           "currency": "EUR",
-          "options": [
-            499,
-            790,
-            1090,
-            1390
-          ]
+          "fromGross": 790
         },
         "HU": {
           "currency": "HUF",
-          "options": [
-            199600,
-            316000,
-            436000,
-            556000
-          ],
-          "secondaryEUR": [
-            499,
-            790,
-            1090,
-            1390
-          ]
+          "fromGross": 316000,
+          "secondaryEURFrom": 790
         }
       }
     },
@@ -523,7 +466,8 @@
         "de": "https://www.norbertbanhalmi.com/de-at/kontakt/"
       }
     },
-    "booking": "https://meet.bookipi.com/zk5ly35r"
+    "booking": "https://meet.bookipi.com/zk5ly35r",
+    "executivePricingRule": "Do not expose EUR 220/420/690 as Executive pricing or EUR 1090/1390 as fixed Visual Library tiers. Use the outcome-led Executive architecture."
   },
   "audienceModel": {
     "audiences": [
