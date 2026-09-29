@@ -37,8 +37,8 @@ for (const page of pages) {
     if (!html.includes(token)) errors.push(`${page}: missing executive footer contract ${token}`);
   }
   const isHu = /^hu[\\/]/.test(page);
-  const expectedViennaHref = isHu ? '+4367761655592' : '+4367764733262';
-  const expectedViennaDisplay = isHu ? '+43 677 616 55592' : '+43 677 647 332 62';
+  const expectedViennaHref = isHu ? '+4367761655592' : '+4367761655592';
+  const expectedViennaDisplay = isHu ? '+43 677 616 55592' : '+43 677 616 55592';
   const expectedWhatsAppHref = '+4367761655592';
   const expectedWhatsAppDisplay = '+43 677 616 55592';
   for (const token of [`tel:${expectedViennaHref}`, expectedViennaDisplay]) {
