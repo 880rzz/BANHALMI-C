@@ -12,8 +12,10 @@ const variants = [
     "officeProfile": "Google Business Profile",
     "contactHref": "/contact/",
     "contactLabel": "Contact",
-    "viennaPhoneHref": "+4367761655592",
-    "viennaPhoneDisplay": "+43 677 616 55592"
+    "viennaPhoneHref": "+4367764733262",
+    "viennaPhoneDisplay": "+43 677 647 332 62",
+    "whatsappHref": "+4367761655592",
+    "whatsappDisplay": "+43 677 616 55592"
   },
   {
     "heading": "Kontakt",
@@ -24,8 +26,10 @@ const variants = [
     "officeProfile": "Google-Unternehmensprofil",
     "contactHref": "/de-at/kontakt/",
     "contactLabel": "Kontakt",
-    "viennaPhoneHref": "+4367761655592",
-    "viennaPhoneDisplay": "+43 677 616 55592"
+    "viennaPhoneHref": "+4367764733262",
+    "viennaPhoneDisplay": "+43 677 647 332 62",
+    "whatsappHref": "+4367761655592",
+    "whatsappDisplay": "+43 677 616 55592"
   },
   {
     "heading": "Kapcsolat",
@@ -37,12 +41,14 @@ const variants = [
     "contactHref": "/hu/kapcsolat/",
     "contactLabel": "Kapcsolat",
     "viennaPhoneHref": "+4367761655592",
-    "viennaPhoneDisplay": "+43 677 616 55592"
+    "viennaPhoneDisplay": "+43 677 616 55592",
+    "whatsappHref": "+4367761655592",
+    "whatsappDisplay": "+43 677 616 55592"
   }
 ];
 
 function footer(v) {
-  return `<h3 class="footer-heading">${v.heading}</h3><ul class="footer-contact-list"><li class="footer-location footer-studio" data-location-role="studio"><strong><a class="footer-studio-link footer-location-link" href="https://maps.app.goo.gl/QsMeDA8Bgq5yKxAo8">${v.studioVienna}</a></strong><span class="footer-address">Schwedenplatz 2, Top 8–9, 1010 Wien</span><a class="footer-phone" href="tel:${v.viennaPhoneHref}">${v.viennaPhoneDisplay}</a></li><li class="footer-location footer-office" data-location-role="office"><strong><a class="footer-studio-link footer-location-link" href="https://g.page/r/CdO4Kej3jIkfEBM">${v.officeVienna}</a></strong><span class="footer-address">Gersthofer Straße 150–154/6/2, 1180 Wien</span><span class="footer-location-note">${v.officeNote}</span><a class="footer-location-profile" href="https://g.page/r/CdO4Kej3jIkfEBM">${v.officeProfile}</a></li><li class="footer-location footer-studio" data-location-role="studio"><strong><a class="footer-studio-link footer-location-link" href="https://maps.app.goo.gl/nEvcjbCA1wmgQtXJA">${v.studioBudapest}</a></strong><span class="footer-address">Lágymányosi u. 15, 1111 Budapest</span><a class="footer-phone" href="tel:+36704698397">+36 70 469 8397</a></li></ul><div class="footer-contact-actions"><a href="${v.contactHref}">${v.contactLabel}</a><a href="mailto:hello@norbertbanhalmi.com">hello@norbertbanhalmi.com</a><a class="footer-whatsapp" href="https://wa.me/${v.viennaPhoneHref.slice(1)}" rel="noopener noreferrer" target="_blank">WhatsApp ${v.viennaPhoneDisplay}</a></div>`;
+  return `<h3 class="footer-heading">${v.heading}</h3><ul class="footer-contact-list"><li class="footer-location footer-studio" data-location-role="studio"><strong><a class="footer-studio-link footer-location-link" href="https://maps.app.goo.gl/QsMeDA8Bgq5yKxAo8">${v.studioVienna}</a></strong><span class="footer-address">Schwedenplatz 2, Top 8–9, 1010 Wien</span><a class="footer-phone" href="tel:${v.viennaPhoneHref}">${v.viennaPhoneDisplay}</a></li><li class="footer-location footer-office" data-location-role="office"><strong><a class="footer-studio-link footer-location-link" href="https://g.page/r/CdO4Kej3jIkfEBM">${v.officeVienna}</a></strong><span class="footer-address">Gersthofer Straße 150–154/6/2, 1180 Wien</span><span class="footer-location-note">${v.officeNote}</span><a class="footer-location-profile" href="https://g.page/r/CdO4Kej3jIkfEBM">${v.officeProfile}</a></li><li class="footer-location footer-studio" data-location-role="studio"><strong><a class="footer-studio-link footer-location-link" href="https://maps.app.goo.gl/nEvcjbCA1wmgQtXJA">${v.studioBudapest}</a></strong><span class="footer-address">Lágymányosi u. 15, 1111 Budapest</span><a class="footer-phone" href="tel:+36704698397">+36 70 469 8397</a></li></ul><div class="footer-contact-actions"><a href="${v.contactHref}">${v.contactLabel}</a><a href="mailto:hello@norbertbanhalmi.com">hello@norbertbanhalmi.com</a><a class="footer-whatsapp" href="https://wa.me/${v.whatsappHref.slice(1)}" rel="noopener noreferrer" target="_blank">WhatsApp ${v.whatsappDisplay}</a></div>`;
 }
 
 let changed = 0;
