@@ -37,10 +37,15 @@ for (const page of pages) {
     if (!html.includes(token)) errors.push(`${page}: missing executive footer contract ${token}`);
   }
   const isHu = /^hu[\\/]/.test(page);
-  const expectedViennaHref = isHu ? '+4367761655592' : '+4367761655592';
-  const expectedViennaDisplay = isHu ? '+43 677 616 55592' : '+43 677 616 55592';
-  for (const token of [`tel:${expectedViennaHref}`, `https://wa.me/${expectedViennaHref.slice(1)}`, expectedViennaDisplay]) {
-    if (!html.includes(token)) errors.push(`${page}: missing locale-specific Vienna contact ${token}`);
+  const expectedViennaHref = isHu ? '+4367761655592' : '+4367764733262';
+  const expectedViennaDisplay = isHu ? '+43 677 616 55592' : '+43 677 647 332 62';
+  const expectedWhatsAppHref = '+4367761655592';
+  const expectedWhatsAppDisplay = '+43 677 616 55592';
+  for (const token of [`tel:${expectedViennaHref}`, expectedViennaDisplay]) {
+    if (!html.includes(token)) errors.push(`${page}: missing locale-specific Vienna phone ${token}`);
+  }
+  for (const token of [`https://wa.me/${expectedWhatsAppHref.slice(1)}`, `WhatsApp ${expectedWhatsAppDisplay}`]) {
+    if (!html.includes(token)) errors.push(`${page}: missing canonical WhatsApp contact ${token}`);
   }
   const locationCount=(html.match(/class="footer-location /g)||[]).length;
   const studioCount=(html.match(/data-location-role="studio"/g)||[]).length;
