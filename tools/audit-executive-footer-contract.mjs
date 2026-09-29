@@ -36,16 +36,11 @@ for (const page of pages) {
   for (const token of ['data-location-role="studio"','data-location-role="office"','Schwedenplatz 2, Top 8–9, 1010 Wien','Gersthofer Straße 150–154/6/2, 1180 Wien','Lágymányosi u. 15, 1111 Budapest','https://g.page/r/CdO4Kej3jIkfEBM','class="footer-contact-actions"']) {
     if (!html.includes(token)) errors.push(`${page}: missing executive footer contract ${token}`);
   }
-  const isHu = /^hu[\\/]/.test(page);
-  const expectedViennaHref = isHu ? '+4367761655592' : '+4367761655592';
-  const expectedViennaDisplay = isHu ? '+43 677 616 55592' : '+43 677 616 55592';
-  const expectedWhatsAppHref = '+4367761655592';
-  const expectedWhatsAppDisplay = '+43 677 616 55592';
-  for (const token of [`tel:${expectedViennaHref}`, expectedViennaDisplay]) {
-    if (!html.includes(token)) errors.push(`${page}: missing locale-specific Vienna phone ${token}`);
-  }
-  for (const token of [`https://wa.me/${expectedWhatsAppHref.slice(1)}`, `WhatsApp ${expectedWhatsAppDisplay}`]) {
-    if (!html.includes(token)) errors.push(`${page}: missing canonical WhatsApp contact ${token}`);
+  // Direct phone/email details are intentionally click-to-reveal in the Contact Dock.
+  // Footer pages must not be forced to expose a direct tel: link; the canonical
+  // contact value is enforced by audit-single-public-phone.mjs and the dock runtime.
+  if (html.includes('+36704698397') || html.includes('+36 70 469 8397') || html.includes('+36 70 469 83 97')) {
+    errors.push(`${page}: retired Hungarian phone must not reappear in footer HTML`);
   }
   const locationCount=(html.match(/class="footer-location /g)||[]).length;
   const studioCount=(html.match(/data-location-role="studio"/g)||[]).length;
