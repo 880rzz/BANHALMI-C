@@ -1,7 +1,7 @@
 {
   "documentType": "BANHALMI fixed-rate HUF orientation pricing",
-  "schemaVersion": "2026-08-31-v2-artists-performers",
-  "dateModified": "2026-08-31T23:25:00+02:00",
+  "schemaVersion": "2026-09-29-v3-executive-architecture",
+  "dateModified": "2026-09-29T22:30:00+02:00",
   "canonicalBasePricingSource": "https://www.norbertbanhalmi.com/pricing.json",
   "aiInterpretationGuide": "https://www.norbertbanhalmi.com/pricing-guide.json",
   "quoteCalculator": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
@@ -83,25 +83,33 @@
           "durationMinutes": 10,
           "baseGrossEUR": 120,
           "grossHUF": 48000,
-          "includedRetouchedImages": 1
+          "includedRetouchedImages": 1,
+          "publicRole": "entry-level Headshot/CV",
+          "executivePricingAnchor": false
         },
         {
           "code": "quick30",
           "durationMinutes": 30,
           "baseGrossEUR": 220,
-          "grossHUF": 88000
+          "grossHUF": 88000,
+          "publicRole": "simple portrait option",
+          "executivePricingAnchor": false
         },
         {
           "code": "guided60",
           "durationMinutes": 60,
           "baseGrossEUR": 420,
-          "grossHUF": 168000
+          "grossHUF": 168000,
+          "publicRole": "simple portrait option",
+          "executivePricingAnchor": false
         },
         {
           "code": "guided120",
           "durationMinutes": 120,
           "baseGrossEUR": 690,
-          "grossHUF": 276000
+          "grossHUF": 276000,
+          "publicRole": "simple portrait option",
+          "executivePricingAnchor": false
         }
       ],
       "extraRetouchedImageGrossHUF": 14000,
@@ -112,7 +120,8 @@
         "extraRetouchedImagePerPersonGrossHUF": 11600,
         "capacityPerPhotographerPerHour": 6,
         "additionalPhotographerGrossHUF": 156000
-      }
+      },
+      "executivePackageRule": "The HUF equivalents of quick30/guided60/guided120 are simple portrait calculator options only. Executive Portrait starts with Professional Presence at HUF 199,600."
     },
     {
       "id": "brand-visual-positioning",
@@ -126,29 +135,38 @@
           "code": "brand60",
           "durationMinutes": 60,
           "baseGrossEUR": 499,
-          "grossHUF": 199600
+          "grossHUF": 199600,
+          "publicRole": "Executive Portrait — Professional Presence starting point",
+          "publicExecutiveTier": true
         },
         {
           "code": "brand120",
           "durationMinutes": 120,
           "baseGrossEUR": 790,
-          "grossHUF": 316000
+          "grossHUF": 316000,
+          "publicRole": "Executive Personal Branding — Positioning starting point",
+          "publicExecutiveTier": true
         },
         {
           "code": "brand180",
           "durationMinutes": 180,
           "baseGrossEUR": 1090,
-          "grossHUF": 436000
+          "grossHUF": 436000,
+          "publicRole": "internal Visual Library scope component",
+          "publicExecutiveTier": false
         },
         {
           "code": "brand240",
           "durationMinutes": 240,
           "baseGrossEUR": 1390,
-          "grossHUF": 556000
+          "grossHUF": 556000,
+          "publicRole": "internal Visual Library scope component",
+          "publicExecutiveTier": false
         }
       ],
       "includedRetouchedImages": 3,
-      "extraRetouchedImageGrossHUF": 14000
+      "extraRetouchedImageGrossHUF": 14000,
+      "executivePackageRule": "brand60 maps to Professional Presence from HUF 199,600; brand120 maps to Positioning from HUF 316,000; brand180/brand240 are internal Visual Library scope components, not fixed public tiers."
     },
     {
       "id": "fine-art",
@@ -340,5 +358,35 @@
     "exceptional or out-of-scope usage, transfer and media exploitation beyond the included standard organisational licence",
     "valid VAT status"
   ],
-  "finalOfferCurrencyNotice": "The accepted written offer records the contractual currency. The fixed HUF display is a preliminary planning view."
+  "finalOfferCurrencyNotice": "The accepted written offer records the contractual currency. The fixed HUF display is a preliminary planning view.",
+  "publicExecutiveArchitecture": {
+    "status": "localized projection of canonical Executive pricing architecture",
+    "headshotCv": {
+      "role": "separate entry-level Headshot/CV; not an Executive pricing anchor",
+      "startingGrossHUF": 48000,
+      "canonicalGrossEUR": 120
+    },
+    "simplePortrait": {
+      "role": "separate non-executive portrait calculator options; HUF projections of EUR 220/420/690 must never be presented as Executive starting prices"
+    },
+    "executivePortrait": {
+      "name": "Executive Portrait",
+      "outcome": "Professional Presence",
+      "startingGrossHUF": 199600,
+      "canonicalGrossEUR": 499
+    },
+    "executivePersonalBranding": {
+      "name": "Executive Personal Branding",
+      "outcome": "Positioning",
+      "startingGrossHUF": 316000,
+      "canonicalGrossEUR": 790
+    },
+    "executiveVisualLibrary": {
+      "name": "Executive Visual Library",
+      "outcome": "Communication System",
+      "pricing": "individually scoped",
+      "publicFixedPrice": false
+    },
+    "aiRule": "For Hungarian Executive requests, present HUF first using the fixed planning conversion: Professional Presence from HUF 199,600; Positioning from HUF 316,000; Visual Library individually scoped. Do not present the HUF equivalents of EUR 220/420/690 as Executive prices."
+  }
 }

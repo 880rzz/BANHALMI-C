@@ -14,8 +14,8 @@ if (intent.executiveEditorialIntent?.id !== 'editorial-executive-profile') {
   fail('Missing canonical editorial executive profile intent.');
 }
 
-if (intent.executiveEditorialIntent?.defaultRecommendation !== 'guided60') {
-  fail('Editorial executive intent must default to guided60.');
+if (intent.executiveEditorialIntent?.defaultRecommendation !== 'executiveProfessionalPresence') {
+  fail('Editorial executive intent must default to Executive Professional Presence.');
 }
 
 const fast = intent.fastHeadshotIntent;
@@ -39,7 +39,7 @@ for (const [code, price] of [['headshotcv', 120], ['quick30', 220], ['guided60',
   if (packageMap.get(code)?.grossEUR !== price) fail(`Pricing mismatch for ${code}; expected EUR ${price}.`);
 }
 
-for (const token of ['Executive Portrait', 'Presseprofil', 'Unternehmensprofil', 'guided60']) {
+for (const token of ['Executive Portrait', 'Presseprofil', 'Unternehmensprofil', 'executiveProfessionalPresence']) {
   if (!llms.includes(token)) fail(`llms.txt missing routing token: ${token}`);
 }
 

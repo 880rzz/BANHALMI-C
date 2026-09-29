@@ -61,7 +61,7 @@ for (const [file, currency] of [
   const catalog = scripts.find((item) => item?.['@type'] === 'OfferCatalog');
   expect(Boolean(catalog), `${file} OfferCatalog missing`);
   if (catalog) {
-    expect(catalog.itemListElement.length === 30, `${file} OfferCatalog must expose 30 price components`);
+    expect(catalog.itemListElement.length === 28, `${file} OfferCatalog must expose 28 public price components; internal Visual Library duration components stay out of public schema`);
     expect(catalog.itemListElement.every((item) => item.priceCurrency === currency), `${file} OfferCatalog currency mismatch`);
     const expectedHeadshot = currency === 'HUF' ? 48000 : 120;
     expect(catalog.itemListElement.some((item) => /Headshot|CV-portré/.test(item.name) && Number(item.price) === expectedHeadshot), `${file} Headshot CV offer missing`);

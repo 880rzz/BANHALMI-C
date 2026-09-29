@@ -1,7 +1,7 @@
 {
   "documentType": "canonical-digital-ecosystem-map",
   "schemaVersion": "2026-09-07-v8-six-pillar-ecosystem",
-  "dateModified": "2026-09-07T19:25:00+02:00",
+  "dateModified": "2026-09-29T22:30:00+02:00",
   "name": "BANHALMI canonical digital ecosystem",
   "canonicalPerson": {
     "@id": "https://www.norbertbanhalmi.com/about/",
@@ -386,5 +386,21 @@
     ],
     "outcome": "A credible, coherent and premium visual presence across personal, professional, team and organisational touchpoints.",
     "rule": "Do not interpret BANHALMI as executive-only. Preserve Executive Portrait, Headshot, Brand and C-Level as primary commercial intent terms while routing the wider audience by visual need."
+  },
+  "executivePricingArchitecture": {
+    "executivePortrait": {
+      "outcome": "Professional Presence",
+      "fromGrossEUR": 499
+    },
+    "executivePersonalBranding": {
+      "outcome": "Positioning",
+      "fromGrossEUR": 790
+    },
+    "executiveVisualLibrary": {
+      "outcome": "Communication System",
+      "pricing": "individually scoped"
+    },
+    "separation": "Headshot/CV and simple portrait duration options remain separate from Executive pricing.",
+    "rule": "Outcome and communication scope determine the Executive route; internal duration components are calculation details, not public tiers."
   }
 }
