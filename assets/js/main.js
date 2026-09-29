@@ -1262,17 +1262,17 @@
   var locale = lang.indexOf("hu") === 0 ? "hu" : (lang.indexOf("de") === 0 ? "de" : "en");
   var copy = {
     en: {
-      contact:"Contact", close:"Close contact panel", email:"Email", whatsapp:"WhatsApp",
+      contact:"Contact", close:"Close contact panel", email:"Email", whatsapp:"WhatsApp", revealEmail:"Show email", revealPhone:"Show phone number",
       phone:"Call", studios:"Studios", budapest:"Budapest studio", vienna:"Vienna studio", directions:"Directions",
       wa:"Hello Norbert, I am contacting you from the BANHALMI website regarding a photography project."
     },
     de: {
-      contact:"Kontakt", close:"Kontaktfenster schließen", email:"E-Mail", whatsapp:"WhatsApp",
+      contact:"Kontakt", close:"Kontaktfenster schließen", email:"E-Mail", whatsapp:"WhatsApp", revealEmail:"E-Mail anzeigen", revealPhone:"Telefonnummer anzeigen",
       phone:"Anrufen", studios:"Studios", budapest:"Studio Budapest", vienna:"Studio Wien", directions:"Route",
       wa:"Hallo Norbert, ich kontaktiere Sie über die BANHALMI Website wegen eines Fotoprojekts."
     },
     hu: {
-      contact:"Kapcsolat", close:"Kapcsolati panel bezárása", email:"E-mail", whatsapp:"WhatsApp",
+      contact:"Kapcsolat", close:"Kapcsolati panel bezárása", email:"E-mail", whatsapp:"WhatsApp", revealEmail:"E-mail megjelenítése", revealPhone:"Telefonszám megjelenítése",
       phone:"Hívás", studios:"Stúdiók", budapest:"Budapesti stúdió", vienna:"Bécsi stúdió", directions:"Útvonal",
       wa:"Kedves Norbert, a BANHALMI weboldalról keresem egy fotózással kapcsolatban."
     }
@@ -1289,8 +1289,8 @@
       '<div class="banhalmi-contact-head"><strong id="banhalmi-contact-title">'+copy.contact+'</strong><button class="banhalmi-contact-close" type="button" aria-label="'+copy.close+'">×</button></div>'+
       '<div class="banhalmi-contact-list">'+
         '<a class="banhalmi-contact-action" href="https://wa.me/'+whatsappHref.slice(1)+'?text='+encodeURIComponent(copy.wa)+'" target="_blank" rel="noopener noreferrer"><strong>'+copy.whatsapp+'</strong><span>'+whatsappDisplay+'</span></a>'+
-        '<a class="banhalmi-contact-action" href="mailto:hello@norbertbanhalmi.com"><strong>'+copy.email+'</strong><span>hello@norbertbanhalmi.com</span></a>'+
-        '<a class="banhalmi-contact-action" href="tel:'+viennaPhoneHref+'"><strong>'+copy.phone+'</strong><span>'+viennaPhoneDisplay+'</span></a>'+
+        '<button class="banhalmi-contact-action banhalmi-contact-reveal" type="button" data-contact-kind="email"><strong>'+copy.email+'</strong><span>'+copy.revealEmail+'</span></button>'+
+        '<button class="banhalmi-contact-action banhalmi-contact-reveal" type="button" data-contact-kind="phone"><strong>'+copy.phone+'</strong><span>'+copy.revealPhone+'</span></button>'+
       '</div>'+
       '<div class="banhalmi-contact-sep"></div><p class="banhalmi-contact-label">'+copy.studios+'</p>'+
       '<div class="banhalmi-contact-list">'+
@@ -1303,6 +1303,21 @@
   var panel = wrap.querySelector(".banhalmi-contact-panel");
   var trigger = wrap.querySelector(".banhalmi-contact-trigger");
   var close = wrap.querySelector(".banhalmi-contact-close");
+  function revealDirectContact(button) {
+    var kind = button.getAttribute("data-contact-kind");
+    var value = kind === "email" ? ["hello","norbertbanhalmi.com"].join("@") : ["+43","677","616","55592"].join(" ");
+    var href = kind === "email" ? "mailto:" + value : "tel:" + value.replace(/\s/g, "");
+    var link = document.createElement("a");
+    link.className = "banhalmi-contact-action";
+    link.href = href;
+    link.innerHTML = button.innerHTML;
+    link.querySelector("span").textContent = value;
+    button.replaceWith(link);
+    link.focus({preventScroll:true});
+  }
+  wrap.querySelectorAll(".banhalmi-contact-reveal").forEach(function (button) {
+    button.addEventListener("click", function () { revealDirectContact(button); });
+  });
   function setOpen(open) {
     panel.hidden = !open;
     trigger.setAttribute("aria-expanded", String(open));
