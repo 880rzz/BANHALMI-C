@@ -11,4 +11,9 @@ for(const [file,tokens] of Object.entries(checks)){const s=fs.readFileSync(file,
 const pricing=JSON.parse(fs.readFileSync('pricing.json','utf8'));
 if(pricing.priceComponentsGrossEUR.brandFastOneHour!==499||pricing.priceComponentsGrossEUR.brandTwoHours!==790){console.error('FAIL canonical brand anchors changed');failed=true;}
 for(const file of Object.keys(checks)){const s=fs.readFileSync(file,'utf8');if(/Executive (?:Portrait|portré)[^<]{0,30}(?:€220|220 €)/i.test(s)){console.error('FAIL low executive anchor leaked',file);failed=true;}}
+const quoteChecks={
+'requestaquote/index.html':['Executive & Personal Branding','Professional Presence — from €499','Positioning — from €790','Executive Visual Library'],
+'hu/ajanlatkeres/index.html':['Executive & Personal Branding','Professzionális jelenlét — 499 €-tól','Pozicionálás — 790 €-tól','Executive Visual Library'],
+'de-at/anfrage/index.html':['Executive & Personal Branding','Professional Presence — ab €499','Positionierung — ab €790','Executive Visual Library']};
+for(const [file,tokens] of Object.entries(quoteChecks)){const s=fs.readFileSync(file,'utf8');for(const token of tokens){if(!s.includes(token)){console.error('FAIL quote architecture',file,token);failed=true;}}}
 if(failed)process.exit(1);console.log('PASS: evidence-led Executive investment layer is consistent.');
