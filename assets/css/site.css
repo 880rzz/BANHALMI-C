@@ -4328,3 +4328,9 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 }
 
 /* APPLE-RESPONSIVE-CONTRACT-V1:END */
+
+/* EXECUTIVE INVESTMENT CUE — evidence-led, intentionally editorial rather than pricing-card UI */
+.executive-investment-note{max-width:52rem;margin:1.25rem 0 1.5rem;padding:.9rem 0;border-top:1px solid rgba(183,156,68,.42);border-bottom:1px solid rgba(183,156,68,.24)}
+.executive-investment-note p{margin:.25rem 0;max-width:48rem}
+.executive-investment-note strong{font-weight:600;letter-spacing:.01em}
+.executive-investment-note p:last-child{font-size:.94em;line-height:1.55}
