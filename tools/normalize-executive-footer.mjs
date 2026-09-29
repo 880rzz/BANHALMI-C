@@ -12,8 +12,8 @@ const variants = [
     "officeProfile": "Google Business Profile",
     "contactHref": "/contact/",
     "contactLabel": "Contact",
-    "viennaPhoneHref": "+4367764733262",
-    "viennaPhoneDisplay": "+43 677 647 332 62"
+    "viennaPhoneHref": "+4367761655592",
+    "viennaPhoneDisplay": "+43 677 616 55592"
   },
   {
     "heading": "Kontakt",
@@ -24,8 +24,8 @@ const variants = [
     "officeProfile": "Google-Unternehmensprofil",
     "contactHref": "/de-at/kontakt/",
     "contactLabel": "Kontakt",
-    "viennaPhoneHref": "+4367764733262",
-    "viennaPhoneDisplay": "+43 677 647 332 62"
+    "viennaPhoneHref": "+4367761655592",
+    "viennaPhoneDisplay": "+43 677 616 55592"
   },
   {
     "heading": "Kapcsolat",
