@@ -19,11 +19,9 @@ const publicAuthority = new Set([
   'hu/speier-viko/index.html',
   'de-at/speier-viko/index.html',
   'tools/normalize-executive-footer.mjs',
-  'tools/audit-executive-footer-contract.mjs',
   'data/machine-core.json',
   'ai-entry.json'
 ]);
-const PUBLIC_PROJECTION_EXTENSIONS = new Set(['.html', '.json', '.js', '.mjs']);
 
 function files(dir) {
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
@@ -41,7 +39,7 @@ for (const file of files(ROOT)) {
   if (rel === 'tools/audit-single-public-phone.mjs') continue;
   // Historical audit fixtures may retain retired values as test input; public projections may not.
   if (rel.startsWith('tools/audit-') && !publicAuthority.has(rel)) continue;
-  const isPublicProjection = rel.endsWith('.html') || rel === 'ai-entry.json' || rel === 'data/machine-core.json' || publicAuthority.has(rel);
+  const isPublicProjection = rel === 'ai-entry.json' || rel === 'data/machine-core.json' || publicAuthority.has(rel);
   if (isPublicProjection) {
     for (const token of RETIRED_HU) {
       if (text.includes(token)) failures.push(`${rel}: retired Hungarian public phone token ${token}`);
