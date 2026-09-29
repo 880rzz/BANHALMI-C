@@ -512,7 +512,7 @@ html body .bn-mega-menu .bn-mega-link[aria-current="page"]{
     block-size:auto!important;
     min-block-size:0!important;
     margin:0 auto!important;
-    padding:clamp(28px,2.4vw,40px) 0 clamp(30px,2.6vw,44px)!important;
+    padding:clamp(28px,2.4vw,40px) 0 clamp(24px,2vw,36px)!important;
   }
   html body .bn-mega-grid{
     display:grid!important;
