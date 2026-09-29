@@ -1,5 +1,5 @@
 {
-  "version": "2026-09-29-v46-art-menu-parity",
+  "version": "2026-09-29-v47-gallery-20px",
   "pageMaxPx": 1280,
   "structuredMaxPx": 1440,
   "readingMaxPx": 760,
@@ -247,12 +247,12 @@
       3840
     ],
     "gallery": {
-      "contractVersion": "v45",
+      "contractVersion": "v47",
       "desktopMinPx": 1101,
       "desktopColumns": 3,
       "layout": "css-grid",
       "reference": "BANHALMI ART homepage gallery",
-      "gap": "clamp(.8rem,1.35vw,1.45rem)",
+      "gap": "20px",
       "appliesTo": [
         ".gallery",
         ".pf-grid",
@@ -262,7 +262,10 @@
         ".service-lower-gallery-grid",
         ".portrait-reference-gallery",
         ".portrait-service-gallery"
-      ]
+      ],
+      "gapPx": 20,
+      "spacingAxes": "row-and-column",
+      "appliesAllBreakpoints": true
     }
   },
   "navigation": {
