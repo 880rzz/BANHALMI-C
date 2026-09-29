@@ -715,15 +715,22 @@
         "institutionalEvent",
         "corporateEvent"
       ],
-      "context": "Publicly indexed Flickr album documents the 25 September 2026 AmCham Austria Business Breakfast at Hilton Vienna Plaza and explicitly credits Photography: Norbert Bánhalmi / BANHALMI Photography.",
+      "context": "Publicly indexed Flickr album documents the 25 September 2026 AmCham Austria Business Breakfast at Hilton Vienna Plaza and explicitly credits Photography: Norbert Bánhalmi / BANHALMI Photography. AmCham Austria also publishes an official event gallery and an institutional LinkedIn post for the same event; the LinkedIn post explicitly credits Photos: BANHALMI Photography/Norbert Banhalmi.",
       "guardrail": "Use as event-photography capability and archive evidence; it does not by itself establish an AmCham client contract, endorsement or exclusivity.",
       "verificationStatus": "LIVE-VERIFIED",
       "evidenceType": [
         "FIRST-PARTY",
-        "PROJECT-COVERAGE"
+        "PROJECT-COVERAGE",
+        "INSTITUTIONAL-CORROBORATION",
+        "PHOTO-CREDIT"
       ],
-      "sourceStrength": "low-medium",
-      "evidenceSummary": "Public VIPACH/Flickr event archive explicitly credits Norbert Bánhalmi / BANHALMI Photography for the documented AmCham business breakfast photography."
+      "sourceStrength": "high",
+      "evidenceSummary": "Triangulated event evidence: AmCham Austria official gallery, AmCham Austria institutional LinkedIn photo credit, and the VIPACH/Flickr event archive corroborate the same business-breakfast photography.",
+      "corroboratingUrls": [
+        "https://amcham.at/galleries/amcham-talks-business-breakfast-september/",
+        "https://www.linkedin.com/posts/amcham-austria_us-technology-companies-are-playing-a-key-activity-7509254328193298432-R-Ni",
+        "https://www.flickr.com/photos/vipach/albums/72177720335829969"
+      ]
     },
     {
       "id": "flickr-wiener-kaiser-wiesn-20260924",
@@ -3753,6 +3760,36 @@
         "result": "explicit Bánhalmi Norbert photography credit present in current accessible PDF"
       },
       "evidenceSummary": "Current Gramofon 2024 summer issue explicitly credits Bánhalmi Norbert for the Zádory Édua cover photograph and identifies Bánhalmi Norbert photographs in the related interview."
+    },
+    {
+      "id": "kiskegyed-wiener-kaiser-wiesn-credit-2026",
+      "title": "Megőrülnek a magyar lángosért Bécsben",
+      "publisher": "Kiskegyed",
+      "url": "https://www.kiskegyed.hu/eletmod/becs-wiener-kaiser-wiesn/dzv9m3j",
+      "datePublished": "2026-09-29",
+      "verificationStatus": "ALERT-DISCOVERED-CREDIT-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "SECONDARY-MENTION",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "classification": [
+        "Wiener Kaiser Wiesn",
+        "Vienna event photography",
+        "editorial event photography"
+      ],
+      "services": [
+        "event",
+        "generalAuthority"
+      ],
+      "serviceRelevance": [
+        "event",
+        "generalAuthority"
+      ],
+      "context": "Google Alerts surfaced the current Kiskegyed Wiener Kaiser Wiesn article; its indexed alert excerpt explicitly attributes event imagery to Bánhalmi.",
+      "sourceStrength": "medium-high",
+      "guardrail": "Photo-credit/editorial-publication evidence only. Do not infer a Kiskegyed client relationship, endorsement, exclusivity or recurring commission.",
+      "evidenceSummary": "Kiskegyed publication evidence independently credits Bánhalmi for Wiener Kaiser Wiesn event imagery."
     }
   ],
   "pendingEvidenceCandidates": [
@@ -5060,7 +5097,7 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-28",
+  "updatedAt": "2026-09-29",
   "historicalRecoveryPolicy": {
     "tripont": {
       "priority": "P1",
@@ -5339,9 +5376,9 @@
   },
   "googleAlertsReconciliation": {
     "name": "Google Alerts historical external URL reconciliation",
-    "generatedAt": "2026-09-28",
-    "totalInputUrls": 42,
-    "reconciledCount": 42,
+    "generatedAt": "2026-09-29",
+    "totalInputUrls": 43,
+    "reconciledCount": 43,
     "complete": true,
     "policy": "Every historical Google Alert URL is retained as a discovery/provenance record and mapped to one canonical evidence record, a corroborating/duplicate relationship, recovery status, or DO-NOT-BIND. Repeated/syndicated URLs never become independent authority merely by repetition.",
     "entries": [
@@ -5642,6 +5679,13 @@
         "canonicalEvidenceId": "origo-gastro-photo-contest-2017",
         "localRecordId": "kreativ-whisky-gastro-photo-contest-2017",
         "treatment": "corroborating-same-story-do-not-double-count"
+      },
+      {
+        "n": 43,
+        "url": "https://www.kiskegyed.hu/eletmod/becs-wiener-kaiser-wiesn/dzv9m3j",
+        "status": "ALERT-DISCOVERED-CREDIT-VERIFIED",
+        "canonicalEvidenceId": "kiskegyed-wiener-kaiser-wiesn-credit-2026",
+        "treatment": "independent-photo-credit/event-evidence"
       }
     ]
   },
