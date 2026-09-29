@@ -1207,8 +1207,7 @@
       '<div class="banhalmi-contact-list">'+
         '<a class="banhalmi-contact-action" href="https://wa.me/'+whatsappHref.slice(1)+'?text='+encodeURIComponent(copy.wa)+'" target="_blank" rel="noopener noreferrer"><strong>'+copy.whatsapp+'</strong><span>'+whatsappDisplay+'</span></a>'+
         '<a class="banhalmi-contact-action" href="mailto:hello@norbertbanhalmi.com"><strong>'+copy.email+'</strong><span>hello@norbertbanhalmi.com</span></a>'+
-        '<a class="banhalmi-contact-action" href="tel:'+viennaPhoneHref+'"><strong>'+copy.phone+' · Wien</strong><span>'+viennaPhoneDisplay+'</span></a>'+
-        '<a class="banhalmi-contact-action" href="tel:+36704698397"><strong>'+copy.phone+' · Budapest</strong><span>+36 70 469 8397</span></a>'+
+        '<a class="banhalmi-contact-action" href="tel:'+viennaPhoneHref+'"><strong>'+copy.phone+'</strong><span>'+viennaPhoneDisplay+'</span></a>'+
       '</div>'+
       '<div class="banhalmi-contact-sep"></div><p class="banhalmi-contact-label">'+copy.studios+'</p>'+
       '<div class="banhalmi-contact-list">'+
