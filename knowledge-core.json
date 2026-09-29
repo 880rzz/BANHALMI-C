@@ -182,7 +182,14 @@
       "austrianVatPercent": 20,
       "rule": "Displayed orientation prices include 20% Austrian VAT unless a final written offer confirms a different legally verified tax treatment."
     },
-    "contractRule": "All website and AI-calculated prices are non-binding orientation estimates. The accepted written offer defines the contractual price, currency, scope and tax treatment."
+    "contractRule": "All website and AI-calculated prices are non-binding orientation estimates. The accepted written offer defines the contractual price, currency, scope and tax treatment.",
+    "executiveArchitecture": {
+      "executivePortrait": "Professional Presence from EUR 499",
+      "executivePersonalBranding": "Positioning from EUR 790",
+      "executiveVisualLibrary": "Communication System — individually scoped",
+      "separationRule": "Headshot/CV and EUR 220/420/690 simple portrait options are separate and are not Executive pricing anchors. Internal EUR 1090/1390 duration components are not fixed public Visual Library tiers.",
+      "commercialRule": "Route by communication outcome and scope; reduce scope rather than automatically discounting; do not frame Executive value as price per image."
+    }
   },
   "trustAndGovernance": {
     "humanTrustCenter": "https://www.norbertbanhalmi.com/trust/",
