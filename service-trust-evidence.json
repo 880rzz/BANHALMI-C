@@ -159,7 +159,8 @@
         "rolunk-profile-possible-is-just-a-word-2025",
         "milcclub-most-vagy-soha-organizer-2020",
         "tamron-new-york-ballerina-project-2018",
-        "bme-vik-holgyvalasz-photo-credit-2017"
+        "bme-vik-holgyvalasz-photo-credit-2017",
+        "kiskegyed-wiener-kaiser-wiesn-credit-20260928"
       ],
       "professionalRegistryEvidence": [
         "linkedin-nemanja-lazendic-7503011271332773888",
@@ -204,7 +205,8 @@
         "rolunk-profile-possible-is-just-a-word-2025",
         "rolunk-bmi-crowdfunding-visual-communication-2026",
         "orf-becsi-szelet-founder-2023",
-        "babafoto-exhibition-hipstudio-2010"
+        "babafoto-exhibition-hipstudio-2010",
+        "kiskegyed-wiener-kaiser-wiesn-credit-20260928"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -3753,6 +3755,33 @@
         "result": "explicit Bánhalmi Norbert photography credit present in current accessible PDF"
       },
       "evidenceSummary": "Current Gramofon 2024 summer issue explicitly credits Bánhalmi Norbert for the Zádory Édua cover photograph and identifies Bánhalmi Norbert photographs in the related interview."
+    },
+    {
+      "id": "kiskegyed-wiener-kaiser-wiesn-credit-20260928",
+      "title": "Megőrülnek a magyar lángosért Bécsben",
+      "publisher": "Kiskegyed",
+      "url": "https://www.kiskegyed.hu/eletmod/becs-wiener-kaiser-wiesn/dzv9m3j",
+      "evidenceKind": "independent editorial photo credit",
+      "classification": [
+        "event photography",
+        "Vienna",
+        "tourism",
+        "brand activation"
+      ],
+      "services": [
+        "event",
+        "brand",
+        "generalAuthority"
+      ],
+      "context": "Kiskegyed publishes Wiener Kaiser Wiesn coverage dated 28 September 2026 and visibly credits a festival photograph to Bánhalmi Norbert.",
+      "evidenceSummary": "Independent editorial reuse and explicit photo credit provide additional Vienna event/editorial photography evidence.",
+      "guardrail": "Photo-credit evidence only; do not infer organizer/client status, endorsement or exclusivity from publication use.",
+      "verificationStatus": "LIVE-VERIFIED",
+      "evidenceType": [
+        "PHOTO-CREDIT",
+        "PROFESSIONAL-PUBLICATION"
+      ],
+      "sourceStrength": "high"
     }
   ],
   "pendingEvidenceCandidates": [
