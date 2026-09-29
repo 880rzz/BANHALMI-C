@@ -546,6 +546,7 @@ html body .bn-mega-menu .bn-mega-link[aria-current="page"]{
   }
   html body .bn-mega-item{margin:0!important;padding:0 0 8px!important;border-bottom:1px solid rgba(245,245,247,.12)!important;}
   html body .bn-mega-item+.bn-mega-item{margin-top:14px!important;}
+  html body .bn-mega-column .bn-mega-item:last-child{padding-bottom:0!important;border-bottom:0!important;}
   html body .bn-mega-link{
     display:inline-flex!important;
     align-items:center!important;
