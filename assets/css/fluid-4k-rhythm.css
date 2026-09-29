@@ -1297,7 +1297,7 @@ html body .bn-mega-item{
     min-height:0!important;
     height:auto!important;
     display:block!important;
-    padding:clamp(32px,4vh,48px) 0 30px!important;
+    padding:clamp(32px,4vh,48px) 0 20px!important;
   }
   html body .bn-mega-grid{
     width:100%!important;
