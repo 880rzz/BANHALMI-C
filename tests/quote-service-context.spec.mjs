@@ -136,7 +136,7 @@ const serviceRoutes=[
     "kind": "commercial"
   },
   {
-    "route": "/glamour/index.html",
+    "route": "/fine-art/index.html",
     "service": "fine-art",
     "category": "art",
     "kind": "fine-art"
