@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-09-30-v15-pricing-intent-sync",
+  "schemaVersion": "1.4",
   "canonicalId": "https://www.norbertbanhalmi.com/data/machine-core.json",
   "canonicalUrl": "https://www.norbertbanhalmi.com/",
   "dateModifiedPolicy": "Generated projections inherit the latest committed modification time of this canonical core. Source audits remain read-only; production projections are generated only inside the immutable deployment artifact.",
