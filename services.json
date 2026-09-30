@@ -115,7 +115,7 @@
     {
       "@type": "Service",
       "position": 4,
-      "@id": "https://www.norbertbanhalmi.com/glamour/#service",
+      "@id": "https://www.norbertbanhalmi.com/fine-art/#service",
       "name": "Fine Art Photography",
       "alternateName": [
         "Fine-art portraiture",
@@ -141,9 +141,9 @@
         "Hungary",
         "Worldwide"
       ],
-      "url": "https://www.norbertbanhalmi.com/glamour/",
+      "url": "https://www.norbertbanhalmi.com/fine-art/",
       "localizedUrls": {
-        "en": "https://www.norbertbanhalmi.com/glamour/",
+        "en": "https://www.norbertbanhalmi.com/fine-art/",
         "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
         "de-AT": "https://www.norbertbanhalmi.com/de-at/fine-art/"
       },
