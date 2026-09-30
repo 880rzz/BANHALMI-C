@@ -5,6 +5,11 @@
   },
   "redirects": [
     {
+      "source": "/glamour",
+      "destination": "/fine-art/",
+      "permanent": true
+    },
+    {
       "source": "/en/work",
       "destination": "https://www.banhalmi.art/",
       "permanent": true
