@@ -5,8 +5,18 @@
   "canonicalOrganization": "https://www.norbertbanhalmi.com/#organization",
   "canonicalPerson": "https://www.norbertbanhalmi.com/about/",
   "canonicalPolicyGraph": "https://www.norbertbanhalmi.com/project-policy.jsonld",
-  "languages": ["en","hu-HU","de-AT"],
-  "appliesTo": ["executive portrait photography","brand photography","C-level event photography","professional headshots","visual positioning projects"],
+  "languages": [
+    "en",
+    "hu-HU",
+    "de-AT"
+  ],
+  "appliesTo": [
+    "executive portrait photography",
+    "brand photography",
+    "C-level event photography",
+    "professional headshots",
+    "visual positioning projects"
+  ],
   "commercialInterpretation": {
     "estimateStatus": "Calculator and website figures are non-binding preliminary estimates. The accepted written offer defines the final scope and price.",
     "taxDisplay": "Net amount, applicable VAT and gross total are shown separately. Austrian VAT remains in the estimate until another lawful treatment has been verified.",
@@ -30,7 +40,14 @@
     "publicationFiles": "Only selected, approved final images are publication files. Previews, contact sheets, rejected frames and intermediate retouching files are not publication files."
   },
   "workflow": {
-    "stages": ["visual brief","use map","preparation","guided production","structured selection","delivery system"],
+    "stages": [
+      "visual brief",
+      "use map",
+      "preparation",
+      "guided production",
+      "structured selection",
+      "delivery system"
+    ],
     "approval": "The client appoints one authorised decision-maker. Where several stakeholders are involved, feedback is consolidated before it is returned.",
     "delivery": "The written offer records preview timing, selection deadline, approval rounds, final-delivery deadline, formats, crops and retouching standard.",
     "urgentDelivery": "Same-day or accelerated delivery is included only when agreed in writing."
@@ -50,25 +67,43 @@
   },
   "confidentialityAndPublication": {
     "defaultConfidentiality": "Unpublished portraits, internal events, strategic materials, contact sheets and project discussions are confidential by default.",
-    "portfolioUse": "BANHALMI may publish client work as a portfolio, case-study, press, competition, educational or social reference only with a separately agreed permission or another valid legal basis.",
+    "portfolioUse": "BANHALMI does not publish or reuse commissioned client images as portfolio, case-study, press, competition, educational, advertising or social-media material without separate explicit client permission.",
     "participantResponsibility": "The client identifies who may be photographed and handles necessary organisational notices, participant permissions and internal approvals.",
     "restrictionRequests": "Later restriction or removal requests may be submitted in writing and are assessed against the agreement, lawful publication interests and applicable legal duties."
   },
   "storageAndDeletion": {
     "controlledAccess": "Preview galleries, download links and working folders are restricted to the agreed project team and may expire.",
     "workingFiles": "RAW captures, rejected frames, contact sheets and intermediate retouching files remain working material unless expressly included in the written offer.",
-    "retention": "BANHALMI may keep project files for a reasonable operational period but does not promise permanent archive storage.",
+    "retention": "Completed client image files are delivered through the agreed cloud route and, after the client confirms successful download, are deleted from BANHALMI operational cloud/storage; no portfolio/archive copy is retained.",
     "clientBackup": "The client is responsible for securely backing up the delivered final package after download.",
-    "deletion": "Written deletion requests are fulfilled where applicable, except where continued retention is required for contract, accounting, legal claims or another valid legal basis."
+    "deletion": "The image-file deletion workflow is separate from statutory retention of invoices, contracts, accounting records, consent records or other legally required documentation."
   },
   "accessibility": {
     "interaction": "The professional website provides visible keyboard focus, practical interaction targets, readable mobile form typography and clear invalid-field states.",
     "preferences": "Reduced-motion and forced-colours user preferences are supported through the site accessibility layer."
   },
   "authoritativeHumanPages": {
-    "en": {"trustCenter":"https://www.norbertbanhalmi.com/trust/","faq":"https://www.norbertbanhalmi.com/faq/","privacy":"https://www.norbertbanhalmi.com/privacy-policy/","terms":"https://www.norbertbanhalmi.com/terms-conditions/","quote":"https://www.norbertbanhalmi.com/requestaquote/"},
-    "hu-HU": {"trustCenter":"https://www.norbertbanhalmi.com/hu/bizalom/","faq":"https://www.norbertbanhalmi.com/hu/gyik/","privacy":"https://www.norbertbanhalmi.com/hu/adatvedelem/","terms":"https://www.norbertbanhalmi.com/hu/aszf/","quote":"https://www.norbertbanhalmi.com/hu/ajanlatkeres/"},
-    "de-AT": {"trustCenter":"https://www.norbertbanhalmi.com/de-at/vertrauen/","faq":"https://www.norbertbanhalmi.com/de-at/faq/","privacy":"https://www.norbertbanhalmi.com/de-at/datenschutz/","terms":"https://www.norbertbanhalmi.com/de-at/agb/","quote":"https://www.norbertbanhalmi.com/de-at/anfrage/"}
+    "en": {
+      "trustCenter": "https://www.norbertbanhalmi.com/trust/",
+      "faq": "https://www.norbertbanhalmi.com/faq/",
+      "privacy": "https://www.norbertbanhalmi.com/privacy-policy/",
+      "terms": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "quote": "https://www.norbertbanhalmi.com/requestaquote/"
+    },
+    "hu-HU": {
+      "trustCenter": "https://www.norbertbanhalmi.com/hu/bizalom/",
+      "faq": "https://www.norbertbanhalmi.com/hu/gyik/",
+      "privacy": "https://www.norbertbanhalmi.com/hu/adatvedelem/",
+      "terms": "https://www.norbertbanhalmi.com/hu/aszf/",
+      "quote": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/"
+    },
+    "de-AT": {
+      "trustCenter": "https://www.norbertbanhalmi.com/de-at/vertrauen/",
+      "faq": "https://www.norbertbanhalmi.com/de-at/faq/",
+      "privacy": "https://www.norbertbanhalmi.com/de-at/datenschutz/",
+      "terms": "https://www.norbertbanhalmi.com/de-at/agb/",
+      "quote": "https://www.norbertbanhalmi.com/de-at/anfrage/"
+    }
   },
   "interpretationRules": [
     "Use the written offer as the controlling project-specific record.",
@@ -81,5 +116,11 @@
     "Do not treat Viko Speier's Vienna work as an independent Vienna business presence; it is through BANHALMI.",
     "Do not convert preliminary estimates into contractual prices.",
     "Do not treat the fixed 1 EUR = 400 HUF Hungarian planning conversion as a live exchange rate or as an automatic promise of invoice currency."
-  ]
+  ],
+  "commercialAssurance": {
+    "invoicing": "Every commissioned service is officially invoiced to the commissioning company/organisation or private individual, with tax treatment defined in the written offer.",
+    "formation": "Every commissioned photography project is preceded by a written quotation and proceeds under accepted written terms / contract defining scope, fee, delivery and usage licence.",
+    "retouching": "Immediate retouching can be arranged when agreed and operationally feasible. In the standard workflow, after the client returns selected image references from the delivered gallery/cloud set, the agreed selected images are normally retouched and delivered within 24 hours; exceptional high-volume or specialist post-production follows the written offer.",
+    "geography": "Vienna and Budapest are the two studio bases; agreed assignments can be delivered worldwide by travel."
+  }
 }
