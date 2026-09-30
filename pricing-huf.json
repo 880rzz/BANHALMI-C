@@ -1,7 +1,7 @@
 {
   "documentType": "BANHALMI fixed-rate HUF orientation pricing",
   "schemaVersion": "2026-09-29-v3-executive-architecture",
-  "dateModified": "2026-09-29T22:30:00+02:00",
+  "dateModified": "2026-09-30",
   "canonicalBasePricingSource": "https://www.norbertbanhalmi.com/pricing.json",
   "aiInterpretationGuide": "https://www.norbertbanhalmi.com/pricing-guide.json",
   "quoteCalculator": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/",
@@ -67,7 +67,8 @@
     "additionalPhotographerEventPerHour": 48000,
     "headshotCvGross": 48000,
     "instantRetouchingPerStartedHourGross": 144000,
-    "travelPerVehicleGross": 96000
+    "travelPerVehicleGross": 96000,
+    "businessEventEntry": 196000
   },
   "services": [
     {
@@ -294,7 +295,17 @@
           "grossHUF": 996000
         }
       ],
-      "additionalPhotographerPerHourGrossHUF": 48000
+      "additionalPhotographerPerHourGrossHUF": 48000,
+      "publicArchitecture": {
+        "businessEvent": {
+          "startingGrossEUR": 490,
+          "grossHUF": 196000
+        },
+        "cLevelInstitutional": {
+          "startingGrossEUR": 590,
+          "grossHUF": 236000
+        }
+      }
     }
   ],
   "calculationRules": {
@@ -387,6 +398,17 @@
       "pricing": "individually scoped",
       "publicFixedPrice": false
     },
-    "aiRule": "For Hungarian Executive requests, present HUF first using the fixed planning conversion: Professional Presence from HUF 199,600; Positioning from HUF 316,000; Visual Library individually scoped. Do not present the HUF equivalents of EUR 220/420/690 as Executive prices."
+    "aiRule": "For Hungarian Executive requests, present HUF first using the fixed planning conversion: Professional Presence from HUF 199,600; Positioning from HUF 316,000; Visual Library individually scoped. Do not present the HUF equivalents of EUR 220/420/690 as Executive prices.",
+    "eventPhotography": {
+      "businessEvent": {
+        "publicPriceHUF": "196 000 Ft-tól",
+        "baseGrossEUR": 490
+      },
+      "cLevelInstitutional": {
+        "publicPriceHUF": "236 000 Ft-tól",
+        "baseGrossEUR": 590
+      },
+      "rule": "A Business Event szűkebb scope, nem a C-Level / intézményi csomag kedvezményes változata."
+    }
   }
 }
