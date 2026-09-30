@@ -86,7 +86,7 @@ for (const token of [
   'non-binding preliminary estimates',
   'Do not infer a universal percentage',
   'Each invoice states its payment deadline',
-  'not automatically grant BANHALMI portfolio',
+  'does not publish or reuse commissioned client images',
   'three active physical BANHALMI business locations'
 ]) if (!ai.includes(token)) errors.push(`ai.txt missing ${token}`);
 
