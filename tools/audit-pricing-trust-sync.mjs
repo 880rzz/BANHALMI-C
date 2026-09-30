@@ -13,6 +13,7 @@ const trust=json('service-trust-evidence.json');
 const services=json('services.json');
 const needs=json('customer-needs.json');
 const intents=json('customer-intent-model.json');
+const parseJsonLd=(html)=>[...html.matchAll(new RegExp('<script type="application/ld\\+json"[^>]*>([\\s\\S]*?)</script>','g'))].map(m=>{try{return JSON.parse(m[1])}catch{return null}}).filter(Boolean);
 
 const eur=pricing.priceComponentsGrossEUR||{};
 for(const [k,v] of Object.entries({businessEventEntry:490,eventOneHour:590,fineArtOneHour:690,brandTwoHours:790})){
@@ -78,7 +79,7 @@ const servicePages={
 };
 for(const [file,expected] of Object.entries(servicePages)){
  const html=read(file);
- const scripts=[...html.matchAll(/<script type="application\\/ld\\+json"[^>]*>([\\s\\S]*?)<\\/script>/g)].map(m=>{try{return JSON.parse(m[1])}catch{return null}}).filter(Boolean);
+ const scripts=parseJsonLd(html);
  const cat=scripts.find(x=>x?.['@type']==='OfferCatalog');
  fail(Boolean(cat),`${file}: OfferCatalog missing`);
  if(cat){
@@ -88,7 +89,7 @@ for(const [file,expected] of Object.entries(servicePages)){
 }
 
 const hu=read('hu/ajanlatkeres/index.html');
-const huScripts=[...hu.matchAll(/<script type="application\\/ld\\+json">([\\s\\S]*?)<\\/script>/g)].map(m=>{try{return JSON.parse(m[1])}catch{return null}}).filter(Boolean);
+const huScripts=parseJsonLd(hu);
 const huCat=huScripts.find(x=>x?.['@type']==='OfferCatalog');
 fail(huCat?.itemListElement?.length===28,'HU quote OfferCatalog must remain exactly 28 public components');
 for(const token of ['Business Event bruttó 196 000 Ft-tól (€490)','C-Level / intézményi','Fine Art / művészi akt','1 EUR = 400 HUF']){
