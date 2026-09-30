@@ -38,7 +38,7 @@ if (fs.existsSync(policyPath)) {
     'Copyright remains with the photographer',
     'one authorised decision-maker',
     'confidential by default',
-    'does not promise permanent archive storage',
+    'no portfolio/archive copy is retained',
     'visible keyboard focus'
   ]) if (!policyText.includes(token)) errors.push(`project-policy.json missing policy token: ${token}`);
   if (policy.commercialInterpretation?.hungarianOrientationCurrency) {
