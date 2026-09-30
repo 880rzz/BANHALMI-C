@@ -177,9 +177,9 @@ Norbert Banhalmi recalls that digital image-making entered his life during the M
 - Each invoice states its payment deadline. An overdue agreed payment may pause production or final delivery, subject to the accepted agreement and applicable law.
 - Additional work and third-party costs require written approval before invoicing unless already defined in the accepted agreement.
 - Only selected and approved final files are publication assets. Previews, contact sheets, rejected frames, RAW captures and intermediate retouching files are not publication files unless expressly included.
-- Delivery or payment does not automatically grant BANHALMI portfolio, case-study, press, competition, educational or social-reference rights.
+- BANHALMI does not publish or reuse commissioned client images for portfolio, advertising, social media, press, competition, education or other promotional purposes without separate explicit client permission.
 - Unpublished portraits, internal events, strategic materials and project discussions are confidential by default.
-- Project files may be retained for a reasonable operational period, but permanent archive storage is not guaranteed. The client is responsible for backing up delivered files.
+- Completed client image files are delivered through the agreed cloud route. After the client confirms successful download, BANHALMI deletes the delivered client image files from operational cloud/storage and retains no portfolio/archive copy. The client is responsible for securely backing up the delivered package; statutory business records follow separate legal retention duties.
 - Vienna and Budapest are two operating cities within one enterprise and one project system, with three active physical BANHALMI business locations: two studios and one separate Vienna office/client meeting location. They are not separate providers or entities.
 - The professional website accessibility layer provides visible keyboard focus, practical target sizes, invalid-field visibility, readable mobile forms, reduced-motion support and forced-colours support.
 <!-- PROJECT-POLICY-SYNC:END -->
