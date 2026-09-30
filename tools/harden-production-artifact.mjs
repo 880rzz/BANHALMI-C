@@ -80,16 +80,16 @@ function hardenVikoRelationshipSemantics(html) {
       '<dt>Märkte</dt><dd>Budapest · Wien über BANHALMI · internationale Projekte</dd>'
     ],
     [
-      '<span>Vienna office</span><strong>+43 677 647 332 62</strong>',
-      '<span>Vienna through BANHALMI</span><strong>+43 677 647 332 62</strong>'
+      '<span>Vienna office</span><strong>+43 677 616 55592</strong>',
+      '<span>Vienna through BANHALMI</span><strong>+43 677 616 55592</strong>'
     ],
     [
-      '<span>Bécsi iroda</span><strong>+43 677 647 332 62</strong>',
-      '<span>Bécs a BANHALMI-n keresztül</span><strong>+43 677 647 332 62</strong>'
+      '<span>Bécsi iroda</span><strong>+43 677 616 55592</strong>',
+      '<span>Bécs a BANHALMI-n keresztül</span><strong>+43 677 616 55592</strong>'
     ],
     [
-      '<span>Wiener Büro</span><strong>+43 677 647 332 62</strong>',
-      '<span>Wien über BANHALMI</span><strong>+43 677 647 332 62</strong>'
+      '<span>Wiener Büro</span><strong>+43 677 616 55592</strong>',
+      '<span>Wien über BANHALMI</span><strong>+43 677 616 55592</strong>'
     ]
   ];
   for (const [from, to] of replacements) {
