@@ -2983,6 +2983,56 @@
           "value": "^de.*"
         }
       ]
+    },
+    {
+      "source": "/cvfotozas",
+      "destination": "/hu/portre/",
+      "permanent": true
+    },
+    {
+      "source": "/portrefotozas",
+      "destination": "/hu/portre/",
+      "permanent": true
+    },
+    {
+      "source": "/portfoliofotozas",
+      "destination": "/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio-fotozas-budapest",
+      "destination": "/hu/brand/",
+      "permanent": true
+    },
+    {
+      "source": "/profifotos",
+      "destination": "/hu/",
+      "permanent": true
+    },
+    {
+      "source": "/babafotozas",
+      "destination": "/hu/rendezvenyfotozas/",
+      "permanent": true
+    },
+    {
+      "source": "/csaladi-fotozas",
+      "destination": "/hu/rendezvenyfotozas/",
+      "permanent": true
+    },
+    {
+      "source": "/csaladifotozas",
+      "destination": "/hu/rendezvenyfotozas/",
+      "permanent": true
+    },
+    {
+      "source": "/gyermekfotozas",
+      "destination": "/hu/rendezvenyfotozas/",
+      "permanent": true
+    },
+    {
+      "source": "/eskuvoi-fotozas-tihany",
+      "destination": "/hu/rendezvenyfotozas/",
+      "permanent": true
     }
   ]
 }
