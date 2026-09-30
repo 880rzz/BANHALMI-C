@@ -19,7 +19,7 @@ function links(html){ return [...html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\
 function visibleText(html){ return html.replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi,' ').replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi,' ').replace(/<noscript\b[^>]*>[\s\S]*?<\/noscript>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&amp;/g,'&').replace(/&nbsp;/g,' ').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g,' ').trim(); }
 const forbiddenPortraitSplitRoutes=['/headshot/','/headshots/','/executive-portrait/','/executive-portraits/','/c-level-business-photography/','/c-level-business/','/business-photography/','/visual-positioning/','/personal-visual-positioning/','/lifestyle-portrait/','/hu/headshot/','/hu/executive-portre/','/hu/c-level-uzleti-fotozas/','/hu/vizualis-pozicionalas/','/hu/lifestyle-portre/','/de-at/headshot/','/de-at/headshots/','/de-at/executive-portraet/','/de-at/c-level-businessfotografie/','/de-at/visuelle-positionierung/','/de-at/lifestyle-portraet/'];
 const serviceMap={
-  'index.html':['/portrait/','/lifestyle/','/event-photography/','/glamour/'],
+  'index.html':['/portrait/','/lifestyle/','/event-photography/','/fine-art/'],
   'hu/index.html':['/hu/portre/','/hu/brand/','/hu/rendezvenyfotozas/','/hu/muveszi-fotografia/'],
   'de-at/index.html':['/de-at/portrait/','/de-at/brand/','/de-at/eventfotografie/','/de-at/fine-art/']
 };
@@ -34,9 +34,9 @@ for(const [file,expected] of Object.entries(serviceMap)){
 assert(read('index.html').includes('For leaders, founders and experts who need one credible visual identity across LinkedIn, company websites, press, speaking and internal communication—from a precise headshot to a complete public portrait system.'), 'English portrait card must include consolidated portrait range');
 assert(read('hu/index.html').includes('Vezetőknek, alapítóknak és szakértőknek, akiknek a LinkedInen, a vállalati weboldalon, a sajtóban, előadásokon és a belső kommunikációban is hiteles, egységes képi jelenlétre van szükségük — a pontos profilképtől a teljes nyilvános portrérendszerig.'), 'Hungarian portrait card must include consolidated portrait range');
 assert(read('de-at/index.html').includes('Für Führungskräfte, Gründer:innen und Expert:innen, die auf LinkedIn, der Unternehmenswebsite, in Presse, Vorträgen und interner Kommunikation eine glaubwürdige, konsistente visuelle Identität benötigen — vom präzisen Headshot bis zum vollständigen öffentlichen Porträtsystem.'), 'German portrait card must include consolidated portrait range');
-for(const p of ['gallery/index.html','hu/gallery/index.html','de-at/gallery/index.html','de/portrait/index.html','de/brand/index.html','de/eventfotografie/index.html','de/fine-art/index.html','de-at/glamour/index.html','mybest/index.html','de-at/mybest/index.html']) assert(!exists(p), `${p}: deleted redundant page still exists`);
+for(const p of ['gallery/index.html','hu/gallery/index.html','de-at/gallery/index.html','de/portrait/index.html','de/brand/index.html','de/eventfotografie/index.html','de/fine-art/index.html','de-at/fine-art/index.html','mybest/index.html','de-at/mybest/index.html']) assert(!exists(p), `${p}: deleted redundant page still exists`);
 const routeText=htmlFiles().map(p=>read(p)).join('\n')+'\n'+['sitemap.xml','llms.txt','llms-full.txt','services.json'].filter(exists).map(read).join('\n');
-for(const route of ['/de/portrait/','/de/brand/','/de/eventfotografie/','/de/fine-art/','/de-at/glamour/','/mybest/','/de-at/mybest/']) assert(!new RegExp(`(href="|https://www\.norbertbanhalmi\.com)${route.replaceAll('/','\/')}`).test(routeText), `redundant route reference remains: ${route}`);
+for(const route of ['/de/portrait/','/de/brand/','/de/eventfotografie/','/de/fine-art/','/de-at/fine-art/','/mybest/','/de-at/mybest/']) assert(!new RegExp(`(href="|https://www\.norbertbanhalmi\.com)${route.replaceAll('/','\/')}`).test(routeText), `redundant route reference remains: ${route}`);
 for(const route of forbiddenPortraitSplitRoutes){
   const file=route.slice(1)+'index.html';
   assert(!exists(file), `${file}: portrait subservice route must not exist as standalone page`);
@@ -111,7 +111,7 @@ for(const file of htmlFiles()){
   }
 }
 const sitemap=read('sitemap.xml');
-for(const route of ['/portrait/','/lifestyle/','/event-photography/','/glamour/','/hu/portre/','/hu/brand/','/hu/rendezvenyfotozas/','/hu/muveszi-fotografia/','/de-at/portrait/','/de-at/brand/','/de-at/eventfotografie/','/de-at/fine-art/']) assert(sitemap.includes(`https://www.norbertbanhalmi.com${route}`), `sitemap missing ${route}`);
+for(const route of ['/portrait/','/lifestyle/','/event-photography/','/fine-art/','/hu/portre/','/hu/brand/','/hu/rendezvenyfotozas/','/hu/muveszi-fotografia/','/de-at/portrait/','/de-at/brand/','/de-at/eventfotografie/','/de-at/fine-art/']) assert(sitemap.includes(`https://www.norbertbanhalmi.com${route}`), `sitemap missing ${route}`);
 const partnerPages={'partners/index.html':'/partners/','de-at/partner/index.html':'/de-at/partner/','hu/partnerek/index.html':'/hu/partnerek/'};
 const partnerData=JSON.parse(read('partners.json'));
 assert(partnerData['@type']==='ItemList'&&partnerData.numberOfItems===29, 'partners.json must expose all 29 documented organizations');
