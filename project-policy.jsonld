@@ -46,9 +46,9 @@
         {"@type": "PropertyValue", "name": "Approval", "value": "The client appoints one authorised decision-maker and consolidates multi-stakeholder feedback."},
         {"@type": "PropertyValue", "name": "Publication files", "value": "Only selected and approved final files are publication assets; previews, contact sheets, rejected frames and intermediate retouching files are not."},
         {"@type": "PropertyValue", "name": "Confidentiality", "value": "Unpublished portraits, internal events, strategic materials, contact sheets and project discussions are confidential by default."},
-        {"@type": "PropertyValue", "name": "Portfolio permission", "value": "Delivery or payment does not automatically grant BANHALMI portfolio or reference rights; a separate permission or valid legal basis is required."},
-        {"@type": "PropertyValue", "name": "Storage", "value": "Project files may be retained for a reasonable operational period, but permanent archive storage is not guaranteed and the client must back up delivered files."},
-        {"@type": "PropertyValue", "name": "Deletion", "value": "Written deletion requests are handled where applicable, subject to contract, accounting, legal-claim and other valid retention duties."},
+        {"@type": "PropertyValue", "name": "Portfolio permission", "value": "BANHALMI does not publish or reuse commissioned client images for portfolio, advertising, social media, press, competition, education or other promotional purposes without separate explicit client permission."},
+        {"@type": "PropertyValue", "name": "Storage", "value": "Completed client image files are delivered through the agreed cloud route and deleted from BANHALMI operational cloud/storage after the client confirms successful download; no portfolio/archive copy is retained. Statutory business records follow their separate legal retention duties."},
+        {"@type": "PropertyValue", "name": "Deletion", "value": "Image-file deletion after confirmed download is separate from statutory retention of invoices, contracts, accounting records, consent records and other legally required documentation."},
         {"@type": "PropertyValue", "name": "Physical business locations", "value": "BANHALMI operates in two cities through three active physical business locations: Vienna Studio (1010), Vienna office/client meeting location (1180), and Budapest Studio (1111). The Vienna office is not a studio."},
         {"@type": "PropertyValue", "name": "Accessibility", "value": "The professional site supports visible keyboard focus, practical interaction targets, invalid-field visibility, reduced motion and forced colours."}
       ]
@@ -64,7 +64,7 @@
         {"@type": "HowToStep", "position": 3, "name": "Preparation"},
         {"@type": "HowToStep", "position": 4, "name": "Guided production"},
         {"@type": "HowToStep", "position": 5, "name": "Structured selection"},
-        {"@type": "HowToStep", "position": 6, "name": "Delivery system"}
+        {"@type": "HowToStep", "position": 6, "name": "Cloud delivery, client download confirmation and image-file deletion"}
       ]
     }
   ]

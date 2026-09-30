@@ -38,7 +38,7 @@ if (fs.existsSync(policyPath)) {
     'Copyright remains with the photographer',
     'one authorised decision-maker',
     'confidential by default',
-    'does not promise permanent archive storage',
+    'no portfolio/archive copy is retained',
     'visible keyboard focus'
   ]) if (!policyText.includes(token)) errors.push(`project-policy.json missing policy token: ${token}`);
   if (policy.commercialInterpretation?.hungarianOrientationCurrency) {
@@ -86,7 +86,7 @@ for (const token of [
   'non-binding preliminary estimates',
   'Do not infer a universal percentage',
   'Each invoice states its payment deadline',
-  'not automatically grant BANHALMI portfolio',
+  'does not publish or reuse commissioned client images',
   'three active physical BANHALMI business locations'
 ]) if (!ai.includes(token)) errors.push(`ai.txt missing ${token}`);
 

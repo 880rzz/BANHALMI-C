@@ -247,7 +247,19 @@
           "scope": "leadership, conference, institutional and diplomatic event"
         },
         "evidenceRole": "Institutional/event publications, professional registrations and documented event records support capability and operating context. Business Event is narrower scope, not a discounted premium tier."
-      }
+      },
+      "capacityEvidence": {
+        "network": "VIPACH professional photography and video network",
+        "scale": "close to 50 professional photographers and videographers",
+        "coverage": "Austria and Hungary",
+        "operationalUse": "available as an extended professional network for larger, parallel or time-critical productions; BANHALMI defines the commissioned team and remains responsible for visual direction and final delivery",
+        "source": "https://www.vipach.at/ajanlatkeres",
+        "evidenceStatus": "public first-party VIPACH statement"
+      },
+      "relationshipEvidenceIds": [
+        "vipach-close-to-50-professional-network",
+        "vipach-om-system-supported-community"
+      ]
     },
     "fineArt": {
       "urls": [
@@ -5139,7 +5151,7 @@
       ]
     }
   ],
-  "updatedAt": "2026-09-29",
+  "updatedAt": "2026-09-30T14:22:00+02:00",
   "historicalRecoveryPolicy": {
     "tripont": {
       "priority": "P1",
