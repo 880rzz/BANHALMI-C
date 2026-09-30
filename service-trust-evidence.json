@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-09-28-v1",
+  "schemaVersion": "2026-09-30-v2-pricing-evidence",
   "@context": "https://schema.org",
   "@type": "Dataset",
   "@id": "https://www.norbertbanhalmi.com/service-trust-evidence.json",
@@ -121,7 +121,15 @@
       ],
       "relationshipEvidenceIds": [
         "wko-vienna-professional-photography-current"
-      ]
+      ],
+      "pricingContext": {
+        "executivePortrait": {
+          "startingGrossEUR": 499,
+          "startingGrossHUF": 199600,
+          "positioning": "Professional Presence"
+        },
+        "evidenceRole": "Published portrait references, professional registration and documented working history support the service capability and professional context behind the outcome-led Executive Portrait tier."
+      }
     },
     "brand": {
       "urls": [
@@ -179,7 +187,15 @@
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
-      ]
+      ],
+      "pricingContext": {
+        "executivePersonalBranding": {
+          "startingGrossEUR": 790,
+          "startingGrossHUF": 316000,
+          "positioning": "Positioning"
+        },
+        "evidenceRole": "Documented organisations, long-term industry roles and professional registration support the strategic visual-positioning and multi-channel production context."
+      }
     },
     "event": {
       "urls": [
@@ -218,7 +234,20 @@
       "movingImageEvidenceIds": [
         "yt-complete-playlists",
         "moka-podcast-106-2022"
-      ]
+      ],
+      "pricingContext": {
+        "businessEvent": {
+          "startingGrossEUR": 490,
+          "startingGrossHUF": 196000,
+          "scope": "shorter straightforward corporate event"
+        },
+        "cLevelInstitutional": {
+          "startingGrossEUR": 590,
+          "startingGrossHUF": 236000,
+          "scope": "leadership, conference, institutional and diplomatic event"
+        },
+        "evidenceRole": "Institutional/event publications, professional registrations and documented event records support capability and operating context. Business Event is narrower scope, not a discounted premium tier."
+      }
     },
     "fineArt": {
       "urls": [
@@ -327,7 +356,20 @@
       ],
       "archivedEvidenceIds": [
         "trip-magazin-76"
-      ]
+      ],
+      "pricingContext": {
+        "professionalArtistsPerformers": {
+          "startingGrossEUR": 690,
+          "startingGrossHUF": 276000,
+          "intent": "career-facing professional portfolio"
+        },
+        "authorLedFineArtArtisticNude": {
+          "startingGrossEUR": 690,
+          "startingGrossHUF": 276000,
+          "intent": "personal author-led Fine Art / artistic nude"
+        },
+        "evidenceRole": "Oeuvre, exhibitions, press, professional-art relationships and artistic-nude historical records support artistic authorship and specialist practice. The two client intents share an entry price but remain distinct journeys."
+      }
     },
     "visualStrategy": {
       "urls": [
@@ -6415,5 +6457,10 @@
         "requiredAction": "Preserve pricing intent but never carry historical price figures forward; current pricing.json and final written offer control."
       }
     ]
+  },
+  "pricingEvidencePolicy": {
+    "canonicalPricing": "https://www.norbertbanhalmi.com/pricing.json",
+    "rule": "Service evidence supports professional capability, artistic authorship, documented working context and trust. It does not prove that a third party endorses a price, guarantee outcomes, or convert a membership/publication/event record into a client contract.",
+    "localeRule": "Austria/Vienna uses EUR first; Hungary/Budapest uses HUF first at the fixed planning conversion 1 EUR = 400 HUF, never live FX."
   }
 }
