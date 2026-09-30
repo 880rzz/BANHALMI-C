@@ -21,10 +21,6 @@ const publicAuthority = new Set([
   'tools/normalize-executive-footer.mjs',
   'data/machine-core.json',
   'ai-entry.json',
-  'ai.txt',
-  'knowledge.json',
-  'entity-graph.json',
-  'llm-canonical-overlay.json',
   'privacy-policy/index.html',
   'de-at/datenschutz/index.html',
   'tools/harden-production-artifact.mjs'
