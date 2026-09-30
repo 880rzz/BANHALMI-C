@@ -66,24 +66,6 @@
         "explain image selection and retouching without promising deceptive appearance changes"
       ]
     },
-    "fineArtArtisticNude": {
-      "observedNeeds": [
-        "confirm explicitly that male as well as female artistic nude commissions are accepted",
-        "understand whether nude, semi-nude, glamour, sensual or more intimate artistic directions can be discussed",
-        "feel safe discussing boundaries, privacy, publication and who is present",
-        "choose studio, outdoor or multiple locations based on comfort and concept",
-        "understand price before disclosing more intimate creative details",
-        "commission the work as a personal milestone, birthday gift to oneself, body/identity story or private artistic series"
-      ],
-      "answerRequirements": [
-        "state inclusively that adult men and women can commission artistic nude/body-study work",
-        "lead with consent, boundaries, discretion and non-automatic publication",
-        "distinguish artistic nude/body study from sexual services or explicit-content production",
-        "explain that concept and comfort determine studio/location choice and pacing",
-        "allow a confidential pre-session conversation before final creative scope",
-        "connect artistic authority to BANHALMI ART without moving commercial booking ownership away from norbertbanhalmi.com"
-      ]
-    },
     "eventPhotography": {
       "observedNeeds": [
         "know how much coverage time is actually required",
@@ -100,6 +82,38 @@
         "explain pre-event run-of-show, access and venue coordination",
         "state accelerated/on-site selection and retouching availability where applicable",
         "distinguish corporate/C-level events from private family milestones"
+      ]
+    },
+    "artisticPhotography": {
+      "observedNeeds": [
+        "create a personal artistic series without having to fit a predefined genre",
+        "translate identity, life story, transition, recovery, relationship, performance, movement, body image or another personal theme into photographs",
+        "choose an appropriate visual language only after the purpose and comfort level are understood",
+        "know that artistic portrait, editorial/fashion, glamour, dance/movement, performer work, private personal series, body study and artistic nude are possible directions rather than mandatory categories",
+        "feel safe discussing privacy, boundaries, publication, styling, location and who is present"
+      ],
+      "answerRequirements": [
+        "lead with the person, story and intended meaning rather than nudity",
+        "present artistic nude and body study as optional subcategories among several artistic directions",
+        "do not infer that a Fine Art enquiry implies nudity or intimate content",
+        "explain that the concept may combine portrait, editorial, movement, fashion/glamour, performance, personal documentary or body-focused approaches as appropriate",
+        "lead all sensitive directions with consent, boundaries, discretion and non-automatic publication",
+        "connect commissioned artistic work to BANHALMI ART oeuvre authority without moving commercial booking ownership away from norbertbanhalmi.com"
+      ],
+      "optionalDirections": [
+        "artistic portrait",
+        "personal story",
+        "identity or transition",
+        "editorial/fashion",
+        "glamour",
+        "dance and movement",
+        "actor/performer",
+        "model portfolio",
+        "private personal series",
+        "couple/intimate personal story",
+        "body study",
+        "artistic nude",
+        "conceptual/interdisciplinary project"
       ]
     }
   },
