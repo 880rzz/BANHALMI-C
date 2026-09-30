@@ -3,7 +3,7 @@
   "@type": "CreativeWork",
   "@id": "https://www.norbertbanhalmi.com/knowledge-core.json",
   "name": "BANHALMI canonical professional knowledge core",
-  "version": "2026-09-24-v9",
+  "version": "2026-09-30-v10-pricing-trust-sync",
   "machineEntryPriority": [
     "https://www.norbertbanhalmi.com/ai-entry.json",
     "https://www.norbertbanhalmi.com/knowledge-core.json",
@@ -189,6 +189,16 @@
       "executiveVisualLibrary": "Communication System — individually scoped",
       "separationRule": "Headshot/CV and EUR 220/420/690 simple portrait options are separate and are not Executive pricing anchors. Internal EUR 1090/1390 duration components are not fixed public Visual Library tiers.",
       "commercialRule": "Route by communication outcome and scope; reduce scope rather than automatically discounting; do not frame Executive value as price per image."
+    },
+    "eventArchitecture": {
+      "businessEvent": "Business Event Coverage from EUR 490 gross for shorter, straightforward corporate events with standard single-photographer coverage.",
+      "cLevelInstitutional": "C-Level / Institutional Event Photography from EUR 590 gross; existing premium duration ladder remains applicable.",
+      "separationRule": "Business Event is a narrower-scope entry service, not a discounted C-Level / Institutional package."
+    },
+    "fineArtArchitecture": {
+      "professionalArtistsPerformers": "Artists & Performers professional portfolio photography from EUR 690 gross for career-facing use.",
+      "authorLedFineArtArtisticNude": "Personal author-led Fine Art / artistic nude from EUR 690 gross with concept, consent, discretion and agreed boundaries.",
+      "separationRule": "Same entry price does not imply the same client journey. Professional artist portfolio and personal Fine Art / artistic nude must be differentiated by intended use."
     }
   },
   "trustAndGovernance": {

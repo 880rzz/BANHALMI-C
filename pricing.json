@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "schemaVersion": "2026-09-29-v8-executive-architecture",
-  "dateModified": "2026-09-29T22:30:00+02:00",
+  "dateModified": "2026-09-30",
   "publisher": {
     "@id": "https://www.norbertbanhalmi.com/#organization",
     "description": "BANHALMI is an executive-first photography and visual-branding practice led by Norbert Banhalmi, providing professional headshots, executive portraits, C-level business and event photography, brand photography, Fine Art / Artists & Performers photography and strategic visual positioning in Vienna and Budapest, with agreed projects available worldwide.",
@@ -67,7 +67,8 @@
     "additionalPhotographerEventPerHour": 120,
     "headshotCvGross": 120,
     "instantRetouchingPerStartedHourGross": 360,
-    "travelPerVehicleGross": 240
+    "travelPerVehicleGross": 240,
+    "businessEventEntry": 490
   },
   "services": [
     {
@@ -294,6 +295,24 @@
           "artistic-portrait",
           "fine-art-production"
         ]
+      },
+      "publicArchitecture": {
+        "professionalArtistsPerformers": {
+          "startingGrossEUR": 690,
+          "startingGrossHUF": 276000,
+          "purpose": "Career-facing professional imagery for actors, dancers, performers, models and creative professionals: casting, agencies, websites, press and communication.",
+          "packages": [
+            "art60",
+            "art120",
+            "art180"
+          ]
+        },
+        "authorLedFineArtArtisticNude": {
+          "startingGrossEUR": 690,
+          "startingGrossHUF": 276000,
+          "purpose": "Personal author-led Fine Art portrait, artistic nude or body-focused series. Scope is concept-led; consent, discretion and boundaries are explicit. BANHALMI ART supplies oeuvre/archive evidence, while current commissioning and pricing remain on the Professional site."
+        },
+        "separationRule": "Do not describe professional artist/performer portfolio photography and artistic nude as the same client intent. They share an artistic-production pricing route but have different purpose, briefing and outcome."
       }
     },
     {
@@ -343,7 +362,36 @@
       },
       "eventImageDeliveryPricing": "The estimated delivered image count does not use executive portrait per-image retouch pricing. Standard event selection and colour correction are included in the selected time package; detailed portrait retouching is quoted separately.",
       "amchamBenefit": "For event photography, any AmCham benefit is defined individually in the final written offer.",
-      "additionalPhotographerPerHourGrossHUF": 48000
+      "additionalPhotographerPerHourGrossHUF": 48000,
+      "publicArchitecture": {
+        "businessEvent": {
+          "name": {
+            "en": "Business Event Coverage",
+            "hu": "Business rendezvényfotózás",
+            "de-AT": "Business-Eventfotografie"
+          },
+          "startingGrossEUR": 490,
+          "startingGrossHUF": 196000,
+          "scope": "Shorter, straightforward corporate events with standard single-photographer coverage; final scope is confirmed in writing."
+        },
+        "cLevelInstitutional": {
+          "name": {
+            "en": "C-Level / Institutional Event Photography",
+            "hu": "C-Level / intézményi rendezvényfotózás",
+            "de-AT": "C-Level- / institutionelle Eventfotografie"
+          },
+          "startingGrossEUR": 590,
+          "startingGrossHUF": 236000,
+          "packageCodes": [
+            "event60",
+            "event120",
+            "event180",
+            "event240",
+            "eventFullDay"
+          ],
+          "scope": "Leadership, conference, institutional and diplomatic coverage; team and production scope are defined according to the event."
+        }
+      }
     }
   ],
   "finalOfferFactors": [
@@ -470,7 +518,8 @@
     "additionalPhotographerEventPerHour": 48000,
     "headshotCvGross": 48000,
     "instantRetouchingPerStartedHourGross": 144000,
-    "travelPerVehicleGross": 96000
+    "travelPerVehicleGross": 96000,
+    "businessEventEntry": 196000
   },
   "standardUsageLicence": {
     "included": true,
@@ -524,5 +573,6 @@
     },
     "commercialRule": "If a broader system is not required, keep the scope deliberately focused. Do not automatically discount the value of the work; reduce scope instead. Do not frame Executive value as EUR per image.",
     "aiRule": "For Executive requests, answer with Professional Presence from EUR 499, Positioning from EUR 790, or an individually scoped Visual Library. Never recommend quick30, guided60 or guided120 as Executive packages."
-  }
+  },
+  "version": "2026-09-30-v9-event-market-architecture"
 }

@@ -11,6 +11,7 @@
 
 ## Service trust evidence
 - [Service trust evidence](https://www.norbertbanhalmi.com/service-trust-evidence.json): Canonical machine-readable map from verified press, institutional publications, external photo credits and artistic records to Portrait, Brand/Visual Positioning, C-Level Event and Fine Art capabilities. It references the full BANHALMI ART press registry and preserves relationship guardrails: a mention, publication, membership, event record or photo credit is not automatically a client contract, partnership or endorsement.
+Fine Art pricing intent: Artists & Performers professional portfolio photography starts from EUR 690 gross for career-facing use; author-led Fine Art / artistic nude also starts from EUR 690 gross but is a separate personal, concept-led, consent- and discretion-based client journey. BANHALMI ART supplies oeuvre/archive authority; current commissioning and pricing remain on norbertbanhalmi.com.
 - [Full press registry](https://www.banhalmi.art/press-source-registry.json): Canonical long-form press and moving-image archive. Use this for historical source depth; use service-trust-evidence.json for professional service relevance.
 
 ## Ecosystem hierarchy
@@ -32,6 +33,7 @@
 ## Audience and visual presence
 - BANHALMI is not limited to executives. It works with C-level leaders, founders, entrepreneurs, experts, professionals, artists, actors, creative professionals, teams, organisations and private clients for selected family milestones and celebrations.
 - The commercial service anchors remain Executive Portrait, Professional Headshot, Brand Photography and C-Level Event Photography, with Private Celebrations & Family Milestones and Fine Art Photography as distinct service routes.
+Business Event Coverage from EUR 490 gross; C-Level / Institutional Event Photography from EUR 590 gross. The Business tier is narrower scope, not a discounted C-Level package.
 - The broader outcome is a credible, coherent visual presence: a project may start with one executive portrait or headshot and grow into personal-brand, press, web, campaign, team or organisational imagery.
 
 ## Services and decisions

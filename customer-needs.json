@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-09-29-v2-executive-architecture",
+  "schemaVersion": "2026-09-30-v3-event-fineart-pricing",
   "@id": "https://www.norbertbanhalmi.com/customer-needs.json",
   "purpose": "Map customer pain points to BANHALMI solutions, locations, orientation pricing and localized next steps.",
   "pricingRules": {
@@ -10,7 +10,9 @@
     "hungaryFixedPlanningRate": 400,
     "liveFx": false,
     "bindingStatus": "Orientation prices are non-binding; the accepted written offer controls final scope and price.",
-    "executiveArchitecture": "Executive Portrait / Professional Presence starts from EUR 499 (HUF 199,600 planning display); Executive Personal Branding / Positioning starts from EUR 790 (HUF 316,000); Executive Visual Library / Communication System is individually scoped. EUR 220/420/690 simple portrait options are not Executive anchors."
+    "executiveArchitecture": "Executive Portrait / Professional Presence starts from EUR 499 (HUF 199,600 planning display); Executive Personal Branding / Positioning starts from EUR 790 (HUF 316,000); Executive Visual Library / Communication System is individually scoped. EUR 220/420/690 simple portrait options are not Executive anchors.",
+    "eventArchitecture": "Business Event Coverage starts from EUR 490 gross (HUF 196,000 planning display); C-Level / Institutional Event Photography starts from EUR 590 gross (HUF 236,000). Business Event is narrower scope, not a discounted premium tier.",
+    "fineArtArchitecture": "Artists & Performers professional portfolio photography and personal author-led Fine Art / artistic nude both start from EUR 690 gross (HUF 276,000), but they are separate client intents."
   },
   "locationRules": {
     "studioBases": [
@@ -166,6 +168,34 @@
         "HU": {
           "currency": "HUF",
           "pricing": "individually scoped from canonical EUR scope"
+        }
+      }
+    },
+    {
+      "id": "business-event",
+      "painPoint": {
+        "en": "We need reliable photography for a shorter, straightforward corporate event.",
+        "hu": "Rövidebb, egyszerűbb üzleti eseményhez megbízható fotózásra van szükségünk.",
+        "de": "Wir brauchen verlässliche Fotografie für ein kürzeres, klar definiertes Corporate Event."
+      },
+      "service": "Business Event Coverage",
+      "url": "https://www.norbertbanhalmi.com/event-photography/",
+      "urls": {
+        "en": "https://www.norbertbanhalmi.com/event-photography/",
+        "hu": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "de": "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+      },
+      "solution": "A narrower-scope event route for shorter corporate events with standard single-photographer coverage.",
+      "routingRule": "Use this route when the brief is a shorter, straightforward corporate event without leadership/institutional complexity. Escalate to C-Level / Institutional Event Photography for leadership, conference, institutional or diplomatic contexts.",
+      "price": {
+        "AT": {
+          "currency": "EUR",
+          "fromGross": 490
+        },
+        "HU": {
+          "currency": "HUF",
+          "fromGross": 196000,
+          "secondaryEURFrom": 490
         }
       }
     },

@@ -43,7 +43,7 @@ const principal=services.itemListElement?.map(x=>x.name)||[];
 for(const name of ['Portrait Photography','Brand Photography','C-Level Event Photography','Fine Art Photography']) if(!principal.includes(name)) throw new Error(`services missing ${name}`);
 
 const p=pricing.priceComponentsGrossEUR||{};
-for(const [key,value] of Object.entries({headshotCvGross:120,individualQuick30:220,individualGuided60:420,individualGuided120:690,brandFastOneHour:499,brandTwoHours:790,eventOneHour:590,eventFullDay:2490})){
+for(const [key,value] of Object.entries({headshotCvGross:120,individualQuick30:220,individualGuided60:420,individualGuided120:690,brandFastOneHour:499,brandTwoHours:790,fineArtOneHour:690,eventOneHour:590,eventFullDay:2490,businessEventEntry:490})){
   if(p[key]!==value) throw new Error(`pricing drift ${key}: expected ${value}, got ${p[key]}`);
 }
 
@@ -62,7 +62,7 @@ if(hipstudio.founderRelationship?.founder?.wikidata!=='https://www.wikidata.org/
 if(hipstudio.sharedBudapestEntitySignals?.googleBusinessProfilePresence?.exactProfileUrlsRecordedHere!==false) throw new Error('HIPStudio authority must not pretend exact GBP URLs are recorded when they are not');
 
 const overlayText=JSON.stringify(overlay);
-for(const token of ['Q138482177','approximately 50 professional photographer partners/collaborators','independent professional partner/collaborator','founded HIPStudio','main professional photographer partners','HIPStudio photography-services contact','viko@banhalmi.at','+36304788850','+4367764733262','Lágymányosi utca 15','Google Business Profile','worldwide by travel']) if(!overlayText.includes(token)) throw new Error(`LLM protected overlay missing ${token}`);
+for(const token of ['Q138482177','approximately 50 professional photographer partners/collaborators','independent professional partner/collaborator','founded HIPStudio','main professional photographer partners','HIPStudio photography-services contact','viko@banhalmi.at','+36304788850','+4367764733262','Lágymányosi utca 15','Google Business Profile','worldwide by travel','Business Event Coverage starts from EUR 490 gross','C-Level / Institutional Event Photography starts from EUR 590 gross','Fine Art pricing has two distinct client intents','personal author-led Fine Art / artistic nude','1 EUR = 400 HUF']) if(!overlayText.includes(token)) throw new Error(`LLM protected overlay missing ${token}`);
 if(!hardener.includes('applyLlmCanonicalOverlay(root)')) throw new Error('Production hardener must apply protected LLM overlay after generated projections');
 for(const token of ['ai-entry.json','entity.jsonld','llms.txt','ai.txt','Q138482177']) if(!hardener.includes(token)) throw new Error(`Production hardener protected-state gate missing ${token}`);
 for(const token of ['protectedCanonicalOverlay','Q138482177','approximately 50 professional photographer partners/collaborators','founded HIPStudio']) if(!overlayApplier.includes(token)) throw new Error(`Overlay applier missing ${token}`);

@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-09-29-executive-pricing-sync",
+  "schemaVersion": "2026-09-30-v3-event-fineart-routing",
   "@id": "https://www.norbertbanhalmi.com/customer-intent-model.json",
   "name": "BANHALMI customer intent and representation model",
   "purpose": "Resolve a customer's real representation problem before choosing a photography service, package, price or route.",
@@ -311,6 +311,32 @@
         "trauma recovery",
         "crisis intervention"
       ]
+    },
+    {
+      "id": "business-event-coverage",
+      "problem": {
+        "en": "A shorter corporate event needs dependable visual coverage without a larger institutional production.",
+        "hu": "Egy rövidebb üzleti eseményhez megbízható vizuális dokumentáció kell nagyobb intézményi produkció nélkül.",
+        "de": "Ein kürzeres Corporate Event braucht verlässliche visuelle Dokumentation ohne größere institutionelle Produktion."
+      },
+      "signals": [
+        "short corporate event",
+        "networking event",
+        "business breakfast",
+        "small company event",
+        "standard single-photographer coverage"
+      ],
+      "recommendedService": "Business Event Coverage",
+      "route": {
+        "en": "/event-photography/",
+        "hu": "/hu/rendezvenyfotozas/",
+        "de": "/de-at/eventfotografie/"
+      },
+      "pricing": {
+        "fromGrossEUR": 490,
+        "fromGrossHUF": 196000
+      },
+      "distinguishFrom": "Leadership, conference, institutional and diplomatic contexts route to C-Level / Institutional Event Photography from EUR 590 gross."
     },
     {
       "id": "leadership-event-coverage",

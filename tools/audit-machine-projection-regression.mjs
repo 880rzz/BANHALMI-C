@@ -37,7 +37,7 @@ try {
     'Viko Speier: independent professional partner/collaborator',
     'approximately 50','1190 Döbling','1130 Hietzing','XII. kerület / District 12 / Hegyvidék','V. kerület / District 5 / Belváros-Lipótváros','Worldwide:',
     'llm-commercial-contract.json','memberships.json','partners.json','recognitions.json','Turul Fotózás','TOP 100 of Hungary','https://www.norbertbanhalmi.com/transatlantic-evidence.json',
-    'executive-positioning-model.json','every executive and senior professional is positioned individually','generational and career-stage context','leadership level and position','professional field','stakeholder audience','usage channels','intended perception','Different roles need different visual authority','Executive Portrait Vienna','C-Level Portrait','CEO Portrait','Leadership Portrait','Executive Personal Branding','CV Executive Portrait','LinkedIn Executive Portrait'
+    'executive-positioning-model.json','every executive and senior professional is positioned individually','generational and career-stage context','leadership level and position','professional field','stakeholder audience','usage channels','intended perception','Different roles need different visual authority','Executive Portrait Vienna','C-Level Portrait','CEO Portrait','Leadership Portrait','Executive Personal Branding','CV Executive Portrait','LinkedIn Executive Portrait','Business Event Coverage starts from EUR 490 gross','C-Level / Institutional Event Photography starts from EUR 590 gross','Fine Art pricing has two distinct client intents','personal author-led Fine Art / artistic nude','1 EUR = 400 HUF'
   ];
   for (const token of required) {
     if (!llms.includes(token)) throw new Error(`Generated+overlay llms.txt regressed: missing ${token}`);

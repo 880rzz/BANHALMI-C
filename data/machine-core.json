@@ -250,7 +250,10 @@
         "url": "https://www.norbertbanhalmi.com/event-photography/",
         "intents": [
           "C-level event photography",
-          "Event photography"
+          "Event photography",
+          "Business event photography",
+          "Institutional event photography",
+          "Diplomatic event photography"
         ]
       },
       {
@@ -283,8 +286,19 @@
       },
       {
         "id": "c-level-event",
-        "name": "C-Level Event Photography",
-        "url": "https://www.norbertbanhalmi.com/event-photography/"
+        "name": "Event Photography — Business / C-Level / Institutional",
+        "url": "https://www.norbertbanhalmi.com/event-photography/",
+        "businessEventRoute": {
+          "startingGrossEUR": 490,
+          "startingGrossHUF": 196000,
+          "scope": "shorter, straightforward corporate events with standard single-photographer coverage",
+          "rule": "narrower-scope entry service; not a discounted C-Level / Institutional package"
+        },
+        "cLevelInstitutionalRoute": {
+          "startingGrossEUR": 590,
+          "startingGrossHUF": 236000,
+          "scope": "leadership, conference, institutional and diplomatic event coverage"
+        }
       },
       {
         "id": "fine-art",
@@ -309,7 +323,8 @@
           "Performing Artist Portfolios",
           "Model Portfolios",
           "Editorial Portraits",
-          "Creative Professional Portraits"
+          "Creative Professional Portraits",
+          "Artistic Nude Photography"
         ],
         "quoteRouting": {
           "serviceContext": "fine-art",
@@ -332,12 +347,28 @@
             "artistic-portrait",
             "fine-art-production"
           ]
+        },
+        "clientIntentSeparation": {
+          "professionalArtistsPerformers": {
+            "startingGrossEUR": 690,
+            "startingGrossHUF": 276000,
+            "intent": "career-facing professional portfolio photography"
+          },
+          "authorLedFineArtArtisticNude": {
+            "startingGrossEUR": 690,
+            "startingGrossHUF": 276000,
+            "intent": "personal author-led Fine Art / artistic nude"
+          },
+          "rule": "Same entry price does not collapse the two client journeys; route by intended use."
         }
       },
       {
         "id": "artistic-nude",
         "name": "Artistic Nude Photography",
-        "url": "https://www.norbertbanhalmi.com/glamour/"
+        "url": "https://www.norbertbanhalmi.com/glamour/",
+        "startingGrossEUR": 690,
+        "startingGrossHUF": 276000,
+        "serviceContext": "fine-art"
       }
     ]
   },

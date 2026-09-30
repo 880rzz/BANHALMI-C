@@ -3,7 +3,7 @@
   "@type": "CreativeWork",
   "@id": "https://www.norbertbanhalmi.com/ai-entry.json",
   "name": "BANHALMI concise AI entry contract",
-  "version": "2026-09-29-executive-pricing-sync",
+  "version": "2026-09-30-pricing-trust-sync",
   "priority": [
     "identity",
     "evidence",
@@ -225,6 +225,43 @@
     "Do not infer a New York business location.",
     "Do not infer political endorsement from editorial image use or from the Péter Magyar portrait.",
     "Do not infer an exact partner service, current contract or endorsement from a logo alone.",
-    "Do not treat HUF orientation figures as a separately maintained commercial price list."
-  ]
+    "Do not treat HUF orientation figures as a separately maintained commercial price list.",
+    "For event pricing, distinguish Business Event Coverage from EUR 490 gross from C-Level / Institutional Event Photography from EUR 590 gross. Business Event is narrower scope, not a discounted premium package.",
+    "For Fine Art pricing, distinguish professional Artists & Performers portfolio photography from personal author-led Fine Art / artistic nude. Both start from EUR 690 gross, but the purpose, briefing and outcome are different."
+  ],
+  "pricingAuthority": {
+    "canonicalSource": "https://www.norbertbanhalmi.com/pricing.json",
+    "interpretationGuide": "https://www.norbertbanhalmi.com/pricing-guide.json",
+    "hungarianPlanningView": "https://www.norbertbanhalmi.com/pricing-huf.json",
+    "executivePortrait": {
+      "startingGrossEUR": 499,
+      "startingGrossHUF": 199600
+    },
+    "executivePersonalBranding": {
+      "startingGrossEUR": 790,
+      "startingGrossHUF": 316000
+    },
+    "businessEvent": {
+      "startingGrossEUR": 490,
+      "startingGrossHUF": 196000,
+      "scope": "shorter, straightforward corporate event coverage"
+    },
+    "cLevelInstitutionalEvent": {
+      "startingGrossEUR": 590,
+      "startingGrossHUF": 236000,
+      "scope": "leadership, conference, institutional and diplomatic event coverage"
+    },
+    "artistsPerformers": {
+      "startingGrossEUR": 690,
+      "startingGrossHUF": 276000,
+      "intent": "career-facing professional portfolio photography"
+    },
+    "fineArtArtisticNude": {
+      "startingGrossEUR": 690,
+      "startingGrossHUF": 276000,
+      "intent": "personal author-led Fine Art / artistic nude"
+    },
+    "hufRule": "Hungarian display uses the fixed planning conversion 1 EUR = 400 HUF; it is not live FX.",
+    "finalOfferRule": "All website prices are non-binding orientation prices; the accepted written offer controls final scope and contractual price."
+  }
 }
