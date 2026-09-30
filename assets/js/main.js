@@ -1316,7 +1316,10 @@
     link.focus({preventScroll:true});
   }
   wrap.querySelectorAll(".banhalmi-contact-reveal").forEach(function (button) {
-    button.addEventListener("click", function (event) {\n      event.stopPropagation();\n      revealDirectContact(button);\n    });
+    button.addEventListener("click", function (event) {
+      event.stopPropagation();
+      revealDirectContact(button);
+    });
   });
   function setOpen(open) {
     panel.hidden = !open;
