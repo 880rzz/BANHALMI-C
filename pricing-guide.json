@@ -244,6 +244,17 @@
         "role": "premium tier for leadership, conference, institutional and diplomatic coverage; retain existing event package ladder"
       },
       "separationRule": "Do not present the EUR 490 Business Event entry as a discounted C-Level package. It is a narrower scope tier."
+    },
+    "fineArtPhotography": {
+      "professionalArtistsPerformers": {
+        "publicPrice": "from EUR 690 gross",
+        "use": "career-facing portfolio, casting, agency, press, website and professional communication"
+      },
+      "artisticNudeFineArt": {
+        "publicPrice": "from EUR 690 gross",
+        "use": "personal author-led Fine Art / artistic nude project; concept-led, private and consent-based"
+      },
+      "rule": "Ask which outcome is intended. Never collapse professional artist portfolio photography and artistic nude into one generic package description."
     }
   }
 }
