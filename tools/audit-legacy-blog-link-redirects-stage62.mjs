@@ -3,9 +3,19 @@ import path from 'node:path';
 
 const routes = {
   'oneletrajz-cv-fotozas': 'https://www.norbertbanhalmi.com/hu/portre/',
-  'portfolio-fotozas': 'https://www.norbertbanhalmi.com/hu/portre/',
+  'portfolio-fotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
   'muveszi-aktfotozas': 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/',
   'reklam-fotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
+  'eskuvoi-fotozas-tihany': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
+  'gyermekfotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
+  'csaladifotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
+  'csaladi-fotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
+  'babafotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
+  'profifotos': 'https://www.norbertbanhalmi.com/hu/',
+  'portfolio-fotozas-budapest': 'https://www.norbertbanhalmi.com/hu/brand/',
+  'portfoliofotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
+  'portrefotozas': 'https://www.norbertbanhalmi.com/hu/portre/',
+  'cvfotozas': 'https://www.norbertbanhalmi.com/hu/portre/',
   'post/amikor-csak-egy-táncpartnered-van-egész-estére': 'https://blog.banhalmi.art/post/amikor-csak-egy-táncpartnered-van-egész-estére',
   'blog/tags/filter-nélkül-a-testem-története': 'https://blog.banhalmi.art/blog'
 };
