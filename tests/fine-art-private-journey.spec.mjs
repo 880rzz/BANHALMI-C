@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const routes=[
-  "/glamour/",
+  "/fine-art/",
   "/hu/muveszi-fotografia/",
   "/de-at/fine-art/"
 ];
