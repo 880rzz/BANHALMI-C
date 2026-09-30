@@ -20,7 +20,16 @@ const publicAuthority = new Set([
   'de-at/speier-viko/index.html',
   'tools/normalize-executive-footer.mjs',
   'data/machine-core.json',
-  'ai-entry.json'
+  'ai-entry.json',
+  'ai.txt',
+  'knowledge.json',
+  'entity-graph.json',
+  'people-roles.json',
+  'hipstudio-authority.json',
+  'llm-canonical-overlay.json',
+  'privacy-policy/index.html',
+  'de-at/datenschutz/index.html',
+  'tools/harden-production-artifact.mjs'
 ]);
 
 function files(dir) {
