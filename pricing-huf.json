@@ -254,6 +254,19 @@
           "artistic-portrait",
           "fine-art-production"
         ]
+      },
+      "publicArchitecture": {
+        "professionalArtistsPerformers": {
+          "startingGrossEUR": 690,
+          "grossHUF": 276000,
+          "purpose": "Szakmai, karrierhez használt művész- és előadói képanyag."
+        },
+        "authorLedFineArtArtisticNude": {
+          "startingGrossEUR": 690,
+          "grossHUF": 276000,
+          "purpose": "Személyes, szerzői Fine Art / művészi akt projekt; koncepció-, beleegyezés- és diszkréció-központú."
+        },
+        "separationRule": "A szakmai művészportfólió és a művészi akt eltérő ügyféligény; azonos belépőár és kalkulációs út nem jelent azonos szolgáltatást."
       }
     },
     {
