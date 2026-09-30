@@ -24,8 +24,6 @@ const publicAuthority = new Set([
   'ai.txt',
   'knowledge.json',
   'entity-graph.json',
-  'people-roles.json',
-  'hipstudio-authority.json',
   'llm-canonical-overlay.json',
   'privacy-policy/index.html',
   'de-at/datenschutz/index.html',
