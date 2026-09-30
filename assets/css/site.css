@@ -3509,7 +3509,7 @@ main :is(h1,h2) .bn-heading-accent{color:#8b6f18!important;-webkit-text-fill-col
 .bn-mega-link.active,.bn-mega-link[aria-current="page"]{text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:.22em;text-decoration-color:currentColor}
 .bn-mega-desc{max-width:43ch;margin:.36rem 0 0;color:var(--bn-menu-soft);font-size:clamp(.92rem,1.1vw,1.02rem);line-height:1.48;letter-spacing:-.01em}
 .bn-mega-section-head{margin-bottom:1.2rem;padding-bottom:.9rem;border-bottom:1px solid var(--bn-menu-line)}
-.bn-mega-section-head>span{display:block;color:var(--bn-menu-gold);font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.bn-mega-section-head>span{display:block;color:#fff;font-size:.82rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .bn-mega-section-head p{margin:.35rem 0 0;color:var(--bn-menu-soft);font-size:.96rem}
 .bn-mega-service{padding:.2rem 0 1.05rem}
 .bn-mega-service .bn-mega-link{font-size:clamp(1.28rem,2.25vw,2rem)}
