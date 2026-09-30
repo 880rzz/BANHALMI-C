@@ -76,7 +76,7 @@
       "serviceType": "Fine-art portrait photography",
       "provider": {"@id":"https://www.norbertbanhalmi.com/#organization"},
       "areaServed": [{"@type":"City","name":"Vienna"},{"@type":"City","name":"Budapest"}],
-      "url": "https://www.norbertbanhalmi.com/glamour/",
+      "url": "https://www.norbertbanhalmi.com/fine-art/",
       "description": "Author-led personal fine-art portrait process with respectful visual direction, discretion and jointly defined visual boundaries; modelling experience is not required."
     },
     {
