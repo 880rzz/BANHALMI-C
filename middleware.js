@@ -28,7 +28,17 @@ function redirectTarget(request) {
       ['/aktfotozas', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/'],
       ['/reklam-fotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
       ['/reklamfotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
-      ['/fotozas-arak', 'https://www.norbertbanhalmi.com/hu/ajanlatkeres/']
+      ['/fotozas-arak', 'https://www.norbertbanhalmi.com/hu/ajanlatkeres/'],
+      ['/cvfotozas', 'https://www.norbertbanhalmi.com/hu/portre/'],
+      ['/portrefotozas', 'https://www.norbertbanhalmi.com/hu/portre/'],
+      ['/portfoliofotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
+      ['/portfolio-fotozas-budapest', 'https://www.norbertbanhalmi.com/hu/brand/'],
+      ['/profifotos', 'https://www.norbertbanhalmi.com/hu/'],
+      ['/babafotozas', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
+      ['/csaladi-fotozas', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
+      ['/csaladifotozas', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
+      ['/gyermekfotozas', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
+      ['/eskuvoi-fotozas-tihany', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
     ]);
     const historicalTarget = historicalHuTargets.get(normalizedPath);
     if (historicalTarget) {
