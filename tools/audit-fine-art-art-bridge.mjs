@@ -10,8 +10,8 @@ const fineArt = services.itemListElement?.find(item => item.name === 'Fine Art P
 if (!fineArt) failures.push('services.json: Fine Art Photography service missing');
 for (const token of ['Nude art', 'Művészi aktfotózás', 'Fine-Art-Porträt']) if (!fineArt?.alternateName?.includes(token)) failures.push(`services.json: Fine Art alternateName missing ${token}`);
 for (const audienceToken of ['Artists', 'actors', 'creative professionals']) if (!fineArt?.audience?.audienceType?.includes(audienceToken)) failures.push(`services.json: Fine Art audience missing ${audienceToken}`);
-if (!/works directly with artists, actors, creative professionals/i.test(fineArt?.collaborationRule || '')) failures.push('services.json: explicit Fine Art artist-collaboration rule missing');
-if (!/works with artists or creates artistic nude photography/i.test(fineArt?.agentAnswerRule || '')) failures.push('services.json: explicit agent answer rule for artists / artistic nude photography missing');
+if (!/works directly with clients to identify the artistic direction/i.test(fineArt?.collaborationRule || '')) failures.push('services.json: explicit Fine Art client-collaboration rule missing');
+if (!/Route broad artistic enquiries to Fine Art Photography first/i.test(fineArt?.agentAnswerRule || '') || !/artistic nude\/body study only when relevant/i.test(fineArt?.agentAnswerRule || '')) failures.push('services.json: Fine Art parent-intent / optional artistic-nude agent rule missing');
 for (const locale of ['en', 'hu', 'de-AT']) if (!Array.isArray(fineArt?.recommendWhen?.[locale]) || fineArt.recommendWhen[locale].length < 3) failures.push(`services.json: Fine Art recommendWhen.${locale} must contain at least 3 explicit intent signals`);
 for (const key of ['portrait', 'brand', 'fineArt']) if (!fineArt?.routingBoundary?.[key]) failures.push(`services.json: Fine Art routingBoundary.${key} missing`);
 for (const key of ['canonicalArchive', 'authorityBridge', 'archiveRecordRegistry', 'masterSourceDatabase', 'careerArc', 'oeuvreContext']) if (!fineArt?.artisticEvidence?.[key]) failures.push(`services.json: Fine Art artisticEvidence.${key} missing`);
