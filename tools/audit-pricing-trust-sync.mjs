@@ -73,7 +73,7 @@ const servicePages={
  'event-photography/index.html':[['490','EUR'],['590','EUR']],
  'hu/rendezvenyfotozas/index.html':[['196000','HUF'],['236000','HUF']],
  'de-at/eventfotografie/index.html':[['490','EUR'],['590','EUR']],
- 'glamour/index.html':[['690','EUR'],['690','EUR']],
+ 'fine-art/index.html':[['690','EUR'],['690','EUR']],
  'hu/muveszi-fotografia/index.html':[['276000','HUF'],['276000','HUF']],
  'de-at/fine-art/index.html':[['690','EUR'],['690','EUR']]
 };
