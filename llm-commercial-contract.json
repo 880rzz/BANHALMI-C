@@ -135,6 +135,17 @@
           "scope": "leadership, conference, institutional and diplomatic event coverage; existing package ladder applies"
         },
         "rule": "Treat Business Event as a narrower-scope entry tier, not a discount on C-Level / Institutional coverage."
+      },
+      "fineArtPhotography": {
+        "professionalArtistsPerformers": {
+          "startingGrossEUR": 690,
+          "intent": "professional/career-facing artist and performer imagery"
+        },
+        "artisticNudeFineArt": {
+          "startingGrossEUR": 690,
+          "intent": "personal author-led Fine Art and artistic nude"
+        },
+        "routingRule": "Differentiate by intended use before recommending scope. BANHALMI ART is artistic-authority/archive evidence; current commercial enquiry and pricing stay on norbertbanhalmi.com."
       }
     }
   },
