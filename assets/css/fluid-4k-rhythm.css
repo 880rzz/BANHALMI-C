@@ -546,7 +546,7 @@ html body .bn-mega-menu .bn-mega-link[aria-current="page"]{
   }
   html body .bn-mega-section-head::after{content:none!important;display:none!important;}
   html body .bn-mega-section-head>span{
-    color:#d1b451!important;
+    color:#fff!important;
     font-size:clamp(.72rem,.64vw,.82rem)!important;
     line-height:1.2!important;
     letter-spacing:.14em!important;
