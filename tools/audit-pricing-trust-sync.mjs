@@ -92,6 +92,18 @@ const hu=read('hu/ajanlatkeres/index.html');
 const huScripts=parseJsonLd(hu);
 const huCat=huScripts.find(x=>x?.['@type']==='OfferCatalog');
 fail(huCat?.itemListElement?.length===28,'HU quote OfferCatalog must remain exactly 28 public components');
+for(const [file,token] of Object.entries({
+  'requestaquote/index.html':'value="eventBusiness"',
+  'hu/ajanlatkeres/index.html':'value="eventBusiness"',
+  'de-at/anfrage/index.html':'value="eventBusiness"'
+})){
+  fail(read(file).includes(token),`${file}: selectable Business Event route missing`);
+}
+const calc=read('assets/js/quote-calculator.js');
+for(const token of ["eventBusiness:'businessEventEntry'","eventBusiness:1","val(f,'event_duration','eventBusiness')"]){
+  fail(calc.includes(token),`quote calculator Business Event contract missing: ${token}`);
+}
+
 for(const token of ['Business Event bruttó 196 000 Ft-tól (€490)','C-Level / intézményi','Fine Art / művészi akt','1 EUR = 400 HUF']){
  fail(hu.includes(token),`HU quote visible pricing missing: ${token}`);
 }
