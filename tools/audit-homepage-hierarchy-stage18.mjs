@@ -33,7 +33,7 @@ for(const route of [
   '[Portrait photography](https://www.norbertbanhalmi.com/portrait/)',
   '[Brand photography](https://www.norbertbanhalmi.com/lifestyle/)',
   '[C-Level event photography](https://www.norbertbanhalmi.com/event-photography/)',
-  '[Fine-art photography](https://www.norbertbanhalmi.com/glamour/)'
+  '[Fine-art photography](https://www.norbertbanhalmi.com/fine-art/)'
 ]) if(!llms.includes(route)) errors.push('llms.txt: principal service route missing '+route);
 for(const invented of ['/brand-photography/','/c-level-event-photography/','/fine-art-photography/']) if(llms.includes(invented)) errors.push('llms.txt: invented/noncanonical service route remains '+invented);
 
