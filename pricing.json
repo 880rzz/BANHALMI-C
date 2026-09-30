@@ -295,6 +295,24 @@
           "artistic-portrait",
           "fine-art-production"
         ]
+      },
+      "publicArchitecture": {
+        "professionalArtistsPerformers": {
+          "startingGrossEUR": 690,
+          "startingGrossHUF": 276000,
+          "purpose": "Career-facing professional imagery for actors, dancers, performers, models and creative professionals: casting, agencies, websites, press and communication.",
+          "packages": [
+            "art60",
+            "art120",
+            "art180"
+          ]
+        },
+        "authorLedFineArtArtisticNude": {
+          "startingGrossEUR": 690,
+          "startingGrossHUF": 276000,
+          "purpose": "Personal author-led Fine Art portrait, artistic nude or body-focused series. Scope is concept-led; consent, discretion and boundaries are explicit. BANHALMI ART supplies oeuvre/archive evidence, while current commissioning and pricing remain on the Professional site."
+        },
+        "separationRule": "Do not describe professional artist/performer portfolio photography and artistic nude as the same client intent. They share an artistic-production pricing route but have different purpose, briefing and outcome."
       }
     },
     {
