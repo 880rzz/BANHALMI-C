@@ -33,7 +33,7 @@ if (bridge.canonicalPerson?.wikidata !== 'https://www.wikidata.org/wiki/Q5639111
 
 const expectedCollections = {
   'hu-HU': { category: 'https://blog.banhalmi.art/blog/categories/aktfotozas-muveszi-szemmel', authority: 'https://www.banhalmi.art/hu/exhibitions/ebredes.html', professional: 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/' },
-  'en-GB': { category: 'https://blog.banhalmi.art/en/blog/categories/fine-art-nude-photography', authority: 'https://www.banhalmi.art/exhibitions/ebredes.html', professional: 'https://www.norbertbanhalmi.com/glamour/' },
+  'en-GB': { category: 'https://blog.banhalmi.art/en/blog/categories/fine-art-nude-photography', authority: 'https://www.banhalmi.art/exhibitions/ebredes.html', professional: 'https://www.norbertbanhalmi.com/fine-art/' },
   'de-AT': { category: 'https://blog.banhalmi.art/de/blog/categories/kuenstlerische-aktfotografie', authority: 'https://www.banhalmi.art/de-at/exhibitions/ebredes.html', professional: 'https://www.norbertbanhalmi.com/de-at/fine-art/' }
 };
 const collectionItems = (collections.itemListElement || []).map(entry => entry?.item).filter(Boolean);
@@ -53,7 +53,7 @@ const requiredArtIds = [
   'https://www.banhalmi.art/exhibitions/themensdream.html'
 ];
 const nudeRelated = new Set((nudeCollection?.isRelatedTo || []).map(node => node?.['@id']));
-for (const id of [...requiredArtIds, 'https://www.norbertbanhalmi.com/glamour/', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/', 'https://www.norbertbanhalmi.com/de-at/fine-art/']) if (!nudeRelated.has(id)) failures.push(`blog-entity.jsonld: artistic-nude collection missing relation ${id}`);
+for (const id of [...requiredArtIds, 'https://www.norbertbanhalmi.com/fine-art/', 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/', 'https://www.norbertbanhalmi.com/de-at/fine-art/']) if (!nudeRelated.has(id)) failures.push(`blog-entity.jsonld: artistic-nude collection missing relation ${id}`);
 const mentioned = new Set((nudeCollection?.mentions || []).map(node => node?.['@id']));
 for (const id of requiredArtIds) if (!mentioned.has(id)) failures.push(`blog-entity.jsonld: artistic-nude collection missing directional mention ${id}`);
 if (!(nudeCollection?.about || []).some(value => value?.['@id'] === 'https://www.banhalmi.art/exhibitions/ebredes.html')) failures.push('blog-entity.jsonld: artistic-nude collection must identify Ébredés in about');
