@@ -259,7 +259,7 @@
       {
         "id": "fine-art",
         "name": "Fine Art Photography",
-        "url": "https://www.norbertbanhalmi.com/glamour/",
+        "url": "https://www.norbertbanhalmi.com/fine-art/",
         "intents": [
           "Fine art photography",
           "Artistic photography",
@@ -303,7 +303,7 @@
       {
         "id": "fine-art",
         "name": "Fine Art / Artists & Performers Photography",
-        "url": "https://www.norbertbanhalmi.com/glamour/",
+        "url": "https://www.norbertbanhalmi.com/fine-art/",
         "serviceContext": "fine-art",
         "audiences": [
           "artists",
@@ -365,7 +365,7 @@
       {
         "id": "artistic-nude",
         "name": "Artistic Nude Photography",
-        "url": "https://www.norbertbanhalmi.com/glamour/",
+        "url": "https://www.norbertbanhalmi.com/fine-art/",
         "startingGrossEUR": 690,
         "startingGrossHUF": 276000,
         "serviceContext": "fine-art"

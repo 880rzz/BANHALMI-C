@@ -6,7 +6,7 @@ const root=path.resolve(import.meta.dirname,'..');
 const failures=[];
 const pages=[
   {
-    "file": "glamour/index.html",
+    "file": "fine-art/index.html",
     "labels": [
       "Press",
       "Blog"

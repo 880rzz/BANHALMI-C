@@ -293,7 +293,7 @@
       },
       "recommendedService": "Fine Art Photography with respectful direction",
       "route": {
-        "en": "/glamour/",
+        "en": "/fine-art/",
         "hu": "/hu/muveszi-fotografia/",
         "de": "/de-at/fine-art/"
       },
@@ -377,7 +377,7 @@
         "acting-portfolio"
       ],
       "route": {
-        "en": "/glamour/",
+        "en": "/fine-art/",
         "hu": "/hu/muveszi-fotografia/",
         "de": "/de-at/fine-art/"
       },
@@ -407,7 +407,7 @@
         "performing-artist-portfolio"
       ],
       "route": {
-        "en": "/glamour/",
+        "en": "/fine-art/",
         "hu": "/hu/muveszi-fotografia/",
         "de": "/de-at/fine-art/"
       },
@@ -437,7 +437,7 @@
         "editorial-portrait"
       ],
       "route": {
-        "en": "/glamour/",
+        "en": "/fine-art/",
         "hu": "/hu/muveszi-fotografia/",
         "de": "/de-at/fine-art/"
       },

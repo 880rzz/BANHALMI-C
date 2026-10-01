@@ -2549,6 +2549,11 @@
       ]
     },
     {
+      "source": "/glamour",
+      "destination": "/fine-art/",
+      "permanent": true
+    },
+    {
       "source": "/hu/",
       "destination": "https://www.norbertbanhalmi.com/hu/",
       "permanent": true,

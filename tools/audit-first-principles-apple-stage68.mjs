@@ -2,7 +2,7 @@ import fs from 'node:fs';
 
 const errors=[];
 const homepages=[
-  {file:'index.html', marker:'data-first-principles-path="stage68"', heading:'What do you need right now?', contact:'/contact/', fineArt:'/glamour/', fineArtLabel:'Explore fine-art photography', labels:['New executive portrait','Consistent leadership portraits','Stronger personal brand','Brand photography for a company or campaign','C-level event coverage','I am not sure yet']},
+  {file:'index.html', marker:'data-first-principles-path="stage68"', heading:'What do you need right now?', contact:'/contact/', fineArt:'/fine-art/', fineArtLabel:'Explore fine-art photography', labels:['New executive portrait','Consistent leadership portraits','Stronger personal brand','Brand photography for a company or campaign','C-level event coverage','I am not sure yet']},
   {file:'hu/index.html', marker:'data-first-principles-path="stage68"', heading:'Mire van most szüksége?', contact:'/hu/kapcsolat/', fineArt:'/hu/muveszi-fotografia/', fineArtLabel:'Művészi fotográfia', labels:['Új vezetői portréra','Egységes vezetői portrékra','Erősebb személyes márkára','Céges vagy kampány brandfotókra','Vezetői esemény dokumentálására','Még nem vagyok biztos benne']},
   {file:'de-at/index.html', marker:'data-first-principles-path="stage68"', heading:'Was brauchen Sie jetzt?', contact:'/de-at/kontakt/', fineArt:'/de-at/fine-art/', fineArtLabel:'Fine-Art-Fotografie', labels:['Ein neues Executive-Porträt','Einheitliche Führungskräfteporträts','Eine stärkere persönliche Marke','Brandfotografie für Unternehmen oder Kampagnen','Dokumentation eines Führungskräfte-Events','Ich bin noch nicht sicher']}
 ];
