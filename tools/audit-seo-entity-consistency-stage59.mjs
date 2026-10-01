@@ -6,7 +6,7 @@ const pageContracts = {
   'portrait/index.html': /Executive Portrait|Headshot/i,
   'lifestyle/index.html': /Brand Photography|Visual Positioning/i,
   'event-photography/index.html': /C-Level Event Photography/i,
-  'glamour/index.html': /Fine Art[^<]*(Actor|Dance|Performer)/i,
+  'fine-art/index.html': /Fine Art[^<]*(Actor|Dance|Performer)/i,
   'hu/index.html': /Executive portr|brandfotózás/i,
   'hu/portre/index.html': /Executive portr|Headshot/i,
   'hu/brand/index.html': /Brandfotózás|vizuális/i,
@@ -28,7 +28,7 @@ for (const [rel, expected] of Object.entries(pageContracts)) {
   assert.match(html, /property=["']og:description["']/i, rel + ' og description missing');
 }
 
-for (const rel of ['glamour/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html']) {
+for (const rel of ['fine-art/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html']) {
   const html = await readFile(rel, 'utf8');
   assert.match(html, /actor|színész|Schauspiel/i, rel + ' actor intent missing');
   assert.match(html, /dance|tánc|Tanz/i, rel + ' dance intent missing');
