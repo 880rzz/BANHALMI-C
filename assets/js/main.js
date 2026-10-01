@@ -1277,8 +1277,8 @@
       wa:"Kedves Norbert, a BANHALMI weboldalról keresem egy fotózással kapcsolatban."
     }
   }[locale];
-  var viennaPhoneHref = locale === "hu" ? "+4367761655592" : "+4367761655592";
-  var viennaPhoneDisplay = locale === "hu" ? "+43 677 616 55592" : "+43 677 616 55592";
+  var viennaPhoneHref = locale === "hu" ? "+4367761655592" : "+4367764733262";
+  var viennaPhoneDisplay = locale === "hu" ? "+43 677 616 55592" : "+43 677 647 332 62";
   var whatsappHref = "+4367761655592";
   var whatsappDisplay = "+43 677 616 55592";
 
@@ -1305,8 +1305,8 @@
   var close = wrap.querySelector(".banhalmi-contact-close");
   function revealDirectContact(button) {
     var kind = button.getAttribute("data-contact-kind");
-    var value = kind === "email" ? ["hello","norbertbanhalmi.com"].join("@") : ["+43","677","616","55592"].join(" ");
-    var href = kind === "email" ? "mailto:" + value : "tel:" + value.replace(/\s/g, "");
+    var value = kind === "email" ? ["hello","norbertbanhalmi.com"].join("@") : viennaPhoneDisplay;
+    var href = kind === "email" ? "mailto:" + value : "tel:" + viennaPhoneHref;
     var link = document.createElement("a");
     link.className = "banhalmi-contact-action";
     link.href = href;
