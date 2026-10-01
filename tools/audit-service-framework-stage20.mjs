@@ -40,7 +40,7 @@ for(const [relative,labels] of Object.entries(pages)){
     if(markerAt<start||markerAt>end||markerAt>mainClose) errors.push(relative+': '+marker+' must stay inside drawer and main');
   }
 }
-for(const relative of ['glamour/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html']){
+for(const relative of ['fine-art/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html']){
   const html=fs.readFileSync(path.join(root,relative),'utf8');
   if(html.includes('data-project-framework="stage20"')) errors.push(relative+': corporate project framework must not appear on fine-art page');
 }
