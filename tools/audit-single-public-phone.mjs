@@ -3,8 +3,8 @@ import path from 'node:path';
 
 const ROOT = process.cwd();
 const RETIRED_HU = ['+36704698397', '+36 70 469 8397', '+36 70 469 83 97'];
-const LEGACY_PUBLIC_AT = ['+4367764733262', '+43 677 647 332 62'];
-const CANONICAL = ['+4367761655592', '+43 677 616 55592'];
+const LEGACY_PUBLIC_AT = [];
+const CANONICAL = ['+4367761655592', '+43 677 616 55592', '+4367764733262', '+43 677 647 332 62'];
 const SKIP = new Set(['.git', 'node_modules', '_site', 'artifacts']);
 const publicAuthority = new Set([
   'js/main.js',
@@ -61,8 +61,17 @@ for (const rel of publicAuthority) {
     failures.push(`${rel}: canonical +43 677 616 55592 contact missing`);
   }
 }
+const dock = fs.readFileSync(path.join(ROOT, 'assets/js/main.js'), 'utf8');
+if (!dock.includes('locale === "hu" ? "+4367761655592" : "+4367764733262"')) failures.push('assets/js/main.js: Contact Dock href must route HU to Norbert and EN/DE to Viko');
+if (!dock.includes('locale === "hu" ? "+43 677 616 55592" : "+43 677 647 332 62"')) failures.push('assets/js/main.js: Contact Dock display must route HU to Norbert and EN/DE to Viko');
+const core = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/machine-core.json'), 'utf8'));
+if (core.organization?.publicContactByLocale?.en?.telephone !== '+43 677 647 332 62') failures.push('machine-core: EN telephone must be Viko');
+if (core.organization?.publicContactByLocale?.['de-AT']?.telephone !== '+43 677 647 332 62') failures.push('machine-core: DE telephone must be Viko');
+if (core.organization?.publicContactByLocale?.['hu-HU']?.telephone !== '+43 677 616 55592') failures.push('machine-core: HU telephone must be Norbert');
+if (core.organization?.publicContactByLocale?.whatsapp !== '+43 677 616 55592') failures.push('machine-core: WhatsApp must be Norbert');
+
 if (failures.length) {
   console.error('Single public phone contract failed:\n' + failures.join('\n'));
   process.exit(1);
 }
-console.log('Single public phone contract OK: +43 677 616 55592 only on BANHALMI public contact surfaces.');
+console.log('Locale-aware phone contract OK: EN/DE=Viko, HU=Norbert, WhatsApp=Norbert.');
