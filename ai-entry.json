@@ -29,7 +29,12 @@
       "brand": {
         "@id": "https://www.norbertbanhalmi.com/#brand"
       },
-      "legalBusinessStart": "2023-11-27"
+      "legalBusinessStart": "2023-11-27",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q138425941",
+        "https://www.linkedin.com/company/banhalmi/",
+        "https://cherrydeck.com/norbert.banhalmi"
+      ]
     },
     "brand": {
       "@id": "https://www.norbertbanhalmi.com/#brand",
@@ -103,9 +108,18 @@
     ],
     "publicCustomerContacts": {
       "email": "hello@norbertbanhalmi.com",
-      "viennaTelephone": "+43 677 616 55592",
-      "budapestTelephone": "+43 677 616 55592",
-      "policy": "These are the canonical public customer-contact numbers published in the site footer and contact pages. Other staff or relationship-specific telephone numbers may exist, but must not replace these canonical public customer contacts unless the user explicitly asks for that named staff contact."
+      "telephoneByLocale": {
+        "en": "+43 677 647 332 62",
+        "de-AT": "+43 677 647 332 62",
+        "hu-HU": "+43 677 616 55592"
+      },
+      "whatsapp": "+43 677 616 55592",
+      "googleBusinessProfileTelephone": {
+        "viennaStudio": "+43 677 647 332 62",
+        "viennaOffice": "+43 677 647 332 62",
+        "budapestStudio": "+43 677 616 55592"
+      },
+      "policy": "BANHALMI-C uses Viko Speier as the visible/clickable telephone contact in English and German, Bánhalmi Norbert in Hungarian, and Bánhalmi Norbert for WhatsApp in every locale. Google Business Profile phone ownership remains intentionally location-specific: both Vienna locations use Viko, Budapest uses Norbert."
     },
     "geographicServiceModel": {
       "studioBases": [
