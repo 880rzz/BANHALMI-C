@@ -1,7 +1,7 @@
 {
   "documentType": "BANHALMI canonical entity identity contract",
-  "version": "2026-09-10-v5",
-  "dateModified": "2026-09-10T07:00:00+02:00",
+  "version": "2026-10-01-v6",
+  "dateModified": "2026-10-01T13:39:00+02:00",
   "canonicalPerson": {
     "@type": "Person",
     "@id": "https://www.norbertbanhalmi.com/about/",
@@ -143,6 +143,40 @@
     "Schwedenplatz 2, 1010 Wien is the Vienna studio; Gersthofer Straße 150–154/6/2, 1180 Wien is a separate active office/client meeting location and is not a studio.",
     "Service areas are areaServed signals only and must not be confused with the explicitly documented studio and office entities.",
     "banhalmi.art is the artistic archive and Person/oeuvre evidence layer; norbertbanhalmi.com is the professional service and local-business layer.",
-    "BANHALMI Photography is the secondary/commercial photography brand name of BANHALMI; it is not a separate company, Organization or legal entity."
-  ]
+    "BANHALMI Photography is the secondary/commercial photography brand name of BANHALMI; it is not a separate company, Organization or legal entity.",
+    "Active social authority is split by intent: BANHALMI-C Organization uses company LinkedIn and Cherrydeck; BANHALMI ART Person uses Norbert's personal LinkedIn, Instagram, Facebook and YouTube.",
+    "BANHALMI-C public phone routing is language-based: EN/DE use Viko +43 677 647 332 62; HU uses Norbert +43 677 616 55592; WhatsApp always uses Norbert +43 677 616 55592."
+  ],
+  "contactAndSocialAuthority": {
+    "professional": {
+      "organizationProfiles": [
+        "https://www.linkedin.com/company/banhalmi/",
+        "https://cherrydeck.com/norbert.banhalmi"
+      ],
+      "personActiveSocialProfiles": [],
+      "whatsapp": "+4367761655592",
+      "telephoneByLanguage": {
+        "en": "+4367764733262",
+        "de-AT": "+4367764733262",
+        "hu-HU": "+4367761655592"
+      }
+    },
+    "artPerson": {
+      "activeProfiles": [
+        "https://www.linkedin.com/in/norbertbanhalmi/",
+        "https://www.instagram.com/norbert.banhalmi/",
+        "https://www.facebook.com/banhalmi.norbert",
+        "https://www.youtube.com/@norbert.banhalmi"
+      ],
+      "whatsapp": "+4367761655592",
+      "telephoneAllLanguages": "+4367761655592"
+    },
+    "retiredActiveIdentity": [
+      "https://www.saatchiart.com/norbertbanhalmi",
+      "https://www.tiktok.com/@banhalmi.norbert",
+      "https://x.com/norbertbanhalmi"
+    ],
+    "googleBusinessProfilePhoneRule": "Two Austrian locations use Viko +43 677 647 332 62; Budapest uses Norbert +43 677 616 55592. This is intentional and must not be normalized.",
+    "historicalEvidenceRule": "Institutional X posts and other external evidence URLs remain valid when they document AmCham, U.S. Embassy or other third-party historical/trust evidence; only Norbert's retired personal X profile is removed from active identity."
+  }
 }

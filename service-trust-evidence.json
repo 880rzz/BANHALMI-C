@@ -3277,34 +3277,6 @@
       ]
     },
     {
-      "id": "saatchi-ballerina-project-newyork-2018",
-      "title": "Norbert Banhalmi — Saatchi Art exhibition chronology",
-      "publisher": "Saatchi Art",
-      "url": "https://www.saatchiart.com/norbertbanhalmi",
-      "evidenceKind": "external art-platform artist profile / exhibition chronology",
-      "verificationStatus": "LIVE-VERIFIED",
-      "evidenceType": [
-        "FIRST-PARTY",
-        "SECONDARY-MENTION"
-      ],
-      "classification": [
-        "Ballerina Project New York",
-        "Long Island",
-        "exhibition chronology",
-        "artist profile"
-      ],
-      "services": [
-        "generalAuthority"
-      ],
-      "serviceRelevance": [
-        "generalAuthority"
-      ],
-      "context": "The current Saatchi Art artist profile lists '2018 | Ballerina Project New York | Long Island, New York, USA' in the exhibition chronology alongside other New York exhibitions.",
-      "evidenceSummary": "External platform corroboration for the 2018 Ballerina Project New York exhibition chronology.",
-      "sourceStrength": "low-medium",
-      "guardrail": "Treat as platform-hosted artist-profile corroboration, not independent editorial verification. Do not use alone to establish venue details, attendance, institutional endorsement or a current New York studio."
-    },
-    {
       "id": "veol-rege-digital-exhibition-2021",
       "title": "Digitális kiállítás nyílt a tihanyi apátsági galériában",
       "publisher": "VEOL",
@@ -5290,7 +5262,6 @@
         "mandiner-milestones56-series-2016",
         "hungary-foundation-milestones56-newyork-2016",
         "imagazin-ipad-photo-postproduction-2016",
-        "saatchi-ballerina-project-newyork-2018",
         "tamron-new-york-ballerina-project-2018",
         "bitcoinbazis-nft-art-2022",
         "kanadai-magyar-hirlap-milestones56-2016"

@@ -64,7 +64,10 @@ const centralDescription = String(central.description || '').toLowerCase();
 if (!centralDescription.includes('önkéntes') || !centralDescription.includes('nem munkaviszony') || !centralDescription.includes('nem fizetett')) fail('Központi relationship must explicitly remain voluntary and non-employment/non-paid');
 
 const company = graph.find((node) => node?.['@id'] === COMPANY_ID);
-if (!company || company.sameAs !== 'https://www.wikidata.org/wiki/Q138425941') fail('Banhalmi Norbert e.U. must remain linked to Wikidata Q138425941');
+const companySameAs = asArray(company?.sameAs);
+for (const required of ['https://www.wikidata.org/wiki/Q138425941','https://www.linkedin.com/company/banhalmi/','https://cherrydeck.com/norbert.banhalmi']) {
+  if (!companySameAs.includes(required)) fail(`Banhalmi Norbert e.U. authority missing ${required}`);
+}
 
 const hipstudioNode = graph.find((node) => node?.['@id'] === HIPSTUDIO_ID);
 if (!hipstudioNode) fail('HIPStudio Organization node missing from person-authority.jsonld');

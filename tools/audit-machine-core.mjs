@@ -4,7 +4,7 @@ const core = JSON.parse(fs.readFileSync('data/machine-core.json', 'utf8'));
 const errors = [];
 const fail = (condition, message) => { if (!condition) errors.push(message); };
 
-fail(core.schemaVersion === '1.4', 'machine-core schemaVersion must remain 1.4 or be intentionally migrated with this audit');
+fail(core.schemaVersion === '1.5', 'machine-core schemaVersion must remain 1.5 or be intentionally migrated with this audit');
 fail(core.canonicalId === 'https://www.norbertbanhalmi.com/data/machine-core.json', 'canonicalId must stay on the professional domain');
 fail(core.person?.wikidata === 'https://www.wikidata.org/wiki/Q56391118', 'Person Wikidata identity drift');
 fail(core.organization?.wikidata === 'https://www.wikidata.org/wiki/Q138425941', 'Organization Wikidata identity drift');
@@ -12,6 +12,17 @@ fail(core.brand?.name === 'BANHALMI', 'Brand identity drift');
 fail(core.brand?.positioning === 'Photography Team', 'BANHALMI brand positioning must remain Photography Team');
 fail(core.person?.practiceSince === 1999, 'Practice-since history drift');
 fail(core.organization?.legalBusinessStart === '2023-11-27', 'Legal business start drift');
+const contactAuthority=core.organization?.contactAuthority||{};
+fail(contactAuthority.whatsapp === '+4367761655592', 'Canonical WhatsApp authority drift');
+fail(contactAuthority.telephoneByLanguage?.en === '+4367764733262', 'EN phone authority must remain Viko');
+fail(contactAuthority.telephoneByLanguage?.['de-AT'] === '+4367764733262', 'DE phone authority must remain Viko');
+fail(contactAuthority.telephoneByLanguage?.['hu-HU'] === '+4367761655592', 'HU phone authority must remain Norbert');
+fail(contactAuthority.googleBusinessProfilePhoneRule?.austriaLocations === '+4367764733262', 'Austrian GBP phone authority drift');
+fail(contactAuthority.googleBusinessProfilePhoneRule?.budapestLocation === '+4367761655592', 'Budapest GBP phone authority drift');
+const ownership=core.authorityOwnership||{};
+for (const url of ['https://www.linkedin.com/company/banhalmi/','https://cherrydeck.com/norbert.banhalmi']) fail((ownership.professionalOrganization?.activeProfiles||[]).includes(url), `Professional organization profile missing: ${url}`);
+for (const url of ['https://www.linkedin.com/in/norbertbanhalmi/','https://www.instagram.com/norbert.banhalmi/','https://www.facebook.com/banhalmi.norbert','https://www.youtube.com/@norbert.banhalmi']) fail((ownership.artisticPerson?.activeProfiles||[]).includes(url), `ART person profile missing: ${url}`);
+
 fail(core.person?.role?.includes('Founder') && core.person?.role?.includes('lead photographer'), 'Norbert founder/lead-photographer role drift');
 fail(core.person?.primaryProfessionalIdentity?.includes('photography business'), 'Primary professional identity must remain the BANHALMI photography business');
 
