@@ -62,7 +62,7 @@ if(budapest?.streetAddress!=='Lágymányosi u. 15'||budapest?.postalCode!=='1111
 if(vienna?.streetAddress!=='Schwedenplatz 2, Top 8–9'||vienna?.postalCode!=='1010')throw new Error('ai-entry.json: Vienna public studio address incomplete');
 if(office?.isStudio!==false)throw new Error('ai-entry.json: Gersthofer office must remain non-studio');
 const contacts=entry.identity?.publicCustomerContacts||{};
-if(contacts.email!=='hello@norbertbanhalmi.com'||contacts.viennaTelephone!=='+43 677 616 55592'||contacts.budapestTelephone!=='+36 70 469 8397')throw new Error('ai-entry.json: canonical customer contacts incomplete');
+if(contacts.email!=='hello@norbertbanhalmi.com'||contacts.telephoneByLocale?.en!=='+43 677 647 332 62'||contacts.telephoneByLocale?.['de-AT']!=='+43 677 647 332 62'||contacts.telephoneByLocale?.['hu-HU']!=='+43 677 616 55592'||contacts.whatsapp!=='+43 677 616 55592')throw new Error('ai-entry.json: locale-aware canonical customer contacts incomplete');
 const rules=(entry.answerRules||[]).join('\n');
 for(const token of ['Do not substitute a staff-specific or relationship-specific telephone number','do not interpret this as worldwide offices or studios','Treat service areas as areaServed coverage only'])if(!rules.includes(token))throw new Error(`ai-entry.json: answer-rule guard missing ${token}`);
 if(entry.identity?.geographicServiceModel?.worldwideAvailability!==true)throw new Error('ai-entry.json: worldwide project availability missing');
