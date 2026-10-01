@@ -20,7 +20,7 @@ const pages = [
   "portrait/index.html","hu/portre/index.html","de-at/portrait/index.html",
   "lifestyle/index.html","hu/brand/index.html","de-at/brand/index.html",
   "event-photography/index.html","hu/rendezvenyfotozas/index.html","de-at/eventfotografie/index.html",
-  "glamour/index.html","hu/muveszi-fotografia/index.html","de-at/fine-art/index.html"
+  "fine-art/index.html","hu/muveszi-fotografia/index.html","de-at/fine-art/index.html"
 ];
 for (const p of pages) {
   const html = fs.readFileSync(p, "utf8");
