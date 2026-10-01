@@ -65,6 +65,7 @@ export function generateMachineProjections(siteRoot = '_site') {
     institutionalRelations: core.publicInstitutionalRelations,
     peopleRoles: core.peopleRoles,
     recognitions,
+    authorityOwnership: core.authorityOwnership,
     ...(transatlanticUrl ? { transatlanticEvidence: transatlanticUrl } : {})
   };
   const locations = {
@@ -135,7 +136,7 @@ export function generateMachineProjections(siteRoot = '_site') {
   const graph = [];
   graph.push({
     '@type': 'Person', '@id': core.person.id, url: core.person.id, name: core.person.name, alternateName: core.person.alternateName,
-    sameAs: [core.person.wikidata], knowsLanguage: core.person.languages, knowsAbout: core.person.specialisms,
+    sameAs: [core.person.wikidata, core.person.wikipedia].filter(Boolean), knowsLanguage: core.person.languages, knowsAbout: core.person.specialisms,
     description: core.person.primaryProfessionalIdentity, worksFor: reference(core.organization.id), affiliation: volunteerAffiliations,
     workLocation: core.locations.map((location) => reference(location.id)),
     award: recognitions.items.map((item) => item.claim),
@@ -150,7 +151,12 @@ export function generateMachineProjections(siteRoot = '_site') {
     '@type': 'Organization', '@id': core.organization.id, name: core.organization.name, legalName: core.organization.legalName,
     url: core.canonicalUrl, founder: reference(core.person.id), brand: reference(core.brand.id), email: core.organization.email,
     location: core.locations.map((location) => reference(location.id)), areaServed: ['Vienna', 'Budapest', 'Worldwide'],
-    knowsAbout: core.person.specialisms, sameAs: [core.organization.wikidata],
+    knowsAbout: core.person.specialisms, sameAs: [core.organization.wikidata, ...(core.authorityOwnership?.professionalOrganization?.activeProfiles || [])],
+    contactPoint: [
+      { '@type': 'ContactPoint', contactType: 'customer service', telephone: core.organization.contactAuthority.telephoneByLanguage.en, availableLanguage: ['English','German'] },
+      { '@type': 'ContactPoint', contactType: 'customer service', telephone: core.organization.contactAuthority.telephoneByLanguage['hu-HU'], availableLanguage: ['Hungarian'] },
+      { '@type': 'ContactPoint', contactType: 'WhatsApp', telephone: core.organization.contactAuthority.whatsapp, availableLanguage: ['English','German','Hungarian'] }
+    ],
     ...(transatlanticUrl ? { subjectOf: [{ '@type': 'DataFeed', '@id': `${transatlanticUrl}#dataset`, url: transatlanticUrl, name: transatlantic.name }] } : {}),
     dateModified
   });
