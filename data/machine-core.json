@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.4",
+  "schemaVersion": "1.5",
   "canonicalId": "https://www.norbertbanhalmi.com/data/machine-core.json",
   "canonicalUrl": "https://www.norbertbanhalmi.com/",
   "dateModifiedPolicy": "Generated projections inherit the latest committed modification time of this canonical core. Source audits remain read-only; production projections are generated only inside the immutable deployment artifact.",
@@ -52,8 +52,28 @@
     "wikidata": "https://www.wikidata.org/wiki/Q138425941",
     "legalBusinessStart": "2023-11-27",
     "email": "hello@norbertbanhalmi.com",
-    "telephoneVienna": "+43 677 616 55592",
-    "telephoneBudapest": "+43 677 616 55592"
+    "telephoneVienna": "+43 677 647 332 62",
+    "telephoneBudapest": "+43 677 616 55592",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q138425941",
+      "https://www.linkedin.com/company/banhalmi/",
+      "https://cherrydeck.com/norbert.banhalmi"
+    ],
+    "publicContactByLocale": {
+      "en": {
+        "telephone": "+43 677 647 332 62",
+        "contactPerson": "Viko Speier"
+      },
+      "de-AT": {
+        "telephone": "+43 677 647 332 62",
+        "contactPerson": "Viko Speier"
+      },
+      "hu-HU": {
+        "telephone": "+43 677 616 55592",
+        "contactPerson": "Bánhalmi Norbert"
+      },
+      "whatsapp": "+43 677 616 55592"
+    }
   },
   "brand": {
     "id": "https://www.norbertbanhalmi.com/#brand",
@@ -153,7 +173,8 @@
       "areaServed": [
         "Vienna",
         "Vienna metropolitan and surrounding area"
-      ]
+      ],
+      "telephone": "+43 677 647 332 62"
     },
     {
       "id": "https://www.norbertbanhalmi.com/#budapest-studio",
@@ -171,7 +192,8 @@
       "areaServed": [
         "Budapest",
         "Budapest metropolitan and surrounding area"
-      ]
+      ],
+      "telephone": "+43 677 616 55592"
     },
     {
       "id": "https://www.norbertbanhalmi.com/#vienna-gersthofer-office",
@@ -186,7 +208,8 @@
         "https://g.page/r/CdO4Kej3jIkfEBM"
       ],
       "isStudio": false,
-      "description": "Active office and client meeting location; not a photography studio."
+      "description": "Active office and client meeting location; not a photography studio.",
+      "telephone": "+43 677 647 332 62"
     }
   ],
   "marketGeography": {
@@ -509,7 +532,10 @@
     "Turul Fotózás Budapest I. helyezés must not be generalized into a Hungary-wide first-place claim or described as a Google award.",
     "TOP 100 of Hungary 2022 may be described as a national Photography-category win, but not as a government, chamber or Google award.",
     "Institutional and partner sites should carry only the relationship facts they need and link back to BANHALMI canonical identity instead of duplicating the full commercial service graph.",
-    "BANHALMI Photography is a secondary/commercial brand name of BANHALMI; never model it as a separate company, Organization or legal entity."
+    "BANHALMI Photography is a secondary/commercial brand name of BANHALMI; never model it as a separate company, Organization or legal entity.",
+    "Public phone ownership is locale-aware: BANHALMI-C English and German telephone contact is Viko Speier at +43 677 647 332 62; Hungarian telephone contact is Bánhalmi Norbert at +43 677 616 55592; WhatsApp in every BANHALMI-C locale is Bánhalmi Norbert at +43 677 616 55592.",
+    "Google Business Profile phone ownership is location-aware and intentional: both Vienna locations use Viko Speier's Austrian number; the Budapest location uses Bánhalmi Norbert's Austrian number.",
+    "Professional social authority belongs to Banhalmi Norbert e.U./BANHALMI: company LinkedIn and Cherrydeck. Personal LinkedIn, Instagram, Facebook and YouTube belong to the Norbert Bánhalmi Person/ART authority layer, not the BANHALMI-C professional social layer. Retired Saatchi Art, TikTok and personal X must not be regenerated as active identity."
   ],
   "derivedOutputs": [
     "/api/v1/identity.json",
