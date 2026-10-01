@@ -80,7 +80,11 @@
       "@type": "Organization",
       "@id": "https://www.norbertbanhalmi.com/#organization",
       "name": "Banhalmi Norbert e.U.",
-      "sameAs": "https://www.wikidata.org/wiki/Q138425941",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q138425941",
+        "https://www.linkedin.com/company/banhalmi/",
+        "https://cherrydeck.com/norbert.banhalmi"
+      ],
       "founder": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
