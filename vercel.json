@@ -5,11 +5,6 @@
   },
   "redirects": [
     {
-      "source": "/glamour",
-      "destination": "/fine-art/",
-      "permanent": true
-    },
-    {
       "source": "/en/work",
       "destination": "https://www.banhalmi.art/",
       "permanent": true
@@ -2552,6 +2547,11 @@
           "value": "www.banhalminorbert.hu"
         }
       ]
+    },
+    {
+      "source": "/glamour",
+      "destination": "/fine-art/",
+      "permanent": true
     },
     {
       "source": "/hu/",
