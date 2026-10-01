@@ -19,6 +19,9 @@ const company=[
   'https://www.linkedin.com/company/banhalmi/',
   'https://cherrydeck.com/norbert.banhalmi'
 ];
+const personForbiddenProfessional=[
+  'https://cherrydeck.com/profile/norbert.banhalmi'
+];
 const errors=[];
 
 function files(dir){
@@ -35,7 +38,7 @@ for(const file of files(ROOT)){
   const rel=path.relative(ROOT,file).replaceAll('\\','/');
   const html=fs.readFileSync(file,'utf8');
   if(!html.includes('class="site-footer"')) continue;
-  for(const url of [...retired,...personal]) if(html.includes(url)) errors.push(`${rel}: stale/personal social authority ${url}`);
+  for(const url of [...retired,...personal,...personForbiddenProfessional]) if(html.includes(url)) errors.push(`${rel}: stale/personal social authority ${url}`);
   for(const url of company) if(!html.includes(url)) errors.push(`${rel}: company social authority missing ${url}`);
   const social=html.match(/<details class="footer-accordion" data-social-footer="">[\s\S]*?<\/details>/)?.[0]||'';
   if(!social) errors.push(`${rel}: social footer missing`);
@@ -47,7 +50,7 @@ for(const file of files(ROOT)){
 
 for(const rel of ['entity.jsonld','person-authority.jsonld']){
   const text=read(rel);
-  for(const url of [...retired,...personal]) if(text.includes(url)) errors.push(`${rel}: forbidden active identity ${url}`);
+  for(const url of [...retired,...personal,...personForbiddenProfessional]) if(text.includes(url)) errors.push(`${rel}: forbidden active identity ${url}`);
   for(const url of company) if(!text.includes(url)) errors.push(`${rel}: organization authority missing ${url}`);
 }
 
