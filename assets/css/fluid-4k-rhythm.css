@@ -2312,3 +2312,12 @@ html body .sr-only{
   white-space:nowrap!important;
   border:0!important;
 }
+
+/* BANHALMI gallery rhythm contract — 2026-10-01
+   One visual rule for gallery gutters across EN/HU/DE and all responsive widths. */
+:root{--banhalmi-gallery-gap:20px;}
+.gallery,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid{gap:var(--banhalmi-gallery-gap)!important;}
+.pf-grid,.collage-gallery,.jony-gallery-grid{column-gap:var(--banhalmi-gallery-gap)!important;}
+.pf-item,.collage-gallery .editorial-image,.jony-gallery-grid figure{margin-bottom:var(--banhalmi-gallery-gap)!important;}
+@media (max-width:1100px){.collage-gallery{column-gap:var(--banhalmi-gallery-gap)!important}.collage-gallery .editorial-image{margin-bottom:var(--banhalmi-gallery-gap)!important}}
+@media (max-width:680px){.collage-gallery{column-gap:var(--banhalmi-gallery-gap)!important}}
