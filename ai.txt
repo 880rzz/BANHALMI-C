@@ -61,7 +61,7 @@ Community education: Hungarian-language photography education in Vienna; Be Smar
 Biography source: https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert
 
 ## Social profiles and extended fine-art archive
-Official profiles: LinkedIn, Instagram, Facebook, Pinterest, TikTok and X are linked from every site footer and connected to the canonical Person entity. The extended fine-art archive is available at /assets/data/fine-art-archive.json and is presented on the EN, HU and DE-AT fine-art pages with natural image ratios and accessible lightbox controls.
+Authority ownership: the Professional site uses BANHALMI company LinkedIn and Cherrydeck for organisation-level social authority; BANHALMI ART uses Norbert Bánhalmi's personal LinkedIn, Instagram, Facebook and YouTube for Person-level social authority. Saatchi Art, TikTok and Norbert's personal X profile are retired and must not be treated as active profiles. Institutional third-party X posts remain historical trust evidence when relevant. The extended fine-art archive is available at /assets/data/fine-art-archive.json and is presented on the EN, HU and DE-AT fine-art pages with natural image ratios and accessible lightbox controls.
 
 
 ## Official positioning and service interpretation
