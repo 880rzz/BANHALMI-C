@@ -70,12 +70,7 @@
       "sameAs": [
         "https://www.wikidata.org/wiki/Q56391118",
         "https://hu.wikipedia.org/wiki/B%C3%A1nhalmi_Norbert",
-        "https://www.instagram.com/norbert.banhalmi/",
-        "https://www.linkedin.com/in/norbertbanhalmi/",
-        "https://www.facebook.com/banhalmi.norbert",
-        "https://www.youtube.com/@norbert.banhalmi",
-        "https://x.com/norbertbanhalmi",
-        "https://www.saatchiart.com/norbertbanhalmi"
+        "https://www.banhalmi.art/"
       ],
       "subjectOf": [
         {
@@ -163,22 +158,42 @@
         "https://www.wikidata.org/wiki/Q138425941",
         "https://firmen.wko.at/norbert-banhalmi-visuelle-strategische-partnerschaft-f%C3%BCr-f%C3%BChrungskr%C3%A4fte/wien/?firmaid=12bd142c-5fcf-4457-9a90-47fbff162b40",
         "https://www.banhalmi.at/",
-        "https://www.banhalminorbert.hu/"
+        "https://www.banhalminorbert.hu/",
+        "https://www.linkedin.com/company/banhalmi/",
+        "https://cherrydeck.com/profile/norbert.banhalmi"
       ],
       "logo": {
         "@id": "https://www.norbertbanhalmi.com/#logo"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer service",
-        "email": "hello@norbertbanhalmi.com",
-        "telephone": "+4367761655592",
-        "availableLanguage": [
-          "English",
-          "German",
-          "Hungarian"
-        ]
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+4367764733262",
+          "availableLanguage": [
+            "English",
+            "German"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "telephone": "+4367761655592",
+          "availableLanguage": [
+            "Hungarian"
+          ]
+        },
+        {
+          "@type": "ContactPoint",
+          "contactType": "WhatsApp",
+          "telephone": "+4367761655592",
+          "availableLanguage": [
+            "English",
+            "German",
+            "Hungarian"
+          ]
+        }
+      ],
       "memberOf": [
         {
           "@type": "Organization",
