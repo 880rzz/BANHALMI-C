@@ -70,3 +70,9 @@ if(errors.length){
   process.exit(1);
 }
 console.log('Social/entity authority contract OK: Professional uses company LinkedIn + Cherrydeck; retired/personal profiles are absent from active Professional identity while ART ownership remains declared in machine-core.');
+
+for (const file of ['ai.txt','llms-full.txt']) {
+  const text=read(file);
+  if (/Official profiles:[^\n]*(TikTok|\bX\b)/i.test(text)) errors.push(file+': retired TikTok/X must not be declared as active official profiles');
+  if (/linked from every site footer[^\n]*(TikTok|\bX\b)/i.test(text)) errors.push(file+': stale footer social authority claim detected');
+}
