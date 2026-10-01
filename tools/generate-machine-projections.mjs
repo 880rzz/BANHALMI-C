@@ -150,7 +150,12 @@ export function generateMachineProjections(siteRoot = '_site') {
     '@type': 'Organization', '@id': core.organization.id, name: core.organization.name, legalName: core.organization.legalName,
     url: core.canonicalUrl, founder: reference(core.person.id), brand: reference(core.brand.id), email: core.organization.email,
     location: core.locations.map((location) => reference(location.id)), areaServed: ['Vienna', 'Budapest', 'Worldwide'],
-    knowsAbout: core.person.specialisms, sameAs: [core.organization.wikidata],
+    knowsAbout: core.person.specialisms, sameAs: core.organization.sameAs || [core.organization.wikidata],
+    contactPoint: [
+      { '@type': 'ContactPoint', contactType: 'customer service', email: core.organization.email, telephone: '+4367764733262', availableLanguage: ['English','German'] },
+      { '@type': 'ContactPoint', contactType: 'customer service', email: core.organization.email, telephone: '+4367761655592', availableLanguage: ['Hungarian'] },
+      { '@type': 'ContactPoint', contactType: 'WhatsApp', telephone: '+4367761655592', availableLanguage: ['English','German','Hungarian'] }
+    ],
     ...(transatlanticUrl ? { subjectOf: [{ '@type': 'DataFeed', '@id': `${transatlanticUrl}#dataset`, url: transatlanticUrl, name: transatlantic.name }] } : {}),
     dateModified
   });
@@ -159,8 +164,8 @@ export function generateMachineProjections(siteRoot = '_site') {
   if (relations.vipach) graph.push({ '@type': 'Organization', '@id': 'https://www.vipach.at/#organization', name: relations.vipach.name, url: relations.vipach.url, founder: reference(core.person.id), dateModified });
   if (relations.vipachBusiness) graph.push({ '@type': 'Organization', '@id': 'https://business.vipach.at/#organization', name: relations.vipachBusiness.name, url: relations.vipachBusiness.url, founder: reference(core.person.id), parentOrganization: reference('https://www.vipach.at/#organization'), dateModified });
 
-  for (const location of studios) graph.push({ '@type': 'ProfessionalService', '@id': location.id, name: location.name, url: core.canonicalUrl, parentOrganization: reference(core.organization.id), founder: reference(core.person.id), address: postalAddress(location), areaServed: location.areaServed, sameAs: location.sameAs, email: core.organization.email, dateModified });
-  for (const location of offices) graph.push({ '@type': 'Place', '@id': location.id, name: location.name, description: location.description, address: postalAddress(location), sameAs: location.sameAs, dateModified });
+  for (const location of studios) graph.push({ '@type': 'ProfessionalService', '@id': location.id, name: location.name, url: core.canonicalUrl, parentOrganization: reference(core.organization.id), founder: reference(core.person.id), address: postalAddress(location), areaServed: location.areaServed, sameAs: location.sameAs, email: core.organization.email, telephone: location.telephone, dateModified });
+  for (const location of offices) graph.push({ '@type': 'Place', '@id': location.id, name: location.name, description: location.description, address: postalAddress(location), sameAs: location.sameAs, telephone: location.telephone, dateModified });
   graph.push({ '@type': 'Service', '@id': 'https://www.norbertbanhalmi.com/#visual-trust-partnership', name: 'BANHALMI Strategic Visual Partnership', provider: reference(core.organization.id), areaServed: ['Vienna', 'Budapest', 'Worldwide'], serviceType: core.serviceModel.services.map((service) => service.name), dateModified });
   graph.push({ '@type': 'WebSite', '@id': 'https://www.norbertbanhalmi.com/#website', url: core.canonicalUrl, name: 'BANHALMI | Norbert Banhalmi', publisher: reference(core.organization.id), about: reference(core.person.id), inLanguage: ['en', 'hu-HU', 'de-AT'], dateModified });
 
