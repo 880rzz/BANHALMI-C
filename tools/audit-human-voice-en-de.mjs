@@ -5,7 +5,7 @@ import process from 'node:process';
 const root=process.cwd();
 const failures=[];
 const priority=[
-  'index.html','about/index.html','portrait/index.html','lifestyle/index.html','event-photography/index.html','glamour/index.html','contact/index.html','faq/index.html','speier-viko/index.html',
+  'index.html','about/index.html','portrait/index.html','lifestyle/index.html','event-photography/index.html','fine-art/index.html','contact/index.html','faq/index.html','speier-viko/index.html',
   'de-at/index.html','de-at/werk/index.html','de-at/portrait/index.html','de-at/brand/index.html','de-at/eventfotografie/index.html','de-at/fine-art/index.html','de-at/kontakt/index.html','de-at/faq/index.html','de-at/speier-viko/index.html'
 ];
 const banned=[
