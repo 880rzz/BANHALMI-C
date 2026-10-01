@@ -7,7 +7,7 @@ const errors=[];
 const manifest=JSON.parse(fs.readFileSync(path.join(root,'docs/content-migrations/2026-08-06-fine-art-private-journey-stage7.json'),'utf8'));
 const sha256=value=>crypto.createHash('sha256').update(value).digest('hex');
 const pageConfig={
-  "glamour/index.html": {
+  "fine-art/index.html": {
     "secondary": "View selected work",
     "newHeader": [
       "Selected personal work",
