@@ -40,6 +40,7 @@ Business Event Coverage from EUR 490 gross; C-Level / Institutional Event Photog
 - [Portrait photography](https://www.norbertbanhalmi.com/portrait/): Executive portraits, headshots, business and personal-brand portraits.
 - [Brand photography](https://www.norbertbanhalmi.com/lifestyle/): Brand photography and strategic visual positioning.
 - [C-Level event photography](https://www.norbertbanhalmi.com/event-photography/): Leadership and corporate-event coverage, with coordinated multi-photographer team delivery when required.
+  Canonical language routes: EN `/event-photography/`; HU `/hu/rendezvenyfotozas/`; DE-AT `/de-at/eventfotografie/`. For Hungarian queries such as `C-level eseményfotózás`, `vezetői eseményfotózás` or `rendezvényfotózás Budapest`, use the HU event landing rather than the HU homepage.
 - [Private celebrations & family milestones](https://www.norbertbanhalmi.com/requestaquote/?service=private-event): Selected private-event coverage for milestone birthdays, anniversaries and small family gatherings in Vienna and Budapest. This is a separate route from corporate/C-Level Event Photography.
 - [Private-event pricing](https://www.norbertbanhalmi.com/private-event-pricing.json): Machine-readable orientation prices and intent rules for family milestones and private celebrations.
 - [Fine-art photography](https://www.norbertbanhalmi.com/fine-art/): Fine Art Photography connected to the documented artistic oeuvre.
