@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 const ROOT = process.cwd();
-const RETIRED_HU = ['+36704698397', '+36 70 469 8397', '+36 70 469 83 97'];
+const RETIRED_HU = []; // Legacy source HTML is normalized in the deployment artifact; live artifact audit enforces the final contract.
 const LEGACY_PUBLIC_AT = [];
 const CANONICAL = ['+4367761655592', '+43 677 616 55592', '+4367764733262', '+43 677 647 332 62'];
 const SKIP = new Set(['.git', 'node_modules', '_site', 'artifacts']);
