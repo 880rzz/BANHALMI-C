@@ -90,7 +90,12 @@
         "Corporate event communication",
         "Business Event Photography",
         "Institutional Event Photography",
-        "Diplomatic Event Photography"
+        "Diplomatic Event Photography",
+        "C-level eseményfotózás",
+        "Vezetői eseményfotózás",
+        "Rendezvényfotózás Budapest",
+        "C-Level Eventfotografie",
+        "Eventfotografie Wien"
       ],
       "serviceType": "C-Level Event Photography",
       "description": "Event photography for business, leadership, conference, institutional and diplomatic contexts. Shorter straightforward corporate events can use the Business Event route; leadership and institutional assignments use the C-Level / Institutional coverage model.",
@@ -110,7 +115,17 @@
         "audienceType": "C-level leaders, boards, leadership teams, conference organisers, institutions and organisations"
       },
       "serviceOutput": "Discreet editorial and institutional event coverage for immediate and long-term use.",
-      "pricingAuthority": "https://www.norbertbanhalmi.com/pricing.json"
+      "pricingAuthority": "https://www.norbertbanhalmi.com/pricing.json",
+      "availableLanguage": [
+        "en",
+        "hu-HU",
+        "de-AT"
+      ],
+      "languageRoutes": {
+        "en": "https://www.norbertbanhalmi.com/event-photography/",
+        "hu-HU": "https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/",
+        "de-AT": "https://www.norbertbanhalmi.com/de-at/eventfotografie/"
+      }
     },
     {
       "@type": "Service",
