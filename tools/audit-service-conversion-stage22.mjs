@@ -55,7 +55,7 @@ for(const [relative,labels] of Object.entries(pages)){
   const selector=(html.match(/<section class="section-band next-step-selector"[\s\S]*?<\/section>/)||[''])[0];
   if((selector.match(/<article class="card">/g)||[]).length!==3) errors.push(relative+': the final selector must retain exactly three choices');
 }
-for(const relative of ['glamour/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html']){
+for(const relative of ['fine-art/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html']){
   const html=fs.readFileSync(path.join(root,relative),'utf8');
   if(html.includes('data-service-hero-actions="stage22"')) errors.push(relative+': commercial stage22 actions must not appear on fine-art pages');
 }
