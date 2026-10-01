@@ -26,12 +26,9 @@ for(const file of files(ROOT)){
   const hu=/^hu/i.test(lang);
   const expected=hu?NORBERT:VIKO;
   const forbidden=hu?VIKO:NORBERT;
-  const phones=[...html.matchAll(/<a class="footer-phone" href="tel:([^"]+)">([^<]+)<\/a>/g)];
-  if(phones.length<1) failures.push(`${rel}: footer phone missing`);
-  for(const m of phones){
-    if(m[1]!==expected.compact||m[2]!==expected.display) failures.push(`${rel}: footer phone drift ${m[2]} / ${m[1]}`);
-  }
-  if(html.includes(forbidden.display)&&phones.some(m=>m[2]===forbidden.display)) failures.push(`${rel}: wrong locale footer phone ${forbidden.display}`);
+  const revealButtons=[...html.matchAll(/<button class="footer-phone footer-contact-reveal"[^>]*data-contact-kind="phone"[^>]*>/g)];
+  if(revealButtons.length<1) failures.push(`${rel}: footer phone reveal control missing`);
+  if(html.includes(`href="tel:${forbidden.compact}"`) || html.includes(`>${forbidden.display}<`)) failures.push(`${rel}: wrong locale public phone ${forbidden.display}`);
   if(!html.includes('https://wa.me/4367761655592')) failures.push(`${rel}: canonical Norbert WhatsApp missing`);
   for(const token of RETIRED) if(html.includes(token)) failures.push(`${rel}: retired Hungarian public phone token ${token}`);
 }
