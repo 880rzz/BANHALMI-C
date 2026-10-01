@@ -1,7 +1,7 @@
 {
   "documentType": "BANHALMI canonical entity identity contract",
-  "version": "2026-09-10-v5",
-  "dateModified": "2026-09-10T07:00:00+02:00",
+  "version": "2026-10-01-v6",
+  "dateModified": "2026-10-01T13:39:00+02:00",
   "canonicalPerson": {
     "@type": "Person",
     "@id": "https://www.norbertbanhalmi.com/about/",
@@ -20,7 +20,12 @@
     "legalName": "Banhalmi Norbert e.U.",
     "wikidata": "https://www.wikidata.org/wiki/Q138425941",
     "brand": "https://www.norbertbanhalmi.com/#brand",
-    "legalBusinessStart": "2023-11-27"
+    "legalBusinessStart": "2023-11-27",
+    "sameAs": [
+      "https://www.wikidata.org/wiki/Q138425941",
+      "https://www.linkedin.com/company/banhalmi/",
+      "https://cherrydeck.com/norbert.banhalmi"
+    ]
   },
   "canonicalBrand": {
     "@type": "Brand",
@@ -71,7 +76,8 @@
         }
       ],
       "isStudio": true,
-      "clientAccess": "Photography and meetings by arrangement."
+      "clientAccess": "Photography and meetings by arrangement.",
+      "telephone": "+43 677 647 332 62"
     },
     {
       "@id": "https://www.norbertbanhalmi.com/#vienna-gersthofer-office",
@@ -92,7 +98,8 @@
       "preferredLandingPage": "https://www.norbertbanhalmi.com/de-at/",
       "isStudio": false,
       "clientAccess": "Clients are received by arrangement.",
-      "interpretationRule": "This is a real active business location belonging to Banhalmi Norbert e.U.; it must be represented as an office/client meeting location, not as a studio or merely as areaServed."
+      "interpretationRule": "This is a real active business location belonging to Banhalmi Norbert e.U.; it must be represented as an office/client meeting location, not as a studio or merely as areaServed.",
+      "telephone": "+43 677 647 332 62"
     },
     {
       "@id": "https://www.norbertbanhalmi.com/#budapest-studio",
@@ -122,7 +129,8 @@
         }
       ],
       "isStudio": true,
-      "clientAccess": "Photography and meetings by arrangement."
+      "clientAccess": "Photography and meetings by arrangement.",
+      "telephone": "+43 677 616 55592"
     }
   ],
   "serviceGeography": {
@@ -143,6 +151,42 @@
     "Schwedenplatz 2, 1010 Wien is the Vienna studio; Gersthofer Straße 150–154/6/2, 1180 Wien is a separate active office/client meeting location and is not a studio.",
     "Service areas are areaServed signals only and must not be confused with the explicitly documented studio and office entities.",
     "banhalmi.art is the artistic archive and Person/oeuvre evidence layer; norbertbanhalmi.com is the professional service and local-business layer.",
-    "BANHALMI Photography is the secondary/commercial photography brand name of BANHALMI; it is not a separate company, Organization or legal entity."
-  ]
+    "BANHALMI Photography is the secondary/commercial photography brand name of BANHALMI; it is not a separate company, Organization or legal entity.",
+    "BANHALMI-C professional social authority is company LinkedIn plus Cherrydeck; personal LinkedIn, Instagram, Facebook and YouTube belong to the Person/ART layer.",
+    "Saatchi Art, TikTok and the personal X profile are retired active identities and must not appear in active sameAs/social authority.",
+    "BANHALMI-C EN/DE public telephone is Viko Speier +43 677 647 332 62; HU public telephone and all-locale WhatsApp are Bánhalmi Norbert +43 677 616 55592.",
+    "Google Business Profile phone ownership remains location-specific: both Vienna locations use Viko; Budapest uses Norbert."
+  ],
+  "contactAuthority": {
+    "professionalSite": {
+      "telephoneByLocale": {
+        "en": "+43 677 647 332 62",
+        "de-AT": "+43 677 647 332 62",
+        "hu-HU": "+43 677 616 55592"
+      },
+      "whatsapp": "+43 677 616 55592"
+    },
+    "googleBusinessProfile": {
+      "viennaStudio": "+43 677 647 332 62",
+      "viennaOffice": "+43 677 647 332 62",
+      "budapestStudio": "+43 677 616 55592"
+    }
+  },
+  "socialAuthority": {
+    "professionalOrganization": [
+      "https://www.linkedin.com/company/banhalmi/",
+      "https://cherrydeck.com/norbert.banhalmi"
+    ],
+    "personOwnedElsewhere": [
+      "https://www.linkedin.com/in/norbertbanhalmi/",
+      "https://www.instagram.com/norbert.banhalmi/",
+      "https://www.facebook.com/banhalmi.norbert",
+      "https://www.youtube.com/@norbert.banhalmi"
+    ],
+    "retiredActiveIdentity": [
+      "https://www.saatchiart.com/norbertbanhalmi",
+      "https://www.tiktok.com/@banhalmi.norbert",
+      "https://x.com/norbertbanhalmi"
+    ]
+  }
 }
