@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.4",
+  "schemaVersion": "1.5",
   "canonicalId": "https://www.norbertbanhalmi.com/data/machine-core.json",
   "canonicalUrl": "https://www.norbertbanhalmi.com/",
   "dateModifiedPolicy": "Generated projections inherit the latest committed modification time of this canonical core. Source audits remain read-only; production projections are generated only inside the immutable deployment artifact.",
@@ -52,8 +52,19 @@
     "wikidata": "https://www.wikidata.org/wiki/Q138425941",
     "legalBusinessStart": "2023-11-27",
     "email": "hello@norbertbanhalmi.com",
-    "telephoneVienna": "+43 677 616 55592",
-    "telephoneBudapest": "+43 677 616 55592"
+    "contactAuthority": {
+      "whatsapp": "+4367761655592",
+      "telephoneByLanguage": {
+        "en": "+4367764733262",
+        "de-AT": "+4367764733262",
+        "hu-HU": "+4367761655592"
+      },
+      "googleBusinessProfilePhoneRule": {
+        "austriaLocations": "+4367764733262",
+        "budapestLocation": "+4367761655592",
+        "rule": "The two Austrian Google Business Profile locations use Viko's Austrian number; the Budapest Google Business Profile uses Norbert's Austrian number. Do not normalize these location-profile numbers."
+      }
+    }
   },
   "brand": {
     "id": "https://www.norbertbanhalmi.com/#brand",
@@ -522,5 +533,30 @@
     "/llms.txt",
     "/ai.txt",
     "/machine-manifest.json"
-  ]
+  ],
+  "authorityOwnership": {
+    "professionalOrganization": {
+      "site": "https://www.norbertbanhalmi.com/",
+      "activeProfiles": [
+        "https://www.linkedin.com/company/banhalmi/",
+        "https://cherrydeck.com/norbert.banhalmi"
+      ],
+      "googleBusinessProfileOwnership": "Location-specific profiles remain attached to their respective Vienna/Budapest location entities."
+    },
+    "artisticPerson": {
+      "site": "https://www.banhalmi.art/",
+      "activeProfiles": [
+        "https://www.linkedin.com/in/norbertbanhalmi/",
+        "https://www.instagram.com/norbert.banhalmi/",
+        "https://www.facebook.com/banhalmi.norbert",
+        "https://www.youtube.com/@norbert.banhalmi"
+      ]
+    },
+    "retiredActiveIdentity": [
+      "https://www.saatchiart.com/norbertbanhalmi",
+      "https://www.tiktok.com/@banhalmi.norbert",
+      "https://x.com/norbertbanhalmi"
+    ],
+    "rule": "Retired profiles must not appear in active sameAs, ProfilePage, Organization or Person social authority. Institutional X posts and other third-party URLs remain valid historical/trust evidence when they document an external institution rather than Norbert's retired personal X profile."
+  }
 }
