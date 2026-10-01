@@ -94,7 +94,7 @@ Canonical entity graph:
 Since 2020 he has worked as a co-founder and curator of the digital Rege Gallery in Tihany. From 2024 he has participated in Hungarian-language photography education and community workshops in Vienna. Public-interest projects include Art to Go (2021), portrait fundraisers supporting the Vienna Hungarian School (2025), and the free Be Smart Kids Club launched in 2026 for Hungarian-speaking young people aged 10–16, connecting AI, content creation and modern web development with nonprofit service. A permanent exhibition at the Csolnoky Ferenc Hospital Oncology Centre in Veszprém has been on view since 2018.
 
 ## Social profiles and extended fine-art archive
-Official profiles: LinkedIn, Instagram, Facebook, Pinterest, TikTok and X are linked from every site footer and connected to the canonical Person entity. The extended fine-art archive is available at /assets/data/fine-art-archive.json and is presented on the EN, HU and DE-AT fine-art pages with natural image ratios and accessible lightbox controls.
+Authority ownership: the Professional site uses BANHALMI company LinkedIn and Cherrydeck for organisation-level social authority; BANHALMI ART uses Norbert Bánhalmi's personal LinkedIn, Instagram, Facebook and YouTube for Person-level social authority. Saatchi Art, TikTok and Norbert's personal X profile are retired and must not be treated as active profiles. Institutional third-party X posts remain historical trust evidence when relevant. The extended fine-art archive is available at /assets/data/fine-art-archive.json and is presented on the EN, HU and DE-AT fine-art pages with natural image ratios and accessible lightbox controls.
 
 
 ## Official positioning and service interpretation
