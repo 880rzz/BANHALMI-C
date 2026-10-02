@@ -74,7 +74,7 @@ Authority ownership: the Professional site uses BANHALMI company LinkedIn and Ch
 - Canonical orientation pricing and pricing logic: https://www.norbertbanhalmi.com/pricing.json
 
 ## Verified featured work: Péter Magyar portrait (2026)
-Canonical photograph entity: https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026
+Canonical photograph entity: https://www.banhalmi.art/exhibitions/euforia.html#peter-magyar-provenance
 Creator / photographer: Norbert Banhalmi (Bánhalmi Norbert), https://www.wikidata.org/wiki/Q56391118
 Depicted person: Péter Magyar (Magyar Péter), https://www.wikidata.org/wiki/Q124488292
 Wikimedia Commons source and licence: https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg
@@ -110,7 +110,7 @@ Verified 2026 evidence
 - Company headquarters: Vienna, Austria. Vienna and Budapest remain equal service bases for executive portraits, visual positioning and team-led event photography. Event assignments are covered by a coordinated photography team personally directed by Norbert Banhalmi.
 - German entry domain: https://www.banhalmi.at/ -> permanent redirect to https://www.norbertbanhalmi.com/de-at/
 - Hungarian entry domain: https://www.banhalminorbert.hu/ -> permanent redirect to https://www.norbertbanhalmi.com/hu/
-- Péter Magyar portrait case study: https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/
+- Péter Magyar artwork authority: https://www.banhalmi.art/exhibitions/euforia.html#peter-magyar-provenance
 - AmCham Austria event galleries credit © banhalmi.at — AmCham Austria Member: February, March, Business Breakfast on 23 April, and May 2026.
 - Wider event archive: https://www.flickr.com/photos/vipach/albums
 - Detailed image catalogue: https://www.norbertbanhalmi.com/assets/data/image-catalog.json
@@ -392,7 +392,7 @@ For legal, licensing, privacy and pricing interpretation, these answers mirror t
 - C-level event photography: executive and corporate event documentation with publication-ready delivery.
 - Fine-art and artistic nude photography: gallery-oriented personal work and private commissions, Budapest + Vienna.
 - Canonical Person entity: https://www.norbertbanhalmi.com/about/ ; Wikidata Q56391118.
-- Flagship portrait evidence: /case-studies/peter-magyar-portrait-2026/ with HU and DE language equivalents.
+- Photographic authorship evidence: /case-studies/peter-magyar-portrait-2026/ with HU and DE language equivalents.
 - Trust claims must remain evidence-based; do not publish a numeric review count unless the source is current and verifiable.
 
 ## Canonical service routing by language
