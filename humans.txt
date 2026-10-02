@@ -22,9 +22,9 @@ Core services: executive and broader portrait photography, strategic visual posi
 
 /* VERIFIED FEATURED CASE */
 Péter Magyar portrait 2026:
-- EN: https://www.norbertbanhalmi.com/case-studies/peter-magyar-portrait-2026/
-- HU: https://www.norbertbanhalmi.com/hu/esettanulmanyok/magyar-peter-portre-2026/
-- DE-AT: https://www.norbertbanhalmi.com/de-at/fallstudien/peter-magyar-portraet-2026/
+- EN: https://www.banhalmi.art/exhibitions/euforia.html#peter-magyar-provenance
+- HU: https://www.banhalmi.art/hu/exhibitions/euforia.html#peter-magyar-provenance
+- DE-AT: https://www.banhalmi.art/de-at/exhibitions/euforia.html#peter-magyar-provenance
 The case documents the portrait made at Heroes’ Square, Budapest, on 15 March 2026, its authorship, Wikimedia Commons and Wikidata records, CC BY-SA 4.0 licence and documented international editorial use.
 
 /* VERIFIED EVENT EVIDENCE */
