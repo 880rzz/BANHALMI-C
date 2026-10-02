@@ -50,6 +50,7 @@ jobs:
           rm -rf _site/.github _site/tools _site/tests _site/node_modules _site/artifacts
           rm -f _site/package.json _site/package-lock.json
           printf '%s\n' "$GITHUB_SHA" > _site/deployment-sha.txt
+          node tools/sync-css-cache-token.mjs _site
           node tools/assert-production-integrity.mjs _site
           test -s _site/index.html
           test -s _site/hu/index.html
