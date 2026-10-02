@@ -368,6 +368,44 @@
           }
         ]
       }
+    },
+    {
+      "@type": "DataFeedItem",
+      "dateCreated": "2026-10-02",
+      "item": {
+        "@type": "SocialMediaPosting",
+        "@id": "https://www.linkedin.com/posts/brianfinnegan1_hungary-law-politics-share-7452275213569933313-j3NU/",
+        "url": "https://www.linkedin.com/posts/brianfinnegan1_hungary-law-politics-share-7452275213569933313-j3NU/",
+        "author": {
+          "@type": "Person",
+          "name": "Brian Finnegan"
+        },
+        "sharedContent": {
+          "@id": "https://www.banhalmi.art/exhibitions/euforia.html#peter-magyar-provenance"
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "evidenceClass",
+            "value": "public-social-reuse"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "imageVerification",
+            "value": "exact portrait visually verified from user-supplied screenshot of the public LinkedIn post"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "creditLevel",
+            "value": "creator-credit-not-visible-in-supplied-post-view"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "evidenceBoundary",
+            "value": "Documents reuse of the photograph only; does not imply endorsement, commission, client status, campaign relationship or political affiliation."
+          }
+        ]
+      }
     }
   ],
   "wikimediaEvidence": {
