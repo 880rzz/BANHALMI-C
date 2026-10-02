@@ -86,6 +86,13 @@ fail(empowerus.location === 'Webster Vienna Private University, Vienna, Austria'
 fail(Array.isArray(empowerus.photographyCredit) && empowerus.photographyCredit.includes('Vikó Speier') && empowerus.photographyCredit.includes('Norbert Bánhalmi / BANHALMI Photography'), 'EmpowerUs photography attribution drift');
 fail(empowerus.capabilities.includes(EVENT_CAP), 'EmpowerUs C-level/event capability missing');
 fail(hasConservativeRelationshipGuardrail(empowerus.interpretationRule), 'EmpowerUs relationship guardrail missing');
+fail(empowerus.evidenceStatus.includes('private-post-delivery-institutional-provenance'), 'EmpowerUs private institutional provenance status missing');
+fail(empowerus.institutionalPostEventFeedback?.senderRole === 'Executive Director, AmCham Austria', 'EmpowerUs institutional feedback sender-role provenance missing');
+fail(empowerus.institutionalPostEventFeedback?.representedRole === 'President, AmCham Austria', 'EmpowerUs represented-role provenance missing');
+fail(/used in AmCham communications/i.test(empowerus.institutionalPostEventFeedback?.evidenceSummary || ''), 'EmpowerUs intended communications-use provenance missing');
+fail(/Do not publish/i.test(empowerus.institutionalPostEventFeedback?.privacyRule || ''), 'EmpowerUs private-correspondence publication guardrail missing');
+fail(/Do not infer endorsement, recommendation, exclusivity, partnership, sponsorship, official-photographer status/i.test(empowerus.institutionalPostEventFeedback?.interpretationRule || ''), 'EmpowerUs institutional-feedback relationship guardrail missing');
+fail(!/karin\.zeltner@|\+\s*43\s*676\s*342/i.test(JSON.stringify(empowerus.institutionalPostEventFeedback)), 'Private AmCham contact details must not enter evidence registry');
 
 const empowerusThirdParty = records.find((record) => record.id === 'linkedin-nemanja-lazendic-7511696380088700929');
 fail(Boolean(empowerusThirdParty), 'EmpowerUs third-party publication evidence missing');
