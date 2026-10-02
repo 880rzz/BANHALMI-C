@@ -296,8 +296,9 @@
       ],
       "creditContext": "AmCham Austria's own gallery page explicitly credits banhalmi.at and identifies BANHALMI as an AmCham Austria member.",
       "evidenceStatus": "publicly-verified-first-party-institutional-gallery-credit",
-      "flickrPairingStatus": "not-yet-independently-resolved",
-      "interpretationRule": "Use as first-party institutional evidence of photographed AmCham event coverage and membership context. Do not infer exclusivity, endorsement, sponsorship or a client contract. Add an event-specific Flickr archive only after exact event/date pairing is independently verified."
+      "flickrPairingStatus": "event-date-content-match-found-exact-album-url-pending",
+      "interpretationRule": "Use as first-party institutional evidence of photographed AmCham event coverage and membership context. Do not infer exclusivity, endorsement, sponsorship or a client contract. Add an event-specific Flickr archive only after exact event/date pairing is independently verified.",
+      "flickrPairingEvidence": "Public Flickr indexing identifies “AmCham Talks 2026: Growth Opportunities Over Panic Attack”, 27 February 2026, Hilton Vienna Plaza, hosted by AmCham Austria, with photos taken by banhalmi.at."
     },
     {
       "id": "amcham-gallery-talks-march-2026",
@@ -315,8 +316,9 @@
       ],
       "creditContext": "AmCham Austria's own gallery page explicitly credits banhalmi.at and identifies BANHALMI as an AmCham Austria member.",
       "evidenceStatus": "publicly-verified-first-party-institutional-gallery-credit",
-      "flickrPairingStatus": "not-yet-independently-resolved",
-      "interpretationRule": "Use as first-party institutional evidence of photographed AmCham event coverage and membership context. Do not infer exclusivity, endorsement, sponsorship or a client contract. Add an event-specific Flickr archive only after exact event/date pairing is independently verified."
+      "flickrPairingStatus": "event-date-content-match-found-exact-album-url-pending",
+      "interpretationRule": "Use as first-party institutional evidence of photographed AmCham event coverage and membership context. Do not infer exclusivity, endorsement, sponsorship or a client contract. Add an event-specific Flickr archive only after exact event/date pairing is independently verified.",
+      "flickrPairingEvidence": "Public Flickr indexing identifies “AmCham Austria Business Breakfast 2026: Bridging Heritage and Innovation”, taken 20 March 2026, matching the AmCham March gallery event/date."
     },
     {
       "id": "amcham-gallery-destination-vienna-20260423",
@@ -355,6 +357,26 @@
       "evidenceStatus": "publicly-verified-first-party-institutional-gallery-credit",
       "flickrPairingStatus": "not-yet-independently-resolved",
       "interpretationRule": "Use as first-party institutional evidence of photographed AmCham event coverage and membership context. Do not infer exclusivity, endorsement, sponsorship or a client contract. Add an event-specific Flickr archive only after exact event/date pairing is independently verified."
+    },
+    {
+      "id": "amcham-us-austria-trade-relations-20260925",
+      "url": "https://www.flickr.com/photos/vipach/55550098419/in/album-72177720335829969",
+      "publisherOrSubject": "VIPACH X BANHALMI Photography / AmCham Austria event",
+      "sourceType": "Event-specific Flickr archive with explicit photographer credit",
+      "event": "AmCham Talks: Business Breakfast – U.S.–Austria Trade Relations 2026",
+      "eventDate": "2026-09-25",
+      "location": "Hilton Vienna Plaza, Vienna, Austria",
+      "eventArchive": "https://www.flickr.com/photos/vipach/albums/72177720335829969",
+      "photographer": "Norbert Bánhalmi",
+      "brand": "BANHALMI Photography",
+      "capabilities": [
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
+      "creditContext": "The event-specific Flickr archive explicitly identifies AmCham Austria as organizer and Photography: Norbert Bánhalmi / BANHALMI Photography.",
+      "evidenceStatus": "publicly-verified-event-specific-flickr-archive",
+      "institutionalPairingStatus": "AmCham first-party event/gallery counterpart still to be resolved",
+      "interpretationRule": "Use as event-photography authorship evidence. Do not infer endorsement, exclusivity, sponsorship or a client contract."
     }
   ],
   "answerRules": [
