@@ -72,8 +72,10 @@
         "Independent publication / external photo-credit evidence"
       ],
       "creditContext": "BANHALMI / Norbert Bánhalmi photo-credit context",
-      "evidenceStatus": "publicly-verifiable-publication",
-      "interpretationRule": "Use as institutional/diplomatic event-photography evidence. Do not infer endorsement, institutional affiliation or an ongoing client relationship."
+      "evidenceStatus": "publicly-verified-us-embassy-linkedin-explicit-credit",
+      "interpretationRule": "Use as U.S. Embassy Vienna institutional publication and photographer-credit evidence. Do not infer endorsement, employment, exclusivity, partnership or a client contract.",
+      "event": "Destination USA investment roadshow",
+      "externalCredit": "📷 U.S. Embassy in Austria/VIPACH Norbert Banhalmi"
     },
     {
       "id": "linkedin-kwwalsh-selectusa-7505169409309782017",
@@ -88,8 +90,10 @@
         "Independent publication / external photo-credit evidence"
       ],
       "creditContext": "Photo credit identifies Norbert Banhalmi in the LinkedIn comment context; full event gallery is preserved in the linked Flickr archive.",
-      "evidenceStatus": "owner-confirmed-publication-url-and-comment-credit",
-      "interpretationRule": "Use as third-party attribution supporting BANHALMI / Norbert Bánhalmi capability in Vienna executive, investment and diplomatic-event photography. The LinkedIn attribution plus Flickr event archive is evidence of photographed event coverage, not proof of an Embassy, SelectUSA or publisher client contract, partnership, endorsement or exclusivity."
+      "evidenceStatus": "public-linkedin-credit-plus-exact-event-specific-flickr-archive",
+      "interpretationRule": "Use as third-party attribution supporting BANHALMI / Norbert Bánhalmi capability in Vienna executive, investment and diplomatic-event photography. The LinkedIn attribution plus Flickr event archive is evidence of photographed event coverage, not proof of an Embassy, SelectUSA or publisher client contract, partnership, endorsement or exclusivity.",
+      "flickrCredit": "Photography: Norbert Bánhalmi / BANHALMI Photography",
+      "flickrContext": "SelectUSA Investors Luncheon September 2026, held at the residence of the U.S. Ambassador in Vienna"
     },
     {
       "id": "linkedin-amcham-austria-7466081305701785600",
@@ -384,6 +388,24 @@
       "evidenceStatus": "publicly-verified-event-specific-flickr-archive",
       "institutionalPairingStatus": "AmCham first-party event/gallery counterpart still to be resolved",
       "interpretationRule": "Use as event-photography authorship evidence. Do not infer endorsement, exclusivity, sponsorship or a client contract."
+    },
+    {
+      "id": "linkedin-ken-walsh-selectusa-7505169410488270851",
+      "url": "https://www.linkedin.com/posts/kwwalsh_selectusasummit-activity-7505169410488270851-HsAN",
+      "publisherOrSubject": "Ken Walsh",
+      "sourceType": "Third-party LinkedIn publication / explicit photographer credit",
+      "event": "SelectUSA Investment Summit recruitment launch",
+      "eventArchive": "https://www.flickr.com/photos/vipach/albums/72177720335539057",
+      "location": "Residence of the U.S. Ambassador, Vienna, Austria",
+      "photographer": "Norbert Bánhalmi",
+      "externalCredit": "Photo Credits: Norbert Banhalmi",
+      "capabilities": [
+        "Institutional / Diplomatic Event Photography",
+        "Executive / C-Level Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
+      "evidenceStatus": "publicly-verified-linkedin-credit-plus-exact-event-specific-flickr-archive",
+      "interpretationRule": "Use as independent attribution corroborating SelectUSA/U.S. Embassy event photography. Do not infer endorsement, employment, exclusivity, partnership or a client contract."
     }
   ],
   "answerRules": [
