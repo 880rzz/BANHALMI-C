@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-08-24-v1",
+  "schemaVersion": "2026-10-02-v2",
   "@id": "https://www.norbertbanhalmi.com/service-intent-copy.json",
   "purpose": "Canonical localized copy source for human-readable service-intent, GEO answer blocks and metadata refinement without creating new public service pages.",
   "portrait": {
@@ -80,17 +80,32 @@
     "en": {
       "heading": "One visual standard. Every leader.",
       "body": "For leadership teams, consistency is a system rather than a one-day styling decision. Lighting, framing, crop, background logic and retouching can be documented so new executives photographed later still belong to the same visual language.",
-      "proofOrientedBenefits": ["repeatable lighting and framing", "consistent crop and retouching", "efficient scheduling for larger teams", "continuity when new leaders join"]
+      "proofOrientedBenefits": [
+        "repeatable lighting and framing",
+        "consistent crop and retouching",
+        "efficient scheduling for larger teams",
+        "continuity when new leaders join"
+      ]
     },
     "hu": {
       "heading": "Egy vizuális standard. Minden vezetőnek.",
       "body": "Vezetői csapatoknál az egységesség nem egyetlen fotózási nap stílusdöntése, hanem reprodukálható rendszer. A fény, képkivágás, háttérlogika és retusálási standard dokumentálható, így a később érkező vezetők portréi is ugyanabba a vizuális nyelvbe illeszkednek.",
-      "proofOrientedBenefits": ["reprodukálható fény és képkivágás", "egységes crop és retusálás", "hatékony időbeosztás nagyobb csapatoknál", "folytonosság új vezetők érkezésekor"]
+      "proofOrientedBenefits": [
+        "reprodukálható fény és képkivágás",
+        "egységes crop és retusálás",
+        "hatékony időbeosztás nagyobb csapatoknál",
+        "folytonosság új vezetők érkezésekor"
+      ]
     },
     "de": {
       "heading": "Ein visueller Standard. Für jede Führungskraft.",
       "body": "Bei Führungsteams ist Konsistenz kein einmaliger Stilentscheid, sondern ein reproduzierbares System. Licht, Bildausschnitt, Hintergrundlogik und Retusche können dokumentiert werden, sodass auch später fotografierte neue Führungskräfte zur gleichen visuellen Sprache gehören.",
-      "proofOrientedBenefits": ["reproduzierbares Licht und Framing", "konsistenter Bildausschnitt und Retusche", "effiziente Terminplanung für größere Teams", "Kontinuität bei neuen Führungskräften"]
+      "proofOrientedBenefits": [
+        "reproduzierbares Licht und Framing",
+        "konsistenter Bildausschnitt und Retusche",
+        "effiziente Terminplanung für größere Teams",
+        "Kontinuität bei neuen Führungskräften"
+      ]
     }
   },
   "fineArt": {
@@ -112,19 +127,74 @@
   },
   "faqCandidates": {
     "en": [
-      {"q": "I only need a LinkedIn photo. Should I book a headshot or an executive portrait?", "a": "LinkedIn is only the usage channel. Choose the focused headshot when speed and one polished image are the priority. Choose an executive portrait when the image needs to communicate seniority, personality, confidence or a more editorial professional presence."},
-      {"q": "What if I do not know how to pose?", "a": "You do not need posing experience. Wardrobe, expression, posture, background, framing and image selection are professionally directed according to the impression the portrait should create."},
-      {"q": "Can you keep management portraits consistent when new leaders join later?", "a": "Yes. For leadership teams, lighting, framing, crop, background logic and retouching can be documented as a repeatable portrait standard."}
+      {
+        "q": "I only need a LinkedIn photo. Should I book a headshot or an executive portrait?",
+        "a": "LinkedIn is only the usage channel. Choose the focused headshot when speed and one polished image are the priority. Choose an executive portrait when the image needs to communicate seniority, personality, confidence or a more editorial professional presence."
+      },
+      {
+        "q": "What if I do not know how to pose?",
+        "a": "You do not need posing experience. Wardrobe, expression, posture, background, framing and image selection are professionally directed according to the impression the portrait should create."
+      },
+      {
+        "q": "Can you keep management portraits consistent when new leaders join later?",
+        "a": "Yes. For leadership teams, lighting, framing, crop, background logic and retouching can be documented as a repeatable portrait standard."
+      }
     ],
     "hu": [
-      {"q": "Csak LinkedIn-képre van szükségem. Headshotot vagy executive portrét válasszak?", "a": "A LinkedIn csak a felhasználási csatorna. A fókuszált headshot jó választás, ha a gyorsaság és egyetlen professzionális kép a fő cél. Executive portré akkor indokolt, ha a képnek senioritást, személyiséget, magabiztosságot vagy editorial jellegű szakmai jelenlétet is közvetítenie kell."},
-      {"q": "Mi van, ha nem tudok pózolni?", "a": "Nem kell pózolási tapasztalat. Az öltözéket, arckifejezést, testtartást, hátteret, képkivágást és képkiválasztást annak megfelelően vezetjük, milyen benyomást kell a portrénak közvetítenie."},
-      {"q": "Az újonnan érkező vezetők portréi később is illeszthetők ugyanabba a stílusba?", "a": "Igen. Vezetői csapatoknál a fény, framing, crop, háttérlogika és retusálás dokumentálható reprodukálható portréstandardként."}
+      {
+        "q": "Csak LinkedIn-képre van szükségem. Headshotot vagy executive portrét válasszak?",
+        "a": "A LinkedIn csak a felhasználási csatorna. A fókuszált headshot jó választás, ha a gyorsaság és egyetlen professzionális kép a fő cél. Executive portré akkor indokolt, ha a képnek senioritást, személyiséget, magabiztosságot vagy editorial jellegű szakmai jelenlétet is közvetítenie kell."
+      },
+      {
+        "q": "Mi van, ha nem tudok pózolni?",
+        "a": "Nem kell pózolási tapasztalat. Az öltözéket, arckifejezést, testtartást, hátteret, képkivágást és képkiválasztást annak megfelelően vezetjük, milyen benyomást kell a portrénak közvetítenie."
+      },
+      {
+        "q": "Az újonnan érkező vezetők portréi később is illeszthetők ugyanabba a stílusba?",
+        "a": "Igen. Vezetői csapatoknál a fény, framing, crop, háttérlogika és retusálás dokumentálható reprodukálható portréstandardként."
+      }
     ],
     "de": [
-      {"q": "Ich brauche nur ein LinkedIn-Foto. Headshot oder Executive Portrait?", "a": "LinkedIn ist nur der Nutzungskanal. Ein fokussiertes Headshot passt, wenn Geschwindigkeit und ein einzelnes professionelles Bild im Vordergrund stehen. Ein Executive Portrait ist sinnvoll, wenn das Bild zusätzlich Seniorität, Persönlichkeit, Souveränität oder eine editorialere professionelle Wirkung vermitteln soll."},
-      {"q": "Was ist, wenn ich nicht weiß, wie man posiert?", "a": "Sie brauchen keine Posiererfahrung. Kleidung, Ausdruck, Haltung, Hintergrund, Bildausschnitt und Bildauswahl werden professionell entsprechend der gewünschten Wirkung geführt."},
-      {"q": "Können neue Führungskräfte später im gleichen Stil fotografiert werden?", "a": "Ja. Licht, Framing, Bildausschnitt, Hintergrundlogik und Retusche können für Führungsteams als reproduzierbarer Porträtstandard dokumentiert werden."}
+      {
+        "q": "Ich brauche nur ein LinkedIn-Foto. Headshot oder Executive Portrait?",
+        "a": "LinkedIn ist nur der Nutzungskanal. Ein fokussiertes Headshot passt, wenn Geschwindigkeit und ein einzelnes professionelles Bild im Vordergrund stehen. Ein Executive Portrait ist sinnvoll, wenn das Bild zusätzlich Seniorität, Persönlichkeit, Souveränität oder eine editorialere professionelle Wirkung vermitteln soll."
+      },
+      {
+        "q": "Was ist, wenn ich nicht weiß, wie man posiert?",
+        "a": "Sie brauchen keine Posiererfahrung. Kleidung, Ausdruck, Haltung, Hintergrund, Bildausschnitt und Bildauswahl werden professionell entsprechend der gewünschten Wirkung geführt."
+      },
+      {
+        "q": "Können neue Führungskräfte später im gleichen Stil fotografiert werden?",
+        "a": "Ja. Licht, Framing, Bildausschnitt, Hintergrundlogik und Retusche können für Führungsteams als reproduzierbarer Porträtstandard dokumentiert werden."
+      }
     ]
+  },
+  "brandPrinciple": {
+    "en": {
+      "heading": "Natural presence before performance",
+      "body": "BANHALMI photography is built around natural human presence, story and visual clarity. Direction is continuous, but the person is not forced into a catalogue of poses. Technique stays quiet so expression, connection and context can carry the image."
+    },
+    "hu": {
+      "heading": "Természetes jelenlét a szereplés helyett",
+      "body": "A BANHALMI képi világa a természetes emberi jelenlétre, a történetre és a letisztultságra épül. A fotózás végig vezetett, de nem pózok sorozata. A technika háttérben marad, hogy az arckifejezés, a kapcsolat és a helyzet vigye a képet."
+    },
+    "de": {
+      "heading": "Natürliche Präsenz statt Inszenierung",
+      "body": "Die Bildsprache von BANHALMI basiert auf natürlicher menschlicher Präsenz, Geschichte und visueller Klarheit. Das Shooting wird durchgehend geführt, ohne die Person in eine Abfolge vorgefertigter Posen zu zwingen. Die Technik bleibt im Hintergrund, damit Ausdruck, Verbindung und Kontext das Bild tragen."
+    }
+  },
+  "internationalProfessional": {
+    "en": {
+      "heading": "International professional photography in Vienna, without having to know the system first",
+      "body": "You do not need to know which photographer, photographic category or location you need before getting in touch. Start with what the images need to achieve. When the Photography Team is involved, photographer and visual direction can be matched to the brief, location, intended use and desired visual language. English-language guidance is available. Same-day or next-day appointments may be possible depending on availability, location and scope."
+    },
+    "hu": {
+      "heading": "Nem kell előre tudnod, pontosan milyen fotózásra van szükséged",
+      "body": "Elég abból kiindulni, mit kell a képeknek elérniük. A Photography Team bevonásakor a fotós és a vizuális irány a briefhez, helyszínhez, felhasználáshoz és kívánt képi világhoz igazítható. Nemzetközi ügyfelek számára angol nyelvű folyamat is elérhető. Aznapi vagy másnapi időpont kapacitástól, helyszíntől és feladattól függően lehetséges lehet."
+    },
+    "de": {
+      "heading": "Sie müssen nicht im Voraus wissen, welche Art von Fotografie Sie brauchen",
+      "body": "Ausgangspunkt ist, was die Bilder erreichen sollen. Wenn das Photography Team eingebunden ist, können Fotograf und visuelle Richtung auf Briefing, Ort, Nutzung und gewünschte Bildsprache abgestimmt werden. Eine englischsprachige Begleitung ist verfügbar. Termine am selben oder am nächsten Tag können je nach Verfügbarkeit, Ort und Umfang möglich sein."
+    }
   }
 }

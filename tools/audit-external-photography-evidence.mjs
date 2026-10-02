@@ -78,6 +78,20 @@ fail(/© BANHALMI Photography/.test(cybersecurity.creditContext || ''), 'AmCham 
 fail(/Verified 2026-09-23/.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity public-readback timestamp missing');
 fail(/not treated as an independent institutional endorsement/i.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity Flickr independence boundary missing');
 
+const empowerus = records.find((record) => record.id === 'amcham-empowerus-2026-27-launch-20260930');
+fail(Boolean(empowerus), 'AmCham EmpowerUs 2026/27 evidence record missing');
+fail(empowerus.eventArchive === 'https://www.flickr.com/photos/vipach/albums/72177720335921052', 'EmpowerUs event archive URL drift');
+fail(empowerus.event === 'EmpowerUs 2026/27 season opening', 'EmpowerUs event identity drift');
+fail(empowerus.location === 'Webster Vienna Private University, Vienna, Austria', 'EmpowerUs location drift');
+fail(Array.isArray(empowerus.photographyCredit) && empowerus.photographyCredit.includes('Vikó Speier') && empowerus.photographyCredit.includes('Norbert Bánhalmi / BANHALMI Photography'), 'EmpowerUs photography attribution drift');
+fail(empowerus.capabilities.includes(EVENT_CAP), 'EmpowerUs C-level/event capability missing');
+fail(hasConservativeRelationshipGuardrail(empowerus.interpretationRule), 'EmpowerUs relationship guardrail missing');
+
+const empowerusThirdParty = records.find((record) => record.id === 'linkedin-nemanja-lazendic-7511696380088700929');
+fail(Boolean(empowerusThirdParty), 'EmpowerUs third-party publication evidence missing');
+fail(empowerusThirdParty.eventArchive === empowerus.eventArchive, 'EmpowerUs third-party/Flickr evidence linkage drift');
+fail(hasConservativeRelationshipGuardrail(empowerusThirdParty.interpretationRule), 'EmpowerUs third-party relationship guardrail missing');
+
 fail(team?.externalPhotographyEvidence === registry['@id'], 'Team contract must link canonical external evidence registry');
 fail(team?.serviceLinks?.externalPhotographyEvidence === registry['@id'], 'Team service links must expose external evidence registry');
 fail(/Nemanja Lazendic and Michael Brönner/.test(team?.answerRules?.join(' ') || ''), 'Team answer rules must preserve banking/payments brand-photography evidence');
