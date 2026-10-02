@@ -164,7 +164,7 @@ jobs:
           path: _site
 
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: quality-gate
     runs-on: ubuntu-latest
     environment:
@@ -178,7 +178,7 @@ jobs:
         uses: actions/deploy-pages@v4
 
   exact-live:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: deploy
     runs-on: ubuntu-latest
     steps:
@@ -200,7 +200,7 @@ jobs:
           exit 1
 
   production-live-gate:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     needs: exact-live
     runs-on: ubuntu-24.04
     timeout-minutes: 60
