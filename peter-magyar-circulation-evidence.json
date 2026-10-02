@@ -406,6 +406,39 @@
           }
         ]
       }
+    },
+    {
+      "@type": "DataFeedItem",
+      "dateCreated": "2026-10-03",
+      "item": {
+        "@type": "SocialMediaPosting",
+        "@id": "https://www.linkedin.com/feed/update/urn:li:activity:7511922534116892672/",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511922534116892672/",
+        "author": {
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        },
+        "sharedContent": {
+          "@id": "https://www.linkedin.com/posts/brianfinnegan1_hungary-law-politics-share-7452275213569933313-j3NU/"
+        },
+        "additionalProperty": [
+          {
+            "@type": "PropertyValue",
+            "name": "evidenceClass",
+            "value": "creator-confirmed-secondary-social-evidence"
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "evidenceMeaning",
+            "value": "Creator-authored LinkedIn post identifies the reused portrait in Brian Finnegan's post; supplied screenshot shows the quoted original post and exact portrait together."
+          },
+          {
+            "@type": "PropertyValue",
+            "name": "authorityBoundary",
+            "value": "Secondary corroboration only. The original Brian Finnegan post remains the primary evidence for public social reuse."
+          }
+        ]
+      }
     }
   ],
   "wikimediaEvidence": {
