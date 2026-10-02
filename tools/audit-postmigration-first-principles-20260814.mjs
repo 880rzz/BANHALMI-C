@@ -46,7 +46,7 @@ for(const root of ['hu','ai.txt','llms.txt','llms-full.txt','customer-needs.json
   const scan=file=>{if(!fs.existsSync(file)||fs.statSync(file).isDirectory())return;const t=fs.readFileSync(file,'utf8');if(/\baz vezetői\b/iu.test(t))failures.push(`${file}: incorrect Hungarian article remains`)};
   if(fs.existsSync(root)&&fs.statSync(root).isDirectory()){const walk=d=>{for(const e of fs.readdirSync(d,{withFileTypes:true})){const p=`${d}/${e.name}`;e.isDirectory()?walk(p):scan(p)}};walk(root)}else scan(root);
 }
-for(const file of ['portrait/index.html','lifestyle/index.html','glamour/index.html','event-photography/index.html']){
+for(const file of ['portrait/index.html','lifestyle/index.html','fine-art/index.html','event-photography/index.html']){
   const h=fs.readFileSync(file,'utf8');
   if(/aria-label=["'](?:Previous|Next)["']/i.test(h)) failures.push(`${file}: ambiguous English lightbox accessible name remains`);
 }
