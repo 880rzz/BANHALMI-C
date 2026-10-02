@@ -44,8 +44,8 @@ function compileDesign(css){
 
   /* Footer geometry is owned exclusively by assets/css/fluid-4k-rhythm.css. */
 
-  const megaRules=`\n/* Canonical fullscreen menu: screenshot-approved dark editorial layout. */\nhtml body .bn-mega-menu{background:${mega.background||'#202530'}!important;}\nhtml body .bn-mega-panel{width:min(${Number(mega.panelMaxPx||1440)}px,100%)!important;max-width:${Number(mega.panelMaxPx||1440)}px!important;}\nhtml body .bn-mega-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:${Number(mega.desktopColumnGapPx||72)}px!important;}\nhtml body .bn-mega-section-head{border-bottom:1px solid ${mega.sectionRuleColor||'rgba(183,156,68,.34)'}!important;}\nhtml body .bn-mega-link,html body .bn-mega-link:hover,html body .bn-mega-link:focus-visible,html body .bn-mega-link.active,html body .bn-mega-link[aria-current="page"]{border:0!important;border-radius:0!important;box-shadow:none!important;outline:0!important;background:transparent!important;transform:none!important;}\nhtml body .bn-mega-link:focus-visible,html body .bn-mega-link.active,html body .bn-mega-link[aria-current="page"]{text-decoration-line:underline!important;text-decoration-thickness:1px!important;text-underline-offset:.22em!important;text-decoration-color:currentColor!important;}\nhtml body .bn-mega-pricing .bn-mega-link{color:var(--bn-menu-gold)!important;}\n@media(min-width:861px){html body .bn-mega-panel{padding:${Number(mega.desktopTopPaddingPx||86)}px ${Number(mega.desktopSidePaddingPx||88)}px ${Number(mega.desktopBottomPaddingPx||34)}px!important;}}\n@media(max-width:860px){html body .bn-mega-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:2.15rem!important;}}\n@media(max-width:620px){html body .bn-mega-grid{grid-template-columns:1fr!important;gap:2rem!important;}}\n`;
-  c=`${c.trim()}\n${megaRules}`;
+  /* Mega-menu geometry is canonical in assets/css/site.css; the compiler must not inject a second navigation authority. */
+
 
   let compiled=before+c+after;
   compiled=replaceOne(compiled,/html\{min-height:100%;background:#202530!important\}/,`html{min-height:100%;background:${flow.documentBackground||'#ffffff'}!important}`,'document background floor');
@@ -85,12 +85,10 @@ for(const required of [
   'max-width:var(--apple-structured-max)!important',
   `html body .site-header a{min-height:${Number(design.responsive?.touchTargetPx||44)}px!important`,
   'background:transparent!important;border:0!important;box-shadow:none!important;border-radius:0px!important;',
-  `html body .bn-mega-panel{width:min(${Number(design.navigation?.megaMenu?.panelMaxPx||1440)}px,100%)!important`,
-  'html body .bn-mega-link:focus-visible,html body .bn-mega-link.active,html body .bn-mega-link[aria-current="page"]{text-decoration-line:underline!important',
   `html{min-height:100%;background:${design.layout.documentFlow.documentBackground}!important}`,
   'body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--bg,#fff)}',
   'body>main,#main{flex:1 0 auto;width:100%;min-width:0;min-height:0}',
   'body>.site-footer,.site-footer{width:100%;min-height:0}'
 ]) if(!finalCss.includes(required)) throw new Error(`BANHALMI compiled design token missing: ${required}`);
 for(const rel of quotePages){const full=path.join(siteRoot,rel);if(!fs.existsSync(full)||!fs.readFileSync(full,'utf8').includes('/assets/js/private-event-quote.js')) throw new Error(`BANHALMI private-event quote adapter missing from ${rel}.`);}
-console.log(`BANHALMI production design compiled from ${design.version}; ${checked} HTML files checked, ${normalized} artifact HTML file(s) normalized, ${privateInjected} private-event quote adapter injection(s), ${pdfPatched} PDF label patch(es). Standard/structured canvases, ${Number(design.responsive?.touchTargetPx||44)}px header controls, screenshot-approved fullscreen mega-menu, canonical footer geometry remains external and immutable; normal document flow is active.`);
+console.log(`BANHALMI production design compiled from ${design.version}; ${checked} HTML files checked, ${normalized} artifact HTML file(s) normalized, ${privateInjected} private-event quote adapter injection(s), ${pdfPatched} PDF label patch(es). Standard/structured canvases, ${Number(design.responsive?.touchTargetPx||44)}px header controls, single-source canonical mega-menu, canonical footer geometry remains external and immutable; normal document flow is active.`);
