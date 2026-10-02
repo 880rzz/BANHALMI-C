@@ -58,7 +58,7 @@ const pages={
     "quote": "/de-at/anfrage/",
     "kind": "commercial"
   },
-  "glamour/index.html": {
+  "fine-art/index.html": {
     "service": "fine-art",
     "category": "art",
     "quote": "/requestaquote/",
