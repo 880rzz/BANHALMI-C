@@ -3513,6 +3513,9 @@ main :is(h1,h2) .bn-heading-accent{color:#8b6f18!important;-webkit-text-fill-col
 .bn-mega-section-head p{margin:.35rem 0 0;color:var(--bn-menu-soft);font-size:.96rem}
 .bn-mega-service{padding:.2rem 0 1.05rem}
 .bn-mega-service .bn-mega-link{font-size:clamp(1.28rem,2.25vw,2rem)}
+.bn-mega-pricing-section{margin-top:1.35rem;padding-top:1.15rem;border-top:1px solid var(--bn-menu-line)}
+.bn-mega-pricing-section .bn-mega-section-head{margin-bottom:.65rem;padding-bottom:.55rem}
+.bn-mega-pricing .bn-mega-link{color:var(--bn-menu-gold)!important}
 .bn-mega-footer{display:block;min-width:0}
 .bn-mega-footer .bn-mega-item{margin:0;padding:.2rem 0 1.05rem;background:transparent}
 .bn-mega-footer .bn-mega-link{font-size:clamp(1.12rem,1.8vw,1.45rem)}
@@ -3567,7 +3570,15 @@ body.bn-mega-open .lang-switch a.active{color:var(--bn-menu-gold)!important}
   .bn-mega-item{padding:.2rem 0 .92rem}
   .bn-mega-link{font-size:clamp(1.55rem,8vw,2.15rem)}
   .bn-mega-desc{font-size:.91rem;line-height:1.42}
-  .bn-mega-footer .bn-mega-item{padding:1.15rem 1rem 1.25rem}
+  .bn-mega-column+.bn-mega-column{padding-top:.35rem}
+  .bn-mega-section-head{margin-bottom:.72rem;padding-bottom:.62rem}
+  .bn-mega-item,.bn-mega-service{padding:.12rem 0 1rem}
+  .bn-mega-link,.bn-mega-service .bn-mega-link,.bn-mega-footer .bn-mega-link{font-size:clamp(1.18rem,6.1vw,1.52rem);line-height:1.12}
+  .bn-mega-desc,.bn-mega-footer .bn-mega-desc{margin-top:.24rem;font-size:.86rem;line-height:1.4}
+  .bn-mega-pricing-section{margin-top:.9rem;padding:1rem 0 .2rem;border-top:1px solid var(--bn-menu-line);border-bottom:1px solid var(--bn-menu-line)}
+  .bn-mega-pricing-section .bn-mega-section-head{margin-bottom:.55rem;padding-bottom:.5rem}
+  .bn-mega-footer{padding-top:1.25rem;border-top:1px solid var(--bn-menu-line)}
+  .bn-mega-footer .bn-mega-item{padding:.12rem 0 1rem}
 }
 /* Touch Safari can retain :focus-visible after tapping a mega-menu link. Keep a
    visible accessibility cue without restoring the old rounded/pill frame. */
@@ -3642,113 +3653,18 @@ html body .next-step-selector .card:first-child h3::after{font-size:1.2rem!impor
 html body a.nav-cta::after{font-size:.85rem!important;font-weight:500;line-height:1.3;letter-spacing:-.006em}
 
 
-/* STAGE63-DESKTOP-MENU-FOOTER:START
-   Desktop navigation is a single-screen editorial overview. The third column
-   is internally split so support, journal, pricing and ART stay visible without
-   viewport scrolling. Mobile keeps the existing scrollable stacked pattern. */
+/* Footer gradient authority retained; menu geometry is owned only by the canonical mega-menu block above. */
 .site-footer{
   background:
     radial-gradient(circle at 72% 0%,rgba(183,156,68,.11) 0,rgba(183,156,68,0) 32%),
     linear-gradient(145deg,#2D3444 0%,#29303F 46%,#202530 100%)!important;
 }
-@media(min-width:861px){
-  .bn-mega-menu{overflow:hidden!important}
-  .bn-mega-panel{
-    width:min(1440px,100%);height:100dvh;min-height:0;overflow:hidden;
-    display:grid;grid-template-rows:auto minmax(0,1fr);
-    padding:clamp(4.65rem,8vh,5.6rem) clamp(1.75rem,4vw,4.5rem) clamp(.7rem,1.6vh,1.1rem);
-  }
-  .bn-mega-intro{align-items:center;padding-bottom:clamp(.45rem,.8vh,.7rem)}
-  .bn-mega-grid{
-    min-height:0;overflow:hidden;align-content:start;align-items:start;
-    grid-template-columns:minmax(180px,.78fr) minmax(240px,1fr) minmax(440px,1.72fr);
-    gap:clamp(1.5rem,3vw,3.5rem);padding:clamp(.65rem,1.4vh,1rem) 0 0;
-  }
-  .bn-mega-item{padding:.05rem 0 clamp(.26rem,.58vh,.44rem)}
-  .bn-mega-link{font-size:clamp(1.02rem,1.65vh,1.38rem);line-height:1.03;letter-spacing:-.025em}
-  .bn-mega-desc{margin-top:.12rem;font-size:clamp(.65rem,1.02vh,.76rem);line-height:1.24}
-  .bn-mega-section-head{margin-bottom:clamp(.28rem,.55vh,.46rem);padding-bottom:clamp(.28rem,.55vh,.44rem)}
-  .bn-mega-section-head>span{font-size:clamp(.62rem,.95vh,.72rem)}
-  .bn-mega-section-head p{margin-top:.12rem;font-size:clamp(.64rem,1vh,.74rem);line-height:1.22}
-  .bn-mega-service{padding:.03rem 0 clamp(.23rem,.5vh,.38rem)}
-  .bn-mega-service .bn-mega-link{font-size:clamp(.98rem,1.5vh,1.26rem)}
-  .bn-mega-footer{
-    display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));
-    column-gap:clamp(1rem,2vw,2rem);row-gap:0;align-content:start;min-height:0;
-  }
-  .bn-mega-footer .bn-mega-section-head{grid-column:1/-1}
-  .bn-mega-footer .bn-mega-item{min-width:0;padding:.03rem 0 clamp(.22rem,.48vh,.36rem)}
-  .bn-mega-footer .bn-mega-link{font-size:clamp(.88rem,1.28vh,1.08rem)}
-  .bn-mega-footer .bn-mega-desc{font-size:clamp(.61rem,.9vh,.7rem);line-height:1.2}
-  .bn-mega-footer .bn-mega-journal .bn-mega-desc,
-  .bn-mega-footer .bn-mega-cta .bn-mega-desc,
-  .bn-mega-footer .bn-mega-art .bn-mega-desc{display:none}
-  .bn-mega-cta,.bn-mega-art{margin-top:.12rem!important;padding:.45rem .6rem!important;border-radius:10px}
-}
-@media(min-width:861px) and (max-height:760px){
-  .bn-mega-panel{padding-top:4.25rem;padding-bottom:.45rem}
-  .bn-mega-intro p{display:none}
-  .bn-mega-grid{padding-top:.42rem}
-  .bn-mega-desc{display:none}
-  .bn-mega-section-head p{display:none}
-  .bn-mega-item,.bn-mega-service,.bn-mega-footer .bn-mega-item{padding-bottom:.24rem}
-  .bn-mega-link{font-size:clamp(.92rem,1.55vh,1.12rem)}
-  .bn-mega-service .bn-mega-link,.bn-mega-footer .bn-mega-link{font-size:clamp(.86rem,1.35vh,1rem)}
-}
-/* STAGE63-DESKTOP-MENU-FOOTER:END */
 
 
-/* STAGE64-ART-LIKE-FULLSCREEN-MENU:START */
-@media(min-width:861px){
-.bn-mega-panel{width:min(1320px,100%);padding:clamp(6rem,10vh,7.6rem) clamp(2.5rem,6vw,6rem) clamp(2rem,4vh,3rem)!important;grid-template-rows:auto minmax(0,1fr)!important}
-.bn-mega-intro{padding-bottom:clamp(1rem,2vh,1.5rem)!important}
-.bn-mega-grid{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:clamp(2.75rem,5vw,6rem)!important;align-content:center!important;padding:clamp(1.75rem,4vh,3rem) 0 0!important}
-.bn-mega-item,.bn-mega-service,.bn-mega-footer .bn-mega-item{padding:.18rem 0 clamp(.72rem,1.35vh,1rem)!important}
-.bn-mega-link{font-size:clamp(1.45rem,2.45vh,2.15rem)!important;line-height:1.04!important}
-.bn-mega-service .bn-mega-link{font-size:clamp(1.25rem,2vh,1.72rem)!important}
-.bn-mega-footer{display:block!important}
-.bn-mega-footer .bn-mega-link{font-size:clamp(1.15rem,1.8vh,1.5rem)!important}
-.bn-mega-desc,.bn-mega-footer .bn-mega-desc{display:block!important;font-size:clamp(.78rem,1.15vh,.92rem)!important;line-height:1.42!important}
-.bn-mega-section-head{margin-bottom:1rem!important;padding-bottom:.8rem!important}
-.bn-mega-section-head>span{font-size:.75rem!important}
-.bn-mega-cta,.bn-mega-art{margin-top:.65rem!important;padding:.85rem 1rem!important;border-radius:12px!important}
-.bn-mega-journal-head,.bn-mega-journal{display:none!important}
-}
-@media(max-width:860px){.bn-mega-journal-head,.bn-mega-journal{display:none!important}}
-/* STAGE64-ART-LIKE-FULLSCREEN-MENU:END */
 
 
-/* STAGE65-MENU-POLISH:START
-   Desktop menu refinement: active state has no pill/frame, typography is easier
-   to read, CTA labels have breathing room, and BANHALMI ART belongs with the
-   oeuvre/archive group instead of the support column. */
-:root{--bn-menu-gold:#D3B85A;--bn-menu-soft:#C4CFDA;--bn-menu-line:rgba(211,184,90,.28)}
-.bn-mega-link.active,.bn-mega-link[aria-current="page"]{
-  border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important;
-  border-radius:0!important;padding-left:0!important;padding-right:0!important;
-  text-decoration-line:underline!important;text-decoration-thickness:1px!important;text-underline-offset:.22em!important;
-}
-.bn-mega-cta,.bn-mega-art{
-  box-sizing:border-box!important;
-  margin-top:.35rem!important;
-  padding:0!important;
-  border:0!important;
-  border-radius:0!important;
-  background:transparent!important;
-}
-.bn-mega-primary .bn-mega-art{margin-top:.55rem!important}
-@media(min-width:861px){
-  .bn-mega-grid{grid-template-columns:minmax(210px,.9fr) minmax(270px,1.08fr) minmax(420px,1.58fr)!important;gap:clamp(1.8rem,3.4vw,4rem)!important}
-  .bn-mega-link{font-size:clamp(1.16rem,1.95vh,1.58rem)!important;line-height:1.07!important}
-  .bn-mega-desc{font-size:clamp(.79rem,1.34vh,.95rem)!important;line-height:1.38!important;margin-top:.28rem!important}
-  .bn-mega-service .bn-mega-link{font-size:clamp(1.14rem,1.82vh,1.48rem)!important}
-  .bn-mega-footer .bn-mega-link{font-size:clamp(1.05rem,1.64vh,1.34rem)!important}
-  .bn-mega-footer .bn-mega-desc{font-size:clamp(.77rem,1.28vh,.91rem)!important}
-  .bn-mega-section-head>span{font-size:clamp(.72rem,1.22vh,.84rem)!important}
-  .bn-mega-section-head p{font-size:clamp(.78rem,1.28vh,.92rem)!important}
-  .bn-mega-cta,.bn-mega-primary .bn-mega-art{padding:0!important}
-}
-/* STAGE65-MENU-POLISH:END */
+
+
 
 /* === SOURCE: accessibility-stage14.css === */
 /* Stage 14 — accessibility and usability hardening */
