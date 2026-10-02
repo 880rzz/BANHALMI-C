@@ -6,7 +6,7 @@ const expected={
     {href:'/portrait/',title:'Portrait Photography',cta:'See portrait work ›',description:'For leaders, founders and experts who need one credible visual identity across LinkedIn, company websites, press, speaking and internal communication—from a precise headshot to a complete public portrait system.',signals:['leaders','LinkedIn','press','portrait system']},
     {href:'/lifestyle/',title:'Brand Photography',cta:'See brand photography ›',description:'For organisations that need founders, teams, workplaces and campaigns to read as one recognisable brand across recruitment, sales, media and corporate communication—not as unrelated image sets.',signals:['organisations','recruitment','sales','recognisable brand']},
     {href:'/event-photography/',title:'C-Level Event Photography',cta:'See event coverage ›',description:'For board meetings, leadership summits, conferences and diplomatic settings where discreet coverage must preserve the room’s relationships, decisions and atmosphere for press, internal communication and the institutional archive.',signals:['board meetings','discreet','decisions','institutional archive']},
-    {href:'/glamour/',title:'Fine Art Photography',cta:'Explore fine-art work ›',description:'For people seeking an author-led personal work rather than a conventional portrait: fine-art portraiture and nude art exploring identity, biography and the body through respectful direction, consent and discretion.',signals:['author-led','identity','consent','discretion']}
+    {href:'/fine-art/',title:'Fine Art Photography',cta:'Explore fine-art work ›',description:'For people seeking an author-led personal work rather than a conventional portrait: fine-art portraiture and nude art exploring identity, biography and the body through respectful direction, consent and discretion.',signals:['author-led','identity','consent','discretion']}
   ],
   'hu/index.html':[
     {href:'/hu/portre/',title:'Portréfotózás',cta:'Portrémunkák megtekintése ›',description:'Vezetőknek, alapítóknak és szakértőknek, akiknek a LinkedInen, a vállalati weboldalon, a sajtóban, előadásokon és a belső kommunikációban is hiteles, egységes képi jelenlétre van szükségük — a pontos profilképtől a teljes nyilvános portrérendszerig.',signals:['Vezetőknek','LinkedInen','sajtóban','portrérendszerig']},
@@ -50,7 +50,7 @@ for(const route of [
   'https://www.norbertbanhalmi.com/portrait/',
   'https://www.norbertbanhalmi.com/lifestyle/',
   'https://www.norbertbanhalmi.com/event-photography/',
-  'https://www.norbertbanhalmi.com/glamour/'
+  'https://www.norbertbanhalmi.com/fine-art/'
 ]) if(!llms.includes(route)) errors.push('llms.txt: service route missing '+route);
 for(const invented of ['/brand-photography/','/c-level-event-photography/','/fine-art-photography/']) if(llms.includes(invented)) errors.push('llms.txt: invented/noncanonical service route remains '+invented);
 
