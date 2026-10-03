@@ -4,6 +4,7 @@ const failures=[];
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const mainRuntime=fs.readFileSync('assets/js/main.js','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const site=fs.readFileSync('assets/css/site.css','utf8');
 const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
 const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
