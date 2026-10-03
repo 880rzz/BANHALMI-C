@@ -80,7 +80,7 @@ const cybersecurity = records.find((record) => record.id === 'linkedin-amcham-au
 fail(Boolean(cybersecurity), 'AmCham Austria Cybersecurity Breakfast evidence record missing');
 fail(cybersecurity.url === 'https://www.linkedin.com/posts/amcham-austria_cybersecurity-smes-mandiant-activity-7507716549127069696-471X', 'AmCham cybersecurity institutional publication URL drift');
 fail(cybersecurity.eventArchive === 'https://www.flickr.com/photos/vipach/albums/72177720335691211', 'AmCham cybersecurity event archive URL drift');
-fail(cybersecurity.evidenceStatus === 'publicly-verified-institutional-publication-plus-corroborated-flickr-event-records', 'AmCham cybersecurity public verification status drift');
+fail(cybersecurity.evidenceStatus === 'first-party-amcham-linkedin-explicit-credit-plus-event-specific-flickr-archive', 'AmCham cybersecurity public verification status drift');
 fail(cybersecurity.capabilities.includes('Institutional / Diplomatic Event Photography'), 'AmCham cybersecurity institutional-event classification missing');
 fail(/© BANHALMI Photography/.test(cybersecurity.creditContext || ''), 'AmCham cybersecurity institutional BANHALMI credit missing');
 fail(/Verified 2026-09-23/.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity public-readback timestamp missing');
