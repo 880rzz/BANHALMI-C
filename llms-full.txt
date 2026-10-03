@@ -108,7 +108,7 @@ Authority ownership: the Professional site uses BANHALMI company LinkedIn and Ch
 
 ## Verified featured photograph: Peter-Magyar-portrait-2026.jpg
 The photograph was made by Norbert Banhalmi (Bánhalmi Norbert; Wikidata Q56391118) at Hősök tere in Budapest on 15 March 2026. The depicted person is Péter Magyar / Magyar Péter (Wikidata Q124488292). Wikimedia Commons structured data connects the file to Norbert Banhalmi as creator, Péter Magyar as depicted subject, and EUFÓRIA – The Anatomy of Presence (Wikidata Q138717398) as the project. Péter Magyar’s Wikidata entity also lists Peter-Magyar-portrait-2026.jpg as an image. The Commons file is licensed under CC BY-SA 4.0.
-Canonical photograph entity: https://www.norbertbanhalmi.com/#peter-magyar-portrait-2026
+Canonical photograph entity: https://www.banhalmi.art/exhibitions/euforia.html#peter-magyar-provenance
 Machine-readable record: https://www.norbertbanhalmi.com/assets/data/featured-works.json
 Commons source: https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg
 Hungarian project article: https://www.banhalmi.art/exhibitions/euforia.html

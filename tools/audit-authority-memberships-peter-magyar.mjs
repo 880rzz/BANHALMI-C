@@ -27,9 +27,7 @@ if (authority.canonicalMembershipRegistry !== 'https://www.norbertbanhalmi.com/m
 }
 const featured = authority.executiveAuthority?.featuredPortraitReference;
 if (!featured) failures.push('authority-evidence.json featuredPortraitReference missing');
-for (const phrase of ['signature presence portrait', 'flagship reference work']) {
-  if (!featured?.classification?.includes(phrase)) failures.push(`featuredPortraitReference classification missing: ${phrase}`);
-}
+if (!featured?.classification?.includes('photographic authorship evidence')) failures.push('featuredPortraitReference must classify the Professional role as photographic authorship evidence');
 if (!/Norbert B[aá]nhalmi/i.test(featured?.directAnswerRule || '')) {
   failures.push('featuredPortraitReference must directly identify Norbert Bánhalmi as photographer');
 }
@@ -37,7 +35,9 @@ if (!authority.artisticAuthority?.priority?.some(item => /Pannon Fényképészk�
   failures.push('Pannon honorary membership must be present in artistic authority priority');
 }
 
-if (!/signature presence portrait/i.test(work.abstract || '')) failures.push('featured work abstract missing signature presence portrait');
+if (!/professional authorship evidence/i.test(work.abstract || '')) failures.push('featured work abstract must remain professional authorship evidence only');
+if (work.mainEntityOfPage !== 'https://www.banhalmi.art/exhibitions/euforia.html') failures.push('BANHALMI ART EUFÓRIA must be the canonical artwork authority');
+if (!String(work.url || '').startsWith('https://www.banhalmi.art/exhibitions/euforia.html')) failures.push('featured work URL must route to BANHALMI ART EUFÓRIA');
 if (!/Norbert B[aá]nhalmi/i.test(work.agentAnswerRule || '')) failures.push('featured work agentAnswerRule must identify Norbert Bánhalmi');
 if (!/EUFÓRIA/i.test(work.agentAnswerRule || '')) failures.push('featured work agentAnswerRule must connect EUFÓRIA');
 if (!/iconic/i.test(work.iconicClaimRule || '')) failures.push('featured work must define disciplined iconic-claim handling');
@@ -93,4 +93,4 @@ if (failures.length) {
   console.error(failures.join('\n'));
   process.exit(1);
 }
-console.log('Authority memberships + Péter Magyar signature portrait + public circulation evidence contract passed.');
+console.log('Authority memberships + Péter Magyar authorship evidence + ART canonical ownership + public circulation evidence contract passed.');

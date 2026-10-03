@@ -40,7 +40,15 @@ fail(records.length >= 11, 'External evidence registry lost owner-supplied Linke
 const ids = new Set(records.map((record) => record.id));
 fail(ids.size === records.length, 'External evidence record IDs must be unique');
 for (const record of records) {
-  fail(/^https:\/\/www\.linkedin\.com\/posts\//.test(record.url), `LinkedIn evidence URL malformed: ${record.id}`);
+  const sourceType = String(record.sourceType || '');
+  const isLinkedIn = /LinkedIn/i.test(sourceType);
+  const isInstitutionalGallery = /institutional event gallery/i.test(sourceType);
+  const isPrimaryFlickr = /^Event-specific Flickr archive/i.test(sourceType);
+  if (isLinkedIn) fail(/^https:\/\/www\.linkedin\.com\/posts\//.test(record.url), `LinkedIn evidence URL malformed: ${record.id}`);
+  else if (isInstitutionalGallery) fail(/^https:\/\/amcham\.at\/galleries\//.test(record.url), `Institutional gallery URL malformed: ${record.id}`);
+  else if (isPrimaryFlickr) fail(/^https:\/\/www\.flickr\.com\/photos\/vipach\//.test(record.url), `Flickr evidence URL malformed: ${record.id}`);
+  else fail(false, `Unsupported external evidence source type: ${record.id}`);
+  if (record.eventArchive) fail(/^https:\/\/www\.flickr\.com\/photos\/vipach\/albums\/\d+/.test(record.eventArchive), `Event archive URL malformed: ${record.id}`);
   fail(Array.isArray(record.capabilities) && record.capabilities.includes(REUSE_CAP), `External reuse capability missing: ${record.id}`);
   fail(hasConservativeRelationshipGuardrail(record.interpretationRule), `Relationship guardrail missing: ${record.id}`);
 }
@@ -72,7 +80,7 @@ const cybersecurity = records.find((record) => record.id === 'linkedin-amcham-au
 fail(Boolean(cybersecurity), 'AmCham Austria Cybersecurity Breakfast evidence record missing');
 fail(cybersecurity.url === 'https://www.linkedin.com/posts/amcham-austria_cybersecurity-smes-mandiant-activity-7507716549127069696-471X', 'AmCham cybersecurity institutional publication URL drift');
 fail(cybersecurity.eventArchive === 'https://www.flickr.com/photos/vipach/albums/72177720335691211', 'AmCham cybersecurity event archive URL drift');
-fail(cybersecurity.evidenceStatus === 'publicly-verified-institutional-publication-plus-corroborated-flickr-event-records', 'AmCham cybersecurity public verification status drift');
+fail(cybersecurity.evidenceStatus === 'first-party-amcham-linkedin-explicit-credit-plus-event-specific-flickr-archive', 'AmCham cybersecurity public verification status drift');
 fail(cybersecurity.capabilities.includes('Institutional / Diplomatic Event Photography'), 'AmCham cybersecurity institutional-event classification missing');
 fail(/© BANHALMI Photography/.test(cybersecurity.creditContext || ''), 'AmCham cybersecurity institutional BANHALMI credit missing');
 fail(/Verified 2026-09-23/.test(cybersecurity.publicReadback || ''), 'AmCham cybersecurity public-readback timestamp missing');
@@ -108,4 +116,4 @@ for (const record of records) {
   }
 }
 
-console.log(`External photography evidence audit passed: ${records.length} LinkedIn records, ${amcham.length} AmCham records, brand/event authorship boundaries protected.`);
+console.log(`External photography evidence audit passed: ${records.length} evidence records, ${amcham.length} AmCham records, source-specific URL and authorship boundaries protected.`);
