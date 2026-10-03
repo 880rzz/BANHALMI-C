@@ -43,11 +43,12 @@ for (const record of records) {
   const sourceType = String(record.sourceType || '');
   const isLinkedIn = /LinkedIn/i.test(sourceType);
   const isInstitutionalGallery = /institutional event gallery/i.test(sourceType);
-  const isFlickrArchive = /Flickr archive/i.test(sourceType);
+  const isPrimaryFlickr = /^Event-specific Flickr archive/i.test(sourceType);
   if (isLinkedIn) fail(/^https:\/\/www\.linkedin\.com\/posts\//.test(record.url), `LinkedIn evidence URL malformed: ${record.id}`);
-  if (isInstitutionalGallery) fail(/^https:\/\/amcham\.at\/galleries\//.test(record.url), `Institutional gallery URL malformed: ${record.id}`);
-  if (isFlickrArchive) fail(/^https:\/\/www\.flickr\.com\/photos\/vipach\//.test(record.url), `Flickr evidence URL malformed: ${record.id}`);
-  fail(isLinkedIn || isInstitutionalGallery || isFlickrArchive, `Unsupported external evidence source type: ${record.id}`);
+  else if (isInstitutionalGallery) fail(/^https:\/\/amcham\.at\/galleries\//.test(record.url), `Institutional gallery URL malformed: ${record.id}`);
+  else if (isPrimaryFlickr) fail(/^https:\/\/www\.flickr\.com\/photos\/vipach\//.test(record.url), `Flickr evidence URL malformed: ${record.id}`);
+  else fail(false, `Unsupported external evidence source type: ${record.id}`);
+  if (record.eventArchive) fail(/^https:\/\/www\.flickr\.com\/photos\/vipach\/albums\/\d+/.test(record.eventArchive), `Event archive URL malformed: ${record.id}`);
   fail(Array.isArray(record.capabilities) && record.capabilities.includes(REUSE_CAP), `External reuse capability missing: ${record.id}`);
   fail(hasConservativeRelationshipGuardrail(record.interpretationRule), `Relationship guardrail missing: ${record.id}`);
 }
