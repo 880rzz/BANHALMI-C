@@ -63,15 +63,11 @@ html body main :is(.gallery,.pf-grid,.collage-gallery,.jony-gallery-grid,.banhal
   }
 }
 @media (min-width:1101px){
-  html body main :is(.service-gallery-section,.portrait-reference-section,.portrait-service-section)>.wrap,
-  html body main section:has(> .wrap > :is(.gallery,.pf-grid,.collage-gallery,.jony-gallery-grid,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid,.portrait-reference-gallery,.portrait-service-gallery))>.wrap{
-    width:100%!important;
-    max-width:none!important;
-    padding-inline:clamp(24px,2.5vw,48px)!important;
-  }
   html body main :is(.gallery,.pf-grid,.collage-gallery,.jony-gallery-grid,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid,.portrait-reference-gallery,.portrait-service-gallery){
-    width:100%!important;
+    width:calc(100vw - (2 * clamp(24px,2.5vw,48px)))!important;
     max-width:none!important;
+    margin-left:calc(50% - 50vw + clamp(24px,2.5vw,48px))!important;
+    margin-right:calc(50% - 50vw + clamp(24px,2.5vw,48px))!important;
     display:block!important;
     columns:3!important;
     column-count:3!important;
