@@ -1308,7 +1308,7 @@ border-bottom:1px solid rgba(180,144,72,.18);
 .archive-cta{margin-top:28px;}
 .best-of-archive-link .wrap{max-width:920px;}
 @media (min-width:960px){.portrait-reference-gallery .editorial-image figcaption{font-size:.76rem}}
-@media (max-width:720px){.portrait-reference-gallery{grid-template-columns:1fr}.portrait-curated-item figcaption{min-height:auto}}
+@media (max-width:720px){.portrait-curated-item figcaption{min-height:auto}}
 
 /* Phase 21 service exhibitions */
 .service-hero-image{margin-top:42px;max-width:1080px}.service-hero-image img{width:100%;height:auto;border-radius:24px;display:block}.hero-actions .btn{margin-right:12px;margin-top:10px}@media (max-width:760px){.service-hero-image{margin-top:28px}.hero-actions .btn{display:block;margin-right:0}}
