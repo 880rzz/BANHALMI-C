@@ -247,10 +247,10 @@
       3840
     ],
     "gallery": {
-      "contractVersion": "v47",
+      "contractVersion": "v48",
       "desktopMinPx": 1101,
       "desktopColumns": 3,
-      "layout": "css-grid",
+      "layout": "css-multicol-masonry",
       "reference": "BANHALMI ART homepage gallery",
       "gap": "20px",
       "appliesTo": [
@@ -265,7 +265,11 @@
       ],
       "gapPx": 20,
       "spacingAxes": "row-and-column",
-      "appliesAllBreakpoints": true
+      "appliesAllBreakpoints": true,
+      "desktopWidth": "near-full-viewport",
+      "desktopSidePadding": "clamp(24px,2.5vw,48px)",
+      "desktopSidePaddingMinPx": 24,
+      "desktopSidePaddingMaxPx": 48
     }
   },
   "navigation": {

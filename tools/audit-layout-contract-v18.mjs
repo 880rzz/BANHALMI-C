@@ -4,14 +4,15 @@ const failures=[];
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const mainRuntime=fs.readFileSync('assets/js/main.js','utf8');
 const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const site=fs.readFileSync('assets/css/site.css','utf8');
 const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
 const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
-must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20260927-contact-mobile-v47'),'render-stability cache token missing');
-must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20260927-contact-mobile-v47'),'production artifact must parser-discover the same canonical geometry CSS token');
+must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20261003-gallery-v48'),'render-stability cache token missing');
+must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20261003-gallery-v48'),'production artifact must parser-discover the same canonical geometry CSS token');
 must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
 must(mainRuntime.includes('window.matchMedia("(min-width: 1180px)")'),'desktop footer disclosure breakpoint missing from canonical runtime');
 must(mainRuntime.includes('if (footerDesktopQuery.matches) details.open = true;')&&mainRuntime.includes('list.style.removeProperty("display")')&&!mainRuntime.includes('details.open = !details.open'),'footer disclosure state must preserve native compact interaction, desktop-open state and CSS-owned visibility');
@@ -49,7 +50,15 @@ for(const rel of ['index.html','hu/index.html','de-at/index.html']){
 must(!hardener.includes('--homepage-hero-media-height'),'production hardener must not overwrite canonical homepage media geometry');
 must(hardener.includes("let fluidCss = fs.readFileSync(fluidCssPath, 'utf8')"),'production hardener must preserve the committed canonical stylesheet before scoped hardening');
 must(fluid.includes('font-size:clamp(2.5rem,2.65vw,3.3rem)!important'),'homepage desktop H1 minimum must remain 40px');
-must(fluid.includes('html body main .collage-gallery{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important'),'desktop portrait gallery three-column grid contract missing');
+must(fluid.includes('display:block!important;')&&fluid.includes('columns:3!important;')&&fluid.includes('column-count:3!important;')&&fluid.includes('column-gap:20px!important;'),'desktop mixed-aspect gallery three-column masonry contract missing');
+must(fluid.includes('margin:0 0 20px!important;')&&fluid.includes('break-inside:avoid!important;'),'gallery vertical 20px masonry rhythm contract missing');
+must(fluid.includes('width:calc(100vw - (2 * clamp(24px,2.5vw,48px)))!important;')&&fluid.includes('margin-left:calc(50% - 50vw + clamp(24px,2.5vw,48px))!important;')&&fluid.includes('max-width:none!important;'),'desktop gallery near-full-width full-bleed contract missing');
+must(authority.visualGeometry?.gallery?.desktopWidth==='near-full-viewport','gallery desktop width authority missing');
+must(!/collage-gallery\s*\{[^}]*column-(?:count|gap)/s.test(site),'legacy collage gallery geometry remains in site.css');
+must(!/jony-gallery-grid\s*\{[^}]*column-(?:count|gap)/s.test(site),'legacy Jony gallery geometry remains in site.css');
+must(!/pf-grid\s*\{[^}]*columns?:|pf-grid\s*\{[^}]*column-gap/s.test(site),'legacy portfolio gallery geometry remains in site.css');
+must(!/portrait-reference-gallery\s*\{[^}]*grid-template-columns/s.test(site),'legacy portrait reference geometry remains in site.css');
+must(!/service-lower-gallery-grid\s*\{[^}]*grid-template-columns/s.test(site),'legacy service gallery geometry remains in site.css');
 must(!/collage-gallery\{column-count:[456]!important/.test(fluid),'legacy 4/5/6-column gallery density override returned');
 
 const menuAuthority=authority.navigation?.megaMenu||{};
