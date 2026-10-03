@@ -1777,6 +1777,12 @@ html body .site-footer a{
 }
 html body .site-footer a:hover{color:#fff!important;}
 html body .site-footer .footer-accordion li>a{
+  display:flex!important;
+  align-items:baseline!important;
+  gap:.56em!important;
+  inline-size:100%!important;
+  max-inline-size:100%!important;
+  white-space:normal!important;
   position:relative!important;
   padding-block:2px!important;
   line-height:1.35!important;

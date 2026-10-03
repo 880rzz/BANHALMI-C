@@ -3790,6 +3790,8 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
 .quote-deep-details>section{margin:0}
 
 .quote-decision-guide{margin:0 0 22px;padding:16px 18px;border:1px solid rgba(16,34,63,.13);border-radius:16px;background:rgba(255,255,255,.72);font-size:.94rem;line-height:1.5}
+.quote-decision-guide>summary{cursor:pointer;list-style:revert;padding:0 0 2px}
+.quote-decision-guide>summary:focus-visible{outline:2px solid var(--accent,#a98740);outline-offset:4px;border-radius:3px}
 .quote-decision-guide>strong{display:block;margin-bottom:8px}
 .quote-decision-guide ul{margin:0;padding-left:1.15rem}
 .quote-decision-guide li+li{margin-top:6px}
