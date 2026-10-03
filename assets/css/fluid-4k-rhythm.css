@@ -46,7 +46,15 @@ html body main :is(.gallery,.banhalmi-portrait-gallery-grid,.service-lower-galle
   break-inside:avoid!important;
 }
 @media (min-width:1101px){
+  html body main :is(.service-gallery-section,.portrait-reference-section,.portrait-service-section)>.wrap,
+  html body main section:has(> .wrap > :is(.gallery,.pf-grid,.collage-gallery,.jony-gallery-grid,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid,.portrait-reference-gallery,.portrait-service-gallery))>.wrap{
+    width:100%!important;
+    max-width:none!important;
+    padding-inline:clamp(24px,2.5vw,48px)!important;
+  }
   html body main :is(.gallery,.pf-grid,.collage-gallery,.jony-gallery-grid,.banhalmi-portrait-gallery-grid,.service-lower-gallery-grid,.portrait-reference-gallery,.portrait-service-gallery){
+    width:100%!important;
+    max-width:none!important;
     display:block!important;
     columns:3!important;
     column-count:3!important;
