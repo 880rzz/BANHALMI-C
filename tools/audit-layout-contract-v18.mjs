@@ -51,6 +51,8 @@ must(hardener.includes("let fluidCss = fs.readFileSync(fluidCssPath, 'utf8')"),'
 must(fluid.includes('font-size:clamp(2.5rem,2.65vw,3.3rem)!important'),'homepage desktop H1 minimum must remain 40px');
 must(fluid.includes('display:block!important;')&&fluid.includes('columns:3!important;')&&fluid.includes('column-count:3!important;')&&fluid.includes('column-gap:20px!important;'),'desktop mixed-aspect gallery three-column masonry contract missing');
 must(fluid.includes('margin:0 0 20px!important;')&&fluid.includes('break-inside:avoid!important;'),'gallery vertical 20px masonry rhythm contract missing');
+must(fluid.includes('padding-inline:clamp(24px,2.5vw,48px)!important;')&&fluid.includes('max-width:none!important;'),'desktop gallery near-full-width canvas contract missing');
+must(authority.visualGeometry?.gallery?.desktopWidth==='near-full-viewport','gallery desktop width authority missing');
 must(!/collage-gallery\{column-count:[456]!important/.test(fluid),'legacy 4/5/6-column gallery density override returned');
 
 const menuAuthority=authority.navigation?.megaMenu||{};
