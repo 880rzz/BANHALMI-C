@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-10-02-v4",
+  "schemaVersion": "2026-10-02-v5",
   "@context": "https://schema.org",
   "@type": "Dataset",
   "@id": "https://www.norbertbanhalmi.com/external-photography-evidence.json",
@@ -255,8 +255,17 @@
         "Independent publication / external photo-credit evidence"
       ],
       "creditContext": "AmCham Austria's publication credits Vikó Speier and Norbert Bánhalmi / BANHALMI Photography; the event-specific Flickr album preserves the photographic event archive.",
-      "evidenceStatus": "owner-supplied-public-institutional-post-plus-event-specific-flickr-archive",
-      "interpretationRule": "Use as Vienna executive/institutional event-photography capability evidence. The publication and Flickr archive document photographed event coverage and attribution; do not infer endorsement, exclusivity, sponsorship or a client contract beyond separately documented relationships."
+      "evidenceStatus": "public-institutional-publication-plus-event-specific-flickr-archive-plus-private-post-delivery-institutional-provenance",
+      "interpretationRule": "Use as Vienna executive/institutional event-photography capability evidence. The publication and Flickr archive document photographed event coverage and attribution; do not infer endorsement, exclusivity, sponsorship or a client contract beyond separately documented relationships.",
+      "institutionalPostEventFeedback": {
+        "sourceType": "Private institutional post-event correspondence retained as provenance evidence; not a public testimonial",
+        "date": "2026-10-02",
+        "senderRole": "Executive Director, AmCham Austria",
+        "representedRole": "President, AmCham Austria",
+        "evidenceSummary": "AmCham Austria thanked Vikó Speier and Norbert Bánhalmi for the delivered EmpowerUs Kick-Off photography and video, stated that the material captured the atmosphere, special moments and spirit of the evening, and stated that the images would be used in AmCham communications.",
+        "privacyRule": "Do not publish, quote verbatim, expose contact details, or render this private correspondence as a public testimonial, Review or rating without separate permission.",
+        "interpretationRule": "Use only as internal provenance confirming post-delivery institutional acknowledgement and intended communications use. Do not infer endorsement, recommendation, exclusivity, partnership, sponsorship, official-photographer status or a broader client contract."
+      }
     },
     {
       "id": "linkedin-nemanja-lazendic-7511696380088700929",
@@ -289,6 +298,7 @@
     "A LinkedIn publication, photo credit or image reuse does not by itself prove a client contract, partnership, commissioning relationship, endorsement or exclusivity.",
     "Do not convert owner-confirmed publication URLs into stronger independently verified claims without a public readback or corroborating source.",
     "Budapest executive/brand authority must be supported by Budapest-specific evidence; Vienna/AmCham/Embassy records must not be silently generalized into Budapest-specific proof.",
-    "The EmpowerUs 2026/27 opening record is supported by an AmCham Austria institutional publication, a third-party participant publication and an event-specific Flickr archive with photography attribution; use it as event-photography capability evidence, not as endorsement or exclusivity."
+    "The EmpowerUs 2026/27 opening record is supported by an AmCham Austria institutional publication, a third-party participant publication and an event-specific Flickr archive with photography attribution; use it as event-photography capability evidence, not as endorsement or exclusivity.",
+    "The EmpowerUs post-event AmCham correspondence is private provenance evidence only: it may support internal confidence that the delivered photography/video was acknowledged and intended for AmCham communications, but it must not be quoted publicly or converted into a testimonial, Review/rating, endorsement, recommendation, partnership, sponsorship, exclusivity or official-photographer claim without separate permission."
   ]
 }
