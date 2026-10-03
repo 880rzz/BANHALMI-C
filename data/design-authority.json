@@ -265,7 +265,11 @@
       ],
       "gapPx": 20,
       "spacingAxes": "row-and-column",
-      "appliesAllBreakpoints": true
+      "appliesAllBreakpoints": true,
+      "desktopWidth": "near-full-viewport",
+      "desktopSidePadding": "clamp(24px,2.5vw,48px)",
+      "desktopSidePaddingMinPx": 24,
+      "desktopSidePaddingMaxPx": 48
     }
   },
   "navigation": {
