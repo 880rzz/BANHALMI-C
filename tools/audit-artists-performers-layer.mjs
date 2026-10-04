@@ -18,9 +18,9 @@ const p = (pricing.services || []).find(x => x.id === 'fine-art');
 fail(p?.quoteRouting?.serviceContext === 'fine-art', 'pricing quote route drift');
 fail(JSON.stringify((p?.packages || []).map(x => [x.code,x.grossEUR])) === JSON.stringify([['art60',690],['art120',990],['art180',1290]]), 'Fine Art package pricing drift');
 const localizedPackageContracts = {
-  'fine-art/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Focused Artist Session — 1 hour · €690','Artist Portfolio — 2 hours · €990','Complete Artist Portfolio — 3 hours · €1,290','Fine Art &amp; Artistic Nude — personal artistic work · from €690 gross'],
-  'hu/muveszi-fotografia/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Fókuszált művészfotózás — 1 óra · 276 000 Ft (€690)','Művészportfólió — 2 óra · 396 000 Ft (€990)','Teljes művészportfólió — 3 óra · 516 000 Ft (€1 290)','Fine Art &amp; művészi akt — személyes művészeti alkotás · bruttó 276 000 Ft-tól (€690)'],
-  'de-at/fine-art/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Fokussiertes Künstler:innen-Shooting — 1 Stunde · €690','Künstler:innen-Portfolio — 2 Stunden · €990','Komplettes Künstler:innen-Portfolio — 3 Stunden · €1.290','Fine Art &amp; Aktkunst — persönliche künstlerische Arbeit · ab €690 brutto']
+  'fine-art/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Focused Artist Session — 1 hour','Artist Portfolio — 2 hours','Complete Artist Portfolio — 3 hours','Fine Art &amp; Artistic Nude — personal artistic work'],
+  'hu/muveszi-fotografia/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Fókuszált művészfotózás — 1 óra','Művészportfólió — 2 óra','Teljes művészportfólió — 3 óra','Fine Art &amp; művészi akt — személyes művészeti alkotás'],
+  'de-at/fine-art/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Fokussiertes Künstler:innen-Shooting — 1 Stunde','Künstler:innen-Portfolio — 2 Stunden','Komplettes Künstler:innen-Portfolio — 3 Stunden','Fine Art &amp; Aktkunst — persönliche künstlerische Arbeit']
 };
 for (const file of ['fine-art/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html']) {
   const h = fs.readFileSync(file,'utf8');
