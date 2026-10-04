@@ -1674,7 +1674,7 @@ html body .site-footer>.wrap{
   inline-size:min(calc(100% - 48px),1440px)!important;
   max-inline-size:1440px!important;
   margin-inline:auto!important;
-  padding:32px 0 20px!important;
+  padding:44px 0 24px!important;
   min-inline-size:0!important;
 }
 html body .site-footer .footer-grid{
@@ -1682,7 +1682,7 @@ html body .site-footer .footer-grid{
   grid-template-columns:repeat(12,minmax(0,1fr))!important;
   grid-template-rows:auto auto!important;
   column-gap:clamp(18px,2.2vw,34px)!important;
-  row-gap:22px!important;
+  row-gap:32px!important;
   align-items:start!important;
   align-content:start!important;
   min-inline-size:0!important;
@@ -1767,7 +1767,7 @@ html body .site-footer .footer-accordion>summary{
 html body .site-footer .footer-accordion>summary::-webkit-details-marker{display:none!important;}
 html body .site-footer ul{list-style:none!important;margin:0!important;padding:0!important;}
 html body .site-footer li{min-inline-size:0!important;margin:0!important;}
-html body .site-footer .footer-accordion ul{display:grid!important;row-gap:3px!important;}
+html body .site-footer .footer-accordion ul{display:grid!important;row-gap:6px!important;}
 html body .site-footer a{
   min-inline-size:0!important;
   color:#9fa7b3!important;
@@ -1777,37 +1777,32 @@ html body .site-footer a{
 }
 html body .site-footer a:hover{color:#fff!important;}
 html body .site-footer .footer-accordion li>a{
-  display:flex!important;
-  align-items:baseline!important;
-  gap:.56em!important;
+  display:block!important;
   inline-size:100%!important;
   max-inline-size:100%!important;
   white-space:normal!important;
   position:relative!important;
-  padding-block:2px!important;
+  padding-block:5px!important;
   line-height:1.35!important;
 }
 html body .site-footer .footer-grid>details.footer-accordion[data-social-footer] ul{
-  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-template-columns:minmax(0,1fr)!important;
   column-gap:14px!important;
 }
 html body .site-footer .footer-accordion li>a::before{
-  content:""!important;
-  display:inline-block!important;
-  inline-size:3px!important;
-  block-size:3px!important;
-  margin:0 10px 3px 0!important;
-  border-radius:50%!important;
-  background:#d9b75f!important;
-  vertical-align:middle!important;
+  content:none!important;
+}
+html body .site-footer :is(a,button,summary):focus-visible{
+  outline:2px solid #d9b75f!important;
+  outline-offset:4px!important;
+  border-radius:2px;
 }
 
 html body .site-footer .footer-contact-list{
   display:grid!important;
   grid-template-columns:repeat(3,minmax(0,1fr))!important;
   gap:0!important;
-  border-top:1px solid rgba(255,255,255,.12)!important;
-  border-bottom:1px solid rgba(255,255,255,.12)!important;
+  border:0!important;
   min-inline-size:0!important;
   max-inline-size:100%!important;
 }
@@ -1821,7 +1816,7 @@ html body .site-footer .footer-contact-list .footer-location{
   max-inline-size:100%!important;
 }
 html body .site-footer .footer-contact-list .footer-location+.footer-location{
-  border-left:1px solid rgba(255,255,255,.12)!important;
+  border-left:0!important;
   padding-left:18px!important;
 }
 html body .site-footer .footer-contact-list :is(.footer-location-link,.footer-address,.footer-location-note,.footer-location-profile,.footer-phone){
@@ -1984,9 +1979,9 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
   html body .site-footer .footer-grid>details.footer-accordion:not([data-social-footer]):not([data-memberships-footer]) ul,
   html body .site-footer .footer-grid>details.footer-accordion[data-social-footer] ul,
   html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer] ul{
-    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-template-columns:minmax(0,1fr)!important;
     column-gap:14px!important;
-    row-gap:0!important;
+    row-gap:4px!important;
   }
   html body .site-footer .footer-grid>details.footer-accordion:nth-of-type(1) ul{column-gap:20px!important;}
   html body .site-footer .footer-accordion>summary{
@@ -1999,11 +1994,11 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
   html body .site-footer .footer-grid>div:has(.footer-contact-list),
   html body .site-footer .footer-grid>details.footer-accordion[data-memberships-footer],
   html body .site-footer .footer-grid>div:has(.footer-legal-list){
-    padding-top:14px!important;
+    padding-top:24px!important;
   }
   html body .site-footer .footer-bottom{
-    margin-top:12px!important;
-    padding-top:12px!important;
+    margin-top:24px!important;
+    padding-top:20px!important;
   }
   html body .site-footer .footer-cookie-settings{
     min-height:44px!important;
