@@ -1,6 +1,6 @@
 {
   "documentType": "BANHALMI service-provider and processor registry",
-  "schemaVersion": "2026-10-04-v4",
+  "schemaVersion": "2026-10-04-v5",
   "dateModified": "2026-10-04",
   "controller": {
     "name": "Banhalmi Norbert e.U.",
@@ -111,7 +111,8 @@
       "service": "Microsoft Clarity",
       "purpose": [
         "aggregate website-use measurement",
-        "heatmaps and session interaction diagnostics"
+        "heatmaps and session interaction diagnostics",
+        "optional Copilot summaries of dashboard data, recordings and heatmaps when invoked by an authorised project user"
       ],
       "scope": [
         "norbertbanhalmi.com where analytics is enabled",
@@ -120,11 +121,30 @@
       "dataCategories": [
         "device and browser data",
         "website-use events",
-        "interaction diagnostics"
+        "interaction diagnostics",
+        "dashboard metrics, session playback and heatmap content used for Copilot summaries when invoked"
       ],
       "activation": "only after analytics consent",
       "consentRequired": true,
-      "note": "The active project identifiers are described in the human-readable privacy notice. Project-level masking, retention and account settings require separate authenticated verification."
+      "retention": {
+        "playbackData": "30 days",
+        "sampledOrLabelledOrFavouritedRecordings": "up to 9 months",
+        "clickAndHeatmapData": "up to 9 months",
+        "source": "https://learn.microsoft.com/en-us/clarity/setup-and-installation/data-retention"
+      },
+      "accountSettingsObserved": {
+        "checkedAt": "2026-10-04",
+        "projectId": "ky4j4kbgt7",
+        "maskingMode": "Balanced",
+        "cookies": "On; site code loads Clarity only after analytics consent and sends consent status",
+        "botDetection": "On",
+        "microsoftAdsIntegration": "Not connected",
+        "googleAdsIntegration": "Not connected",
+        "googleAnalyticsIntegration": "Not connected",
+        "copilotFeatures": "On",
+        "projectSpecificRetentionOverride": "Not found in reviewed project settings"
+      },
+      "note": "The active project identifiers and observed settings are documented in the human-readable privacy notice. Retention periods are Microsoft's published service policy, not a BANHALMI-configured project setting. Copilot processing occurs only if an authorised project user invokes the feature."
     },
     {
       "id": "elfsight",
