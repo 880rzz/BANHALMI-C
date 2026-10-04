@@ -18,6 +18,7 @@ for(const [route,label,isEvent] of routes){
     const drawer=page.locator('details[data-project-framework="stage20"]');
     await expect(drawer).toHaveCount(1);
     await expect(drawer).not.toHaveAttribute('open','');
+    await expect(drawer.locator('.project-framework-content > .section-band').first()).toBeHidden();
     await expect(drawer.locator('summary')).toContainText(label);
     const stage78=await drawer.getAttribute('data-service-simplified')==='stage78';
     if(stage78){

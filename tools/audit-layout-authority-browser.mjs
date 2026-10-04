@@ -25,9 +25,9 @@ if((scope==='faq'||scope==='all')&&!faqFiles.length) throw new Error('Layout aut
 if((scope==='quote'||scope==='all')&&!quoteFiles.length) throw new Error('Layout authority browser audit: no smart quote pages discovered.');
 
 function urlFor(file){
-  let rel=file.slice(siteDir.length).replace(/\\/g,'/');
+  let rel=path.relative(siteDir,file).split(path.sep).join('/');
   rel=rel.replace(/index\.html$/,'');
-  return baseUrl+rel;
+  return new URL(rel,`${baseUrl}/`).href;
 }
 
 const browser=await chromium.launch({headless:true});
