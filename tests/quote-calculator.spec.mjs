@@ -83,12 +83,12 @@ for (const route of routes) {
       await expect(gross).not.toContainText(/€0|—|Calculating|Számítás|Berechnung/);
       await expect(net).not.toContainText(/—|Calculating|Számítás|Berechnung/);
       await expect(vat).not.toContainText(/—|Calculating|Számítás|Berechnung/);
-      const before = amount(await gross.textContent());
+      const before = amount(await gross.locator('[data-currency="'+(route.lang==='hu'?'HUF':'EUR')+'"]').textContent());
       expect(before).toBeGreaterThan(0);
       const beforeHidden = await page.locator('input[name="estimate_gross"]').inputValue();
       await page.locator('input[name="retouched_images"]').fill('3');
       await expect.poll(async () => page.locator('input[name="estimate_gross"]').inputValue()).not.toBe(beforeHidden);
-      const after = amount(await gross.textContent());
+      const after = amount(await gross.locator('[data-currency="'+(route.lang==='hu'?'HUF':'EUR')+'"]').textContent());
       expect(after).toBeGreaterThan(0);
       const visibleAmountField = route.lang === 'hu' ? 'estimate_display_gross' : 'estimate_gross';
       expect(amount(await page.locator(`input[name="${visibleAmountField}"]`).inputValue())).toBeCloseTo(after, 1);
@@ -274,7 +274,7 @@ test.describe('complete quote calculation strategy', () => {
         await route.continue();
       }
     });
-    const visibleGross = amount(await page.locator('[data-estimate-gross]').textContent());
+    const visibleGross = amount(await page.locator('[data-estimate-gross] [data-currency="EUR"]').textContent());
     await form.locator('[type="submit"]').click();
     await expect(form.locator('[data-form-note]')).toContainText('TEST-QUOTE');
     expect(Number(submittedPayload.grossAmount)).toBeCloseTo(visibleGross, 2);
@@ -306,8 +306,13 @@ test('Hungarian quote displays fixed-rate HUF while preserving canonical EUR', a
   await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
   await page.locator('input[name="category"][value="individual"]').check();
   await page.locator('input[name="individual_mode"][value="quick30"]').check();
-  await expect(page.locator('[data-estimate-gross]')).toContainText(/88[\s\u00a0]?000/);
-  await expect(page.locator('[data-estimate-gross]')).toContainText(/Ft|HUF/);
+  await expect(page.locator('[data-estimate-gross] [data-currency="HUF"]')).toContainText(/88[\s\u00a0]?000/);
+  await expect(page.locator('[data-estimate-gross] [data-currency="EUR"]')).toContainText(/220/);
+  await expect(page.locator('[data-estimate-net] [data-currency="HUF"]')).toContainText(/73[\s\u00a0]?333/);
+  await expect(page.locator('[data-estimate-net] [data-currency="EUR"]')).toContainText(/183/);
+  await expect(page.locator('[data-estimate-vat] [data-currency="HUF"]')).toContainText(/14[\s\u00a0]?667/);
+  await expect(page.locator('[data-estimate-vat] [data-currency="EUR"]')).toContainText(/36,67/);
+  await expect(page.locator('[data-estimate-gross] [data-currency]')).toHaveCount(2);
   await expect(page.locator('input[name="estimate_gross"]')).toHaveValue('220');
   await expect(page.locator('input[name="estimate_display_currency"]')).toHaveValue('HUF');
   await expect(page.locator('input[name="estimate_display_rate"]')).toHaveValue('400');

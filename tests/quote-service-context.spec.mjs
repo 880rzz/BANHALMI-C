@@ -24,6 +24,7 @@ const contexts=[
   }
 ];
 function amount(text){const cleaned=String(text).replace(/[^0-9,.-]/g,'').replace(/\.(?=\d{3})/g,'').replace(',','.');return Number.parseFloat(cleaned);}
+function displayCurrency(route){return route.startsWith('/hu/')?'HUF':'EUR';}
 for(const quoteRoute of quoteRoutes){
   for(const context of contexts){
     test(quoteRoute+' applies '+context.service+' before the first estimate',async({page})=>{
@@ -36,7 +37,7 @@ for(const quoteRoute of quoteRoutes){
       const categorySelector='input[name="category"][value="'+context.category+'"]'+(context.category==='event'?':not([data-private-event])':'');
       await expect(form.locator(categorySelector).first()).toBeChecked();
       await expect(form.locator('[data-panel="'+context.panel+'"]').first()).toBeVisible();
-      const gross=amount(await page.locator('[data-estimate-gross]').textContent());
+      const gross=amount(await page.locator('[data-estimate-gross] [data-currency="'+displayCurrency(quoteRoute)+'"]').textContent());
       expect(Number.isFinite(gross)).toBe(true);
       expect(gross).toBeGreaterThanOrEqual(0);
       const canonical=await page.locator('link[rel="canonical"]').getAttribute('href');
@@ -59,7 +60,14 @@ for(const quoteRoute of quoteRoutes){
     await expect(page).toHaveURL(/service=private-event/);
     for(const link of await page.locator('.lang-switch a[hreflang]').all()) await expect(link).toHaveAttribute('href',/service=private-event/);
     await expect(form.locator('input[name="event_duration"][value="event120"]')).toBeChecked();
-    const gross=amount(await page.locator('[data-estimate-gross]').textContent());
+    const privateCard=privateOption.locator('xpath=ancestor::label[1]');
+    await expect(privateCard.locator('[data-category-description="private-event"]')).toHaveText(quoteRoute.startsWith('/hu/')?'Kerek születésnapokhoz, évfordulókhoz és kisebb családi összejövetelekhez.':quoteRoute.startsWith('/de-at/')?'Für runde Geburtstage, Jubiläen und kleine Familienfeiern.':'Milestone birthdays, anniversaries and small family gatherings.');
+    await expect(privateCard.locator('.info-tip')).toHaveAttribute('aria-label',quoteRoute.startsWith('/hu/')?'Családi ünnepekhez, kerek születésnapokhoz, évfordulókhoz és kötetlen csoportképekhez.':quoteRoute.startsWith('/de-at/')?'Für Familienfeiern, runde Geburtstage, Jubiläen und ungezwungene Gruppenporträts.':'For family celebrations, milestone birthdays, anniversaries and relaxed group portraits.');
+    await form.locator('input[name="category"][value="event"]:not([data-private-event])').check();
+    await expect(form).toHaveAttribute('data-private-event-active','false');
+    await expect(form.locator('[name="category"][value="event"]:not([data-private-event])').locator('xpath=ancestor::label[1]').locator('em')).toContainText(quoteRoute.startsWith('/hu/')?'C-Level / intézményi esemény':quoteRoute.startsWith('/de-at/')?'Leadership Summits':'leadership summits');
+    await privateOption.check();
+    const gross=amount(await page.locator('[data-estimate-gross] [data-currency="'+displayCurrency(quoteRoute)+'"]').textContent());
     expect(gross).toBe(quoteRoute.startsWith('/hu/')?236000:590);
   });
   test(quoteRoute+' ignores missing or unsupported service context safely',async({page})=>{

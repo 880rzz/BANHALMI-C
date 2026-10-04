@@ -21,7 +21,7 @@ for(const width of widths){
     await page.waitForTimeout(180);
     const issues=await page.evaluate(()=>{
       const out=[];
-      const visible=el=>{const s=getComputedStyle(el),r=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&Number(s.opacity)!==0&&r.width>0&&r.height>0};
+      const visible=el=>{if(el.closest('details:not([open])'))return false;const s=getComputedStyle(el),r=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&Number(s.opacity)!==0&&r.width>0&&r.height>0};
       const px=v=>parseFloat(v)||0;
       const name=el=>`${el.tagName.toLowerCase()}${el.id?'#'+el.id:''}${el.className?'.'+String(el.className).trim().replace(/\s+/g,'.').slice(0,90):''}`;
       const w=innerWidth;
