@@ -4236,7 +4236,7 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 
 /* Service price examples share one readable list across locales. */
 .service-price-examples{margin-block:28px;max-width:720px;}
-.service-price-examples h2{font-size:1.1rem!important;line-height:1.4!important;margin:0 0 16px!important;}
+.service-price-examples h2{font-size:clamp(26px,2.1vw,30px)!important;line-height:1.18!important;letter-spacing:-.022em!important;margin:0 0 16px!important;}
 .service-price-examples ul{list-style:none;padding:0;margin:0 0 18px;}
 .service-price-examples li{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 20px;padding-block:9px;border-bottom:1px solid var(--line);}
 .service-price-examples li strong{white-space:nowrap;}
