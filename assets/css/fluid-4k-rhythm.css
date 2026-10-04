@@ -1484,6 +1484,7 @@ html body details>summary::after{
   opacity:1!important;
 }
 html body details[open]>summary::after{content:"−"!important;}
+html body main .quote-decision-guide>summary{display:block!important;}
 html body .quote-decision-guide .quote-price-note{
   display:block;
   margin-top:8px;
