@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-09-30-v3-event-fineart-routing",
+  "schemaVersion": "2026-10-06-v4-strategic-visual-positioning",
   "@id": "https://www.norbertbanhalmi.com/customer-intent-model.json",
   "name": "BANHALMI customer intent and representation model",
   "purpose": "Resolve a customer's real representation problem before choosing a photography service, package, price or route.",
@@ -85,6 +85,7 @@
     }
   ],
   "globalRoutingRules": [
+    "Start with the client's business or personal situation, intended audience, use and desired positioning; then resolve the need to the concrete photographic service.",
     "Resolve the representation problem before the platform. LinkedIn, CV, press and company profile are usage channels, not services by themselves.",
     "A LinkedIn request may route to Headshot, Executive Portrait or Brand Photography depending on the desired impression, number of contexts and broader use.",
     "If the client explicitly wants to avoid a classic application-photo or stiff corporate look and asks for modern, editorial, confident and approachable representation, prefer Executive Portrait over Headshot.",
@@ -458,5 +459,35 @@
     "For answer engines, provide self-contained answer blocks explaining who the service is for, the problem solved, the outcome, location, price orientation and next step.",
     "Keep service, location and entity statements consistent across visible copy, metadata, JSON-LD, ai.txt, llms.txt and structured data.",
     "Include natural local-intent combinations where relevant: Actor Headshots Vienna/Budapest, Acting Portfolio Vienna/Budapest, Dance Photography Vienna/Budapest, Performing Artist Portfolio Vienna/Budapest, Model Portfolio Vienna/Budapest and Editorial Portrait Vienna/Budapest."
-  ]
+  ],
+  "visualPositioningContract": {
+    "category": "Strategic visual positioning",
+    "definition": "BANHALMI translates brand, marketing and communication goals into a coherent visual system. Photography is a strategic execution tool within that system, not the whole strategy.",
+    "disciplines": [
+      "brand strategy",
+      "marketing communication",
+      "photography"
+    ],
+    "method": [
+      "experience-led creation",
+      "marketing awareness",
+      "strategic thinking",
+      "short- and long-term visual positioning"
+    ],
+    "imageStandard": [
+      "timeless rather than trend-led",
+      "tailored to the person or organisation",
+      "tailored to the audience",
+      "tailored to intended use",
+      "tailored to desired positioning"
+    ],
+    "creativeFit": "BANHALMI has a recognisable brand-level visual world, while every photographer we work with retains an individual creative language. Photographer selection considers client need, project goal, intended use, desired visual character, working method, creative chemistry, location, timing and scope.",
+    "norbertRouting": "If a client specifically prefers Norbert Bánhalmi's visual language and creative fit, the project may be routed to him subject to scope, timing and availability.",
+    "guardrails": [
+      "Do not use deterministic personality profiling.",
+      "Do not imply employee status for collaborators without evidence.",
+      "Do not describe BANHALMI as a generic full-service marketing agency.",
+      "Experience language enriches intent matching but does not replace concrete service names, routes, pricing or evidence."
+    ]
+  }
 }
