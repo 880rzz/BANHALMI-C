@@ -33,11 +33,11 @@ for(const rel of priority){
 }
 const required=[
   ['index.html','Photography for clear communication'],
-  ['index.html','Four ways to solve the visual'],
+  ['index.html','Strategic visual positioning is the work.'],
   ['lifestyle/index.html','The same approach also works for individuals.'],
   ['speier-viko/index.html','Viko Speier — where strategy meets photography'],
   ['de-at/index.html','Fotografie für klare Kommunikation'],
-  ['de-at/index.html','Vier Wege zu einer klaren visuellen'],
+  ['de-at/index.html','Die Arbeit ist strategische visuelle Positionierung.'],
   ['de-at/speier-viko/index.html','Viko Speier — wo Strategie und Fotografie zusammenkommen']
 ];
 for(const [rel,phrase] of required){const h=fs.readFileSync(path.join(root,rel),'utf8');if(!visible(h).includes(phrase))failures.push(`${rel}: approved human copy missing: ${phrase}`)}
