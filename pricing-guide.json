@@ -1,7 +1,7 @@
 {
   "documentType": "ai-pricing-interpretation-guide",
   "schemaVersion": "2026-09-29-v4-executive-architecture",
-  "dateModified": "2026-09-30",
+  "dateModified": "2026-10-06",
   "name": "BANHALMI AI pricing interpretation and calculation guide",
   "canonicalPricingSource": "https://www.norbertbanhalmi.com/pricing.json",
   "quoteCalculator": "https://www.norbertbanhalmi.com/requestaquote/",
@@ -51,16 +51,22 @@
       "guestCount",
       "parallelTracks",
       "manualAdditionalPhotographers"
+    ],
+    "businessEventPhotography": [
+      "packageCode",
+      "guestCount",
+      "parallelTracks",
+      "manualAdditionalPhotographers"
     ]
   },
   "conditionalInputs": {
     "selectedAddOns": "Ask only when the customer wants optional production services.",
-    "travelCountry": "Ask only when the assignment is not at a listed studio or included local location.",
+    "travelCountry": "Ask for client-office or other non-studio locations. Listed studios have no vehicle-travel addition. Austria/Hungary use the per-vehicle component; other countries require a custom travel quote.",
     "crewMembers": "Ask or derive from the selected photographers and confirmed production crew only when vehicle travel must be calculated.",
     "companyAndVatId": "Collect for final tax review, but do not automatically remove Austrian VAT."
   },
   "inputRules": [
-    "packageCode must match a package code in pricing.json.",
+    "packageCode must resolve to pricing.json. The eventBusiness calculator code resolves to services[id=event].publicArchitecture.businessEvent and priceComponentsGrossEUR.businessEventEntry; other codes resolve to services[].packages[].code. Do not substitute C-Level pricing for Business coverage.",
     "selectedRetouchedImages and retouchedImagesPerPerson must be non-negative integers.",
     "people, guestCount, parallelTracks and selectedHours must be positive numbers; photographer counts must be positive integers.",
     "The headshotcv package includes exactly one retouched image and must not receive automatic extra-image pricing.",
@@ -255,6 +261,15 @@
         "use": "personal author-led Fine Art / artistic nude project; concept-led, private and consent-based"
       },
       "rule": "Ask which outcome is intended. Never collapse professional artist portfolio photography and artistic nude into one generic package description."
+    }
+  },
+  "calculatorPackageResolution": {
+    "eventBusiness": {
+      "canonicalPricingSource": "https://www.norbertbanhalmi.com/pricing.json",
+      "serviceId": "event",
+      "publicArchitectureKey": "businessEvent",
+      "priceComponent": "businessEventEntry",
+      "scope": "Up to one hour of straightforward Business Event Coverage; additional team, travel and optional services follow the existing calculator and written offer."
     }
   }
 }

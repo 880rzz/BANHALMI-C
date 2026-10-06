@@ -1,7 +1,7 @@
 {
   "documentType": "banhalmi-project-policy",
   "schemaVersion": "2026-09-05-v4-partner-delivery",
-  "dateModified": "2026-09-05T15:50:00+02:00",
+  "dateModified": "2026-10-06",
   "canonicalOrganization": "https://www.norbertbanhalmi.com/#organization",
   "canonicalPerson": "https://www.norbertbanhalmi.com/about/",
   "canonicalPolicyGraph": "https://www.norbertbanhalmi.com/project-policy.jsonld",
@@ -21,7 +21,7 @@
     "estimateStatus": "Calculator and website figures are non-binding preliminary estimates. The accepted written offer defines the final scope and price.",
     "taxDisplay": "Net amount, applicable VAT and gross total are shown separately. Austrian VAT remains in the estimate until another lawful treatment has been verified.",
     "additionalWork": "Work outside the accepted scope requires written approval before it is charged.",
-    "travel": "On-site work in Vienna and Budapest is included where stated. Other travel or production costs are recorded in advance in the written offer.",
+    "travel": "The calculator adds no vehicle-travel charge for listed studios. Client offices and other locations in Austria/Hungary use pricing.json priceComponentsGrossEUR.travelPerVehicleGross per required vehicle; other countries require a custom travel quote. Travel expressly included in an accepted written offer remains included. This clarification does not vary accepted written agreements.",
     "hungarianOrientationCurrency": "The Hungarian calculator displays HUF at a fixed planning conversion of 1 EUR = 400 HUF. EUR remains the canonical base price; the accepted written offer records the contractual currency."
   },
   "paymentAndInvoicing": {
