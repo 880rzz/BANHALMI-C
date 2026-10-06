@@ -483,7 +483,7 @@
       formType: 'quote',
       payloadVersion: 'banhalmi-quote-v5-full-audit',
       formTitle: ql.formTitle,
-      category: categoryLabel(category, lang),
+      category: estimate && estimate.serviceLabel ? estimate.serviceLabel : categoryLabel(category, lang),
       categoryCode: category,
       packageName: '',
       duration: '',
@@ -501,7 +501,15 @@
       locationType: readRadio(form, 'location') || readField(form, 'location'),
       locationDetails: readField(form, 'specific_location'),
       travelCountry: readField(form, 'travel_country'),
-      travelPricingStatus: estimate && estimate.customTravel ? 'custom-quote-required' : 'included-or-not-applicable',
+      eventPricingTier: estimate ? estimate.eventPricingTier : '',
+      serviceContext: estimate ? estimate.serviceContext : readField(form, 'service_context'),
+      service_context: estimate ? estimate.serviceContext : readField(form, 'service_context'),
+      canonicalPackageCode: estimate ? estimate.canonicalPackageCode : '',
+      pricingSource: estimate ? estimate.pricingSource : '',
+      privateEventCity: estimate ? estimate.privateEventCity : '',
+      cityTravelIncluded: !!(estimate && estimate.cityTravelIncluded),
+      travelGrossAmount: estimate ? String(estimate.travelGross || 0) : '0',
+      travelPricingStatus: estimate ? estimate.travelPricingStatus : 'included-or-not-applicable',
       displayedTotalExcludesInternationalTravel: !!(estimate && estimate.customTravel),
       preferredSlots: [1,2,3].map(function(i){
         var date = readField(form,'preferred_date_'+i);
@@ -585,6 +593,7 @@
       payload.eventRecommendedPhotographerCount = estimate?String(estimate.eventRecommendedPhotographers||estimate.photographerCount||1):'1';
       payload.eventDeliveredImagesEstimate = estimate?String(estimate.eventDeliveredImagesEstimate||readField(form,'retouched_images')):readField(form,'retouched_images');
     }
+    if(estimate && estimate.serviceContext === 'private-event'){payload.category=window.BANHALMI_PRIVATE_EVENT_PRICING.name[lang==='de'?'de-AT':lang];}
     var selectedRetouches = parseInt(payload.retouchedImagesTotal || payload.retouchedImages || '0', 10) || 0;
     if (payload.amchamMember && category !== 'event' && selectedRetouches > 0) {
       var extra = Math.ceil(selectedRetouches * 0.5);
@@ -619,6 +628,8 @@
     };
     var l = labels[lang] || labels.en;
     var service = categoryLabel(readRadio(form, 'category') || 'individual', lang);
+    var serviceEstimate=window.BANHALMI_QUOTE&&window.BANHALMI_QUOTE.calculate?window.BANHALMI_QUOTE.calculate(form):null;
+    if(serviceEstimate&&serviceEstimate.serviceLabel) service=serviceEstimate.serviceLabel;
     var locationType = selectedOptionText(form, 'location');
     var exactLocation = readField(form, 'specific_location');
     var location = exactLocation ? [locationType, exactLocation].filter(Boolean).join(' — ') : (locationType || '—');

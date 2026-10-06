@@ -104,7 +104,7 @@ def reconcile(root):
     save(file, json.dumps(guide,ensure_ascii=False,indent=2)+'\n')
     file = 'project-policy.json'
     policy = json.loads((root/file).read_text())
-    policy['commercialInterpretation']['travel'] = 'The calculator adds no vehicle-travel charge for listed studios. Client offices and other locations in Austria/Hungary use pricing.json priceComponentsGrossEUR.travelPerVehicleGross per required vehicle; other countries require a custom travel quote. Travel expressly included in an accepted written offer remains included. This clarification does not vary accepted written agreements.'
+    policy['commercialInterpretation']['travel'] = 'For portrait, branding, Fine Art and corporate-event bookings, the selected package covers the agreed photographic work. Studio sessions in Vienna or Budapest have no travel surcharge. For a client office or another venue, travel and any venue costs are separate items in the estimate and final written offer. Private celebrations include local travel within Vienna or Budapest. Enter the exact venue address and select its area; outside these cities the standard travel rules apply. Venue hire and optional production services are not included.'
     policy['dateModified'] = '2026-10-06'
     save(file, json.dumps(policy,ensure_ascii=False,indent=2)+'\n')
     # Reconcile literal legacy generators rather than adding a runtime override.

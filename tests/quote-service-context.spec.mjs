@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test';
+import fs from 'node:fs';
+const clarityCopy=JSON.parse(fs.readFileSync('tools/content/pricing-clarity-20261006.json','utf8'));
 
 const quoteRoutes=['/requestaquote/','/hu/ajanlatkeres/','/de-at/anfrage/'];
 const contexts=[
@@ -65,7 +67,7 @@ for(const quoteRoute of quoteRoutes){
     await expect(privateCard.locator('.info-tip')).toHaveAttribute('aria-label',quoteRoute.startsWith('/hu/')?'Családi ünnepekhez, kerek születésnapokhoz, évfordulókhoz és kötetlen csoportképekhez.':quoteRoute.startsWith('/de-at/')?'Für Familienfeiern, runde Geburtstage, Jubiläen und ungezwungene Gruppenporträts.':'For family celebrations, milestone birthdays, anniversaries and relaxed group portraits.');
     await form.locator('input[name="category"][value="event"]:not([data-private-event])').check();
     await expect(form).toHaveAttribute('data-private-event-active','false');
-    await expect(form.locator('[name="category"][value="event"]:not([data-private-event])').locator('xpath=ancestor::label[1]').locator('em')).toContainText(quoteRoute.startsWith('/hu/')?'C-Level / intézményi esemény':quoteRoute.startsWith('/de-at/')?'Leadership Summits':'leadership summits');
+    await expect(form.locator('[name="category"][value="event"]:not([data-private-event])').locator('xpath=ancestor::label[1]').locator('em')).toHaveText(clarityCopy[quoteRoute.startsWith('/hu/')?'hu':quoteRoute.startsWith('/de-at/')?'de':'en'].eventShort);
     await privateOption.check();
     const gross=amount(await page.locator('[data-estimate-gross] [data-currency="'+displayCurrency(quoteRoute)+'"]').textContent());
     expect(gross).toBe(quoteRoute.startsWith('/hu/')?236000:590);

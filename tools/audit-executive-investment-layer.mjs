@@ -1,10 +1,10 @@
 import fs from 'node:fs';
 const checks={
 'portrait/index.html':['Executive Portrait · from €499','data-executive-investment="portrait"'],
-'hu/portre/index.html':['Executive portré · 499 €-tól','data-executive-investment="portrait"'],
+'hu/portre/index.html':['Executive portré · 199 600 Ft-tól (€499)','data-executive-investment="portrait"'],
 'de-at/portrait/index.html':['Executive Portrait · ab €499','data-executive-investment="portrait"'],
 'lifestyle/index.html':['Executive Personal Branding · from €790','data-executive-investment="brand"'],
-'hu/brand/index.html':['Executive Personal Branding · 790 €-tól','data-executive-investment="brand"'],
+'hu/brand/index.html':['Executive Personal Branding · 316 000 Ft-tól (€790)','data-executive-investment="brand"'],
 'de-at/brand/index.html':['Executive Personal Branding · ab €790','data-executive-investment="brand"']};
 let failed=false;
 for(const [file,tokens] of Object.entries(checks)){const s=fs.readFileSync(file,'utf8');for(const token of tokens){if(!s.includes(token)){console.error('FAIL',file,token);failed=true;}}}

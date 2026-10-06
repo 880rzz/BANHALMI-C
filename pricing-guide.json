@@ -271,5 +271,12 @@
       "priceComponent": "businessEventEntry",
       "scope": "Up to one hour of straightforward Business Event Coverage; additional team, travel and optional services follow the existing calculator and written offer."
     }
+  },
+  "privateEventPricing": {
+    "source": "https://www.norbertbanhalmi.com/private-event-pricing.json",
+    "serviceContext": "private-event",
+    "calculation": "Use the private package for the selected duration. Never mutate C-Level or Business event prices. Standard event crew and optional-service components remain from pricing.json.",
+    "travel": "City travel is included only for a private celebration at an explicitly selected Vienna or Budapest city location with matching country and an exact address. Other Austria/Hungary locations use the standard per-vehicle travel component; other countries require a custom travel quote.",
+    "submission": "Preserve event duration codes for transport compatibility; include serviceContext, canonicalPackageCode, privateEventCity, cityTravelIncluded, travelPricingStatus and the same monetary totals as the PDF."
   }
 }
