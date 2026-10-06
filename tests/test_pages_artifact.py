@@ -41,9 +41,11 @@ class PagesArtifactTests(unittest.TestCase):
     def test_preserves_discovery_and_all_visible_file_bytes(self):
         report = self.pack()
         with tarfile.open(self.archive) as archive:
-            self.assertIn('.well-known/agent.json', archive.getnames())
+            self.assertIn('./.well-known/agent.json', archive.getnames())
             for member in archive:
-                self.assertEqual(archive.extractfile(member).read(), (self.site / member.name).read_bytes())
+                if member.isfile():
+                    self.assertTrue(member.name.startswith('./'))
+                    self.assertEqual(archive.extractfile(member).read(), (self.site / member.name[2:]).read_bytes())
         self.assertTrue(report['byte_identity_verified'])
         self.assertEqual(report['expected_commit'], SHA)
 
@@ -59,7 +61,8 @@ class PagesArtifactTests(unittest.TestCase):
         self.write('docs/.responsive-4k-audit-ready', b'ready')
         self.pack()
         with tarfile.open(self.archive) as archive:
-            self.assertEqual([n for n in archive.getnames() if any(p.startswith('.') for p in Path(n).parts)], ['.well-known/agent.json'])
+            hidden_files = [m.name for m in archive if m.isfile() and any(p.startswith('.') for p in Path(m.name[2:]).parts)]
+            self.assertEqual(hidden_files, ['./.well-known/agent.json'])
 
     def test_unknown_hidden_file_is_rejected(self):
         self.write('.env', b'not-a-real-secret')
@@ -90,8 +93,8 @@ class PagesArtifactTests(unittest.TestCase):
         os.link(self.site / 'index.html', self.site / 'copy.html')
         self.pack()
         with tarfile.open(self.archive) as archive:
-            self.assertTrue(all(member.isfile() for member in archive))
-            self.assertEqual(archive.extractfile('copy.html').read(), (self.site / 'index.html').read_bytes())
+            self.assertTrue(all(member.isfile() or member.isdir() for member in archive))
+            self.assertEqual(archive.extractfile('./copy.html').read(), (self.site / 'index.html').read_bytes())
 
     def test_missing_discovery_file_is_rejected(self):
         (self.site / '.well-known/agent.json').unlink()
@@ -120,7 +123,7 @@ class PagesArtifactTests(unittest.TestCase):
     def test_extra_tar_member_is_rejected(self):
         self.pack()
         with tarfile.open(self.archive, 'a') as archive:
-            info = tarfile.TarInfo('unexpected.txt')
+            info = tarfile.TarInfo('./unexpected.txt')
             info.size = 1
             archive.addfile(info, io.BytesIO(b'x'))
         with self.assertRaisesRegex(ValueError, 'Unexpected tar member'):
@@ -129,11 +132,21 @@ class PagesArtifactTests(unittest.TestCase):
     def test_duplicate_tar_member_is_rejected(self):
         self.pack()
         with tarfile.open(self.archive, 'a') as archive:
-            info = tarfile.TarInfo('index.html')
+            info = tarfile.TarInfo('./index.html')
             info.size = 1
             archive.addfile(info, io.BytesIO(b'x'))
         with self.assertRaisesRegex(ValueError, 'duplicate tar member'):
             PACKAGER.verify_archive(self.archive, PACKAGER.public_manifest(self.site))
+
+    def test_pages_tar_matches_official_root_shape(self):
+        self.pack()
+        with tarfile.open(self.archive) as archive:
+            names = archive.getnames()
+            self.assertEqual(names[0], '.')
+            self.assertIn('./index.html', names)
+            self.assertIn('./.well-known', names)
+            self.assertIn('./.well-known/agent.json', names)
+            self.assertNotIn('index.html', names)
 
     def test_official_v4_exclusion_reproduces_missing_discovery(self):
         subprocess.run(['tar', '--directory', str(self.site), '-cf', str(self.archive), '--exclude=.git', '--exclude=.github', '--exclude=.[^/]*', '.'], check=True)
