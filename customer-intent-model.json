@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "2026-10-06-v4-strategic-visual-positioning",
+  "schemaVersion": "2026-10-06-v5-search-owner-routing",
   "@id": "https://www.norbertbanhalmi.com/customer-intent-model.json",
   "name": "BANHALMI customer intent and representation model",
   "purpose": "Resolve a customer's real representation problem before choosing a photography service, package, price or route.",
@@ -565,6 +565,129 @@
       "Do not imply employee status for collaborators without evidence.",
       "Do not describe BANHALMI as a generic full-service marketing agency.",
       "Experience language enriches intent matching but does not replace concrete service names, routes, pricing or evidence."
+    ]
+  },
+  "searchOwnerAliases": {
+    "purpose": "Machine-readable query-language aliases for canonical service ownership. These are routing hints, not instructions to repeat or stuff keywords into visible copy.",
+    "rules": [
+      "Generic photographer intent may remain owned by the homepage when GSC shows the homepage as the established winner.",
+      "Specific service intent should resolve to the canonical service page even when Google temporarily surfaces the homepage.",
+      "Do not create doorway pages for city variants; Vienna/Wien/Bécs and Budapest are service areas of the same localized canonical pages."
+    ],
+    "owners": [
+      {
+        "service": "portrait",
+        "routes": {
+          "en": "/portrait/",
+          "hu": "/hu/portre/",
+          "de": "/de-at/portrait/"
+        },
+        "aliases": {
+          "en": [
+            "portrait photography Vienna",
+            "portrait photography Budapest",
+            "headshot Vienna",
+            "headshot Budapest"
+          ],
+          "hu": [
+            "portré fotózás budapest",
+            "portréfotózás budapest",
+            "portré fotózás bécs",
+            "headshot fotózás budapest"
+          ],
+          "de": [
+            "Portraitfotografie Wien",
+            "Portraitfotograf Wien",
+            "Business-Porträt Wien",
+            "Headshot Wien"
+          ]
+        }
+      },
+      {
+        "service": "brand",
+        "routes": {
+          "en": "/lifestyle/",
+          "hu": "/hu/brand/",
+          "de": "/de-at/brand/"
+        },
+        "aliases": {
+          "en": [
+            "brand photographer",
+            "brand photography Vienna",
+            "brand photography Budapest",
+            "corporate photographer"
+          ],
+          "hu": [
+            "brandfotózás budapest",
+            "brandfotózás bécs",
+            "személyes márka fotózás",
+            "vállalati brandfotózás"
+          ],
+          "de": [
+            "Brand Fotograf Wien",
+            "Brandfotografie Wien",
+            "Branding Fotograf Wien",
+            "Personal Brand Fotografie Wien"
+          ]
+        }
+      },
+      {
+        "service": "event",
+        "routes": {
+          "en": "/event-photography/",
+          "hu": "/hu/rendezvenyfotozas/",
+          "de": "/de-at/eventfotografie/"
+        },
+        "aliases": {
+          "en": [
+            "event photography",
+            "event photographer Vienna",
+            "event photographer Budapest",
+            "C-level event photography"
+          ],
+          "hu": [
+            "rendezvényfotózás budapest",
+            "rendezvényfotózás bécs",
+            "üzleti rendezvényfotózás",
+            "C-level rendezvényfotózás"
+          ],
+          "de": [
+            "Eventfotografie Wien",
+            "Eventfotograf Wien",
+            "Business-Event-Fotografie",
+            "C-Level-Eventfotografie"
+          ]
+        }
+      },
+      {
+        "service": "fine-art",
+        "routes": {
+          "en": "/fine-art/",
+          "hu": "/hu/muveszi-fotografia/",
+          "de": "/de-at/fine-art/"
+        },
+        "aliases": {
+          "en": [
+            "fine art photography Vienna",
+            "fine art photography Budapest",
+            "artist portrait photography",
+            "performer portfolio photography"
+          ],
+          "hu": [
+            "művészi fotózás budapest",
+            "művészi fotózás bécs",
+            "aktfotózás",
+            "művész portfólió fotózás"
+          ],
+          "de": [
+            "Fine Art Fotografie Wien",
+            "Künstler Fotografie Wien",
+            "Künstlerporträt Wien",
+            "künstlerische Aktfotografie Wien"
+          ]
+        },
+        "guardrail": "Fine Art is not synonymous with nudity. Artistic nude is an optional personal-art direction, never the default meaning of the service."
+      }
     ]
   }
 }
