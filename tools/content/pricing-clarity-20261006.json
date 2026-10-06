@@ -1,0 +1,124 @@
+{
+  "en": {
+    "quote": "requestaquote/index.html",
+    "terms": "terms-conditions/index.html",
+    "fine": "fine-art/index.html",
+    "travelOld": "On-site work in Vienna and Budapest is included. Travel or production costs outside these locations are confirmed before booking.",
+    "travel": "For portrait, branding, Fine Art and corporate-event bookings, the selected package covers the agreed photographic work. Studio sessions in Vienna or Budapest have no travel surcharge. For a client office or another venue, travel and any venue costs are separate items in the estimate and final written offer. Private celebrations include local travel within Vienna or Budapest. Enter the exact venue address and select its area; outside these cities the standard travel rules apply. Venue hire and optional production services are not included.",
+    "travelHelp": "The standard calculator adds €240 gross (€200 net plus 20% VAT) per vehicle for travel within Austria and Hungary; one vehicle carries up to four crew members. Private celebrations include local travel within Vienna or Budapest. Enter the exact venue address and select its area; outside these cities the standard travel rules apply. Venue hire and optional production services are not included.",
+    "artTitle": "Artists, Performers & Fine Art",
+    "artShort": "Professional portfolios or personal artistic work: two different purposes, both from €690 gross.",
+    "artTip": "Choose professional images for casting, agencies, websites or press, or a personal Fine Art project. Artistic nude is optional and requires an agreed concept and boundaries; it is not part of a standard professional portfolio.",
+    "eventTitle": "Event photography",
+    "eventShort": "Business coverage from €490; C-Level or institutional coverage from €590 gross. Different scope, not a discount.",
+    "eventTip": "Business covers shorter, straightforward corporate events. C-Level and institutional coverage is planned around leadership, protocol and communication needs. Guest count and parallel programme tracks determine the preliminary team size.",
+    "artGuideTitle": "What will the images be used for?",
+    "artGuide": "Choose a professional portfolio for casting, agencies, websites or press, or a personal artistic project. These are different purposes. For intimate work, we agree on the concept, boundaries and use before the session.",
+    "artDuration": [
+      "1 hour — one focused visual direction — €690",
+      "2 hours — more looks or movement — €990",
+      "3 hours — a broader image series — €1,290"
+    ],
+    "artMicro": "Choose the time needed for your concept, outfits and movement, whether professional or personal. Each package includes 2 retouched images in total; each additional selected image is €45 gross.",
+    "inclusions": {
+      "individual": "Headshot CV: 10 minutes and exactly 1 retouched image, €120 gross. The other portrait options include 1 retouched image; additional selected images cost €35 gross each. These are not the Executive Portrait package.",
+      "group": "Group portrait pricing: €390 setup + €45 per person, including 1 retouched image per person. Additional selected images: €29 each. If the planned time requires more photographers, the calculator adds €390 per additional photographer.",
+      "brand": "Executive Portrait starts at €499; Personal Branding at €790 gross. Both include 3 retouched images in total per project, not per person. Further selected images cost €35 gross each. A Visual Library is individually scoped.",
+      "event": "The selected event package includes image selection and standard colour correction. Event image counts do not trigger portrait-style per-image retouch fees. Extra photographers, travel and optional services appear separately in the estimate."
+    },
+    "fineLead": "Professional artist and performer portfolios serve casting, agencies, websites and press. Personal Fine Art portraits or artistic nude projects serve a different purpose: your own story and visual idea. We agree on the concept, boundaries and use before photographing. Both journeys can be commissioned here; the oeuvre and exhibition archive are on BANHALMI ART.",
+    "archiveOld": "The artistic archive, works, exhibitions and source material.",
+    "archiveNew": "A gateway to BANHALMI ART: works, exhibitions and source material. Bookings and current prices stay here.",
+    "travelHelpOld": "If you select a client office or another location, the exact address is required. Travel within Austria and Hungary is €200 net per vehicle; one vehicle carries a crew of up to four.",
+    "fineLeadOld": "Fine art photography begins with a person and a story worth holding on to. Portraits and artistic nudes are created through trust, clear boundaries and sensitive direction.",
+    "eyebrowOld": "Fine Art · Intimate portrait · Artistic nude",
+    "eyebrow": "Artists & Performers · Personal Fine Art",
+    "serviceTravelPages": [
+      "portrait/index.html",
+      "lifestyle/index.html",
+      "event-photography/index.html"
+    ],
+    "serviceTravelOld": "Work on location in Vienna and Budapest is included; anywhere else is agreed beforehand.",
+    "serviceTravel": "Studio sessions in Vienna and Budapest have no travel surcharge. For a client office or another location, any travel and venue costs are stated separately in the estimate. The accepted written offer remains authoritative."
+  },
+  "hu": {
+    "quote": "hu/ajanlatkeres/index.html",
+    "terms": "hu/aszf/index.html",
+    "fine": "hu/muveszi-fotografia/index.html",
+    "travelOld": "A bécsi és budapesti helyszíni munkavégzés benne van a díjban. Más helyszín utazási vagy gyártási költségét foglalás előtt rögzítjük.",
+    "travel": "A választott csomag az egyeztetett fotográfiai munkát tartalmazza. A bécsi vagy budapesti stúdióban nincs kiszállási felár. Ügyfélirodánál vagy más helyszínnél a kiszállás és az esetleges helyszínköltség külön tétel a becslésben és a végleges írásos ajánlatban. Családi eseménynél a bécsi vagy budapesti városhatáron belüli kiszállás benne van az árban. Adja meg a helyszín pontos címét, és válassza ki a területét; máshol az általános utazási szabályok érvényesek. A helyszínbérlés és a választott kiegészítők külön tételek.",
+    "travelHelp": " Családi eseménynél a bécsi vagy budapesti városhatáron belüli kiszállás benne van az árban. Adja meg a helyszín pontos címét, és válassza ki a területét; máshol az általános utazási szabályok érvényesek. A helyszínbérlés és a választott kiegészítők külön tételek.",
+    "artTitle": "Művészek, előadók & Fine Art",
+    "artShort": "Szakmai portfólió vagy személyes művészi sorozat: két eltérő cél, mindkettő bruttó 276 000 Ft-tól.",
+    "artTip": "Válasszon szakmai képeket castinghoz, ügynökséghez, weboldalra vagy sajtóhoz, vagy személyes Fine Art projektet. A művészi akt külön, egyeztetett koncepcióval és határokkal választható; nem része egy szokásos szakmai portfóliónak.",
+    "eventTitle": "Rendezvényfotózás",
+    "eventShort": "Business Event bruttó 196 000 Ft-tól (€490); C-Level / intézményi fotózás bruttó 236 000 Ft-tól (€590). Eltérő feladat, nem kedvezmény.",
+    "eventTip": "A Business rövidebb, egyszerűbb céges eseményekhez való. A C-Level és intézményi fotózást vezetői, protokolláris és kommunikációs igények szerint tervezzük. A résztvevők és párhuzamos programok száma határozza meg a becsült minimális csapatot.",
+    "artGuideTitle": "Mire fogja használni a képeket?",
+    "artGuide": "Válasszon szakmai portfóliót castinghoz, ügynökséghez, weboldalra vagy sajtóhoz, vagy személyes művészi projektet. Ezek eltérő célok. Intim sorozatnál a koncepciót, a határokat és a felhasználást előre egyeztetjük.",
+    "artDuration": [
+      "1 óra — egy határozott képi irány — 276 000 Ft",
+      "2 óra — több megjelenés vagy mozgás — 396 000 Ft",
+      "3 óra — összetettebb képsorozat — 516 000 Ft"
+    ],
+    "artMicro": "A koncepcióhoz, öltözékekhez és mozgáshoz szükséges időt válassza, szakmai vagy személyes céllal. Minden csomag összesen 2 retusált képet tartalmaz; minden további kiválasztott kép bruttó 18 000 Ft.",
+    "inclusions": {
+      "individual": "Headshot CV: 10 perc és pontosan 1 retusált kép, bruttó 48 000 Ft. A többi portréopció 1 retusált képet tartalmaz; a további kiválasztott képek bruttó 14 000 Ft/db. Ezek nem az Executive Portré csomagjai.",
+      "group": "Csapatportré: 156 000 Ft alapdíj + 18 000 Ft/fő, fejenként 1 retusált képpel. További kiválasztott kép: 11 600 Ft/db. Ha a tervezett idő miatt több fotós szükséges, a kalkulátor további fotósonként 156 000 Ft-ot ad hozzá. Bruttó árak.",
+      "brand": "Executive Portré 199 600 Ft-tól; Personal Branding 316 000 Ft-tól, bruttó. Mindkettő projektenként összesen 3 retusált képet tartalmaz, nem fejenként. További kiválasztott kép: bruttó 14 000 Ft/db. A Visual Library egyedi tervezést igényel.",
+      "event": "Az eseménycsomag tartalmazza a válogatást és az alap színkorrekciót. Az eseményképek száma nem jelent portréképenkénti retusdíjat. A további fotósok, a kiszállás és a kiegészítők külön jelennek meg a becslésben."
+    },
+    "fineLead": "A művészek és előadók szakmai portfóliója castinghoz, ügynökséghez, weboldalra vagy sajtóhoz készül. A személyes Fine Art portré vagy művészi akt más célt szolgál: az Ön saját történetét és képi elképzelését. A koncepciót, a határokat és a felhasználást fotózás előtt egyeztetjük. Mindkettő itt rendelhető meg; az életmű és a kiállítási archívum a BANHALMI ART oldalon található.",
+    "archiveOld": "Művek, sorozatok, kiállítások és az alkotói archívum.",
+    "archiveNew": "Átjáró a BANHALMI ART oldalra: művek, kiállítások és források. Megrendelés és aktuális árak itt.",
+    "travelHelpOld": "Ha irodát vagy egyedi helyszínt választ, a pontos cím megadása kötelező. A kiszállás Ausztria és Magyarország területén nettó 80 000 Ft + ÁFA, bruttó 96 000 Ft / gépjármű; egy jármű legfeljebb 4 fős stábot szállít.",
+    "fineLeadOld": "A művészi fotózás középpontjában az ember és az a történet áll, amelyet képekben szeretne megőrizni vagy megmutatni. Ez lehet művészi portré, személyes történet, editorial vagy glamour, tánc és mozgás, előadóművészeti vagy modellanyag, privát sorozat, testtanulmány vagy akt — a műfajt nem előre választjuk ki, hanem az Ön céljához, karakteréhez és komfortjához alakítjuk.",
+    "serviceTravelPages": [
+      "hu/portre/index.html",
+      "hu/brand/index.html",
+      "hu/rendezvenyfotozas/index.html"
+    ],
+    "serviceTravelOld": "A bécsi és budapesti helyszíni munka benne van; más helyszínt előre egyeztetünk.",
+    "serviceTravel": "A bécsi és budapesti stúdióban nincs kiszállási felár. Ügyfélirodánál vagy más helyszínnél az esetleges utazási és helyszínköltséget külön feltünteti a kalkuláció. Az elfogadott írásos ajánlat az irányadó."
+  },
+  "de": {
+    "quote": "de-at/anfrage/index.html",
+    "terms": "de-at/agb/index.html",
+    "fine": "de-at/fine-art/index.html",
+    "travelOld": "Einsätze vor Ort in Wien und Budapest sind enthalten. Reise- oder Produktionskosten für andere Orte werden vor der Buchung bestätigt.",
+    "travel": "Bei Porträt-, Branding-, Fine-Art- und Corporate-Event-Aufträgen umfasst das gewählte Paket die vereinbarte fotografische Arbeit. Für Studiotermine in Wien oder Budapest fällt keine Anfahrtspauschale an. Beim Kundenbüro oder einer anderen Location werden Anfahrt und etwaige Locationkosten separat in der Schätzung und im endgültigen schriftlichen Angebot ausgewiesen. Bei privaten Feiern ist die Anfahrt innerhalb der Stadtgrenzen von Wien oder Budapest enthalten. Geben Sie die genaue Adresse an und wählen Sie das Gebiet; außerhalb gelten die regulären Anreiseregeln. Locationmiete und optionale Produktionsleistungen sind nicht enthalten.",
+    "travelHelp": "Der Standardkalkulator ergänzt für Anfahrten innerhalb Österreichs und Ungarns €240 brutto (€200 netto plus 20% USt.) pro Fahrzeug; ein Fahrzeug befördert bis zu vier Teammitglieder. Bei privaten Feiern ist die Anfahrt innerhalb der Stadtgrenzen von Wien oder Budapest enthalten. Geben Sie die genaue Adresse an und wählen Sie das Gebiet; außerhalb gelten die regulären Anreiseregeln. Locationmiete und optionale Produktionsleistungen sind nicht enthalten.",
+    "artTitle": "Kunstschaffende & Fine Art",
+    "artShort": "Berufliches Portfolio oder persönliche künstlerische Arbeit: zwei verschiedene Ziele, beide ab 690 € brutto.",
+    "artTip": "Wählen Sie berufliche Bilder für Casting, Agenturen, Websites oder Presse oder ein persönliches Fine-Art-Projekt. Künstlerischer Akt ist optional und setzt ein vereinbartes Konzept und klare Grenzen voraus; er gehört nicht zum regulären beruflichen Portfolio.",
+    "eventTitle": "Eventfotografie",
+    "eventShort": "Business ab 490 €; C-Level oder institutionelle Fotografie ab 590 € brutto. Anderer Umfang, kein Rabatt.",
+    "eventTip": "Business eignet sich für kürzere, unkomplizierte Firmenveranstaltungen. C-Level- und institutionelle Fotografie wird nach Leitungs-, Protokoll- und Kommunikationsanforderungen geplant. Gästezahl und parallele Programmpunkte bestimmen die vorläufige Mindestteamgröße.",
+    "artGuideTitle": "Wofür werden Sie die Bilder verwenden?",
+    "artGuide": "Wählen Sie ein berufliches Portfolio für Casting, Agenturen, Websites oder Presse oder ein persönliches Kunstprojekt. Dies sind unterschiedliche Ziele. Bei intimen Serien vereinbaren wir Konzept, Grenzen und Verwendung vor dem Shooting.",
+    "artDuration": [
+      "1 Stunde — eine klare Bildrichtung — 690 €",
+      "2 Stunden — mehrere Looks oder Bewegung — 990 €",
+      "3 Stunden — eine umfangreichere Bildserie — 1.290 €"
+    ],
+    "artMicro": "Wählen Sie die Zeit passend zu Konzept, Outfits und Bewegung, für berufliche oder persönliche Bilder. Jedes Paket enthält insgesamt 2 retuschierte Bilder; jedes weitere ausgewählte Bild kostet 45 € brutto.",
+    "inclusions": {
+      "individual": "Headshot CV: 10 Minuten und genau 1 retuschiertes Bild, 120 € brutto. Die anderen Porträtoptionen enthalten 1 retuschiertes Bild; weitere ausgewählte Bilder kosten je 35 € brutto. Dies sind nicht die Executive-Porträtpakete.",
+      "group": "Teamporträts: 390 € Einrichtung + 45 € pro Person, mit 1 retuschierten Bild pro Person. Weitere ausgewählte Bilder: je 29 €. Wenn der Zeitplan mehr Fotograf:innen erfordert, addiert der Kalkulator je 390 € pro zusätzlicher Person im Fototeam. Bruttopreise.",
+      "brand": "Executive-Porträt ab 499 €; Personal Branding ab 790 € brutto. Beide enthalten insgesamt 3 retuschierte Bilder pro Projekt, nicht pro Person. Weitere ausgewählte Bilder kosten je 35 € brutto. Eine Visual Library wird individuell geplant.",
+      "event": "Das gewählte Eventpaket enthält Bildauswahl und grundlegende Farbkorrektur. Die Anzahl der Eventbilder löst keine Retuschegebühr pro Porträt aus. Zusätzliche Fotograf:innen, Anfahrt und Extras werden in der Schätzung separat ausgewiesen."
+    },
+    "fineLead": "Berufliche Portfolios für Kunstschaffende und Performer:innen dienen Casting, Agenturen, Websites und Presse. Persönliche Fine-Art-Porträts oder künstlerische Aktprojekte haben ein anderes Ziel: Ihre eigene Geschichte und Bildidee. Konzept, Grenzen und Verwendung vereinbaren wir vor dem Shooting. Beide Wege können hier beauftragt werden; Werk und Ausstellungsarchiv finden Sie auf BANHALMI ART.",
+    "archiveOld": "Werke, Serien, Ausstellungen und das künstlerische Archiv.",
+    "archiveNew": "Zugang zu BANHALMI ART: Werke, Ausstellungen und Quellen. Buchung und aktuelle Preise bleiben hier.",
+    "travelHelpOld": "Bei Kundenbüro oder einem anderen Ort ist die genaue Adresse erforderlich. Die Anfahrt innerhalb Österreichs und Ungarns kostet €200 netto pro Fahrzeug; ein Fahrzeug befördert ein Team von bis zu vier Personen.",
+    "fineLeadOld": "Im Mittelpunkt stehen ein Mensch und eine Geschichte, die es wert ist, bewahrt oder sichtbar gemacht zu werden. Das kann ein Fine-Art-Porträt, eine persönliche Geschichte, Editorial oder Glamour, Tanz und Bewegung, eine Performer- oder Modelserie, eine private Serie, eine Körperstudie oder künstlerischer Akt sein — die Form wird nicht vorgegeben, sondern aus Ziel, Persönlichkeit und Komfort entwickelt.",
+    "serviceTravelPages": [
+      "de-at/portrait/index.html",
+      "de-at/brand/index.html",
+      "de-at/eventfotografie/index.html"
+    ],
+    "serviceTravelOld": "Einsätze in Wien und Budapest sind enthalten; alles Weitere vereinbaren wir vorher.",
+    "serviceTravel": "Für Studiotermine in Wien und Budapest fällt keine Anfahrtspauschale an. Bei einem Kundenbüro oder einer anderen Location werden anfallende Anfahrts- und Locationkosten in der Kalkulation separat ausgewiesen. Maßgeblich bleibt das angenommene schriftliche Angebot."
+  }
+}

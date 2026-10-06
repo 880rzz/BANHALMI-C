@@ -1,0 +1,33 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+const read=p=>fs.readFileSync(p,'utf8');
+const data=JSON.parse(read('private-event-pricing.json'));
+const runtime=read('assets/js/private-event-quote.js');
+const match=runtime.match(/window\.BANHALMI_PRIVATE_EVENT_PRICING=(\{[^\n]+\});/);
+assert.ok(match,'Private price projection is present');
+const embedded=JSON.parse(match[1]);
+assert.deepEqual(embedded,{source:'private-event-pricing.json',packages:data.packages,included:data.included,name:data.name},'Private projection must derive from the canonical private price document');
+assert.deepEqual(data.packages.map(p=>[p.durationHours,p.grossEUR,p.grossHUF]),[[1,390,156000],[2,590,236000],[3,790,316000],[4,990,396000]]);
+assert.equal(data.included.viennaCityOnLocationCoverage,true);
+assert.equal(data.included.budapestCityOnLocationCoverage,true);
+assert.ok(!/pricesGross\s*\[.*?\]\s*=|applyPrices|rememberCorporate|\[100,500,1500,3000\]/.test(runtime),'No mutable corporate/private fee swaps or timing retries');
+assert.ok(runtime.includes("card.setAttribute('for',input.id)"),'The cloned label must activate its own private radio');
+assert.ok(runtime.includes('data-private-mode-rendered'),'Duration choice is not rebuilt on every field event');
+for(const marker of ['data-private-event-guide','data-corporate-event-guide'])assert.ok(runtime.includes(marker),'Active intent must select the matching explanation: '+marker);
+const calc=read('assets/js/quote-calculator.js');
+for(const term of ['privateEventPackage','cityTravelIncluded','private_event_city','badCity','canonicalPackageCode','private-event-pricing.json']) assert.ok(calc.includes(term),term);
+for(const route of ['requestaquote/index.html','hu/ajanlatkeres/index.html','de-at/anfrage/index.html']){
+ const text=read(route);
+ assert.equal((text.match(/id="private_event_city"/g)||[]).length,1,route+' has exactly one city input');
+ assert.ok(text.includes('value="outside"'),route+' preserves the chargeable outside-city option');
+ assert.ok(text.includes('data-pricing-choice-guide="20261006-closure"'),route+' retains the price comparison');
+ assert.ok(text.includes('aria-describedby="quote-deliverables-note"'),route+' explains total requested images');
+ for(const asset of ['quote-calculator','private-event-quote','quote-pdf'])assert.ok(text.includes('/assets/js/'+asset+'.js?v=20261006-private-city-v2'),route+' '+asset+' cache key');
+}
+const main=read('assets/js/main.js'),pdf=read('assets/js/quote-pdf.js');
+for(const field of ['serviceContext:','canonicalPackageCode:','privateEventCity:','cityTravelIncluded:','travelGrossAmount:'])assert.ok(main.includes(field),'Submission must carry '+field);
+assert.ok(pdf.includes("estimate.serviceLabel"),'PDF identifies private rather than C-Level work');
+assert.ok(pdf.includes("selectedLabel(form,'private_event_city')"),'PDF identifies the selected city area');
+assert.ok(pdf.includes('estimate.parts'),'PDF uses the canonical calculation summary');
+assert.equal(JSON.parse(read('pricing-guide.json')).privateEventPricing.serviceContext,'private-event');
+console.log('Private event contract PASS: unchanged fees, separate immutable price source, explicit city eligibility, multilingual inputs, submission and PDF semantics.');

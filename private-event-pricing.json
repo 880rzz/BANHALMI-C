@@ -1,7 +1,7 @@
 {
   "documentType": "BANHALMI private celebrations and family milestones orientation pricing",
-  "schemaVersion": "2026-08-26-v1",
-  "dateModified": "2026-08-26T23:15:00+02:00",
+  "schemaVersion": "2026-10-06-v2-city-travel-contract",
+  "dateModified": "2026-10-06",
   "serviceId": "private-event",
   "name": {
     "en": "Private celebrations & family milestones",
@@ -9,11 +9,32 @@
     "de-AT": "Private Feiern & Familienjubiläen"
   },
   "intent": {
-    "en": ["milestone birthday", "birthday photography", "family gathering", "anniversary", "private celebration", "small family event"],
-    "hu": ["kerek születésnap", "születésnapi fotózás", "családi esemény", "családi összejövetel", "évforduló", "privát ünnepség"],
-    "de-AT": ["runder Geburtstag", "Geburtstagsfotografie", "Familienfeier", "Familientreffen", "Jubiläum", "private Feier"]
+    "en": [
+      "milestone birthday",
+      "birthday photography",
+      "family gathering",
+      "anniversary",
+      "private celebration",
+      "small family event"
+    ],
+    "hu": [
+      "kerek születésnap",
+      "születésnapi fotózás",
+      "családi esemény",
+      "családi összejövetel",
+      "évforduló",
+      "privát ünnepség"
+    ],
+    "de-AT": [
+      "runder Geburtstag",
+      "Geburtstagsfotografie",
+      "Familienfeier",
+      "Familientreffen",
+      "Jubiläum",
+      "private Feier"
+    ]
   },
-  "market": "Vienna / Austria",
+  "market": "Vienna / Austria and Budapest / Hungary",
   "currency": "EUR",
   "priceBasis": "gross consumer-facing orientation prices",
   "vat": {
@@ -65,5 +86,16 @@
   "fixedHufPlanningRate": 400,
   "bindingStatus": "Non-binding preliminary orientation pricing. The final written offer follows confirmation of date, venue, coverage duration, requested image delivery, travel outside Vienna/Budapest and any exceptional usage requirements.",
   "quoteCalculator": "https://www.norbertbanhalmi.com/requestaquote/?service=private-event",
-  "canonicalPricingSource": "https://www.norbertbanhalmi.com/pricing.json"
+  "canonicalPricingSource": "https://www.norbertbanhalmi.com/private-event-pricing.json",
+  "sharedProductionPricingSource": "https://www.norbertbanhalmi.com/pricing.json",
+  "travelPolicy": {
+    "includedCities": [
+      "vienna",
+      "budapest"
+    ],
+    "eligibility": "Private celebrations only, within the explicitly selected city limits, with matching country and exact venue address. Studio identity must not be used for an external venue.",
+    "outsideCities": "Standard Austria/Hungary per-vehicle travel component from pricing.json; other countries require an individual travel quote.",
+    "additionalProduction": "The inclusion of local travel does not remove additional photographer or optional production charges.",
+    "finalAuthority": "The accepted written offer confirms the address, scope and any exceptional logistics."
+  }
 }
