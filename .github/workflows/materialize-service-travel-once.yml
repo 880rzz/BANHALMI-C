@@ -1,0 +1,108 @@
+name: Complete service-page travel clarity on remediation branch
+on:
+  push:
+    branches: [fix/pricing-content-parity-20261006]
+    paths: [.github/workflows/materialize-service-travel-once.yml]
+permissions:
+  contents: read
+concurrency:
+  group: service-travel-clarity-materialization-20261006
+  cancel-in-progress: false
+jobs:
+  materialize:
+    if: github.repository == '880rzz/BANHALMI-C' && github.ref == 'refs/heads/fix/pricing-content-parity-20261006'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Apply the already locally verified nine-page copy correction
+        shell: bash
+        env:
+          SERVICE_TRAVEL_COPY: >-
+            {"en":{"serviceTravelPages":["portrait/index.html","lifestyle/index.html","event-photography/index.html"],"serviceTravelOld":"Work on location in Vienna and Budapest is included; anywhere else is agreed beforehand.","serviceTravel":"Studio sessions in Vienna and Budapest have no travel surcharge. For a client office or another location, any travel and venue costs are stated separately in the estimate. The accepted written offer remains authoritative."},"hu":{"serviceTravelPages":["hu/portre/index.html","hu/brand/index.html","hu/rendezvenyfotozas/index.html"],"serviceTravelOld":"A bécsi és budapesti helyszíni munka benne van; más helyszínt előre egyeztetünk.","serviceTravel":"A bécsi és budapesti stúdióban nincs kiszállási felár. Ügyfélirodánál vagy más helyszínnél az esetleges utazási és helyszínköltséget külön feltünteti a kalkuláció. Az elfogadott írásos ajánlat az irányadó."},"de":{"serviceTravelPages":["de-at/portrait/index.html","de-at/brand/index.html","de-at/eventfotografie/index.html"],"serviceTravelOld":"Einsätze in Wien und Budapest sind enthalten; alles Weitere vereinbaren wir vorher.","serviceTravel":"Für Studiotermine in Wien und Budapest fällt keine Anfahrtspauschale an. Bei einem Kundenbüro oder einer anderen Location werden anfallende Anfahrts- und Locationkosten in der Kalkulation separat ausgewiesen. Maßgeblich bleibt das angenommene schriftliche Angebot."}}
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = refs/heads/fix/pricing-content-parity-20261006
+          git merge-base --is-ancestor 53c6f8a03dd2a283d1725c0a08b1ddf60ef1317a HEAD
+          mkdir -p /tmp/service-travel-evidence
+          python3 - <<'PY'
+          from pathlib import Path
+          import json,subprocess,os
+          root=Path.cwd()
+          assert (root/'CNAME').read_text().strip()=='www.norbertbanhalmi.com'
+          p=root/'tools/content/pricing-clarity-20261006.json'
+          data=json.loads(p.read_text());updates=json.loads(os.environ['SERVICE_TRAVEL_COPY'])
+          paths=[]
+          for lang,update in updates.items():
+              for service in update['serviceTravelPages']:
+                  assert (root/service).read_text().count(update['serviceTravelOld'])==1,service
+                  paths.append(service)
+              data[lang].update(update)
+          script=root/'tools/reconcile-pricing-clarity-20261006.py';s=script.read_text()
+          anchor="        literal_pairs.append((d['archiveOld'],d['archiveNew']))\n"
+          assert s.count(anchor)==1
+          addition="        # The same travel boundary must hold on every public service page.\n        for service_path in d['serviceTravelPages']:\n            service_text = (root/service_path).read_text()\n            save(service_path, replace_one(service_text, d['serviceTravelOld'], d['serviceTravel'], service_path+': service travel'))\n        literal_pairs.append((d['serviceTravelOld'], d['serviceTravel']))\n"
+          s=s.replace(anchor,anchor+addition,1)
+          p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n');script.write_text(s)
+          subprocess.run(['python3',str(script),'--apply'],check=True)
+          subprocess.run(['python3',str(script),'--check'],check=True)
+          expected=set(paths+['tools/content/pricing-clarity-20261006.json','tools/reconcile-pricing-clarity-20261006.py'])
+          changed=set(subprocess.check_output(['git','diff','--name-only'],text=True).splitlines())
+          assert changed==expected,(changed,expected)
+          subprocess.run(['git','add','--',*sorted(expected)],check=True)
+          Path('/tmp/service-travel-evidence/changed-files.json').write_text(json.dumps(sorted(expected),indent=2))
+          PY
+          git diff --check
+          git rm -- .github/workflows/materialize-service-travel-once.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Clarify studio versus on-location travel on nine HU EN DE service pages'
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Run complete non-mutating source regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm test 2>&1 | tee /tmp/service-travel-evidence/source-tests.log
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run all existing and new browser interactions
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/perf-static-server.mjs . 4173 > /tmp/service-travel-evidence/server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for i in $(seq 1 60); do
+            if curl -fsS --max-time 2 http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 0.5
+          done
+          npm run test:e2e 2>&1 | tee /tmp/service-travel-evidence/e2e.log
+      - name: Publish only the tested remediation branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = refs/heads/fix/pricing-content-parity-20261006
+          git diff --exit-code
+          git push origin HEAD:refs/heads/fix/pricing-content-parity-20261006
+      - name: Preserve exact evidence
+        if: always()
+        run: |
+          git rev-parse HEAD > /tmp/service-travel-evidence/source-sha.txt
+          git show --stat HEAD > /tmp/service-travel-evidence/change-summary.txt
+          git diff > /tmp/service-travel-evidence/uncommitted.diff
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: service-travel-clarity-${{ github.sha }}
+          path: /tmp/service-travel-evidence
+          retention-days: 3
