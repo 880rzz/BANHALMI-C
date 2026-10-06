@@ -33,13 +33,22 @@ jobs:
           set -euo pipefail
           test "$GITHUB_REF" = refs/heads/fix/pricing-content-parity-20261006
           git merge-base --is-ancestor 9f55a682a0f9f2dbbbe7fc2cb9b542ca40d4f21b HEAD
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('tools/content/pricing-clarity-20261006.json')
+          d=json.loads(p.read_text())
+          d['hu']['eventShort']='Business Event bruttó 196 000 Ft-tól (€490); C-Level / intézményi fotózás bruttó 236 000 Ft-tól (€590). Eltérő feladat, nem kedvezmény.'
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+          PY
           python3 tools/reconcile-pricing-clarity-20261006.py --apply | tee /tmp/clarity-changes.json
           python3 tools/reconcile-pricing-clarity-20261006.py --check
           git diff --check
           python3 - <<'PY'
           import json, subprocess
           paths=json.load(open('/tmp/clarity-changes.json'))['modified']
-          fixed={'requestaquote/index.html','hu/ajanlatkeres/index.html','de-at/anfrage/index.html','terms-conditions/index.html','hu/aszf/index.html','de-at/agb/index.html','fine-art/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html','assets/js/mega-menu.js','assets/js/mega-menu-v65-base.js','pricing-guide.json','project-policy.json','package.json'}
+          paths.append('tools/content/pricing-clarity-20261006.json')
+          fixed={'requestaquote/index.html','hu/ajanlatkeres/index.html','de-at/anfrage/index.html','terms-conditions/index.html','hu/aszf/index.html','de-at/agb/index.html','fine-art/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html','assets/js/mega-menu.js','assets/js/mega-menu-v65-base.js','pricing-guide.json','project-policy.json','package.json','tools/content/pricing-clarity-20261006.json'}
           for path in paths:
               assert path in fixed or path.startswith(('tools/generate','tools/apply','tools/restore','tools/simplify','tools/harden','tools/remediate','tools/optimize','scripts/generate','scripts/apply','scripts/restore','scripts/simplify','scripts/harden','scripts/remediate','scripts/optimize')), path
           actual=subprocess.check_output(['git','diff','--name-only'],text=True).splitlines()
