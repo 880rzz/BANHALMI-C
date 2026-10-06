@@ -94,45 +94,22 @@
 
   var footerAccordions = Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion"));
   if (footerAccordions.length) {
-    var footerDesktopQuery = window.matchMedia("(min-width: 1180px)");
-    var syncFooterAccordions = function () {
-      footerAccordions.forEach(function (details) {
-        var list = details.querySelector("ul");
-        if (list) {
-          list.hidden = false;
-          list.style.removeProperty("display");
-        }
-        if (footerDesktopQuery.matches) details.open = true;
-        else details.open = false;
-      });
-    };
     footerAccordions.forEach(function (details) {
       var summary = details.querySelector("summary");
+      var list = details.querySelector("ul");
       if (!summary) return;
-      details.setAttribute("data-footer-disclosure-runtime", "v43");
-      summary.setAttribute("aria-expanded", details.open ? "true" : "false");
-      summary.addEventListener("click", function (event) {
-        if (footerDesktopQuery.matches) {
-          event.preventDefault();
-          details.open = true;
-          summary.setAttribute("aria-expanded", "true");
-          return;
-        }
-        var nextOpen = !details.open;
-        event.preventDefault();
-        window.requestAnimationFrame(function () {
-          details.open = nextOpen;
-          summary.setAttribute("aria-expanded", nextOpen ? "true" : "false");
-          details.setAttribute("data-footer-disclosure-last-action", nextOpen ? "open" : "close");
-        });
+      if (list) {
+        list.hidden = false;
+        list.style.removeProperty("display");
+      }
+      details.open = false;
+      details.setAttribute("data-footer-disclosure-runtime", "v52-user-owned");
+      summary.setAttribute("aria-expanded", "false");
+      details.addEventListener("toggle", function () {
+        summary.setAttribute("aria-expanded", details.open ? "true" : "false");
+        details.setAttribute("data-footer-disclosure-last-action", details.open ? "open" : "close");
       });
     });
-    syncFooterAccordions();
-    if (typeof footerDesktopQuery.addEventListener === "function") {
-      footerDesktopQuery.addEventListener("change", syncFooterAccordions);
-    } else if (typeof footerDesktopQuery.addListener === "function") {
-      footerDesktopQuery.addListener(syncFooterAccordions);
-    }
   }
 
   // Scroll reveal (respects reduced motion)
