@@ -1776,7 +1776,8 @@ html body .site-footer .footer-accordion>summary{
 html body .site-footer .footer-accordion>summary::-webkit-details-marker{display:none!important;}
 html body .site-footer ul{list-style:none!important;margin:0!important;padding:0!important;}
 html body .site-footer li{min-inline-size:0!important;margin:0!important;}
-html body .site-footer .footer-accordion ul{display:grid!important;row-gap:6px!important;}
+html body .site-footer .footer-accordion:not([open])>ul{display:none!important;}
+html body .site-footer .footer-accordion[open]>ul{display:grid!important;row-gap:6px!important;}
 html body .site-footer a{
   min-inline-size:0!important;
   color:#9fa7b3!important;
