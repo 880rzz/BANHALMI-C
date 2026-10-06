@@ -68,7 +68,7 @@ if (exists('assets/js/site-config.js')) {
     ['customer delivery verification', 'body.customerEmailSent === true'],
     ['submission key', 'submission_key'],
     ['fluid rhythm shared loader', 'data-fluid-4k-rhythm'],
-    ['fluid rhythm cache-busted stylesheet', '/assets/css/fluid-4k-rhythm.css?v=20260914-rhythm']
+    ['fluid rhythm cache-busted stylesheet', '/assets/css/fluid-4k-rhythm.css?v=20261006-disclosure-v52']
   ];
   for (const [name, token] of runtimeContracts) if (!runtime.includes(token)) fail.push(`quote/runtime: ${name} contract missing`);
 }
