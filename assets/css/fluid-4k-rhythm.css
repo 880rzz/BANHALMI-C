@@ -1777,6 +1777,9 @@ html body .site-footer .footer-accordion>summary::-webkit-details-marker{display
 html body .site-footer ul{list-style:none!important;margin:0!important;padding:0!important;}
 html body .site-footer li{min-inline-size:0!important;margin:0!important;}
 html body .site-footer .footer-accordion ul{display:grid!important;row-gap:6px!important;}
+html body .site-footer details.footer-accordion:not([open])>ul{display:none!important;block-size:0!important;min-block-size:0!important;max-block-size:0!important;margin:0!important;padding:0!important;overflow:hidden!important;visibility:hidden!important;}
+html body .site-footer details.footer-accordion[open]>ul{display:grid!important;block-size:auto!important;min-block-size:0!important;max-block-size:none!important;overflow:visible!important;visibility:visible!important;}
+
 html body .site-footer a{
   min-inline-size:0!important;
   color:#9fa7b3!important;
