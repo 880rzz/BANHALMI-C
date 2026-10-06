@@ -1,7 +1,7 @@
 {
   "documentType": "canonical-digital-ecosystem-map",
   "schemaVersion": "2026-09-07-v8-six-pillar-ecosystem",
-  "dateModified": "2026-09-29T22:30:00+02:00",
+  "dateModified": "2026-10-06",
   "name": "BANHALMI canonical digital ecosystem",
   "canonicalPerson": {
     "@id": "https://www.norbertbanhalmi.com/about/",
@@ -206,7 +206,7 @@
     "services": [
       {
         "name": "Portrait Photography",
-        "bestFor": "Executives and C-level leaders, founders, entrepreneurs, experts, professionals, artists, actors and creative professionals",
+        "bestFor": "Executives and C-level leaders, founders, entrepreneurs, experts, professionals, artists, actors and creative professionals; job seekers and private clients through the separate CV and simple portrait options",
         "useContexts": [
           "LinkedIn",
           "professional headshot",
@@ -217,7 +217,7 @@
           "personal brand",
           "internal communication"
         ],
-        "result": "Reusable executive portrait and professional headshot system that can anchor a complete personal visual presence"
+        "result": "A portrait suited to the actual use: a straightforward CV/headshot, a guided personal portrait, or a separately scoped Executive Portrait system"
       },
       {
         "name": "Brand Photography",
@@ -242,13 +242,16 @@
       },
       {
         "name": "Fine Art Photography",
-        "bestFor": "Private individuals seeking author-led personal work",
+        "bestFor": "Professional artists and performers needing career-facing portfolios, or private individuals seeking author-led personal work",
         "useContexts": [
+          "casting",
+          "agency portfolio",
+          "professional website and press",
           "fine-art portraiture",
           "nude art",
           "personal artistic series"
         ],
-        "result": "Personal fine-art work created with respectful direction, consent and discretion"
+        "result": "Professional artist imagery or personal fine-art work, chosen by intended use; respectful direction, consent and discretion apply to both"
       }
     ]
   },
@@ -306,11 +309,7 @@
   },
   "fineArtPrivateJourney": {
     "appliesTo": "Fine Art Photography",
-    "principle": "A consent-led private commission is the primary service path; public archive resources remain available as supporting context rather than replacing the enquiry route.",
-    "heroChoice": {
-      "primary": "Anchor to the existing private-conversation CTA",
-      "secondary": "Anchor to selected personal work"
-    },
+    "principle": "Professional artist portfolios and consent-led private commissions have separate visible entry paths. The purpose selector and professional portfolio scope precede body-focused personal work; public archive resources remain supporting context rather than replacing either enquiry route.",
     "visibleSelection": "Fine-art portraits and studies of identity, biography and the body remain visible.",
     "extendedArchive": "Existing urban, architectural and travel studies remain complete, searchable and lightbox-enabled inside one initially closed native disclosure.",
     "archiveResources": [
@@ -324,7 +323,17 @@
       "joint image selection",
       "18+ self-declaration gate for intimate previews"
     ],
-    "commercialFrameworkBoundary": "Fine Art retains its own privacy and consent path rather than inheriting the corporate three-way selector or project-framework drawer."
+    "commercialFrameworkBoundary": "Fine Art retains its own privacy and consent path rather than inheriting the corporate three-way selector or project-framework drawer.",
+    "privateSectionChoice": {
+      "primary": "Anchor to the existing private-conversation CTA",
+      "secondary": "Anchor to selected personal work"
+    },
+    "earlyPurposeSelector": {
+      "anchor": "#artist-packages-guide",
+      "professionalAnchor": "#professional-portfolio",
+      "personalAnchor": "#personal-fine-art",
+      "rule": "Show the professional and personal choices before personal body-focused imagery. Fine Art does not require nudity."
+    }
   },
   "quoteServiceContext": {
     "publicParameter": "service",
@@ -332,7 +341,8 @@
       "portrait": "individual",
       "brand": "brand",
       "event": "event",
-      "fine-art": "art"
+      "fine-art": "art",
+      "private-event": "event"
     },
     "sourcePages": [
       "portrait/index.html",
@@ -348,14 +358,41 @@
       "hu/muveszi-fotografia/index.html",
       "de-at/fine-art/index.html"
     ],
-    "scopedLinks": 21,
+    "scopedLinks": 33,
     "behavior": "The allowlisted service context selects the matching existing quote category before the first calculator paint. Unknown or missing values leave the existing individual-portrait default unchanged.",
     "continuity": [
       "localized quote-page language switching",
       "explicit category changes",
       "submitted service_context field"
     ],
-    "seoBoundary": "Canonical, hreflang, source language-switch and generic navigation/footer URLs remain query-free."
+    "seoBoundary": "Canonical, hreflang, source language-switch and generic navigation/footer URLs remain query-free.",
+    "audienceParameters": {
+      "portrait_mode": {
+        "requiresService": "portrait",
+        "formField": "individual_mode",
+        "allowedValues": [
+          "headshotcv",
+          "quick30",
+          "guided60",
+          "guided120"
+        ]
+      },
+      "art_type": {
+        "requiresService": "fine-art",
+        "formField": "art_type",
+        "allowedValues": [
+          "actor",
+          "dance",
+          "performer",
+          "model-editorial",
+          "artportrait",
+          "lingerie",
+          "nude",
+          "other"
+        ]
+      }
+    },
+    "audienceSelectionRule": "Only allowlisted values select existing controls before the first estimate. Language switching preserves valid choices; a change of service removes incompatible audience parameters. Canonical and hreflang URLs remain query-free. No new backend price authority is introduced."
   },
   "canonicalConsultation": {
     "type": "video-call",
@@ -365,7 +402,7 @@
     "bookingUrl": "https://meet.bookipi.com/zk5ly35r",
     "bookingInterfaceLanguage": "en",
     "directWith": "https://www.norbertbanhalmi.com/about/",
-    "interpretation": "A short orientation conversation. It is not a photography-session duration and must not be confused with the 30-minute Executive Headshot service format."
+    "interpretation": "A short orientation conversation, not a photography session. Headshot/CV, simple portrait and Executive Portrait are distinct service scopes. Use pricing.json for session durations and current packages."
   },
   "audienceAndVisualPresence": {
     "audiences": [

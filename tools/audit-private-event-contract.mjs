@@ -22,7 +22,7 @@ for(const route of ['requestaquote/index.html','hu/ajanlatkeres/index.html','de-
  assert.ok(text.includes('value="outside"'),route+' preserves the chargeable outside-city option');
  assert.ok(text.includes('data-pricing-choice-guide="20261006-closure"'),route+' retains the price comparison');
  assert.ok(text.includes('aria-describedby="quote-deliverables-note"'),route+' explains total requested images');
- for(const asset of ['quote-calculator','private-event-quote','quote-pdf'])assert.ok(text.includes('/assets/js/'+asset+'.js?v=20261006-private-city-v2'),route+' '+asset+' cache key');
+ for(const asset of ['quote-calculator','private-event-quote','quote-pdf'])assert.ok(text.includes('/assets/js/'+asset+'.js?v='+(asset==='quote-calculator'?'20261006-audience-v3':'20261006-private-city-v2')),route+' '+asset+' cache key');
 }
 const main=read('assets/js/main.js'),pdf=read('assets/js/quote-pdf.js');
 for(const field of ['serviceContext:','canonicalPackageCode:','privateEventCity:','cityTravelIncluded:','travelGrossAmount:'])assert.ok(main.includes(field),'Submission must carry '+field);
