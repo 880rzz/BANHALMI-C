@@ -1596,8 +1596,8 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure:
 }
 
 /* DESKTOP-FOOTER-POLISH-V44-20260925
-   Desktop is an information footer, not an accordion. Keep every group open,
-   suppress disclosure affordances, and keep the legal/trust/cookie controls
+   Desktop keeps the compact editorial geometry while footer disclosures remain
+   native, default-closed and user-owned. Keep the legal/trust/cookie controls
    on one stable row without allowing route content to widen the document. */
 @media (min-width:1180px){
   html,
@@ -1607,21 +1607,8 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-figure:
   html body{
     padding-bottom:0!important;
   }
-  html body .site-footer .footer-accordion>summary{
-    cursor:default!important;
-    pointer-events:none!important;
-  }
-  html body .site-footer .footer-accordion>summary::after{
-    content:none!important;
-    display:none!important;
-  }
-  html body .site-footer details.footer-accordion>ul{
-    display:grid!important;
-    block-size:auto!important;
-    max-block-size:none!important;
-    visibility:visible!important;
-    overflow:visible!important;
-  }
+  /* Disclosure interaction and visibility are governed by the canonical
+     user-owned [open] / :not([open]) contract below. */
   html body .site-footer .footer-bottom{
     grid-template-columns:max-content minmax(0,1fr)!important;
     column-gap:24px!important;
