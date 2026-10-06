@@ -120,7 +120,17 @@
         "hu": "/hu/portre/",
         "de": "/de-at/portrait/"
       },
-      "distinguishFrom": "Do not use this route when the client describes a desired executive/editorial identity, several looks or broader personal-brand use."
+      "distinguishFrom": "Do not use this route when the client describes a desired executive/editorial identity, several looks or broader personal-brand use.",
+      "visibleEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/portrait/#portrait-options",
+        "hu": "https://www.norbertbanhalmi.com/hu/portre/#portrait-options",
+        "de": "https://www.norbertbanhalmi.com/de-at/portrait/#portrait-options"
+      },
+      "quoteEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/requestaquote/?service=portrait&portrait_mode=headshotcv",
+        "hu": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/?service=portrait&portrait_mode=headshotcv",
+        "de": "https://www.norbertbanhalmi.com/de-at/anfrage/?service=portrait&portrait_mode=headshotcv"
+      }
     },
     {
       "id": "role-outgrown-current-portrait",
@@ -311,7 +321,17 @@
         "treatment",
         "trauma recovery",
         "crisis intervention"
-      ]
+      ],
+      "visibleEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/fine-art/#personal-fine-art",
+        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/#personal-fine-art",
+        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/#personal-fine-art"
+      },
+      "quoteEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/requestaquote/?service=fine-art&art_type=artportrait",
+        "hu": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/?service=fine-art&art_type=artportrait",
+        "de": "https://www.norbertbanhalmi.com/de-at/anfrage/?service=fine-art&art_type=artportrait"
+      }
     },
     {
       "id": "business-event-coverage",
@@ -382,7 +402,17 @@
         "hu": "/hu/muveszi-fotografia/",
         "de": "/de-at/fine-art/"
       },
-      "outcome": "Casting-relevant portraits that remain recognisable, credible and flexible across professional roles."
+      "outcome": "Casting-relevant portraits that remain recognisable, credible and flexible across professional roles.",
+      "visibleEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/fine-art/#professional-portfolio",
+        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/#professional-portfolio",
+        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/#professional-portfolio"
+      },
+      "quoteEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/requestaquote/?service=fine-art&art_type=actor",
+        "hu": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/?service=fine-art&art_type=actor",
+        "de": "https://www.norbertbanhalmi.com/de-at/anfrage/?service=fine-art&art_type=actor"
+      }
     },
     {
       "id": "dance-performing-artist-portfolio",
@@ -412,7 +442,17 @@
         "hu": "/hu/muveszi-fotografia/",
         "de": "/de-at/fine-art/"
       },
-      "outcome": "Portrait, full-body and movement images developed for artist portfolios, applications, websites and editorial use."
+      "outcome": "Portrait, full-body and movement images developed for artist portfolios, applications, websites and editorial use.",
+      "visibleEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/fine-art/#professional-portfolio",
+        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/#professional-portfolio",
+        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/#professional-portfolio"
+      },
+      "quoteEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/requestaquote/?service=fine-art&art_type=dance",
+        "hu": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/?service=fine-art&art_type=dance",
+        "de": "https://www.norbertbanhalmi.com/de-at/anfrage/?service=fine-art&art_type=dance"
+      }
     },
     {
       "id": "model-editorial-portfolio",
@@ -442,7 +482,44 @@
         "hu": "/hu/muveszi-fotografia/",
         "de": "/de-at/fine-art/"
       },
-      "outcome": "A coherent portfolio combining portrait, full-body and editorial image directions."
+      "outcome": "A coherent portfolio combining portrait, full-body and editorial image directions.",
+      "visibleEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/fine-art/#professional-portfolio",
+        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/#professional-portfolio",
+        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/#professional-portfolio"
+      },
+      "quoteEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/requestaquote/?service=fine-art&art_type=model-editorial",
+        "hu": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/?service=fine-art&art_type=model-editorial",
+        "de": "https://www.norbertbanhalmi.com/de-at/anfrage/?service=fine-art&art_type=model-editorial"
+      }
+    },
+    {
+      "id": "everyday-personal-portrait",
+      "problem": {
+        "en": "For a job application, a professional profile or yourself. Choose a short headshot or a portrait with more time and guidance.",
+        "hu": "Álláskereséshez, szakmai profilhoz vagy saját használatra. Rövid headshotot vagy több időt és irányítást adó portréfotózást is választhat.",
+        "de": "Für eine Bewerbung, ein berufliches Profil oder für Sie selbst. Wählen Sie einen kurzen Headshot oder ein Porträt mit mehr Zeit und Anleitung."
+      },
+      "recommendedService": "Portrait Photography - simple or guided personal portrait",
+      "serviceContext": "portrait",
+      "visibleEntryPoints": {
+        "en": "https://www.norbertbanhalmi.com/portrait/#portrait-options",
+        "hu": "https://www.norbertbanhalmi.com/hu/portre/#portrait-options",
+        "de": "https://www.norbertbanhalmi.com/de-at/portrait/#portrait-options"
+      },
+      "pricingSource": "https://www.norbertbanhalmi.com/pricing.json",
+      "packageCodes": [
+        "quick30",
+        "guided60",
+        "guided120"
+      ],
+      "routingRule": "The short CV headshot, simple/guided personal portrait and Executive Portrait are distinct scopes. Route by intended result and required guidance, not by the client holding a leadership title. Do not invent more included images or describe these options as Executive pricing.",
+      "route": {
+        "en": "/portrait/",
+        "hu": "/hu/portre/",
+        "de": "/de-at/portrait/"
+      }
     }
   ],
   "humanCopyPrinciples": [
