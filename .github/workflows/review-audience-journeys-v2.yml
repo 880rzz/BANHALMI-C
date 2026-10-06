@@ -1,0 +1,121 @@
+name: Review audience journeys and anchored navigation
+on:
+  push:
+    branches: [build/audience-journeys-20261006]
+    paths: [.github/workflows/review-audience-journeys-v2.yml]
+permissions:
+  contents: read
+jobs:
+  review:
+    if: github.repository == '880rzz/BANHALMI-C' && github.ref == 'refs/heads/build/audience-journeys-20261006'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Rebuild the reviewed candidate and reconcile real navigation contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = refs/heads/build/audience-journeys-20261006
+          mkdir -p /tmp/audience-evidence
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64,gzip,hashlib,json,re,subprocess
+          R=Path.cwd()
+          assert (R/'CNAME').read_text().strip()=='www.norbertbanhalmi.com'
+          staged=(R/'.github/workflows/materialize-audience-journeys-once.yml').read_text()
+          encoded=re.search(r'AUDIENCE_BUNDLE: >-\s+([A-Za-z0-9+/=]+)',staged)[1]
+          raw=gzip.decompress(base64.b64decode(encoded))
+          assert hashlib.sha256(raw).hexdigest()=='b35423275b8d79ed57d0199d528f328b05f280d6be5ff89066c0672db84f9065'
+          b=json.loads(raw)
+          assert set(b['files'])=={'tools/content/audience-journeys-20261006.json','tools/audit-audience-journeys.mjs','tests/audience-journeys.spec.mjs'}
+          for path,text in b['files'].items():
+              p=R/path;assert not p.exists();p.parent.mkdir(parents=True,exist_ok=True);p.write_text(text)
+          Path('/tmp/apply-audience-journeys.py').write_text(b['compiler'])
+          subprocess.run(['python3','/tmp/apply-audience-journeys.py','.', 'tools/content/audience-journeys-20261006.json'],check=True)
+          p=R/'tests/disclosure-indicators.spec.mjs';s=p.read_text()
+          old="await expect(artist).toHaveAttribute('href', home.artist);"
+          assert s.count(old)==1
+          s=s.replace(old,"await expect(artist).toHaveAttribute('href', home.artist+'#artist-packages-guide');",1)
+          old="    await expect(organizer).toContainText(home.organizerText);"
+          assert s.count(old)==1
+          s=s.replace(old,old+"\n    await artist.click();\n    await expect(page).toHaveURL(home.artist+'#artist-packages-guide');\n    await expect(page.locator('#artist-packages-guide')).toBeVisible();",1);p.write_text(s)
+          p=R/'tools/content/audience-journeys-20261006.json';data=json.loads(p.read_text())
+          leads={'en':'Both begin with artistic direction, but serve different purposes. Choose by how you will use the photographs.','hu':'Mindkett\u0151 m\u0171v\u00e9szi k\u00e9pi ir\u00e1ny\u00edt\u00e1ssal k\u00e9sz\u00fcl, de m\u00e1s c\u00e9lt szolg\u00e1l. Aszerint v\u00e1lasszon, mire fogja haszn\u00e1lni a k\u00e9peket.','de':'Beide Wege beginnen mit k\u00fcnstlerischer Bildregie, dienen aber unterschiedlichen Zielen. W\u00e4hlen Sie danach, wof\u00fcr Sie die Bilder verwenden werden.'}
+          for lang,d in data.items():
+              d['artistChoiceLead']=leads[lang]
+              q=R/d['fine'];s=q.read_text()
+              m=re.search(r'<!--\s*PLAIN-LANGUAGE-ARTIST-PACKAGES:START\s*-->.*?<!--\s*PLAIN-LANGUAGE-ARTIST-PACKAGES:END\s*-->',s,re.S);assert m
+              g=m[0]
+              g,n=re.subn(r'<p class="lead">.*?</p>',lambda _: '<p class="lead">'+leads[lang]+'</p>',g,count=1,flags=re.S);assert n==1
+              inc=re.search(r'<p class="prose" data-professional-package-inclusions>.*?</p>',g,re.S);assert inc
+              g=g.replace(inc[0],'',1)
+              anchor=re.search(r'(<h2 id="professional-portfolio">.*?</h2>\s*<p class="lead">.*?</p>)',g,re.S);assert anchor
+              g=g.replace(anchor[0],anchor[0]+inc[0],1)
+              q.write_text(s[:m.start()]+g+s[m.end():])
+          p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+          p=R/'tests/audience-journeys.spec.mjs';s=p.read_text();anchor='  await page.goto(d.art);\n  for(const width'
+          assert s.count(anchor)==1
+          s=s.replace(anchor,"  await page.goto(d.art);\n  await expect(page.locator('.cookie')).toHaveClass(/show/);\n  await page.locator('.cookie [data-decline]').click();\n  await expect(page.locator('.cookie')).not.toHaveClass(/show/);\n  for(const width",1);p.write_text(s)
+          p=R/'tools/audit-audience-journeys.mjs';s=p.read_text()
+          anchor=" assert.ok(art.includes(esc(d.personalIntro)),lang+' personal fine art does not imply nudity');"
+          assert s.count(anchor)==1
+          s=s.replace(anchor,anchor+"\n assert.ok(art.includes(esc(d.artistChoiceLead)),lang+' purpose lead uses consistent formal language');\n assert.ok(art.indexOf('data-professional-package-inclusions')<art.indexOf('<article class=\"card\">',professional),lang+' image inclusions precede duration package choices');",1);p.write_text(s)
+          PY
+          git rm .github/workflows/materialize-audience-journeys-once.yml .github/workflows/review-audience-journeys-v2.yml
+          git add -A
+          git diff --cached --check
+          test "$(git write-tree)" = 5fa9b8a4a7d3b2a49f6d58584f62c172e347d891
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Validate audience journey source with real anchored navigation and visible package inclusions'
+          git rev-parse HEAD > /tmp/audience-evidence/candidate-commit.txt
+          git rev-parse HEAD^{tree} > /tmp/audience-evidence/candidate-tree.txt
+      - run: npm ci
+      - name: Run all non-mutating source contracts
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm test 2>&1 | tee /tmp/audience-evidence/source-tests.log
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Run full browser suite and WebKit footer gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/perf-static-server.mjs . 4173 > /tmp/audience-evidence/server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for i in $(seq 1 80); do
+            if curl -fsS --max-time 2 http://127.0.0.1:4173/ >/dev/null; then break; fi
+            sleep 0.25
+          done
+          npm run test:e2e 2>&1 | tee /tmp/audience-evidence/e2e.log
+          AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=. node tools/audit-webkit-footer-tail.mjs 2>&1 | tee /tmp/audience-evidence/webkit.log
+      - name: Publish only the independently tested candidate
+        run: |
+          test "$GITHUB_REF" = refs/heads/build/audience-journeys-20261006
+          git diff --exit-code
+          test "$(git rev-parse HEAD^{tree})" = 5fa9b8a4a7d3b2a49f6d58584f62c172e347d891
+          git push origin HEAD:refs/heads/build/audience-journeys-reviewed-20261006
+      - name: Preserve verification evidence
+        if: always()
+        run: |
+          git diff > /tmp/audience-evidence/uncommitted.diff
+          git show --stat HEAD > /tmp/audience-evidence/changes.txt
+          cp -R artifacts/audience-journeys /tmp/audience-evidence/screenshots 2>/dev/null || true
+          cp -R test-results /tmp/audience-evidence/test-results 2>/dev/null || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audience-journeys-reviewed-${{ github.sha }}
+          path: /tmp/audience-evidence
+          retention-days: 3
