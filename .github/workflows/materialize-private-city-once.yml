@@ -1,0 +1,94 @@
+name: Verify and materialize private-city pricing closure
+on:
+  push:
+    branches: [fix/pricing-content-parity-20261006]
+    paths:
+      - .github/repair/**
+      - .github/workflows/materialize-private-city-once.yml
+permissions:
+  contents: read
+concurrency:
+  group: private-city-materialization-20261006
+  cancel-in-progress: false
+jobs:
+  materialize:
+    if: github.repository == '880rzz/BANHALMI-C' && github.ref == 'refs/heads/fix/pricing-content-parity-20261006'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Materialize only hash-verified reviewed files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/closure-evidence
+          python3 .github/repair/apply-private-city.py > /tmp/closure-evidence/manifest.json
+          git diff --check
+          python3 - <<'PY'
+          import json,subprocess
+          paths=json.load(open('/tmp/closure-evidence/manifest.json'))['files']
+          actual=subprocess.check_output(['git','diff','--name-only'],text=True).splitlines()
+          untracked=subprocess.check_output(['git','ls-files','--others','--exclude-standard'],text=True).splitlines()
+          assert set(actual+untracked)==set(paths),(actual,untracked,paths)
+          subprocess.run(['git','add','--',*paths],check=True)
+          PY
+          git rm -- .github/repair/private-city.patch.0 .github/repair/private-city.patch.1 .github/repair/private-city.patch.2 .github/repair/private-city.patch.3 .github/repair/apply-private-city.py .github/workflows/materialize-private-city-once.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Reconcile multilingual pricing clarity and private city travel across calculator PDF and payload'
+      - name: Install locked dependencies
+        run: npm ci
+      - name: Run every source and regression gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm test 2>&1 | tee /tmp/closure-evidence/source-tests.log
+      - name: Install Chromium for full-page interaction tests
+        run: npx playwright install --with-deps chromium
+      - name: Verify all quote interactions including actual PDF and intercepted POST
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/perf-static-server.mjs . 4173 > /tmp/closure-evidence/server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          READY=0
+          for i in $(seq 1 120); do
+            if curl -fsS --max-time 2 http://127.0.0.1:4173/ >/dev/null; then READY=1; break; fi
+            if ! kill -0 "$SERVER_PID" 2>/dev/null; then cat /tmp/closure-evidence/server.log; exit 1; fi
+            sleep 0.25
+          done
+          test "$READY" = 1
+          npm run test:e2e 2>&1 | tee /tmp/closure-evidence/e2e.log
+      - name: Publish only green reviewed branch; never main
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF" = refs/heads/fix/pricing-content-parity-20261006
+          git diff --exit-code
+          git push origin HEAD:refs/heads/fix/pricing-content-parity-20261006
+      - name: Preserve diagnostics without Git metadata
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p /tmp/closure-evidence
+          git rev-parse HEAD > /tmp/closure-evidence/source-sha.txt
+          git diff > /tmp/closure-evidence/uncommitted.diff
+          git archive --format=tar.gz -o /tmp/closure-evidence/reviewed-source.tar.gz HEAD
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: private-city-materialization-${{ github.sha }}
+          retention-days: 3
+          path: |
+            /tmp/closure-evidence
+            test-results
