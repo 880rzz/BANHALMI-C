@@ -51,8 +51,9 @@ for (const path of pages) {
             await page.keyboard.press('Space');
           }
           await expect(details).toHaveJSProperty('open', true);
-          const expandedAfter = await summary.getAttribute('aria-expanded');
-          if (expandedAfter !== null) expect(expandedAfter).toBe('true');
+          if ((await summary.getAttribute('aria-expanded')) !== null) {
+            await expect(summary).toHaveAttribute('aria-expanded', 'true');
+          }
           continue;
         }
         const assertMarker = async open => {
