@@ -158,10 +158,18 @@ jobs:
             artifacts/lighthouse-desktop
           if-no-files-found: error
           retention-days: 14
+      - name: Package audited public files including machine discovery
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 tools/package-pages-artifact.py --site _site --output "$RUNNER_TEMP/artifact.tar" --expected-sha "$GITHUB_SHA"
       - name: Upload the exact audited Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
-          path: _site
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
   deploy:
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
@@ -227,6 +235,16 @@ jobs:
           grep -Fq 'Banhalmi Norbert e.U.' <<<"$impressum"
           grep -Fq 'művészi fotográfiai' <<<"$impressum"
           ! grep -Fq 'művészi fotográfia</strong>i' <<<"$impressum"
+      - name: Verify machine discovery bytes on the custom domain
+        shell: bash
+        run: |
+          set -euo pipefail
+          tmp="$(mktemp)"
+          trap 'rm -f "$tmp"' EXIT
+          for path in '.well-known/agent.json' 'api/v1/identity.json' 'api/v1/services.json' 'api/v1/locations.json' 'api/v1/actions.json'; do
+            curl -fsSL --retry 3 --max-time 30 -H 'Cache-Control: no-cache' "https://www.norbertbanhalmi.com/$path" -o "$tmp"
+            cmp -- "$path" "$tmp" || { echo "Live machine discovery differs from deployed source: $path" >&2; exit 1; }
+          done
       - name: Run exact-live production geometry audit
         env:
           LIVE_PIXEL_BASE_URL: https://www.norbertbanhalmi.com
