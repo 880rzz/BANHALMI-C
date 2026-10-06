@@ -1,12 +1,12 @@
 {
-  "version": "2026-09-24-v7",
+  "version": "2026-10-06-v8",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
-    "settledThrough": "2026-09-20",
+    "settledThrough": "2026-10-04",
     "baseline28d": [
-      "2026-08-24",
-      "2026-09-20"
+      "2026-09-06",
+      "2026-10-03"
     ],
     "baseline6m": [
       "2026-03-24",
@@ -349,9 +349,11 @@
     }
   ],
   "nextActions": [
+    "Measure owner migration for HU portrait, DE portrait and HU Fine Art/akt intent after the 2026-10-06 remediation; do not churn these URLs during the minimum measurement window absent P0/P1 evidence.",
+    "Protect generic Budapest photographer and branded homepage winners; homepage title/H1 remain regression-locked.",
+    "Keep Brand owner architecture in place, but defer new copy changes until fresh settled query-level evidence supports them.",
     "Run ART live-route/redirect forensic audit for legacy /ajanlatkeres, /blog/tags/*, /post/* and ?lang=de URLs before modifying content.",
     "Run Professional legacy URL audit for slashless /portrait, /de-at and ?lang=de signals.",
-    "Protect all identified Top-3 branded/generic winners; no title/H1 rewrites on protected URLs.",
     "Then select the first P1 change that improves owner routing without changing protected page semantics."
   ],
   "ecosystemProperties": {
@@ -833,6 +835,111 @@
       "Do not rewrite title/H1/body copy on measurement-locked Professional service pages without new P0/P1 evidence.",
       "Preserve ART ownership for artistic/oeuvre intent and Blog ownership for editorial/history intent.",
       "Use GSC URL Inspection and query/page trends to confirm transfer; historical rows are not current-state proof."
+    ]
+  },
+  "latestSettledOwnerEvidence": {
+    "measuredAt": "2026-10-06",
+    "settledThrough": "2026-10-04",
+    "window": [
+      "2026-09-06",
+      "2026-10-03"
+    ],
+    "findings": [
+      {
+        "query": "portré fotózás budapest",
+        "correctUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+        "observedOwners": [
+          {
+            "url": "https://www.norbertbanhalmi.com/",
+            "impressions": 24,
+            "position": 12.92
+          },
+          {
+            "url": "https://www.norbertbanhalmi.com/hu/",
+            "impressions": 26,
+            "position": 5.08
+          },
+          {
+            "url": "HU Google Business Profile attributed homepage",
+            "impressions": 36,
+            "position": 12.06
+          }
+        ],
+        "decision": "P1 owner-routing remediation on dedicated HU portrait page; protect homepage generic photographer winners."
+      },
+      {
+        "query": "portréfotózás budapest",
+        "correctUrl": "https://www.norbertbanhalmi.com/hu/portre/",
+        "observedOwners": [
+          {
+            "url": "https://www.norbertbanhalmi.com/",
+            "impressions": 16,
+            "position": 21.31
+          },
+          {
+            "url": "https://www.norbertbanhalmi.com/hu/",
+            "impressions": 3,
+            "position": 6
+          },
+          {
+            "url": "HU Google Business Profile attributed homepage",
+            "impressions": 26,
+            "position": 19.96
+          }
+        ],
+        "decision": "Same owner-routing remediation; no homepage title/H1 churn."
+      },
+      {
+        "query": "portraitfotografie wien",
+        "correctUrl": "https://www.norbertbanhalmi.com/de-at/portrait/",
+        "observedOwners": [
+          {
+            "url": "https://www.norbertbanhalmi.com/",
+            "impressions": 6,
+            "position": 19.83
+          },
+          {
+            "url": "DE Google Business Profile attributed homepage",
+            "impressions": 2,
+            "position": 21
+          }
+        ],
+        "decision": "P1 owner-routing remediation on dedicated DE portrait page."
+      },
+      {
+        "query": "aktfotózás",
+        "correctUrl": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
+        "observedOwners": [
+          {
+            "url": "https://www.norbertbanhalmi.com/",
+            "impressions": 4,
+            "position": 11.5
+          },
+          {
+            "url": "https://www.norbertbanhalmi.com/hu/",
+            "impressions": 4,
+            "position": 9.75
+          },
+          {
+            "url": "HU Google Business Profile attributed homepage",
+            "impressions": 3,
+            "position": 6.33
+          }
+        ],
+        "decision": "Clarify commercial Fine Art owner with natural visible terminology; do not redefine Fine Art as nudity."
+      }
+    ],
+    "protectedHomepageQueries": [
+      "fényképész budapest",
+      "fotós budapest",
+      "budapest fotós",
+      "profi fotós",
+      "BANHALMI"
+    ],
+    "deferredWithoutFreshQueryEvidence": [
+      "DE/EN brand copy churn",
+      "generic corporate-photographer retitling",
+      "generic portfolio"
     ]
   }
 }
