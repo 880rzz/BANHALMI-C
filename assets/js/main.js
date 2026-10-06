@@ -2,20 +2,7 @@
 (function () {
   "use strict";
 
-  // Footer disclosure bootstrap.
-  // Compact/tablet layouts use native <details> interaction. Desktop keeps
-  // all groups open. Do not duplicate native disclosure state with hidden or
-  // inline display styles: Safari must be able to toggle the summary itself.
-  (function primeFooterDisclosureState(){
-    var desktop = window.matchMedia("(min-width: 1180px)").matches;
-    Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion")).forEach(function(details){
-      details.open = desktop;
-      var list = details.querySelector("ul");
-      if (!list) return;
-      list.hidden = false;
-      list.style.removeProperty("display");
-    });
-  })();
+
 
   // Mobile menu
   var nav = document.querySelector(".nav");
