@@ -71,6 +71,26 @@ for (const check of checks) {
   if (!/Q56391118/.test(html)) errors.push(`${check.path}: Wikidata Person evidence missing`);
 }
 
+const measuredOwnerChecks = [
+  ['hu/portre/index.html', /Portréfotózás Budapest/i],
+  ['de-at/portrait/index.html', /Portraitfotografie Wien/i],
+  ['hu/muveszi-fotografia/index.html', /aktfotózás/i]
+];
+for (const [path, rx] of measuredOwnerChecks) {
+  const html = fs.readFileSync(path, 'utf8');
+  if (!rx.test(html)) errors.push(`${path}: measured GSC owner signal missing ${rx}`);
+}
+
+const protectedHomepageTitles = new Map([
+  ['index.html', 'BANHALMI | Executive Portrait & Brand Photography | Vienna–Budapest'],
+  ['hu/index.html', 'BANHALMI | Executive portré és brandfotózás | Bécs–Budapest'],
+  ['de-at/index.html', 'BANHALMI | Executive-Porträt & Brandfotografie | Wien–Budapest']
+]);
+for (const [path, expected] of protectedHomepageTitles) {
+  const actual = extractTitle(fs.readFileSync(path, 'utf8'));
+  if (actual !== expected) errors.push(`${path}: protected homepage title changed; expected "${expected}", got "${actual}"`);
+}
+
 const enTitles = ['portrait/index.html','lifestyle/index.html','event-photography/index.html'].map(p => titles.get(p));
 if (new Set(enTitles).size !== enTitles.length) errors.push('EN primary service titles collapsed into overlapping intent');
 
