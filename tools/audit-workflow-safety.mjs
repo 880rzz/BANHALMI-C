@@ -46,6 +46,22 @@ for (const mutator of ['optimize-production-artifact.mjs _site','restore-product
   if (pages.includes(mutator)) errors.push(`pages.yml must not mutate the deploy artifact: ${mutator}`);
 }
 
+// Validate the packaging boundary too: upload-pages-artifact@v4 silently
+// drops .well-known even when the pre-upload directory passed integrity.
+for(const [name,text] of workflows){
+  if(!text.includes('actions/deploy-pages@')) continue;
+  for(const token of ['python3 tools/package-pages-artifact.py --site _site',
+    '--output "$RUNNER_TEMP/artifact.tar" --expected-sha "$GITHUB_SHA"',
+    'actions/upload-artifact@', 'name: github-pages',
+    'path: ${{ runner.temp }}/artifact.tar',
+    'Verify machine discovery bytes on the custom domain',
+    "'.well-known/agent.json'", 'cmp -- "$path" "$tmp"']){
+    if(!text.includes(token)) errors.push(name+': public machine discovery preservation is missing: '+token);
+  }
+  if(text.includes('actions/upload-pages-artifact@')) errors.push(name+': legacy hidden-file filtering must not replace the verified packager');
+}
+if(!packageText.includes('test_pages_artifact.py')) errors.push('package.json must exercise actual tar membership, hidden-file protection and byte identity');
+
 for (const token of [
   'llm-canonical-overlay.json',
   'market-geography.json',
