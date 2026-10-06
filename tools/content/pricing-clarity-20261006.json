@@ -32,7 +32,14 @@
     "travelHelpOld": "If you select a client office or another location, the exact address is required. Travel within Austria and Hungary is €200 net per vehicle; one vehicle carries a crew of up to four.",
     "fineLeadOld": "Fine art photography begins with a person and a story worth holding on to. Portraits and artistic nudes are created through trust, clear boundaries and sensitive direction.",
     "eyebrowOld": "Fine Art · Intimate portrait · Artistic nude",
-    "eyebrow": "Artists & Performers · Personal Fine Art"
+    "eyebrow": "Artists & Performers · Personal Fine Art",
+    "serviceTravelPages": [
+      "portrait/index.html",
+      "lifestyle/index.html",
+      "event-photography/index.html"
+    ],
+    "serviceTravelOld": "Work on location in Vienna and Budapest is included; anywhere else is agreed beforehand.",
+    "serviceTravel": "Studio sessions in Vienna and Budapest have no travel surcharge. For a client office or another location, any travel and venue costs are stated separately in the estimate. The accepted written offer remains authoritative."
   },
   "hu": {
     "quote": "hu/ajanlatkeres/index.html",
@@ -65,7 +72,14 @@
     "archiveOld": "Művek, sorozatok, kiállítások és az alkotói archívum.",
     "archiveNew": "Átjáró a BANHALMI ART oldalra: művek, kiállítások és források. Megrendelés és aktuális árak itt.",
     "travelHelpOld": "Ha irodát vagy egyedi helyszínt választ, a pontos cím megadása kötelező. A kiszállás Ausztria és Magyarország területén nettó 80 000 Ft + ÁFA, bruttó 96 000 Ft / gépjármű; egy jármű legfeljebb 4 fős stábot szállít.",
-    "fineLeadOld": "A művészi fotózás középpontjában az ember és az a történet áll, amelyet képekben szeretne megőrizni vagy megmutatni. Ez lehet művészi portré, személyes történet, editorial vagy glamour, tánc és mozgás, előadóművészeti vagy modellanyag, privát sorozat, testtanulmány vagy akt — a műfajt nem előre választjuk ki, hanem az Ön céljához, karakteréhez és komfortjához alakítjuk."
+    "fineLeadOld": "A művészi fotózás középpontjában az ember és az a történet áll, amelyet képekben szeretne megőrizni vagy megmutatni. Ez lehet művészi portré, személyes történet, editorial vagy glamour, tánc és mozgás, előadóművészeti vagy modellanyag, privát sorozat, testtanulmány vagy akt — a műfajt nem előre választjuk ki, hanem az Ön céljához, karakteréhez és komfortjához alakítjuk.",
+    "serviceTravelPages": [
+      "hu/portre/index.html",
+      "hu/brand/index.html",
+      "hu/rendezvenyfotozas/index.html"
+    ],
+    "serviceTravelOld": "A bécsi és budapesti helyszíni munka benne van; más helyszínt előre egyeztetünk.",
+    "serviceTravel": "A bécsi és budapesti stúdióban nincs kiszállási felár. Ügyfélirodánál vagy más helyszínnél az esetleges utazási és helyszínköltséget külön feltünteti a kalkuláció. Az elfogadott írásos ajánlat az irányadó."
   },
   "de": {
     "quote": "de-at/anfrage/index.html",
@@ -98,6 +112,13 @@
     "archiveOld": "Werke, Serien, Ausstellungen und das künstlerische Archiv.",
     "archiveNew": "Zugang zu BANHALMI ART: Werke, Ausstellungen und Quellen. Buchung und aktuelle Preise bleiben hier.",
     "travelHelpOld": "Bei Kundenbüro oder einem anderen Ort ist die genaue Adresse erforderlich. Die Anfahrt innerhalb Österreichs und Ungarns kostet €200 netto pro Fahrzeug; ein Fahrzeug befördert ein Team von bis zu vier Personen.",
-    "fineLeadOld": "Im Mittelpunkt stehen ein Mensch und eine Geschichte, die es wert ist, bewahrt oder sichtbar gemacht zu werden. Das kann ein Fine-Art-Porträt, eine persönliche Geschichte, Editorial oder Glamour, Tanz und Bewegung, eine Performer- oder Modelserie, eine private Serie, eine Körperstudie oder künstlerischer Akt sein — die Form wird nicht vorgegeben, sondern aus Ziel, Persönlichkeit und Komfort entwickelt."
+    "fineLeadOld": "Im Mittelpunkt stehen ein Mensch und eine Geschichte, die es wert ist, bewahrt oder sichtbar gemacht zu werden. Das kann ein Fine-Art-Porträt, eine persönliche Geschichte, Editorial oder Glamour, Tanz und Bewegung, eine Performer- oder Modelserie, eine private Serie, eine Körperstudie oder künstlerischer Akt sein — die Form wird nicht vorgegeben, sondern aus Ziel, Persönlichkeit und Komfort entwickelt.",
+    "serviceTravelPages": [
+      "de-at/portrait/index.html",
+      "de-at/brand/index.html",
+      "de-at/eventfotografie/index.html"
+    ],
+    "serviceTravelOld": "Einsätze in Wien und Budapest sind enthalten; alles Weitere vereinbaren wir vorher.",
+    "serviceTravel": "Für Studiotermine in Wien und Budapest fällt keine Anfahrtspauschale an. Bei einem Kundenbüro oder einer anderen Location werden anfallende Anfahrts- und Locationkosten in der Kalkulation separat ausgewiesen. Maßgeblich bleibt das angenommene schriftliche Angebot."
   }
 }

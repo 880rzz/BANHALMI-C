@@ -79,6 +79,11 @@ def reconcile(root):
             fine = replace_one(fine, d['eyebrowOld'], html.escape(d['eyebrow']), d['fine']+': eyebrow')
         save(d['fine'], fine)
         literal_pairs.append((d['archiveOld'],d['archiveNew']))
+        # The same travel boundary must hold on every public service page.
+        for service_path in d['serviceTravelPages']:
+            service_text = (root/service_path).read_text()
+            save(service_path, replace_one(service_text, d['serviceTravelOld'], d['serviceTravel'], service_path+': service travel'))
+        literal_pairs.append((d['serviceTravelOld'], d['serviceTravel']))
     # Menu entry is a gateway: no route removal or change of artistic authority.
     for file in ('assets/js/mega-menu.js', 'assets/js/mega-menu-v65-base.js'):
         text = (root/file).read_text()
