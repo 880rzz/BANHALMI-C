@@ -49,9 +49,9 @@ const canonicalServiceId = 'https://www.norbertbanhalmi.com/#visual-trust-partne
 assert(corpus.includes(canonicalPersonId), `canonical Person ID missing: ${canonicalPersonId}`);
 
 const requiredHomepageCopy = {
-  'index.html': ['Photography for clear communication', 'A portrait is not a picture.', 'Four ways to solve the visual problem'],
-  'hu/index.html': ['A vezető portréja nem kép.', 'Négy út ugyanahhoz: tiszta vizuális jelenléthez'],
-  'de-at/index.html': ['Fotografie für klare Kommunikation', 'Ein Führungsporträt ist kein Bild.', 'Vier Wege zu einer klaren visuellen Präsenz']
+  'index.html': ['Photography for clear communication', 'A portrait is not a picture.', 'The photograph is the means.', 'Strategic visual positioning is the work.'],
+  'hu/index.html': ['A vezető portréja nem kép.', 'A fénykép az eszköz.', 'A munka a stratégiai vizuális pozicionálás.'],
+  'de-at/index.html': ['Fotografie für klare Kommunikation', 'Ein Führungsporträt ist kein Bild.', 'Fotografie ist das Mittel.', 'Die Arbeit ist strategische visuelle Positionierung.']
 };
 for (const [file, phrases] of Object.entries(requiredHomepageCopy)) {
   const body = visibleBody(read(file));

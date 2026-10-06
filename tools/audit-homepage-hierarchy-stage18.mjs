@@ -1,6 +1,13 @@
 import fs from 'node:fs';
 
 const errors=[];
+const strategicPositioningPhrases={
+  'index.html':['The photograph is the means.','Strategic visual positioning is the work.'],
+  'hu/index.html':['A fénykép az eszköz.','A munka a stratégiai vizuális pozicionálás.'],
+  'de-at/index.html':['Fotografie ist das Mittel.','Die Arbeit ist strategische visuelle Positionierung.']
+};
+for(const [file,phrases] of Object.entries(strategicPositioningPhrases)){const html=fs.readFileSync(file,'utf8');for(const phrase of phrases)if(!html.includes(phrase))errors.push(file+': strategic positioning phrase missing: '+phrase);}
+
 const pages={
   'index.html':{heading:'One visual discipline, four clear ways to work together.',cta:'Choose the relevant starting point ↓',facts:['Four principal services:','Executive Portraiture, Brand Photography, C-Level Event Photography and Fine Art Photography','Headshots, employer-branding imagery, press portraits and visual brand strategy','As a member of AmCham Austria','memory, the body and biography']},
   'hu/index.html':{heading:'Egy vizuális szemlélet, négy egyértelmű együttműködési terület.',cta:'A megfelelő kiindulópont kiválasztása ↓',facts:['Négy fő szolgáltatás:','vezetői portréfotózás, brandfotózás, felsővezetői eseményfotózás és művészi fotográfia','Az üzleti portré, a munkáltatói márkaépítés, a sajtóportré és a vizuális márkastratégia egymást kiegészítő eszközök.','Az AmCham Austria tagjaként','emlékezet, a test és az élettörténet']},
