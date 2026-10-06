@@ -19,10 +19,13 @@ for (const home of personaHomes) {
     await page.goto(home.path);
     const artist = page.locator('[data-persona-path="artist-portfolio"]');
     const organizer = page.locator('[data-persona-path="organizer"]');
-    await expect(artist).toHaveAttribute('href', home.artist);
+    await expect(artist).toHaveAttribute('href', home.artist+'#artist-packages-guide');
     await expect(artist).toContainText(home.artistText);
     await expect(organizer).toHaveAttribute('href', home.quote);
     await expect(organizer).toContainText(home.organizerText);
+    await artist.click();
+    await expect(page).toHaveURL(home.artist+'#artist-packages-guide');
+    await expect(page.locator('#artist-packages-guide')).toBeVisible();
   });
 }
 
