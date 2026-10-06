@@ -60,20 +60,46 @@ def public_manifest(site: Path) -> dict[str, str]:
     return manifest
 
 
+def archive_directories(expected: dict[str, str]) -> set[str]:
+    """Return the Pages-compatible root and directory members."""
+    directories = {'.'}
+    for name in expected:
+        parent = Path(name).parent
+        while parent != Path('.'):
+            directories.add('./' + parent.as_posix())
+            parent = parent.parent
+    return directories
+
+
 def verify_archive(archive: Path, expected: dict[str, str]) -> None:
-    """Check the actual deployable tar, not just the pre-upload directory."""
+    """Check the actual deployable tar, including the Pages root layout."""
     actual = {}
+    expected_dirs = archive_directories(expected)
+    seen = set()
     with tarfile.open(archive, 'r:') as bundle:
         for member in bundle:
-            if not member.isfile() or member.name in actual:
+            if member.name in seen:
                 raise ValueError(f'Invalid or duplicate tar member: {member.name}')
-            if member.name not in expected:
+            seen.add(member.name)
+            if member.isdir():
+                if member.name not in expected_dirs:
+                    raise ValueError(f'Unexpected tar directory: {member.name}')
+                continue
+            if not member.isfile():
+                raise ValueError(f'Invalid tar member type: {member.name}')
+            if not member.name.startswith('./'):
+                raise ValueError(f'Pages tar file must use ./ root prefix: {member.name}')
+            name = member.name[2:]
+            if name not in expected:
                 raise ValueError(f'Unexpected tar member: {member.name}')
             stream = bundle.extractfile(member)
             if stream is None:
                 raise ValueError(f'Unreadable tar member: {member.name}')
             with stream:
-                actual[member.name] = hashlib.file_digest(stream, 'sha256').hexdigest()
+                actual[name] = hashlib.file_digest(stream, 'sha256').hexdigest()
+    missing_dirs = sorted(expected_dirs - seen)
+    if missing_dirs:
+        raise ValueError(f'Packed artifact missing Pages directories: {missing_dirs}')
     if actual != expected:
         missing = sorted(set(expected) - set(actual))
         drift = sorted(name for name in actual if actual[name] != expected[name])
@@ -91,12 +117,20 @@ def package(site: Path, output: Path, expected_sha: str) -> dict:
     if (site / 'deployment-sha.txt').read_text().strip() != expected_sha:
         raise ValueError('Site deployment SHA differs from the expected commit')
     output.parent.mkdir(parents=True, exist_ok=True)
-    # GNU tar is used by the official Pages action as well. Write file content
-    # directly: repeated inodes never become hard links or symbolic links.
+    # Match the Pages action's tar root contract: a "." root entry and "./"
+    # member paths. Keep deterministic metadata and write repeated inodes as
+    # regular bytes so no hard links or symbolic links reach Pages.
     with tarfile.open(output, 'w', format=tarfile.GNU_FORMAT) as bundle:
+        for directory in sorted(archive_directories(manifest), key=lambda item: (item.count('/'), item)):
+            info = tarfile.TarInfo(directory)
+            info.type = tarfile.DIRTYPE
+            info.mode = 0o755
+            info.uid = info.gid = info.mtime = 0
+            info.uname = info.gname = ''
+            bundle.addfile(info)
         for name in sorted(manifest):
             path = site / name
-            info = bundle.gettarinfo(str(path), arcname=name)
+            info = bundle.gettarinfo(str(path), arcname='./' + name)
             info.type = tarfile.REGTYPE
             info.linkname = ''
             info.size = path.stat().st_size
