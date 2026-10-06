@@ -213,7 +213,7 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
 /* Equal visual cards are a grid responsibility, not a consequence of copy
    length. Compact screens intentionally return to intrinsic-height cards. */
 @media (min-width:761px){
-  html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid)>
+  html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid,.archive-grid)>
   :is(.card,.step,.quote-step,.quote-summary-card,.category-card,.option-row){
     align-self:stretch!important;
     block-size:100%!important;
@@ -221,13 +221,13 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
     display:flex!important;
     flex-direction:column!important;
   }
-  html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid)>
+  html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid,.archive-grid)>
   :is(.card,.step,.quote-step,.quote-summary-card,.category-card,.option-row) :is(.more,.btn-link:last-child){
     margin-top:auto!important;
   }
 }
 @media (max-width:760px){
-  html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid)>
+  html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid,.archive-grid)>
   :is(.card,.step,.quote-step,.quote-summary-card,.category-card,.option-row){
     block-size:auto!important;
     min-block-size:0!important;
