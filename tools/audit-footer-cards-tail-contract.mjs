@@ -43,14 +43,15 @@ must((fluid.match(/grid-template-columns:repeat\(3,minmax\(0,1fr\)\)!important/g
 must(fluid.includes('details.footer-accordion:not([open])>ul')&&fluid.includes('details.footer-accordion[open]>ul')&&fluid.includes('visibility:hidden!important')&&fluid.includes('visibility:visible!important'),'compact footer must hide only closed disclosures and reveal open disclosures');
 must(fluid.includes('overflow-x:clip!important')&&fluid.includes('overflow-wrap:anywhere!important')&&fluid.includes('margin:0!important'),'footer containment/tail fallback missing');
 
-must(/footerAccordions/.test(main),'assets/js/main.js must own footer desktop-open synchronization');
+must(/footerAccordions/.test(main),'assets/js/main.js must own footer disclosure aria/state synchronization');
 must(!/style\.setProperty\("display".*footer|footer[\s\S]{0,1200}style\.setProperty\("display"/.test(main),'footer runtime must not override native details visibility with inline display');
-must(main.includes('list.style.removeProperty("display")'),'footer runtime must clear stale inline display authority');
-must(footer.compactInteractiveDisclosureRequired===true&&footer.runtimeDisclosureMode==='explicit-open-state-compact-desktop-forced-open','compact footer must expose deterministic interactive disclosure');
+must(!main.includes('list.style.removeProperty("display")'),'footer runtime must not mutate list display authority');
+must(footer.compactInteractiveDisclosureRequired===true&&footer.compactNativeDisclosureRequired===true&&footer.runtimeDisclosureMode==='user-owned-closed-default-all-viewports','footer disclosures must be native, closed by default and user-owned at all widths');
 must(footer.inlineVisibilityMutationAllowed===false,'footer runtime must not regain inline visibility ownership');
-must(main.includes('data-footer-disclosure-runtime')&&main.includes('requestAnimationFrame')&&main.includes('details.open = nextOpen'),'compact footer summary must settle explicit open state after summary activation');
+must(main.includes('data-footer-disclosure-runtime')&&main.includes('details.open = false')&&main.includes('addEventListener("toggle"'),'footer runtime must initialize closed state once and then observe native user-owned toggles');
 must(main.includes('data-artineris-participation')&&main.includes('budapest.artineris.com/en/artists/?codice=FMRAXT'),'shared footer must expose verified Budapest Artineris artist participation');
 must(!/footerAccordions|syncFooterGroups|syncFooterAccordions/.test(boot),'fluid rhythm boot must not own footer disclosure state');
+must(!/footerDesktopQuery|syncFooterAccordions|event\.preventDefault\(\)[\s\S]{0,180}details\.open = true/.test(main),'desktop viewport logic must not force footer disclosures open or steal summary interaction');
 must(!/footerAccordions|syncFooterGroups|syncFooterAccordions/.test(legacyMain),'legacy js/main.js must not own footer disclosure state');
 must(!/compactFooterReplacement|smallDesktopFooter|LIVE-PIXEL-GEOMETRY-V21-SMALL-DESKTOP/.test(hardener),'production hardener must not rewrite footer geometry');
 must(!/const footerRules=|site-footer.*grid-template-columns/.test(restore),'design restore compiler must not generate footer geometry');

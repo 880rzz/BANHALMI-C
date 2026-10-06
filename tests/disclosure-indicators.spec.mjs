@@ -38,14 +38,24 @@ for (const path of pages) {
         const summary = summaries.nth(index);
         if (!(await summary.isVisible())) continue;
         const details = summary.locator('xpath=..');
-        const isStaticDesktopFooter = width >= 1180 && await details.evaluate(node => node.matches('.site-footer .footer-accordion'));
-        if (isStaticDesktopFooter) {
-          await expect(summary).toHaveCSS('pointer-events', 'none');
-          const marker = await summary.evaluate(node => getComputedStyle(node, '::after').content);
-          expect(['none', 'normal', '""']).toContain(marker);
+        const isFooterDisclosure = await details.evaluate(node => node.matches('.site-footer .footer-accordion'));
+        checked += 1;
+        if (isFooterDisclosure) {
+          await expect(summary).not.toHaveCSS('pointer-events', 'none');
+          await expect(details).toHaveJSProperty('open', false);
+          const expanded = await summary.getAttribute('aria-expanded');
+          if (expanded !== null) expect(expanded).toBe('false');
+          if (index % 2 === 0) await summary.click();
+          else {
+            await summary.focus();
+            await page.keyboard.press('Space');
+          }
+          await expect(details).toHaveJSProperty('open', true);
+          if ((await summary.getAttribute('aria-expanded')) !== null) {
+            await expect(summary).toHaveAttribute('aria-expanded', 'true');
+          }
           continue;
         }
-        checked += 1;
         const assertMarker = async open => {
           const state = await summary.evaluate(node => {
             const pseudo = getComputedStyle(node, '::after').content;

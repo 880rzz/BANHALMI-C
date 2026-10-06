@@ -2,20 +2,7 @@
 (function () {
   "use strict";
 
-  // Footer disclosure bootstrap.
-  // Compact/tablet layouts use native <details> interaction. Desktop keeps
-  // all groups open. Do not duplicate native disclosure state with hidden or
-  // inline display styles: Safari must be able to toggle the summary itself.
-  (function primeFooterDisclosureState(){
-    var desktop = window.matchMedia("(min-width: 1180px)").matches;
-    Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion")).forEach(function(details){
-      details.open = desktop;
-      var list = details.querySelector("ul");
-      if (!list) return;
-      list.hidden = false;
-      list.style.removeProperty("display");
-    });
-  })();
+
 
   // Mobile menu
   var nav = document.querySelector(".nav");
@@ -94,45 +81,17 @@
 
   var footerAccordions = Array.prototype.slice.call(document.querySelectorAll("details.footer-accordion"));
   if (footerAccordions.length) {
-    var footerDesktopQuery = window.matchMedia("(min-width: 1180px)");
-    var syncFooterAccordions = function () {
-      footerAccordions.forEach(function (details) {
-        var list = details.querySelector("ul");
-        if (list) {
-          list.hidden = false;
-          list.style.removeProperty("display");
-        }
-        if (footerDesktopQuery.matches) details.open = true;
-        else details.open = false;
-      });
-    };
     footerAccordions.forEach(function (details) {
       var summary = details.querySelector("summary");
       if (!summary) return;
-      details.setAttribute("data-footer-disclosure-runtime", "v43");
-      summary.setAttribute("aria-expanded", details.open ? "true" : "false");
-      summary.addEventListener("click", function (event) {
-        if (footerDesktopQuery.matches) {
-          event.preventDefault();
-          details.open = true;
-          summary.setAttribute("aria-expanded", "true");
-          return;
-        }
-        var nextOpen = !details.open;
-        event.preventDefault();
-        window.requestAnimationFrame(function () {
-          details.open = nextOpen;
-          summary.setAttribute("aria-expanded", nextOpen ? "true" : "false");
-          details.setAttribute("data-footer-disclosure-last-action", nextOpen ? "open" : "close");
-        });
+      details.setAttribute("data-footer-disclosure-runtime", "v44");
+      details.open = false;
+      summary.setAttribute("aria-expanded", "false");
+      details.addEventListener("toggle", function () {
+        summary.setAttribute("aria-expanded", details.open ? "true" : "false");
+        details.setAttribute("data-footer-disclosure-last-action", details.open ? "open" : "close");
       });
     });
-    syncFooterAccordions();
-    if (typeof footerDesktopQuery.addEventListener === "function") {
-      footerDesktopQuery.addEventListener("change", syncFooterAccordions);
-    } else if (typeof footerDesktopQuery.addListener === "function") {
-      footerDesktopQuery.addListener(syncFooterAccordions);
-    }
   }
 
   // Scroll reveal (respects reduced motion)
