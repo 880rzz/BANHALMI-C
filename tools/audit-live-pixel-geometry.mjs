@@ -96,9 +96,10 @@ for(const vp of viewports){
     },{kind:target.kind});
 
     let disclosure=null;
-    if(width<1180){
+    if(width>=0){
       const summary=page.locator('.site-footer details.footer-accordion summary').first();
       if(await summary.count()){
+        const initialOpen=await summary.evaluate(el=>Boolean(el.parentElement?.open));
         await summary.click();
         await page.waitForTimeout(50);
         disclosure=await page.evaluate(()=>{
@@ -107,6 +108,7 @@ for(const vp of viewports){
           const r=ul?.getBoundingClientRect();
           return d&&ul?{open:d.open,hidden:Boolean(ul.hidden),display:getComputedStyle(ul).display,height:r?.height||0,runtime:d.getAttribute('data-footer-disclosure-runtime'),lastAction:d.getAttribute('data-footer-disclosure-last-action'),ariaExpanded:d.querySelector('summary')?.getAttribute('aria-expanded')||null}:null;
         });
+        if(disclosure) disclosure.initialOpen=initialOpen;
         if(disclosure?.open) await summary.click();
       }
     }
@@ -241,9 +243,10 @@ for(const width of requiredResponsiveWidths){
       return {scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,scrollHeight:document.documentElement.scrollHeight,footer:fr,grid:gr,brand:br,entity:er,blocks,intersections,gridTemplateColumns:grid?getComputedStyle(grid).gridTemplateColumns:'',entityWordBreak:es?.wordBreak||'',entityOverflowWrap:es?.overflowWrap||'',summaries:[...(footer?.querySelectorAll('details.footer-accordion>summary')||[])].filter(visible).map(el=>rect(el).height),footerTail:fr?document.documentElement.scrollHeight-fr.bottom:null,rootBackground:getComputedStyle(document.documentElement).backgroundColor,legalControls,legalLineCount:legalLineTops.length,hero};
     },{kind:target.kind});
     let disclosure=null;
-    if(width<1180){
+    if(width>=0){
       const summary=page.locator('.site-footer details.footer-accordion summary').first();
       if(await summary.count()){
+        const initialOpen=await summary.evaluate(el=>Boolean(el.parentElement?.open));
         await summary.click();
         await page.waitForTimeout(50);
         disclosure=await page.evaluate(()=>{
@@ -252,6 +255,7 @@ for(const width of requiredResponsiveWidths){
           const r=ul?.getBoundingClientRect();
           return d&&ul?{open:d.open,hidden:Boolean(ul.hidden),display:getComputedStyle(ul).display,height:r?.height||0,runtime:d.getAttribute('data-footer-disclosure-runtime'),lastAction:d.getAttribute('data-footer-disclosure-last-action'),ariaExpanded:d.querySelector('summary')?.getAttribute('aria-expanded')||null}:null;
         });
+        if(disclosure) disclosure.initialOpen=initialOpen;
         if(disclosure?.open) await summary.click();
       }
     }
@@ -263,7 +267,7 @@ for(const width of requiredResponsiveWidths){
     if(width>=1440&&state.legalLineCount!==1) issues.push(`desktop legal controls wrap to ${state.legalLineCount} lines`);
     if(width>=1440&&!state.legalControls.some(x=>/cookie|süti/i.test(x.label))) issues.push('desktop cookie settings control missing from legal row');
     if(width>=1180&&state.rootBackground!=='rgb(255, 255, 255)') issues.push(`Safari root overscroll background ${state.rootBackground} does not match canonical white document floor`);
-    if(width<1180&&(!disclosure||!disclosure.open||disclosure.hidden||disclosure.display==='none'||disclosure.height<1)) issues.push('footer accordion interaction failed: '+JSON.stringify(disclosure));
+    if(!disclosure||disclosure.initialOpen||!disclosure.open||disclosure.hidden||disclosure.display==='none'||disclosure.height<1||disclosure.ariaExpanded!=='true') issues.push('footer accordion user-owned interaction failed: '+JSON.stringify(disclosure));
     if(width<=720){
       const tracks=state.gridTemplateColumns.trim().split(/\s+/).filter(Boolean);
       if(tracks.length!==1) issues.push(`mobile footer computed ${tracks.length} columns: ${state.gridTemplateColumns}`);
