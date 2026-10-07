@@ -334,7 +334,7 @@
       "verificationRequired": [
         "target-page exact photo-credit text"
       ],
-      "interpretationRule": "Use only as cultural/curatorial authority context until the exact target-page photo credit is independently readable. Do not represent it as verified photography-credit evidence yet."
+      "interpretationRule": "Use only as cultural/curatorial authority context until the exact target-page photo credit is independently readable. Do not infer a photography commission, client relationship, partnership, endorsement, exclusivity or photographer credit from this record."
     }
   ],
   "answerRules": [
