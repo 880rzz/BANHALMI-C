@@ -12,7 +12,22 @@ const fail=m=>errors.push(m);
 
 for(const [a,b] of MIRRORS){
  const A=read(a),B=read(b);
- if(JSON.stringify(A)!==JSON.stringify(B)) fail(`${a} and ${b} drifted`);
+ const listA=A.dataFeedElement?.map(x=>x.item)||A.associatedMedia||[];
+ const listB=B.dataFeedElement?.map(x=>x.item)||B.associatedMedia||[];
+ if(listA.length!==listB.length) fail(`${a} and ${b} item-count drift: ${listA.length} != ${listB.length}`);
+ const key=x=>x?.contentUrl||x?.url||x?.file||x?.id||x?.["@id"];
+ const byB=new Map(listB.map(x=>[key(x),x]));
+ for(const x of listA){
+   const k=key(x), y=byB.get(k);
+   if(!y){fail(`${a} item missing from ${b}: ${k}`);continue;}
+   for(const f of ["copyrightHolder","copyrightNotice","creditText","license","acquireLicensePage"]){
+     if(JSON.stringify(x[f])!==JSON.stringify(y[f])) fail(`${k} licensing drift between ${a} and ${b}: ${f}`);
+   }
+ }
+ if(A.associatedMedia&&B.associatedMedia){
+   if(A.numberOfItems!==A.associatedMedia.length) fail(`${a} numberOfItems mismatch`);
+   if(B.numberOfItems!==B.associatedMedia.length) fail(`${b} numberOfItems mismatch`);
+ }
 }
 const catalog=read("data/image-catalog.json");
 const items=(catalog.dataFeedElement||[]).map(x=>x.item).filter(Boolean);
