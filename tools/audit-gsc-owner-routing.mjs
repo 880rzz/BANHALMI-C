@@ -4,7 +4,7 @@ const errors = [];
 const read = path => fs.readFileSync(path, 'utf8');
 
 const matrix = JSON.parse(read('data/search-authority-master-matrix.json'));
-if (matrix.version !== '2026-10-06-v8-gsc-wizard-owner-routing') errors.push('GSC authority matrix version is stale');
+if (matrix.version !== '2026-10-07-v9-gsc-owner-routing') errors.push('GSC authority matrix version is stale');
 if (matrix.latestWizardSnapshot?.settledThrough !== '2026-10-04') errors.push('GSC Wizard settled-through date must be 2026-10-04');
 if (JSON.stringify(matrix.latestWizardSnapshot?.baseline28d) !== JSON.stringify(['2026-09-06','2026-10-03'])) errors.push('GSC Wizard 28d window drifted');
 
@@ -86,7 +86,7 @@ for (const [path, canonical, phrase] of serviceOwners) {
 }
 
 const intents = JSON.parse(read('customer-intent-model.json'));
-if (intents.schemaVersion !== '2026-10-06-v5-search-owner-routing') errors.push('Customer intent model search-owner version is stale');
+if (intents.schemaVersion !== '2026-10-07-v5-search-owner-routing') errors.push('Customer intent model search-owner version is stale');
 const machineOwners = new Map((intents.searchOwnerAliases?.owners || []).map(row => [row.service, row.routes]));
 for (const [service, routes] of [
   ['portrait',{en:'/portrait/',hu:'/hu/portre/',de:'/de-at/portrait/'}],
