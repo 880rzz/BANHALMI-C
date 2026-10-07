@@ -78,6 +78,9 @@ for(const [file,expected] of Object.entries(euforiaArticleByFile)){
     assert(h.includes(invariant), `${file}: Péter Magyar reference schema invariant missing ${invariant}`);
   }
 }
+const huImpressum=read('hu/impresszum/index.html');
+assert(huImpressum.includes('A központi életmű- és művészeti archívum: <a href="https://www.banhalmi.art/hu/">banhalmi.art</a>'), 'hu/impresszum/index.html: central art archive link must resolve to the Hungarian ART homepage');
+
 const css=read('assets/css/style.css');
 assert(/nav-submenu/.test(css), 'dropdown-specific CSS is required');
 assert(!/(?:filter|backdrop-filter|-webkit-backdrop-filter)\s*:[^;{}]*blur\s*\((?!\s*0(?:px|rem|em|%)?\s*\))/i.test(css), 'production CSS must not contain non-zero blur effects');
