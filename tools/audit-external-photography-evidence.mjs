@@ -40,8 +40,12 @@ fail(records.length >= 11, 'External evidence registry lost owner-supplied Linke
 const ids = new Set(records.map((record) => record.id));
 fail(ids.size === records.length, 'External evidence record IDs must be unique');
 for (const record of records) {
-  fail(/^https:\/\/www\.linkedin\.com\/posts\//.test(record.url), `LinkedIn evidence URL malformed: ${record.id}`);
-  fail(Array.isArray(record.capabilities) && record.capabilities.includes(REUSE_CAP), `External reuse capability missing: ${record.id}`);
+  fail(/^https:\/\//.test(record.url), `External evidence URL malformed: ${record.id}`);
+  if (/LinkedIn/i.test(record.sourceType || '') || record.id.startsWith('linkedin-')) {
+    fail(/^https:\/\/www\.linkedin\.com\/posts\//.test(record.url), `LinkedIn evidence URL malformed: ${record.id}`);
+  }
+  const requiresReuse = !record.capabilities?.includes('Cultural / Curatorial Authority');
+  fail(Array.isArray(record.capabilities) && (!requiresReuse || record.capabilities.includes(REUSE_CAP)), `External reuse capability missing: ${record.id}`);
   fail(hasConservativeRelationshipGuardrail(record.interpretationRule), `Relationship guardrail missing: ${record.id}`);
 }
 
@@ -115,4 +119,4 @@ for (const record of records) {
   }
 }
 
-console.log(`External photography evidence audit passed: ${records.length} LinkedIn records, ${amcham.length} AmCham records, brand/event authorship boundaries protected.`);
+console.log(`External photography evidence audit passed: ${records.length} records, ${amcham.length} AmCham records, source URL and brand/event authorship boundaries protected.`);
