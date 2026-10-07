@@ -9,8 +9,8 @@ const exists = p => fs.existsSync(path.join(root, p));
 const staticRedirects = {
   'en/work': 'https://www.banhalmi.art/',
   'about/norbert-banhalmi': 'https://www.norbertbanhalmi.com/about/',
-  'hu/rolam/banhalmi-norbert': 'https://www.norbertbanhalmi.com/about/',
-  'de/ueber-mich/norbert-banhalmi': 'https://www.norbertbanhalmi.com/about/',
+  'hu/rolam/banhalmi-norbert': 'https://www.norbertbanhalmi.com/hu/eletmu/',
+  'de/ueber-mich/norbert-banhalmi': 'https://www.norbertbanhalmi.com/de-at/werk/',
   'press': 'https://www.banhalmi.art/press.html',
   'old-print': 'https://www.banhalmi.art/press.html',
   'hu/sajto/megjelenesek': 'https://www.banhalmi.art/hu/press.html',
