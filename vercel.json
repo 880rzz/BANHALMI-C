@@ -16,12 +16,12 @@
     },
     {
       "source": "/hu/rolam/banhalmi-norbert",
-      "destination": "/about/",
+      "destination": "/hu/eletmu/",
       "permanent": true
     },
     {
       "source": "/de/ueber-mich/norbert-banhalmi",
-      "destination": "/about/",
+      "destination": "/de-at/werk/",
       "permanent": true
     },
     {
