@@ -24,7 +24,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-04",
@@ -41,7 +49,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-05",
@@ -58,7 +74,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-06",
@@ -75,7 +99,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-07",
@@ -96,7 +128,15 @@
       "contentRating": "18+",
       "requiredMinAge": 18,
       "previewFile": "/assets/img/fine-art/age-preview/banhalmi-art-archive-07-low-key-body-study-18-preview.webp",
-      "fullSizeViewing": "Available through the website after an 18+ self-declaration."
+      "fullSizeViewing": "Available through the website after an 18+ self-declaration.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-08",
@@ -113,7 +153,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-09",
@@ -134,7 +182,15 @@
       "contentRating": "18+",
       "requiredMinAge": 18,
       "previewFile": "/assets/img/fine-art/age-preview/banhalmi-art-archive-09-tattooed-body-detail-18-preview.webp",
-      "fullSizeViewing": "Available through the website after an 18+ self-declaration."
+      "fullSizeViewing": "Available through the website after an 18+ self-declaration.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-10",
@@ -151,7 +207,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-11",
@@ -168,7 +232,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-12",
@@ -185,7 +257,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-13",
@@ -202,7 +282,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-14",
@@ -219,7 +307,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-15",
@@ -236,7 +332,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-16",
@@ -253,7 +357,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-19",
@@ -274,7 +386,15 @@
       "contentRating": "18+",
       "requiredMinAge": 18,
       "previewFile": "/assets/img/fine-art/age-preview/banhalmi-art-archive-19-monochrome-intimate-portrait-18-preview.webp",
-      "fullSizeViewing": "Available through the website after an 18+ self-declaration."
+      "fullSizeViewing": "Available through the website after an 18+ self-declaration.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-20",
@@ -291,7 +411,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-21",
@@ -308,7 +436,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-23",
@@ -325,7 +461,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-24",
@@ -342,7 +486,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-25",
@@ -359,7 +511,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-26",
@@ -376,7 +536,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-27",
@@ -393,7 +561,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-28",
@@ -410,7 +586,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-29",
@@ -427,7 +611,15 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     },
     {
       "id": "fine-art-archive-31",
@@ -444,11 +636,20 @@
       "creator": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+      "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+      "copyrightHolder": {
+        "@id": "https://www.norbertbanhalmi.com/about/",
+        "@type": "Person",
+        "name": "Norbert Bánhalmi"
+      },
+      "creditText": "Norbert Banhalmi / BANHALMI",
+      "license": "https://www.norbertbanhalmi.com/terms-conditions/",
+      "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/"
     }
   ],
   "contentPolicy": {
     "ageRestrictedContent": "Adult artistic body and intimate studies use darkened previews and an image-level 18+ self-declaration gate.",
     "minors": "Images depicting minors are excluded from the public gallery."
-  }
+  },
+  "numberOfItems": 25
 }

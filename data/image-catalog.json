@@ -31,7 +31,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -56,7 +61,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -81,7 +91,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -106,7 +121,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -131,7 +151,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -156,7 +181,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -181,7 +211,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -206,7 +241,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -231,7 +271,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -256,7 +301,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -281,7 +331,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -306,7 +361,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -331,7 +391,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -356,7 +421,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -381,7 +451,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -406,7 +481,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -431,7 +511,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -456,7 +541,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -481,7 +571,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -506,7 +601,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -531,7 +631,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -556,7 +661,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -581,7 +691,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -606,7 +721,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -631,7 +751,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -656,7 +781,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -681,7 +811,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -706,7 +841,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -731,7 +871,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -756,7 +901,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -781,7 +931,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -806,7 +961,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -831,7 +991,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -856,7 +1021,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -881,7 +1051,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -906,7 +1081,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -931,7 +1111,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -956,7 +1141,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -981,7 +1171,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1006,7 +1201,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1031,7 +1231,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1056,7 +1261,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1081,7 +1291,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1106,7 +1321,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1131,7 +1351,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1156,7 +1381,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1181,7 +1411,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1206,7 +1441,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1231,7 +1471,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1256,7 +1501,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1281,7 +1531,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1306,7 +1561,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1331,7 +1591,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1356,7 +1621,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1381,7 +1651,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1406,7 +1681,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1431,7 +1711,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1456,7 +1741,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1481,7 +1771,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1506,7 +1801,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1531,7 +1831,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1556,7 +1861,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1581,7 +1891,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1606,7 +1921,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1631,7 +1951,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1656,7 +1981,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1681,7 +2011,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1706,7 +2041,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1731,7 +2071,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1756,7 +2101,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1781,7 +2131,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1806,7 +2161,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1831,7 +2191,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1856,7 +2221,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1881,7 +2251,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1906,7 +2281,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1931,7 +2311,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1956,7 +2341,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -1981,7 +2371,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2006,7 +2401,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2031,7 +2431,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2056,7 +2461,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2081,7 +2491,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2106,7 +2521,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2131,7 +2551,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2156,7 +2581,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2181,7 +2611,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2206,7 +2641,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2231,7 +2671,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2256,7 +2701,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2281,7 +2731,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2306,7 +2761,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2331,7 +2791,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2356,7 +2821,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2381,7 +2851,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2406,7 +2881,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2431,7 +2911,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2456,7 +2941,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2481,7 +2971,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2506,7 +3001,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2531,7 +3031,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2556,7 +3061,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2581,7 +3091,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2606,7 +3121,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2631,7 +3151,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2656,7 +3181,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2681,7 +3211,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2706,7 +3241,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2731,7 +3271,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2756,7 +3301,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2781,7 +3331,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2806,7 +3361,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2831,7 +3391,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2856,7 +3421,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2881,7 +3451,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2906,7 +3481,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2931,7 +3511,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2956,7 +3541,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -2981,7 +3571,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3006,7 +3601,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3031,7 +3631,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3056,7 +3661,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3081,7 +3691,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3106,7 +3721,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3131,7 +3751,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3156,7 +3781,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3181,7 +3811,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3206,7 +3841,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3231,7 +3871,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3256,7 +3901,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3281,7 +3931,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3306,7 +3961,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3331,7 +3991,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3356,7 +4021,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3381,7 +4051,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3406,7 +4081,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3431,7 +4111,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3456,7 +4141,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3481,7 +4171,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3506,7 +4201,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3531,7 +4231,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3556,7 +4261,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3581,7 +4291,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3606,7 +4321,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3631,7 +4351,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3656,7 +4381,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3681,7 +4411,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3706,7 +4441,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3731,7 +4471,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3756,7 +4501,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3781,7 +4531,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3806,7 +4561,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3831,7 +4591,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://www.norbertbanhalmi.com/requestaquote/",
         "license": "https://www.norbertbanhalmi.com/terms-conditions/",
-        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved."
+        "copyrightNotice": "© Norbert Banhalmi / BANHALMI. All rights reserved.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     },
     {
@@ -3858,7 +4623,12 @@
         "creditText": "Norbert Banhalmi / BANHALMI",
         "acquireLicensePage": "https://commons.wikimedia.org/wiki/File:Peter-Magyar-portrait-2026.jpg",
         "license": "https://creativecommons.org/licenses/by-sa/4.0/",
-        "copyrightNotice": "© Norbert Banhalmi. Licensed under CC BY-SA 4.0."
+        "copyrightNotice": "© Norbert Banhalmi. Licensed under CC BY-SA 4.0.",
+        "copyrightHolder": {
+          "@id": "https://www.norbertbanhalmi.com/about/",
+          "@type": "Person",
+          "name": "Norbert Bánhalmi"
+        }
       }
     }
   ]
