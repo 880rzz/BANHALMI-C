@@ -1314,3 +1314,33 @@
 })();
  /* BANHALMI-CONTACT-DOCK-V1:END */
 
+
+
+/* BANHALMI-GLOBAL-TEXT-LINK-ARROW-V1-20261007
+   One restrained external-direction glyph after every human-readable text link.
+   Identity/image-only links stay visually clean; aria-hidden keeps accessible names unchanged. */
+(function(){
+  "use strict";
+  function decorate(root){
+    var scope=root&&root.querySelectorAll?root:document;
+    var links=[];
+    if(scope.matches&&scope.matches("a")) links.push(scope);
+    scope.querySelectorAll("a").forEach(function(a){links.push(a);});
+    links.forEach(function(a){
+      if(a.hasAttribute("data-banhalmi-link-arrow")) return;
+      if(a.classList.contains("brand")||a.classList.contains("footer-wko-profile")) return;
+      var text=(a.textContent||"").replace(/\s+/g," ").trim();
+      if(!text||text.endsWith("↗")) return;
+      var arrow=document.createElement("span");
+      arrow.className="banhalmi-link-arrow";
+      arrow.setAttribute("aria-hidden","true");
+      arrow.textContent="↗";
+      a.appendChild(arrow);
+      a.setAttribute("data-banhalmi-link-arrow","");
+    });
+  }
+  decorate(document);
+  new MutationObserver(function(records){
+    records.forEach(function(record){record.addedNodes.forEach(function(node){if(node.nodeType===1)decorate(node);});});
+  }).observe(document.body,{childList:true,subtree:true});
+})();
