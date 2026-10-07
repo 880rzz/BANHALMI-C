@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-06-v8",
+  "version": "2026-10-07-v9-gsc-owner-routing-current-main",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
@@ -11,6 +11,11 @@
     "baseline6m": [
       "2026-03-24",
       "2026-09-19"
+    ],
+    "latestWizardSettledThrough": "2026-10-04",
+    "latestWizardBaseline28d": [
+      "2026-09-06",
+      "2026-10-03"
     ]
   },
   "rules": {
@@ -349,12 +354,11 @@
     }
   ],
   "nextActions": [
-    "Measure owner migration for HU portrait, DE portrait and HU Fine Art/akt intent after the 2026-10-06 remediation; do not churn these URLs during the minimum measurement window absent P0/P1 evidence.",
-    "Protect generic Budapest photographer and branded homepage winners; homepage title/H1 remain regression-locked.",
-    "Keep Brand owner architecture in place, but defer new copy changes until fresh settled query-level evidence supports them.",
-    "Run ART live-route/redirect forensic audit for legacy /ajanlatkeres, /blog/tags/*, /post/* and ?lang=de URLs before modifying content.",
-    "Run Professional legacy URL audit for slashless /portrait, /de-at and ?lang=de signals.",
-    "Then select the first P1 change that improves owner routing without changing protected page semantics."
+    "Protect generic homepage winners: fényképész budapest, fotós budapest, budapest fotós and profi fotós; do not retitle or restructure the homepage for service-specific queries.",
+    "Measure whether HU portrait queries transfer from /hu/ and GBP-parameterized homepage URLs to /hu/portre/ after the 2026-10-06 contextual-authority change.",
+    "Measure whether DE portrait/brand queries transfer from the homepage to /de-at/portrait/ and /de-at/brand/ after the 2026-10-06 contextual-authority change.",
+    "Measure EN event/brand and DE Fine Art owner transfer before any further title/H1 changes.",
+    "Keep product-photo and photography-course queries excluded unless BANHALMI deliberately adds those services."
   ],
   "ecosystemProperties": {
     "professional": {
@@ -941,5 +945,167 @@
       "generic corporate-photographer retitling",
       "generic portfolio"
     ]
+  },
+  "latestWizardSnapshot": {
+    "property": "https://www.norbertbanhalmi.com/",
+    "searchType": "web",
+    "baseline28d": [
+      "2026-09-06",
+      "2026-10-03"
+    ],
+    "settledThrough": "2026-10-04",
+    "dataSource": "api",
+    "measuredAt": "2026-10-06",
+    "protectedHomepageQueries": [
+      {
+        "query": "fényképész budapest",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 3.375,
+        "leadingPage": "https://www.norbertbanhalmi.com/hu/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6286584932719134667",
+        "leadingPageImpressions": 6,
+        "intendedOwner": "/"
+      },
+      {
+        "query": "fotós budapest",
+        "clicks": 0,
+        "impressions": 20,
+        "ctr": 0,
+        "position": 2.3,
+        "leadingPage": "https://www.norbertbanhalmi.com/hu/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6286584932719134667",
+        "leadingPageImpressions": 10,
+        "intendedOwner": "/"
+      },
+      {
+        "query": "budapest fotós",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": 0,
+        "position": 2.4,
+        "leadingPage": "https://www.norbertbanhalmi.com/hu/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6286584932719134667",
+        "leadingPageImpressions": 4,
+        "intendedOwner": "/"
+      },
+      {
+        "query": "profi fotós",
+        "clicks": 0,
+        "impressions": 34,
+        "ctr": 0,
+        "position": 3.588235294117647,
+        "leadingPage": "https://www.norbertbanhalmi.com/hu/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6286584932719134667",
+        "leadingPageImpressions": 19,
+        "intendedOwner": "/"
+      }
+    ],
+    "canonicalOwnerGaps": [
+      {
+        "query": "portré fotózás budapest",
+        "clicks": 0,
+        "impressions": 86,
+        "ctr": 0,
+        "position": 10.186046511627907,
+        "leadingPage": "https://www.norbertbanhalmi.com/hu/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6286584932719134667",
+        "leadingPageImpressions": 36,
+        "expectedOwner": "/hu/portre/",
+        "cluster": "portrait",
+        "priority": "P1"
+      },
+      {
+        "query": "portréfotózás budapest",
+        "clicks": 0,
+        "impressions": 45,
+        "ctr": 0,
+        "position": 19.511111111111113,
+        "leadingPage": "https://www.norbertbanhalmi.com/hu/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6286584932719134667",
+        "leadingPageImpressions": 26,
+        "expectedOwner": "/hu/portre/",
+        "cluster": "portrait",
+        "priority": "P1"
+      },
+      {
+        "query": "portraitfotografie wien",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": 0,
+        "position": 20.125,
+        "leadingPage": "https://www.norbertbanhalmi.com/",
+        "leadingPageImpressions": 6,
+        "expectedOwner": "/de-at/portrait/",
+        "cluster": "portrait",
+        "priority": "P1"
+      },
+      {
+        "query": "brand fotograf",
+        "clicks": 0,
+        "impressions": 23,
+        "ctr": 0,
+        "position": 14.91304347826087,
+        "leadingPage": "https://www.norbertbanhalmi.com/",
+        "leadingPageImpressions": 23,
+        "expectedOwner": "/de-at/brand/",
+        "cluster": "brand",
+        "priority": "P1"
+      },
+      {
+        "query": "brand photographer",
+        "clicks": 0,
+        "impressions": 21,
+        "ctr": 0,
+        "position": 19.285714285714285,
+        "leadingPage": "https://www.norbertbanhalmi.com/",
+        "leadingPageImpressions": 20,
+        "expectedOwner": "/lifestyle/",
+        "cluster": "brand",
+        "priority": "P1"
+      },
+      {
+        "query": "event photography",
+        "clicks": 0,
+        "impressions": 7,
+        "ctr": 0,
+        "position": 21.428571428571427,
+        "leadingPage": "https://www.norbertbanhalmi.com/",
+        "leadingPageImpressions": 7,
+        "expectedOwner": "/event-photography/",
+        "cluster": "event",
+        "priority": "P1"
+      },
+      {
+        "query": "fine art fotografie",
+        "clicks": 0,
+        "impressions": 12,
+        "ctr": 0,
+        "position": 11.416666666666666,
+        "leadingPage": "https://www.norbertbanhalmi.com/",
+        "leadingPageImpressions": 12,
+        "expectedOwner": "/de-at/fine-art/",
+        "cluster": "fine-art",
+        "priority": "P1"
+      },
+      {
+        "query": "aktfotózás",
+        "clicks": 0,
+        "impressions": 11,
+        "ctr": 0,
+        "position": 9.454545454545455,
+        "leadingPage": "https://www.norbertbanhalmi.com/",
+        "leadingPageImpressions": 4,
+        "expectedOwner": "/hu/muveszi-fotografia/",
+        "cluster": "fine-art",
+        "priority": "P1"
+      }
+    ],
+    "remediation": {
+      "strategy": "Strengthen contextual internal authority and natural localized service-language on the canonical service owners. Do not retitle or restructure protected generic homepage winners.",
+      "branch": "fix/gsc-owner-routing-current-main-20261007",
+      "homepageTitleH1Policy": "unchanged",
+      "excludedFromTargeting": [
+        "portfolio",
+        "produktfotos wien",
+        "fotós tanfolyam",
+        "fényképész tanfolyam"
+      ]
+    }
   }
 }
