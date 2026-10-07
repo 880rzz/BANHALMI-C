@@ -66,13 +66,14 @@ if(peterMagyarWork){
   for(const field of ['name','headline','datePublished','inLanguage','publisher','creditText']) assert(Boolean(referenceArticle?.[field]), `verified reference Article missing ${field}`);
 }
 const euforiaArticleByFile={
-  'portrait/index.html':'https://www.banhalmi.art/exhibitions/euforia.html#article',
-  'hu/portre/index.html':'https://www.banhalmi.art/hu/exhibitions/euforia.html#article',
-  'de-at/portrait/index.html':'https://www.banhalmi.art/de-at/exhibitions/euforia.html#article'
+  'portrait/index.html':{id:'https://www.banhalmi.art/exhibitions/euforia.html#article',url:'https://www.banhalmi.art/exhibitions/euforia.html',name:'EUFÓRIA — The Anatomy of Presence',language:'en-GB'},
+  'hu/portre/index.html':{id:'https://www.banhalmi.art/hu/exhibitions/euforia.html#article',url:'https://www.banhalmi.art/hu/exhibitions/euforia.html',name:'EUFÓRIA – a Jelenlét anatómiája',language:'hu-HU'},
+  'de-at/portrait/index.html':{id:'https://www.banhalmi.art/de-at/exhibitions/euforia.html#article',url:'https://www.banhalmi.art/de-at/exhibitions/euforia.html',name:'EUFÓRIA — Die Anatomie der Präsenz',language:'de-AT'}
 };
-for(const [file,euforiaArticle] of Object.entries(euforiaArticleByFile)){
+for(const [file,expected] of Object.entries(euforiaArticleByFile)){
   const h=read(file);
-  assert(h.includes(`\"@type\":\"Article\",\"@id\":\"${euforiaArticle}\"`), `${file}: missing localized standalone EUFÓRIA Article schema entity`);
+  assert(h.includes(`\"@type\":\"Article\",\"@id\":\"${expected.id}\",\"url\":\"${expected.url}\",\"name\":\"${expected.name}\",\"headline\":\"${expected.name}\"`), `${file}: localized EUFÓRIA Article id/url/name/headline drifted`);
+  assert(h.includes(`\"inLanguage\":\"${expected.language}\"`), `${file}: localized EUFÓRIA Article language drifted`);
   for(const invariant of ['Q124488292','Q56391118','Q138717398','Peter-Magyar-portrait-2026.jpg','peter-magyar-portrait-2026-by-norbert-banhalmi.webp','supporting editorial evidence, not a political endorsement']){
     assert(h.includes(invariant), `${file}: Péter Magyar reference schema invariant missing ${invariant}`);
   }
