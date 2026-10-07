@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-07-v9-gsc-owner-routing-current-main",
+  "version": "2026-10-07-v9-gsc-owner-routing",
   "status": "AUDITÁLT",
   "source": {
     "property": "sc-domain:norbertbanhalmi.com",
@@ -1098,7 +1098,7 @@
     ],
     "remediation": {
       "strategy": "Strengthen contextual internal authority and natural localized service-language on the canonical service owners. Do not retitle or restructure protected generic homepage winners.",
-      "branch": "fix/gsc-owner-routing-current-main-20261007",
+      "branch": "fix/gsc-owner-routing-20261006",
       "homepageTitleH1Policy": "unchanged",
       "excludedFromTargeting": [
         "portfolio",
