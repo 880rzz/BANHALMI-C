@@ -7,10 +7,6 @@ const routes = {
   'muveszi-aktfotozas': 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/',
   'reklam-fotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
   'eskuvoi-fotozas-tihany': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
-  'gyermekfotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
-  'csaladifotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
-  'csaladi-fotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
-  'babafotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
   'profifotos': 'https://www.norbertbanhalmi.com/hu/',
   'portfolio-fotozas-budapest': 'https://www.norbertbanhalmi.com/hu/brand/',
   'portfoliofotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
@@ -40,3 +36,10 @@ for (const [route, target] of Object.entries(routes)) {
 }
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log(`Stage62 legacy blog-link redirect audit passed: ${Object.keys(routes).length} broken historical BANHALMI URLs consolidate to current canonical destinations.`);
+
+// Retired family/child services must not be redirected to event photography.
+const retiredServices = ['babafotozas', 'csaladi-fotozas', 'csaladifotozas', 'gyermekfotozas'];
+for (const route of retiredServices) {
+  if (fs.existsSync(`${route}/index.html`)) { console.error(`${route}: retired service redirect stub must be removed`); process.exitCode = 1; }
+  if ((JSON.parse(fs.readFileSync('vercel.json', 'utf8')).redirects || []).some(r => r.source === `/${route}`)) { console.error(`${route}: retired service must not redirect`); process.exitCode = 1; }
+}
