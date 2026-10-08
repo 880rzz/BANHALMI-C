@@ -25,10 +25,6 @@ const staticRedirects = {
   'reklamfotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
   'fotozas-arak': 'https://www.norbertbanhalmi.com/hu/ajanlatkeres/',
   'eskuvoi-fotozas-tihany': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
-  'gyermekfotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
-  'csaladifotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
-  'csaladi-fotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
-  'babafotozas': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
   'profifotos': 'https://www.norbertbanhalmi.com/hu/',
   'portfolio-fotozas-budapest': 'https://www.norbertbanhalmi.com/hu/brand/',
   'portfoliofotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
@@ -167,3 +163,10 @@ if (failures.length) {
 }
 
 console.log(`Legacy redirect preservation passed: ${Object.keys(staticRedirects).length} historical stubs, ${Object.keys(mainDomainLegacyRedirects).length} main-domain legacy service redirects, two localized alias maps, permanent Vercel routing and sitemap exclusion are protected.`);
+
+// Retired family/child services must not be redirected to event photography.
+const retiredServices = ['babafotozas', 'csaladi-fotozas', 'csaladifotozas', 'gyermekfotozas'];
+for (const route of retiredServices) {
+  if (fs.existsSync(`${route}/index.html`)) { console.error(`${route}: retired service redirect stub must be removed`); process.exitCode = 1; }
+  if ((JSON.parse(fs.readFileSync('vercel.json', 'utf8')).redirects || []).some(r => r.source === `/${route}`)) { console.error(`${route}: retired service must not redirect`); process.exitCode = 1; }
+}
