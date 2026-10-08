@@ -3015,26 +3015,6 @@
       "permanent": true
     },
     {
-      "source": "/babafotozas",
-      "destination": "/hu/rendezvenyfotozas/",
-      "permanent": true
-    },
-    {
-      "source": "/csaladi-fotozas",
-      "destination": "/hu/rendezvenyfotozas/",
-      "permanent": true
-    },
-    {
-      "source": "/csaladifotozas",
-      "destination": "/hu/rendezvenyfotozas/",
-      "permanent": true
-    },
-    {
-      "source": "/gyermekfotozas",
-      "destination": "/hu/rendezvenyfotozas/",
-      "permanent": true
-    },
-    {
       "source": "/eskuvoi-fotozas-tihany",
       "destination": "/hu/rendezvenyfotozas/",
       "permanent": true
