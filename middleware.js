@@ -34,13 +34,9 @@ function redirectTarget(request) {
       ['/portfoliofotozas', 'https://www.norbertbanhalmi.com/hu/brand/'],
       ['/portfolio-fotozas-budapest', 'https://www.norbertbanhalmi.com/hu/brand/'],
       ['/profifotos', 'https://www.norbertbanhalmi.com/hu/'],
-      ['/babafotozas', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
-      ['/csaladi-fotozas', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
-      ['/csaladifotozas', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
-      ['/gyermekfotozas', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
       ['/eskuvoi-fotozas-tihany', 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/'],
     ]);
-    const historicalTarget = historicalHuTargets.get(normalizedPath);
+    if (new Set(['/babafotozas', '/csaladi-fotozas', '/csaladifotozas', '/gyermekfotozas']).has(normalizedPath)) return { gone: true };\n    const historicalTarget = historicalHuTargets.get(normalizedPath);
     if (historicalTarget) {
       const target = new URL(historicalTarget);
       target.search = incoming.search;
@@ -55,7 +51,7 @@ function redirectTarget(request) {
 
 export default function middleware(request) {
   const target = redirectTarget(request);
-  if (!target) {
+  if (target && target.gone) return new Response('Ez a szolgáltatás megszűnt.', { status: 410, headers: { 'content-type': 'text/plain; charset=utf-8', 'x-robots-tag': 'noindex' } });\n  if (!target) {
     return new Response('Unknown redirect host', {
       status: 404,
       headers: {
