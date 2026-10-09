@@ -3,13 +3,13 @@ import fs from 'node:fs';
 const registry=JSON.parse(fs.readFileSync('processors.json','utf8'));
 if(registry.documentType!=='BANHALMI service-provider and processor registry') throw new Error('processors.json: unexpected document type');
 const providers=new Map(registry.providers.map(p=>[p.id,p]));
-for(const id of ['github-pages','cloudflare-workers','google-workspace-apps-script','google-analytics-4','elfsight','vercel-legacy-redirects']){
+for(const id of ['github-pages','cloudflare-workers','google-workspace-apps-script','google-analytics-4','elfsight','youtube-embedded-player','vercel-legacy-redirects']){
   if(!providers.has(id)) throw new Error(`processors.json: missing provider ${id}`);
 }
 for(const id of ['google-analytics-4','elfsight']){
   if(providers.get(id).consentRequired!==true) throw new Error(`${id}: optional provider must remain consent-gated`);
 }
-for(const id of ['github-pages','cloudflare-workers','google-workspace-apps-script','vercel-legacy-redirects']){
+for(const id of ['github-pages','cloudflare-workers','google-workspace-apps-script','youtube-embedded-player','vercel-legacy-redirects']){
   if(providers.get(id).consentRequired!==false) throw new Error(`${id}: necessary/request-driven infrastructure must not be mislabeled as optional consent storage`);
 }
 const legacy=providers.get('vercel-legacy-redirects');
@@ -33,7 +33,7 @@ const pages={
   de:fs.readFileSync('de-at/datenschutz/index.html','utf8')
 };
 for(const [lang,text] of Object.entries(pages)){
-  for(const needle of ['GitHub Pages','Cloudflare','Google Apps Script','Elfsight','Vercel']){
+  for(const needle of ['GitHub Pages','Cloudflare','Google Apps Script','Elfsight','Vercel','YouTube','youtube-nocookie.com']){
     if(!text.includes(needle)) throw new Error(`${lang} privacy: missing provider disclosure ${needle}`);
   }
   if(/Wix/i.test(text)) throw new Error(`${lang} privacy: legacy Wix disclosure must not remain`);

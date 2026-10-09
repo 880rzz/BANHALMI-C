@@ -56,6 +56,7 @@ for (const [lang, text] of Object.entries(cookies)) {
   if (!text.includes('§ 165 Abs. 3 TKG 2021')) errors.push(`${lang} cookie notice missing Austrian TKG 2021 consent rule`);
   if (!/180 days|180 Tage|180 nap/i.test(text)) errors.push(`${lang} cookie notice missing consent-record lifetime`);
   if (!/Google Analytics 4/i.test(text)) errors.push(`${lang} cookie notice missing GA4 disclosure`);
+  if (!/YouTube/i.test(text) || !/youtube-nocookie\.com/i.test(text)) errors.push(`${lang} cookie notice missing click-to-load YouTube disclosure`);
   if (!/withdraw|widerruf|visszavon/i.test(text)) errors.push(`${lang} cookie notice missing withdrawal route`);
 }
 
