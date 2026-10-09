@@ -147,6 +147,28 @@
       "note": "The active project identifiers and observed settings are documented in the human-readable privacy notice. Retention periods are Microsoft's published service policy, not a BANHALMI-configured project setting. Copilot processing occurs only if an authorised project user invokes the feature."
     },
     {
+      "id": "youtube-embedded-player",
+      "provider": "Google / YouTube",
+      "service": "YouTube privacy-enhanced embedded player",
+      "purpose": [
+        "display user-requested video evidence and moving-image records"
+      ],
+      "scope": [
+        "norbertbanhalmi.com where a video poster is activated",
+        "banhalmi.art where a video poster is activated"
+      ],
+      "dataCategories": [
+        "IP address and connection data",
+        "device and browser data",
+        "referrer and technical request data",
+        "playback and interaction data processed by YouTube"
+      ],
+      "activation": "only after the visitor activates the video poster; no YouTube embed request is made on initial page render",
+      "consentRequired": false,
+      "legalContext": "explicit user action requests external content; YouTube's own privacy terms govern provider-side processing",
+      "privacyNotice": "https://policies.google.com/privacy"
+    },
+    {
       "id": "elfsight",
       "provider": "Elfsight",
       "service": "optional embedded content",
