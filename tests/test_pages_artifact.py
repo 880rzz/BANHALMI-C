@@ -64,6 +64,21 @@ class PagesArtifactTests(unittest.TestCase):
             hidden_files = [m.name for m in archive if m.isfile() and any(p.startswith('.') for p in Path(m.name[2:]).parts)]
             self.assertEqual(hidden_files, ['./.well-known/agent.json'])
 
+    def test_authority_ledgers_are_source_only_without_hiding_other_docs(self):
+        # Internal evidence audit snapshots are repository documents, not public URLs.
+        self.write('docs/authority-evidence-audit-ledger-20261010.json', b'{"sourceOnly": true}\n')
+        self.write('docs/authority-evidence-audit-ledger-20261010.md', b'# Audit snapshot\n')
+        self.write('docs/public-release-notes.md', b'# Public documentation\n')
+        self.pack()
+        with tarfile.open(self.archive) as archive:
+            names = archive.getnames()
+            self.assertNotIn('./docs/authority-evidence-audit-ledger-20261010.json', names)
+            self.assertNotIn('./docs/authority-evidence-audit-ledger-20261010.md', names)
+            self.assertIn('./docs/public-release-notes.md', names)
+            self.assertIn('./.well-known/agent.json', names)
+        self.assertTrue((self.site / 'docs/authority-evidence-audit-ledger-20261010.json').exists())
+        self.assertTrue((self.site / 'docs/authority-evidence-audit-ledger-20261010.md').exists())
+
     def test_unknown_hidden_file_is_rejected(self):
         self.write('.env', b'not-a-real-secret')
         with self.assertRaisesRegex(ValueError, 'Unreviewed hidden'):
