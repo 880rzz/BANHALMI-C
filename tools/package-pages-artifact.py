@@ -17,6 +17,10 @@ from pathlib import Path
 PUBLIC_HIDDEN_FILES = frozenset({'.well-known/agent.json'})
 INTERNAL_HIDDEN_FILES = frozenset({'docs/.responsive-4k-audit-ready'})
 FORBIDDEN_ROOTS = frozenset({'.git', '.github', 'node_modules', '_site', 'tools', 'tests', 'artifacts'})
+NONPUBLIC_AUTHORITY_LEDGER_FILES = frozenset({
+    'docs/authority-evidence-audit-ledger-20261010.json',
+    'docs/authority-evidence-audit-ledger-20261010.md',
+})
 REQUIRED_FILES = frozenset({
     'deployment-sha.txt', '.well-known/agent.json',
     'api/v1/identity.json', 'api/v1/services.json',
@@ -53,6 +57,8 @@ def public_manifest(site: Path) -> dict[str, str]:
             continue
         if not path.is_file():
             raise ValueError(f'Non-regular input: {name}')
+        if name in NONPUBLIC_AUTHORITY_LEDGER_FILES:
+            continue
         manifest[name] = digest_file(path)
     missing = REQUIRED_FILES.difference(manifest)
     if missing:
