@@ -80,6 +80,13 @@ class PagesArtifactTests(unittest.TestCase):
             self.assertIn('./.well-known/agent.json', names)
         self.assertTrue(report['byte_identity_verified'])
 
+    def test_source_only_audit_ledgers_are_hidden_from_branch_pages_build(self):
+        repo_root = Path(__file__).resolve().parents[1]
+        for filename in ('authority-evidence-audit-ledger-20261010.json',
+                         'authority-evidence-audit-ledger-20261010.md'):
+            self.assertFalse((repo_root / 'docs' / filename).exists())
+            self.assertTrue((repo_root / '.github' / 'internal-evidence' / filename).is_file())
+
     def test_unknown_hidden_file_is_rejected(self):
         self.write('.env', b'not-a-real-secret')
         with self.assertRaisesRegex(ValueError, 'Unreviewed hidden'):
