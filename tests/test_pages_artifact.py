@@ -64,6 +64,29 @@ class PagesArtifactTests(unittest.TestCase):
             hidden_files = [m.name for m in archive if m.isfile() and any(p.startswith('.') for p in Path(m.name[2:]).parts)]
             self.assertEqual(hidden_files, ['./.well-known/agent.json'])
 
+    def test_source_only_evidence_audit_ledgers_are_not_published(self):
+        for name in PACKAGER.INTERNAL_SOURCE_ONLY_FILES:
+            self.write(name, b'Internal audit snapshot, not a public authority claim.\n')
+        self.write('docs/release-checklist.md', b'Public release checklist.\n')
+        self.write('press-institutional-evidence.json', b'{"public":true}\n')
+        report = self.pack()
+        with tarfile.open(self.archive) as archive:
+            names = set(archive.getnames())
+            for name in PACKAGER.INTERNAL_SOURCE_ONLY_FILES:
+                self.assertNotIn('./' + name, names)
+                self.assertTrue((self.site / name).is_file())
+            self.assertIn('./docs/release-checklist.md', names)
+            self.assertIn('./press-institutional-evidence.json', names)
+            self.assertIn('./.well-known/agent.json', names)
+        self.assertTrue(report['byte_identity_verified'])
+
+    def test_source_only_audit_ledgers_are_hidden_from_branch_pages_build(self):
+        repo_root = Path(__file__).resolve().parents[1]
+        for filename in ('authority-evidence-audit-ledger-20261010.json',
+                         'authority-evidence-audit-ledger-20261010.md'):
+            self.assertFalse((repo_root / 'docs' / filename).exists())
+            self.assertTrue((repo_root / '.github' / 'internal-evidence' / filename).is_file())
+
     def test_unknown_hidden_file_is_rejected(self):
         self.write('.env', b'not-a-real-secret')
         with self.assertRaisesRegex(ValueError, 'Unreviewed hidden'):

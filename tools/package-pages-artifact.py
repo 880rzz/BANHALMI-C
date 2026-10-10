@@ -16,6 +16,11 @@ from pathlib import Path
 
 PUBLIC_HIDDEN_FILES = frozenset({'.well-known/agent.json'})
 INTERNAL_HIDDEN_FILES = frozenset({'docs/.responsive-4k-audit-ready'})
+# Source-only audit snapshots must remain in Git, never in the public Pages archive.
+INTERNAL_SOURCE_ONLY_FILES = frozenset({
+    'docs/authority-evidence-audit-ledger-20261010.json',
+    'docs/authority-evidence-audit-ledger-20261010.md',
+})
 FORBIDDEN_ROOTS = frozenset({'.git', '.github', 'node_modules', '_site', 'tools', 'tests', 'artifacts'})
 REQUIRED_FILES = frozenset({
     'deployment-sha.txt', '.well-known/agent.json',
@@ -41,6 +46,8 @@ def public_manifest(site: Path) -> dict[str, str]:
             raise ValueError(f'Symlinks are forbidden in the Pages input: {name}')
         if rel.parts[0] in FORBIDDEN_ROOTS:
             raise ValueError(f'Non-public tree in Pages input: {name}')
+        if name in INTERNAL_SOURCE_ONLY_FILES and path.is_file():
+            continue
         hidden = any(part.startswith('.') for part in rel.parts)
         if hidden:
             if name in PUBLIC_HIDDEN_FILES or name == '.well-known' and path.is_dir():

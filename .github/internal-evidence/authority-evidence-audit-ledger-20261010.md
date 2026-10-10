@@ -30,4 +30,4 @@ Reconcile live source URLs and actual image credits by category; match exact vis
 - `ART/archive-record-registry.json`
 - `ART/wikidata-source-registry.json`
 
-Audit companion: `docs/authority-evidence-audit-ledger-20261010.json`.
+Audit companion: `.github/internal-evidence/authority-evidence-audit-ledger-20261010.json`.
