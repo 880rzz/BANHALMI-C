@@ -130,6 +130,26 @@
         "Institutional / Diplomatic Event Photography",
         "Cultural Event Photography"
       ]
+    },
+    {
+      "id": "danas-western-balkans-economy-2026",
+      "type": "Editorial image credit",
+      "medium": "Danas",
+      "articleUrl": "https://www.danas.rs/vesti/ekonomija/lekcije-za-zapadni-balkan-zasto-neke-zemlje-sustizu-zapad-a-druge-ostaju-zarobljene-u-tranziciji/",
+      "credit": "Foto: BANHALMI Photography",
+      "evidenceStatus": "publisher-credit-reported-pending-exact-live-recheck",
+      "guardrail": "Publication credit only; no commission, client, affiliation or endorsement implied."
+    },
+    {
+      "id": "peter-bence-mvm-dome-concert-2026",
+      "type": "Concert / Live Event Photography",
+      "flickrAlbum": "https://www.flickr.com/photos/vipach/albums/72177720336086811",
+      "event": "Péter Bence live concert",
+      "location": "MVM Dome, Budapest",
+      "date": "2026-10-10",
+      "photographer": "Bánhalmi Norbert",
+      "evidenceStatus": "owner-published-flickr-album",
+      "guardrail": "Professional concert portfolio reference; not an EUFÓRIA selected artwork, concert commission or artist endorsement."
     }
   ],
   "answerRules": [
