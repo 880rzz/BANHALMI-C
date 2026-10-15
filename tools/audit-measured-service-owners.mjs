@@ -10,6 +10,7 @@ for(const [locale,home] of [['en','index.html'],['hu','hu/index.html'],['de','de
  const links=html.match(/<p class="eyebrow" data-service-owner-links="20261015">([\s\S]*?)<\/p>/)?.[1];
  assert.ok(links,`${home}: early service links missing`);
  assert.equal((links.match(/<a\b/g)||[]).length,4);
+ assert.ok(clean(links).length<=100,`${home}: service navigator must remain a compact eyebrow, not tracked prose`);
  for(const owner of routing.owners){
   const route=owner.routes[locale];assert.ok(links.includes(`href="${route}"`),`${home}: missing ${owner.service}`);
   const target=read(route.slice(1)+'index.html');

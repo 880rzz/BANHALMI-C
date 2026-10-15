@@ -22,3 +22,7 @@ Event routes retain their current headings; there is insufficient evidence for a
 Verify source contracts, protected homepage metadata, self-canonicals/hreflang, service headline parity, Service aliases, real internal-link destinations, prices and native pricing panels. Browser/CI must verify changed headings and early links across responsive widths and the existing full regression suite. Do not weaken gates to accommodate new copy.
 
 Release status at authoring: pending PR/CI. No ranking migration or KPI improvement is claimed. Start a 28-settled-day measurement window after verified deployment: query/page/country distribution, service-page share of impressions/clicks, protected homepage signals, and quote conversions where available. Low-volume query/URL observations are not unique search counts; UTM variants are normalized only in the private analysis.
+
+## CI remediation
+
+The first run passed all 165 functional tests and the full responsive layout audit, then caught an Apple visual-contract regression at 1440px: the new homepage eyebrow exceeded the long-prose threshold while retaining 1.28px tracking. Shorten the four link labels to their service names, preserving all destinations and the detailed service H1/schema vocabulary. The fix reuses existing typography; no CSS override or weakened audit. Add a compact-label source guard.
