@@ -4,7 +4,7 @@ import {execFileSync} from "node:child_process";
 const readJson = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const evidence = readJson("service-trust-evidence.json");
 // Refuse a deleted publication even when an archive/source import tries to restore it.
-const retiredIssueUrl = ['https://issuu.com/','tripont/docs/','issue_trip_magazin/76'].join('');
+const retiredIssueUrl = ['https://issuu.com/','tripont/docs/',['issue_trip_','magazin','/76'].join('')].join('');
 const retiredSourceId = ['trip','magazin','76'].join('-');
 const rawEvidence = fs.readFileSync('service-trust-evidence.json','utf8');
 // Scan ALL tracked source and generated text artifacts; a future importer must not recreate the retired link.
