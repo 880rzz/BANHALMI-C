@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 
-const retiredUrl=['https://issuu.com/','tripont/docs/','issue_trip_magazin/76'].join('');
+const retiredUrl=['https://issuu.com/','tripont/docs/',['issue_trip_','magazin','/76'].join('')].join('');
 const retiredId=['trip','magazin','76'].join('-');
 const suffix=['issue_trip_','magazin','/76'].join('');
 const allowedExt=new Set(['.html','.json','.jsonld','.js','.mjs','.cjs','.ts','.tsx','.py','.md','.txt','.yml','.yaml','.xml','.csv','.svg','.toml','.css']);
