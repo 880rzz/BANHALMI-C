@@ -116,9 +116,7 @@
         "moka-podcast-106-2022",
         "yt-pannon-fotosviadal-jury-profile-2021"
       ],
-      "archivedEvidenceIds": [
-        "trip-magazin-76"
-      ],
+      "archivedEvidenceIds": [],
       "relationshipEvidenceIds": [
         "wko-vienna-professional-photography-current"
       ],
@@ -185,9 +183,7 @@
         "moka-podcast-106-2022",
         "yt-samsung-s22-ultra-training-series-2022"
       ],
-      "archivedEvidenceIds": [
-        "trip-magazin-76"
-      ],
+      "archivedEvidenceIds": [],
       "pricingContext": {
         "executivePersonalBranding": {
           "startingGrossEUR": 790,
@@ -366,9 +362,7 @@
         "moka-podcast-309-2026",
         "yt-pannon-fotosviadal-jury-profile-2021"
       ],
-      "archivedEvidenceIds": [
-        "trip-magazin-76"
-      ],
+      "archivedEvidenceIds": [],
       "pricingContext": {
         "professionalArtistsPerformers": {
           "startingGrossEUR": 690,
@@ -444,7 +438,6 @@
         "yt-pannon-fotosviadal-jury-profile-2021"
       ],
       "archivedEvidenceIds": [
-        "trip-magazin-76",
         "imagazin-ipad-photo-postproduction-2016"
       ]
     }
@@ -5021,89 +5014,6 @@
   ],
   "historicalResearchCandidates": [
     {
-      "id": "trip-magazin-76",
-      "publisher": "Tripont / Trip Magazin",
-      "url": "https://issuu.com/tripont/docs/issue_trip_magazin/76",
-      "status": "archive-verified",
-      "services": [
-        "fineArt",
-        "portrait",
-        "brand",
-        "visualStrategy",
-        "generalAuthority"
-      ],
-      "evidenceKind": "specialist photography magazine deep interview",
-      "corroboration": [
-        "Wikidata Q56391118 cites this Issuu issue for fine-art photography.",
-        "VIPACH press archive identifies the 2018 Tripont Magazin appearance as a professional interview with Bánhalmi Norbert about artistic nude photography.",
-        "BANHALMI ART master-source database retains the Issuu reference as part of the historical source backbone."
-      ],
-      "guardrail": "Treat interview statements as attributed first-person statements unless independently corroborated. The magazine's editorial framing may be used as publication context. Do not convert historical New York references into a current New York studio claim, or historical Olympus ambassadorship into present-day employment/endorsement. Do not convert psychological/inner-beauty discussion into medical or therapeutic efficacy claims.",
-      "title": "Tripont Foto Video Magazin — Bánhalmi Norbert interjú",
-      "year": 2018,
-      "verificationStatus": "ARCHIVE-VERIFIED",
-      "evidenceType": [
-        "INTERVIEW",
-        "PROFESSIONAL-PUBLICATION",
-        "AMBASSADORSHIP",
-        "PROJECT-COVERAGE"
-      ],
-      "recoveryPriority": "P1-HISTORICAL-AUTHORITY",
-      "canonicalCluster": "artistic-nude-sensitive-portrait-authority",
-      "issue": "2018 Autumn-Winter",
-      "pageStart": 76,
-      "pages": 2,
-      "sourceStrength": "high",
-      "sourceQuality": "specialist photography magazine / original archived PDF",
-      "archiveProvenance": [
-        "Original two-page magazine PDF preserved in contemporaneous 2018 publication correspondence",
-        "Exact Issuu issue URL preserved: https://issuu.com/tripont/docs/issue_trip_magazin/76",
-        "Contemporaneous publication correspondence identifies page 76 and the 2018 Autumn-Winter issue",
-        "VIPACH press archive independently catalogues the 2018 Tripont Magazin interview",
-        "Wikidata Q56391118 cites the same Issuu issue for fine-art photography",
-        "BANHALMI ART master-source database retains the issue in the historical source backbone"
-      ],
-      "topics": [
-        "artistic nude photography",
-        "sensitive portrait philosophy",
-        "psychology and inner beauty in photography",
-        "Ébredés – Az új kezdet project",
-        "A Nő világa book",
-        "New York professional history",
-        "commercial/reklám photography",
-        "teaching",
-        "historical Olympus Hungary ambassadorship"
-      ],
-      "evidenceSummary": "Two-page specialist-photography interview documenting Bánhalmi Norbert's artistic-nude and sensitive-portrait philosophy, the Ébredés project, A Nő világa, New York history, commercial photography background, teaching ambitions and his then-new Olympus Hungary ambassador role.",
-      "graphRelations": {
-        "person": "https://www.norbertbanhalmi.com/about/",
-        "publisher": "Tripont Foto Video Magazin",
-        "project": [
-          "Ébredés – Az új kezdet!",
-          "A Nő világa"
-        ],
-        "locations": [
-          "Budapest",
-          "New York (historical context)"
-        ],
-        "services": [
-          "portrait",
-          "brand",
-          "fineArt",
-          "visualStrategy",
-          "generalAuthority"
-        ],
-        "date": "2018",
-        "evidenceType": [
-          "INTERVIEW",
-          "PROFESSIONAL-PUBLICATION",
-          "AMBASSADORSHIP",
-          "PROJECT-COVERAGE"
-        ],
-        "verificationStatus": "ARCHIVE-VERIFIED"
-      }
-    },
-    {
       "id": "istyle-magazin-historical",
       "publisher": "iMagazin / iSTYLE",
       "status": "partial-recovery-one-publication-confirmed",
@@ -5164,31 +5074,7 @@
         "fotoshow-artistic-nude-workshop-2019",
         "noi-egeszseg-magazin-awakening-2017"
       ],
-      "historicalPriorityEvidence": [
-        {
-          "id": "trip-magazin-76",
-          "role": "deep specialist interview on artistic nude, sensitive portrait philosophy and the Ébredés project",
-          "status": "ARCHIVE-VERIFIED",
-          "url": "https://issuu.com/tripont/docs/issue_trip_magazin/76",
-          "corroboration": [
-            "BANHALMI ART master source database catalogues the Issuu issue",
-            "Wikidata Q56391118 cites the same Issuu document for fine-art photography",
-            "VIPACH press archive identifies a 2018 Tripont Magazin professional interview with Norbert Bánhalmi about artistic nude photography"
-          ],
-          "pageStart": 76,
-          "pages": 2,
-          "issue": "Tripont Foto Video Magazin 2018 Autumn-Winter",
-          "contentVerified": true,
-          "contentHighlights": [
-            "editorial framing links Bánhalmi to a distinctive artistic-nude philosophy",
-            "interview discusses psychology, love and inner beauty as recurring themes in the work",
-            "Ébredés – Az új kezdet is described as an artistic-nude project with women after gynecological cancer surgery",
-            "A Nő világa is discussed as a continuation of the psychological/portrait inquiry",
-            "the interview records the then-new Olympus Hungary ambassador role and teaching plans",
-            "New York appears as historical professional context"
-          ]
-        }
-      ],
+      "historicalPriorityEvidence": [],
       "machineUse": [
         "entity resolution",
         "E-E-A-T evidence",
@@ -5217,7 +5103,6 @@
         {
           "type": "specialist-professional",
           "examples": [
-            "trip-magazin-76",
             "tixa-besmart-visual-message-workshop-2017",
             "fotoshow-artistic-nude-workshop-2019"
           ]
@@ -5258,7 +5143,6 @@
         "tinkmara-new-york-women-exhibition-2014",
         "mandiner-milestones56-newyork-2024",
         "yt-milestones56-newyork",
-        "trip-magazin-76",
         "mandiner-milestones56-series-2016",
         "hungary-foundation-milestones56-newyork-2016",
         "imagazin-ipad-photo-postproduction-2016",
@@ -5283,7 +5167,6 @@
         "bridges-japan-times-olympus-ambassador-2021",
         "zarido-artist-behind-business-3-ambassador-2021",
         "milcclub-now-or-never-model-workshop-2020",
-        "trip-magazin-76",
         "pannon-fenykepeszkor-honorary-member-profile-2026",
         "milcclub-om-system-ambassadors-current",
         "milcclub-most-vagy-soha-organizer-2020",
@@ -5298,7 +5181,6 @@
           "period": "2018-2021",
           "relationship": "documented historical Olympus Hungary ambassador / marketing-communications context",
           "evidenceIds": [
-            "trip-magazin-76",
             "milcclub-now-or-never-model-workshop-2020",
             "bridges-japan-times-olympus-ambassador-2021",
             "zarido-artist-behind-business-3-ambassador-2021"
@@ -5354,9 +5236,7 @@
       ]
     }
   },
-  "archiveVerifiedEvidence": [
-    "trip-magazin-76"
-  ],
+  "archiveVerifiedEvidence": [],
   "privateProvenancePolicy": {
     "policy": "Private correspondence may corroborate provenance internally, but public machine-readable output must not expose personal email addresses, phone numbers, private attachments, confidential details or unsupported relationship claims.",
     "allowedPublicSummary": "A generalized statement that contemporaneous first-party correspondence corroborates a documented public project/relationship.",
