@@ -2,6 +2,14 @@ import fs from "node:fs";
 
 const readJson = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const evidence = readJson("service-trust-evidence.json");
+// Refuse a deleted publication even when an archive/source import tries to restore it.
+const retiredIssueUrl = ['https://issuu.com/','tripont/docs/','issue_trip_magazin/76'].join('');
+const retiredSourceId = ['trip','magazin','76'].join('-');
+const rawEvidence = fs.readFileSync('service-trust-evidence.json','utf8');
+if(rawEvidence.includes(retiredIssueUrl)||rawEvidence.includes(retiredSourceId)) {
+  throw new Error('Retired Tripont issue has been reintroduced into the trust source-of-truth');
+}
+
 
 const requiredServices = ["portrait","brand","event","fineArt","visualStrategy"];
 for (const key of requiredServices) {
