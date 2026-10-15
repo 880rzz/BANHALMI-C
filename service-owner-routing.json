@@ -1,0 +1,51 @@
+{
+  "version": "2026-10-15",
+  "status": "IMPLEMENTED_PENDING_CI",
+  "property": "https://www.norbertbanhalmi.com/",
+  "measurementWindow": [
+    "2026-09-15",
+    "2026-10-12"
+  ],
+  "evidence": "GSC API, 2026-09-15 through 2026-10-12 (28 days), supported by 2026-07-15 through 2026-10-12 (90 days). Raw country/query/page evidence and the per-query classification table are retained in a private deliverable.",
+  "rules": {
+    "method": "Semantic internal links, explicit service headings and Service aliases; never query/referrer-dependent HTTP redirects",
+    "language": "Infer query language from lexical evidence. Country is a measured market dimension, not a language selector. Ambiguous queries remain reviewable.",
+    "protected": "Homepages retain self-canonicals, title/H1, brand and general photographer/city intent. Generic portfolio is ambiguous and is not a photography-service query by itself.",
+    "scope": "No new service offer for boudoir, product, family, baby, real-estate, wedding or training terms inferred from search exposure. Fine Art does not imply nudity.",
+    "ranking": "Target owner is a declared preference, not proof of Google result replacement. Keep all URLs indexable and measure after release."
+  },
+  "owners": [
+    {
+      "service": "portrait",
+      "routes": {
+        "en": "/portrait/",
+        "hu": "/hu/portre/",
+        "de": "/de-at/portrait/"
+      }
+    },
+    {
+      "service": "brand",
+      "routes": {
+        "en": "/lifestyle/",
+        "hu": "/hu/brand/",
+        "de": "/de-at/brand/"
+      }
+    },
+    {
+      "service": "event",
+      "routes": {
+        "en": "/event-photography/",
+        "hu": "/hu/rendezvenyfotozas/",
+        "de": "/de-at/eventfotografie/"
+      }
+    },
+    {
+      "service": "fine-art",
+      "routes": {
+        "en": "/fine-art/",
+        "hu": "/hu/muveszi-fotografia/",
+        "de": "/de-at/fine-art/"
+      }
+    }
+  ]
+}
