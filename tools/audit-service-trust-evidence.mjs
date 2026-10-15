@@ -1,4 +1,6 @@
 import fs from "node:fs";
+import path from "node:path";
+import {execFileSync} from "node:child_process";
 
 const readJson = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const evidence = readJson("service-trust-evidence.json");
@@ -6,6 +8,17 @@ const evidence = readJson("service-trust-evidence.json");
 const retiredIssueUrl = ['https://issuu.com/','tripont/docs/','issue_trip_magazin/76'].join('');
 const retiredSourceId = ['trip','magazin','76'].join('-');
 const rawEvidence = fs.readFileSync('service-trust-evidence.json','utf8');
+// Scan ALL tracked source and generated text artifacts; a future importer must not recreate the retired link.
+const trackedFiles = execFileSync('git',['ls-files','-z'],{encoding:'utf8'}).split('\0').filter(Boolean);
+for (const file of trackedFiles) {
+  if(!/\.(?:html|json|jsonld|mjs|js|ts|tsx|py|md|txt|xml|yml|yaml|css|csv|toml)$/i.test(file))continue;
+  if(!fs.existsSync(file)||fs.statSync(file).size>8_000_000)continue;
+  const text = fs.readFileSync(file,'utf8');
+  if(text.includes(retiredIssueUrl)||text.includes(retiredSourceId)) {
+    throw new Error('Retired Tripont source is present in a tracked file: '+file);
+  }
+}
+
 if(rawEvidence.includes(retiredIssueUrl)||rawEvidence.includes(retiredSourceId)) {
   throw new Error('Retired Tripont issue has been reintroduced into the trust source-of-truth');
 }
