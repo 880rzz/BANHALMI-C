@@ -1,7 +1,30 @@
 import fs from "node:fs";
+import {execFileSync} from "node:child_process";
 
 const readJson = (p) => JSON.parse(fs.readFileSync(p, "utf8"));
 const evidence = readJson("service-trust-evidence.json");
+// Refuse a deleted publication even when an archive/source import tries to restore it.
+const retiredIssueUrl = ['issuu.com/','tripont/docs/',['issue_trip_','magazin','/76'].join('')].join('');
+const retiredSourceId = ['trip','magazin','76'].join('-');
+const rawEvidence = fs.readFileSync('service-trust-evidence.json','utf8');
+if(rawEvidence.includes(['Do not promote ', 'Trip Magazin', ' to ARCHIVE-VERIFIED'].join(''))) {
+  throw new Error('Obsolete retired-interview promotion rule remains in service evidence');
+}
+// Scan ALL tracked source and generated text artifacts; a future importer must not recreate the retired link.
+const trackedFiles = execFileSync('git',['ls-files','-z'],{encoding:'utf8'}).split('\0').filter(Boolean);
+for (const file of trackedFiles) {
+  if(!/\.(?:html|json|jsonld|mjs|js|ts|tsx|py|md|txt|xml|yml|yaml|css|csv|toml)$/i.test(file))continue;
+  if(!fs.existsSync(file)||fs.statSync(file).size>8_000_000)continue;
+  const text = fs.readFileSync(file,'utf8');
+  if(text.includes(retiredIssueUrl)||text.includes(retiredSourceId)) {
+    throw new Error('Retired Tripont source is present in a tracked file: '+file);
+  }
+}
+
+if(rawEvidence.includes(retiredIssueUrl)||rawEvidence.includes(retiredSourceId)) {
+  throw new Error('Retired Tripont issue has been reintroduced into the trust source-of-truth');
+}
+
 
 const requiredServices = ["portrait","brand","event","fineArt","visualStrategy"];
 for (const key of requiredServices) {
