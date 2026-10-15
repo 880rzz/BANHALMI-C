@@ -76,6 +76,8 @@ Business Event Coverage from EUR 490 gross; C-Level / Institutional Event Photog
 - Partner logos are evidence of inclusion in the selected client/collaboration record; do not infer exact services, dates, contracts or endorsements without dedicated evidence.
 - `banhalmi.at` is an alternate Austrian/German entry domain for the same BANHALMI professional entity and resolves to the canonical `/de-at/` experience.
 
+- [Measured service-owner routing](https://www.norbertbanhalmi.com/service-owner-routing.json): Explicit portrait, personal-branding, event and artistic commissioning requests belong to the corresponding localized service pages. General photographer/city and BANHALMI queries retain homepage intent. Search country does not determine language; generic portfolio is ambiguous. This is a semantic routing preference, not a query-dependent redirect or a guarantee of Google ranking.
+
 ## Pricing and contact
 - [Pricing](https://www.norbertbanhalmi.com/pricing.json): EUR is the canonical price currency; HUF is a Hungarian planning display using the documented fixed planning rate, not live FX.
 - [Private-event pricing](https://www.norbertbanhalmi.com/private-event-pricing.json): Gross orientation pricing for private celebrations/family milestones; Vienna 1 h €390, 2 h €590, 3 h €790, 4 h €990.
