@@ -55,7 +55,7 @@
       "sourceUrl": "https://github.com/880rzz/ART/blob/main/wikidata-source-registry.json"
     }
   ],
-  "rowCount": 324,
+  "rowCount": 323,
   "rowCountByGroup": {
     "proPress": 8,
     "proExternal": 18,
@@ -64,9 +64,9 @@
     "artPress-hu": 35,
     "artPress-de-AT": 35,
     "artRecords": 69,
-    "artWiki": 24
+    "artWiki": 23
   },
-  "distinctNonemptySourceUrls": 234,
+  "distinctNonemptySourceUrls": 233,
   "repeatedSourceUrls": 37,
   "records": [
     {
@@ -8214,30 +8214,6 @@
       "sourceRegistry": "880rzz/ART/wikidata-source-registry.json"
     },
     {
-      "id": "artWiki-005-wikidata-statement-source-005",
-      "registryGroup": "artWiki",
-      "originalSourceUrl": "https://issuu.com/tripont/docs/issue_trip_magazin/76",
-      "sourceType": "wikidata-statement-source",
-      "publicationDateOrNote": null,
-      "title": "wikidata-statement-source-005",
-      "demonstratedClaim": null,
-      "priorRegistryStrengthOrStatus": null,
-      "claimSubject": "https://www.wikidata.org/wiki/Q56391118",
-      "organizationOrCreator": "Norbert Bánhalmi / BANHALMI",
-      "relatedProject": null,
-      "relatedServiceOrCapability": null,
-      "language": "und",
-      "canonicalTargetPage": "https://www.banhalmi.art/about/",
-      "structuredDataRelation": "creator / subjectOf / citation / isPartOf; verify case-by-case",
-      "visibleEvidenceLink": "https://issuu.com/tripont/docs/issue_trip_magazin/76",
-      "legalCopyrightOrInterpretationLimit": "Do not infer endorsement, contract, partnership or rights from a press mention or image reuse alone.",
-      "auditedRegistryDate": "2026-10-10",
-      "independentSourceReadbackOnAuditDate": false,
-      "productionVerifiedOnAuditDate": false,
-      "reviewState": "SOURCE_REGISTERED_NOT_INDEPENDENTLY_REVERIFIED",
-      "sourceRegistry": "880rzz/ART/wikidata-source-registry.json"
-    },
-    {
       "id": "artWiki-006-wikidata-statement-source-006",
       "registryGroup": "artWiki",
       "originalSourceUrl": "https://mfvsz.com/hu/tagsag/uj-tagok/825",
@@ -8693,5 +8669,6 @@
       "reviewState": "SOURCE_REGISTERED_NOT_INDEPENDENTLY_REVERIFIED",
       "sourceRegistry": "880rzz/ART/wikidata-source-registry.json"
     }
-  ]
+  ],
+  "sanitizationNote": "2026-10-15: excluded one retired, inaccessible Tripont issue citation at the user's direction. Git history retains the original October 10 evidence snapshot; remaining historical rows preserve their original evidence levels."
 }
