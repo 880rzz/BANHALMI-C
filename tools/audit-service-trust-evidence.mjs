@@ -7,6 +7,9 @@ const evidence = readJson("service-trust-evidence.json");
 const retiredIssueUrl = ['issuu.com/','tripont/docs/',['issue_trip_','magazin','/76'].join('')].join('');
 const retiredSourceId = ['trip','magazin','76'].join('-');
 const rawEvidence = fs.readFileSync('service-trust-evidence.json','utf8');
+if(rawEvidence.includes(['Do not promote ', 'Trip Magazin', ' to ARCHIVE-VERIFIED'].join(''))) {
+  throw new Error('Obsolete retired-interview promotion rule remains in service evidence');
+}
 // Scan ALL tracked source and generated text artifacts; a future importer must not recreate the retired link.
 const trackedFiles = execFileSync('git',['ls-files','-z'],{encoding:'utf8'}).split('\0').filter(Boolean);
 for (const file of trackedFiles) {

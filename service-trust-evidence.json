@@ -5086,8 +5086,7 @@
       "guardrails": [
         "Do not convert participant testimony into medical, psychological or therapeutic efficacy claims.",
         "Keep artistic nude/fine-art authority distinct from erotic-service positioning.",
-        "Do not treat related-party archives or customer reviews as equivalent to independent editorial evidence.",
-        "Do not promote Trip Magazin to ARCHIVE-VERIFIED until the magazine pages/body are directly inspected."
+        "Do not treat related-party archives or customer reviews as equivalent to independent editorial evidence."
       ],
       "evidenceLayers": [
         {
