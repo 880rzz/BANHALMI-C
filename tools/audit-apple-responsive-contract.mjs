@@ -9,10 +9,17 @@ const b = css.lastIndexOf(end);
 if (a < 0 || b <= a) failures.push('Apple responsive contract marker missing');
 if (a >= 0 && css.indexOf(start) !== a) failures.push('Apple responsive contract START marker must appear exactly once');
 if (b >= 0 && css.indexOf(end) !== b) failures.push('Apple responsive contract END marker must appear exactly once');
+const componentsMarker = '/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */';
+const componentIndex = css.indexOf(componentsMarker);
+if (componentIndex < 0 || css.lastIndexOf(componentsMarker) !== componentIndex) failures.push('single canonical component authority boundary missing or duplicated');
 if (b >= 0) {
   const markerClose = css.indexOf('*/', b + end.length);
   if (markerClose < 0) failures.push('Apple responsive contract END comment is not closed');
-  else if (css.slice(markerClose + 2).trim()) failures.push('Apple responsive contract must be the final CSS authority; rules found after END marker');
+  else if (componentIndex < markerClose + 2 || css.slice(markerClose + 2, componentIndex).trim()) failures.push('Apple baseline must be followed immediately by the named canonical component section');
+}
+const components = componentIndex >= 0 ? css.slice(componentIndex + componentsMarker.length) : '';
+for (const required of ['RESPONSIVE-VISUAL-SYSTEM-V26','FOOTER-SINGLE-CANONICAL-V43-20260926','TYPOGRAPHY-INTEGRITY-V33-20260917']) {
+  if (!components.includes(required)) failures.push('canonical component contract missing: '+required);
 }
 const contract = a >= 0 && b > a ? css.slice(a,b) : '';
 
@@ -52,4 +59,4 @@ if (workflow.includes('home.css')) failures.push('site.css must remain the only 
 if (workflow.includes('purgecss')) failures.push('homepage PurgeCSS fork detected; single CSS authority must not be split');
 
 if (failures.length){console.error(failures.join('\n'));process.exit(1)}
-console.log(`Approved Aug 14 Apple CSS baseline passed for BANHALMI: ${realPages.length} HTML files; one final CSS authority, responsive geometry and contrast guards active.`);
+console.log(`Approved Aug 14 Apple CSS baseline passed for BANHALMI: ${realPages.length} HTML files; one source with ordered Apple baseline and component authority, responsive geometry and contrast guards active.`);
