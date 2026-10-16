@@ -23,14 +23,14 @@ try{
   };
   for(const rel of targets){
     const html=fs.readFileSync(path.join(temp,rel),'utf8');
-    const css=[...html.matchAll(/<link\\b[^>]*href=[\"']([^\"']+\\.css[^\"']*)[\"'][^>]*>/gi)].map(x=>x[1]);
+    const css=[...html.matchAll(/<link\b[^>]*href=["']([^"']+\.css[^"']*)["'][^>]*>/gi)].map(x=>x[1]);
     assert.equal(css.length,1,rel+': generated output must load one stylesheet');
-    assert.match(css[0],/^\\/assets\\/css\\/site\\.css\\?v=design-[a-z0-9-]+$/,rel+': generated output must use canonical site.css');
-    assert.equal((html.match(/property=[\"']og:locale[\"']/g)||[]).length,1,rel+': active Open Graph locale missing or duplicated');
-    assert.equal((html.match(/property=[\"']og:locale:alternate[\"']/g)||[]).length,2,rel+': alternate Open Graph locales missing');
-    const h1=html.match(/<h1[^>]*>([\\s\\S]*?)<\\/h1>/i)?.[1]?.replace(/<[^>]+>/g,'').replace(/\\s+/g,' ').trim();
+    assert.match(css[0],/^\/assets\/css\/site\.css\?v=design-[a-z0-9-]+$/,rel+': generated output must use canonical site.css');
+    assert.equal((html.match(/property=["']og:locale["']/g)||[]).length,1,rel+': active Open Graph locale missing or duplicated');
+    assert.equal((html.match(/property=["']og:locale:alternate["']/g)||[]).length,2,rel+': alternate Open Graph locales missing');
+    const h1=html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
     assert.equal(h1,expected[rel].h1,rel+': generated H1 changed');
-    assert.ok(html.includes('content=\"'+expected[rel].locale+'\" property=\"og:locale\"'),rel+': wrong Open Graph locale');
+    assert.ok(html.includes('content="'+expected[rel].locale+'" property="og:locale"'),rel+': wrong Open Graph locale');
   }
   console.log('Partner generator safety audit passed: default is non-mutating; explicit output retains one CSS authority, localized H1s and Open Graph locales.');
 }finally{
