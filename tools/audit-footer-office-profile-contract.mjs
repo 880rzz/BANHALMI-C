@@ -23,6 +23,9 @@ for(const file of htmlFiles){
 if(officePages!==58)failures.push(`expected the 58 localized/source office footer pages, found ${officePages}`);
 
 const css=fs.readFileSync('assets/css/site.css','utf8');
+const footerGenerator=fs.readFileSync('tools/normalize-executive-footer.mjs','utf8');
+if(footerGenerator.includes('footer-location-profile')||footerGenerator.includes('officeProfile'))failures.push('footer normalizer must not regenerate the office-only profile link');
+if(css.includes('.footer-location-profile'))failures.push('CSS must not retain the removed office profile component');
 if(!css.includes('html body .site-footer .footer-accordion>summary{display:flex;align-items:center;justify-content:flex-start;gap:.65em;}'))failures.push('footer disclosure summary must place its marker after its label');
 if(!css.includes('html body .site-footer .footer-accordion>summary::after{content:"+";position:static;inset:auto;width:auto;height:auto;border:0;transform:none;color:var(--gold);'))failures.push('footer disclosure marker must be a static gold plus');
 if(css.includes('html body main>section.section-band[data-surface]{width:100vw'))failures.push('full-bleed section must not include the scrollbar in a 100vw width');

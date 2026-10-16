@@ -6022,7 +6022,7 @@ html body .site-footer .footer-contact-list .footer-location+.footer-location{
   border-left:0!important;
   padding-left:18px!important;
 }
-html body .site-footer .footer-contact-list :is(.footer-location-link,.footer-address,.footer-location-note,.footer-location-profile,.footer-phone){
+html body .site-footer .footer-contact-list :is(.footer-location-link,.footer-address,.footer-location-note,.footer-phone){
   min-inline-size:0!important;
   max-inline-size:100%!important;
   white-space:normal!important;
@@ -6032,7 +6032,6 @@ html body .site-footer .footer-contact-list :is(.footer-location-link,.footer-ad
 html body .site-footer .footer-location-link{color:#fff!important;font-weight:650!important;}
 html body .site-footer .footer-address,
 html body .site-footer .footer-location-note,
-html body .site-footer .footer-location-profile,
 html body .site-footer .footer-phone{
   font-size:.79rem!important;
   line-height:1.48!important;
@@ -6338,7 +6337,7 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
   html body .site-footer .footer-contact-list .footer-location+.footer-location{
     padding-left:12px!important;
   }
-  html body .site-footer .footer-contact-list :is(.footer-address,.footer-location-note,.footer-location-profile,.footer-phone){
+  html body .site-footer .footer-contact-list :is(.footer-address,.footer-location-note,.footer-phone){
     font-size:.74rem!important;
     line-height:1.35!important;
   }
