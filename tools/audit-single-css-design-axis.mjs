@@ -50,7 +50,7 @@ try{
       if(m.cssResources.some(x=>x.includes('fluid-4k-rhythm.css')))errors.push(route+' @ '+width+': legacy fluid CSS requested at runtime');
       if(m.docWidth>width+2)errors.push(route+' @ '+width+': horizontal overflow document='+m.docWidth);
       if(m.h1&&m.eyebrow&&Math.abs(m.h1.x-m.eyebrow.x)>5)errors.push(route+' @ '+width+': H1/eyebrow axis differs: '+m.h1.x+'/'+m.eyebrow.x);
-      console.log('CSS-AXIS',JSON.stringify({route,width,h1:m.h1?.x,eyebrow:m.eyebrow?.x,lead:m.lead?.x,footer:m.footerWrap?.x,footerFirst:m.footerFirst?.x,links:m.cssLinks.length,overflow:m.docWidth-width}));
+      console.log('CSS-AXIS',JSON.stringify({route,width,h1:m.h1?.x,h1Font:m.h1?.font,h2:m.h2?.x,h2Font:m.h2?.font,eyebrow:m.eyebrow?.x,lead:m.lead?.x,leadFont:m.lead?.font,pricing:m.pricing?.x,footer:m.footerWrap?.x,footerFirst:m.footerFirst?.x,links:m.cssLinks.length,overflow:m.docWidth-width}));
     }
     await page.close();
   }
