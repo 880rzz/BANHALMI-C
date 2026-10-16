@@ -50,7 +50,7 @@ for(const rel of ['index.html','hu/index.html','de-at/index.html']){
 }
 must(!hardener.includes('--homepage-hero-media-height'),'production hardener must not overwrite canonical homepage media geometry');
 must(hardener.includes("let canonicalCss = fs.readFileSync(siteCssPath, 'utf8')"),'production hardener must preserve the committed canonical stylesheet before scoped hardening');
-must(fluid.includes('font-size:clamp(2.5rem,2.65vw,3.3rem)!important'),'homepage desktop H1 minimum must remain 40px');
+must(fluid.includes('font-size:clamp(2.5rem,3vw,2.75rem)!important'),'homepage and service H1s must share a restrained 40–44px desktop scale');
 must(fluid.includes('display:block!important;')&&fluid.includes('columns:3!important;')&&fluid.includes('column-count:3!important;')&&fluid.includes('column-gap:20px!important;'),'desktop mixed-aspect gallery three-column masonry contract missing');
 must(fluid.includes('margin:0 0 20px!important;')&&fluid.includes('break-inside:avoid!important;'),'gallery vertical 20px masonry rhythm contract missing');
 must(fluid.includes('width:calc(100vw - (2 * clamp(24px,2.5vw,48px)))!important;')&&fluid.includes('margin-left:calc(50% - 50vw + clamp(24px,2.5vw,48px))!important;')&&fluid.includes('max-width:none!important;'),'desktop gallery near-full-width full-bleed contract missing');
