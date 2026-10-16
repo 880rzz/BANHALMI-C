@@ -66,11 +66,10 @@ if (exists('assets/js/site-config.js')) {
     ['Apps Script / analytics language mirror', 'data.page_language = data.language'],
     ['admin delivery verification', 'body.adminEmailSent === true'],
     ['customer delivery verification', 'body.customerEmailSent === true'],
-    ['submission key', 'submission_key'],
-    ['fluid rhythm shared loader', 'data-fluid-4k-rhythm'],
-    ['fluid rhythm cache-busted stylesheet', '/assets/css/fluid-4k-rhythm.css?v=20261006-disclosure-v52']
+    ['submission key', 'submission_key']
   ];
   for (const [name, token] of runtimeContracts) if (!runtime.includes(token)) fail.push(`quote/runtime: ${name} contract missing`);
+  if (/data-fluid-4k-rhythm|loadFluidRhythm|\/assets\/css\/fluid-4k-rhythm\.css/.test(runtime)) fail.push('quote/runtime: retired dynamic CSS loader returned');
 }
 if (exists('assets/js/main.js')) {
   const runtime = read('assets/js/main.js');
