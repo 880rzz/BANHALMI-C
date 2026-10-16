@@ -15,12 +15,7 @@ for(const [home,portrait,brand] of locales){
    expect(await page.locator('[data-service-owner-links]').evaluate(el=>el.scrollWidth<=el.clientWidth+1)).toBe(true);
   }
   await page.locator(`[data-service-owner-links] a[href="${portrait}"]`).click();
-  await expect(page).toHaveURL(new RegExp(portrait+'
-  await page.goto(home);await page.locator(`[data-service-owner-links] a[href="${brand}"]`).click();
-  await expect(page).toHaveURL(new RegExp(brand+'$'));await expect(page.locator('h1')).toContainText(/brand/i);
- });
-}
-));await expect(page.locator('h1')).toHaveText(approvedPortraitH1[portrait]);expect(await page.title()).toMatch(/portr|headshot/i);
+  await expect(page).toHaveURL(new RegExp(portrait+'$'));await expect(page.locator('h1')).toHaveText(approvedPortraitH1[portrait]);expect(await page.title()).toMatch(/portr|headshot/i);
   await page.goto(home);await page.locator(`[data-service-owner-links] a[href="${brand}"]`).click();
   await expect(page).toHaveURL(new RegExp(brand+'$'));await expect(page.locator('h1')).toContainText(/brand/i);
  });
