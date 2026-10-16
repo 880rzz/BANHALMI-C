@@ -205,7 +205,7 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
    breakpoint rather than being reimplemented page by page. */
 :root{
   --bn-media-radius:clamp(18px,2vw,28px);
-  --bn-content-max:1680px;
+  --bn-content-max:var(--apple-page-max);
   --bn-editorial-gap:clamp(28px,4vw,72px);
   --bn-media-block:max(320px,min(62svh,720px));
 }
