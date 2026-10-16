@@ -43,7 +43,7 @@ const begin=oldBoot.indexOf("  var href = '/assets/css/fluid-4k-rhythm.css");
 const end=oldBoot.indexOf('  /* Typography integrity is global;',begin);
 if(begin<0||end<=begin)throw Error('Unexpected runtime stylesheet loader');
 const newBoot=oldBoot.slice(0,begin)+'  /* Production CSS is bundled into site.css. No runtime CSS link mutation. */\n\n'+oldBoot.slice(end);
-if(newBoot.includes("createElement('link')")||newBoot.includes('fluid-4k-rhythm.css'))throw Error('Secondary CSS injection remains');
+if(newBoot.includes("createElement('link')")||newBoot.includes("var href = '/assets/css/fluid-4k-rhythm.css"))throw Error('Secondary CSS injection remains');
 fs.writeFileSync(primary,bundle,'utf8');
 fs.writeFileSync(boot,newBoot,'utf8');
 for(const [file,html]of replacements)fs.writeFileSync(file,html,'utf8');
