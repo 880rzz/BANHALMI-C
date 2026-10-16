@@ -4020,7 +4020,7 @@ html body main .trust-hero p.lead{
 /* One typographic scale: display type is restrained; body, descriptions and
    disclosure copy share a readable rhythm in every language. */
 html body main h1{font-size:clamp(2.5rem,4vw,3.25rem)!important;line-height:1.08!important;letter-spacing:-.024em!important;}
-html body main h2{font-size:clamp(1.625rem,2.1vw,2.1rem)!important;line-height:1.18!important;letter-spacing:-.022em!important;}
+html body main h2{font-size:var(--bn-context-h2-size,clamp(1.625rem,2.1vw,2.1rem))!important;line-height:1.18!important;letter-spacing:-.022em!important;}
 html body main h3{font-size:clamp(18px,1.45vw,1.3rem)!important;line-height:1.24!important;letter-spacing:-.012em!important;}
 html body main :is(p,li,dd){font-size:16px!important;line-height:1.62!important;}
 html body main .lead{font-size:clamp(19px,1.6vw,1.4rem)!important;line-height:1.48!important;}
@@ -4135,7 +4135,7 @@ html body .site-footer,html body .site-footer .wrap{min-height:0!important;}
 
 @media(max-width:768px){
   html body main h1{font-size:clamp(2.375rem,4.8vw,2.75rem)!important;}
-  html body main h2{font-size:clamp(1.5625rem,3.2vw,2rem)!important;}
+  html body main h2{font-size:var(--bn-context-h2-size,clamp(1.5625rem,3.2vw,2rem))!important;}
   html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid){grid-template-columns:1fr!important;}
   html body main :is(.service-process-grid,.quote-deep-details .card-grid){grid-template-columns:1fr!important;}
   html body .site-footer .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:28px 22px!important;}
@@ -4147,7 +4147,7 @@ html body .site-footer,html body .site-footer .wrap{min-height:0!important;}
 }
 @media(max-width:560px){
   html body main h1{font-size:clamp(2.15rem,4.8vw,2.75rem)!important;}
-  html body main h2{font-size:clamp(1.55rem,3.2vw,2rem)!important;}
+  html body main h2{font-size:var(--bn-context-h2-size,clamp(1.55rem,3.2vw,2rem))!important;}
   html body .site-footer :is(.footer-grid,.footer-bottom){grid-template-columns:1fr!important;}
   html body .site-footer .footer-legal-list{min-width:0;}
   html body .site-footer .footer-legal-list li>strong{white-space:normal;}
@@ -4222,7 +4222,7 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 .service-pricing-section .quote-decision-guide> :last-child{margin-bottom:clamp(20px,3vw,32px);}
 .service-pricing-section .executive-investment-note{padding-top:20px;max-width:76ch;}
 .service-pricing-section .executive-investment-note strong{font-size:1.125rem;line-height:1.4;color:var(--ink,#202530);}
-.service-price-examples{margin-block:24px;max-width:100%;}
+.service-price-examples{--bn-context-h2-size:var(--bn-service-price-heading);margin-block:24px;max-width:100%;}
 .service-price-examples h2{font-size:var(--bn-service-price-heading);line-height:1.22;letter-spacing:-.02em;margin:0 0 20px;}
 .service-price-examples ul{list-style:none;padding:0;margin:0 0 20px;}
 .service-price-examples li{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:start;gap:16px 28px;padding:18px 0;border-bottom:1px solid var(--bn-service-price-divider);margin:0;}
