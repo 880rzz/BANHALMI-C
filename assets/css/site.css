@@ -3848,7 +3848,7 @@ body{background:var(--apple-surface);color:var(--apple-text);}
   margin-inline:auto!important;
   padding-inline:var(--apple-gutter)!important;
 }
-main>section,body>main>section,main .service-deep-dive-content>section{padding-block:var(--apple-section-space)!important;}
+main>section:not(.service-pricing-section),body>main>section:not(.service-pricing-section),main .service-deep-dive-content>section{padding-block:var(--apple-section-space)!important;}
 section>p,section>h2{
   width:min(100%,var(--apple-page-max));
   max-width:var(--apple-page-max)!important;
