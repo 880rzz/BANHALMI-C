@@ -18,7 +18,22 @@ Status: TRANSITIONAL / NOT PRODUCTION VERIFIED.
 
 This step deliberately does **not** claim reduced specificity, reduced CSS bytes, corrected spacing, fewer `!important` directives, or a new visual design. Its sole acceptance condition is one runtime CSS request per canonical HTML page with no cascade order changes. Browser and accessibility checks must pass before merge.
 
-## Phase 2: canonical tokens and component ownership (not yet performed)
+
+## Measured root causes and work performed
+
+Initial Chromium CI scan (15 URLs × 390/768/1440px) exposed these source/live-artifact differences:
+
+- At 1440px, the standard service H1 and taxonomy text began at x=176px, while the footer began at x=24px. The homepage hero intentionally has a narrower x=270px axis and is not the shared component baseline.
+- At 768px, service text began at x≈32.3px and footer at x=20px; at 390px the difference was 20px vs 18px.
+- Although the HTML bundler removed the fluid CSS link from 101 pages, service pages still reloaded it through `assets/js/site-config.js`. Homepage pages did not load this adapter. This was a real P1 runtime cascade duplication, not just a source-level mismatch.
+- The published-artifact bundler now neutralizes the two known runtime CSS injection paths (`site-config.js` and `fluid-rhythm-boot.js`), and the browser gate checks both stylesheet links and requested resources.
+- The footer canonical wrap now uses the same `--apple-page-max` and `--apple-gutter` variables as primary content. Five obsolete size/padding priorities were removed by editing the existing five declarations; no new override layer was appended.
+- The service eyebrow-to-H1 separation was repaired inside its existing responsive rule.
+- The existing exact-rule deduper runs on the production artifact; it removes only identical leaf rules in the same at-rule context and retains later copies. No assertion of broad `!important` elimination is made.
+
+The final measured browser result is still required before closing these changes. Preserve the untouched original source CSS until production acceptance; do not declare the two-source authoring system permanently consolidated yet.
+
+## Phase 2: canonical tokens and component ownership (partially implemented; full cleanup open)
 
 - Choose one spacing/gutter axis for the main content and footer; preserve documented wide-gallery exceptions.
 - Map and remove duplicate selectors, dead rules, and invalid legacy overrides using computed-style evidence across EN/HU/DE.
