@@ -1359,7 +1359,7 @@
     if(!qualifies){
       if(marker)marker.remove();
       a.removeAttribute("data-banhalmi-link-arrow");
-      if(!external(a))removeLiteralArrow(a);
+      removeLiteralArrow(a);
       return;
     }
     var label=(a.textContent||"").replace(/\u2197/g,"").trim();
