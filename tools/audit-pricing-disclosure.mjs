@@ -14,12 +14,17 @@ for(const route of [...serviceRoutes,...quoteRoutes]){
   const priceBlocks=[...html.matchAll(/<div class="(?:service-price-examples|executive-investment-note)"/g)];
   assert.ok(priceBlocks.length>0);
   for(const block of priceBlocks)assert.ok(block.index>match.index && block.index<match.index+match[0].length,`${route}: prices escaped disclosure`);
-  const cta=html.indexOf('id="next-step"')>=0?html.indexOf('id="next-step"'):html.indexOf('data-art-purpose="personal"');
-  assert.ok(cta>=0 && cta<match.index,`${route}: value and contact CTA precede prices`);
+  const main=html.indexOf('<main id="main">');
+  const heroEnd=html.indexOf('</section>',main)+'</section>'.length;
+  assert.ok(main>=0 && heroEnd>main,`${route}: service hero must exist`);
+  const immediateAfterHero=html.slice(heroEnd,match.index);
+  assert.match(immediateAfterHero,/^\s*<section class="service-pricing-section"[^>]*>\s*<div class="wrap">\s*$/,`${route}: closed pricing must immediately follow hero`);
+  assert.ok(match.index>heroEnd,`${route}: pricing cannot interrupt hero`);
+  assert.equal((html.match(/data-pricing-disclosure="service"/g)||[]).length,1,`${route}: only one service pricing disclosure allowed`);
  }else{
   assert.ok(html.indexOf('</form>')<match.index,`${route}: show the service form before detailed comparison`);
   for(const marker of ['data-smart-quote','data-estimate-gross','data-download-quote-pdf'])assert.ok(html.includes(marker));
  }
  for(const script of html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g))JSON.parse(script[1]);
 }
-console.log('Pricing disclosure audit passed: 15 localized pages, closed native panels, value/CTA before prices, retained calculator and JSON-LD.');
+console.log('Pricing disclosure audit passed: 15 localized pages, closed native panels, pricing immediately below hero, retained calculator and JSON-LD.');
