@@ -3,7 +3,7 @@ import fs from 'node:fs';
 const failures=[];
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const site=fs.readFileSync('assets/css/site.css','utf8');
-const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const fluid=fs.readFileSync('assets/css/site.css','utf8').split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')[1]||'';
 const main=fs.readFileSync('assets/js/main.js','utf8');
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const legacyMain=fs.readFileSync('js/main.js','utf8');
@@ -14,7 +14,7 @@ const footer=authority.layout?.footer||{};
 const flow=authority.layout?.documentFlow||{};
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
-must(footer.canonicalGeometryAuthority==='assets/css/fluid-4k-rhythm.css','footer geometry authority must be fluid-4k-rhythm.css');
+must(footer.canonicalGeometryAuthority==='assets/css/site.css','footer geometry authority must be site.css');
 must(footer.canonicalFinalMarker==='FOOTER-SINGLE-CANONICAL-V43-20260926','footer canonical marker drifted');
 must(footer.singleGeometryAuthorityRequired===true,'single footer geometry authority lock missing');
 must(footer.legacyFooterMutatorsDisabled===true,'legacy footer mutator lock missing');
@@ -32,9 +32,8 @@ for(const stale of ['FOOTER-RESTORE-V24','VISUAL-REPAIR-V27','FOOTER-TWO-ROW-V29
 }
 for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
   const html=fs.readFileSync(rel,'utf8');
-  const sitePos=html.indexOf('/assets/css/site.css');
-  const fluidPos=html.indexOf('/assets/css/fluid-4k-rhythm.css');
-  must(sitePos>=0&&fluidPos>sitePos,rel+': canonical fluid footer authority must load after base site.css');
+  const siteStyles=(html.match(/\/assets\/css\/site\.css\?v=/g)||[]).length;
+  must(siteStyles===1&&!html.includes('/assets/css/fluid-4k-rhythm.css'),rel+': one canonical site.css link required');
 }
 must(fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'desktop 12-track footer missing');
 must(fluid.includes('@media (min-width:1180px) and (max-width:1439px)')&&fluid.includes('grid-template-columns:repeat(12,minmax(0,1fr))!important'),'small desktop 12-track footer missing');

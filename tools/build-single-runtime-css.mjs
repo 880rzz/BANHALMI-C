@@ -1,10 +1,7 @@
 /**
- * Deterministic production CSS compiler.
- *
- * Git temporarily keeps both reviewed source files while old source audits
- * are migrated. The published website receives only ONE style asset: site.css.
- * Keep original cascade order, safely deduplicate identical leaf rules, stamp
- * every HTML CSS URL from final bytes, and reject legacy runtime injectors.
+ * Publish the one maintained BANHALMI CSS source as one stylesheet request.
+ * Preserve the source cascade, deduplicate only identical rules, and bind the
+ * runtime cache URL to the exact emitted CSS bytes.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -13,71 +10,51 @@ import { execFileSync } from 'node:child_process';
 
 const root=path.resolve(process.argv[2]||'_site');
 const cssDir=path.join(root,'assets/css');
-const primary=path.join(cssDir,'site.css');
-const secondary=path.join(cssDir,'fluid-4k-rhythm.css');
-const boot=path.join(root,'assets/js/fluid-rhythm-boot.js');
-const siteConfig=path.join(root,'assets/js/site-config.js');
-for(const file of [primary,secondary,boot,siteConfig]){
-  if(!fs.existsSync(file))throw Error('Missing CSS migration input: '+file);
-}
-const base=fs.readFileSync(primary,'utf8');
-const fluid=fs.readFileSync(secondary,'utf8');
-if(base.includes('BANHALMI-SINGLE-CSS-BUNDLE-V1'))throw Error('CSS already bundled');
-if(!base.trim()||!fluid.trim())throw Error('Empty CSS source');
-if(/^\s*@(?:import|charset)\b/m.test(fluid))throw Error('Late CSS import/charset requires manual resolution');
+const cssFile=path.join(cssDir,'site.css');
+const marker='/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */';
+const stylesheetFiles=fs.readdirSync(cssDir).filter(name=>name.endsWith('.css'));
+if(stylesheetFiles.length!==1||stylesheetFiles[0]!=='site.css')
+  throw Error('Only the maintained assets/css/site.css source may be published');
+if(!fs.existsSync(cssFile))throw Error('Missing site.css');
+const originalCss=fs.readFileSync(cssFile,'utf8');
+if(originalCss.split(marker).length!==2)throw Error('CSS component authority boundary missing or duplicated');
+if(!originalCss.trim())throw Error('Empty CSS source');
 
-// Preserve the original site.css -> fluid CSS cascade order.
-fs.writeFileSync(primary,base+'\n\n/* BANHALMI-SINGLE-CSS-BUNDLE-V1: original fluid rules */\n'+fluid+'\n','utf8');
-// Existing project deduper removes only exact redundant rules within one
-// at-rule context and retains the last copy. It does not rewrite values.
-execFileSync(process.execPath,['scripts/dedupe-exact-css-rules.mjs',primary],{stdio:'inherit'});
-const finalCss=fs.readFileSync(primary,'utf8');
+for(const rel of ['assets/js/fluid-rhythm-boot.js','assets/js/site-config.js']){
+  const script=path.join(root,rel);
+  if(!fs.existsSync(script))throw Error('Missing shared runtime '+rel);
+  if(/fluid-4k-rhythm\.css|data-fluid-4k-rhythm|loadFluidRhythm/.test(fs.readFileSync(script,'utf8')))
+    throw Error('Retired stylesheet injector detected in '+rel);
+}
+
+// Exact duplicate leaf rules in the same at-rule context are not needed in
+// the delivered cascade. Preserve the last occurrence of identical rules.
+execFileSync(process.execPath,['scripts/dedupe-exact-css-rules.mjs',cssFile],{stdio:'inherit'});
+const finalCss=fs.readFileSync(cssFile,'utf8');
+if(!finalCss.includes(marker))throw Error('CSS component authority boundary lost during compilation');
 const token='design-'+createHash('sha256').update(finalCss).digest('hex').slice(0,16);
-const canonicalSiteCss='/assets/css/site.css?v='+token;
+const canonicalHref='/assets/css/site.css?v='+token;
+let checked=0,stamped=0;
 
-// Runtime loaders are retired IN SOURCE, not rewritten during publication.
-// Fail the build if another script tries to introduce a second stylesheet.
-for(const script of [boot,siteConfig]){
-  const source=fs.readFileSync(script,'utf8');
-  if(/fluid-4k-rhythm\.css|data-fluid-4k-rhythm|loadFluidRhythm/.test(source))
-    throw Error('Legacy dynamic CSS loader still present in '+script);
-}
-
-const edits=[];
-let removedFluidLinks=0,stampedPages=0;
 function walk(dir){
   for(const entry of fs.readdirSync(dir,{withFileTypes:true})){
-    const filename=path.join(dir,entry.name);
-    if(entry.isDirectory()){walk(filename);continue;}
+    const file=path.join(dir,entry.name);
+    if(entry.isDirectory()){walk(file);continue;}
     if(!entry.isFile()||!entry.name.endsWith('.html'))continue;
-    const original=fs.readFileSync(filename,'utf8');
-    const fluidLink=/<link\b(?=[^>]*\bhref=(["'])\/assets\/css\/fluid-4k-rhythm\.css(?:\?[^"']*)?\1)[^>]*\/?>/gi;
-    const found=[...original.matchAll(fluidLink)];
-    if(found.length>1)throw Error('Duplicate fluid CSS link: '+filename);
-    removedFluidLinks+=found.length;
-    let updated=original.replace(fluidLink,'');
-    const siteVersion=/\/assets\/css\/site\.css\?v=[^"'<> \t\r\n]+/g;
-    const foundPrimary=[...updated.matchAll(siteVersion)];
-    if(found.length&&!foundPrimary.length)throw Error('Orphaned CSS page: '+filename);
-    if(foundPrimary.length){
-      stampedPages++;
-      updated=updated.replace(siteVersion,()=>canonicalSiteCss);
-    }
-    if(updated!==original)edits.push([filename,updated]);
+    checked++;
+    const original=fs.readFileSync(file,'utf8');
+    if(original.includes('/assets/css/fluid-4k-rhythm.css')||original.includes('data-fluid-4k-rhythm'))
+      throw Error('Legacy stylesheet reintroduced in '+file);
+    const directStyles=[...original.matchAll(/<link\b(?=[^>]*\bhref=(["'])\/assets\/css\/site\.css\?v=[^"']+\1)[^>]*\/?>/gi)];
+    if(directStyles.length!==1)throw Error('Expected exactly one source stylesheet link in '+file+': '+directStyles.length);
+    const updated=original.replace(/\/assets\/css\/site\.css\?v=[^"'<> \t\r\n]+/g,canonicalHref);
+    if(updated===original&&original.includes(canonicalHref)){stamped++;continue;}
+    if(updated===original)throw Error('Unable to stamp canonical CSS version in '+file);
+    if(updated.includes('/assets/css/fluid-4k-rhythm.css'))throw Error('Legacy CSS URL in '+file);
+    stamped++;
+    fs.writeFileSync(file,updated,'utf8');
   }
 }
 walk(root);
-if(removedFluidLinks<50||stampedPages<50)throw Error('Insufficient HTML coverage: '+removedFluidLinks+'/'+stampedPages);
-for(const [file,html]of edits){
-  if(html.includes('/assets/css/fluid-4k-rhythm.css'))throw Error('Legacy CSS HTML reference: '+file);
-  if(html.includes('/assets/css/site.css?v=')&&!html.includes(canonicalSiteCss))throw Error('Stale CSS cache token: '+file);
-}
-for(const [file,html]of edits)fs.writeFileSync(file,html,'utf8');
-
-// Do not ship a dead second CSS file. The original remains in Git history
-// for rollback and source-contract tests, which execute before this step.
-fs.unlinkSync(secondary);
-const published=fs.readdirSync(cssDir).filter(name=>name.endsWith('.css')).sort();
-if(published.length!==1||published[0]!=='site.css')throw Error('Expected one published CSS file, got '+published.join(', '));
-console.log('Single CSS production artifact: '+removedFluidLinks+' legacy links removed, '+
-  stampedPages+' pages cache-stamped, CSS='+finalCss.length+' chars, URL='+canonicalSiteCss);
+if(checked<50||stamped!==checked)throw Error('Insufficient source HTML CSS coverage '+stamped+'/'+checked);
+console.log('Single canonical CSS: '+checked+' HTML pages, '+finalCss.length+' emitted CSS characters, cache URL '+canonicalHref);

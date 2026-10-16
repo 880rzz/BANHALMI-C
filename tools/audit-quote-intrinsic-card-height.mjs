@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 
-const css = fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const css = fs.readFileSync('assets/css/site.css','utf8').split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')[1]||'';
 const errors = [];
 const marker = 'SMART-QUOTE-INTRINSIC-CARD-HEIGHT-20260918';
 if (!css.includes(marker)) errors.push('quote intrinsic-height authority marker missing');

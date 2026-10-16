@@ -1,6 +1,6 @@
 # BANHALMI-C CSS authority remediation — 2026-10-16
 
-Status: TRANSITIONAL / NOT PRODUCTION VERIFIED.
+Status: ONE MAINTAINED CSS SOURCE ON INTEGRATION BRANCH / NOT PRODUCTION VERIFIED.
 
 ## Evidence from main
 
@@ -73,3 +73,7 @@ Do not mass-strip `!important`. Consolidate one selector family at a time, retai
 ### Source deduplication milestone
 
 Safely removed 34 identical earlier leaf rules from `site.css` and 22 from `fluid-4k-rhythm.css`, preserving their last identical occurrences. This reduced a further 74 source `!important` declarations and roughly 5.6 KB of duplicate CSS. The compiled bundle still passes through the exact-rule deduper for cross-source matches.
+
+## Source consolidation milestone — 2026-10-16
+
+The previous two maintained source files have been combined in original cascade order into one `assets/css/site.css`. The historical fluid component section remains visibly marked inside the same file, and the obsolete secondary file is deleted. All 101 source HTML pages now reference one versioned stylesheet; the source and artifact auditors require this single-link contract. The optimizer, hardener, CSS publisher, footer/layout/typography audits and design-authority data were migrated together. The publisher still removes exact duplicate declarations only within a matching at-rule context and stamps the emitted byte hash; it does not introduce new CSS. The source specificity budget remains 1938 `!important` until additional component-by-component remediation is verified. This source consolidation is not evidence of a successful deploy or exact-live rendering; full required CI is still a release gate.

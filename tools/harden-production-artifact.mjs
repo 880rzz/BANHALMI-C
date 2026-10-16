@@ -134,20 +134,18 @@ generateMachineProjections(root);
 applyLlmCanonicalOverlay(root);
 
 /* Footer geometry is immutable source authority. Hardening may verify it but must never rewrite it. */
-const fluidCssPath = path.join(root, 'assets/css/fluid-4k-rhythm.css');
-if (!fs.existsSync(fluidCssPath)) throw new Error('Production artifact lost assets/css/fluid-4k-rhythm.css during hardening.');
-let fluidCss = fs.readFileSync(fluidCssPath, 'utf8');
-if ((fluidCss.match(/FOOTER-SINGLE-CANONICAL-V42-20260925/g)||[]).length !== 1) throw new Error('BANHALMI canonical footer authority missing or duplicated during hardening.');
+const siteCssPath = path.join(root, 'assets/css/site.css');
+if (!fs.existsSync(siteCssPath)) throw new Error('Production artifact lost assets/css/site.css during hardening.');
+let canonicalCss = fs.readFileSync(siteCssPath, 'utf8');
+if ((canonicalCss.match(/FOOTER-SINGLE-CANONICAL-V42-20260925/g)||[]).length !== 1) throw new Error('BANHALMI canonical footer authority missing or duplicated during hardening.');
 
 const heroSignatureWhite = 'html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-signature-line{position:absolute;left:clamp(30px,3vw,56px);bottom:clamp(28px,3vw,52px);z-index:3;max-width:34ch!important;margin:0!important;color:#fff;';
 const heroSignatureGold = 'html body main[data-homepage-redesign=stage76]>.hero-visual-only .hero-signature-line{position:absolute;left:clamp(30px,3vw,56px);bottom:clamp(28px,3vw,52px);z-index:3;max-width:34ch!important;margin:0!important;color:#B79C44;';
-if (!fluidCss.includes(heroSignatureWhite)) throw new Error('BANHALMI hero image slogan white-color source token missing.');
-fluidCss = fluidCss.replace(heroSignatureWhite, heroSignatureGold);
-fs.writeFileSync(fluidCssPath, fluidCss, 'utf8');
+if (!canonicalCss.includes(heroSignatureWhite)) throw new Error('BANHALMI hero image slogan white-color source token missing.');
+canonicalCss = canonicalCss.replace(heroSignatureWhite, heroSignatureGold);
+fs.writeFileSync(siteCssPath, canonicalCss, 'utf8');
 
-const siteCssPath = path.join(root, 'assets/css/site.css');
-if (!fs.existsSync(siteCssPath)) throw new Error('Production artifact lost assets/css/site.css during hardening.');
-const hardenedCss = fs.readFileSync(siteCssPath, 'utf8');
+const hardenedCss = canonicalCss;
 if (!/\.smart-quote-layout\s+\.option-row\s*\{[^}]*grid-template-columns\s*:\s*24px\s+minmax\(0,1fr\)/s.test(hardenedCss)) {
   throw new Error('Canonical quote radio spacing contract is missing from source CSS.');
 }

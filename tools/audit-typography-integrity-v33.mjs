@@ -4,7 +4,7 @@ const failures=[];
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const loader=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
-const css=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const css=fs.readFileSync('assets/css/site.css','utf8').split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')[1]||'';
 const js=fs.readFileSync('assets/js/typography-integrity-v33.js','utf8');
 
 const contract=authority.typography?.semanticBreakProtection||{};
@@ -17,7 +17,7 @@ must(contract.noHorizontalOverflow===true,'typography protection must not permit
 
 must(!loader.includes('typography-integrity-v33.css'),'separate typography stylesheet loader returned');
 must(loader.includes('typography-integrity-v33.js?v=20260917-typography-v33'),'global loader lost typography runtime');
-must(css.includes('TYPOGRAPHY-INTEGRITY-V33-20260917'),'canonical fluid stylesheet lost typography marker');
+must(css.includes('TYPOGRAPHY-INTEGRITY-V33-20260917'),'canonical site.css lost typography marker');
 must(css.includes('.bn-term-lock'),'atomic term class missing');
 must(css.includes('white-space:nowrap!important'),'atomic terms may split again');
 must(css.includes('hyphens:none!important'),'hyphenation protection missing');

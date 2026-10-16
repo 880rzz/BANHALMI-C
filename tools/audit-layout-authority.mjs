@@ -19,4 +19,4 @@ if(/home\.css|visual-rhythm-20260825\.css/.test(css)) fail.push('secondary CSS a
 const markerClose=b>=0?css.indexOf('*/',b+end.length):-1;
 if(markerClose>=0&&css.slice(markerClose+2).trim()) fail.push('rules found after final Apple authority');
 if(fail.length){console.error('Layout authority audit failed:\n- '+fail.join('\n- '));process.exit(1)}
-console.log('Layout authority audit passed: site.css owns the non-footer Apple baseline; footer geometry is intentionally externalized to the single canonical fluid authority.');
+console.log('Layout authority audit passed: site.css owns the non-footer Apple baseline; footer geometry is owned by the canonical component section of the same site.css source.');

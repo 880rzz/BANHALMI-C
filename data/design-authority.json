@@ -103,7 +103,7 @@
       "compactFooterBottomPaddingPx": 18,
       "compactEcosystemMarginPx": 0,
       "compactEcosystemPaddingPx": 0,
-      "canonicalGeometryAuthority": "assets/css/fluid-4k-rhythm.css",
+      "canonicalGeometryAuthority": "assets/css/site.css",
       "separateGeometryStylesheetAllowed": false,
       "runtimeGeometryLoaderAllowed": false,
       "desktopInternalStudioDivider": false,

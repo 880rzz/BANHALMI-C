@@ -24,9 +24,7 @@ const quotePdfScriptRe = /<script([^>]*?)src="(\/assets\/js\/quote-pdf\.js[^\"]*
 
 const synchronousStyle = '<link rel="stylesheet" href="$1"/>';
 const deferredSiteStyleRe = /<link rel="preload" as="style" href="(\/assets\/css\/site\.css[^"]*)"\/><link rel="stylesheet" href="\1" media="print" onload="this\.media='all';this\.onload=null"\/><noscript><link rel="stylesheet" href="\1"\/><\/noscript>/g;
-const fluidRhythmHref = '/assets/css/fluid-4k-rhythm.css?v=20261006-disclosure-v52';
-const fluidRhythmStyle = `<link rel="stylesheet" href="${fluidRhythmHref}" data-fluid-4k-rhythm=""/>`;
-const fluidRhythmLinkRe = /<link\s+rel="stylesheet"\s+href="\/assets\/css\/fluid-4k-rhythm\.css[^\"]*"\s+data-fluid-4k-rhythm=""\s*\/>/g;
+const singleCanonicalStylesheet=/<link\b(?=[^>]*\bhref=(["'])\/assets\/css\/site\.css(?:\?[^"']*)?\1)[^>]*\/?>/gi;
 
 const executivePositioningCopy = {
   'lifestyle/index.html': {
@@ -85,14 +83,12 @@ for (const file of htmlFiles) {
     throw new Error(`Deferred canonical stylesheet remained in ${rel}`);
   }
 
-  /* The geometry stylesheet must be parser-discovered in <head> on every production page.
-     Loading it from runtime JS caused deterministic CLS on service pages such as /portrait/. */
-  /* The artifact is the deployment authority. Normalize an existing geometry
-     link as well as injecting a missing one, otherwise an old cache token can
-     make a browser render an earlier design after a successful deployment. */
-  html = html.replace(fluidRhythmLinkRe, fluidRhythmStyle);
-  if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\/head>/i, `${fluidRhythmStyle}</head>`);
-  if (!html.includes('data-fluid-4k-rhythm')) throw new Error(`Fluid rhythm stylesheet missing in ${rel}`);
+  /* The one authoritative stylesheet must be parser-discovered in the head.
+     Dynamic CSS injection and a second source stylesheet are prohibited. */
+  if ((html.match(singleCanonicalStylesheet)||[]).length!==1)
+    throw new Error('Expected one canonical site.css link in '+rel);
+  if (html.includes('/assets/css/fluid-4k-rhythm.css')||html.includes('data-fluid-4k-rhythm'))
+    throw new Error('Secondary stylesheet was reintroduced in '+rel);
 
   if (isHome) {
     html = html.replace(megaMenuScriptRe, homeMegaMenuLoader);

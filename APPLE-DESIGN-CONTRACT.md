@@ -68,7 +68,7 @@ This repository treats the following as a release-blocking visual contract for e
 - Navigation links, inline text links, utility links, disclosures and CTA links may differ by role, but each role must remain typographically, spatially and interactively consistent across pages and languages.
 
 ## Restore / rewrite authority
-- `APPLE-DESIGN-CONTRACT.md`, `data/design-authority.json`, `tools/design-contract-policy.json`, and `assets/css/fluid-4k-rhythm.css` are canonical inputs for any automated generator, optimizer, restore, hardening, remediation or rewrite process that can affect layout.
+- `APPLE-DESIGN-CONTRACT.md`, `data/design-authority.json`, `tools/design-contract-policy.json`, and `assets/css/site.css` are canonical inputs for any automated generator, optimizer, restore, hardening, remediation or rewrite process that can affect layout.
 - The production artifact must parser-discover the canonical `fluid-4k-rhythm.css` stylesheet in `<head>` before first layout; loading geometry only after runtime JavaScript executes is a release-blocking CLS regression.
 - JavaScript loaders may verify/load the canonical stylesheet as a fallback and synchronize disclosure state, but must not inject hero, footer, cards, reviews, section-rhythm, gallery or mega-menu geometry.
 - Such processes must preserve equal-height same-type desktop cards, the three-band desktop footer, semantic multi-line footer wrapping, and atomic identifier no-break behavior.

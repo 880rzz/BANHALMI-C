@@ -15,8 +15,8 @@ walk();
 
 const errors = [];
 const site = fs.readFileSync('assets/css/site.css', 'utf8');
-const fluid = fs.readFileSync('assets/css/fluid-4k-rhythm.css', 'utf8');
-const styles = `${site}\n${fluid}`;
+const fluid = fs.readFileSync('assets/css/site.css', 'utf8').split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')[1]||'';
+const styles = site;
 for (const selector of ['.footer-contact-list .footer-location','.footer-contact-actions','.footer-location-link']) {
   if (!styles.includes(selector)) errors.push(`canonical executive footer selector missing: ${selector}`);
 }
