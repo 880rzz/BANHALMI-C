@@ -1,9 +1,9 @@
 import {test,expect} from '@playwright/test';
 const locales=[['/','/portrait/','/lifestyle/'],['/hu/','/hu/portre/','/hu/brand/'],['/de-at/','/de-at/portrait/','/de-at/brand/']];
 const approvedPortraitH1={
- '/portrait/':'The image that reveals who you are.',
- '/hu/portre/':'A kép, amely megmutatja, ki Ön.',
- '/de-at/portrait/':'Das Bild, das zeigt, wer Sie sind.'
+ '/portrait/':'A portrait is not a photograph. It is an encounter. The moment that reveals who you truly are behind the mask.',
+ '/hu/portre/':'A portré nem egy fénykép. Ez egy találkozás. Az a pillanat, amely megmutatja, ki Ön valójában a maszk mögött.',
+ '/de-at/portrait/':'Ein Porträt ist kein Foto. Es ist eine Begegnung. Der Moment, der zeigt, wer Sie hinter der Maske wirklich sind.'
 };
 for(const [home,portrait,brand] of locales){
  test(home+' exposes service owners before the first conversion action',async({page})=>{
