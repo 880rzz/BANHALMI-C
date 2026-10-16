@@ -1331,7 +1331,8 @@
     try{
       var url=new URL(raw,document.baseURI);
       return (url.protocol==="https:"||url.protocol==="http:")
-        && canonicalHost(url.hostname)!==canonicalHost(window.location.hostname);
+        && canonicalHost(url.hostname)!==canonicalHost(window.location.hostname)
+        && canonicalHost(url.hostname)!=="norbertbanhalmi.com";
     }catch(error){return false;}
   }
   function actionOrMedia(a){
