@@ -4022,9 +4022,9 @@ html body main .trust-hero p.lead{
 html body main h1{font-size:clamp(2.5rem,4vw,3.25rem)!important;line-height:1.08!important;letter-spacing:-.024em!important;}
 html body main h2{font-size:var(--bn-context-h2-size,clamp(1.625rem,2.1vw,2.1rem))!important;line-height:1.18!important;letter-spacing:-.022em!important;}
 html body main h3{font-size:clamp(18px,1.45vw,1.3rem)!important;line-height:1.24!important;letter-spacing:-.012em!important;}
-html body main :is(p,li,dd){font-size:16px!important;line-height:1.62!important;}
+html body main :is(p,li,dd){font-size:var(--bn-context-body-size,16px)!important;line-height:1.62!important;}
 html body main .lead{font-size:clamp(19px,1.6vw,1.4rem)!important;line-height:1.48!important;}
-html body main :is(summary,.description,.desc,.microcopy,.field-help){line-height:1.5!important;}
+html body main :is(summary,.description,.desc,.microcopy,.field-help){line-height:var(--bn-context-meta-line-height,1.5)!important;}
 /* Every section owns its real height. Deferred paint placeholders created
    artificial 760 px gaps on Safari when a section approached the viewport. */
 html body main>section{content-visibility:visible!important;contain-intrinsic-size:auto!important;}
@@ -4209,6 +4209,7 @@ body.whatsapp-cookie-visible .whatsapp-contact{
   border-radius:10px;background:#fff;overflow:visible;
 }
 .service-pricing-section .quote-decision-guide>summary{
+  --bn-context-meta-line-height:1.45;
   display:flex;align-items:center;justify-content:space-between;
   min-height:48px;box-sizing:border-box;margin:0;padding:15px clamp(18px,3vw,30px);
   font-size:1rem;line-height:1.45;font-weight:650;list-style:none;
@@ -4230,7 +4231,7 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 .service-price-examples li>strong{white-space:nowrap;text-align:end;font-size:1.125rem;line-height:1.4;font-variant-numeric:tabular-nums;}
 .service-price-examples .service-package-includes{display:block;margin-top:7px;font-size:var(--bn-service-price-meta);font-weight:400;line-height:1.55;color:var(--muted,#6e6e73);}
 .service-price-examples p,.service-pricing-section .quote-decision-guide>p{font-size:var(--bn-service-price-body);line-height:1.6;max-width:76ch;}
-.service-price-examples .service-price-currency-note{font-size:var(--bn-service-price-meta);}
+.service-price-examples .service-price-currency-note{--bn-context-body-size:var(--bn-service-price-meta);font-size:var(--bn-service-price-meta);}
 @media(max-width:600px){
   .service-price-examples li{grid-template-columns:minmax(0,1fr);gap:8px;padding-block:16px;}
   .service-price-examples li>strong{text-align:start;}
