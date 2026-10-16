@@ -7,7 +7,7 @@ const records=data.itemListElement.map(x=>x.item);
 const clients=records.filter(x=>x.category==='selected client or collaboration');
 const memberships=records.filter(x=>x.category!=='selected client or collaboration');
 const referenceHtml=fs.readFileSync('archive/index.html','utf8');
-const cssHref=(referenceHtml.match(/href=[\"'](\\/assets\\/css\\/site\\.css\\?v=design-[a-z0-9-]+)[\"']/i)||[])[1];
+const cssHref=(referenceHtml.match(/href="(\/assets\/css\/site\.css\?v=design-[a-z0-9-]+)"/i)||[])[1];
 if(!cssHref)throw new Error('Canonical versioned site.css reference missing from archive/index.html');
 const writeOutputs=process.argv.includes('--write');
 const locales={
