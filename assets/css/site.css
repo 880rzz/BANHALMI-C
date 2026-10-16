@@ -4196,7 +4196,7 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 /* SERVICE-PRICING-CONTRACT-20261016: one editorial disclosure immediately below each service hero.
    Use the page's existing .wrap geometry; do not create a competing content gutter. */
 :root{
-  --bn-service-price-heading:clamp(1.3rem,1.7vw,1.7rem);
+  --bn-service-price-heading:clamp(1.375rem,1.7vw,1.7rem);
   --bn-service-price-body:1rem;
   --bn-service-price-meta:.875rem;
   --bn-service-price-divider:var(--line,rgba(0,0,0,.11));
