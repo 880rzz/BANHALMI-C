@@ -8,16 +8,7 @@ window.BANHALMI_CONFIG = Object.assign({}, window.BANHALMI_CONFIG || {}, {
   analyticsMeasurementId: "G-90C452LJKQ"
 });
 
-/* Load the canonical mobile-to-4K rhythm before shared navigation. */
-(function loadFluidRhythm(){
-  'use strict';
-  if(document.querySelector('link[data-fluid-4k-rhythm]')) return;
-  var link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = '/assets/css/fluid-4k-rhythm.css?v=20261006-disclosure-v52';
-  link.setAttribute('data-fluid-4k-rhythm','');
-  document.head.appendChild(link);
-})();
+/* Presentation styles are delivered in the versioned site.css asset. */
 
 /* Load the shared ART-inspired descriptive navigation on every page. */
 (function loadDescriptiveMenu(){

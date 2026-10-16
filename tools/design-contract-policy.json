@@ -1,6 +1,6 @@
 {
   "version": "2026-09-16-live-pixel-v19",
-  "authority": ["APPLE-DESIGN-CONTRACT.md", "data/design-authority.json", "assets/css/fluid-4k-rhythm.css"],
+  "authority": ["APPLE-DESIGN-CONTRACT.md", "data/design-authority.json", "assets/css/site.css"],
   "rules": {
     "equalHeightSameTypeCardsDesktop": true,
     "naturalHeightCardsMobile": true,
@@ -15,5 +15,5 @@
     "renderedPixelEvidenceRequired": true,
     "greenCIWithoutRenderedGeometryIsInsufficient": true
   },
-  "rewritePolicy": "Generators, optimizers, restore, hardening and remediation jobs must preserve canonical geometry in assets/css/fluid-4k-rhythm.css, must parser-discover that stylesheet in the production head, must not inject layout geometry from JavaScript, must preserve the three-band desktop footer, and must preserve the 1440/1920/2560/4K rendered pixel gates."
+  "rewritePolicy": "Generators, optimizers, restore, hardening and remediation jobs must preserve canonical geometry in assets/css/site.css, must parser-discover that stylesheet in the production head, must not inject layout geometry from JavaScript, must preserve the three-band desktop footer, and must preserve the 1440/1920/2560/4K rendered pixel gates."
 }

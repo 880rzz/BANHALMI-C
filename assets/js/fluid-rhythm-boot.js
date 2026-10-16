@@ -1,19 +1,9 @@
-/* Loader for the canonical fluid 4K rhythm contract. Navigation authority lives in mega-menu.js plus the compact editorial menu contract. */
+/* Typography integrity bootstrap. Presentation styles are delivered in site.css. */
 (function(){
   'use strict';
-  var href = '/assets/css/fluid-4k-rhythm.css?v=20261006-disclosure-v52';
-  var existing = document.querySelector('link[data-fluid-4k-rhythm]');
-  if (existing) {
-    if (existing.getAttribute('href') !== href) existing.setAttribute('href', href);
-  } else {
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = href;
-    link.setAttribute('data-fluid-4k-rhythm','');
-    document.head.appendChild(link);
-  }
+  /* CSS is supplied by the single versioned site.css asset. */
 
-  /* Typography integrity is global; CSS is canonicalized in fluid-4k-rhythm.css. */
+  /* Typography integrity is global; CSS is canonicalized in site.css. */
   if (!document.querySelector('script[data-typography-integrity]')) {
     var typeScript = document.createElement('script');
     typeScript.src = '/assets/js/typography-integrity-v33.js?v=20260917-typography-v33';

@@ -10,7 +10,7 @@ const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8')
 const mainRuntime=fs.readFileSync('assets/js/main.js','utf8');
 const bootRuntime=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const legacyRuntime=fs.readFileSync('js/main.js','utf8');
-const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
+const fluid=fs.readFileSync('assets/css/site.css','utf8').split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')[1]||'';
 const menuCore=fs.readFileSync('assets/js/mega-menu.js','utf8');
 const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
@@ -85,7 +85,7 @@ must(authority.layout?.footer?.compactInteractiveDisclosureRequired===true,'comp
 must(authority.layout?.footer?.inlineVisibilityMutationAllowed===false,'compact footer must not regain inline visibility mutation');
 for(const rel of ['index.html','hu/index.html','de-at/index.html','portrait/index.html']){
   const html=fs.readFileSync(rel,'utf8');
-  must(html.indexOf('/assets/css/fluid-4k-rhythm.css')>html.indexOf('/assets/css/site.css'),rel+': footer authority load order regressed');
+  must((html.match(/\/assets\/css\/site\.css\?v=/g)||[]).length===1&&!html.includes('/assets/css/fluid-4k-rhythm.css'),rel+': canonical single stylesheet load regressed');
 }
 for(const stale of ['FOOTER-RESTORE-V24','VISUAL-REPAIR-V27','FOOTER-TWO-ROW-V29','FOOTER-GEOMETRY-V32','FOOTER-SINGLE-AUTHORITY-20260918','FOOTER-ROOT-CAUSE-FINAL-CLOSURE','FINAL-FOOTER-MEGA-AUTHORITY','FOOTER-RENDER-STABILITY','FOOTER-MENU-HARMONY-CLOSURE','FOOTER-THREE-LOCATION-V36','HU-TABLET-FOOTER-DENSITY-V38']) must(!fluid.includes(stale),'stale footer authority returned: '+stale);
 must(!/compactFooterReplacement|smallDesktopFooter|LIVE-PIXEL-GEOMETRY-V21-SMALL-DESKTOP/.test(hardener),'production hardener regained footer geometry mutation');

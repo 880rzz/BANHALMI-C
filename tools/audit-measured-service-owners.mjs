@@ -19,7 +19,11 @@ for(const [locale,home] of [['en','index.html'],['hu','hu/index.html'],['de','de
   if(owner.service==='portrait'||owner.service==='brand'){
    const heading=clean(target.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)[1]);
    const web=scripts.find(x=>x['@type']==='WebPage');assert.equal(web.headline,heading,`${route}: headline mismatch`);
-   assert.match(heading,owner.service==='portrait'?/portr/i:/brand/i);
+   if(owner.service==='portrait'){
+    const approved={en:'The image that reveals who you are.',hu:'A kép, amely megmutatja, ki Ön.',de:'Das Bild, das zeigt, wer Sie sind.'};
+    assert.equal(heading,approved[locale],`${route}: approved portrait H1 must be preserved`);
+    assert.match(target.match(/<title>(.*?)<\/title>/)?.[1]||'',/portr|headshot/i,`${route}: portrait intent must remain in title`);
+   }else assert.match(heading,/brand/i);
   }
   if(owner.service!=='event'){
    const service=scripts.find(x=>x['@type']==='Service');assert.ok(service.alternateName.length>=3,`${route}: localized aliases missing`);

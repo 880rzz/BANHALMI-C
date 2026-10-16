@@ -11,17 +11,14 @@ if(tokens.size!==1)errors.push(`source HTML must use exactly one site.css token,
 if(errors.length){console.error(errors.join('\n'));process.exit(1)}
 console.log(`CSS cache-token audit passed: ${references} site.css references share one canonical token ${[...tokens][0]}.`);
 
-// Source pages must use the same fluid stylesheet URL as the production builder.
-const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
-const canonicalFluid=optimizer.match(/const fluidRhythmHref = '([^']+)'/)?.[1];
-if(!canonicalFluid)throw new Error('Missing canonical fluid stylesheet URL in production builder');
-let fluidReferences=0;
+// Single-source contract: every source page must parser-discover only site.css.
+const cssFiles=fs.readdirSync('assets/css').filter(name=>name.endsWith('.css'));
+if(cssFiles.length!==1||cssFiles[0]!=='site.css')throw Error('Expected exactly one maintained CSS source: site.css');
 for(const file of files){
   const html=fs.readFileSync(file,'utf8');
-  for(const match of html.matchAll(/\/assets\/css\/fluid-4k-rhythm\.css(?:\?[^"'<>\s]*)?/g)){
-    fluidReferences++;
-    if(match[0]!==canonicalFluid)throw new Error(`${file}: stale fluid stylesheet URL ${match[0]}; expected ${canonicalFluid}`);
-  }
+  if(html.includes('/assets/css/fluid-4k-rhythm.css')||html.includes('data-fluid-4k-rhythm'))
+    throw Error(file+': legacy secondary stylesheet reintroduced');
+  const directStyles=[...html.matchAll(/<link\b(?=[^>]*\bhref=(["'])\/assets\/css\/site\.css\?v=[^"']+\1)[^>]*>/gi)];
+  if(directStyles.length!==1)throw Error(file+': expected one parser-discovered canonical site.css link, got '+directStyles.length);
 }
-if(fluidReferences<50)throw new Error(`Expected at least 50 fluid stylesheet references, found ${fluidReferences}`);
-console.log(`Fluid CSS cache-token audit passed: ${fluidReferences} references match the production builder.`);
+console.log('Canonical CSS source audit passed: one site.css, '+files.length+' HTML pages with one versioned CSS link each.');

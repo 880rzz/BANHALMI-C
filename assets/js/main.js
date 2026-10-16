@@ -1316,31 +1316,81 @@
 
 
 
-/* BANHALMI-GLOBAL-TEXT-LINK-ARROW-V1-20261007
-   One restrained external-direction glyph after every human-readable text link.
-   Identity/image-only links stay visually clean; aria-hidden keeps accessible names unchanged. */
+/* BANHALMI-EXTERNAL-LINK-ARROW-V2-20261016
+   Only off-site HTTP(S) text links receive a decorative glyph. In-site
+   language routes, anchors, actions and image links stay clean; screen
+   readers retain the unmodified human-readable label. */
 (function(){
   "use strict";
-  function decorate(root){
-    var scope=root&&root.querySelectorAll?root:document;
-    var links=[];
-    if(scope.matches&&scope.matches("a")) links.push(scope);
-    scope.querySelectorAll("a").forEach(function(a){links.push(a);});
-    links.forEach(function(a){
-      if(a.hasAttribute("data-banhalmi-link-arrow")) return;
-      if(a.classList.contains("brand")||a.classList.contains("footer-wko-profile")) return;
-      var text=(a.textContent||"").replace(/\s+/g," ").trim();
-      if(!text||text.endsWith("↗")) return;
-      var arrow=document.createElement("span");
-      arrow.className="banhalmi-link-arrow";
-      arrow.setAttribute("aria-hidden","true");
-      arrow.textContent="↗";
-      a.appendChild(arrow);
+  function canonicalHost(host){
+    return String(host||"").toLowerCase().replace(/^www\./,"");
+  }
+  function external(a){
+    var raw=a.getAttribute("href");
+    if(!raw) return false;
+    try{
+      var url=new URL(raw,document.baseURI);
+      return (url.protocol==="https:"||url.protocol==="http:")
+        && canonicalHost(url.hostname)!==canonicalHost(window.location.hostname)
+        && canonicalHost(url.hostname)!=="norbertbanhalmi.com";
+    }catch(error){return false;}
+  }
+  function actionOrMedia(a){
+    return a.matches('.brand,.footer-wko-profile,.btn,.btn-primary,.btn-secondary,.btn-ghost,.nav-cta,[role="button"]')
+      || !!a.querySelector("img,picture,svg,video");
+  }
+  function decorative(a){
+    return a.querySelector(":scope > .banhalmi-link-arrow");
+  }
+  function removeLiteralArrow(a){
+    var walker=document.createTreeWalker(a,NodeFilter.SHOW_TEXT);
+    var node,last=null;
+    while((node=walker.nextNode())){
+      if(node.parentElement?.closest(".banhalmi-link-arrow")) continue;
+      if(node.nodeValue&&node.nodeValue.trim())last=node;
+    }
+    if(last&&/\u2197\s*$/.test(last.nodeValue)){
+      last.nodeValue=last.nodeValue.replace(/\s*\u2197\s*$/,"").replace(/\s+$/,"");
+    }
+  }
+  function normalize(a){
+    var qualifies=external(a)&&!actionOrMedia(a);
+    var marker=decorative(a);
+    if(!qualifies){
+      if(marker)marker.remove();
+      a.removeAttribute("data-banhalmi-link-arrow");
+      removeLiteralArrow(a);
+      return;
+    }
+    var label=(a.textContent||"").replace(/\u2197/g,"").trim();
+    if(!label){
+      if(marker)marker.remove();
+      a.removeAttribute("data-banhalmi-link-arrow");
+      return;
+    }
+    if(marker){
+      marker.setAttribute("aria-hidden","true");
       a.setAttribute("data-banhalmi-link-arrow","");
-    });
+      return;
+    }
+    removeLiteralArrow(a);
+    var glyph=document.createElement("span");
+    glyph.className="banhalmi-link-arrow";
+    glyph.setAttribute("aria-hidden","true");
+    glyph.textContent="\u2197";
+    a.appendChild(glyph);
+    a.setAttribute("data-banhalmi-link-arrow","");
+  }
+  function decorate(root){
+    if(!root||root.nodeType!==1&&root.nodeType!==9)return;
+    if(root.matches&&root.matches("a"))normalize(root);
+    root.querySelectorAll("a").forEach(normalize);
   }
   decorate(document);
   new MutationObserver(function(records){
-    records.forEach(function(record){record.addedNodes.forEach(function(node){if(node.nodeType===1)decorate(node);});});
-  }).observe(document.body,{childList:true,subtree:true});
+    records.forEach(function(record){
+      if(record.type==="attributes"&&record.target.matches("a"))normalize(record.target);
+      record.addedNodes.forEach(function(node){if(node.nodeType===1)decorate(node);});
+    });
+  }).observe(document.body,{childList:true,subtree:true,attributes:true,attributeFilter:["href"]});
 })();

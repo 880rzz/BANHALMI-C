@@ -42,7 +42,7 @@ function compileDesign(css){
   if(!c.includes(anchor)) throw new Error('BANHALMI canonical responsive anchor missing.');
   c=c.replace(anchor,componentRules+anchor);
 
-  /* Footer geometry is owned exclusively by assets/css/fluid-4k-rhythm.css. */
+  /* Footer geometry lives in the canonical component section of assets/css/site.css; do not regenerate it. */
 
   /* Mega-menu geometry is canonical in assets/css/site.css; the compiler must not inject a second navigation authority. */
 

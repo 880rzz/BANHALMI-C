@@ -3,17 +3,17 @@ import fs from 'node:fs';
 const failures=[];
 const boot=fs.readFileSync('assets/js/fluid-rhythm-boot.js','utf8');
 const mainRuntime=fs.readFileSync('assets/js/main.js','utf8');
-const fluid=fs.readFileSync('assets/css/fluid-4k-rhythm.css','utf8');
-const site=fs.readFileSync('assets/css/site.css','utf8');
+const fluid=fs.readFileSync('assets/css/site.css','utf8').split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')[1]||'';
+const site=fs.readFileSync('assets/css/site.css','utf8').split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')[0];
 const menuHarmony='MEGA-MENU-HARMONY-V31-20260917'+((fluid.split('MEGA-MENU-HARMONY-V31-20260917')[1]||'').split('TYPOGRAPHY-INTEGRITY-V33-20260917')[0]||'');
 const optimizer=fs.readFileSync('tools/optimize-production-artifact.mjs','utf8');
 const hardener=fs.readFileSync('tools/harden-production-artifact.mjs','utf8');
 const authority=JSON.parse(fs.readFileSync('data/design-authority.json','utf8'));
 const must=(ok,msg)=>{if(!ok)failures.push(msg)};
 
-must(boot.includes('/assets/css/fluid-4k-rhythm.css?v=20261006-disclosure-v52'),'render-stability cache token missing');
-must(optimizer.includes('/assets/css/fluid-4k-rhythm.css?v=20261006-disclosure-v52'),'production artifact must parser-discover the same canonical geometry CSS token');
-must(optimizer.includes("if (!html.includes('data-fluid-4k-rhythm')) html = html.replace(/<\\/head>/i"),'production artifact must statically inject canonical geometry CSS in head');
+must(!boot.includes('/assets/css/fluid-4k-rhythm.css')&&!boot.includes('data-fluid-4k-rhythm'),'retired runtime CSS loader must not return');
+must(optimizer.includes('singleCanonicalStylesheet')&&!optimizer.includes('fluidRhythmStyle'),'production optimizer must enforce one parser-discovered site.css without secondary injection');
+must(optimizer.includes('singleCanonicalStylesheet'),'production artifact must guard canonical CSS in head');
 must(!mainRuntime.includes('footerDesktopQuery'),'desktop footer disclosure must not be viewport-owned');
 must(mainRuntime.includes('details.open = false')&&mainRuntime.includes('addEventListener("toggle"')&&!mainRuntime.includes('list.style.removeProperty("display")'),'footer disclosure state must be closed by default, native/user-owned and CSS-controlled at all widths');
 must(!boot.includes('style.textContent'),'runtime must not inject layout CSS');
@@ -22,6 +22,7 @@ must(!boot.includes('object-position:center 30%'),'runtime must not own image cr
 must(authority.visualGeometry?.runtimeGeometryOverridesAllowed===false,'canonical authority must prohibit runtime geometry overrides');
 must(fluid.includes('LIVE-PIXEL-GEOMETRY-V22'),'canonical live-pixel stylesheet marker missing');
 must(fluid.includes('RESPONSIVE-VISUAL-SYSTEM-V26'),'responsive visual system marker missing');
+must(fluid.includes('--bn-content-max:var(--apple-page-max)'),'editorial hero must use the same page-width authority as pricing and footer');
 must(fluid.includes('--desktop-hero-min:clamp(740px,42vw,880px)'),'canonical homepage hero base geometry missing');
 must(fluid.includes('--desktop-copy:clamp(560px,38vw,680px)'),'canonical homepage copy-panel geometry missing');
 must(fluid.includes('HOMEPAGE-HERO-HEIGHT-V28-20260917'),'homepage 15% media-height contract marker missing');
@@ -48,7 +49,7 @@ for(const rel of ['index.html','hu/index.html','de-at/index.html']){
   must(html.includes('hero-signature-2400.avif'),`${rel}: shared homepage hero still missing`);
 }
 must(!hardener.includes('--homepage-hero-media-height'),'production hardener must not overwrite canonical homepage media geometry');
-must(hardener.includes("let fluidCss = fs.readFileSync(fluidCssPath, 'utf8')"),'production hardener must preserve the committed canonical stylesheet before scoped hardening');
+must(hardener.includes("let canonicalCss = fs.readFileSync(siteCssPath, 'utf8')"),'production hardener must preserve the committed canonical stylesheet before scoped hardening');
 must(fluid.includes('font-size:clamp(2.5rem,2.65vw,3.3rem)!important'),'homepage desktop H1 minimum must remain 40px');
 must(fluid.includes('display:block!important;')&&fluid.includes('columns:3!important;')&&fluid.includes('column-count:3!important;')&&fluid.includes('column-gap:20px!important;'),'desktop mixed-aspect gallery three-column masonry contract missing');
 must(fluid.includes('margin:0 0 20px!important;')&&fluid.includes('break-inside:avoid!important;'),'gallery vertical 20px masonry rhythm contract missing');

@@ -14,6 +14,20 @@ for(const route of [...serviceRoutes,...quoteRoutes]){
   for(const width of widths){
    await page.setViewportSize({width,height:1000});
    const size=await summary.boundingBox();expect(size.height).toBeGreaterThanOrEqual(44);
+   // The shared H2 !important must resolve its scoped token, not eclipse the
+   // price disclosure's restrained editorial heading at any breakpoint.
+   if(serviceRoutes.includes(route)){
+    const actual=await panel.locator('.service-price-examples h2').evaluate(el=>parseFloat(getComputedStyle(el).fontSize));
+    const reference=await panel.locator('.service-price-examples').evaluate(el=>{
+      const probe=document.createElement('span');
+      probe.style.fontSize='var(--bn-service-price-heading)';
+      el.appendChild(probe);
+      const value=parseFloat(getComputedStyle(probe).fontSize);
+      probe.remove();
+      return value;
+    });
+    expect(Math.abs(actual-reference),route+' price H2 token mismatch at '+width).toBeLessThan(.6);
+   }
    const overflow=await panel.evaluate(el=>el.scrollWidth>el.clientWidth+1);expect(overflow,route+' panel overflow at '+width).toBe(false);
    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),route+' page overflow at '+width).toBe(true);
   }

@@ -51,12 +51,14 @@ jobs:
           rm -f _site/package.json _site/package-lock.json
           printf '%s\n' "$GITHUB_SHA" > _site/deployment-sha.txt
           node tools/assert-production-integrity.mjs _site
+          # Verify and cache-stamp the single maintained site.css source.
+          node tools/build-single-runtime-css.mjs _site
           test -s _site/index.html
           test -s _site/hu/index.html
           test -s _site/de-at/index.html
           test -s _site/sitemap.xml
           test -s _site/assets/css/site.css
-          test -s _site/assets/css/fluid-4k-rhythm.css
+          test "$(find _site/assets/css -maxdepth 1 -type f -name '*.css' | wc -l)" -eq 1
           test -s _site/llm-canonical-overlay.json
           test -s _site/market-geography.json
           test -s _site/people-roles.json
@@ -124,7 +126,8 @@ jobs:
             kill "$SERVER_PID" 2>/dev/null || true
             exit 1
           fi
-          echo "Static audit server ready; running Safari/WebKit footer-tail gate first, then all page audits."
+          echo "Static audit server ready; measuring single-CSS layout authority, then running Safari/WebKit footer-tail gate."
+          AUDIT_BASE_URL=http://127.0.0.1:4173 node tools/audit-single-css-design-axis.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-webkit-footer-tail.mjs
           npm run test:e2e
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-browser-layout.mjs
@@ -150,6 +153,7 @@ jobs:
           name: banhalmi-c-quality-${{ github.sha }}
           path: |
             artifacts/browser-layout
+            artifacts/css-axis-report.json
             artifacts/live-pixel-geometry
             artifacts/exhaustive-visual
             artifacts/expanded-state-visual
