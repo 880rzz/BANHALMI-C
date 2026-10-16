@@ -18,7 +18,7 @@ for(const route of [...serviceRoutes,...quoteRoutes]){
   const heroEnd=html.indexOf('</section>',main)+'</section>'.length;
   assert.ok(main>=0 && heroEnd>main,`${route}: service hero must exist`);
   const immediateAfterHero=html.slice(heroEnd,match.index);
-  assert.match(immediateAfterHero,/^\\s*<section class="service-pricing-section"[^>]*>\\s*<div class="wrap">\\s*$/,`${route}: closed pricing must immediately follow hero`);
+  assert.match(immediateAfterHero,/^\s*<section class="service-pricing-section"[^>]*>\s*<div class="wrap">\s*$/,`${route}: closed pricing must immediately follow hero`);
   assert.ok(match.index>heroEnd,`${route}: pricing cannot interrupt hero`);
   assert.equal((html.match(/data-pricing-disclosure="service"/g)||[]).length,1,`${route}: only one service pricing disclosure allowed`);
  }else{
