@@ -20,7 +20,7 @@ for(const [locale,home] of [['en','index.html'],['hu','hu/index.html'],['de','de
    const heading=clean(target.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/)[1]);
    const web=scripts.find(x=>x['@type']==='WebPage');assert.equal(web.headline,heading,`${route}: headline mismatch`);
    if(owner.service==='portrait'){
-    const approved={en:'The image that reveals who you are.',hu:'A kép, amely megmutatja, ki Ön.',de:'Das Bild, das zeigt, wer Sie sind.'};
+    const approved={en:'A portrait is not a photograph. It is an encounter. The moment that reveals who you truly are behind the mask.',hu:'A portré nem egy fénykép. Ez egy találkozás. Az a pillanat, amely megmutatja, ki Ön valójában a maszk mögött.',de:'Ein Porträt ist kein Foto. Es ist eine Begegnung. Der Moment, der zeigt, wer Sie hinter der Maske wirklich sind.'};
     assert.equal(heading,approved[locale],`${route}: approved portrait H1 must be preserved`);
     assert.match(target.match(/<title>(.*?)<\/title>/)?.[1]||'',/portr|headshot/i,`${route}: portrait intent must remain in title`);
    }else assert.match(heading,/brand/i);
