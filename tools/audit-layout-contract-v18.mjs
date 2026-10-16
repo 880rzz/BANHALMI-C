@@ -22,6 +22,7 @@ must(!boot.includes('object-position:center 30%'),'runtime must not own image cr
 must(authority.visualGeometry?.runtimeGeometryOverridesAllowed===false,'canonical authority must prohibit runtime geometry overrides');
 must(fluid.includes('LIVE-PIXEL-GEOMETRY-V22'),'canonical live-pixel stylesheet marker missing');
 must(fluid.includes('RESPONSIVE-VISUAL-SYSTEM-V26'),'responsive visual system marker missing');
+must(fluid.includes('--bn-content-max:var(--apple-page-max)'),'editorial hero must use the same page-width authority as pricing and footer');
 must(fluid.includes('--desktop-hero-min:clamp(740px,42vw,880px)'),'canonical homepage hero base geometry missing');
 must(fluid.includes('--desktop-copy:clamp(560px,38vw,680px)'),'canonical homepage copy-panel geometry missing');
 must(fluid.includes('HOMEPAGE-HERO-HEIGHT-V28-20260917'),'homepage 15% media-height contract marker missing');
