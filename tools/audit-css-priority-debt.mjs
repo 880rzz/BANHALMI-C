@@ -8,7 +8,7 @@ import assert from 'node:assert/strict';
 
 const budgets={
  'assets/css/site.css':599,
- 'assets/css/fluid-4k-rhythm.css':1389
+ 'assets/css/fluid-4k-rhythm.css':1339
 };
 const cssFiles=fs.readdirSync('assets/css').filter(name=>name.endsWith('.css'))
  .map(name=>'assets/css/'+name).sort();
@@ -21,5 +21,5 @@ for(const [file,budget]of Object.entries(budgets)){
  total+=count;
  console.log('CSS priority authority: '+file+' '+count+'/'+budget+' !important');
 }
-assert.ok(total<=1988,'CSS priority debt increased beyond established migration baseline');
+assert.ok(total<=1938,'CSS priority debt increased beyond verified migration baseline');
 console.log('CSS priority budget PASS: '+total+' source !important (pre-migration: 2,081).');
