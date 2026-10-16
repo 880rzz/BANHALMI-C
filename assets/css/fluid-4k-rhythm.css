@@ -2345,15 +2345,15 @@ html body .sr-only{
    Mirrors the footer LinkedIn ↗ treatment without changing accessible link names. */
 html body a[data-banhalmi-link-arrow]::after{content:none!important;display:none!important;}
 html body a[data-banhalmi-link-arrow]>.banhalmi-link-arrow{
-  display:inline-block!important;
-  margin-inline-start:.28em!important;
-  font-size:.72em!important;
-  line-height:1!important;
-  font-weight:inherit!important;
-  opacity:.55!important;
-  vertical-align:.12em!important;
-  text-decoration:none!important;
-  transform:none!important;
+  display:inline-block;
+  margin-inline-start:.28em;
+  font-size:.72em;
+  line-height:1;
+  font-weight:inherit;
+  opacity:.55;
+  vertical-align:.12em;
+  text-decoration:none;
+  transform:none;
 }
 html body a[data-banhalmi-link-arrow]:hover>.banhalmi-link-arrow,
-html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity:.9!important;}
+html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity:.9;}
