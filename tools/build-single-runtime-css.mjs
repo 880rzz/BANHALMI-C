@@ -4,7 +4,7 @@
  * Git temporarily keeps both reviewed source files while old source audits
  * are migrated. The published website receives only ONE style asset: site.css.
  * Keep original cascade order, safely deduplicate identical leaf rules, stamp
- * every HTML CSS URL from final bytes, and remove legacy runtime injectors.
+ * every HTML CSS URL from final bytes, and reject legacy runtime injectors.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -35,23 +35,13 @@ const finalCss=fs.readFileSync(primary,'utf8');
 const token='design-'+createHash('sha256').update(finalCss).digest('hex').slice(0,16);
 const canonicalSiteCss='/assets/css/site.css?v='+token;
 
-// Remove both possible legacy runtime injectors from the shipped scripts.
-// Keep the typography / menu / consent JavaScript otherwise byte-identical.
-const originalBoot=fs.readFileSync(boot,'utf8');
-const bootStart=originalBoot.indexOf("  var href = '/assets/css/fluid-4k-rhythm.css");
-const bootEnd=originalBoot.indexOf('  /* Typography integrity is global;',bootStart);
-if(bootStart<0||bootEnd<=bootStart)throw Error('Unexpected fluid boot loader');
-const cleanBoot=originalBoot.slice(0,bootStart)+
-  '  /* Fluid CSS is compiled into site.css. */\n\n'+originalBoot.slice(bootEnd);
-if(cleanBoot.includes("var href = '/assets/css/fluid-4k-rhythm.css"))throw Error('Boot still references legacy stylesheet');
-
-const originalConfig=fs.readFileSync(siteConfig,'utf8');
-const configStart=originalConfig.indexOf('(function loadFluidRhythm(){');
-const configEnd=originalConfig.indexOf('})();',configStart);
-if(configStart<0||configEnd<=configStart)throw Error('Unexpected service loader');
-const cleanConfig=originalConfig.slice(0,configStart)+
-  '/* Fluid CSS is compiled into site.css. */'+originalConfig.slice(configEnd+5);
-if(cleanConfig.includes("link.href = '/assets/css/fluid-4k-rhythm.css"))throw Error('Service loader still references legacy stylesheet');
+// Runtime loaders are retired IN SOURCE, not rewritten during publication.
+// Fail the build if another script tries to introduce a second stylesheet.
+for(const script of [boot,siteConfig]){
+  const source=fs.readFileSync(script,'utf8');
+  if(/fluid-4k-rhythm\\.css|data-fluid-4k-rhythm|loadFluidRhythm/.test(source))
+    throw Error('Legacy dynamic CSS loader still present in '+script);
+}
 
 const edits=[];
 let removedFluidLinks=0,stampedPages=0;
@@ -82,8 +72,6 @@ for(const [file,html]of edits){
   if(html.includes('/assets/css/fluid-4k-rhythm.css'))throw Error('Legacy CSS HTML reference: '+file);
   if(html.includes('/assets/css/site.css?v=')&&!html.includes(canonicalSiteCss))throw Error('Stale CSS cache token: '+file);
 }
-fs.writeFileSync(boot,cleanBoot,'utf8');
-fs.writeFileSync(siteConfig,cleanConfig,'utf8');
 for(const [file,html]of edits)fs.writeFileSync(file,html,'utf8');
 
 // Do not ship a dead second CSS file. The original remains in Git history
