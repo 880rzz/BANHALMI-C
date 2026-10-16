@@ -10,6 +10,7 @@ const referenceHtml=fs.readFileSync('archive/index.html','utf8');
 const cssHref=(referenceHtml.match(/href="(\/assets\/css\/site\.css\?v=design-[a-z0-9-]+)"/i)||[])[1];
 if(!cssHref)throw new Error('Canonical versioned site.css reference missing from archive/index.html');
 const writeOutputs=process.argv.includes('--write');
+const replaceExisting=process.argv.includes('--replace-existing');
 const locales={
   en:{lang:'en',dir:'partners',source:'archive/index.html',url:'https://www.norbertbanhalmi.com/partners/',title:'Clients, Collaborations & Professional Memberships | BANHALMI',description:'Selected organisations and brands photographed or collaborated with by Norbert Banhalmi, alongside verified professional memberships and ambassadorships.',eyebrow:'Selected relationships',h1:'Clients, collaborations and professional memberships',lead:'A documented selection from a professional practice built since 1999 of commissioned photography, cultural work and professional community involvement.',clientTitle:'Selected clients and collaborations',clientCopy:'These marks record organisations and brands represented in the earlier BANHALMI archive. Their inclusion documents past commissioned work or collaboration; it does not imply a current contract or endorsement.',memberTitle:'Professional memberships and roles',memberCopy:'Current or historically documented professional memberships and ambassador roles, linked to the available official source.',cta:'Discuss a project',ctaHref:'/contact/',home:'Home',page:'Partners',partnerLabel:'Partners',altSuffix:'logo — selected BANHALMI client or collaboration',memberAlt:'logo — BANHALMI professional membership or role'},
   de:{lang:'de-AT',dir:'de-at/partner',source:'de-at/archiv/index.html',url:'https://www.norbertbanhalmi.com/de-at/partner/',title:'Kunden, Kooperationen & Mitgliedschaften | BANHALMI',description:'Ausgewählte Organisationen und Marken aus der Arbeit von Norbert Banhalmi sowie belegte professionelle Mitgliedschaften und Ambassador-Rollen.',eyebrow:'Ausgewählte Beziehungen',h1:'Kunden, Kooperationen und professionelle Mitgliedschaften',lead:'Eine dokumentierte Auswahl aus einer seit 1999 aufgebauten Praxis Auftragsfotografie, Kulturarbeit und professionellem Engagement.',clientTitle:'Ausgewählte Kunden und Kooperationen',clientCopy:'Diese Marken waren bereits im früheren BANHALMI-Archiv dokumentiert. Ihre Darstellung verweist auf frühere Aufträge oder Kooperationen und bedeutet keinen aktuellen Vertrag oder eine Empfehlung.',memberTitle:'Professionelle Mitgliedschaften und Rollen',memberCopy:'Aktuelle oder historisch dokumentierte Mitgliedschaften und Ambassador-Rollen mit Verlinkung zur verfügbaren offiziellen Quelle.',cta:'Projekt besprechen',ctaHref:'/de-at/kontakt/',home:'Startseite',page:'Partner',partnerLabel:'Partner',altSuffix:'Logo — ausgewählter BANHALMI Kunde oder Kooperation',memberAlt:'Logo — professionelle BANHALMI Mitgliedschaft oder Rolle'},
@@ -44,8 +45,10 @@ for(const t of Object.values(locales)){
     const state=!exists?'would create':current===html?'already matches':'would update';
     const currentHash=exists?createHash('sha256').update(current).digest('hex').slice(0,12):'none';
     const generatedHash=createHash('sha256').update(html).digest('hex').slice(0,12);
-    console.log(t.dir+': '+state+'; current='+currentHash+' generated='+generatedHash+'; no files written (pass --write to apply).');
+    console.log(t.dir+': '+state+'; current='+currentHash+' generated='+generatedHash+'; no files written (pass --write to apply new pages).');
     continue;
   }
+  if(exists&&current!==html&&!replaceExisting)
+    throw new Error('Refusing to overwrite reviewed page '+output+'. Review the generated diff, then pass --write --replace-existing explicitly.');
   fs.mkdirSync(t.dir,{recursive:true});fs.writeFileSync(output,html);
 }
