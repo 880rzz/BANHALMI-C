@@ -4234,14 +4234,22 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 }
 
 
-/* Service price examples share one readable list across locales. */
-.service-price-examples{margin-block:28px;max-width:720px;}
-.service-price-examples h2{font-size:clamp(26px,2.1vw,30px)!important;line-height:1.18!important;letter-spacing:-.022em!important;margin:0 0 16px!important;}
-.service-price-examples ul{list-style:none;padding:0;margin:0 0 18px;}
-.service-price-examples li{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 20px;padding-block:9px;border-bottom:1px solid var(--line);}
-.service-price-examples li strong{white-space:nowrap;}
+/* Service package pricing: stable name, description and price columns. */
+.service-price-examples{margin:28px auto;max-width:min(100%,920px);}
+.service-price-examples h2{font-size:clamp(24px,2vw,28px)!important;line-height:1.2!important;letter-spacing:-.02em!important;margin:0 0 18px!important;}
+.service-price-examples ul{list-style:none;padding:0;margin:0 0 20px;}
+.service-price-examples li{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:start;column-gap:32px;row-gap:8px;padding:18px 0;border-bottom:1px solid var(--line);}
+.service-price-examples li>span{display:block;min-width:0;font-size:17px;line-height:1.4;font-weight:500;}
+.service-price-examples li>strong{grid-column:2;grid-row:1;justify-self:end;white-space:nowrap;font-size:17px;line-height:1.4;font-weight:600;}
+.service-price-examples .service-package-includes{display:block;margin-top:7px;color:var(--text-muted,#62666d);font-size:15px;line-height:1.55;font-weight:400;max-width:68ch;}
 .service-price-examples p{font-size:.95rem;line-height:1.55;}
 .service-price-examples .service-price-currency-note{font-size:.82rem;}
+@media(max-width:640px){
+  .service-price-examples{margin-block:24px;}
+  .service-price-examples li{grid-template-columns:minmax(0,1fr);column-gap:0;padding:16px 0;}
+  .service-price-examples li>strong{grid-column:1;grid-row:auto;justify-self:start;}
+  .service-price-examples .service-package-includes{font-size:14px;line-height:1.5;}
+}
 
 .quote-euro-equivalent{display:block;font-size:.95rem;line-height:1.5;font-weight:400;margin-top:8px;}
 /* APPLE-RESPONSIVE-CONTRACT-V1:END */
