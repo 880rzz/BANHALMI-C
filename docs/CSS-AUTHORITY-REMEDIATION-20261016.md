@@ -33,3 +33,27 @@ This step deliberately does **not** claim reduced specificity, reduced CSS bytes
 Verify source SHA → Pages artifact SHA → live SHA; audit mobile 375/390, tablet 768/1024, desktop 1440/1920 and UHD 3840. Cover all 12 service variants, home EN/HU/DE, legal and quote pages, footer disclosure, pricing panel open/closed, typing / alignment, no overflow, no broken links, canonical/hreflang/schema parity and pixel geometry.
 
 Do not merge this draft PR if browser tests show any regression. Do not describe this as the final design cleanup.
+
+## Integrated correction ledger (PR #151)
+
+- All four service owners have 3 EN/HU/DE routes; each of the 12 pages places its unchanged, initially closed pricing disclosure directly below the hero.
+- The approved portrait H1 and descriptive copy are protected by localized source and browser assertions. JSON-LD WebPage headlines match the visible H1.
+- The shipped artifact has one locally requested stylesheet; legacy injection by both `fluid-rhythm-boot.js` and `site-config.js` is disabled in the output artifact.
+- The native service disclosure is at least 48 px high, keyboard operable and styled through one shared component rule. It is excluded from the generic section padding contract.
+- Service H1, lead, pricing disclosure and first footer text column share a measured optical x-axis across 390, 768 and 1440 px; H1 and lead sizes must match across all 12 routes.
+- External-link arrows are assigned only to off-site HTTP(S) text links. Internal, language, fragment, action and image links have none, and glyphs are aria-hidden.
+- The migration-era source specificity budget is now **629 site.css + 1,433 fluid CSS = 2,062 !important** (from the 2,081 initial count), with a CI rule forbidding increases. The production bundler additionally eliminates exact duplicate rules without altering ordering.
+- These are branch/CI claims, not evidence of release to the public domain.
+
+## Canonical token responsibilities
+
+- `--apple-page-max`: standard main and footer canvas; fullscreen imagery is an intentionally documented exception
+- `--apple-gutter`: common side inset for main copy, hero content, pricing and footer
+- `--apple-reading-max`: long-form reading measure (do not stretch body paragraphs to the full 4K canvas)
+- `--apple-section-space`: non-pricing section rhythm
+- `--bn-service-price-heading`, `--bn-service-price-body`, `--bn-service-price-meta`: pricing hierarchy, shared EN/HU/DE
+- H1/H2/H3 sizes: `data/design-authority.json` contract; specialized homepage display and artwork remain documented exceptions
+
+## Priority debt removal rule
+
+Do not mass-strip `!important`. Consolidate one selector family at a time, retain equivalent computed style at 375–3840 px, and lower the budget in `tools/audit-css-priority-debt.mjs` as soon as the component passes the full browser gates. The final source consolidation requires rewriting the source-era tests and build scripts that still read `fluid-4k-rhythm.css`; until that dependency is removed, production already emits one CSS, but Git retains two compatibility sources.
