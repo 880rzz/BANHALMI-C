@@ -53,6 +53,7 @@ jobs:
           node tools/assert-production-integrity.mjs _site
           # Verify and cache-stamp the single maintained site.css source.
           node tools/build-single-runtime-css.mjs _site
+          node tools/audit-single-css-delivery.mjs _site
           test -s _site/index.html
           test -s _site/hu/index.html
           test -s _site/de-at/index.html
@@ -249,6 +250,8 @@ jobs:
             curl -fsSL --retry 3 --max-time 30 -H 'Cache-Control: no-cache' "https://www.norbertbanhalmi.com/$path" -o "$tmp"
             cmp -- "$path" "$tmp" || { echo "Live machine discovery differs from deployed source: $path" >&2; exit 1; }
           done
+      - name: Verify one CSS asset and byte hash on all 15 live service/home routes
+        run: node tools/audit-single-css-delivery.mjs --live https://www.norbertbanhalmi.com
       - name: Run exact-live production geometry audit
         env:
           LIVE_PIXEL_BASE_URL: https://www.norbertbanhalmi.com
