@@ -1666,10 +1666,12 @@ html body .site-footer{
   color:#9fa7b3!important;
 }
 html body .site-footer>.wrap{
-  inline-size:min(calc(100% - 48px),1440px)!important;
-  max-inline-size:1440px!important;
+  /* Match the canonical content canvas; desktop and mobile share one text axis. */
+  inline-size:min(100%,var(--apple-page-max))!important;
+  max-inline-size:var(--apple-page-max)!important;
   margin-inline:auto!important;
-  padding:44px 0 24px!important;
+  padding:44px var(--apple-gutter) 24px!important;
+  box-sizing:border-box;
   min-inline-size:0!important;
 }
 html body .site-footer .footer-grid{
@@ -2006,7 +2008,6 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
 
 @media (min-width:1180px) and (max-width:1439px){
   html body .site-footer>.wrap{
-    inline-size:min(calc(100% - 64px),1280px)!important;
     padding-top:30px!important;
   }
   html body .site-footer .footer-grid{column-gap:18px!important;row-gap:20px!important;}
@@ -2017,8 +2018,7 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
 
 @media (max-width:1179px){
   html body .site-footer>.wrap{
-    inline-size:min(calc(100% - 40px),960px)!important;
-    padding:36px 0 22px!important;
+    padding:36px var(--apple-gutter) 22px!important;
   }
   html body .site-footer .footer-grid{
     grid-template-columns:repeat(2,minmax(0,1fr))!important;
@@ -2071,8 +2071,7 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
 
 @media (min-width:721px) and (max-width:1179px){
   html body .site-footer>.wrap{
-    inline-size:min(calc(100% - 40px),1040px)!important;
-    padding:26px 0 18px!important;
+    padding:26px var(--apple-gutter) 18px!important;
   }
   html body .site-footer .footer-grid{
     grid-template-columns:repeat(12,minmax(0,1fr))!important;
@@ -2176,10 +2175,8 @@ html body .site-footer .banhalmi-ecosystem a:hover{color:#fff!important;}
 
 @media (max-width:720px){
   html body .site-footer>.wrap{
-    inline-size:calc(100% - 36px)!important;
-    max-inline-size:calc(100% - 36px)!important;
     min-inline-size:0!important;
-    padding:30px 0 20px!important;
+    padding:30px var(--apple-gutter) 20px!important;
   }
   html body .site-footer .footer-grid{
     grid-template-columns:minmax(0,1fr)!important;
