@@ -4234,14 +4234,50 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 }
 
 
-/* Service price examples share one readable list across locales. */
-.service-price-examples{margin-block:28px;max-width:720px;}
-.service-price-examples h2{font-size:clamp(26px,2.1vw,30px)!important;line-height:1.18!important;letter-spacing:-.022em!important;margin:0 0 16px!important;}
-.service-price-examples ul{list-style:none;padding:0;margin:0 0 18px;}
-.service-price-examples li{display:flex;justify-content:space-between;flex-wrap:wrap;gap:4px 20px;padding-block:9px;border-bottom:1px solid var(--line);}
-.service-price-examples li strong{white-space:nowrap;}
-.service-price-examples p{font-size:.95rem;line-height:1.55;}
-.service-price-examples .service-price-currency-note{font-size:.82rem;}
+/* SERVICE-PRICING-CONTRACT-20261016: one editorial disclosure immediately below each service hero.
+   Use the page's existing .wrap geometry; do not create a competing content gutter. */
+:root{
+  --bn-service-price-heading:clamp(1.3rem,1.7vw,1.7rem);
+  --bn-service-price-body:1rem;
+  --bn-service-price-meta:.875rem;
+  --bn-service-price-divider:var(--line,rgba(0,0,0,.11));
+}
+.service-pricing-section{padding-block:clamp(16px,2.5vw,32px) clamp(24px,3.5vw,48px);}
+.service-pricing-section>.wrap{width:100%;box-sizing:border-box;}
+.service-pricing-section .quote-decision-guide{
+  width:100%;max-width:none;box-sizing:border-box;margin:0;
+  padding:0;border:1px solid var(--bn-service-price-divider);
+  border-radius:10px;background:#fff;overflow:visible;
+}
+.service-pricing-section .quote-decision-guide>summary{
+  display:flex;align-items:center;justify-content:space-between;
+  min-height:48px;box-sizing:border-box;margin:0;padding:15px clamp(18px,3vw,30px);
+  font-size:1rem;line-height:1.45;font-weight:650;list-style:none;
+}
+.service-pricing-section .quote-decision-guide>summary::-webkit-details-marker{display:none;}
+.service-pricing-section .quote-decision-guide>summary::after{content:"+";font-size:1.4em;line-height:1;font-weight:400;margin-inline-start:20px;}
+.service-pricing-section .quote-decision-guide[open]>summary::after{content:"−";}
+.service-pricing-section .quote-decision-guide>summary:focus-visible{outline:2px solid var(--gold,#B79C44);outline-offset:3px;}
+.service-pricing-section .quote-decision-guide[open]>summary{border-bottom:1px solid var(--bn-service-price-divider);}
+.service-pricing-section .quote-decision-guide> :not(summary){margin-inline:clamp(18px,3vw,30px);}
+.service-pricing-section .quote-decision-guide> :last-child{margin-bottom:clamp(20px,3vw,32px);}
+.service-pricing-section .executive-investment-note{padding-top:20px;max-width:76ch;}
+.service-pricing-section .executive-investment-note strong{font-size:1.125rem;line-height:1.4;color:var(--ink,#202530);}
+.service-price-examples{margin-block:24px;max-width:100%;}
+.service-price-examples h2{font-size:var(--bn-service-price-heading);line-height:1.22;letter-spacing:-.02em;margin:0 0 20px;}
+.service-price-examples ul{list-style:none;padding:0;margin:0 0 20px;}
+.service-price-examples li{display:grid;grid-template-columns:minmax(0,1fr) max-content;align-items:start;gap:16px 28px;padding:18px 0;border-bottom:1px solid var(--bn-service-price-divider);margin:0;}
+.service-price-examples li>span{min-width:0;font-size:var(--bn-service-price-body);font-weight:600;line-height:1.5;}
+.service-price-examples li>strong{white-space:nowrap;text-align:end;font-size:1.125rem;line-height:1.4;font-variant-numeric:tabular-nums;}
+.service-price-examples .service-package-includes{display:block;margin-top:7px;font-size:var(--bn-service-price-meta);font-weight:400;line-height:1.55;color:var(--muted,#6e6e73);}
+.service-price-examples p,.service-pricing-section .quote-decision-guide>p{font-size:var(--bn-service-price-body);line-height:1.6;max-width:76ch;}
+.service-price-examples .service-price-currency-note{font-size:var(--bn-service-price-meta);}
+@media(max-width:600px){
+  .service-price-examples li{grid-template-columns:minmax(0,1fr);gap:8px;padding-block:16px;}
+  .service-price-examples li>strong{text-align:start;}
+  .service-pricing-section .quote-decision-guide>summary{padding-block:14px;}
+}
+/* SERVICE-PRICING-CONTRACT-20261016:END */
 
 .quote-euro-equivalent{display:block;font-size:.95rem;line-height:1.5;font-weight:400;margin-top:8px;}
 /* APPLE-RESPONSIVE-CONTRACT-V1:END */
