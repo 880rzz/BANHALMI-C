@@ -39,7 +39,7 @@ const canonicalSiteCss='/assets/css/site.css?v='+token;
 // Fail the build if another script tries to introduce a second stylesheet.
 for(const script of [boot,siteConfig]){
   const source=fs.readFileSync(script,'utf8');
-  if(/fluid-4k-rhythm\\.css|data-fluid-4k-rhythm|loadFluidRhythm/.test(source))
+  if(/fluid-4k-rhythm\.css|data-fluid-4k-rhythm|loadFluidRhythm/.test(source))
     throw Error('Legacy dynamic CSS loader still present in '+script);
 }
 
