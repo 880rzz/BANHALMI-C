@@ -1670,7 +1670,7 @@ html body .site-footer>.wrap{
   inline-size:min(100%,var(--apple-page-max))!important;
   max-inline-size:var(--apple-page-max)!important;
   margin-inline:auto!important;
-  padding:44px var(--apple-gutter) 24px!important;
+  padding:34px var(--apple-gutter) 18px!important;
   box-sizing:border-box;
   min-inline-size:0!important;
 }
