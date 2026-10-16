@@ -14,7 +14,7 @@ const routes=[
   '/event-photography/', '/hu/rendezvenyfotozas/', '/de-at/eventfotografie/',
   '/fine-art/', '/hu/muveszi-fotografia/', '/de-at/fine-art/'
 ];
-const widths=[390,768,1440];
+const widths=[375,390,621,768,1024,1180,1280,1440,1600,1920,2560,3840];
 const browser=await chromium.launch({headless:true,args:['--no-sandbox']});
 const report=[], errors=[];
 try{
