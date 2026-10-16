@@ -16,8 +16,8 @@ for(const width of ['1024px','768px','560px']){
   if(!re.test(contract)) fail.push('approved responsive breakpoint missing: '+width);
 }
 if(/home\.css|visual-rhythm-20260825\.css/.test(css)) fail.push('secondary CSS authority reference returned');
-const markerClose=b>=0?css.indexOf('*/',b+end.length):-1;
-if(markerClose>=0&&!css.slice(markerClose+2).trimStart().startsWith('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')) fail.push('unexpected rules outside canonical merged component section');
+const afterApple=b>=0?css.slice(b+end.length).trimStart():'';
+if(b>=0&&!afterApple.startsWith('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')) fail.push('unexpected rules outside canonical merged component section');
 if(css.split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */').length!==2) fail.push('missing or duplicated canonical CSS section');
 if(fail.length){console.error('Layout authority audit failed:\n- '+fail.join('\n- '));process.exit(1)}
 console.log('Layout authority audit passed: site.css owns the non-footer Apple baseline; footer geometry is owned by the canonical component section of the same site.css source.');
