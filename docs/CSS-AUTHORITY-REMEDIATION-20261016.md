@@ -42,7 +42,7 @@ Do not merge this draft PR if browser tests show any regression. Do not describe
 - The native service disclosure is at least 48 px high, keyboard operable and styled through one shared component rule. It is excluded from the generic section padding contract.
 - Service H1, lead, pricing disclosure and first footer text column share a measured optical x-axis across 390, 768 and 1440 px; H1 and lead sizes must match across all 12 routes.
 - External-link arrows are assigned only to off-site HTTP(S) text links. Internal, language, fragment, action and image links have none, and glyphs are aria-hidden.
-- The migration-era source specificity budget is now **629 site.css + 1,433 fluid CSS = 2,062 !important** (from the 2,081 initial count), with a CI rule forbidding increases. The production bundler additionally eliminates exact duplicate rules without altering ordering.
+- The migration-era source specificity budget is now **599 site.css + 1,389 fluid CSS = 1,988 !important** (from the 2,081 initial count), with a CI rule forbidding increases. The production bundler additionally eliminates exact duplicate rules without altering ordering.
 - These are branch/CI claims, not evidence of release to the public domain.
 
 ## Canonical token responsibilities
@@ -57,3 +57,7 @@ Do not merge this draft PR if browser tests show any regression. Do not describe
 ## Priority debt removal rule
 
 Do not mass-strip `!important`. Consolidate one selector family at a time, retain equivalent computed style at 375–3840 px, and lower the budget in `tools/audit-css-priority-debt.mjs` as soon as the component passes the full browser gates. The final source consolidation requires rewriting the source-era tests and build scripts that still read `fluid-4k-rhythm.css`; until that dependency is removed, production already emits one CSS, but Git retains two compatibility sources.
+
+### Source deduplication milestone
+
+Safely removed 34 identical earlier leaf rules from `site.css` and 22 from `fluid-4k-rhythm.css`, preserving their last identical occurrences. This reduced a further 74 source `!important` declarations and roughly 5.6 KB of duplicate CSS. The compiled bundle still passes through the exact-rule deduper for cross-source matches.

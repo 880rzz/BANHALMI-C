@@ -28,10 +28,10 @@
 
 /* FINAL-LAYOUT-CONTRACT-20260919: service hero rhythm and gallery breathing */
 @media (min-width:761px){
-  html body main .hero.service-hero.service-editorial-hero>.wrap{row-gap:0!important;}
-  html body main .hero.service-hero.service-editorial-hero .lead{margin-top:0!important;}
+  
+  
 }
-html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!important;}
+
 
 /* UNIFIED-GALLERY-GEOMETRY-V48-20261003
    Canonical mixed-aspect gallery authority: exact 20px visual spacing in both
@@ -83,8 +83,8 @@ html body main :is(.gallery,.pf-grid,.collage-gallery,.jony-gallery-grid,.banhal
 
 /* FINAL-LAYOUT-CONTRACT-20260919B: oeuvre rhythm and mobile centering */
 @media (min-width:761px){
-  html body main .hero.oeuvre-hero>.wrap{row-gap:0!important;}
-  html body main .hero.oeuvre-hero .lead{margin-top:0!important;}
+  
+  
 }
 @media (max-width:620px){
   html body main .category-card span{display:block!important;max-width:none!important;}
@@ -430,42 +430,18 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
 
 
 @media (max-width:680px){
-  html body main[data-homepage-redesign="stage76"]>.hero-visual-only{
-    background:#fff!important;
-  }
-  html body .bn-mega-menu{overflow:hidden!important;}
-  html body .bn-mega-panel{
-    min-height:100dvh!important;
-    height:100dvh!important;
-    overflow:hidden!important;
-    padding:4.15rem 1.15rem .8rem!important;
-  }
-  html body .bn-mega-intro{gap:.2rem!important;padding-bottom:.65rem!important;}
-  html body .bn-mega-intro p,
-  html body .bn-mega-desc,
-  html body .bn-mega-tail{display:none!important;}
-  html body .bn-mega-grid{gap:0!important;padding:.55rem 0 0!important;}
-  html body .bn-mega-section-head{
-    margin:0 0 .35rem!important;
-    padding:0 0 .35rem!important;
-  }
-  html body .bn-mega-section-head>span{font-size:.78rem!important;letter-spacing:.13em!important;}
-  html body .bn-mega-item{padding:.02rem 0 .16rem!important;}
-  html body .bn-mega-link,
-  html body .bn-mega-service .bn-mega-link,
-  html body .bn-mega-footer .bn-mega-link{
-    min-height:36px!important;
-    display:flex!important;
-    align-items:center!important;
-    font-size:1.08rem!important;
-    line-height:1.08!important;
-    letter-spacing:-.02em!important;
-  }
-  html body .bn-mega-footer{
-    padding-top:.65rem!important;
-    border-top:1px solid var(--bn-menu-line)!important;
-  }
-  html body .bn-mega-footer .bn-mega-section-head{margin-bottom:.25rem!important;}
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }
 
 /* SMART-QUOTE-INTRINSIC-CARD-HEIGHT-20260918
@@ -694,18 +670,13 @@ html body .bn-term-lock{
 }
 html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!important;}
 @media (max-width:620px){
-  html body main .smart-quote-layout .category-card>span{display:block!important;width:100%!important;max-width:none!important;}
+  
   html body main .smart-quote-layout .category-card>span>.info-tip{display:inline-grid!important;position:static!important;vertical-align:middle!important;margin-left:12px!important;}
 }
 
 /* FINAL-CASCADE-CLOSURE-20260919E: category info control right anchoring */
 @media (max-width:620px){
-  html body main .smart-quote-layout .category-card>span>.info-tip{
-    position:static!important;
-    display:grid!important;
-    float:right!important;
-    margin:0 0 8px 12px!important;
-  }
+  
 }
 
 
@@ -1010,14 +981,8 @@ html body .bn-mega-item{
     flex-direction:column!important;
     justify-content:center!important;
   }
-  html body .bn-mega-desc,
-  html body .bn-mega-section-head p{
-    display:block!important;
-  }
-  html body .bn-mega-grid{
-    grid-template-columns:repeat(3,minmax(0,1fr))!important;
-    gap:clamp(40px,4.2vw,72px)!important;
-  }
+  
+  
   html body .bn-mega-item{
     margin-block:.82rem!important;
   }
@@ -1434,13 +1399,7 @@ html body{
   flex-direction:column!important;
   background:#fff!important;
 }
-html body>main,
-html body>#main{
-  flex:1 0 auto!important;
-  width:100%!important;
-  min-width:0!important;
-  min-height:0!important;
-}
+
 
 /* 2) Card/block rhythm: never let adjacent rounded content cells visually fuse. */
 html body main .service-grid,

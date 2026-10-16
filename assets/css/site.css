@@ -711,9 +711,7 @@ main>section{padding:72px 0;}
 
 
 
-@media (prefers-reduced-motion: reduce){
-  
-}
+
 
 @media (max-width:920px){
   
@@ -734,10 +732,7 @@ main>section{padding:72px 0;}
 
 
 
-@media (max-width:720px){
-  
-  
-}
+
 
 /* Phase 17 — homepage-only full-bleed hero image under the header.
    Subpages keep the editorial text hero without the signature image. */
@@ -747,9 +742,7 @@ main>section{padding:72px 0;}
 
 
 
-@media (prefers-reduced-motion: reduce){
-  
-}
+
 
 /* Interaction-loaded hero video. The still image remains visible and is the
    LCP element; main.js attaches video sources only on hover or tap. This layer
@@ -763,10 +756,7 @@ main>section{padding:72px 0;}
   
   
 }
-@media (max-width:720px){
-  
-  
-}
+
 
 /* Phase 18 — curated portrait references */
 
@@ -776,7 +766,7 @@ main>section{padding:72px 0;}
 
 
 @media (min-width:960px){}
-@media (max-width:720px){}
+
 
 /* Phase 21 service exhibitions */
 @media (max-width:760px){}
@@ -3474,7 +3464,7 @@ main :is(h1,h2) .bn-heading-accent{color:#8b6f18!important;-webkit-text-fill-col
 
 /* STAGE79-FINAL-POLISH */
 .smart-quote-layout .quote-summary-card{box-shadow:none!important}
-.fine-art-archive-continuation,.fine-art-archive-continuation .fine-art-archive-content{margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+
 .fine-art-archive-continuation .fine-art-extended-grid{margin-top:var(--jony-gap)!important}
 
 /* === SOURCE: mega-menu.css === */
@@ -3656,62 +3646,36 @@ html body a.nav-cta::after{font-size:.85rem!important;font-weight:500;line-heigh
 
 /* === SOURCE: accessibility-stage14.css === */
 /* Stage 14 — accessibility and usability hardening */
-:focus-visible{outline:3px solid #8A681F;outline-offset:3px;}
-a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{border-radius:6px;}
-button,.btn,[role="button"],summary,input[type="checkbox"],input[type="radio"]{min-height:44px;}
-input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
-.field input[aria-invalid="true"],.field select[aria-invalid="true"],.field textarea[aria-invalid="true"],:user-invalid{border-color:#9B1C1C;box-shadow:0 0 0 3px rgba(155,28,28,.14);}
-.field-error,[role="alert"],.form-error{color:#7A1010;font-weight:600;line-height:1.45;}
-[aria-disabled="true"],button:disabled,input:disabled,select:disabled,textarea:disabled{cursor:not-allowed;opacity:.62;}
-.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important;}
-@media (max-width:680px){body{font-size:17px;line-height:1.6}.btn,button,input,select,textarea{font-size:16px}.nav-links a,.footer-accordion summary{min-height:44px;display:flex;align-items:center}}
+
+
+
+
+
+
+
+
+@media (max-width:680px){}
 @media (max-width:680px) and (hover:none) and (pointer:coarse){
-  .nav-links a[aria-current="page"],
-  .nav-links a.active,
-  .nav-links .active>a{
-    color:#8A681F!important;
-    background:transparent!important;
-    border:0!important;
-    box-shadow:none!important;
-    outline:0!important;
-    outline-offset:0!important;
-    border-radius:0!important;
-  }
+  
 }
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-@media (forced-colors:active){:focus-visible{outline:3px solid Highlight}.btn,.card,input,select,textarea{forced-color-adjust:auto}}
+@media (prefers-reduced-motion:reduce){}
+@media (forced-colors:active){}
 
 /* PAGESPEED-STAGE32-TARGETS:START */
 /* Interactive targets must remain usable at every viewport. Lighthouse also
    evaluates desktop/coarse-emulation combinations, so the footer and language
    targets cannot be limited to the mobile media query. */
-.lang-switch a,
-.site-footer .footer-accordion summary,
-.site-footer .footer-accordion li>a,
-.banhalmi-ecosystem a{
-  min-height:44px;
-  display:inline-flex;
-  align-items:center;
-}
-.lang-switch a{min-width:44px;justify-content:center;padding-inline:8px;color:#5B616C;}
-.site-footer .footer-accordion li>a{padding-block:7px;}
-.site-footer .footer-accordion summary{cursor:pointer;}
-.banhalmi-ecosystem a{padding-block:8px;}
+
+
+
+
+
 /* Footer small text previously used #6E7689 on #202530 (about 3.37:1).
    Keep the same cool-grey hierarchy while clearing WCAG AA for normal text. */
-.site-footer,
-.site-footer a,
-.footer-bottom,
-.footer-bottom a,
-.footer-entity{color:#AEB4C2;}
-.site-footer a:hover,.footer-bottom a:hover{color:#fff;}
+
+
 @media (max-width:680px), (pointer:coarse){
-  .site-footer a,
-  .site-footer button{
-    min-height:44px;
-    display:inline-flex;
-    align-items:center;
-  }
+  
 }
 /* PAGESPEED-STAGE32-TARGETS:END */
 
@@ -3719,9 +3683,7 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
 /* The LCP hero must never wait for the deferred IntersectionObserver reveal.
    Its image is already preloaded/high-priority; painting it immediately removes
    the JS dependency from above-the-fold visual completeness. */
-.hero .reveal,
-.hero-figure.reveal,
-.editorial-hero.reveal{opacity:1!important;transform:none!important;}
+
 /* Skip layout/paint work for genuinely below-fold sections until they approach
    the viewport while reserving stable intrinsic space for scrolling/anchors. */
 /* PAGESPEED-STAGE56-PAINT:END */
@@ -3744,14 +3706,11 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
 /* STAGE52-PAGESPEED-RUNTIME:START */
 /* Avoid layout animations in the mobile navigation; transform/opacity remain available elsewhere. */
 @media (max-width:1040px){
-  .nav-links{transition:none!important;}
+  
 }
 /* Text use of the brand gold must meet AA on the light navigation surface. */
 @media (max-width:680px), (pointer:coarse){
-  .lang-switch a.active,
-  .nav-links a[aria-current="page"],
-  .nav-links a.active,
-  .nav-links .active>a{color:#8A681F!important;}
+  
 }
 /* STAGE52-PAGESPEED-RUNTIME:END */
 
@@ -3760,8 +3719,8 @@ input[type="checkbox"],input[type="radio"]{min-width:24px;min-height:24px;}
    lazy for desktop hover, but cannot be painted or activated on touch devices,
    so its data-src sources are never promoted to network requests on mobile. */
 @media (hover:none), (pointer:coarse), (max-width:680px){
-  .hero.hero-image-first .hero-video{display:none!important;}
-  .hero.hero-image-first .hero-figure{pointer-events:none;}
+  
+  
 }
 /* PAGESPEED-STAGE57-MOBILE-HERO-VIDEO:END */
 
