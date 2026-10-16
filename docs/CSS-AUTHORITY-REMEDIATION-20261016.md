@@ -22,6 +22,10 @@ This step deliberately does **not** claim reduced specificity, reduced CSS bytes
 
 The runtime CSS insertion blocks were removed directly from `assets/js/fluid-rhythm-boot.js` and `assets/js/site-config.js`. The published artifact compiler now rejects reintroduced legacy loader code rather than rewriting those scripts. Typography integrity and descriptive navigation loading remain intact. This is a source-authority cleanup only: the source HTML still references two stylesheets until the second CSS source and its source-era audits are migrated, and the build still produces one published CSS asset.
 
+## Verified UHD alignment regression and root-cause correction
+
+The 180-sample browser audit (15 URLs × 12 viewports) detected 48 source-branch alignment failures at 2560px and 3840px: all 12 service H1 axes began 40px to the right of their pricing and footer text. The CI evidence shows a 1680px editorial hero wrap versus a 1760px canonical page/footer wrap. The independent `--bn-content-max:1680px` declaration was replaced with `--bn-content-max:var(--apple-page-max)` so hero, pricing and footer follow the same width owner. The exhaustive browser audit must pass at the original 4px tolerance before release; this correction is not itself production proof.
+
 ## Phase 2: canonical tokens and component ownership (not yet performed)
 
 - Choose one spacing/gutter axis for the main content and footer; preserve documented wide-gallery exceptions.
