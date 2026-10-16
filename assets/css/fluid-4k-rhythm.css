@@ -252,7 +252,7 @@ html body main[data-homepage-redesign="stage76"]>.hero-visual-only .hero-signatu
     grid-row:1!important;
     width:100%!important;
     max-width:none!important;
-    margin:0!important;
+    margin:0 0 clamp(14px,1.2vw,20px)!important;
     font-size:clamp(.72rem,.78vw,.9rem)!important;
     line-height:1.35!important;
     letter-spacing:.01em!important;
