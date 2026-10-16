@@ -22,7 +22,7 @@ for(const [locale,home] of [['en','index.html'],['hu','hu/index.html'],['de','de
    if(owner.service==='portrait'){
     const approved={en:'The image that reveals who you are.',hu:'A kép, amely megmutatja, ki Ön.',de:'Das Bild, das zeigt, wer Sie sind.'};
     assert.equal(heading,approved[locale],`${route}: approved portrait H1 must be preserved`);
-    assert.match(target.match(/<title>([\\s\\S]*?)<\\/title>/)?.[1]||'',/portr|headshot/i,`${route}: portrait intent must remain in title`);
+    assert.match(target.match(/<title>(.*?)<\/title>/)?.[1]||'',/portr|headshot/i,`${route}: portrait intent must remain in title`);
    }else assert.match(heading,/brand/i);
   }
   if(owner.service!=='event'){
