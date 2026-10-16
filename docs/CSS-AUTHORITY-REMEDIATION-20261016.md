@@ -26,6 +26,10 @@ The runtime CSS insertion blocks were removed directly from `assets/js/fluid-rhy
 
 The 180-sample browser audit (15 URLs × 12 viewports) detected 48 source-branch alignment failures at 2560px and 3840px: all 12 service H1 axes began 40px to the right of their pricing and footer text. The CI evidence shows a 1680px editorial hero wrap versus a 1760px canonical page/footer wrap. The independent `--bn-content-max:1680px` declaration was replaced with `--bn-content-max:var(--apple-page-max)` so hero, pricing and footer follow the same width owner. The exhaustive browser audit must pass at the original 4px tolerance before release; this correction is not itself production proof.
 
+### Shadowed priority removal (source CSS)
+
+Removed 50 earlier `!important` markers from `fluid-4k-rhythm.css` where a later declaration has the **exact same selector, enclosing at-rule context, CSS property, value and `!important` priority**. The last effective declaration was preserved; this is targeted no-op cascade simplification, not a blanket priority strip. Fluid debt drops from 1389 to **1339** and the two-source total from 1988 to **1938**. The CI debt ceiling is reduced to prevent rollback, and the existing 180-sample/browser/visual tests must verify no regression. This is source-committed, not production-verified.
+
 ## Phase 2: canonical tokens and component ownership (not yet performed)
 
 - Choose one spacing/gutter axis for the main content and footer; preserve documented wide-gallery exceptions.
