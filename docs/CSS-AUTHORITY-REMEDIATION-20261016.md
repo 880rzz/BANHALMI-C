@@ -18,6 +18,10 @@ Status: TRANSITIONAL / NOT PRODUCTION VERIFIED.
 
 This step deliberately does **not** claim reduced specificity, reduced CSS bytes, corrected spacing, fewer `!important` directives, or a new visual design. Its sole acceptance condition is one runtime CSS request per canonical HTML page with no cascade order changes. Browser and accessibility checks must pass before merge.
 
+## Phase 1.1: remove dynamic CSS loaders in the Git source (2026-10-16)
+
+The runtime CSS insertion blocks were removed directly from `assets/js/fluid-rhythm-boot.js` and `assets/js/site-config.js`. The published artifact compiler now rejects reintroduced legacy loader code rather than rewriting those scripts. Typography integrity and descriptive navigation loading remain intact. This is a source-authority cleanup only: the source HTML still references two stylesheets until the second CSS source and its source-era audits are migrated, and the build still produces one published CSS asset.
+
 ## Phase 2: canonical tokens and component ownership (not yet performed)
 
 - Choose one spacing/gutter axis for the main content and footer; preserve documented wide-gallery exceptions.
