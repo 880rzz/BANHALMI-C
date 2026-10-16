@@ -15,9 +15,9 @@ const walk = d => fs.readdirSync(d, { withFileTypes: true }).flatMap(e =>
 const files = walk(root);
 const css = files.filter(f => f.endsWith('.css'));
 const cssRel = css.map(rel).sort();
-const approvedCss = ['assets/css/fluid-4k-rhythm.css', 'assets/css/site.css'];
+const approvedCss = ['assets/css/site.css'];
 if (cssRel.length !== approvedCss.length || cssRel.some((p, i) => p !== approvedCss[i])) {
-  fail.push(`expected canonical site.css plus approved fluid rhythm stylesheet, found ${css.length}: ${cssRel.join(', ')}`);
+  fail.push(`expected the single maintained site.css, found ${css.length}: ${cssRel.join(', ')}`);
 }
 
 for (const f of files.filter(f => f.endsWith('.html'))) {
@@ -26,9 +26,8 @@ for (const f of files.filter(f => f.endsWith('.html'))) {
   const siteSheets = local.filter(x => x[1].includes('/assets/css/site.css'));
   const rhythmSheets = local.filter(x => x[1].includes('/assets/css/fluid-4k-rhythm.css'));
   const directCriticalSheet = siteSheets.length === 1 && /<link rel="stylesheet" href="\/assets\/css\/site\.css[^>]*\/>/.test(h);
-  const deferredSheet = siteSheets.length === 2 && /media="print"[\s\S]*?<noscript><link rel="stylesheet" href="\/assets\/css\/site\.css/i.test(h);
-  if (rhythmSheets.length !== 1 || (!directCriticalSheet && !deferredSheet)) {
-    fail.push(`${rel(f)}: canonical stylesheet + no-JS fallback + fluid geometry contract missing`);
+  if (rhythmSheets.length !== 0 || !directCriticalSheet || local.length !== 1) {
+    fail.push(`${rel(f)}: exactly one render-blocking, no-JS-safe canonical stylesheet is required`);
   }
   if (/<style\b/i.test(h)) fail.push(`${rel(f)}: inline <style> survived`);
   if (/\sstyle=["']/i.test(h)) fail.push(`${rel(f)}: inline style attribute survived`);
@@ -38,11 +37,9 @@ const siteCss = read('assets/css/site.css');
 if (!/\.smart-quote-layout \.quote-summary-card\{[^}]*box-shadow:none!important/i.test(siteCss)) {
   fail.push('quote summary no-shadow authority missing');
 }
-if (exists('assets/css/fluid-4k-rhythm.css')) {
-  const rhythm = read('assets/css/fluid-4k-rhythm.css');
-  for (const token of ['FLUID-4K-RHYTHM-20260914:START','--apple-page-max:1440px','--apple-page-max:1600px','--apple-page-max:1760px','--prose-max:860px']) {
-    if (!rhythm.includes(token)) fail.push(`fluid rhythm contract missing: ${token}`);
-  }
+const rhythm=siteCss.split('/* BANHALMI-CANONICAL-FLUID-COMPONENTS-20261016 */')[1]||'';
+for(const token of ['FLUID-4K-RHYTHM-20260914:START','--apple-page-max:1440px','--apple-page-max:1600px','--apple-page-max:1760px','--prose-max:860px']) {
+  if(!rhythm.includes(token)) fail.push('canonical site.css component geometry missing: '+token);
 }
 
 const required = [
