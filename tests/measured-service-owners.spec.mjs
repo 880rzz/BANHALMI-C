@@ -10,7 +10,20 @@ for(const [home,portrait,brand] of locales){
    expect(await page.locator('[data-service-owner-links]').evaluate(el=>el.scrollWidth<=el.clientWidth+1)).toBe(true);
   }
   await page.locator(`[data-service-owner-links] a[href="${portrait}"]`).click();
-  await expect(page).toHaveURL(new RegExp(portrait+'$'));await expect(page.locator('h1')).toContainText(/portr/i);
+  await expect(page).toHaveURL(new RegExp(portrait+'
+  await page.goto(home);await page.locator(`[data-service-owner-links] a[href="${brand}"]`).click();
+  await expect(page).toHaveURL(new RegExp(brand+'$'));await expect(page.locator('h1')).toContainText(/brand/i);
+ });
+}
+));
+  const approvedH1={
+   '/portrait/':'The image that reveals who you are.',
+   '/hu/portre/':'A kép, amely megmutatja, ki Ön.',
+   '/de-at/portrait/':'Das Bild, das zeigt, wer Sie sind.'
+  };
+  await expect(page.locator('main h1')).toHaveText(approvedH1[portrait]);
+  // Service-intent terms live in the page title and structure, not the editorial H1.
+  await expect(page).toHaveTitle(/portr|headshot/i);
   await page.goto(home);await page.locator(`[data-service-owner-links] a[href="${brand}"]`).click();
   await expect(page).toHaveURL(new RegExp(brand+'$'));await expect(page.locator('h1')).toContainText(/brand/i);
  });
