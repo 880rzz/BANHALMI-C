@@ -51,6 +51,8 @@ jobs:
           rm -f _site/package.json _site/package-lock.json
           printf '%s\n' "$GITHUB_SHA" > _site/deployment-sha.txt
           node tools/assert-production-integrity.mjs _site
+          # Ship one order-preserving stylesheet; legacy source files remain for safe rollback.
+          node tools/build-single-runtime-css.mjs _site
           test -s _site/index.html
           test -s _site/hu/index.html
           test -s _site/de-at/index.html
