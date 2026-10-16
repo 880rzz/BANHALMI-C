@@ -126,7 +126,8 @@ jobs:
             kill "$SERVER_PID" 2>/dev/null || true
             exit 1
           fi
-          echo "Static audit server ready; running Safari/WebKit footer-tail gate first, then all page audits."
+          echo "Static audit server ready; measuring single-CSS layout authority, then running Safari/WebKit footer-tail gate."
+          AUDIT_BASE_URL=http://127.0.0.1:4173 node tools/audit-single-css-design-axis.mjs
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-webkit-footer-tail.mjs
           npm run test:e2e
           AUDIT_BASE_URL=http://127.0.0.1:4173 AUDIT_SITE_DIR=_site node tools/audit-browser-layout.mjs
@@ -152,6 +153,7 @@ jobs:
           name: banhalmi-c-quality-${{ github.sha }}
           path: |
             artifacts/browser-layout
+            artifacts/css-axis-report.json
             artifacts/live-pixel-geometry
             artifacts/exhaustive-visual
             artifacts/expanded-state-visual
