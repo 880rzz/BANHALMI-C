@@ -53,6 +53,7 @@ jobs:
           node tools/assert-production-integrity.mjs _site
           # Ship one order-preserving stylesheet; legacy source files remain for safe rollback.
           node tools/build-single-runtime-css.mjs _site
+          node scripts/dedupe-exact-css-rules.mjs _site/assets/css/site.css
           test -s _site/index.html
           test -s _site/hu/index.html
           test -s _site/de-at/index.html
