@@ -69,10 +69,10 @@ This repository treats the following as a release-blocking visual contract for e
 
 ## Restore / rewrite authority
 - `APPLE-DESIGN-CONTRACT.md`, `data/design-authority.json`, `tools/design-contract-policy.json`, and `assets/css/site.css` are canonical inputs for any automated generator, optimizer, restore, hardening, remediation or rewrite process that can affect layout.
-- The production artifact must parser-discover the canonical `fluid-4k-rhythm.css` stylesheet in `<head>` before first layout; loading geometry only after runtime JavaScript executes is a release-blocking CLS regression.
-- JavaScript loaders may verify/load the canonical stylesheet as a fallback and synchronize disclosure state, but must not inject hero, footer, cards, reviews, section-rhythm, gallery or mega-menu geometry.
+- The production artifact must parser-discover exactly one versioned stylesheet, `assets/css/site.css`, in `<head>` before first layout. A second maintained or runtime-loaded stylesheet is an architecture regression.
+- JavaScript may synchronize disclosure state and load non-style scripts, but must not inject or load CSS for hero, footer, cards, reviews, section rhythm, galleries or mega-menu geometry.
 - Such processes must preserve equal-height same-type desktop cards, the three-band desktop footer, semantic multi-line footer wrapping, and atomic identifier no-break behavior.
-- A process that reintroduces the retired full-footer single-line rule, delays canonical geometry until runtime, or adds a runtime geometry patch is a regression and must fail the repository audit before release.
+- A process that reintroduces the retired full-footer single-line rule, delays canonical CSS until runtime, restores a second stylesheet or adds a runtime geometry patch is a regression and must fail the repository audit before release.
 
 ## Desktop Visual Redesign v2 — 2026-09-15
 - Homepage-only visual authority: `main[data-homepage-redesign="stage76"]`.
@@ -83,7 +83,7 @@ This repository treats the following as a release-blocking visual contract for e
 - Footer geometry, reviews rhythm and deterministic multilingual navigation remain protected.
 - SEO, canonical, hreflang, Schema, machine-readable evidence and trust semantics are presentation-external and must not be weakened by visual changes.
 - U.S. Embassy in Austria / SelectUSA / AmCham evidence and ART ↔ Blog ↔ Professional intent separation remain protected. Event/publication evidence must not be reinterpreted as endorsement, client, partnership or exclusivity proof.
-- `assets/js/fluid-rhythm-boot.js` must reference the current versioned `fluid-4k-rhythm.css` token as a runtime fallback, while production HTML parser-discovers the stylesheet directly.
+- `assets/js/fluid-rhythm-boot.js` may load the typography integrity script, but must not reference or inject a stylesheet; all presentation rules belong to the parser-discovered `assets/css/site.css`.
 
 ## Live Pixel Geometry v19 — 2026-09-16
 - Required desktop evidence viewports are 1440×900, 1920×1080 and 2560×1440. 3840×2160 is a separate 4K sanity gate.

@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 
-const target=path.resolve(process.argv[2]||'assets/css/style.css');
+const target=path.resolve(process.argv[2]||'assets/css/site.css');
 const source=await readFile(target,'utf8');
 const removals=[];
 const seen=new Map();

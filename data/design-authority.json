@@ -148,7 +148,7 @@
     "quote": {
       "categoryCardHeight": "intrinsic",
       "equalHeightStretchingAllowed": false,
-      "authority": "assets/css/fluid-4k-rhythm.css"
+      "authority": "assets/css/site.css"
     },
     "sectionSpacing": {
       "cardGapMinPx": 20,
