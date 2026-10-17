@@ -6625,3 +6625,18 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     min-width:0;
   }
 }
+/* BANHALMI — pricing disclosure overflow containment below tablet reading range */
+@media (min-width:761px) and (max-width:899px){
+  html body main .service-pricing-section .quote-decision-guide{
+    overflow:hidden;
+    max-width:100%;
+  }
+  html body main .service-pricing-section .quote-decision-guide>*,
+  html body main .service-pricing-section .service-price-examples li,
+  html body main .service-pricing-section .service-price-examples li>span,
+  html body main .service-pricing-section .service-price-examples p{
+    min-width:0;
+    max-width:100%;
+    overflow-wrap:anywhere;
+  }
+}
