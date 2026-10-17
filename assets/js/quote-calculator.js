@@ -110,7 +110,7 @@ var loc=val(f,'location','vienna'),needs=loc!=='vienna'&&loc!=='budapest',w=f.qu
       group:{included:'The package includes 1 retouched image per person.',extra:'Enter the number per person. Each additional image is €29 gross per person.'},
       brand:{included:'The package includes 3 retouched images for the project.',extra:'Enter the project total. Each additional image is €35 gross.'},
       art:{included:'The package includes 2 retouched images for the project.',extra:'Enter the project total. Each additional image is €45 gross.'},
-      event:{included:'Event photographs are not charged per image for portrait retouching.',extra:'Enter your estimated number of delivered event photographs.'}
+      event:{included:'Event photographs are not charged per image for portrait retouching.',extra:'Enter your estimated number of delivered event images.'}
     },
     hu:{
       none:{included:'Válasszon szolgáltatást a csomagban foglalt képek számához.',extra:''},
@@ -126,7 +126,7 @@ var loc=val(f,'location','vienna'),needs=loc!=='vienna'&&loc!=='budapest',w=f.qu
       group:{included:'Das Paket enthält 1 retuschiertes Bild pro Person.',extra:'Geben Sie die Anzahl pro Person an. Jedes weitere Bild kostet €29 brutto pro Person.'},
       brand:{included:'Das Basispaket enthält insgesamt 3 retuschierte Bilder.',extra:'Geben Sie die Gesamtzahl für das Projekt an. Jedes weitere Bild kostet €35 brutto.'},
       art:{included:'Das Basispaket enthält insgesamt 2 retuschierte Bilder.',extra:'Geben Sie die Gesamtzahl für das Projekt an. Jedes weitere Bild kostet €45 brutto.'},
-      event:{included:'Bei Events berechnen wir keine Porträtretusche pro Bild.',extra:'Geben Sie die geschätzte Zahl der zu liefernden Eventfotos an.'}
+      event:{included:'Bei Events berechnen wir keine Porträtretusche pro Bild.',extra:'Geben Sie die geschätzte Zahl der zu liefernden Eventbilder an.'}
     }
   };
   function updateRetouchUi(f){var selected=f.querySelector('[name="category"]:checked'),cat=selected?selected.value:'none',label=f.querySelector('[data-retouch-label]'),input=f.querySelector('[name="retouched_images"]');if(label&&selected){label.textContent=label.getAttribute('data-label-'+cat)||label.textContent;}if(input&&selected){var limits={individual:20,group:5,brand:20,art:20,event:500};input.max=String(limits[cat]||20);if(Number(input.value)>Number(input.max))input.value=input.max;}var note=f.querySelector('[data-retouch-guidance]'),included=note&&note.querySelector('[data-retouch-included]'),extra=note&&note.querySelector('[data-retouch-extra]');if(note&&included&&extra){var raw=(f.getAttribute('data-lang')||document.documentElement.lang||'en').toLowerCase(),lang=raw.indexOf('hu')===0?'hu':raw.indexOf('de')===0?'de':'en',copy=(retouchGuidance[lang]||retouchGuidance.en)[cat]||retouchGuidance[lang].none;included.textContent=copy.included;extra.textContent=copy.extra;extra.hidden=!copy.extra;}}
