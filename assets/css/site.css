@@ -4052,7 +4052,7 @@ html body main :is(.card,.step,.quote-step,.quote-summary-card,.category-card,.o
   html body main .service-process-grid:not(details.service-deep-dive .service-process-grid),
   html body main .quote-deep-details .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
 }
-html body main .service-process-grid{margin-bottom:var(--apple-section-space)!important;}
+html body main .service-process-grid{margin-bottom:var(--apple-section-space);}
 html body main .partner-grid{gap:var(--apple-card-gap)!important;}
 /* Component axes are explicit: the membership CTA belongs to the full five-card
    grid, while FAQ headings and their disclosures begin on one reading column. */
@@ -6713,9 +6713,14 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
 
 /* Expanded service process cards need a full reading measure at tablet widths.
    Their two-column layout inside the disclosure constrains long copy to ~242px. */
+@media (min-width:561px){
+  html body main details.service-deep-dive .service-process-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  }
+}
 @media (min-width:769px) and (max-width:1100px){
   html body main details.service-deep-dive .service-process-grid{
-    grid-template-columns:minmax(0,1fr);
+    grid-template-columns:minmax(0,1fr)!important;
   }
 }
 
