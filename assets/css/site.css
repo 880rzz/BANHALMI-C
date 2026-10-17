@@ -6672,3 +6672,39 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     text-align:start;
   }
 }
+
+
+/* BANHALMI — final intrinsic-width contract for service disclosures at tablet */
+@media (min-width:900px) and (max-width:1100px){
+  html body main .service-pricing-section .quote-decision-guide{
+    min-width:0;
+    overflow:hidden;
+  }
+  html body main .service-pricing-section .quote-decision-guide>summary{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  html body main .service-pricing-section .quote-decision-guide> :not(summary){
+    width:calc(100% - 60px);
+    max-width:calc(100% - 60px);
+    min-width:0;
+    box-sizing:border-box;
+    margin-inline:30px;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples ul,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples li,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples li>span,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples p,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples h2{
+    min-width:0;
+    max-width:100%;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+}
