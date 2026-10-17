@@ -6716,3 +6716,12 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     grid-template-columns:minmax(0,1fr);
   }
 }
+
+
+/* Mobile process cards must override the global two-column disclosure rule.
+   Fine Art has long explanatory copy; one column preserves a readable measure. */
+@media (max-width:560px){
+  html body main .service-process-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}
