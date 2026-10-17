@@ -2885,7 +2885,6 @@ scrollbar-width:thin;
   .motion-ready .media-reveal.is-motion-visible{
     opacity:1;
     transform:translate3d(0,0,0) scale(1);
-    opacity:1;
   }
 
   .apple-media{
