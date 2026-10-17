@@ -25,7 +25,7 @@ for (const [file, alt] of [
 
 for (const file of ['requestaquote/index.html', 'hu/ajanlatkeres/index.html', 'de-at/anfrage/index.html']) {
   const html = fs.readFileSync(file, 'utf8');
-  assert.match(html, /id="quote-deliverables-note"[^>]*role="note"/, `${file}: calculator has a compact live retouch guide`);
+  assert.match(html, /id="quote-deliverables-note"[^>]*data-retouch-guidance[^>]*role="note"/, `${file}: calculator has a compact live retouch guide`);
   assert.match(html, /data-retouch-included/, `${file}: included image count has a dedicated line`);
   assert.match(html, /data-retouch-extra/, `${file}: extra image pricing has a dedicated line`);
   assert.doesNotMatch(html, /id="quote-deliverables-note"[^>]*>[^<]{200,}/,
