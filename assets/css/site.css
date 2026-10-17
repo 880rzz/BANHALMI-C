@@ -4073,8 +4073,8 @@ html body main .project-framework-content>section{padding-block:clamp(28px,3vw,4
   html body main .project-framework-content>section>h2,
   html body main .project-framework-content>section>p,
   html body main .project-framework-content>section>.service-framework-links{
-    width:100%!important;
-    max-width:none!important;
+    width:100%;
+    max-width:none;
   }
 }
 
