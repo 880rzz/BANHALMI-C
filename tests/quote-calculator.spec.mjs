@@ -31,7 +31,8 @@ for (const route of routes) {
       ['event', /event|esemény|Event/i, /image|kép|Bild/i]
     ];
     for (const [category, required, extraCopy] of cases) {
-      await form.locator(`[name="category"][value="${category}"]`).check();
+      const selector = `[name="category"][value="${category}"]` + (category === 'event' ? ':not([data-private-event])' : '');
+      await form.locator(selector).check();
       const included = note.locator('[data-retouch-included]');
       await expect(included).not.toBeEmpty();
       await expect(included).toContainText(required);
