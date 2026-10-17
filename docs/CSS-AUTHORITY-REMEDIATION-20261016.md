@@ -74,6 +74,29 @@ Do not mass-strip `!important`. Consolidate one selector family at a time, retai
 
 Safely removed 34 identical earlier leaf rules from `site.css` and 22 from `fluid-4k-rhythm.css`, preserving their last identical occurrences. This reduced a further 74 source `!important` declarations and roughly 5.6 KB of duplicate CSS. The compiled bundle still passes through the exact-rule deduper for cross-source matches.
 
+## Pricing metadata cascade ownership — 2026-10-16
+
+The global `html body main :is(p,li,dd)` font-size and the global summary
+line-height carry historical `!important` priorities. These legitimately
+suppress weaker component declarations, so the pricing component must not try
+to regain control with another specificity escalation.
+
+The pricing-specific currency note now defines
+`--bn-context-body-size:var(--bn-service-price-meta)` for its own inherited
+font-size contract (0.875rem) while all other paragraphs retain 16px by
+default. The price disclosure summary similarly defines
+`--bn-context-meta-line-height:1.45` while other summaries retain 1.5.
+No extra `!important`, additional stylesheet or new route-specific CSS was
+introduced. Browser assertions require these computed values across all 12
+viewports and all service locale routes; the native disclosure remains
+keyboard-operable with a minimum 44px target.
+
+The earlier PR #152 two-file specificity cleanup was superseded by the merged
+#151 consolidation. The rebased #152 contains only the actual typography
+correction and regression checks. Priority reduction continues independently
+in PR #154; these changes must not be called production-verified until the
+post-merge exact-live gate succeeds.
+
 ## Source consolidation milestone — 2026-10-16
 
 The previous two maintained source files have been combined in original cascade order into one `assets/css/site.css`. The historical fluid component section remains visibly marked inside the same file, and the obsolete secondary file is deleted. All 101 source HTML pages now reference one versioned stylesheet; the source and artifact auditors require this single-link contract. The optimizer, hardener, CSS publisher, footer/layout/typography audits and design-authority data were migrated together. The publisher still removes exact duplicate declarations only within a matching at-rule context and stamps the emitted byte hash; it does not introduce new CSS. The source specificity budget remains 1938 `!important` until additional component-by-component remediation is verified. This source consolidation is not evidence of a successful deploy or exact-live rendering; full required CI is still a release gate.

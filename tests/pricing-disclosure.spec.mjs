@@ -14,6 +14,25 @@ for(const route of [...serviceRoutes,...quoteRoutes]){
   for(const width of widths){
    await page.setViewportSize({width,height:1000});
    const size=await summary.boundingBox();expect(size.height).toBeGreaterThanOrEqual(44);
+   if(serviceRoutes.includes(route)){
+    const rhythm=await summary.evaluate(el=>{
+      const style=getComputedStyle(el);
+      return {line:parseFloat(style.lineHeight),font:parseFloat(style.fontSize)};
+    });
+    expect(Math.abs(rhythm.line-rhythm.font*1.45),route+' pricing summary line-height at '+width).toBeLessThan(.7);
+    const note=panel.locator('.service-price-currency-note');
+    if(await note.count()){
+      const typography=await note.first().evaluate(el=>{
+        const probe=document.createElement('span');
+        probe.style.fontSize='var(--bn-service-price-meta)';
+        el.parentElement.appendChild(probe);
+        const expected=parseFloat(getComputedStyle(probe).fontSize);
+        probe.remove();
+        return {actual:parseFloat(getComputedStyle(el).fontSize),expected};
+      });
+      expect(Math.abs(typography.actual-typography.expected),route+' currency note font size at '+width).toBeLessThan(.6);
+    }
+   }
    // The shared H2 !important must resolve its scoped token, not eclipse the
    // price disclosure's restrained editorial heading at any breakpoint.
    if(serviceRoutes.includes(route)){
