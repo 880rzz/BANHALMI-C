@@ -136,4 +136,4 @@ if (fail.length) {
   console.error(fail.join('\n'));
   process.exit(1);
 }
-console.log(`Clean BANHALMI architecture passed: ${files.filter(f => f.endsWith('.html')).length} HTML pages, canonical site.css plus one approved fluid rhythm layer, critical quote/contact/LLM/entity/alias contracts preserved.`);
+console.log(`Clean BANHALMI architecture passed: ${files.filter(f => f.endsWith('.html')).length} HTML pages, one canonical site.css with embedded fluid rhythm components, critical quote/contact/LLM/entity/alias contracts preserved.`);
