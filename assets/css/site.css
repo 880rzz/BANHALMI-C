@@ -3064,7 +3064,7 @@ h1{font-size:clamp(2.35rem,3.45vw,2.95rem);}
 }
 
 /* 2026-07 production audit: stable controls and readable cards. */
-.strategy-process-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));}
+.strategy-process-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));}
 .strategy-process-card,.card,.service-card,.option-row,.category-card{word-break:normal;overflow-wrap:normal;hyphens:manual;}
 .option-row,.category-card{position:relative;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:flex-start;gap:.75rem;min-height:0;padding:12px 14px;}
 .option-row input,.category-card input{position:static!important;margin:.18rem 0 0 0!important;transform:none!important;inline-size:1.05rem;block-size:1.05rem;}
