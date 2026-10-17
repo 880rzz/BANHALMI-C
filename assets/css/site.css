@@ -4069,12 +4069,17 @@ html body main .project-framework-drawer>summary>span:first-child small{display:
 html body main .project-framework-drawer>summary>span:last-child{font-size:1.25rem!important;line-height:1!important;}
 html body main .project-framework-content>section{padding-block:clamp(28px,3vw,42px)!important;}
 @media (min-width:761px) and (max-width:1100px){
+  html body main .project-framework-drawer .project-framework-content{
+    display:block;
+    grid-template-columns:none;
+  }
   html body main .project-framework-content>section,
   html body main .project-framework-content>section>h2,
   html body main .project-framework-content>section>p,
   html body main .project-framework-content>section>.service-framework-links{
     width:100%;
     max-width:none;
+    min-width:0;
   }
 }
 
