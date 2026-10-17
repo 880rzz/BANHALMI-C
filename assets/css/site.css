@@ -4006,9 +4006,10 @@ html body main .trust-hero p.lead{
 html body main h1{font-size:clamp(2.5rem,3.2vw,2.75rem)!important;line-height:1.08!important;letter-spacing:-.024em!important;text-wrap:balance;}
 html body main h2{font-size:var(--bn-context-h2-size,clamp(1.625rem,2.1vw,2.1rem))!important;line-height:1.18!important;letter-spacing:-.022em!important;}
 html body main h3{font-size:clamp(18px,1.45vw,1.3rem)!important;line-height:1.24!important;letter-spacing:-.012em!important;}
-html body main :is(p,li,dd){font-size:16px!important;line-height:1.62!important;}
-html body main .lead{font-size:clamp(19px,1.6vw,1.4rem)!important;line-height:1.48!important;}
-html body main :is(summary,.description,.desc,.microcopy,.field-help){line-height:1.5!important;}
+html body main :is(p,li,dd){font-size:16px!important;line-height:1.68!important;}
+html body main .lead{font-size:clamp(19px,1.6vw,1.4rem)!important;line-height:1.42!important;}
+html body main :is(.description,.desc,.microcopy,.field-help){line-height:1.5!important;}
+html body main summary{line-height:1.5;}
 /* Every section owns its real height. Deferred paint placeholders created
    artificial 760 px gaps on Safari when a section approached the viewport. */
 html body main>section{content-visibility:visible!important;contain-intrinsic-size:auto!important;}
@@ -4030,12 +4031,17 @@ html body main>section.section-band[data-surface]{width:100%!important;max-width
 /* Grids and disclosures use one gap and intrinsic rows; decorative divider
    chains are replaced by spacing except where a real boundary is meaningful. */
 html body main :is(.cards,.steps,.card-grid,.grid-2,.grid-3,.service-info-cards,.category-grid,.legal-grid){gap:var(--apple-card-gap)!important;align-items:stretch!important;}
+html body main .quote-deliverables-help [data-retouch-included]{display:block;font-weight:700;}
+html body main .quote-deliverables-help [data-retouch-extra]:not([hidden]){display:block;margin-top:4px;font-weight:600;}
+html body main .service-pricing-section .quote-decision-guide>.prose{padding-inline:clamp(16px,2.2vw,30px);}
 html body main .grid-3{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;}
 @media(max-width:1024px){html body main .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))!important;}}
 html body main :is(.card,.step,.quote-step,.quote-summary-card,.category-card,.option-row){height:auto!important;min-height:0!important;align-self:start!important;}
-html body main .service-process-grid,
-html body main .quote-deep-details .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
-html body main .service-process-grid{margin-bottom:var(--apple-section-space)!important;}
+@media (min-width:561px){
+  html body main .service-process-grid:not(details.service-deep-dive .service-process-grid),
+  html body main .quote-deep-details .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+html body main .service-process-grid{margin-bottom:var(--apple-section-space);}
 html body main .partner-grid{gap:var(--apple-card-gap)!important;}
 /* Component axes are explicit: the membership CTA belongs to the full five-card
    grid, while FAQ headings and their disclosures begin on one reading column. */
@@ -4053,6 +4059,20 @@ html body main .project-framework-drawer>summary>span:first-child strong{font-si
 html body main .project-framework-drawer>summary>span:first-child small{display:block!important;font-size:.84rem!important;line-height:1.4!important;color:var(--muted)!important;letter-spacing:0!important;text-transform:none!important;}
 html body main .project-framework-drawer>summary>span:last-child{font-size:1.25rem!important;line-height:1!important;}
 html body main .project-framework-content>section{padding-block:clamp(28px,3vw,42px)!important;}
+@media (min-width:900px) and (max-width:1100px){
+  html body main .project-framework-drawer .project-framework-content{
+    display:block;
+    grid-template-columns:none;
+  }
+  html body main .project-framework-content>section,
+  html body main .project-framework-content>section>h2,
+  html body main .project-framework-content>section>p,
+  html body main .project-framework-content>section>.service-framework-links{
+    width:100%;
+    max-width:none;
+    min-width:0;
+  }
+}
 
 /* Quote calculator: radio, label and optional information control form one
    stable row without inherited label margins. */
@@ -5635,6 +5655,7 @@ html body main .service-grid,
 html body main .cards-grid{
   gap:clamp(20px,1.8vw,28px)!important;
 }
+html body main .cards-grid{display:grid;}
 html body main .contact-routing .service-grid{
   row-gap:clamp(22px,2vw,30px)!important;
 }
@@ -5671,7 +5692,7 @@ html body details>summary::after{
   opacity:1!important;
 }
 html body details[open]>summary::after{content:"−"!important;}
-html body main .quote-decision-guide>summary{display:block!important;}
+html body main .smart-quote-layout .quote-decision-guide>summary{display:block!important;}
 html body .quote-decision-guide .quote-price-note{
   display:block;
   margin-top:8px;
@@ -6543,4 +6564,149 @@ html body a[data-banhalmi-link-arrow]>.banhalmi-link-arrow{
 }
 html body a[data-banhalmi-link-arrow]:hover>.banhalmi-link-arrow,
 html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity:.9;}
+/* BANHALMI — final responsive framework-content width authority */
+@media (min-width:900px) and (max-width:1100px){
+  html body main details.project-framework-drawer .project-framework-content{
+    display:block;
+    width:100%;
+    max-width:none;
+  }
+  html body main details.project-framework-drawer .project-framework-content>section,
+  html body main details.project-framework-drawer .project-framework-content>section>h2,
+  html body main details.project-framework-drawer .project-framework-content>section>p,
+  html body main details.project-framework-drawer .project-framework-content>section>.service-framework-links{
+    display:block;
+    width:100%;
+    max-width:none;
+    min-width:0;
+  }
+}
+/* BANHALMI — disclosure width authority at the tablet reading breakpoint */
+@media (min-width:900px) and (max-width:1100px){
+  html body main .service-pricing-section,
+  html body main .service-deep-dive,
+  html body main .project-framework-drawer,
+  html body main .service-pricing-section>.wrap,
+  html body main .service-deep-dive>.service-deep-dive-content,
+  html body main .project-framework-drawer>.project-framework-content{
+    display:block;
+    width:100%;
+    max-width:none;
+  }
+  html body main .service-pricing-section .quote-decision-guide,
+  html body main .service-deep-dive .wrap,
+  html body main .project-framework-drawer .project-framework-content>section{
+    width:100%;
+    max-width:none;
+  }
+}
+/* BANHALMI — disclosure inner-wrapper width reset */
+@media (min-width:900px) and (max-width:1100px){
+  html body main details:not(.footer-accordion) .wrap,
+  html body main details:not(.footer-accordion) .prose,
+  html body main details:not(.footer-accordion) .section-head,
+  html body main details:not(.footer-accordion) .text-reveal{
+    display:block;
+    grid-template-columns:none;
+    width:100%;
+    max-width:none;
+    min-width:0;
+  }
+}
+/* BANHALMI — pricing disclosure overflow containment below tablet reading range */
+@media (min-width:761px) and (max-width:899px){
+  html body main .service-pricing-section .quote-decision-guide{
+    overflow:hidden;
+    max-width:100%;
+  }
+  html body main .service-pricing-section .quote-decision-guide>*,
+  html body main .service-pricing-section .service-price-examples li,
+  html body main .service-pricing-section .service-price-examples li>span,
+  html body main .service-pricing-section .service-price-examples p{
+    min-width:0;
+    max-width:100%;
+    overflow-wrap:anywhere;
+  }
+}
+
+
+/* BANHALMI — price disclosure row collapse below the tablet reading range
+   Keep the service panel intrinsically narrow-safe at 768px without clipping
+   its measured layout. The amount follows the description on its own line. */
+@media (min-width:761px) and (max-width:899px){
+  html body main .service-pricing-section .service-price-examples li{
+    grid-template-columns:minmax(0,1fr);
+    min-width:0;
+  }
+  html body main .service-pricing-section .service-price-examples li>strong{
+    white-space:normal;
+    text-align:start;
+  }
+  html body main .service-pricing-section .quote-decision-guide > :not(summary){
+    width:calc(100% - 36px);
+    margin-inline:18px;
+  }
+}
+
+
+/* BANHALMI — tablet pricing rows stay intrinsic-width safe through 1100px */
+@media (min-width:900px) and (max-width:1100px){
+  html body main .service-pricing-section .service-price-examples li{
+    grid-template-columns:minmax(0,1fr);
+    min-width:0;
+  }
+  html body main .service-pricing-section .service-price-examples li>strong{
+    white-space:normal;
+    text-align:start;
+  }
+}
+
+
+/* BANHALMI — final intrinsic-width contract for service disclosures at tablet */
+@media (min-width:900px) and (max-width:1100px){
+  html body main .service-pricing-section .quote-decision-guide{
+    min-width:0;
+    overflow:hidden;
+  }
+  html body main .service-pricing-section .quote-decision-guide>summary{
+    width:100%;
+    max-width:100%;
+    min-width:0;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  html body main .service-pricing-section .quote-decision-guide> :not(summary){
+    width:calc(100% - 60px);
+    max-width:calc(100% - 60px);
+    min-width:0;
+    box-sizing:border-box;
+    margin-inline:30px;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples ul,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples li,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples li>span,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples p,
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples h2{
+    min-width:0;
+    max-width:100%;
+    overflow-wrap:anywhere;
+    word-break:normal;
+  }
+}
+
+/* Expanded service process cards need a full reading measure at tablet widths.
+   Their two-column layout inside the disclosure constrains long copy to ~242px. */
+@media (min-width:561px){
+  html body main details.service-deep-dive .service-process-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media (min-width:769px) and (max-width:1100px){
+  html body main details.service-deep-dive .service-process-grid{
+    grid-template-columns:minmax(0,1fr)!important;
+  }
+}
 
