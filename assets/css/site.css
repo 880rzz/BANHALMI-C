@@ -6612,3 +6612,16 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     max-width:none;
   }
 }
+/* BANHALMI — disclosure inner-wrapper width reset */
+@media (min-width:761px) and (max-width:1100px){
+  html body main details:not(.footer-accordion) .wrap,
+  html body main details:not(.footer-accordion) .prose,
+  html body main details:not(.footer-accordion) .section-head,
+  html body main details:not(.footer-accordion) .text-reveal{
+    display:block;
+    grid-template-columns:none;
+    width:100%;
+    max-width:none;
+    min-width:0;
+  }
+}
