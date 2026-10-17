@@ -4017,7 +4017,7 @@ html body main .trust-hero p.lead{
 html body main h1{font-size:clamp(2.5rem,3.2vw,2.75rem)!important;line-height:1.08!important;letter-spacing:-.024em!important;text-wrap:balance;}
 html body main h2{font-size:var(--bn-context-h2-size,clamp(1.625rem,2.1vw,2.1rem))!important;line-height:1.18!important;letter-spacing:-.022em!important;}
 html body main h3{font-size:clamp(18px,1.45vw,1.3rem)!important;line-height:1.24!important;letter-spacing:-.012em!important;}
-html body main :is(p,li,dd){font-size:16px!important;line-height:1.8!important;}
+html body main :is(p,li,dd){font-size:16px!important;line-height:1.68!important;}
 html body main .lead{font-size:clamp(19px,1.6vw,1.4rem)!important;line-height:1.42!important;}
 html body main :is(.description,.desc,.microcopy,.field-help){line-height:1.5!important;}
 html body main summary{line-height:1.5;}
