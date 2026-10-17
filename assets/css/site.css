@@ -718,13 +718,7 @@ main>section{padding:72px 0;}
   
   
 }
-@media (max-width:620px){
-  
-  
-  
-  
-  
-}
+
 
 /* Phase 16 — Apple-like hero image placement
    The signature hero image appears first, immediately below the header,
@@ -785,7 +779,7 @@ main>section{padding:72px 0;}
 
 
 @media (max-width:1100px){}
-@media (max-width:680px){}
+
 
 /* Production v2.1 — Apple-like micro motion and clean hero mark
    The motion layer is intentionally quiet: small lift, gentle fade, no gimmicks. */
@@ -811,10 +805,7 @@ main>section{padding:72px 0;}
   
   
 }
-@media (prefers-reduced-motion: reduce){
-  
-  
-}
+
 
 
 /* Production v3 — editorial SEO/GEO and Platon-inspired language sections */
@@ -3300,7 +3291,7 @@ html[lang^="hu"] .quote-total{font-variant-numeric:tabular-nums;font-size:clamp(
 }
 
 /* Footer viewport contract. */
-html,body{min-height:100%}
+
 
 body>main{flex:1 0 auto;width:100%;min-width:0}
 body>.site-footer{margin-top:auto;width:100%}
@@ -3323,7 +3314,7 @@ body>.site-footer{margin-top:auto;width:100%}
 /* STAGE48-LAYOUT-CACHE-CONTRACT:START */
 /* Safari-safe document floor + verified trust-card rhythm. */
 html{min-height:100%;background:#202530!important}
-body{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column}
+
 body>main,#main{flex:1 0 auto;width:100%;min-width:0}
 body>.site-footer,.site-footer{flex:0 0 auto;width:100%}
 .trust-proof .grid-3{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px!important;row-gap:24px!important}
@@ -3649,7 +3640,7 @@ html body a.nav-cta::after{font-size:.85rem!important;font-weight:500;line-heigh
 
 
 
-@media (max-width:680px){}
+
 @media (max-width:680px) and (hover:none) and (pointer:coarse){
   
 }
@@ -3669,9 +3660,7 @@ html body a.nav-cta::after{font-size:.85rem!important;font-weight:500;line-heigh
    Keep the same cool-grey hierarchy while clearing WCAG AA for normal text. */
 
 
-@media (max-width:680px), (pointer:coarse){
-  
-}
+
 /* PAGESPEED-STAGE32-TARGETS:END */
 
 /* PAGESPEED-STAGE56-PAINT:START */
@@ -4270,10 +4259,7 @@ body.whatsapp-cookie-visible .whatsapp-contact{
 
 
 /* FINAL-LAYOUT-CONTRACT-20260919: service hero rhythm and gallery breathing */
-@media (min-width:761px){
-  
-  
-}
+
 
 
 /* UNIFIED-GALLERY-GEOMETRY-V48-20261003
