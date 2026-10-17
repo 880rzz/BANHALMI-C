@@ -17,6 +17,34 @@ function amount(text) {
 }
 
 for (const route of routes) {
+  test(`retouch guidance explains image counts by category in ${route.lang}`, async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 900 });
+    await page.goto(route.path);
+    const form = page.locator('[data-smart-quote]');
+    const note = form.locator('[data-retouch-guidance]');
+    await expect(note).toBeVisible();
+    const cases = [
+      ['individual', /1/, /14\s?000|35|€35/],
+      ['group', /person|fő|Person/i, /person|fő|Person/i],
+      ['brand', /3/, /project|projektenként|Projekt/i],
+      ['art', /2/, /project|projektenként|Projekt/i],
+      ['event', /event|esemény|Event/i, /image|kép|Bild/i]
+    ];
+    for (const [category, required, extraCopy] of cases) {
+      await form.locator(`[name="category"][value="${category}"]`).check();
+      const included = note.locator('[data-retouch-included]');
+      await expect(included).not.toBeEmpty();
+      await expect(included).toContainText(required);
+      const extraLine = note.locator('[data-retouch-extra]');
+      await expect(extraLine).toBeVisible();
+      await expect(extraLine).not.toBeEmpty();
+      if (category === 'individual') await expect(extraLine).toContainText(extraCopy);
+      if (category === 'group') await expect(extraLine).toContainText(extraCopy);
+      if (category === 'brand' || category === 'art') await expect(extraLine).toContainText(extraCopy);
+      if (category === 'event') await expect(extraLine).toContainText(extraCopy);
+    }
+  });
+
   test(`quote information opens as a modal on ${route.path}`, async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 900 });
     await page.goto(route.path);

@@ -15,6 +15,11 @@ import sys
 HERE = Path(__file__).resolve()
 SCRIPT = 'tools/reconcile-pricing-clarity-20261006.py'
 COPY = json.loads((HERE.parent / 'content/pricing-clarity-20261006.json').read_text())
+CONCISE_FINE_ART_LEADS = {
+    'en': 'Professional portfolios for artists and performers, or personal Fine Art projects. We agree the visual concept, boundaries and image use before the shoot.',
+    'hu': 'Szakmai portfólió művészeknek és előadóknak, vagy személyes Fine Art projekt. A képi koncepciót, a határokat és a felhasználást előre egyeztetjük.',
+    'de': 'Professionelle Portfolios für Kunstschaffende und Performer:innen oder persönliche Fine-Art-Projekte. Konzept, Grenzen und Bildnutzung vereinbaren wir vor dem Shooting.'
+}
 
 def replace_one(text, old, new, label):
     if old == new or new in text and old not in text:
@@ -73,8 +78,13 @@ def reconcile(root):
         terms = (root/d['terms']).read_text()
         save(d['terms'], replace_one(terms, d['travelOld'], d['travel'], d['terms']+': travel'))
         fine = (root/d['fine']).read_text()
-        fine = replace_one(fine, d['fineLeadOld'], d['fineLead'], d['fine']+': dual purpose')
-        literal_pairs.append((d['fineLeadOld'], d['fineLead']))
+        # The 2026-10-17 editorial pass deliberately replaced this verbose
+        # paragraph with a short lead. Accept either the old source (so --apply
+        # can migrate it) or the approved concise copy; reject partial drift.
+        if d['fineLeadOld'] in fine:
+            fine = replace_one(fine, d['fineLeadOld'], d['fineLead'], d['fine']+': dual purpose')
+        elif CONCISE_FINE_ART_LEADS[lang] not in fine:
+            raise ValueError(d['fine']+': neither legacy nor approved concise Fine Art lead found')
         if 'eyebrowOld' in d:
             fine = replace_one(fine, d['eyebrowOld'], html.escape(d['eyebrow']), d['fine']+': eyebrow')
         save(d['fine'], fine)
