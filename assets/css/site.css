@@ -4068,7 +4068,7 @@ html body main .project-framework-drawer>summary>span:first-child strong{font-si
 html body main .project-framework-drawer>summary>span:first-child small{display:block!important;font-size:.84rem!important;line-height:1.4!important;color:var(--muted)!important;letter-spacing:0!important;text-transform:none!important;}
 html body main .project-framework-drawer>summary>span:last-child{font-size:1.25rem!important;line-height:1!important;}
 html body main .project-framework-content>section{padding-block:clamp(28px,3vw,42px)!important;}
-@media (min-width:761px) and (max-width:1100px){
+@media (min-width:900px) and (max-width:1100px){
   html body main .project-framework-drawer .project-framework-content{
     display:block;
     grid-template-columns:none;
@@ -6577,7 +6577,7 @@ html body a[data-banhalmi-link-arrow]>.banhalmi-link-arrow{
 html body a[data-banhalmi-link-arrow]:hover>.banhalmi-link-arrow,
 html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity:.9;}
 /* BANHALMI — final responsive framework-content width authority */
-@media (min-width:761px) and (max-width:1100px){
+@media (min-width:900px) and (max-width:1100px){
   html body main details.project-framework-drawer .project-framework-content{
     display:block;
     width:100%;
@@ -6594,7 +6594,7 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
   }
 }
 /* BANHALMI — disclosure width authority at the tablet reading breakpoint */
-@media (min-width:761px) and (max-width:1100px){
+@media (min-width:900px) and (max-width:1100px){
   html body main .service-pricing-section,
   html body main .service-deep-dive,
   html body main .project-framework-drawer,
@@ -6613,7 +6613,7 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
   }
 }
 /* BANHALMI — disclosure inner-wrapper width reset */
-@media (min-width:761px) and (max-width:1100px){
+@media (min-width:900px) and (max-width:1100px){
   html body main details:not(.footer-accordion) .wrap,
   html body main details:not(.footer-accordion) .prose,
   html body main details:not(.footer-accordion) .section-head,
