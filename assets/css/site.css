@@ -6640,3 +6640,22 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     overflow-wrap:anywhere;
   }
 }
+
+
+/* BANHALMI — price disclosure row collapse below the tablet reading range
+   Keep the service panel intrinsically narrow-safe at 768px without clipping
+   its measured layout. The amount follows the description on its own line. */
+@media (min-width:761px) and (max-width:899px){
+  html body main .service-pricing-section .service-price-examples li{
+    grid-template-columns:minmax(0,1fr);
+    min-width:0;
+  }
+  html body main .service-pricing-section .service-price-examples li>strong{
+    white-space:normal;
+    text-align:start;
+  }
+  html body main .service-pricing-section .quote-decision-guide > :not(summary){
+    width:calc(100% - 36px);
+    margin-inline:18px;
+  }
+}
