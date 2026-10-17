@@ -115,7 +115,7 @@ var loc=val(f,'location','vienna'),needs=loc!=='vienna'&&loc!=='budapest',w=f.qu
     hu:{
       none:{included:'Válasszon szolgáltatást a csomagban foglalt képek számához.',extra:''},
       individual:{included:'A csomag 1 retusált képet tartalmaz.',extra:'A mezőben a teljes átadandó képszámot adja meg. További kép: 14 000 Ft bruttó.'},
-      group:{included:'A csomag személyenként 1 retusált képet tartalmaz.',extra:'A mező a képszámot személyenként jelzi. További kép: 11 600 Ft / fő bruttó.'},
+      group:{included:'A csomag 1 retusált képet tartalmaz / fő.',extra:'A mező a képszámot személyenként jelzi. További kép: 11 600 Ft / fő bruttó.'},
       brand:{included:'Az alapcsomag összesen 3 retusált képet tartalmaz.',extra:'A mezőben a projekt teljes képszámát adja meg. További kép: 14 000 Ft bruttó.'},
       art:{included:'Az alapcsomag összesen 2 retusált képet tartalmaz.',extra:'A mezőben a projekt teljes képszámát adja meg. További kép: 18 000 Ft bruttó.'},
       event:{included:'Eseményfotózásnál nincs portréretus-díj.',extra:'A mező a becsült átadandó eseményképek számát jelenti.'}
