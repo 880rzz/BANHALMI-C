@@ -1,0 +1,111 @@
+{
+  "version": "2026-10-18",
+  "rule": "Four primary professional choices; simple headshot and organiser paths remain visible secondary entries. Private artistic photography belongs to ART; pricing and contract data remain shared, unchanged.",
+  "locales": {
+    "en": {
+      "home": "index.html",
+      "services": [
+        {
+          "id": "portrait",
+          "label": "Portraits",
+          "description": "For your professional profile, press portrait or a consistent set of team photographs.",
+          "url": "/portrait/"
+        },
+        {
+          "id": "brand",
+          "label": "Brand photography",
+          "description": "A coherent set of photographs for your website, communication and campaigns.",
+          "url": "/lifestyle/"
+        },
+        {
+          "id": "event",
+          "label": "Event photography",
+          "description": "People, conversations and defining moments at your business event.",
+          "url": "/event-photography/"
+        },
+        {
+          "id": "artists",
+          "label": "Artists & performers",
+          "description": "Portraits and portfolios for casting, agencies, press and your work on stage.",
+          "url": "/fine-art/#artist-packages-guide"
+        }
+      ],
+      "secondary": {
+        "headshot": "/portrait/#portrait-options",
+        "organizer": "/requestaquote/?service=event"
+      },
+      "artPrivateCandidate": "https://www.banhalmi.art/private-photography.html",
+      "mainEnquiry": "/contact/#contact-form"
+    },
+    "hu": {
+      "home": "hu/index.html",
+      "services": [
+        {
+          "id": "portrait",
+          "label": "Portré",
+          "description": "Szakmai bemutatkozáshoz, sajtóhoz vagy a csapat egységes portréihoz.",
+          "url": "/hu/portre/"
+        },
+        {
+          "id": "brand",
+          "label": "Brandfotózás",
+          "description": "Összefüggő képanyag a weboldalához, kommunikációjához és kampányaihoz.",
+          "url": "/hu/brand/"
+        },
+        {
+          "id": "event",
+          "label": "Rendezvényfotózás",
+          "description": "Emberek, találkozások és meghatározó pillanatok az üzleti eseményén.",
+          "url": "/hu/rendezvenyfotozas/"
+        },
+        {
+          "id": "artists",
+          "label": "Művészek és előadók",
+          "description": "Portrék és portfólió castinghoz, ügynökségnek, sajtóhoz és színpadi munkához.",
+          "url": "/hu/muveszi-fotografia/#artist-packages-guide"
+        }
+      ],
+      "secondary": {
+        "headshot": "/hu/portre/#portrait-options",
+        "organizer": "/hu/ajanlatkeres/?service=event"
+      },
+      "artPrivateCandidate": "https://www.banhalmi.art/hu/private-photography.html",
+      "mainEnquiry": "/hu/kapcsolat/#kapcsolatfelveteli-urlap"
+    },
+    "de": {
+      "home": "de-at/index.html",
+      "services": [
+        {
+          "id": "portrait",
+          "label": "Porträts",
+          "description": "Für Ihr berufliches Profil, die Presse oder einheitliche Porträts Ihres Teams.",
+          "url": "/de-at/portrait/"
+        },
+        {
+          "id": "brand",
+          "label": "Brandfotografie",
+          "description": "Ein zusammenhängender Bildbestand für Website, Kommunikation und Kampagnen.",
+          "url": "/de-at/brand/"
+        },
+        {
+          "id": "event",
+          "label": "Eventfotografie",
+          "description": "Menschen, Begegnungen und wichtige Momente bei Ihrer Geschäftsveranstaltung.",
+          "url": "/de-at/eventfotografie/"
+        },
+        {
+          "id": "artists",
+          "label": "Kunst & Performance",
+          "description": "Porträts und Portfolios für Casting, Agenturen, Presse und Bühnenarbeit.",
+          "url": "/de-at/fine-art/#artist-packages-guide"
+        }
+      ],
+      "secondary": {
+        "headshot": "/de-at/portrait/#portrait-options",
+        "organizer": "/de-at/anfrage/?service=event"
+      },
+      "artPrivateCandidate": "https://www.banhalmi.art/de-at/private-photography.html",
+      "mainEnquiry": "/de-at/kontakt/#kontaktformular"
+    }
+  }
+}

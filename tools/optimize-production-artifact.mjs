@@ -51,7 +51,7 @@ function renderExecutivePositioningCopy(rel, html) {
   return out;
 }
 
-const homeMegaMenuLoader = `<script data-banhalmi-mega-menu="" defer src="/assets/js/mega-menu.js?v=20260921-single-stage-v1"></script>`;
+const homeMegaMenuLoader = `<script data-banhalmi-mega-menu="" defer src="/assets/js/mega-menu.js?v=20261018-four-services-v1"></script>`;
 
 const homeRuntimeLoader = `<script defer src="/assets/js/main.js?v=20260926-contact-dock-v1"></script>`;
 

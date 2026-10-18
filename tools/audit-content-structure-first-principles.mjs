@@ -62,7 +62,8 @@ function inspect(rel,abs){
   const alts=[...html.matchAll(/<link\b([^>]*\brel=["'][^"']*alternate[^"']*["'][^>]*)>/gi)].map(m=>attrs(m[1])).filter(a=>a.hreflang);
   if(alts.length){const langs=new Set(alts.map(a=>a.hreflang.toLowerCase()));for(const req of ['en','hu-hu','de-at','x-default'])if(!langs.has(req)) failures.push(`${rel}: hreflang family missing ${req}`)}
 
-  if(/(?:quote-form|quote-builder|contact-form)/i.test(html)){
+  // A contact-form fragment in a link does not make the referring page a form.
+  if(/<form\b/i.test(html)){
     if(!/(privacy|adatv[ée]delem|datenschutz)/i.test(text+html)) failures.push(`${rel}: transactional page lacks visible privacy path`);
     if(!/<button\b[^>]*type=["']submit["']/i.test(html)) failures.push(`${rel}: transactional page lacks explicit submit button`);
   }

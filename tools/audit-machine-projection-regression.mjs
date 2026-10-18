@@ -82,6 +82,13 @@ try {
     if (!manifestText.includes(token)) throw new Error(`Machine manifest lost protected contract ${token}`);
   }
 
+  const canonicalCore = JSON.parse(fs.readFileSync('data/machine-core.json','utf8'));
+  for (const route of Object.values(canonicalCore.serviceModel.privateCommissionRouting.routes)) {
+    for (const file of ['llms.txt','api/v1/services.json']) {
+      if (!fs.readFileSync(path.join(tmp,file),'utf8').includes(route)) throw new Error(file+' lost private ART routing '+route);
+    }
+  }
+
   console.log('Machine projection regression audit passed: production generation plus protected overlay preserves current geography, role, team, recognition, executive-positioning and institutional evidence semantics without mutating source.');
 } finally {
   fs.rmSync(tmp, { recursive: true, force: true });

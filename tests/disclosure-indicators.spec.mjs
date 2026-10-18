@@ -9,9 +9,9 @@ const pages = [
 ];
 
 const personaHomes = [
-  { path: '/', artist: '/fine-art/', quote: '/requestaquote/?service=event', artistText: 'Professional artist or performer portfolio', organizerText: 'I am organising photography for someone else' },
-  { path: '/hu/', artist: '/hu/muveszi-fotografia/', quote: '/hu/ajanlatkeres/?service=event', artistText: 'Művész vagy előadó szakmai portfóliója', organizerText: 'Másnak szervezem a fotózást' },
-  { path: '/de-at/', artist: '/de-at/fine-art/', quote: '/de-at/anfrage/?service=event', artistText: 'Portfolio für Künstler:innen und Performer:innen', organizerText: 'Ich organisiere das Shooting für andere' }
+  { path: '/', artist: '/fine-art/', quote: '/requestaquote/?service=event', artistText: 'Artists & performers', organizerText: 'I am organising photography for someone else' },
+  { path: '/hu/', artist: '/hu/muveszi-fotografia/', quote: '/hu/ajanlatkeres/?service=event', artistText: 'Művészek és előadók', organizerText: 'Másnak szervezem a fotózást' },
+  { path: '/de-at/', artist: '/de-at/fine-art/', quote: '/de-at/anfrage/?service=event', artistText: 'Kunst & Performance', organizerText: 'Ich organisiere das Shooting für andere' }
 ];
 
 for (const home of personaHomes) {

@@ -314,7 +314,7 @@
       },
       {
         "id": "fine-art",
-        "name": "Fine Art / Artists & Performers Photography",
+        "name": "Artists & Performers Photography",
         "url": "https://www.norbertbanhalmi.com/fine-art/",
         "serviceContext": "fine-art",
         "audiences": [
@@ -323,8 +323,7 @@
           "dancers",
           "performers",
           "models",
-          "creative professionals",
-          "private fine-art clients"
+          "creative professionals"
         ],
         "specialisms": [
           "Fine Art Photography",
@@ -335,8 +334,7 @@
           "Performing Artist Portfolios",
           "Model Portfolios",
           "Editorial Portraits",
-          "Creative Professional Portraits",
-          "Artistic Nude Photography"
+          "Creative Professional Portraits"
         ],
         "quoteRouting": {
           "serviceContext": "fine-art",
@@ -369,9 +367,14 @@
           "authorLedFineArtArtisticNude": {
             "startingGrossEUR": 690,
             "startingGrossHUF": 276000,
-            "intent": "personal author-led Fine Art / artistic nude"
+            "intent": "personal author-led Fine Art / artistic nude",
+            "primaryEnquiryRoutes": {
+              "en": "https://www.banhalmi.art/private-photography.html",
+              "hu": "https://www.banhalmi.art/hu/private-photography.html",
+              "de-AT": "https://www.banhalmi.art/de-at/private-photography.html"
+            }
           },
-          "rule": "Same entry price does not collapse the two client journeys; route by intended use."
+          "rule": "Career-facing artist and performer portfolios belong to BANHALMI Professional. Personal artistic portraits, boudoir, intimate editorial and optional artistic nude begin on the localized BANHALMI ART private photography page. Existing fine-art calculator deep links and the canonical pricing/terms remain on Professional for compatibility; they do not change the primary private enquiry destination."
         }
       },
       {
@@ -382,7 +385,15 @@
         "startingGrossHUF": 276000,
         "serviceContext": "fine-art"
       }
-    ]
+    ],
+    "privateCommissionRouting": {
+      "routes": {
+        "en": "https://www.banhalmi.art/private-photography.html",
+        "hu": "https://www.banhalmi.art/hu/private-photography.html",
+        "de-AT": "https://www.banhalmi.art/de-at/private-photography.html"
+      },
+      "policy": "Career-facing artist and performer portfolios belong to BANHALMI Professional. Personal artistic portraits, boudoir, intimate editorial and optional artistic nude begin on the localized BANHALMI ART private photography page. Existing fine-art calculator deep links and the canonical pricing/terms remain on Professional for compatibility; they do not change the primary private enquiry destination."
+    }
   },
   "teamModel": {
     "canonical": "https://www.norbertbanhalmi.com/team-capabilities.json",
