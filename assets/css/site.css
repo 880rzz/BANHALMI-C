@@ -6719,8 +6719,7 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
   }
 }
 @media (min-width:769px) and (max-width:1100px){
-  html body main details.service-deep-dive .service-process-grid{
+  html body main details.service-deep-dive :is(.service-process-grid,.strategy-process-grid){
     grid-template-columns:minmax(0,1fr)!important;
   }
 }
-
