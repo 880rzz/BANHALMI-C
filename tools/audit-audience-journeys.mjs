@@ -9,8 +9,8 @@ for(const [lang,d] of Object.entries(copy)){
  assert.ok(h.includes('/'+d.portrait.replace('index.html','')+'#portrait-options'),lang+' everyday entry reaches the visible price selector');
  assert.ok(portrait.includes('id="portrait-options"')&&portrait.includes(esc(d.portraitLead)),lang+' non-executive meaning is visible');
  assert.ok(portrait.includes('?service=portrait&amp;portrait_mode=headshotcv'),lang+' explicit CV link selects CV, not executive pricing');
- const guide=art.indexOf('id="artist-packages-guide"'),professional=art.indexOf('id="professional-portfolio"'),personal=art.indexOf('id="personal-fine-art"'),image=art.indexOf('<figure class="service-hero-image');
- assert.ok(guide>0&&guide<professional&&professional<personal&&personal<image,lang+' visible purpose and portfolio come before private/body imagery');
+ const main=art.slice(art.indexOf('<main'),art.indexOf('</main>')),heroImage=main.indexOf('<figure class="service-hero-image" data-service-hero-image="performer-portfolio"'),guide=main.indexOf('id="artist-packages-guide"'),professional=main.indexOf('id="professional-portfolio"'),personal=main.indexOf('id="personal-fine-art"'),image=main.indexOf('id="fine-art-selected-work"'),restricted=main.indexOf('data-age-restricted');
+ assert.ok(heroImage>0&&heroImage<guide&&guide<professional&&professional<personal&&personal<image&&image<restricted,lang+' non-sensitive performer image supports the hero while the personal/body gallery remains after the purpose choice');
  assert.equal((art.match(/id="artist-packages-guide"/g)||[]).length,1,lang+' existing guide moved, not copied');
  assert.ok(art.includes(esc(d.personalIntro)),lang+' personal fine art does not imply nudity');
  assert.ok(art.includes(esc(d.artistChoiceLead)),lang+' purpose lead uses consistent formal language');
