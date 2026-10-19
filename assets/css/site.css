@@ -4935,44 +4935,35 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body main>section[data-surface="white"]:not(.hero){padding-bottom:clamp(56px,6vw,96px)!important;}
 }
 @media (max-width:620px){
-  /* Quote choices use one full-width column. Long descriptions must not be
-     squeezed between a radio control and the help button. */
+  /* Quote choices keep long descriptions at full width. Radio controls occupy
+     their own row and help buttons follow the copy in a separate grid row. */
   html body main .smart-quote-layout .category-grid{
     grid-template-columns:minmax(0,1fr)!important;
   }
   html body main .smart-quote-layout :is(.category-card,.option-row){
     display:grid!important;
     grid-template-columns:minmax(0,1fr)!important;
-    row-gap:8px!important;
+    gap:8px!important;
     position:relative!important;
     padding:14px!important;
   }
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="radio"],
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="checkbox"]{
     position:static!important;
-    display:block!important;
     margin:0!important;
-    align-self:start!important;
   }
   html body main .smart-quote-layout :is(.category-card,.option-row)>span{
     display:grid!important;
-    grid-template-columns:minmax(0,1fr) auto!important;
+    grid-template-columns:minmax(0,1fr)!important;
     width:100%!important;
     max-width:none!important;
-    min-width:0!important;
   }
   html body main .smart-quote-layout :is(.category-card,.option-row)>span>strong,
   html body main .smart-quote-layout :is(.category-card,.option-row)>span>em{
     max-inline-size:none!important;
   }
   html body main .smart-quote-layout :is(.category-card,.option-row)>span>.info-tip{
-    position:static!important;
-    display:grid!important;
-    float:none!important;
-    margin:0!important;
-    grid-column:2!important;
-    grid-row:1 / span 2!important;
-    align-self:center!important;
+    grid-area:auto!important;
   }
 }
 
