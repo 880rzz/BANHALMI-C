@@ -129,7 +129,8 @@ for(const width of widths){
           if(!input||!span||!info) continue;
           const rr=row.getBoundingClientRect(), ir=input.getBoundingClientRect(), sr=span.getBoundingClientRect(), tr=info.getBoundingClientRect();
           if(Math.abs((ir.top+ir.height/2)-(rr.top+rr.height/2))>4) local.push('radio not vertically centered');
-          if(Math.abs((tr.top+tr.height/2)-(rr.top+rr.height/2))>4) local.push('info not vertically centered');
+          if(innerWidth>620&&Math.abs((tr.top+tr.height/2)-(rr.top+rr.height/2))>4) local.push('info not vertically centered');
+          if(innerWidth<=620){const copyBottom=Math.max(...[...span.querySelectorAll('strong,em')].map(el=>el.getBoundingClientRect().bottom));if(tr.top<copyBottom-1) local.push('info overlaps option copy');}
           const rightSlack=rr.right-tr.right;
           const leftSlack=ir.left-rr.left;
           if(rightSlack<8||rightSlack>22) local.push(`info right slack=${rightSlack.toFixed(1)}px`);
