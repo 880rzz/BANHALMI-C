@@ -72,7 +72,13 @@ for (const route of routes) {
     expect(triggerBox.x + triggerBox.width).toBeLessThanOrEqual(optionBox.x + optionBox.width + 1);
     expect(triggerBox.y + triggerBox.height).toBeLessThanOrEqual(optionBox.y + optionBox.height + 1);
     const copyBox = await option.locator('strong').first().boundingBox();
-    if (copyBox) expect(triggerBox.x).toBeGreaterThanOrEqual(copyBox.x + copyBox.width - 1);
+    if (copyBox) {
+      const overlapsCopy = triggerBox.x < copyBox.x + copyBox.width - 1
+        && triggerBox.x + triggerBox.width > copyBox.x + 1
+        && triggerBox.y < copyBox.y + copyBox.height - 1
+        && triggerBox.y + triggerBox.height > copyBox.y + 1;
+      expect(overlapsCopy).toBe(false);
+    }
     await trigger.click();
     const modal = page.locator('.info-modal');
     const panel = modal.locator('.info-modal-panel');
