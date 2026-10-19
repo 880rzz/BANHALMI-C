@@ -34,7 +34,7 @@ for (const specialism of ['Fine art photography','Artistic nude photography','Ac
 const services = core.serviceModel?.services || [];
 const fine = services.find((service) => service.id === 'fine-art');
 fail(Boolean(fine), 'Canonical fine-art service missing');
-fail(fine?.name === 'Fine Art / Artists & Performers Photography', 'Fine Art / Artists & Performers canonical service name drift');
+fail(fine?.name === 'Artists & Performers Photography', 'Artists & Performers canonical service name drift');
 fail(fine?.serviceContext === 'fine-art', 'Fine Art / Artists & Performers backend service context drift');
 for (const audience of ['actors','dancers','performers','models','creative professionals']) fail((fine?.audiences || []).includes(audience), `Fine Art audience missing: ${audience}`);
 fail(services.some((service) => service.id === 'artistic-nude' && /Artistic Nude Photography/i.test(service.name)), 'Artistic Nude Photography service missing');
@@ -94,6 +94,11 @@ fail(robots.includes('# AI / LLM machine entry points'), 'robots.txt AI/LLM disc
 fail(robots.includes('# https://www.norbertbanhalmi.com/llms.txt'), 'robots.txt must document canonical llms.txt');
 fail(robots.includes('# https://www.norbertbanhalmi.com/ai.txt'), 'robots.txt must document canonical ai.txt');
 fail(!/^\s*(?:LLMS|AI)\s*:/im.test(robots), 'robots.txt must not invent non-standard LLMS: or AI: directives');
+
+for (const locale of ['en','hu','de-AT']) {
+  const route = core.serviceModel.privateCommissionRouting?.routes?.[locale];
+  fail(route?.startsWith('https://www.banhalmi.art/') && route?.endsWith('/private-photography.html'), 'Private artistic primary route must belong to ART: '+locale);
+}
 
 if (errors.length) { console.error(errors.join('\n')); process.exit(1); }
 console.log('Canonical machine core audit passed: current roles, hyperlocal geography, worldwide travel, team capacity, services and authority references are locked against regression.');
