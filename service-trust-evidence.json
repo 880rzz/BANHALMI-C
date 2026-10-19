@@ -216,7 +216,8 @@
         "rolunk-profile-possible-is-just-a-word-2025",
         "rolunk-bmi-crowdfunding-visual-communication-2026",
         "orf-becsi-szelet-founder-2023",
-        "babafoto-exhibition-hipstudio-2010"
+        "babafoto-exhibition-hipstudio-2010",
+        "facebook-magyar-nemzeti-muzeum-vetesszolos-20250930"
       ],
       "professionalRegistryEvidence": [
         "linkedin-us-embassy-vienna-7422226435219607553",
@@ -4407,23 +4408,6 @@
       "reason": "Preserve the distinction between a real external Tamron publication/project and an unproven Tripont publication proposal.",
       "guardrail": "DO NOT BIND as Tripont press evidence unless an actual Tripont publication URL or archived final body is recovered.",
       "serviceRelevance": []
-    },
-    {
-      "id": "facebook-event-feedback-1ce4jkwjz",
-      "url": "https://www.facebook.com/share/p/1Cei4JkWjZ/?mibextid=wwXIfr",
-      "reason": "User-supplied Facebook share URL, identified by the site owner as additional event-photography feedback. The unauthenticated link resolves to a Facebook sign-in wall, and public search did not return the post text or credit.",
-      "status": "user-supplied-event-feedback-public-readback-pending",
-      "lastChecked": "2026-10-19",
-      "verificationStatus": "PENDING-PUBLIC-CONTENT-READBACK",
-      "evidenceKind": "user-supplied event-photography feedback lead",
-      "evidenceType": [
-        "USER-SUPPLIED-URL",
-        "PUBLIC-READBACK-PENDING"
-      ],
-      "sourceStrength": "unverified-user-supplied-lead",
-      "services": [],
-      "serviceRelevance": [],
-      "guardrail": "Keep unbound and unpublished until the post's visible content and author/source are reviewed. Do not infer photographer credit, testimonial, endorsement, client relationship, partnership, exclusivity or official-photographer status from the link alone."
     }
   ],
   "interpretationRules": [

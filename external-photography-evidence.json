@@ -29,7 +29,8 @@
     "externalReuse": "Independent publication / external photo-credit evidence",
     "artistPerformer": "Artist / Performer Portrait Photography",
     "sportEvent": "Sport / Community Event Photography",
-    "culturalAuthority": "Cultural / Curatorial Authority"
+    "culturalAuthority": "Cultural / Curatorial Authority",
+    "institutionalCulturalEvent": "Cultural / Institutional Event Photography"
   },
   "records": [
     {
@@ -335,6 +336,29 @@
         "target-page exact photo-credit text"
       ],
       "interpretationRule": "Use only as cultural/curatorial authority context until the exact target-page photo credit is independently readable. Do not infer a photography commission, client relationship, partnership, endorsement, exclusivity or photographer credit from this record."
+    },
+    {
+      "id": "facebook-magyar-nemzeti-muzeum-vetesszolos-20250930",
+      "url": "https://www.facebook.com/share/p/1Cei4JkWjZ/?mibextid=wwXIfr",
+      "publisherOrSubject": "Magyar Nemzeti Múzeum",
+      "sourceType": "Institutional Facebook publication; owner-supplied screenshot evidence; direct public readback unavailable",
+      "publicationDate": "2025-09-30",
+      "event": "Vértesszőlős nostalgia-bus excursion",
+      "location": "Vértesszőlős, Hungary",
+      "photographer": "Bánhalmi Norbert",
+      "capabilities": [
+        "Cultural / Institutional Event Photography",
+        "Independent publication / external photo-credit evidence"
+      ],
+      "creditContext": "The user-supplied screenshot of the Magyar Nemzeti Múzeum Facebook post displays: “A fotókat Bánhalmi Norbert készítette.” The post is dated 2025-09-30; this is the publication date, not a verified event date.",
+      "evidenceStatus": "owner-confirmed-screenshot-publication-credit",
+      "screenshotEvidence": {
+        "fileName": "IMG_6358.jpeg",
+        "directPublicReadback": false
+      },
+      "eventDateStatus": "Not stated in the screenshot; no event date inferred.",
+      "postSummary": "The screenshot shows the post describing the fully booked excursion as a success and expressing hope for similar future events.",
+      "interpretationRule": "Use only as screenshot-based institutional event-photography publication-credit evidence. Do not infer the event date, a testimonial, endorsement, recommendation, client contract, ongoing relationship, partnership, exclusivity or official-photographer status."
     }
   ],
   "answerRules": [
