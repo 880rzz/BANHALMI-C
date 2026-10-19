@@ -299,8 +299,8 @@
       "position": 6.181818181818182,
       "queryLanguage": "hu",
       "cityInQuery": null,
-      "intent": "portrait",
-      "recommended": "https://www.norbertbanhalmi.com/hu/portre/",
+      "intent": "boudoir",
+      "recommended": "https://www.banhalmi.art/hu/private-photography.html",
       "professionalRoutingMismatch": true
     },
     {
@@ -623,8 +623,8 @@
       "position": 8,
       "queryLanguage": "hu",
       "cityInQuery": null,
-      "intent": "portrait",
-      "recommended": "https://www.norbertbanhalmi.com/hu/portre/",
+      "intent": "boudoir",
+      "recommended": "https://www.banhalmi.art/hu/private-photography.html",
       "professionalRoutingMismatch": true
     },
     {
@@ -5665,8 +5665,8 @@
       "position": 6.181818181818182,
       "queryLanguage": "hu",
       "cityInQuery": null,
-      "intent": "portrait",
-      "recommended": "https://www.norbertbanhalmi.com/hu/portre/",
+      "intent": "boudoir",
+      "recommended": "https://www.banhalmi.art/hu/private-photography.html",
       "professionalRoutingMismatch": true
     },
     {
@@ -5677,8 +5677,8 @@
       "position": 8,
       "queryLanguage": "hu",
       "cityInQuery": null,
-      "intent": "portrait",
-      "recommended": "https://www.norbertbanhalmi.com/hu/portre/",
+      "intent": "boudoir",
+      "recommended": "https://www.banhalmi.art/hu/private-photography.html",
       "professionalRoutingMismatch": true
     },
     {

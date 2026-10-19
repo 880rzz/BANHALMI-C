@@ -24,7 +24,7 @@ Not all observed service queries reach their intended service page. The table re
 | professional photographer | https://www.norbertbanhalmi.com/de-at/ | https://www.norbertbanhalmi.com/ | 13 | 6.31 |
 | brand fotograf | https://www.norbertbanhalmi.com/ | https://www.norbertbanhalmi.com/de-at/brand/ | 12 | 8.17 |
 | portréfotózás budapest | https://www.norbertbanhalmi.com/hu/ | https://www.norbertbanhalmi.com/hu/portre/ | 12 | 21.17 |
-| intim portré fotózás | https://www.norbertbanhalmi.com/hu/ | https://www.norbertbanhalmi.com/hu/portre/ | 11 | 6.18 |
+| intim portré fotózás | https://www.norbertbanhalmi.com/hu/ | https://www.banhalmi.art/hu/private-photography.html | 11 | 6.18 |
 | künstler portraits | https://www.norbertbanhalmi.com/ | https://www.norbertbanhalmi.com/de-at/portrait/ | 11 | 9.82 |
 | personal brand fotografie wien | https://www.norbertbanhalmi.com/de-at/ | https://www.norbertbanhalmi.com/de-at/brand/ | 11 | 5.36 |
 | portrait künstler | https://www.norbertbanhalmi.com/ | https://www.norbertbanhalmi.com/de-at/portrait/ | 11 | 3 |
@@ -50,3 +50,5 @@ Not all observed service queries reach their intended service page. The table re
 Artistic nude belongs to localized Ébredés, including current enquiries; general private portraits and boudoir use the ART private page. Professional portrait, branding, event and artist-portfolio intents use their existing service owners. Preserve brand homepages and existing prices. Do not redirect a homepage wholesale to fix search intent. Improve explicit, localized internal links and machine routing, then measure after production readback. Query language ambiguity is recorded rather than guessed. UTM variants are normalized only for destination comparison; raw evidence is retained. Cannibalization results include multiple languages and UTM URLs, so the reported count is not a count of true competing content pages.
 
 Measurement starts after exact-live verification; allow at least 28 settled days for comparison. No ranking improvement or complete keyword routing is claimed.
+
+Classification correction: the two observed Hungarian intimate-portrait variants belong to ART private photography, not Professional portrait. Their raw GSC observations and mismatch totals remain unchanged. The English brand owner is intentionally `/lifestyle/`, whose canonical service is brand photography.
