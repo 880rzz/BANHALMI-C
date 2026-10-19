@@ -365,24 +365,20 @@
             "intent": "career-facing professional portfolio photography"
           },
           "authorLedFineArtArtisticNude": {
-            "startingGrossEUR": 690,
-            "startingGrossHUF": 276000,
-            "intent": "personal author-led Fine Art / artistic nude",
+            "intent": "personal author-led artistic nude; current service and enquiry ownership belongs to the localized Ébredés exhibition on BANHALMI ART",
             "primaryEnquiryRoutes": {
-              "en": "https://www.banhalmi.art/private-photography.html",
-              "hu": "https://www.banhalmi.art/hu/private-photography.html",
-              "de-AT": "https://www.banhalmi.art/de-at/private-photography.html"
+              "en": "https://www.banhalmi.art/exhibitions/ebredes.html",
+              "hu": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+              "de-AT": "https://www.banhalmi.art/de-at/exhibitions/ebredes.html"
             }
           },
-          "rule": "Career-facing artist and performer portfolios belong to BANHALMI Professional. Personal artistic portraits, boudoir, intimate editorial and optional artistic nude begin on the localized BANHALMI ART private photography page. Existing fine-art calculator deep links and the canonical pricing/terms remain on Professional for compatibility; they do not change the primary private enquiry destination."
+          "rule": "Career-facing artist and performer portfolios and their stated Professional starting prices remain on BANHALMI Professional. Personal artistic portraits, boudoir and lingerie use localized BANHALMI ART private photography. Artistic nude service and current enquiries belong to the localized Ébredés exhibition; no fixed Professional price applies to personal ART commissions. Existing Professional calculator deep links remain for legacy compatibility and do not change enquiry ownership."
         }
       },
       {
         "id": "artistic-nude",
         "name": "Artistic Nude Photography",
-        "url": "https://www.norbertbanhalmi.com/fine-art/",
-        "startingGrossEUR": 690,
-        "startingGrossHUF": 276000,
+        "url": "https://www.banhalmi.art/exhibitions/ebredes.html",
         "serviceContext": "fine-art"
       }
     ],
@@ -570,5 +566,18 @@
       "https://x.com/norbertbanhalmi"
     ],
     "rule": "Retired profiles must not appear in active sameAs, ProfilePage, Organization or Person social authority. Institutional X posts and other third-party URLs remain valid historical/trust evidence when they document an external institution rather than Norbert's retired personal X profile."
+  },
+  "privateCommissionRouting": {
+    "routes": {
+      "en": "https://www.banhalmi.art/private-photography.html",
+      "hu": "https://www.banhalmi.art/hu/private-photography.html",
+      "de-AT": "https://www.banhalmi.art/de-at/private-photography.html"
+    },
+    "artisticNudeRoutes": {
+      "en": "https://www.banhalmi.art/exhibitions/ebredes.html",
+      "hu": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+      "de-AT": "https://www.banhalmi.art/de-at/exhibitions/ebredes.html"
+    },
+    "policy": "Career-facing artist and performer portfolios and their stated Professional starting prices belong to BANHALMI Professional. Personal artistic portraits, boudoir and lingerie use localized BANHALMI ART private photography. Artistic nude service and current enquiries belong to localized Ébredés. No fixed Professional price applies to personal ART commissions. Existing fine-art calculator deep links and canonical terms remain on Professional for compatibility only."
   }
 }

@@ -6709,3 +6709,16 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     grid-template-columns:minmax(0,1fr)!important;
   }
 }
+
+/* Clear quote entry: the four starting routes are visible before the optional calculator. */
+.quote-price-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,2vw,24px);margin-block:24px}
+.quote-price-card{min-width:0;padding:clamp(18px,2vw,28px);border:1px solid var(--bn-border,#d8d4cb);border-radius:var(--bn-radius-card,18px);background:var(--bn-surface,#fff);display:flex;flex-direction:column;gap:10px}
+.quote-price-card h3{margin:0;font-size:clamp(1rem,1.25vw,1.25rem)}
+.quote-price-card p{margin:0;flex:1;color:var(--bn-text-muted,#585858)}
+.quote-price-card strong{margin-top:8px;color:var(--bn-accent,#8a6b28);font-size:1.15rem}
+.quote-price-footnote{max-width:75ch;color:var(--bn-text-muted,#585858)}
+.quote-calculator-disclosure{margin:clamp(20px,4vw,48px) auto;max-width:var(--bn-content-max,1280px);padding-inline:var(--bn-page-gutter,clamp(20px,5vw,64px))}
+.quote-calculator-disclosure>summary{padding:18px 20px;border:1px solid var(--bn-border,#d8d4cb);border-radius:14px;background:var(--bn-surface,#fff);font-weight:650;cursor:pointer}
+.quote-calculator-note{max-width:70ch;color:var(--bn-text-muted,#585858)}
+@media(max-width:900px){.quote-price-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.quote-price-cards{grid-template-columns:minmax(0,1fr)}.quote-calculator-disclosure{padding-inline:16px}}

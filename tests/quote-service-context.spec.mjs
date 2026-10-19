@@ -28,6 +28,18 @@ const contexts=[
 function amount(text){const cleaned=String(text).replace(/[^0-9,.-]/g,'').replace(/\.(?=\d{3})/g,'').replace(',','.');return Number.parseFloat(cleaned);}
 function displayCurrency(route){return route.startsWith('/hu/')?'HUF':'EUR';}
 for(const quoteRoute of quoteRoutes){
+  test(quoteRoute+' sends legacy private-art codes to the correct BANHALMI ART owner',async({page})=>{
+    await page.route('https://www.banhalmi.art/**',route=>route.fulfill({status:200,contentType:'text/html',body:'<title>ART route captured</title>'}));
+    const hu=quoteRoute.startsWith('/hu/'),de=quoteRoute.startsWith('/de-at/');
+    const privateUrl=hu?'https://www.banhalmi.art/hu/private-photography.html':de?'https://www.banhalmi.art/de-at/private-photography.html':'https://www.banhalmi.art/private-photography.html';
+    const nudeUrl=hu?'https://www.banhalmi.art/hu/exhibitions/ebredes.html':de?'https://www.banhalmi.art/de-at/exhibitions/ebredes.html':'https://www.banhalmi.art/exhibitions/ebredes.html';
+    for(const code of ['artportrait','lingerie']){
+      await page.goto(quoteRoute+'?service=fine-art&art_type='+code);
+      await expect(page).toHaveURL(privateUrl);
+    }
+    await page.goto(quoteRoute+'?service=fine-art&art_type=nude');
+    await expect(page).toHaveURL(nudeUrl);
+  });
   for(const context of contexts){
     test(quoteRoute+' applies '+context.service+' before the first estimate',async({page})=>{
       await page.goto(quoteRoute+'?service='+context.service);
@@ -167,9 +179,10 @@ const serviceRoutes=[
 for(const item of serviceRoutes){
   test(item.route+' carries its service into the localized quote builder',async({page})=>{
     await page.goto(item.route);
-    const selector=item.kind==='commercial'?'#next-step article.card:first-child a.btn-link':'#private-conversation a.btn-primary';
+    const selector=item.kind==='commercial'?'#next-step article.card:first-child a.btn-link':'a[data-art-quote="professional"]';
     const link=page.locator(selector).first();
-    await expect(link).toHaveAttribute('href',new RegExp('\\?service='+item.service+'$'));
+    const serviceHref=item.kind==='commercial'?'\\?service='+item.service+'$':'\\?service=fine-art&art_type=performer$';
+    await expect(link).toHaveAttribute('href',new RegExp(serviceHref));
     await link.click();
     await expect(page).toHaveURL(new RegExp('service='+item.service));
     await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1,{timeout:10000});

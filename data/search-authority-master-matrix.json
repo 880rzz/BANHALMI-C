@@ -472,7 +472,7 @@
         "művészi aktfotózás",
         "aktfotózás"
       ],
-      "action": "Determine intended artistic owner (ART collection vs editorial Blog article/tag) before redirect or internal-link change; avoid sending artistic intent to Professional."
+      "action": "Route explicit artistic-nude service discovery to the localized Ébredés exhibition. Keep Blog editorial and the Professional Fine Art page career-facing; do not send nude commissions into the Professional calculator."
     }
   ],
   "crossSiteOwnership": [
@@ -808,11 +808,11 @@
             "position": 1.67
           }
         },
-        "canonicalOwner": "BANHALMI ART artistic authority; Professional fine-art page is supporting commercial route",
-        "professionalSupport": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
-        "authorityAction": "PROTECT ART / DO NOT COMMERCIALIZE EDITORIAL AUTHORITY",
+        "canonicalOwner": "BANHALMI ART Ébredés / Awakening exhibition for current artistic-nude service and enquiry routing",
+        "professionalSupport": "https://www.norbertbanhalmi.com/fine-art/ (career-facing Artists & Performers portfolios only)",
+        "authorityAction": "PROTECT ÉBREDÉS SERVICE OWNER / ROUTE ARTISTIC-NUDE DISCOVERY TO ÉBREDÉS",
         "status": "MÉRÉS ALATT",
-        "note": "GSC URL Inspection reports the legacy artistic-nude route as Page with redirect."
+        "note": "Historical GSC/URL Inspection evidence is retained as a baseline. Current localized artistic-nude service destination is Ébredés; the Professional calculator is not the personal commission route."
       },
       {
         "query": "rendezvényfotózás",

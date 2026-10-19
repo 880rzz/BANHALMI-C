@@ -12,7 +12,7 @@
     "bindingStatus": "Orientation prices are non-binding; the accepted written offer controls final scope and price.",
     "executiveArchitecture": "Executive Portrait / Professional Presence starts from EUR 499 (HUF 199,600 planning display); Executive Personal Branding / Positioning starts from EUR 790 (HUF 316,000); Executive Visual Library / Communication System is individually scoped. EUR 220/420/690 simple portrait options are not Executive anchors.",
     "eventArchitecture": "Business Event Coverage starts from EUR 490 gross (HUF 196,000 planning display); C-Level / Institutional Event Photography starts from EUR 590 gross (HUF 236,000). Business Event is narrower scope, not a discounted premium tier.",
-    "fineArtArchitecture": "Artists & Performers professional portfolio photography and personal author-led Fine Art / artistic nude both start from EUR 690 gross (HUF 276,000), but they are separate client intents."
+    "fineArtArchitecture": "Professional Artists & Performers portfolios are career-facing and start from EUR 690 gross. Personal portraits, boudoir and lingerie route to localized BANHALMI ART private photography. Artistic nude service and enquiries belong to the localized Ébredés / Awakening exhibition. No fixed Professional price applies to personal ART commissions."
   },
   "locationRules": {
     "studioBases": [
@@ -263,46 +263,28 @@
         "hu": "Személyes, szerzői művészi portrét szeretnék.",
         "de": "Ich wünsche ein persönliches autorengeführtes Fine-Art-Porträt."
       },
-      "service": "Fine Art / Artists & Performers Photography",
-      "url": "https://www.norbertbanhalmi.com/fine-art/",
+      "service": "BANHALMI ART private photography",
+      "url": "https://www.banhalmi.art/private-photography.html",
       "urls": {
-        "en": "https://www.norbertbanhalmi.com/fine-art/",
-        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/",
-        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/"
+        "en": "https://www.banhalmi.art/private-photography.html",
+        "hu": "https://www.banhalmi.art/hu/private-photography.html",
+        "de": "https://www.banhalmi.art/de-at/private-photography.html"
       },
-      "solution": "A personal fine-art portrait series with respectful direction and discretion.",
-      "price": {
-        "AT": {
-          "currency": "EUR",
-          "options": [
-            690,
-            990,
-            1290
-          ]
-        },
-        "HU": {
-          "currency": "HUF",
-          "options": [
-            276000,
-            396000,
-            516000
-          ],
-          "secondaryEUR": [
-            690,
-            990,
-            1290
-          ]
-        }
-      },
+      "solution": "A private, personally directed artistic portrait enquiry through BANHALMI ART; the concept, boundaries and image use are discussed confidentially.",
       "visibleEntryPoints": {
-        "en": "https://www.norbertbanhalmi.com/fine-art/#personal-fine-art",
-        "hu": "https://www.norbertbanhalmi.com/hu/muveszi-fotografia/#personal-fine-art",
-        "de": "https://www.norbertbanhalmi.com/de-at/fine-art/#personal-fine-art"
+        "en": "https://www.banhalmi.art/private-photography.html",
+        "hu": "https://www.banhalmi.art/hu/private-photography.html",
+        "de": "https://www.banhalmi.art/de-at/private-photography.html"
       },
       "quoteEntryPoints": {
-        "en": "https://www.norbertbanhalmi.com/requestaquote/?service=fine-art&art_type=artportrait",
-        "hu": "https://www.norbertbanhalmi.com/hu/ajanlatkeres/?service=fine-art&art_type=artportrait",
-        "de": "https://www.norbertbanhalmi.com/de-at/anfrage/?service=fine-art&art_type=artportrait"
+        "en": "https://www.banhalmi.art/private-photography.html",
+        "hu": "https://www.banhalmi.art/hu/private-photography.html",
+        "de": "https://www.banhalmi.art/de-at/private-photography.html"
+      },
+      "route": {
+        "en": "https://www.banhalmi.art/private-photography.html",
+        "hu": "https://www.banhalmi.art/hu/private-photography.html",
+        "de": "https://www.banhalmi.art/de-at/private-photography.html"
       }
     },
     {
@@ -547,6 +529,33 @@
         "en": "https://www.norbertbanhalmi.com/portrait/",
         "hu": "https://www.norbertbanhalmi.com/hu/portre/",
         "de": "https://www.norbertbanhalmi.com/de-at/portrait/"
+      }
+    },
+    {
+      "id": "artistic-nude-commission",
+      "painPoint": {
+        "en": "I am looking for a personal artistic-nude project with privacy and a clear, respectful process.",
+        "hu": "Bizalmas, egyértelmű és tiszteletteljes keretek között megvalósuló művészi aktfotózást keresek.",
+        "de": "Ich suche ein persönliches Aktkunstprojekt mit Privatsphäre und einem klaren, respektvollen Ablauf."
+      },
+      "service": "Ébredés / Awakening artistic nude photography",
+      "url": "https://www.banhalmi.art/exhibitions/ebredes.html",
+      "urls": {
+        "en": "https://www.banhalmi.art/exhibitions/ebredes.html",
+        "hu": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+        "de": "https://www.banhalmi.art/de-at/exhibitions/ebredes.html"
+      },
+      "solution": "A private artistic-nude enquiry through the Ébredés exhibition; concept, consent, privacy and boundaries are discussed before any session.",
+      "publicPrice": false,
+      "visibleEntryPoints": {
+        "en": "https://www.banhalmi.art/exhibitions/ebredes.html",
+        "hu": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+        "de": "https://www.banhalmi.art/de-at/exhibitions/ebredes.html"
+      },
+      "quoteEntryPoints": {
+        "en": "https://www.banhalmi.art/exhibitions/ebredes.html",
+        "hu": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+        "de": "https://www.banhalmi.art/de-at/exhibitions/ebredes.html"
       }
     }
   ],

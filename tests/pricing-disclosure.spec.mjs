@@ -4,6 +4,24 @@ const widths=[375,390,621,768,1024,1180,1280,1440,1600,1920,2560,3840];
 for(const route of [...serviceRoutes,...quoteRoutes]){
  test(route+' pricing stays optional, keyboard accessible and responsive',async({page})=>{
   await page.goto('/'+route+'/');
+  if(quoteRoutes.includes(route)){
+   const calculator=page.locator('#quote-calculator');
+   const summary=calculator.locator(':scope > summary');
+   await expect(calculator).not.toHaveAttribute('open','');
+   await expect(page.locator('.quote-price-card')).toHaveCount(4);
+   await expect(page.locator('.quote-price-card').first()).toBeVisible();
+   await summary.focus();await page.keyboard.press('Enter');
+   await expect(calculator).toHaveAttribute('open','');
+   await expect(page.locator('[data-smart-quote]')).toBeVisible();
+   await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1);
+   for(const width of widths){
+    await page.setViewportSize({width,height:1000});
+    const size=await summary.boundingBox();expect(size.height).toBeGreaterThanOrEqual(44);
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),route+' page overflow at '+width).toBe(true);
+   }
+   await summary.focus();await page.keyboard.press('Space');await expect(calculator).not.toHaveAttribute('open','');
+   return;
+  }
   const panel=page.locator('[data-pricing-disclosure]');
   const summary=panel.locator(':scope > summary');
   await expect(panel).not.toHaveAttribute('open','');

@@ -84,6 +84,7 @@ export function generateMachineProjections(siteRoot = '_site') {
     dateModified,
     provider: core.organization.id,
     services: core.serviceModel.services,
+    privateCommissionRouting: core.serviceModel.privateCommissionRouting,
     canonicalPricing: core.canonicalReferences.pricing,
     canonicalCustomerNeeds: core.canonicalReferences.customerNeeds
   };
@@ -197,6 +198,8 @@ export function generateMachineProjections(siteRoot = '_site') {
   });
   const privateJourneyLines = Object.entries(core.serviceModel.privateCommissionRouting?.routes || {}).map(([locale,url]) => `- ${locale}: ${url}`);
   privateJourneyLines.unshift(core.serviceModel.privateCommissionRouting?.policy || '');
+  privateJourneyLines.push('Artistic nude / Ébredés routes:');
+  privateJourneyLines.push(...Object.entries(core.serviceModel.privateCommissionRouting?.artisticNudeRoutes || {}).map(([locale,url]) => `- ${locale}: ${url}`));
   const serviceLines = core.serviceModel.services.map((service) => `- [${service.name}](${service.url})`);
   const evidenceLines = [...core.evidence.executive.map((item) => `- ${item.name}: ${item.url}`), ...core.evidence.artistic.map((item) => `- ${item.name}: ${item.url}`)];
   const recognitionLines = recognitions.items.map((item) => `- ${item.claim} Source: ${item.source}`);

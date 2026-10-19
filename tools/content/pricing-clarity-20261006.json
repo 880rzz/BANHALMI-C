@@ -6,40 +6,76 @@
     "travelOld": "On-site work in Vienna and Budapest is included. Travel or production costs outside these locations are confirmed before booking.",
     "travel": "For portrait, branding, Fine Art and corporate-event bookings, the selected package covers the agreed photographic work. Studio sessions in Vienna or Budapest have no travel surcharge. For a client office or another venue, travel and any venue costs are separate items in the estimate and final written offer. Private celebrations include local travel within Vienna or Budapest. Enter the exact venue address and select its area; outside these cities the standard travel rules apply. Venue hire and optional production services are not included.",
     "travelHelp": "The standard calculator adds €240 gross (€200 net plus 20% VAT) per vehicle for travel within Austria and Hungary; one vehicle carries up to four crew members. Private celebrations include local travel within Vienna or Budapest. Enter the exact venue address and select its area; outside these cities the standard travel rules apply. Venue hire and optional production services are not included.",
-    "artTitle": "Artists, Performers & Fine Art",
-    "artShort": "Professional portfolios or personal artistic work: two different purposes, both from €690 gross.",
-    "artTip": "Choose professional images for casting, agencies, websites or press, or a personal Fine Art project. Artistic nude is optional and requires an agreed concept and boundaries; it is not part of a standard professional portfolio.",
+    "artTitle": "Artists & Performers",
+    "artShort": "Career-facing portfolios from €690 gross.",
+    "artTip": "For actors, dancers, performers, models and creative professionals who need images for casting, agencies, websites or press. For personal portrait, boudoir, lingerie or artistic nude, visit the Ébredés exhibition on BANHALMI ART.",
     "eventTitle": "Event photography",
     "eventShort": "Business coverage from €490; C-Level or institutional coverage from €590 gross. Different scope, not a discount.",
     "eventTip": "Business covers shorter, straightforward corporate events. C-Level and institutional coverage is planned around leadership, protocol and communication needs. Guest count and parallel programme tracks determine the preliminary team size.",
-    "artGuideTitle": "What will the images be used for?",
-    "artGuide": "Choose a professional portfolio for casting, agencies, websites or press, or a personal artistic project. These are different purposes. For intimate work, we agree on the concept, boundaries and use before the session.",
+    "artGuideTitle": "For your professional portfolio",
+    "artGuide": "This route is for career-facing images: casting, agencies, websites, press and professional communication. For a personal portrait, boudoir or lingerie, use BANHALMI ART private photography. Artistic nude enquiries begin with the Ébredés exhibition.",
     "artDuration": [
       "1 hour — one focused visual direction — €690",
       "2 hours — more looks or movement — €990",
       "3 hours — a broader image series — €1,290"
     ],
-    "artMicro": "Choose the time needed for your concept, outfits and movement, whether professional or personal. Each package includes 2 retouched images in total; each additional selected image is €45 gross.",
+    "artMicro": "Choose the time needed for your portfolio and production. Each package includes 2 retouched images in total; each additional selected image is €45 gross.",
     "inclusions": {
       "individual": "Headshot CV: 10 minutes and exactly 1 retouched image, €120 gross. The other portrait options include 1 retouched image; additional selected images cost €35 gross each. These are not the Executive Portrait package.",
       "group": "Group portrait pricing: €390 setup + €45 per person, including 1 retouched image per person. Additional selected images: €29 each. If the planned time requires more photographers, the calculator adds €390 per additional photographer.",
       "brand": "Executive Portrait starts at €499; Personal Branding at €790 gross. Both include 3 retouched images in total per project, not per person. Further selected images cost €35 gross each. A Visual Library is individually scoped.",
       "event": "The selected event package includes image selection and standard colour correction. Event image counts do not trigger portrait-style per-image retouch fees. Extra photographers, travel and optional services appear separately in the estimate."
     },
-    "fineLead": "Professional artist and performer portfolios serve casting, agencies, websites and press. Personal Fine Art portraits or artistic nude projects serve a different purpose: your own story and visual idea. We agree on the concept, boundaries and use before photographing. Both journeys can be commissioned here; the oeuvre and exhibition archive are on BANHALMI ART.",
+    "fineLead": "Professional portfolios for artists and performers. For casting, agencies, websites, press and professional communication.",
+    "finePriceTitle": "Artists & Performers portfolio starting prices",
     "archiveOld": "The artistic archive, works, exhibitions and source material.",
     "archiveNew": "A gateway to BANHALMI ART: works, exhibitions and source material. Bookings and current prices stay here.",
     "travelHelpOld": "If you select a client office or another location, the exact address is required. Travel within Austria and Hungary is €200 net per vehicle; one vehicle carries a crew of up to four.",
     "fineLeadOld": "Fine art photography begins with a person and a story worth holding on to. Portraits and artistic nudes are created through trust, clear boundaries and sensitive direction.",
     "eyebrowOld": "Fine Art · Intimate portrait · Artistic nude",
-    "eyebrow": "Artists & Performers · Personal Fine Art",
+    "eyebrow": "Artists & Performers",
     "serviceTravelPages": [
       "portrait/index.html",
       "lifestyle/index.html",
       "event-photography/index.html"
     ],
     "serviceTravelOld": "Work on location in Vienna and Budapest is included; anywhere else is agreed beforehand.",
-    "serviceTravel": "Studio sessions in Vienna and Budapest have no travel surcharge. For a client office or another location, any travel and venue costs are stated separately in the estimate. The accepted written offer remains authoritative."
+    "serviceTravel": "Studio sessions in Vienna and Budapest have no travel surcharge. For a client office or another location, any travel and venue costs are stated separately in the estimate. The accepted written offer remains authoritative.",
+    "artUrl": "https://www.banhalmi.art/exhibitions/ebredes.html",
+    "artLinkLabel": "Personal portrait, boudoir or lingerie? See private photography on BANHALMI ART. Artistic nude? Explore Ébredés →",
+    "quoteHero": "Tell me what you need. I’ll make the right image with you.",
+    "quoteIntro": "Executive portraits, personal brand photography, professional artist portfolios and event coverage. Clear starting prices; the final scope is agreed with you.",
+    "overviewTitle": "Choose the result you need",
+    "calculatorLabel": "Open the detailed calculator (optional)",
+    "calculatorNote": "For a quick start, tell me what you need. We can agree the right scope together.",
+    "priceCards": [
+      [
+        "Executive Portrait",
+        "Professional presence for leaders and specialists",
+        "from €499"
+      ],
+      [
+        "Personal Branding",
+        "A coherent image system for your work and communication",
+        "from €790"
+      ],
+      [
+        "Artists & Performers",
+        "Career-facing portraits and portfolios",
+        "from €690"
+      ],
+      [
+        "Events",
+        "Business coverage from €490; C-Level / institutional from €590",
+        "from €490"
+      ]
+    ],
+    "priceFootnote": "Headshot / CV: €120. Teams and larger visual libraries are scoped to your needs. Gross prices include Austrian VAT; the written offer confirms scope and total.",
+    "artPrivateUrl": "https://www.banhalmi.art/private-photography.html",
+    "artNudeUrl": "https://www.banhalmi.art/exhibitions/ebredes.html",
+    "artPrivateLabel": "Personal portrait, boudoir or lingerie? Visit BANHALMI ART private photography →",
+    "artNudeLabel": "Artistic nude? Enquire through the Ébredés exhibition →",
+    "professionalPriceScope": "These prices are for career-facing Artists & Performers portfolios. Each package includes 2 retouched images in total; extra images are priced separately. The final scope is confirmed in the written offer."
   },
   "hu": {
     "quote": "hu/ajanlatkeres/index.html",
@@ -48,27 +84,27 @@
     "travelOld": "A bécsi és budapesti helyszíni munkavégzés benne van a díjban. Más helyszín utazási vagy gyártási költségét foglalás előtt rögzítjük.",
     "travel": "A választott csomag az egyeztetett fotográfiai munkát tartalmazza. A bécsi vagy budapesti stúdióban nincs kiszállási felár. Ügyfélirodánál vagy más helyszínnél a kiszállás és az esetleges helyszínköltség külön tétel a becslésben és a végleges írásos ajánlatban. Családi eseménynél a bécsi vagy budapesti városhatáron belüli kiszállás benne van az árban. Adja meg a helyszín pontos címét, és válassza ki a területét; máshol az általános utazási szabályok érvényesek. A helyszínbérlés és a választott kiegészítők külön tételek.",
     "travelHelp": " Családi eseménynél a bécsi vagy budapesti városhatáron belüli kiszállás benne van az árban. Adja meg a helyszín pontos címét, és válassza ki a területét; máshol az általános utazási szabályok érvényesek. A helyszínbérlés és a választott kiegészítők külön tételek.",
-    "artTitle": "Művészek, előadók & Fine Art",
-    "artShort": "Szakmai portfólió vagy személyes művészi sorozat: két eltérő cél, mindkettő bruttó 276 000 Ft-tól.",
-    "artTip": "Válasszon szakmai képeket castinghoz, ügynökséghez, weboldalra vagy sajtóhoz, vagy személyes Fine Art projektet. A művészi akt külön, egyeztetett koncepcióval és határokkal választható; nem része egy szokásos szakmai portfóliónak.",
+    "artTitle": "Művészek és előadók",
+    "artShort": "Szakmai portfólió bruttó 276 000 Ft-tól (€690).",
+    "artTip": "Színészeknek, táncosoknak, előadóknak, modelleknek és alkotóknak castinghoz, ügynökséghez, weboldalra vagy sajtóhoz. Személyes portré, boudoir, fehérneműs vagy művészi aktfotózáshoz az Ébredés kiállítás oldalán érdeklődjön a BANHALMI ART-nál.",
     "eventTitle": "Rendezvényfotózás",
     "eventShort": "Business Event bruttó 196 000 Ft-tól (€490); C-Level / intézményi fotózás bruttó 236 000 Ft-tól (€590). Eltérő feladat, nem kedvezmény.",
     "eventTip": "A Business rövidebb, egyszerűbb céges eseményekhez való. A C-Level és intézményi fotózást vezetői, protokolláris és kommunikációs igények szerint tervezzük. A résztvevők és párhuzamos programok száma határozza meg a becsült minimális csapatot.",
-    "artGuideTitle": "Mire fogja használni a képeket?",
-    "artGuide": "Válasszon szakmai portfóliót castinghoz, ügynökséghez, weboldalra vagy sajtóhoz, vagy személyes művészi projektet. Ezek eltérő célok. Intim sorozatnál a koncepciót, a határokat és a felhasználást előre egyeztetjük.",
+    "artGuideTitle": "Szakmai portfólió",
+    "artGuide": "Ez az út szakmai felhasználásra szól: castinghoz, ügynökséghez, weboldalra, sajtóhoz és munkához. Személyes portréért, boudoirért vagy fehérneműs fotózásért keresse a BANHALMI ART privát fotózását. Művészi akt ügyben az Ébredés kiállítás oldalán érdeklődjön.",
     "artDuration": [
       "1 óra — egy határozott képi irány — 276 000 Ft",
       "2 óra — több megjelenés vagy mozgás — 396 000 Ft",
       "3 óra — összetettebb képsorozat — 516 000 Ft"
     ],
-    "artMicro": "A koncepcióhoz, öltözékekhez és mozgáshoz szükséges időt válassza, szakmai vagy személyes céllal. Minden csomag összesen 2 retusált képet tartalmaz; minden további kiválasztott kép bruttó 18 000 Ft.",
+    "artMicro": "A portfólióhoz és a produkcióhoz szükséges időt válassza. Minden csomag összesen 2 retusált képet tartalmaz; minden további kiválasztott kép bruttó 18 000 Ft.",
     "inclusions": {
       "individual": "Headshot CV: 10 perc és pontosan 1 retusált kép, bruttó 48 000 Ft. A többi portréopció 1 retusált képet tartalmaz; a további kiválasztott képek bruttó 14 000 Ft/db. Ezek nem az Executive Portré csomagjai.",
       "group": "Csapatportré: 156 000 Ft alapdíj + 18 000 Ft/fő, fejenként 1 retusált képpel. További kiválasztott kép: 11 600 Ft/db. Ha a tervezett idő miatt több fotós szükséges, a kalkulátor további fotósonként 156 000 Ft-ot ad hozzá. Bruttó árak.",
       "brand": "Executive Portré 199 600 Ft-tól; Personal Branding 316 000 Ft-tól, bruttó. Mindkettő projektenként összesen 3 retusált képet tartalmaz, nem fejenként. További kiválasztott kép: bruttó 14 000 Ft/db. A Visual Library egyedi tervezést igényel.",
       "event": "Az eseménycsomag tartalmazza a válogatást és az alap színkorrekciót. Az eseményképek száma nem jelent portréképenkénti retusdíjat. A további fotósok, a kiszállás és a kiegészítők külön jelennek meg a becslésben."
     },
-    "fineLead": "A művészek és előadók szakmai portfóliója castinghoz, ügynökséghez, weboldalra vagy sajtóhoz készül. A személyes Fine Art portré vagy művészi akt más célt szolgál: az Ön saját történetét és képi elképzelését. A koncepciót, a határokat és a felhasználást fotózás előtt egyeztetjük. Mindkettő itt rendelhető meg; az életmű és a kiállítási archívum a BANHALMI ART oldalon található.",
+    "fineLead": "Szakmai portfólió művészeknek és előadóknak castinghoz, ügynökséghez, weboldalra, sajtóhoz és szakmai kommunikációhoz.",
     "archiveOld": "Művek, sorozatok, kiállítások és az alkotói archívum.",
     "archiveNew": "Átjáró a BANHALMI ART oldalra: művek, kiállítások és források. Megrendelés és aktuális árak itt.",
     "travelHelpOld": "Ha irodát vagy egyedi helyszínt választ, a pontos cím megadása kötelező. A kiszállás Ausztria és Magyarország területén nettó 80 000 Ft + ÁFA, bruttó 96 000 Ft / gépjármű; egy jármű legfeljebb 4 fős stábot szállít.",
@@ -79,7 +115,44 @@
       "hu/rendezvenyfotozas/index.html"
     ],
     "serviceTravelOld": "A bécsi és budapesti helyszíni munka benne van; más helyszínt előre egyeztetünk.",
-    "serviceTravel": "A bécsi és budapesti stúdióban nincs kiszállási felár. Ügyfélirodánál vagy más helyszínnél az esetleges utazási és helyszínköltséget külön feltünteti a kalkuláció. Az elfogadott írásos ajánlat az irányadó."
+    "serviceTravel": "A bécsi és budapesti stúdióban nincs kiszállási felár. Ügyfélirodánál vagy más helyszínnél az esetleges utazási és helyszínköltséget külön feltünteti a kalkuláció. Az elfogadott írásos ajánlat az irányadó.",
+    "eyebrow": "Művészek és előadók",
+    "artUrl": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+    "artLinkLabel": "Személyes portré, boudoir vagy fehérneműs fotózás? Nézze meg a BANHALMI ART privát fotózását. Művészi akt? Ébredés →",
+    "quoteHero": "Mondja el, mire van szüksége. Közösen megtaláljuk a megfelelő képi megoldást.",
+    "quoteIntro": "Vezetői portré, személyes márkakép, szakmai művészportfólió és rendezvényfotózás. Átlátható induló árak; a pontos terjedelmet együtt egyeztetjük.",
+    "overviewTitle": "Válassza ki, mire van szüksége",
+    "calculatorLabel": "Részletes kalkulátor megnyitása (nem kötelező)",
+    "calculatorNote": "Ha gyorsan szeretne elindulni, írja meg, mire van szüksége. A megfelelő terjedelmet együtt alakítjuk ki.",
+    "priceCards": [
+      [
+        "Executive portré",
+        "Vezetőknek és szakembereknek",
+        "199 600 Ft-tól (€499)"
+      ],
+      [
+        "Személyes márkakép",
+        "Egységes képi jelenlét munkájához és kommunikációjához",
+        "316 000 Ft-tól (€790)"
+      ],
+      [
+        "Művészek és előadók",
+        "Szakmai portré és portfólió",
+        "276 000 Ft-tól (€690)"
+      ],
+      [
+        "Rendezvények",
+        "Business Event €490-tól; C-Level / intézményi €590-tól",
+        "196 000 Ft-tól (€490)"
+      ]
+    ],
+    "priceFootnote": "Headshot / CV portré: 48 000 Ft (€120). Csapatfotózás és nagyobb képrendszer egyedi igény szerint készül. Bruttó árak, 20% osztrák ÁFÁ-val. A végleges terjedelmet és díjat az írásos ajánlat rögzíti.",
+    "artPrivateUrl": "https://www.banhalmi.art/hu/private-photography.html",
+    "artNudeUrl": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
+    "artPrivateLabel": "Személyes portré, boudoir vagy fehérneműs fotózás? BANHALMI ART privát fotózás →",
+    "artNudeLabel": "Művészi akt? Érdeklődjön az Ébredés kiállítás oldalán →",
+    "professionalPriceScope": "Ezek az árak művészek és előadók szakmai portfóliójára vonatkoznak. Minden csomag összesen 2 retusált képet tartalmaz; a további képek külön díjasak. A végleges terjedelmet az írásos ajánlat rögzíti.",
+    "finePriceTitle": "Művészek és előadók szakmai portfóliójának induló árai"
   },
   "de": {
     "quote": "de-at/anfrage/index.html",
@@ -88,27 +161,28 @@
     "travelOld": "Einsätze vor Ort in Wien und Budapest sind enthalten. Reise- oder Produktionskosten für andere Orte werden vor der Buchung bestätigt.",
     "travel": "Bei Porträt-, Branding-, Fine-Art- und Corporate-Event-Aufträgen umfasst das gewählte Paket die vereinbarte fotografische Arbeit. Für Studiotermine in Wien oder Budapest fällt keine Anfahrtspauschale an. Beim Kundenbüro oder einer anderen Location werden Anfahrt und etwaige Locationkosten separat in der Schätzung und im endgültigen schriftlichen Angebot ausgewiesen. Bei privaten Feiern ist die Anfahrt innerhalb der Stadtgrenzen von Wien oder Budapest enthalten. Geben Sie die genaue Adresse an und wählen Sie das Gebiet; außerhalb gelten die regulären Anreiseregeln. Locationmiete und optionale Produktionsleistungen sind nicht enthalten.",
     "travelHelp": "Der Standardkalkulator ergänzt für Anfahrten innerhalb Österreichs und Ungarns €240 brutto (€200 netto plus 20% USt.) pro Fahrzeug; ein Fahrzeug befördert bis zu vier Teammitglieder. Bei privaten Feiern ist die Anfahrt innerhalb der Stadtgrenzen von Wien oder Budapest enthalten. Geben Sie die genaue Adresse an und wählen Sie das Gebiet; außerhalb gelten die regulären Anreiseregeln. Locationmiete und optionale Produktionsleistungen sind nicht enthalten.",
-    "artTitle": "Kunstschaffende & Fine Art",
-    "artShort": "Berufliches Portfolio oder persönliche künstlerische Arbeit: zwei verschiedene Ziele, beide ab 690 € brutto.",
-    "artTip": "Wählen Sie berufliche Bilder für Casting, Agenturen, Websites oder Presse oder ein persönliches Fine-Art-Projekt. Künstlerischer Akt ist optional und setzt ein vereinbartes Konzept und klare Grenzen voraus; er gehört nicht zum regulären beruflichen Portfolio.",
+    "artTitle": "Kunstschaffende & Performer:innen",
+    "artShort": "Berufliche Portfolios ab 690 € brutto.",
+    "artTip": "Für Schauspieler:innen, Tänzer:innen, Performer:innen, Models und Kreative, die Bilder für Casting, Agenturen, Websites oder Presse benötigen. Für persönliche Porträts, Boudoir, Lingerie oder künstlerischen Akt nutzen Sie die Ébredés-Ausstellung auf BANHALMI ART.",
     "eventTitle": "Eventfotografie",
     "eventShort": "Business ab 490 €; C-Level oder institutionelle Fotografie ab 590 € brutto. Anderer Umfang, kein Rabatt.",
     "eventTip": "Business eignet sich für kürzere, unkomplizierte Firmenveranstaltungen. C-Level- und institutionelle Fotografie wird nach Leitungs-, Protokoll- und Kommunikationsanforderungen geplant. Gästezahl und parallele Programmpunkte bestimmen die vorläufige Mindestteamgröße.",
-    "artGuideTitle": "Wofür werden Sie die Bilder verwenden?",
-    "artGuide": "Wählen Sie ein berufliches Portfolio für Casting, Agenturen, Websites oder Presse oder ein persönliches Kunstprojekt. Dies sind unterschiedliche Ziele. Bei intimen Serien vereinbaren wir Konzept, Grenzen und Verwendung vor dem Shooting.",
+    "artGuideTitle": "Für Ihr berufliches Portfolio",
+    "artGuide": "Dieser Weg ist für berufliche Bilder: Casting, Agenturen, Websites, Presse und Kommunikation. Für persönliche Porträts, Boudoir oder Lingerie nutzen Sie die private Fotografie auf BANHALMI ART. Anfragen zu künstlerischem Akt beginnen bei der Ébredés-Ausstellung.",
     "artDuration": [
       "1 Stunde — eine klare Bildrichtung — 690 €",
       "2 Stunden — mehrere Looks oder Bewegung — 990 €",
       "3 Stunden — eine umfangreichere Bildserie — 1.290 €"
     ],
-    "artMicro": "Wählen Sie die Zeit passend zu Konzept, Outfits und Bewegung, für berufliche oder persönliche Bilder. Jedes Paket enthält insgesamt 2 retuschierte Bilder; jedes weitere ausgewählte Bild kostet 45 € brutto.",
+    "artMicro": "Wählen Sie die Zeit passend zu Portfolio und Produktion. Jedes Paket enthält insgesamt 2 retuschierte Bilder; jedes weitere ausgewählte Bild kostet 45 € brutto.",
     "inclusions": {
       "individual": "Headshot CV: 10 Minuten und genau 1 retuschiertes Bild, 120 € brutto. Die anderen Porträtoptionen enthalten 1 retuschiertes Bild; weitere ausgewählte Bilder kosten je 35 € brutto. Dies sind nicht die Executive-Porträtpakete.",
       "group": "Teamporträts: 390 € Einrichtung + 45 € pro Person, mit 1 retuschierten Bild pro Person. Weitere ausgewählte Bilder: je 29 €. Wenn der Zeitplan mehr Fotograf:innen erfordert, addiert der Kalkulator je 390 € pro zusätzlicher Person im Fototeam. Bruttopreise.",
       "brand": "Executive-Porträt ab 499 €; Personal Branding ab 790 € brutto. Beide enthalten insgesamt 3 retuschierte Bilder pro Projekt, nicht pro Person. Weitere ausgewählte Bilder kosten je 35 € brutto. Eine Visual Library wird individuell geplant.",
       "event": "Das gewählte Eventpaket enthält Bildauswahl und grundlegende Farbkorrektur. Die Anzahl der Eventbilder löst keine Retuschegebühr pro Porträt aus. Zusätzliche Fotograf:innen, Anfahrt und Extras werden in der Schätzung separat ausgewiesen."
     },
-    "fineLead": "Berufliche Portfolios für Kunstschaffende und Performer:innen dienen Casting, Agenturen, Websites und Presse. Persönliche Fine-Art-Porträts oder künstlerische Aktprojekte haben ein anderes Ziel: Ihre eigene Geschichte und Bildidee. Konzept, Grenzen und Verwendung vereinbaren wir vor dem Shooting. Beide Wege können hier beauftragt werden; Werk und Ausstellungsarchiv finden Sie auf BANHALMI ART.",
+    "fineLead": "Berufliche Portfolios für Kunstschaffende und Performer:innen – für Casting, Agenturen, Websites, Presse und professionelle Kommunikation.",
+    "finePriceTitle": "Einstiegspreise für berufliche Künstler:innen- und Performer:innen-Portfolios",
     "archiveOld": "Werke, Serien, Ausstellungen und das künstlerische Archiv.",
     "archiveNew": "Zugang zu BANHALMI ART: Werke, Ausstellungen und Quellen. Buchung und aktuelle Preise bleiben hier.",
     "travelHelpOld": "Bei Kundenbüro oder einem anderen Ort ist die genaue Adresse erforderlich. Die Anfahrt innerhalb Österreichs und Ungarns kostet €200 netto pro Fahrzeug; ein Fahrzeug befördert ein Team von bis zu vier Personen.",
@@ -119,6 +193,42 @@
       "de-at/eventfotografie/index.html"
     ],
     "serviceTravelOld": "Einsätze in Wien und Budapest sind enthalten; alles Weitere vereinbaren wir vorher.",
-    "serviceTravel": "Für Studiotermine in Wien und Budapest fällt keine Anfahrtspauschale an. Bei einem Kundenbüro oder einer anderen Location werden anfallende Anfahrts- und Locationkosten in der Kalkulation separat ausgewiesen. Maßgeblich bleibt das angenommene schriftliche Angebot."
+    "serviceTravel": "Für Studiotermine in Wien und Budapest fällt keine Anfahrtspauschale an. Bei einem Kundenbüro oder einer anderen Location werden anfallende Anfahrts- und Locationkosten in der Kalkulation separat ausgewiesen. Maßgeblich bleibt das angenommene schriftliche Angebot.",
+    "eyebrow": "Kunstschaffende & Performer:innen",
+    "artUrl": "https://www.banhalmi.art/de-at/exhibitions/ebredes.html",
+    "artLinkLabel": "Persönliches Porträt, Boudoir oder Lingerie? Zur privaten Fotografie auf BANHALMI ART. Künstlerischer Akt? Zu Ébredés →",
+    "quoteHero": "Sagen Sie mir, was Sie brauchen. Gemeinsam finden wir die passende Bildlösung.",
+    "quoteIntro": "Executive-Porträts, Personal Branding, berufliche Künstlerportfolios und Eventfotografie. Klare Einstiegspreise; den genauen Umfang stimmen wir gemeinsam ab.",
+    "overviewTitle": "Wählen Sie das passende Ergebnis",
+    "calculatorLabel": "Detaillierten Kalkulator öffnen (optional)",
+    "calculatorNote": "Für einen schnellen Start erzählen Sie mir kurz von Ihrem Vorhaben. Den passenden Umfang klären wir gemeinsam.",
+    "priceCards": [
+      [
+        "Executive-Porträt",
+        "Für Führungskräfte und Fachleute",
+        "ab 499 €"
+      ],
+      [
+        "Personal Branding",
+        "Ein stimmiger Bildauftritt für Arbeit und Kommunikation",
+        "ab 790 €"
+      ],
+      [
+        "Kunstschaffende & Performer:innen",
+        "Berufliche Porträts und Portfolios",
+        "ab 690 €"
+      ],
+      [
+        "Events",
+        "Business ab 490 €; C-Level / institutionell ab 590 €",
+        "ab 490 €"
+      ]
+    ],
+    "priceFootnote": "Headshot / CV: 120 €. Teams und größere Visual Libraries werden nach Bedarf geplant. Bruttopreise inklusive österreichischer USt.; das schriftliche Angebot bestätigt Umfang und Gesamtpreis.",
+    "artPrivateUrl": "https://www.banhalmi.art/de-at/private-photography.html",
+    "artNudeUrl": "https://www.banhalmi.art/de-at/exhibitions/ebredes.html",
+    "artPrivateLabel": "Persönliches Porträt, Boudoir oder Lingerie? BANHALMI ART private Fotografie →",
+    "artNudeLabel": "Künstlerischer Akt? Anfrage über die Ébredés-Ausstellung →",
+    "professionalPriceScope": "Diese Preise gelten für berufliche Portfolios von Kunstschaffenden und Performer:innen. Jedes Paket enthält insgesamt 2 retuschierte Bilder; weitere Bilder werden separat berechnet. Der endgültige Umfang steht im schriftlichen Angebot."
   }
 }
