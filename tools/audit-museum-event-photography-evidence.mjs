@@ -18,9 +18,9 @@ assert.match(record.interpretationRule, /Do not infer the event date, a testimon
 assert.ok(trust.services.event.externalEvidenceIds.includes(id), 'Museum credit must be attached to event service evidence');
 assert.ok(!(trust.pendingEvidenceCandidates || []).some((item) => item.id === 'facebook-event-feedback-1ce4jkwjz'), 'Promoted screenshot-backed evidence must not remain an unbound candidate');
 const pages = [
-  ['event-photography/index.html', ['The screenshot of the Magyar Nemzeti Múzeum post dated 30 September 2025', 'Photos by Norbert Bánhalmi', 'The event date is not stated']],
-  ['hu/rendezvenyfotozas/index.html', ['2025. szeptember 30-i Magyar Nemzeti Múzeum-bejegyzés', 'A fotókat Bánhalmi Norbert készítette', 'Az esemény dátuma nem szerepel rajta']],
-  ['de-at/eventfotografie/index.html', ['Screenshot des Magyar-Nemzeti-Múzeum-Beitrags vom 30. September 2025', 'Die Fotos stammen von Norbert Bánhalmi', 'Das Datum des Ausflugs wird nicht genannt']]
+  ['event-photography/index.html', 'The screenshot of the Magyar Nemzeti Múzeum post dated 30 September 2025', 'Photos by Norbert Bánhalmi', 'The event date is not stated'],
+  ['hu/rendezvenyfotozas/index.html', '2025. szeptember 30-i Magyar Nemzeti Múzeum-bejegyzés', 'A fotókat Bánhalmi Norbert készítette', 'Az esemény dátuma nem szerepel rajta'],
+  ['de-at/eventfotografie/index.html', 'Screenshot des Magyar-Nemzeti-Múzeum-Beitrags vom 30. September 2025', 'Die Fotos stammen von Norbert Bánhalmi', 'Das Datum des Ausflugs wird nicht genannt']
 ];
 for (const [path, ...requiredText] of pages) {
   const html = fs.readFileSync(path, 'utf8');
