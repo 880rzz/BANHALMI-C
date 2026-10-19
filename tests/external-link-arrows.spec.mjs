@@ -71,6 +71,8 @@ test('added links and URL changes preserve external-only arrows and accessible l
 for(const route of ['/','/hu/','/de-at/']) {
  test('WhatsApp contact action stays arrow-free: '+route, async({page})=>{
   await page.goto(route);
+  const declineCookies = page.locator('[data-decline]');
+  if (await declineCookies.isVisible()) await declineCookies.click();
   await page.locator('.banhalmi-contact-trigger').click();
   const whatsapp=page.locator('.banhalmi-contact-action[href^="https://wa.me/"]');
   await expect(whatsapp).toBeVisible();

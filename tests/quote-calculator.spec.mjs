@@ -1,5 +1,12 @@
 import { test, expect } from '@playwright/test';
 
+async function openDetailedCalculator(page) {
+  const summary = page.locator('#quote-calculator > summary');
+  if (await summary.count() && !(await page.locator('#quote-calculator').evaluate((node) => node.open))) {
+    await summary.click();
+  }
+}
+
 const routes = [
   { path: '/requestaquote/', lang: 'en' },
   { path: '/hu/ajanlatkeres/', lang: 'hu' },
@@ -20,6 +27,7 @@ for (const route of routes) {
   test(`retouch guidance explains image counts by category in ${route.lang}`, async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 900 });
     await page.goto(route.path);
+    await openDetailedCalculator(page);
     const form = page.locator('[data-smart-quote]');
     const note = form.locator('[data-retouch-guidance]');
     await expect(note).toBeVisible();
@@ -49,6 +57,7 @@ for (const route of routes) {
   test(`quote information opens as a modal on ${route.path}`, async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 900 });
     await page.goto(route.path);
+    await openDetailedCalculator(page);
     const trigger = page.locator('.info-tip[data-tooltip]').first();
     const triggerBox = await trigger.boundingBox();
     expect(triggerBox).not.toBeNull();
@@ -101,6 +110,7 @@ for (const route of routes) {
       page.on('console', (msg) => { if (msg.type() === 'error') errors.push(msg.text()); });
       await page.setViewportSize(viewport);
       await page.goto(route.path);
+    await openDetailedCalculator(page);
       const root = page.locator('[data-quote-root]');
       await expect(root).toHaveCount(1);
       await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
@@ -132,6 +142,7 @@ for (const route of routes) {
   test(`quote information opens in an accessible modal on ${route.path}`, async ({ page }) => {
     await page.setViewportSize({ width: 1280, height: 900 });
     await page.goto(route.path);
+    await openDetailedCalculator(page);
 
     const option = page.locator('.option-row:has(.info-tip)').first();
     const trigger = option.locator('.info-tip');
@@ -163,6 +174,7 @@ for (const route of routes) {
 test.describe('complete quote calculation strategy', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('/requestaquote/');
+    await openDetailedCalculator(page);
     await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
     await page.locator('input[name="category"][value="individual"]').check();
     await page.locator('input[name="individual_mode"][value="quick30"]').check();
@@ -316,6 +328,7 @@ test.describe('complete quote calculation strategy', () => {
 for (const route of routes) {
   test(`VAT guidance is localized and dynamically updated on ${route.path}`, async ({ page }) => {
     await page.goto(route.path);
+    await openDetailedCalculator(page);
     const form = page.locator('[data-smart-quote]');
     await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
     await form.locator('input[name="category"][value="individual"]').check();
@@ -332,6 +345,7 @@ for (const route of routes) {
 
 test('Hungarian quote displays fixed-rate HUF while preserving canonical EUR', async ({ page }) => {
   await page.goto('/hu/ajanlatkeres/');
+    await openDetailedCalculator(page);
   await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
   await page.locator('input[name="category"][value="individual"]').check();
   await page.locator('input[name="individual_mode"][value="quick30"]').check();

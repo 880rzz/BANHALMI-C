@@ -1,8 +1,16 @@
 import {test,expect} from '@playwright/test';
+
+async function openDetailedCalculator(page) {
+  const summary = page.locator('#quote-calculator > summary');
+  if (await summary.count() && !(await page.locator('#quote-calculator').evaluate((node) => node.open))) {
+    await summary.click();
+  }
+}
 const routes=['/requestaquote/','/hu/ajanlatkeres/','/de-at/anfrage/'];
 const estimate=page=>page.evaluate(()=>window.BANHALMI_QUOTE.calculate(document.querySelector('[data-smart-quote]')));
 async function privateVenue(page,path){
  await page.goto(path+'?service=private-event');
+    await openDetailedCalculator(page);
  const form=page.locator('[data-smart-quote]');
  await expect(form).toHaveAttribute('data-pricing-ready','true');
  await expect(form.locator('[data-private-event="true"]')).toBeChecked();

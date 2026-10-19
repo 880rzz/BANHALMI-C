@@ -1,10 +1,18 @@
 import { test, expect } from '@playwright/test';
 
+async function openDetailedCalculator(page) {
+  const summary = page.locator('#quote-calculator > summary');
+  if (await summary.count() && !(await page.locator('#quote-calculator').evaluate((node) => node.open))) {
+    await summary.click();
+  }
+}
+
 const routes = ['/requestaquote/', '/hu/ajanlatkeres/', '/de-at/anfrage/'];
 
 for (const path of routes) {
   test(`hardens quote dates, status, PDF placement and zero starting price on ${path}`, async ({ page }) => {
     await page.goto(path);
+    await openDetailedCalculator(page);
     const form = page.locator('[data-smart-quote]');
     await expect(form).toHaveCount(1);
     await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
@@ -33,6 +41,7 @@ for (const path of routes) {
 
 test('quote amount grows only after a package is selected', async ({ page }) => {
   await page.goto('/requestaquote/');
+    await openDetailedCalculator(page);
   const form = page.locator('[data-smart-quote]');
   await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
   await expect(form.locator('[name="estimate_gross"]')).toHaveValue('0');
@@ -43,6 +52,7 @@ test('quote amount grows only after a package is selected', async ({ page }) => 
 
 test('preserves entered quote data when delivery is not explicitly verified', async ({ page }) => {
   await page.goto('/requestaquote/');
+    await openDetailedCalculator(page);
   const form = page.locator('[data-smart-quote]');
   await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
   await form.locator('input[type="radio"][value="individual"]').check();
@@ -67,6 +77,7 @@ test('preserves entered quote data when delivery is not explicitly verified', as
 
 test('clears quote data only when both email deliveries are explicitly verified', async ({ page }) => {
   await page.goto('/requestaquote/');
+    await openDetailedCalculator(page);
   const form = page.locator('[data-smart-quote]');
   await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1, { timeout: 10000 });
   await form.locator('input[type="radio"][value="individual"]').check();
