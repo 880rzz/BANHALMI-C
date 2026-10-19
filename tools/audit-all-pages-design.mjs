@@ -34,7 +34,7 @@ for(const width of widths){
       await page.waitForFunction(()=>[...document.querySelectorAll('details.footer-accordion')].every(d=>{const ul=d.querySelector('ul');return !ul||getComputedStyle(ul).display==='none'||ul.hidden;}),null,{timeout:1500}).catch(()=>{});
     }
     const r=await page.evaluate(({pageMaxPx,structuredMaxPx,structuredBreakpointPx,structuredSelector,touchTargetPx})=>{
-      const visible=el=>{if(!el)return false;const s=getComputedStyle(el),b=el.getBoundingClientRect();return s.display!=='none'&&s.visibility!=='hidden'&&Number(s.opacity)!==0&&b.width>0&&b.height>0};
+      const visible=el=>{if(!el)return false;for(let node=el;node&&node.nodeType===1;node=node.parentElement){if(node.hidden)return false;const style=getComputedStyle(node);if(style.display==='none'||style.visibility==='hidden'||Number(style.opacity)===0)return false;if(node.tagName==='DETAILS'&&!node.open){const summary=node.querySelector(':scope > summary');if(!summary||!summary.contains(el))return false;}}const b=el.getBoundingClientRect();return b.width>0&&b.height>0};
       const de=document.documentElement,body=document.body,bodyStyle=getComputedStyle(body),header=document.querySelector('.site-header'),main=document.querySelector('main'),footer=document.querySelector('.site-footer');
       const homepageSplit=innerWidth>=1180&&main?.getAttribute('data-homepage-redesign')==='stage76';
       const heroVisual=homepageSplit?main.querySelector(':scope > .hero-visual-only'):null;
