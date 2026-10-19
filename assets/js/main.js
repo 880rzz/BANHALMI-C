@@ -1336,7 +1336,7 @@
     }catch(error){return false;}
   }
   function actionOrMedia(a){
-    return a.matches('.brand,.footer-wko-profile,.btn,.btn-primary,.btn-secondary,.btn-ghost,.nav-cta,[role="button"]')
+    return a.matches('.brand,.footer-wko-profile,.btn,.btn-primary,.btn-secondary,.btn-ghost,.nav-cta,.banhalmi-contact-action,[role="button"]')
       || !!a.querySelector("img,picture,svg,video");
   }
   function decorative(a){

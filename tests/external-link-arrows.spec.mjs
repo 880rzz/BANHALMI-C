@@ -22,7 +22,7 @@ for(const route of routes){
     const offsite=!!url&&['https:','http:'].includes(url.protocol)
       && canonicalHost(url.hostname)!==local
       && canonicalHost(url.hostname)!=='norbertbanhalmi.com';
-    const excluded=a.matches('.brand,.footer-wko-profile,.btn,.btn-primary,.btn-secondary,.btn-ghost,.nav-cta,[role="button"]')
+    const excluded=a.matches('.brand,.footer-wko-profile,.btn,.btn-primary,.btn-secondary,.btn-ghost,.nav-cta,.banhalmi-contact-action,[role="button"]')
       || !!a.querySelector('img,picture,svg,video');
     const text=(a.textContent||'').replace(/\u2197/g,'').trim();
     const expected=offsite&&!excluded&&!!text;
@@ -67,3 +67,14 @@ test('added links and URL changes preserve external-only arrows and accessible l
  await expect(page.locator('#bn-int .banhalmi-link-arrow')).toHaveCount(1);
  await expect(page.locator('#bn-int')).toHaveAccessibleName('Internal');
 });
+
+for(const route of ['/','/hu/','/de-at/']) {
+ test('WhatsApp contact action stays arrow-free: '+route, async({page})=>{
+  await page.goto(route);
+  await page.locator('.banhalmi-contact-trigger').click();
+  const whatsapp=page.locator('.banhalmi-contact-action[href^="https://wa.me/"]');
+  await expect(whatsapp).toBeVisible();
+  await expect(whatsapp.locator('.banhalmi-link-arrow')).toHaveCount(0);
+  await expect(whatsapp).not.toContainText('↗');
+ });
+}

@@ -4163,6 +4163,7 @@ html body .site-footer,html body .site-footer .wrap{min-height:0!important;}
 /* Footer disclosure marker is a trailing gold plus, aligned with its label. */
 html body .site-footer .footer-accordion>summary{display:flex;align-items:center;justify-content:flex-start;gap:.65em;}
 html body .site-footer .footer-accordion>summary::after{content:"+";position:static;inset:auto;width:auto;height:auto;border:0;transform:none;color:var(--gold);font-size:1.25rem;line-height:1;font-weight:400;}
+html body .site-footer .footer-accordion[open]>summary::after{content:"−";}
 /* CANONICAL-DESIGN-SYSTEM-20260827:END */
 /* BANHALMI-CONTACT-DOCK-V1:START */
 .banhalmi-contact-dock{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:2147483000;font-family:inherit;color:#111}
@@ -5664,16 +5665,16 @@ html body main .legal-navigation .service-grid{
 }
 
 /* 3) Shared disclosure indicator: every interactive summary uses + / minus.
-   Desktop footer headings stay static and retain their explicit marker exemption. */
-html body details>summary{
+   Footer disclosures retain their canonical trailing gold marker. */
+html body details:not(.footer-accordion)>summary{
   position:relative!important;
   padding-right:34px!important;
   cursor:pointer!important;
   list-style:none!important;
 }
-html body details>summary::-webkit-details-marker{display:none!important;}
-html body details>summary::marker{content:"";}
-html body details>summary::after{
+html body details:not(.footer-accordion)>summary::-webkit-details-marker{display:none!important;}
+html body details:not(.footer-accordion)>summary::marker{content:"";}
+html body details:not(.footer-accordion)>summary::after{
   content:"+"!important;
   display:block!important;
   position:absolute!important;
@@ -5691,7 +5692,7 @@ html body details>summary::after{
   transition:none!important;
   opacity:1!important;
 }
-html body details[open]>summary::after{content:"−"!important;}
+html body details:not(.footer-accordion)[open]>summary::after{content:"−"!important;}
 html body main .smart-quote-layout .quote-decision-guide>summary{display:block!important;}
 html body .quote-decision-guide .quote-price-note{
   display:block;
