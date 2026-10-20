@@ -4944,9 +4944,12 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     display:grid!important;
     grid-template-columns:minmax(0,1fr)!important;
     gap:8px!important;
-    position:relative!important;
-    padding:14px!important;
+    position:relative;
+    padding:13px 10px!important;
   }
+  /* Nested card and step padding was squeezing long copy below 250px on
+     375px phones when the optional calculator was expanded. */
+  html body main .smart-quote-layout .quote-step{padding-inline:12px!important;}
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="radio"],
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="checkbox"]{
     position:static!important;
