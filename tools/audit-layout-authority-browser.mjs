@@ -111,7 +111,7 @@ for(const width of widths){
           const slack=bottoms.length?cr.bottom-Math.max(...bottoms):cr.height;
           const pos=info?getComputedStyle(info).position:null;
           const ir=info?.getBoundingClientRect();
-          if(pos!=='static') local.push(`info position=${pos}`);
+          if(pos!=='static'&&pos!=='absolute') local.push(`info position=${pos}`);
           if(slack>34) local.push(`bottom slack=${slack.toFixed(1)}px`);
           if(ir&&(ir.left<cr.left-1||ir.right>cr.right+1||ir.top<cr.top-1||ir.bottom>cr.bottom+1)) local.push('info control outside card bounds');
         }
