@@ -4935,6 +4935,14 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body main>section[data-surface="white"]:not(.hero){padding-bottom:clamp(56px,6vw,96px)!important;}
 }
 @media (max-width:620px){
+  /* Keep the expanded quote flow readable on 375–390px screens. The former
+     nested 18px/13px/12px insets consumed the reading column before the
+     long option copy was measured. Preserve the card hierarchy while giving
+     the copy a full mobile reading measure. */
+  html body main .smart-quote-layout .quote-step{padding:14px!important;}
+  html body main .smart-quote-layout .quote-decision-guide{padding:10px!important;}
+  html body main .smart-quote-layout :is(.category-card,.option-row){padding-inline:10px!important;}
+
   /* Quote choices keep long descriptions at full width. Radio controls occupy
      their own row and help buttons follow the copy in a separate grid row. */
   html body main .smart-quote-layout .category-grid{
