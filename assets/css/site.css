@@ -6744,10 +6744,14 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
 
 
 
-/* FINAL-MOBILE-QUOTE-FORM-MEASURE: preserve contract insets while widening only the quote form reading canvas. */
+/* FINAL-MOBILE-QUOTE-READING-MEASURE: keep expanded decision copy readable without affecting contact forms. */
 @media (max-width:620px){
   html body main form[data-smart-quote]{
     width:calc(100% + 32px)!important;
     margin-inline:-16px;
+  }
+  html body main form[data-smart-quote] .quote-decision-guide ul{
+    padding-inline-start:0!important;
+    list-style-position:inside!important;
   }
 }
