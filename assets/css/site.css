@@ -6769,3 +6769,11 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     margin-inline:-12px;
   }
 }
+
+
+/* FINAL-MOBILE-PRICING-LOGIC-READING-MEASURE: keep expanded guidance readable on narrow quote pages. */
+@media (max-width:620px){
+  html body main .pricing-logic-card .pricing-logic-details{
+    padding-inline:8px;
+  }
+}
