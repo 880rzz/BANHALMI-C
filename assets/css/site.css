@@ -6716,6 +6716,14 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
   }
 }
 
+/* Mobile quote decision guide: give long list copy the minimum readable measure. */
+@media (max-width:760px){
+  html body main .service-pricing-section .quote-decision-guide .service-price-examples li{
+    width:calc(100% + 8px);
+    margin-inline-start:-4px;
+  }
+}
+
 /* Expanded service process cards need a full reading measure at tablet widths.
    Their two-column layout inside the disclosure constrains long copy to ~242px. */
 @media (min-width:561px){
