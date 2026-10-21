@@ -6784,3 +6784,25 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     overflow-wrap:anywhere;
   }
 }
+
+/* QUOTE-BUILDER-MOBILE-SCOPE-FIX: target the quote-step sibling structure before the form. */
+@media (max-width:620px){
+  html body main .quote-step{
+    padding-inline:12px;
+  }
+  html body main .quote-step .option-row{
+    padding-inline:12px;
+  }
+  html body main .quote-step .quote-decision-guide,
+  html body main .quote-step .conditional-panel{
+    min-width:0;
+    max-width:none;
+  }
+  html body main .quote-step .quote-decision-guide li,
+  html body main .quote-step .conditional-panel .microcopy,
+  html body main .quote-step .option-row>span{
+    min-width:0;
+    max-width:none;
+    overflow-wrap:anywhere;
+  }
+}
