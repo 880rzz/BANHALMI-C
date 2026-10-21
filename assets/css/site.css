@@ -6777,3 +6777,14 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     padding-inline:8px;
   }
 }
+
+
+/* FINAL-MOBILE-PRICING-LOGIC-INNER-WIDTH: release the expanded copy from the card's narrow content context. */
+@media (max-width:620px){
+  html body main .pricing-logic-card .pricing-logic-details{
+    width:calc(100% + 20px);
+    max-width:none;
+    margin-inline:-10px;
+    box-sizing:border-box;
+  }
+}
