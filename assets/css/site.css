@@ -6751,3 +6751,12 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
 @media(max-width:560px){.quote-price-cards{grid-template-columns:minmax(0,1fr)}.quote-calculator-disclosure{padding-inline:16px}}
 
 
+
+
+/* FINAL-MOBILE-QUOTE-GUIDE-MEASURE: widen only the expanded quote decision canvas. */
+@media (max-width:620px){
+  html body main form[data-smart-quote] .quote-decision-guide{
+    width:calc(100% + 24px);
+    margin-inline:-12px;
+  }
+}
