@@ -6746,7 +6746,7 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
 
 /* FINAL-MOBILE-QUOTE-FORM-MEASURE: preserve contract insets while widening only the quote form reading canvas. */
 @media (max-width:620px){
-  html body main .smart-quote-layout>.form{
+  html body main form[data-smart-quote]{
     width:calc(100% + 24px)!important;
     margin-inline:-12px;
   }
