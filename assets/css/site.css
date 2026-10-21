@@ -6760,3 +6760,13 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     margin-inline:-12px;
   }
 }
+
+
+/* FINAL-MOBILE-PRICING-LOGIC-MEASURE: preserve readable expanded pricing guidance on narrow quote pages. */
+@media (max-width:620px){
+  html body main form[data-smart-quote] ~ *{}
+  html body main .pricing-logic-card{
+    width:calc(100% + 24px);
+    margin-inline:-12px;
+  }
+}
