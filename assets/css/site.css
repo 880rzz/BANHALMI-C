@@ -4939,7 +4939,7 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
      nested 18px/13px/12px insets consumed the reading column before the
      long option copy was measured. Preserve the card hierarchy while giving
      the copy a full mobile reading measure. */
-  html body main .smart-quote-layout .quote-step{padding:14px!important;}
+  html body main .smart-quote-layout .quote-step{padding:10px!important;}
   html body main .smart-quote-layout .quote-decision-guide{padding:10px!important;}
   html body main .smart-quote-layout :is(.category-card,.option-row){padding-inline:10px!important;}
 
@@ -4953,11 +4953,11 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
     grid-template-columns:minmax(0,1fr)!important;
     gap:8px!important;
     position:relative;
-    padding:13px!important;
+    padding:8px!important;
   }
   /* Keep the shared 16px step and 13px choice-card insets while removing
      the extra icon/control columns that narrowed long copy on small phones. */
-  html body main .smart-quote-layout .quote-step{padding-inline:16px!important;}
+  html body main .smart-quote-layout .quote-step{padding-inline:10px!important;}
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="radio"],
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="checkbox"]{
     position:static!important;
@@ -6746,12 +6746,10 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
 
 /* FINAL-MOBILE-QUOTE-READING-MEASURE: keep long expanded copy readable on 375-390px screens. */
 @media (max-width:620px){
-  html body main .smart-quote-layout .quote-step{padding-inline:10px!important;}
-  html body main .smart-quote-layout :is(.category-card,.option-row){padding-inline:8px!important;}
   html body main .smart-quote-layout .conditional-panel>p.microcopy,
   html body main .smart-quote-layout .quote-decision-guide>p,
   html body main .smart-quote-layout .quote-decision-guide>ul{
-    width:100%!important;
-    max-width:none!important;
+    width:100%;
+    max-width:none;
   }
 }
