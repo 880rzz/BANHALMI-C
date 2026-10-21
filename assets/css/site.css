@@ -6762,3 +6762,25 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     overflow-wrap:anywhere;
   }
 }
+
+/* QUOTE-BUILDER-MOBILE-READING-AUTHORITY: align the actual expanded audit targets. */
+@media (max-width:620px){
+  html body main form[data-smart-quote] .quote-step{
+    padding-inline:12px;
+  }
+  html body main form[data-smart-quote] .quote-step .option-row{
+    padding-inline:12px;
+  }
+  html body main form[data-smart-quote] .quote-decision-guide,
+  html body main form[data-smart-quote] .conditional-panel{
+    min-width:0;
+    max-width:none;
+  }
+  html body main form[data-smart-quote] .quote-decision-guide li,
+  html body main form[data-smart-quote] .conditional-panel .microcopy,
+  html body main form[data-smart-quote] .option-row>span{
+    min-width:0;
+    max-width:none;
+    overflow-wrap:anywhere;
+  }
+}
