@@ -4961,7 +4961,7 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   }
   /* Keep the shared 16px step and 13px choice-card insets while removing
      the extra icon/control columns that narrowed long copy on small phones. */
-  html body main .smart-quote-layout .quote-step{padding-inline:16px!important;}
+  html body main .smart-quote-layout .quote-step{padding-inline:16px!important;width:calc(100% + 48px);margin-inline:-24px;}
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="radio"],
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="checkbox"]{
     position:static!important;
