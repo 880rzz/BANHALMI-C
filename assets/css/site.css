@@ -6833,3 +6833,33 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     min-width:0;
   }
 }
+
+/* QUOTE-BUILDER-MOBILE-GEOMETRY: preserve the 44px control while releasing the reading column. */
+@media (max-width:620px){
+  html body main .quote-step .option-row{
+    display:block;
+    position:relative;
+    padding-inline-start:44px;
+  }
+  html body main .quote-step .option-row>input[type="radio"],
+  html body main .quote-step .option-row>input[type="checkbox"]{
+    position:absolute;
+    inset-inline-start:12px;
+    inset-block-start:14px;
+    margin:0;
+  }
+  html body main .quote-step .option-row>span{
+    display:block;
+    width:calc(100% + 32px);
+    max-width:none;
+    margin-inline-end:-32px;
+  }
+  html body main .quote-step .quote-decision-guide li{
+    width:calc(100% + 16px);
+    margin-inline-start:-8px;
+  }
+  html body main .quote-step .conditional-panel .microcopy{
+    width:calc(100% + 24px);
+    margin-inline-start:-12px;
+  }
+}
