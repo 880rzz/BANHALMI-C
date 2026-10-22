@@ -6863,3 +6863,19 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
     margin-inline-start:-12px;
   }
 }
+
+
+/* QUOTE-BUILDER-MOBILE-READING-FINAL: release the last constrained text columns measured by the expanded audit. */
+@media (max-width:620px){
+  html body main .quote-step .option-row>span{
+    width:calc(100% + 64px);
+    max-width:none;
+    margin-inline-end:-64px;
+  }
+  html body main .quote-step .conditional-panel .microcopy{
+    width:calc(100% + 64px);
+    max-width:none;
+    margin-inline-start:-12px;
+    margin-inline-end:-52px;
+  }
+}
