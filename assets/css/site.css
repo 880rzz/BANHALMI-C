@@ -4077,7 +4077,7 @@ html body main .project-framework-content>section{padding-block:clamp(28px,3vw,4
 /* Quote calculator: radio, label and optional information control form one
    stable row without inherited label margins. */
 html body .smart-quote-layout :is(.category-grid,.option-stack){align-content:start!important;align-items:start!important;grid-auto-rows:max-content!important;gap:10px!important;}
-html body .smart-quote-layout :is(.category-card,.option-row){padding:8px 10px!important;border-radius:13px!important;margin:0!important;}
+html body .smart-quote-layout :is(.category-card,.option-row){padding:13px 14px!important;border-radius:13px!important;margin:0!important;}
 html body .smart-quote-layout .quote-step{margin-bottom:14px!important;padding:18px 20px!important;}
 html body .smart-quote-layout .quote-step h3{margin-bottom:12px!important;}
 @media (min-width:621px){
@@ -4953,14 +4953,15 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   html body main .smart-quote-layout :is(.category-card,.option-row){
     padding-inline:6px;
     display:grid!important;
-    grid-template-columns:minmax(0,1fr)!important;
+    grid-template-columns:24px minmax(0,1fr)!important;
     gap:8px!important;
     position:relative;
     padding:13px!important;
+    align-items:center;
   }
   /* Keep the shared 16px step and 13px choice-card insets while removing
      the extra icon/control columns that narrowed long copy on small phones. */
-  html body main .smart-quote-layout .quote-step{padding-inline:10px!important;}
+  html body main .smart-quote-layout .quote-step{padding-inline:16px!important;}
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="radio"],
   html body main .smart-quote-layout :is(.category-card,.option-row)>input[type="checkbox"]{
     position:static!important;
@@ -4968,6 +4969,7 @@ html body main .service-gallery-section{padding-bottom:clamp(56px,6vw,96px)!impo
   }
   html body main .smart-quote-layout :is(.category-card,.option-row)>span{
     display:grid!important;
+    grid-column:2;
     grid-template-columns:minmax(0,1fr)!important;
     width:100%!important;
     max-width:none!important;
