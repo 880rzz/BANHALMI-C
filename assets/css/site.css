@@ -6843,3 +6843,23 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
   }
 }
 
+
+/* Canonical footer disclosure marker: aligned, explicit, and gold. */
+@media (min-width:621px){
+  html body .site-footer .footer-accordion summary{
+    padding-right:32px;
+  }
+  html body .site-footer .footer-accordion summary::after{
+    right:0;
+    top:50%;
+    width:9px;
+    height:9px;
+    border-right:1.5px solid var(--gold-deep);
+    border-bottom:1.5px solid var(--gold-deep);
+    transform:translateY(-65%) rotate(45deg);
+  }
+  html body .site-footer .footer-accordion[open] summary::after{
+    top:50%;
+    transform:translateY(-35%) rotate(-135deg);
+  }
+}
