@@ -26,7 +26,7 @@
   "protectedOverlay": "https://www.norbertbanhalmi.com/llm-canonical-overlay.json",
   "protectedPressInstitutionalEvidence": "https://www.norbertbanhalmi.com/press-institutional-evidence.json",
   "protectedMediaUsageEvidence": "https://www.norbertbanhalmi.com/media-usage-evidence.json",
-  "protectedOverlayPolicy": "Committed after canonical projection and protected-overlay reconciliation; older projection code must not erase current commercial, geography, role, brand/team, external photography, press/editorial/institutional, deduplicated media-usage or ecosystem semantics.",
+  "protectedOverlayPolicy": "Applied after generated machine projections; older projection code must not erase current commercial, geography, role, brand/team, external photography, press/editorial/institutional, deduplicated media-usage or ecosystem semantics.",
   "brandTeamContract": {
     "primaryBrand": "BANHALMI",
     "photographyName": "BANHALMI Photography",

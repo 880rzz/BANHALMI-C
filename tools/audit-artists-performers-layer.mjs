@@ -18,9 +18,9 @@ const p = (pricing.services || []).find(x => x.id === 'fine-art');
 fail(p?.quoteRouting?.serviceContext === 'fine-art', 'pricing quote route drift');
 fail(JSON.stringify((p?.packages || []).map(x => [x.code,x.grossEUR])) === JSON.stringify([['art60',690],['art120',990],['art180',1290]]), 'Fine Art package pricing drift');
 const localizedPackageContracts = {
-  'fine-art/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Focused Artist Session — 1 hour','Artist Portfolio — 2 hours','Complete Artist Portfolio — 3 hours','Fine Art &amp; Artistic Nude — personal artistic work'],
-  'hu/muveszi-fotografia/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Fókuszált művészfotózás — 1 óra','Művészportfólió — 2 óra','Teljes művészportfólió — 3 óra','Fine Art &amp; művészi akt — személyes művészeti alkotás'],
-  'de-at/fine-art/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Fokussiertes Künstler:innen-Shooting — 1 Stunde','Künstler:innen-Portfolio — 2 Stunden','Komplettes Künstler:innen-Portfolio — 3 Stunden','Fine Art &amp; Aktkunst — persönliche künstlerische Arbeit']
+  'fine-art/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Focused Artist Session — 1 hour','Artist Portfolio — 2 hours','Complete Artist Portfolio — 3 hours','Personal photography on BANHALMI ART'],
+  'hu/muveszi-fotografia/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Fókuszált művészfotózás — 1 óra','Művészportfólió — 2 óra','Teljes művészportfólió — 3 óra','Személyes fotózás a BANHALMI ART oldalán'],
+  'de-at/fine-art/index.html': ['PLAIN-LANGUAGE-ARTIST-PACKAGES:START','Fokussiertes Künstler:innen-Shooting — 1 Stunde','Künstler:innen-Portfolio — 2 Stunden','Komplettes Künstler:innen-Portfolio — 3 Stunden','Persönliche Fotografie auf BANHALMI ART']
 };
 for (const file of ['fine-art/index.html','hu/muveszi-fotografia/index.html','de-at/fine-art/index.html']) {
   const h = fs.readFileSync(file,'utf8');
@@ -28,6 +28,9 @@ for (const file of ['fine-art/index.html','hu/muveszi-fotografia/index.html','de
   fail(/actor|színész|Schauspiel/i.test(h), file + ': actor intent missing');
   fail(/dance|tánc|Tanz/i.test(h), file + ': dance intent missing');
   for (const token of localizedPackageContracts[file]) fail(h.includes(token), file + ': plain-language package contract missing: ' + token);
+  fail(!/Fine Art &amp; Artistic Nude — personal artistic work|Fine Art &amp; művészi akt — személyes művészeti projekt/.test(h), file + ': personal ART service still presented as a Professional package');
+  const offer=h.match(/<script[^>]*data-fine-art-pricing-v1[^>]*>([\s\S]*?)<\/script>/);
+  if(offer)try{const catalog=JSON.parse(offer[1]);fail(catalog.itemListElement?.length===1,file+': personal ART offer remains in Professional OfferCatalog');}catch{fail(false,file+': Fine Art OfferCatalog is invalid JSON');}
 }
 const generator = fs.readFileSync('tools/generate-machine-projections.mjs','utf8');
 fail(generator.includes('core.serviceModel.services.map'), 'production projection no longer derives service semantics from canonical core');

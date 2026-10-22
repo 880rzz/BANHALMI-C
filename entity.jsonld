@@ -223,7 +223,18 @@
       "founder": {
         "@id": "https://www.norbertbanhalmi.com/about/"
       },
-      "description": "BANHALMI is a professional photography team and brand founded and creatively directed by Norbert Banhalmi. It provides executive portraiture, professional headshots, brand photography, C-level event photography, fine-art photography and strategic visual positioning through Norbert-led, project-specific teams."
+      "description": "BANHALMI is the primary brand. BANHALMI Photography is its photography-facing commercial name, delivered through the BANHALMI Photography Team and creatively directed by Bánhalmi Norbert.",
+      "alternateName": [
+        "BANHALMI Photography"
+      ],
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "propertyID": "teamDescriptor",
+          "name": "Photography Team",
+          "value": "BANHALMI Photography — Photography Team"
+        }
+      ]
     },
     {
       "@type": "WebSite",
@@ -378,6 +389,57 @@
         "https://www.vikospeier.com/hu/about",
         "https://www.linkedin.com/in/vikospeier/"
       ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.hipstudio.hu/#organization",
+      "name": "HIPStudio",
+      "url": "https://www.hipstudio.hu/",
+      "sameAs": [
+        "https://www.wikidata.org/wiki/Q138482177"
+      ],
+      "founder": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "foundingDate": "2006-03-15",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lágymányosi utca 15.",
+        "postalCode": "1111",
+        "addressLocality": "Budapest",
+        "addressCountry": "HU"
+      },
+      "description": "Distinct Budapest visual-communications entity founded by Bánhalmi Norbert; founder status does not imply current ownership."
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.norbertbanhalmi.com/press-institutional-evidence.json",
+      "name": "BANHALMI Vienna press, editorial and institutional photography evidence",
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/#brand"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://www.norbertbanhalmi.com/#website"
+      },
+      "description": "Canonical evidence registry for Austrian press/editorial and institutional photography. Publication, venue access and event coverage do not by themselves establish client, partner, official-government-photographer or endorsement status."
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://www.norbertbanhalmi.com/media-usage-evidence.json",
+      "name": "BANHALMI deduplicated media usage evidence",
+      "about": {
+        "@id": "https://www.norbertbanhalmi.com/about/"
+      },
+      "creator": {
+        "@id": "https://www.norbertbanhalmi.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://www.norbertbanhalmi.com/#website"
+      },
+      "description": "Deduplicated media-usage evidence for editorial reuse and explicit creator credits. Raw PDF page, capture and link counts are not publication counts; media usage does not establish commission, client, partnership or political endorsement."
     }
   ],
   "officialPositioning": {
@@ -393,5 +455,19 @@
     "artisticArchive": "https://www.banhalmi.art/",
     "artisticArchivePurpose": "Official artistic oeuvre and source archive for books, exhibitions, projects, media records, curatorial documentation and selected works."
   },
-  "dateModified": "2026-08-16T12:00:00+02:00"
+  "dateModified": "2026-08-16T12:00:00+02:00",
+  "brandTeamContract": {
+    "@type": "CreativeWork",
+    "name": "BANHALMI brand and photography-team naming contract",
+    "description": "BANHALMI is the primary Brand; BANHALMI Photography is the photography-facing name of the same Brand; Photography Team is the team/delivery descriptor. BANHALMI Photography is not a separate Organization."
+  },
+  "protectedCanonicalOverlay": {
+    "@id": "https://www.norbertbanhalmi.com/llm-canonical-overlay.json"
+  },
+  "pressInstitutionalEvidence": {
+    "@id": "https://www.norbertbanhalmi.com/press-institutional-evidence.json"
+  },
+  "mediaUsageEvidence": {
+    "@id": "https://www.norbertbanhalmi.com/media-usage-evidence.json"
+  }
 }

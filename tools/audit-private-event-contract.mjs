@@ -20,7 +20,8 @@ for(const route of ['requestaquote/index.html','hu/ajanlatkeres/index.html','de-
  const text=read(route);
  assert.equal((text.match(/id="private_event_city"/g)||[]).length,1,route+' has exactly one city input');
  assert.ok(text.includes('value="outside"'),route+' preserves the chargeable outside-city option');
- assert.ok(text.includes('data-pricing-choice-guide="20261006-closure"'),route+' retains the price comparison');
+ assert.ok(text.includes('class="quote-pricing-overview"')&&text.includes('id="quote-calculator"'),route+' retains simple prices and optional detailed calculator');
+ assert.ok(!/<details class="quote-calculator-disclosure" id="quote-calculator" open>/.test(text),route+' calculator starts collapsed');
  assert.ok(text.includes('aria-describedby="quote-deliverables-note"'),route+' explains total requested images');
  for(const asset of ['quote-calculator','private-event-quote','quote-pdf'])assert.ok(text.includes('/assets/js/'+asset+'.js?v='+(asset==='quote-calculator'?'20261006-audience-v3':'20261006-private-city-v2')),route+' '+asset+' cache key');
 }

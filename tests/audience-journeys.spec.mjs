@@ -27,14 +27,16 @@ for(const d of locales){
    await page.setViewportSize({width,height:900});
    const positions=await page.evaluate(()=>{
     const y=s=>document.querySelector(s).getBoundingClientRect().top+scrollY;
-    return [y('#artist-packages-guide'),y('#professional-portfolio'),y('#personal-fine-art'),y('#personal-fine-art figure'),document.documentElement.scrollWidth,innerWidth];
+    return [y('#artist-packages-guide'),y('#professional-portfolio'),y('#personal-fine-art'),y('.reviews-drawer-section'),document.documentElement.scrollWidth,innerWidth];
    });
    expect(positions[0]).toBeLessThan(positions[1]);expect(positions[1]).toBeLessThan(positions[2]);expect(positions[2]).toBeLessThan(positions[3]);expect(positions[4]).toBeLessThanOrEqual(positions[5]+1);
-   await expect(page.locator('[data-art-purpose="professional"]')).toBeVisible();await expect(page.locator('[data-art-purpose="personal"]')).toBeVisible();
+   await expect(page.locator('[data-art-purpose="professional"]')).toBeVisible();
+   await expect(page.locator('#personal-fine-art a[href*="private-photography"]')).toBeVisible();
+   await expect(page.locator('#personal-fine-art a[href*="/exhibitions/ebredes.html"]')).toBeVisible();
    if(width===390||width===1440)await page.locator('#artist-packages-guide').screenshot({path:'artifacts/audience-journeys/'+d.home.replaceAll('/','_')+'-'+width+'.png'});
   }
  });
- for(const [purpose,value] of [['professional','performer'],['personal','artportrait']])test(d.art+' '+purpose+' quote preserves purpose across languages',async({page})=>{
+ for(const [purpose,value] of [['professional','performer']])test(d.art+' '+purpose+' quote preserves purpose across languages',async({page})=>{
   await page.goto(d.art);await page.locator('[data-art-quote="'+purpose+'"]').click();await ready(page);
   await expect(page.locator('[name="category"][value="art"]')).toBeChecked();
   await expect(page.locator('[name="art_type"][value="'+value+'"]')).toBeChecked();

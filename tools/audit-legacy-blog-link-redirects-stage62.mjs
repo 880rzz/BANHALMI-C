@@ -4,7 +4,7 @@ import path from 'node:path';
 const routes = {
   'oneletrajz-cv-fotozas': 'https://www.norbertbanhalmi.com/hu/portre/',
   'portfolio-fotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
-  'muveszi-aktfotozas': 'https://www.norbertbanhalmi.com/hu/muveszi-fotografia/',
+  'muveszi-aktfotozas': 'https://www.banhalmi.art/hu/exhibitions/ebredes.html',
   'reklam-fotozas': 'https://www.norbertbanhalmi.com/hu/brand/',
   'eskuvoi-fotozas-tihany': 'https://www.norbertbanhalmi.com/hu/rendezvenyfotozas/',
   'profifotos': 'https://www.norbertbanhalmi.com/hu/',

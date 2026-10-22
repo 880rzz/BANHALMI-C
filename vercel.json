@@ -2913,7 +2913,7 @@
     },
     {
       "source": "/muveszi-aktfotozas",
-      "destination": "/hu/muveszi-fotografia/",
+      "destination": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
       "permanent": true
     },
     {
@@ -2923,7 +2923,7 @@
     },
     {
       "source": "/aktfotozas",
-      "destination": "/hu/muveszi-fotografia/",
+      "destination": "https://www.banhalmi.art/hu/exhibitions/ebredes.html",
       "permanent": true
     },
     {

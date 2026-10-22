@@ -24,7 +24,8 @@ fail(pricing.publicExecutiveArchitecture?.executivePersonalBranding?.startingGro
 fail(pricing.services.find(x=>x.id==='event')?.publicArchitecture?.businessEvent?.startingGrossEUR===490,'Event Business route missing');
 fail(pricing.services.find(x=>x.id==='event')?.publicArchitecture?.cLevelInstitutional?.startingGrossEUR===590,'Event C-Level route missing');
 fail(pricing.services.find(x=>x.id==='fine-art')?.publicArchitecture?.professionalArtistsPerformers?.startingGrossEUR===690,'Artists route missing');
-fail(pricing.services.find(x=>x.id==='fine-art')?.publicArchitecture?.authorLedFineArtArtisticNude?.startingGrossEUR===690,'Artistic nude route missing');
+fail(!pricing.services.find(x=>x.id==='fine-art')?.publicArchitecture?.authorLedFineArtArtisticNude,'Personal ART commissions must not carry a Professional price');
+fail(pricing.services.find(x=>x.id==='fine-art')?.publicArchitecture?.separationRule?.includes('Ébredés / Awakening exhibition'),'ART Ébredés ownership missing from pricing architecture');
 
 fail(huf.conversion?.rate===400 && huf.conversion?.liveExchangeRate===false,'HUF fixed planning rate drift');
 for(const [k,v] of Object.entries(pricing.priceComponentsGrossEUR)){
@@ -38,15 +39,18 @@ fail(s>=0&&e>s,'embedded pricing markers missing');
 if(s>=0&&e>s) fail(JSON.stringify(JSON.parse(embedded.slice(s+pre.length,e)))===JSON.stringify(pricing),'embedded pricing differs from pricing.json');
 
 const overlayPricing=overlay?.canonicalSummary?.pricing||'';
-for(const token of ['Business Event Coverage starts from EUR 490 gross','C-Level / Institutional Event Photography starts from EUR 590 gross','Fine Art pricing has two distinct client intents','Artists & Performers professional portfolio photography','personal author-led Fine Art / artistic nude work','1 EUR = 400 HUF']){
+for(const token of ['Business Event Coverage starts from EUR 490 gross','C-Level / Institutional Event Photography starts from EUR 590 gross','Artists & Performers professional portfolios start from EUR 690 gross for career-facing use','artistic nude service and enquiries belong to the localized Ébredés / Awakening exhibition','1 EUR = 400 HUF']){
   fail(overlayPricing.includes(token),`overlay pricing missing: ${token}`);
 }
 fail(knowledge.pricingPolicy?.eventArchitecture?.businessEvent?.includes('EUR 490'),'knowledge-core Business Event missing');
-fail(knowledge.pricingPolicy?.fineArtArchitecture?.authorLedFineArtArtisticNude?.includes('EUR 690'),'knowledge-core Fine Art/akt missing');
-fail(entry.pricingAuthority?.businessEvent?.startingGrossEUR===490,'ai-entry Business Event missing');
-fail(entry.pricingAuthority?.cLevelInstitutionalEvent?.startingGrossEUR===590,'ai-entry C-Level Event missing');
-fail(entry.pricingAuthority?.artistsPerformers?.startingGrossEUR===690,'ai-entry Artists route missing');
-fail(entry.pricingAuthority?.fineArtArtisticNude?.startingGrossEUR===690,'ai-entry Fine Art/akt missing');
+fail(knowledge.pricingPolicy?.fineArtArchitecture?.privateCommissionRouting?.includes('Ébredés / Awakening exhibition'),'knowledge-core Ébredés owner missing');
+const aiServices=entry.services?.services||[];
+fail(aiServices.find(x=>x.id==='c-level-event')?.businessEventRoute?.startingGrossEUR===490,'ai-entry Business Event missing');
+fail(aiServices.find(x=>x.id==='c-level-event')?.cLevelInstitutionalRoute?.startingGrossEUR===590,'ai-entry C-Level Event missing');
+const aiFineArt=aiServices.find(x=>x.id==='fine-art');
+fail(aiFineArt?.clientIntentSeparation?.professionalArtistsPerformers?.startingGrossEUR===690,'ai-entry Artists route missing');
+fail(!('startingGrossEUR' in (aiFineArt?.clientIntentSeparation?.authorLedFineArtArtisticNude||{})),'ai-entry must not price personal ART commissions');
+fail(aiFineArt?.clientIntentSeparation?.artisticNudeRoutes?.hu?.endsWith('/hu/exhibitions/ebredes.html'),'ai-entry Ébredés route missing');
 
 fail(trust.pricingEvidencePolicy?.canonicalPricing==='https://www.norbertbanhalmi.com/pricing.json','trust pricing authority missing');
 fail(trust.services?.portrait?.pricingContext?.executivePortrait?.startingGrossEUR===499,'trust Portrait price context missing');
@@ -54,7 +58,8 @@ fail(trust.services?.brand?.pricingContext?.executivePersonalBranding?.startingG
 fail(trust.services?.event?.pricingContext?.businessEvent?.startingGrossEUR===490,'trust Business Event context missing');
 fail(trust.services?.event?.pricingContext?.cLevelInstitutional?.startingGrossEUR===590,'trust C-Level Event context missing');
 fail(trust.services?.fineArt?.pricingContext?.professionalArtistsPerformers?.startingGrossEUR===690,'trust Artists context missing');
-fail(trust.services?.fineArt?.pricingContext?.authorLedFineArtArtisticNude?.startingGrossEUR===690,'trust Artistic Nude context missing');
+fail(trust.services?.fineArt?.pricingContext?.privateCommissionRouting?.fixedProfessionalPrice===false,'trust must not transfer a Pro price to personal ART commission');
+fail(trust.services?.fineArt?.pricingContext?.privateCommissionRouting?.artisticNude?.en==='https://www.banhalmi.art/exhibitions/ebredes.html','trust Ébredés route missing');
 
 fail(needs.needs.some(x=>x.id==='business-event'&&x.price?.AT?.fromGross===490),'customer-needs Business Event route missing');
 fail(intents.intents.some(x=>x.id==='business-event-coverage'&&x.pricing?.fromGrossEUR===490),'customer-intent Business Event route missing');
@@ -73,9 +78,9 @@ const servicePages={
  'event-photography/index.html':[['490','EUR'],['590','EUR']],
  'hu/rendezvenyfotozas/index.html':[['196000','HUF'],['236000','HUF']],
  'de-at/eventfotografie/index.html':[['490','EUR'],['590','EUR']],
- 'fine-art/index.html':[['690','EUR'],['690','EUR']],
- 'hu/muveszi-fotografia/index.html':[['276000','HUF'],['276000','HUF']],
- 'de-at/fine-art/index.html':[['690','EUR'],['690','EUR']]
+ 'fine-art/index.html':[['690','EUR']],
+ 'hu/muveszi-fotografia/index.html':[['276000','HUF']],
+ 'de-at/fine-art/index.html':[['690','EUR']]
 };
 for(const [file,expected] of Object.entries(servicePages)){
  const html=read(file);
@@ -104,7 +109,7 @@ for(const token of ["eventBusiness:'businessEventEntry'","eventBusiness:1","val(
   fail(calc.includes(token),`quote calculator Business Event contract missing: ${token}`);
 }
 
-for(const token of ['Business Event bruttó 196 000 Ft-tól (€490)','C-Level / intézményi','Fine Art / művészi akt','1 EUR = 400 HUF']){
+for(const token of ['Business Event bruttó 196 000 Ft-tól (€490)','C-Level / intézményi','Művészek és előadók','1 EUR = 400 HUF','/hu/exhibitions/ebredes.html']){
  fail(hu.includes(token),`HU quote visible pricing missing: ${token}`);
 }
 

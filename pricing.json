@@ -271,19 +271,17 @@
       "quoteRouting": {
         "serviceValue": "art",
         "interfaceLabel": {
-          "en": "Fine Art / Artists & Performers",
-          "hu": "Művészi fotózás / Művészek és előadók",
-          "de-AT": "Fine Art / Künstler:innen & Performer:innen"
+          "en": "Artists & Performers",
+          "hu": "Művészek és előadók",
+          "de-AT": "Kunstschaffende & Performer:innen"
         },
         "note": "Actor, dance, performer and model/editorial portfolio requests use the existing artistic-production calculation route so the submission backend and delivery contract remain unchanged.",
         "serviceContext": "fine-art",
         "creativeContexts": [
-          "artistic-portrait",
           "actor",
           "dance",
           "performer",
-          "model-editorial",
-          "fine-art"
+          "model-editorial"
         ],
         "portfolioTypes": [
           "actor-headshot",
@@ -291,9 +289,7 @@
           "dance-portfolio",
           "performing-artist-portfolio",
           "model-portfolio",
-          "editorial-portrait",
-          "artistic-portrait",
-          "fine-art-production"
+          "editorial-portrait"
         ]
       },
       "publicArchitecture": {
@@ -307,12 +303,7 @@
             "art180"
           ]
         },
-        "authorLedFineArtArtisticNude": {
-          "startingGrossEUR": 690,
-          "startingGrossHUF": 276000,
-          "purpose": "Personal author-led Fine Art portrait, artistic nude or body-focused series. Scope is concept-led; consent, discretion and boundaries are explicit. BANHALMI ART supplies oeuvre/archive evidence, while current commissioning and pricing remain on the Professional site."
-        },
-        "separationRule": "Do not describe professional artist/performer portfolio photography and artistic nude as the same client intent. They share an artistic-production pricing route but have different purpose, briefing and outcome."
+        "separationRule": "Professional Artists & Performers portfolios are career-facing. Personal portraits, boudoir and lingerie enquiries route to localized BANHALMI ART private photography. Artistic nude service and enquiries belong to the localized Ébredés / Awakening exhibition. No Professional fixed price is stated for those personal commissions."
       }
     },
     {
@@ -413,7 +404,8 @@
     "includedRetouchInterpretation": "Included retouched-image quantities are totals per project package, not per person, unless a field explicitly says per person.",
     "hungarianDisplay": "The Hungarian interface displays HUF using the fixed planning conversion 1 EUR = 400 HUF. EUR remains the canonical base price. Convert gross first, then derive HUF net and VAT so the HUF figures reconcile exactly.",
     "usageLicence": "The standard organisational licence is included and unlimited in time and territory for the agreed client and channels. Exceptional transfer, resale, sublicensing or out-of-scope use is reviewed in the final written offer.",
-    "executiveArchitecture": "Public/AI Executive pricing is outcome-led: Professional Presence from EUR 499; Positioning from EUR 790; Communication System / Visual Library individually scoped. The EUR 220/420/690 portrait options remain separate non-executive portrait calculator options. EUR 1090/1390 brand duration components are internal scope components, not public Executive tiers."
+    "executiveArchitecture": "Public/AI Executive pricing is outcome-led: Professional Presence from EUR 499; Positioning from EUR 790; Communication System / Visual Library individually scoped. The EUR 220/420/690 portrait options remain separate non-executive portrait calculator options. EUR 1090/1390 brand duration components are internal scope components, not public Executive tiers.",
+    "fineArtIntentPolicy": "The fineArt package components price career-facing Artists & Performers portfolios in the Professional calculator. They do not establish a public price for personal portrait, boudoir, lingerie or artistic nude commissions on BANHALMI ART."
   },
   "calculationRules": {
     "individualPortrait": {

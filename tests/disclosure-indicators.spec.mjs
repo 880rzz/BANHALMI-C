@@ -45,6 +45,16 @@ for (const path of pages) {
         checked += 1;
         if (isFooterDisclosure) {
           await expect(summary).not.toHaveCSS('pointer-events', 'none');
+          const marker = await summary.evaluate(node => {
+            const style = getComputedStyle(node, '::after');
+            return {content:style.content,color:style.color,position:style.position,
+              display:getComputedStyle(node).display,gap:getComputedStyle(node).columnGap};
+          });
+          expect(marker.content).toBe('"+"');
+          expect(marker.color).toBe('rgb(183, 156, 68)');
+          expect(marker.position).toBe('static');
+          expect(marker.display).toBe('flex');
+          expect(parseFloat(marker.gap)).toBeGreaterThan(0);
           await expect(details).toHaveJSProperty('open', false);
           const expanded = await summary.getAttribute('aria-expanded');
           if (expanded !== null) expect(expanded).toBe('false');

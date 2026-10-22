@@ -1,4 +1,11 @@
 import { test, expect } from '@playwright/test';
+
+async function openDetailedCalculator(page) {
+  const summary = page.locator('#quote-calculator > summary');
+  if (await summary.count() && !(await page.locator('#quote-calculator').evaluate((node) => node.open))) {
+    await summary.click();
+  }
+}
 import fs from 'node:fs';
 const clarityCopy=JSON.parse(fs.readFileSync('tools/content/pricing-clarity-20261006.json','utf8'));
 
@@ -28,9 +35,24 @@ const contexts=[
 function amount(text){const cleaned=String(text).replace(/[^0-9,.-]/g,'').replace(/\.(?=\d{3})/g,'').replace(',','.');return Number.parseFloat(cleaned);}
 function displayCurrency(route){return route.startsWith('/hu/')?'HUF':'EUR';}
 for(const quoteRoute of quoteRoutes){
+  test(quoteRoute+' sends legacy private-art codes to the correct BANHALMI ART owner',async({page})=>{
+    await page.route('https://www.banhalmi.art/**',route=>route.fulfill({status:200,contentType:'text/html',body:'<title>ART route captured</title>'}));
+    const hu=quoteRoute.startsWith('/hu/'),de=quoteRoute.startsWith('/de-at/');
+    const privateUrl=hu?'https://www.banhalmi.art/hu/private-photography.html':de?'https://www.banhalmi.art/de-at/private-photography.html':'https://www.banhalmi.art/private-photography.html';
+    const nudeUrl=hu?'https://www.banhalmi.art/hu/exhibitions/ebredes.html':de?'https://www.banhalmi.art/de-at/exhibitions/ebredes.html':'https://www.banhalmi.art/exhibitions/ebredes.html';
+    for(const code of ['artportrait','lingerie']){
+      await page.goto(quoteRoute+'?service=fine-art&art_type='+code);
+    await openDetailedCalculator(page);
+      await expect(page).toHaveURL(privateUrl);
+    }
+    await page.goto(quoteRoute+'?service=fine-art&art_type=nude');
+    await openDetailedCalculator(page);
+    await expect(page).toHaveURL(nudeUrl);
+  });
   for(const context of contexts){
     test(quoteRoute+' applies '+context.service+' before the first estimate',async({page})=>{
       await page.goto(quoteRoute+'?service='+context.service);
+    await openDetailedCalculator(page);
       await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1,{timeout:10000});
       const form=page.locator('[data-smart-quote]');
       await expect(form).toHaveAttribute('data-service-context',context.service);
@@ -51,6 +73,7 @@ for(const quoteRoute of quoteRoutes){
   }
   test(quoteRoute+' supports private-event as a distinct event intent',async({page})=>{
     await page.goto(quoteRoute+'?service=private-event');
+    await openDetailedCalculator(page);
     await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1,{timeout:10000});
     const form=page.locator('[data-smart-quote]');
     const privateOption=form.locator('input[name="category"][data-private-event="true"]');
@@ -74,6 +97,7 @@ for(const quoteRoute of quoteRoutes){
   });
   test(quoteRoute+' ignores missing or unsupported service context safely',async({page})=>{
     await page.goto(quoteRoute+'?service=unsupported');
+    await openDetailedCalculator(page);
     await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1,{timeout:10000});
     const form=page.locator('[data-smart-quote]');
     await expect(form).not.toHaveAttribute('data-service-context');
@@ -83,6 +107,7 @@ for(const quoteRoute of quoteRoutes){
 
 test('manual category change synchronizes the public URL and localized language links',async({page})=>{
   await page.goto('/requestaquote/?service=brand');
+    await openDetailedCalculator(page);
   await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1,{timeout:10000});
   await page.locator('input[name="category"][value="event"]:not([data-private-event])').check();
   await expect(page).toHaveURL(/service=event/);
@@ -167,9 +192,11 @@ const serviceRoutes=[
 for(const item of serviceRoutes){
   test(item.route+' carries its service into the localized quote builder',async({page})=>{
     await page.goto(item.route);
-    const selector=item.kind==='commercial'?'#next-step article.card:first-child a.btn-link':'#private-conversation a.btn-primary';
+    await openDetailedCalculator(page);
+    const selector=item.kind==='commercial'?'#next-step article.card:first-child a.btn-link':'a[data-art-quote="professional"]';
     const link=page.locator(selector).first();
-    await expect(link).toHaveAttribute('href',new RegExp('\\?service='+item.service+'$'));
+    const serviceHref=item.kind==='commercial'?'\\?service='+item.service+'$':'\\?service=fine-art&art_type=performer$';
+    await expect(link).toHaveAttribute('href',new RegExp(serviceHref));
     await link.click();
     await expect(page).toHaveURL(new RegExp('service='+item.service));
     await expect(page.locator('[data-pricing-ready="true"]')).toHaveCount(1,{timeout:10000});
