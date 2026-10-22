@@ -6814,14 +6814,18 @@ html body a[data-banhalmi-link-arrow]:focus-visible>.banhalmi-link-arrow{opacity
 @media (max-width:620px){
   html body main .quote-step .option-row{
     display:grid;
-    grid-template-columns:minmax(0,1fr);
+    grid-template-columns:24px minmax(0,1fr);
     gap:8px;
-    align-items:start;
+    align-items:center;
   }
   html body main .quote-step .option-row>input[type="radio"],
   html body main .quote-step .option-row>input[type="checkbox"]{
     position:static;
     margin:0;
+    align-self:center;
+  }
+  html body main .quote-step .option-row>span{
+    grid-column:2;
   }
   html body main .quote-step .option-row>span{
     display:block;
